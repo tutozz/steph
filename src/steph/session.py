@@ -38,6 +38,7 @@ class Command:
     typed: str = ""
     enter_count: int = 0
     probed_partial: str = ""
+    echo_lines: list[str] = field(default_factory=list)  # écho de frappe anticipée
     prompts_said: list[str] = field(default_factory=list)
 
     @property

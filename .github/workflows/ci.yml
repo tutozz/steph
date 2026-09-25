@@ -13,9 +13,14 @@ jobs:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
       - if: runner.os == 'Linux'
-        run: sudo apt-get install -y zsh
+        run: |
+          sudo apt-get install -y zsh
+          # l'image CI a des dossiers zsh inscriptibles : compinit poserait une question
+          zsh -c 'autoload -U compaudit; compaudit' | xargs -r sudo chmod g-w,o-w || true
       - run: uv sync
       - run: uv run pytest -q tests
+      - name: diagnostic de la sonde clavier
+        run: uv run python tests/diag_probe.py
       - name: bout en bout (voix coupée, sans LLM → repli déterministe)
         env:
           SHELL: ${{ matrix.shell }}

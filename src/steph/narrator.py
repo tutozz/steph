@@ -208,7 +208,9 @@ class Narrator:
             # frappe anticipée (commande suivante tapée à l'avance) : le terminal
             # en affiche l'écho, on l'écartera du résumé
             if typed.strip():
-                c.prompts_said.append(typed.strip())
+                # l'écho arrivera seul, ou collé à la ligne en cours
+                c.echo_lines.append(typed.strip())
+                c.echo_lines.append((strip_ansi(c.out.partial) + typed).strip())
             return
         now = time.time()
         c.typed = c.out.partial
@@ -309,9 +311,10 @@ class Narrator:
             return
         lines = [l for l in c.all_lines() if l.strip() and l.strip() not in ("^C", "^Z", "^\\")]
         # les questions déjà lues (et la réponse tapée derrière) ne sont pas relues
-        if c.prompts_said:
-            lines = [l for l in lines if not any(p and (strip_ansi(l).strip().startswith(p) or strip_ansi(l).strip().endswith(p))
-                                                 for p in c.prompts_said)]
+        if c.prompts_said or c.echo_lines:
+            lines = [l for l in lines
+                     if strip_ansi(l).strip() not in c.echo_lines
+                     and not any(p and strip_ansi(l).strip().startswith(p) for p in c.prompts_said)]
         text = "\n".join(lines).strip()
         code = c.exit
         fw = first_word(c.cmd)
