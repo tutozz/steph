@@ -12,14 +12,29 @@ CURL=(curl -q -fL --retry 3)   # -q : ignore ~/.curlrc
 
 OS=$(uname -s)
 
+# « releases/latest » peut pointer sur une release sans binaires (v0.5.0) :
+# on prend la plus récente qui publie réellement l'archive voulue.
+llama_tag() {
+  "${CURL[@]}" -s "https://api.github.com/repos/ggml-org/llama.cpp/releases?per_page=30" | python3 -c '
+import json, sys
+flavor = sys.argv[1]
+for r in json.load(sys.stdin):
+    t = r["tag_name"]
+    if any(a["name"] == f"llama-{t}-bin-{flavor}.tar.gz" for a in r["assets"]):
+        print(t); break
+else:
+    sys.exit(f"aucune release llama.cpp ne publie le binaire {flavor}")
+' "$1"
+}
+
 # --- llama.cpp -------------------------------------------------------------
 if [ "$OS" = Darwin ] && ! command -v llama-server >/dev/null && ! ls vendor/llama/llama-*/llama-server >/dev/null 2>&1; then
   # macOS : Homebrew si présent (Metal inclus), sinon binaire officiel
   if command -v brew >/dev/null; then
     brew install llama.cpp
   else
-    TAG=$("${CURL[@]}" -s https://api.github.com/repos/ggml-org/llama.cpp/releases/latest | python3 -c 'import json,sys;print(json.load(sys.stdin)["tag_name"])')
     ARCH=$([ "$(uname -m)" = arm64 ] && echo arm64 || echo x64)
+    TAG=$(llama_tag "macos-$ARCH")
     "${CURL[@]}" -o /tmp/llama.tgz "https://github.com/ggml-org/llama.cpp/releases/download/$TAG/llama-$TAG-bin-macos-$ARCH.tar.gz"
     tar xzf /tmp/llama.tgz -C vendor/llama && rm /tmp/llama.tgz
     # les bibliothèques peuvent être rangées à part : on les met à côté du binaire
@@ -29,14 +44,15 @@ if [ "$OS" = Darwin ] && ! command -v llama-server >/dev/null && ! ls vendor/lla
   fi
   command -v sox >/dev/null || echo "Conseil : brew install sox (voix plus réactive qu'avec afplay)"
 elif [ "$OS" != Darwin ] && ! ls vendor/llama/llama-*/llama-server >/dev/null 2>&1; then
-  TAG=$("${CURL[@]}" -s https://api.github.com/repos/ggml-org/llama.cpp/releases/latest | python3 -c 'import json,sys;print(json.load(sys.stdin)["tag_name"])')
   if command -v nvidia-smi >/dev/null && nvidia-smi >/dev/null 2>&1; then
-    FLAVOR=ubuntu-cuda-12.8-x64; EXTRA=cudart-llama-$TAG-bin-$FLAVOR.tar.gz
+    FLAVOR=ubuntu-cuda-12.8-x64; EXTRA=1
   elif [ -e /usr/lib64/libvulkan.so.1 ] || [ -e /usr/lib/x86_64-linux-gnu/libvulkan.so.1 ]; then
     FLAVOR=ubuntu-vulkan-x64; EXTRA=
   else
     FLAVOR=ubuntu-x64; EXTRA=
   fi
+  TAG=$(llama_tag "$FLAVOR")
+  [ -n "$EXTRA" ] && EXTRA=cudart-llama-$TAG-bin-$FLAVOR.tar.gz
   echo "llama.cpp $TAG ($FLAVOR)"
   B=https://github.com/ggml-org/llama.cpp/releases/download/$TAG
   "${CURL[@]}" -o /tmp/llama.tgz "$B/llama-$TAG-bin-$FLAVOR.tar.gz"
