@@ -1,0 +1,7 @@
+# steph : chargé à la place de ~/.zshenv, puis on rend la main à la config utilisateur.
+__steph_zdotdir="$ZDOTDIR"
+ZDOTDIR="${STEPH_ORIG_ZDOTDIR:-$HOME}"
+[[ -f "$ZDOTDIR/.zshenv" ]] && source "$ZDOTDIR/.zshenv"
+STEPH_ORIG_ZDOTDIR="$ZDOTDIR"
+ZDOTDIR="$__steph_zdotdir"
+unset __steph_zdotdir

@@ -1,0 +1,146 @@
+[
+ {
+  "cmd": "ls -la /etc | head -40",
+  "exit": 0,
+  "duration": 0.02,
+  "output": "total 1516\ndrwxr-xr-x. 1 root                 root                   5460  7 août  11:02 .\ndr-xr-xr-x. 1 root                 root                    180  4 juin  10:42 ..\ndrwxr-xr-x. 1 root                 root                    126 16 janv.  2026 abrt\n-rw-r--r--. 1 root                 root                     16 17 sept.  2025 adjtime\n-rw-r--r--. 1 root                 root                   1529 17 janv.  2026 aliases\ndrwxr-xr-x. 1 root                 root                     70 16 janv.  2026 alsa\ndrwxr-xr-x. 1 root                 root                   1610 20 mai   11:43 alternatives\ndrwxr-xr-x. 1 root                 root                     56 20 mai   11:41 anaconda\n-rw-r--r--. 1 root                 root                    541 16 janv.  2026 anacrontab\ndrwxr-xr-x. 1 root                 root                     42 30 avril 02:00 ansible\n-rw-r--r--. 1 root                 root                    269 13 févr.  2026 anthy-unicode.conf\ndrwxr-xr-x. 1 root                 root                    132  9 févr.  2026 apt\n-rw-r--r--. 1 root                 root                     55 16 janv.  2026 asound.conf\n-rw-r--r--. 1 root                 root                      1 16 janv.  2026 at.deny\ndrwxr-x---. 1 root                 root                    108 23 mars   2026 audit\ndrwxr-xr-x. 1 root                 root                    262 20 mai   11:44 authselect\ndrwxr-xr-x. 1 root                 root                     66 16 janv.  2026 avahi\ndrwxr-xr-x. 1 root                 root                    260  3 juin  15:14 bash_completion.d\n-rw-r--r--. 1 root                 root                   2709 17 janv.  2026 bashrc\n-rw-r--r--. 1 root                 root                    535 16 janv.  2026 bindresvport.blacklist\ndrwxr-xr-x. 1 root                 root                      0 13 mars   2026 binfmt.d\ndr-xr-xr-x. 1 root                 root                     62 20 mai   11:39 bluetooth\n-rw-r-----. 1 root                 brlapi                   33  9 avril  2025 brlapi.key\ndrwxr-xr-x. 1 root                 root                     76 16 janv.  2026 brltty\n-rw-r--r--. 1 root                 root                  31380 16 janv.  2026 brltty.conf\ndrwxr-xr-x. 1 root                 root                      0  6 avril 02:00 ceph\ndrwxr-xr-x. 1 root                 root                      0 16 janv.  2026 chkconfig.d\ndrwxr-xr-x. 1 root                 root                    122 16 janv.  2026 chromium\n-rw-r--r--. 1 root                 root                   1602 27 août   2025 chrony.conf\ndrwxr-xr-x. 1 root                 root                     24 14 mars   2026 cifs-utils\ndrwxr-xr-x. 1 root                 root                     10 23 sept.  2025 cni\ndrwxr-xr-x. 1 root                 root                     72 21 avril 02:00 cockpit\ndrwxr-xr-x. 1 colord               colord                    0 17 sept.  2025 colord\ndrwxr-xr-x. 1 root                 root                     22 14 avril 02:00 containerd\ndrwxr-xr-x. 1 root                 root                    184 11 févr.  2026 containers\n-rw-r--r--. 1 root                 root                   1255 18 mai   02:00 cpupower-service.conf\ndrwx------. 1 root                 root                      0 13 mars   2026 credstore\ndrwx------. 1 root                 root                      0 13 mars   2026 credstore.encrypted\ndrwxr-xr-x. 1 root                 root                     14 16 janv.  2026 cron.d\n"
+ },
+ {
+  "cmd": "df -h",
+  "exit": 0,
+  "duration": 0.01,
+  "output": "Sys. de fichiers Taille Utilisé Dispo Uti% Monté sur\n/dev/dm-0          953G    267G  685G  29% /\ndevtmpfs            16G       0   16G   0% /dev\ntmpfs               16G    8,0K   16G   1% /dev/shm\nefivarfs           196K     47K  144K  25% /sys/firmware/efi/efivars\ntmpfs              6,3G    3,2M  6,3G   1% /run\nnone               1,0M       0  1,0M   0% /run/credentials/systemd-cryptsetup@luks\\x2d685f277d\\x2db5d1\\x2d40bf\\x2d90c6\\x2d08a71f4a3cbc.service\nnone               1,0M       0  1,0M   0% /run/credentials/systemd-journald.service\nnone               1,0M       0  1,0M   0% /run/credentials/systemd-resolved.service\ntmpfs               16G    8,4M   16G   1% /tmp\n/dev/nvme0n1p2     974M    624M  284M  69% /boot\n/dev/dm-0          953G    267G  685G  29% /home\n/dev/nvme0n1p1     599M     21M  579M   4% /boot/efi\ntmpfs              3,2G    4,1M  3,1G   1% /run/user/1000\n"
+ },
+ {
+  "cmd": "git -C /home/alice/Projects/steph status",
+  "exit": 0,
+  "duration": 0.0,
+  "output": "Sur la branche master\n\nAucun commit\n\nFichiers non suivis:\n  (utilisez \"git add <fichier>...\" pour inclure dans ce qui sera validé)\n\t.python-version\n\tREADME.md\n\tbench/\n\tpyproject.toml\n\tsrc/\n\tuv.lock\n\tvendor/\n\naucune modification ajoutée à la validation mais des fichiers non suivis sont présents (utilisez \"git add\" pour les suivre)\n"
+ },
+ {
+  "cmd": "cat /nonexistent/file.txt",
+  "exit": 1,
+  "duration": 0.0,
+  "output": "cat: /nonexistent/file.txt: Aucun fichier ou dossier de ce nom\n"
+ },
+ {
+  "cmd": "python3 -c 'import json; d={}; print(d[\"key\"])'",
+  "exit": 1,
+  "duration": 0.05,
+  "output": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import json; d={}; print(d[\"key\"])\n                             ~^^^^^^^\nKeyError: 'key'\n"
+ },
+ {
+  "cmd": "ping -c 3 127.0.0.1",
+  "exit": 0,
+  "duration": 2.06,
+  "output": "PING 127.0.0.1 (127.0.0.1) 56(84) octets de données.\n64 octets de 127.0.0.1 : icmp_seq=1 ttl=64 temps=0.020 ms\n64 octets de 127.0.0.1 : icmp_seq=2 ttl=64 temps=0.017 ms\n64 octets de 127.0.0.1 : icmp_seq=3 ttl=64 temps=0.036 ms\n\n--- statistiques ping 127.0.0.1 ---\n3 paquets transmis, 3 reçus, 0% packet loss, time 2059ms\nrtt min/avg/max/mdev = 0.017/0.024/0.036/0.008 ms\n"
+ },
+ {
+  "cmd": "gcc -x c - -o /dev/null <<< 'int main(){ int x = ; return 0; }'",
+  "exit": 1,
+  "duration": 0.15,
+  "output": "<stdin>: Dans la fonction « main »:\n<stdin>:1:21: error: expected expression before « ; » token\n"
+ },
+ {
+  "cmd": "free -h",
+  "exit": 0,
+  "duration": 0.01,
+  "output": "               total        used        free      shared  buff/cache   available\nMem:            31Gi       6,6Gi       865Mi       354Mi        25Gi        24Gi\nSwap:          8,0Gi        72Ki       8,0Gi\n"
+ },
+ {
+  "cmd": "systemctl --user status pipewire --no-pager | head -20",
+  "exit": 0,
+  "duration": 0.03,
+  "output": "● pipewire.service - PipeWire Multimedia Service\n     Loaded: loaded (/usr/lib/systemd/user/pipewire.service; disabled; preset: disabled)\n    Drop-In: /usr/lib/systemd/user/pipewire.service.d\n             └─00-uresourced.conf\n             /usr/lib/systemd/user/service.d\n             └─10-timeout-abort.conf\n     Active: active (running) since Wed 2026-09-23 09:58:56 CEST; 2 days ago\n Invocation: 00000000000000000000000000000000\nTriggeredBy: ● pipewire.socket\n   Main PID: 7126 (pipewire)\n      Tasks: 3 (limit: 37933)\n     Memory: 6.7M (peak: 10.8M)\n        CPU: 1.548s\n     CGroup: /user.slice/user-1000.slice/user@1000.service/session.slice/pipewire.service\n             └─7126 /usr/bin/pipewire\n\nsept. 23 09:58:56 devbox systemd[6761]: Started pipewire.service - PipeWire Multimedia Service.\nsept. 23 09:58:56 devbox pipewire[7126]: mod.raop-sink: sess.latency.msec 250,000000 should be an integer multiple of rtp.ptime 7,981859\nsept. 23 12:05:00 devbox pipewire[7126]: mod.raop-sink: sess.latency.msec 250,000000 should be an integer multiple of rtp.ptime 7,981859\n"
+ },
+ {
+  "cmd": "grep -rn 'def ' /home/alice/Projects/steph/src/steph/llm.py",
+  "exit": 0,
+  "duration": 0.0,
+  "output": "19:    def __init__(self, cfg: Config):\n26:    def healthy(self) -> bool:\n33:    def ensure_server(self, wait: float = 60.0) -> bool:\n62:    def _pid_alive(self) -> bool:\n70:    def stop_server(self) -> None:\n79:    def _payload(self, messages, max_tokens, temperature, stream):\n90:    def stream(self, messages: list[dict], max_tokens: int = 120,\n111:    def complete(self, messages: list[dict], max_tokens: int = 120,\n"
+ },
+ {
+  "cmd": "curl -qsS https://nonexistent.invalid/",
+  "exit": 6,
+  "duration": 0.02,
+  "output": "curl: (6) Could not resolve host: nonexistent.invalid\n"
+ },
+ {
+  "cmd": "ip -br addr",
+  "exit": 0,
+  "duration": 0.01,
+  "output": "lo               UNKNOWN        127.0.0.1/8 ::1/128 \nenp0s31f6        DOWN           \nwlp0s20f3        UP             192.168.1.20/24 fe80::1/64 \ntailscale0       UNKNOWN        100.64.0.10/32 fd7a:115c:a1e0::10/128 fe80::1/64 \nbr-0123456789ab  DOWN           172.19.0.1/16 \nbr-0123456789ab  DOWN           172.22.0.1/16 \nbr-0123456789ab  UP             172.20.0.1/16 fe80::1/64 \nbr-0123456789ab  DOWN           172.24.0.1/16 \nbr-0123456789ab  UP             172.23.0.1/16 fe80::1/64 \nbr-0123456789ab  DOWN           172.18.0.1/16 \ndocker0          DOWN           172.17.0.1/16 \nbr-0123456789ab  DOWN           172.21.0.1/16 \nveth0000000@if2  UP             fe80::1/64 \nveth0000000@if2  UP             fe80::1/64 \nveth0000000@if2  UP             fe80::1/64 \nveth0000000@if2  UP             fe80::1/64 \nveth0000000@if2  UP             fe80::1/64 \nveth0000000@if2  UP             fe80::1/64 \nveth0000000@if2  UP             fe80::1/64 \nveth0000000@if2  UP             fe80::1/64 \ntun0             UNKNOWN        10.9.0.2/24 fe80::1/64 \n"
+ },
+ {
+  "cmd": "ls /home/alice/Projects/steph",
+  "exit": 0,
+  "duration": 0.0,
+  "output": "bench\npyproject.toml\nREADME.md\nsrc\nuv.lock\nvendor\n"
+ },
+ {
+  "cmd": "uname -a",
+  "exit": 0,
+  "duration": 0.0,
+  "output": "Linux devbox 7.0.9-202.fc44.x86_64 #1 SMP PREEMPT_DYNAMIC Mon May 18 22:33:24 UTC 2026 x86_64 GNU/Linux\n"
+ },
+ {
+  "cmd": "python3 -m pip --version",
+  "exit": 0,
+  "duration": 0.17,
+  "output": "pip 26.0.1 from /usr/lib/python3.14/site-packages/pip (python 3.14)\n"
+ },
+ {
+  "cmd": "find /usr/share/doc -maxdepth 1 -name 'py*' | head -20",
+  "exit": 0,
+  "duration": 0.01,
+  "output": "/usr/share/doc/python-systemd\n/usr/share/doc/python3-argcomplete\n/usr/share/doc/python3-attrs\n/usr/share/doc/python3-augeas\n/usr/share/doc/python3-beaker\n/usr/share/doc/python3-beautifulsoup4\n/usr/share/doc/python3-blivet\n/usr/share/doc/python3-boto3\n/usr/share/doc/python3-botocore\n/usr/share/doc/python3-cairo\n/usr/share/doc/python3-cffi\n/usr/share/doc/python3-charset-normalizer\n/usr/share/doc/python3-click\n/usr/share/doc/python3-crypt-r\n/usr/share/doc/python3-cryptography\n/usr/share/doc/python3-cups\n/usr/share/doc/python3-dasbus\n/usr/share/doc/python3-dateutil\n/usr/share/doc/python3-dbus-next\n/usr/share/doc/python3-dbus\n"
+ },
+ {
+  "cmd": "ssh -o BatchMode=yes -o ConnectTimeout=3 nobody@127.0.0.1 true",
+  "exit": 255,
+  "duration": 0.02,
+  "output": "Host key verification failed.\n"
+ },
+ {
+  "cmd": "rm /etc/hostname",
+  "exit": 1,
+  "duration": 0.0,
+  "output": "rm: impossible de supprimer '/etc/hostname': Permission non accordée\n"
+ },
+ {
+  "cmd": "sort /etc/passwd | cut -d: -f1 | head -30",
+  "exit": 0,
+  "duration": 0.01,
+  "output": "abrt\nadm\nakmods\napache\n_apt\navahi\nbin\nchrony\nclevis\ncolord\ndaemon\ndbus\ndnsmasq\nflatpak\nftp\ngames\ngdm\ngeoclue\ngluster\ngnome-initial-setup\ngnome-remote-desktop\nhalt\nlp\nalice\nmail\nmalcontent-timerd\nmalcontent-timer-ext-agent\nmalcontent-webd\nnm-openconnect\nnm-openvpn\n"
+ },
+ {
+  "cmd": "du -sh /home/alice/Projects/* 2>/dev/null | sort -h | tail",
+  "exit": 0,
+  "duration": 1.03,
+  "output": "225M\t/home/alice/Projects/fitness-app\n246M\t/home/alice/Projects/notes-backup\n261M\t/home/alice/Projects/ansible-deploy\n411M\t/home/alice/Projects/score-board\n673M\t/home/alice/Projects/debian-image\n1,2G\t/home/alice/Projects/steph\n1,4G\t/home/alice/Projects/ops-tools\n2,4G\t/home/alice/Projects/shopapp\n7,9G\t/home/alice/Projects/installer-iso\n12G\t/home/alice/Projects/OLD_SHOPAPP\n"
+ },
+ {
+  "cmd": "dnf check-update --cacheonly 2>&1 | tail -30",
+  "exit": 0,
+  "duration": 2.28,
+  "output": "xen-licenses.x86_64                              4.21.2-1.fc44                   updates\nxfsprogs.x86_64                                  7.1.1-1.fc44                    updates\nxorg-x11-drv-nvidia.x86_64                       3:610.57.04-1.fc44              rpmfusion-nonfree-updates\nxorg-x11-drv-nvidia.x86_64                       3:610.57.04-1.fc44              rpmfusion-nonfree-nvidia-driver\nxorg-x11-drv-nvidia-cuda.x86_64                  3:610.57.04-1.fc44              rpmfusion-nonfree-updates\nxorg-x11-drv-nvidia-cuda.x86_64                  3:610.57.04-1.fc44              rpmfusion-nonfree-nvidia-driver\nxorg-x11-drv-nvidia-cuda-libs.x86_64             3:610.57.04-1.fc44              rpmfusion-nonfree-updates\nxorg-x11-drv-nvidia-cuda-libs.x86_64             3:610.57.04-1.fc44              rpmfusion-nonfree-nvidia-driver\nxorg-x11-drv-nvidia-kmodsrc.x86_64               3:610.57.04-1.fc44              rpmfusion-nonfree-updates\nxorg-x11-drv-nvidia-kmodsrc.x86_64               3:610.57.04-1.fc44              rpmfusion-nonfree-nvidia-driver\nxorg-x11-drv-nvidia-libs.x86_64                  3:610.57.04-1.fc44              rpmfusion-nonfree-updates\nxorg-x11-drv-nvidia-libs.x86_64                  3:610.57.04-1.fc44              rpmfusion-nonfree-nvidia-driver\nxorg-x11-drv-nvidia-power.x86_64                 3:610.57.04-1.fc44              rpmfusion-nonfree-updates\nxorg-x11-drv-nvidia-power.x86_64                 3:610.57.04-1.fc44              rpmfusion-nonfree-nvidia-driver\nxorg-x11-server-Xwayland.x86_64                  24.1.13-1.fc44                  updates\nxorriso.x86_64                                   1.5.8-2.fc44                    updates\nxwayland-satellite.x86_64                        0.8.2-1.fc44                    updates\nxxd.x86_64                                       2:9.2.967-1.fc44                updates\nyelp.x86_64                                      2:49.2-1.fc44                   updates\nyelp-libs.x86_64                                 2:49.2-1.fc44                   updates\nyubikey-manager.noarch                           5.9.2-1.20260630git60ab055.fc44 updates\nzchunk-libs.x86_64                               1.5.4-1.fc44                    updates\nzsh.x86_64                                       5.9-21.fc44                     updates\n\nObsoleting packages\nfwupd.x86_64                                     2.1.7-1.fc44                    updates\n    fwupd.x86_64                                 2.1.3-1.fc44                    updates\n    fwupd-plugin-flashrom.x86_64                 2.1.3-1.fc44                    updates\nkernel-headers.x86_64                            7.1.3-200.fc44                  updates\n    kernel-headers.x86_64                        7.0.6-200.fc44                  updates\n"
+ },
+ {
+  "cmd": "tar czf /tmp/x.tgz /nonexistent",
+  "exit": 2,
+  "duration": 0.01,
+  "output": "tar: Suppression de « / » au début des noms des membres\ntar: /nonexistent : stat impossible: Aucun fichier ou dossier de ce nom\ntar: Arrêt avec code d'échec à cause des erreurs précédentes\n"
+ },
+ {
+  "cmd": "docker ps",
+  "exit": 0,
+  "duration": 0.07,
+  "output": "CONTAINER ID   IMAGE                         COMMAND                  CREATED        STATUS                          PORTS                             NAMES\n0123456789ab   shopapp-api:dev             \"sh -c 'uvicorn app.…\"   4 months ago   Up 2 days                       0.0.0.0:8888->8000/tcp            shopapp_api\n0123456789ab   nginx:alpine                  \"/docker-entrypoint.…\"   4 months ago   Up 2 days                       80/tcp, 127.0.0.1:8444->443/tcp   shopapp_nginx_admin\n0123456789ab   hashicorp/vault:1.17          \"docker-entrypoint.s…\"   4 months ago   Restarting (1) 57 seconds ago                                     shopapp_vault\n0123456789ab   shopapp-frontend:dev        \"docker-entrypoint.s…\"   4 months ago   Up 2 days                       127.0.0.1:3000->3000/tcp          shopapp_admin\n0123456789ab   postgres:15                   \"docker-entrypoint.s…\"   4 months ago   Up 2 days                       5432/tcp                          shopapp_db\n0123456789ab   shopapp-client-webapp:dev   \"python client_web.py\"   4 months ago   Up 2 days                       127.0.0.1:8081->8080/tcp          shopapp_client_webapp\n0123456789ab   nginx:alpine                  \"/docker-entrypoint.…\"   5 months ago   Up 2 days                       80/tcp, 127.0.0.1:8443->443/tcp   shopapp_nginx_client\n0123456789ab   nginx:alpine                  \"/docker-entrypoint.…\"   5 months ago   Up 2 days                       127.0.0.1:8080->80/tcp            shopapp_nginx_enroll\n0123456789ab   iso-builder                   \"python3 /opt/iso-bu…\"   6 months ago   Up 2 days                                                         iso-builder-1\n"
+ },
+ {
+  "cmd": "whoami",
+  "exit": 0,
+  "duration": 0.0,
+  "output": "alice\n"
+ }
+]

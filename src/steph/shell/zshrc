@@ -1,0 +1,4 @@
+# steph : charge le .zshrc de l'utilisateur puis ajoute les marqueurs de commande.
+ZDOTDIR="${STEPH_ORIG_ZDOTDIR:-$HOME}"
+[[ -f "$ZDOTDIR/.zshrc" ]] && source "$ZDOTDIR/.zshrc"
+source "${STEPH_SHELL_DIR}/integration.zsh"

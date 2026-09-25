@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+vendor/
+bench/results-*.json
+bench/*.log
+*.egg-info/

@@ -1,0 +1,24 @@
+# Copier dans ~/.config/steph/config.toml (toutes les clés sont optionnelles).
+# Chaque clé peut aussi être passée en variable d'environnement : STEPH_<CLÉ>=…
+
+# Modèle : Gemma 4 E2B (défaut, plus fiable) ou Qwen3.5 2B (≈30 % plus rapide).
+# model = "~/.local/share/steph/models/Qwen_Qwen3.5-2B-Q4_K_M.gguf"
+# llm_gpu_layers = 0          # 0 = tout sur CPU (pas de carte graphique)
+
+# Voix
+# voice = "~/.local/share/steph/voices/fr_FR-tom-medium.onnx"   # voix masculine
+speech_rate = 1.25            # 1.0 = normal, 1.5 = rapide
+
+# Bavardage
+verbosity = 1                 # 0 = erreurs seulement, 1 = bref, 2 = détaillé
+first_update_after = 4.0      # s avant d'annoncer « en cours »
+update_interval = 12.0        # s entre deux points d'étape
+read_verbatim_max_words = 20  # en dessous, la sortie est lue telle quelle
+announce_cd = true
+
+# Touches (séquences brutes du terminal)
+# key_ask = "\u001b[18~"      # F7
+# key_stop = "\u001b[19~"     # F8
+# key_repeat = "\u001b[20~"   # F9
+# key_details = "\u001b[21~"  # F10
+# terminal_cmd = "gnome-terminal --"   # pour la fenêtre de questions

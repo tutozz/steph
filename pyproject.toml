@@ -1,0 +1,24 @@
+[project]
+name = "steph"
+version = "0.1.0"
+description = "Terminal parlant pour personnes malvoyantes (proxy shell + LLM local + Piper)"
+readme = "README.md"
+authors = [
+    { name = "Luis Parra", email = "test@localhost.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "piper-tts>=1.8.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.8.22,<0.9.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[project.scripts]
+steph = "steph.cli:main"
