@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>steph banner</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="/style.css">
+<style>
+  :root { color-scheme: light; --bg: #f7f6f2; --paper: #fff; --ink: #0e0e0e; --ink-2: #3d3d3a; --muted: #5f5f5a; --grid: rgba(14,14,14,.06); }
+  html, body { margin: 0; width: 1280px; height: 640px; overflow: hidden; }
+  body { background-size: calc(1280px / 6) 100%; }
+  .b { position: relative; width: 1280px; height: 640px; padding: 48px 64px; }
+  .b .brand { font-size: 22px; }
+  .b .tag { position: absolute; left: 50%; top: 48px; transform: translateX(-50%); }
+  .b h1 { margin: 110px 0 0; font-size: 104px; line-height: .9; font-weight: 500; letter-spacing: -.045em; text-transform: uppercase; max-width: 620px; }
+  .b .sub { margin: 36px 0 0; }
+  .b .island { position: absolute; right: 250px; top: 110px; width: 430px; }
+  .b .note { width: 190px; }
+  .b .n1 { right: 48px; top: 110px; }
+  .b .n2 { right: 48px; top: 430px; }
+  .b .foot { position: absolute; left: 64px; bottom: 44px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="b hero" style="display:block;padding-top:48px">
+  <div class="brand">STEPH</div>
+  <span class="tag">Talking terminal</span>
+  <h1>Your terminal, out loud.</h1>
+  <p class="sub mono">Speaking Terminal · Everything Privately Hosted</p>
+  <div class="island" aria-hidden="true">
+    <img class="rock" src="/img/rock.png" alt="">
+    <img class="laptop" src="/img/laptop.png" alt="">
+    <img class="seed" src="/img/seedling.png" alt="">
+    <img class="speaker" src="/img/speaker.png" alt="">
+    <img class="spark" src="/img/sparkles.png" alt="">
+    <img class="ear" src="/img/ear.png" alt="">
+  </div>
+  <div class="note n1" data-target=".island .speaker"><b>Built with</b>Designed and tested with visually impaired people.</div>
+  <div class="note n2" data-target=".island .rock"><b>100% local</b>Local LLM and voice. Nothing leaves your machine.</div>
+  <svg class="leaders" aria-hidden="true"></svg>
+  <p class="foot mono">zsh · bash · Linux · macOS</p>
+</div>
+<script src="/main.js"></script>
+</body>
+</html>

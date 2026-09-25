@@ -4,3 +4,4 @@ vendor/
 bench/results-*.json
 bench/*.log
 *.egg-info/
+.playwright-mcp/
