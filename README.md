@@ -55,6 +55,7 @@ steph
 | **F9** | répète la dernière annonce |
 | **F10** | explication détaillée de la dernière commande |
 | `q pourquoi ça a planté ?` | question rapide, sans quitter le shell |
+| `q` puis Entrée | pose la question à une invite `?` : apostrophes et guillemets sans échappement |
 | `steph ask` | fenêtre de questions (dans n'importe quel terminal) |
 | `steph ctl stop\|repeat\|details\|status\|history` | contrôle à distance de la session |
 | `steph say "texte"` | tester la voix |

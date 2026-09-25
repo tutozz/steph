@@ -75,11 +75,22 @@ def cmd_ask(args) -> int:
     if args.question:
         ask(" ".join(args.question))
         return 0
-    # fenêtre interactive
     try:
         import readline  # noqa: F401  (historique / édition de ligne)
     except ImportError:
         pass
+    # `q` seul : la question est lue ici et non par le shell, qui
+    # interpréterait apostrophes et guillemets
+    if args.once:
+        try:
+            q = input("? ").strip()
+        except (EOFError, KeyboardInterrupt):
+            print()
+            return 0
+        if q:
+            ask(q)
+        return 0
+    # fenêtre interactive
     print("Questions sur la session. Entrée vide ou Ctrl+D pour quitter.")
     print("Commandes : /stop (silence), /repeter, /details, /historique")
     request(path, {"op": "say", "text": "Fenêtre de questions ouverte."})
