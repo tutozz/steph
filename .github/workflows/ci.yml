@@ -9,6 +9,7 @@ jobs:
         os: [ubuntu-latest, macos-latest]
         shell: [/bin/zsh, /bin/bash]
     runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
@@ -19,8 +20,6 @@ jobs:
           zsh -c 'autoload -U compaudit; compaudit' | xargs -r sudo chmod g-w,o-w || true
       - run: uv sync
       - run: uv run pytest -q tests
-      - name: diagnostic de la sonde clavier
-        run: uv run python tests/diag_probe.py
       - name: bout en bout (voix coupée, sans LLM → repli déterministe)
         env:
           SHELL: ${{ matrix.shell }}
@@ -33,6 +32,7 @@ jobs:
   macos-llm:
     # vérifie que llama.cpp de Homebrew est trouvé et que les résumés passent
     runs-on: macos-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
