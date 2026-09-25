@@ -44,8 +44,9 @@ class LLM:
         if not self._pid_alive():
             exe = Path(self.cfg.llama_server)
             env = dict(os.environ)
-            if exe.parent.name.startswith("llama-"):
-                env["LD_LIBRARY_PATH"] = f"{exe.parent}:{env.get('LD_LIBRARY_PATH', '')}"
+            if exe.parent.name.startswith("llama-") or exe.parent.name == "bin":
+                for var in ("LD_LIBRARY_PATH", "DYLD_LIBRARY_PATH"):
+                    env[var] = f"{exe.parent}:{env.get(var, '')}"
             args = [
                 str(exe), "-m", self.cfg.model,
                 "--host", "127.0.0.1", "--port", str(self.cfg.llm_port),
@@ -54,8 +55,12 @@ class LLM:
                 "--reasoning-budget", "0",
             ]
             log = open(self.logfile, "ab")
-            proc = subprocess.Popen(args, stdout=log, stderr=log, stdin=subprocess.DEVNULL,
-                                    env=env, start_new_session=True)
+            try:
+                proc = subprocess.Popen(args, stdout=log, stderr=log, stdin=subprocess.DEVNULL,
+                                        env=env, start_new_session=True)
+            except OSError as e:  # llama-server absent
+                log.write(f"lancement impossible : {e}\n".encode())
+                return False
             self.pidfile.write_text(str(proc.pid))
         deadline = time.time() + wait
         while time.time() < deadline:

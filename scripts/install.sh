@@ -10,8 +10,25 @@ DATA="${XDG_DATA_HOME:-$HOME/.local/share}/steph"
 mkdir -p "$DATA/models" "$DATA/voices" vendor/llama
 CURL=(curl -q -fL --retry 3)   # -q : ignore ~/.curlrc
 
+OS=$(uname -s)
+
 # --- llama.cpp -------------------------------------------------------------
-if ! ls vendor/llama/llama-*/llama-server >/dev/null 2>&1; then
+if [ "$OS" = Darwin ] && ! command -v llama-server >/dev/null && ! ls vendor/llama/llama-*/llama-server >/dev/null 2>&1; then
+  # macOS : Homebrew si présent (Metal inclus), sinon binaire officiel
+  if command -v brew >/dev/null; then
+    brew install llama.cpp
+  else
+    TAG=$("${CURL[@]}" -s https://api.github.com/repos/ggml-org/llama.cpp/releases/latest | python3 -c 'import json,sys;print(json.load(sys.stdin)["tag_name"])')
+    ARCH=$([ "$(uname -m)" = arm64 ] && echo arm64 || echo x64)
+    "${CURL[@]}" -o /tmp/llama.tgz "https://github.com/ggml-org/llama.cpp/releases/download/$TAG/llama-$TAG-bin-macos-$ARCH.tar.gz"
+    tar xzf /tmp/llama.tgz -C vendor/llama && rm /tmp/llama.tgz
+    # les bibliothèques peuvent être rangées à part : on les met à côté du binaire
+    D=$(dirname "$(ls vendor/llama/*/llama-server vendor/llama/*/*/llama-server 2>/dev/null | head -1)")
+    [ "$(basename "$D")" = bin ] && mv "$D"/* "$D/.." 2>/dev/null || true
+    xattr -dr com.apple.quarantine vendor/llama 2>/dev/null || true
+  fi
+  command -v sox >/dev/null || echo "Conseil : brew install sox (voix plus réactive qu'avec afplay)"
+elif [ "$OS" != Darwin ] && ! ls vendor/llama/llama-*/llama-server >/dev/null 2>&1; then
   TAG=$("${CURL[@]}" -s https://api.github.com/repos/ggml-org/llama.cpp/releases/latest | python3 -c 'import json,sys;print(json.load(sys.stdin)["tag_name"])')
   if command -v nvidia-smi >/dev/null && nvidia-smi >/dev/null 2>&1; then
     FLAVOR=ubuntu-cuda-12.8-x64; EXTRA=cudart-llama-$TAG-bin-$FLAVOR.tar.gz

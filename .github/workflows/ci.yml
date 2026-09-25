@@ -1,0 +1,52 @@
+name: ci
+on: [push, workflow_dispatch]
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        shell: [/bin/zsh, /bin/bash]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - if: runner.os == 'Linux'
+        run: sudo apt-get install -y zsh
+      - run: uv sync
+      - run: uv run pytest -q tests
+      - name: bout en bout (voix coupée, sans LLM → repli déterministe)
+        env:
+          SHELL: ${{ matrix.shell }}
+          E2E_CHECK: "1"
+          STEPH_LLAMA_SERVER: /nonexistent
+        run: |
+          uv tool install -e .
+          uv run python tests/e2e.py ci
+
+  macos-llm:
+    # vérifie que llama.cpp de Homebrew est trouvé et que les résumés passent
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: brew install llama.cpp
+      - run: uv sync && uv tool install -e .
+      - run: |
+          mkdir -p ~/.local/share/steph/models
+          curl -fL -o ~/.local/share/steph/models/q.gguf https://huggingface.co/bartowski/Qwen_Qwen3.5-0.8B-GGUF/resolve/main/Qwen_Qwen3.5-0.8B-Q4_K_M.gguf
+      - name: résumé LLM d'une longue sortie
+        env:
+          SHELL: /bin/zsh
+          STEPH_MODEL: ~/.local/share/steph/models/q.gguf
+          STEPH_LLM_CTX: "8192"
+        run: |
+          steph server start
+          uv run python tests/e2e.py lsla | tee out.txt
+          grep -q "fin" out.txt
+          # la sortie de ls -la doit avoir été résumée (≥ 1 phrase de plus que la sortie courte)
+          test "$(grep -c '^+' out.txt)" -ge 4
+          steph server stop
+      - if: failure()
+        run: cat /tmp/steph-*/steph/*.log || true

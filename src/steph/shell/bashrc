@@ -1,20 +1,31 @@
 # steph : charge la config bash de l'utilisateur puis ajoute les marqueurs de commande.
+# Compatible bash 3.2 (macOS) à 5.x.
 [[ -f ~/.bashrc ]] && source ~/.bashrc
-__steph_b64() { printf '%s' "$1" | base64 -w0; }
-__steph_in_cmd=0
+__steph_b64() { printf '%s' "$1" | base64 | tr -d "\n"; }
+# 1 = verrouillé : pendant PROMPT_COMMAND (starship, etc.) le piège DEBUG se
+# déclenche aussi ; il ne doit émettre un marqueur que pour la commande tapée.
+__steph_lock=1
 __steph_preexec() {
-  [[ $__steph_in_cmd == 1 ]] && return
+  [[ $__steph_lock == 1 ]] && return
   [[ -n "$COMP_LINE" ]] && return
-  [[ "$BASH_COMMAND" == __steph_precmd* ]] && return
-  __steph_in_cmd=1
+  __steph_lock=1
   local c; c=$(HISTTIMEFORMAT= history 1 | sed -E 's/^ *[0-9]+\*? *//')
   printf '\e]6973;C;%s\a' "$(__steph_b64 "$c")"
 }
 __steph_precmd() {
   local ret=$?
+  __steph_lock=1
   printf '\e]6973;D;%s;%s\a' "$ret" "$(__steph_b64 "$PWD")"
-  __steph_in_cmd=0
+  return $ret
 }
-PROMPT_COMMAND="__steph_precmd${PROMPT_COMMAND:+;$PROMPT_COMMAND}"
+__steph_ready() {
+  trap '__steph_preexec' DEBUG
+  __steph_lock=0
+}
+if [[ "$(declare -p PROMPT_COMMAND 2>/dev/null)" == "declare -a"* ]]; then
+  PROMPT_COMMAND=(__steph_precmd "${PROMPT_COMMAND[@]}" __steph_ready)
+else
+  PROMPT_COMMAND="__steph_precmd${PROMPT_COMMAND:+;$PROMPT_COMMAND};__steph_ready"
+fi
 trap '__steph_preexec' DEBUG
 q() { steph ask --once -- "$@"; }

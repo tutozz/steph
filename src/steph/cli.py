@@ -121,6 +121,17 @@ def cmd_ctl(args) -> int:
 def open_ask_window(socket_path: str, cfg) -> None:
     exe = shutil.which("steph") or sys.argv[0]
     inner = [exe, "ask", "--socket", socket_path]
+    if sys.platform == "darwin" and not cfg.terminal_cmd:
+        import shlex
+        line = shlex.join(inner).replace("\\", "\\\\").replace('"', '\\"')
+        app = "iTerm" if os.environ.get("TERM_PROGRAM") == "iTerm.app" else "Terminal"
+        if app == "iTerm":
+            script = f'tell application "iTerm" to create window with default profile command "{line}"'
+        else:
+            script = f'tell application "Terminal" to do script "{line}"\ntell application "Terminal" to activate'
+        subprocess.Popen(["osascript", "-e", script], stdout=subprocess.DEVNULL,
+                         stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL, start_new_session=True)
+        return
     if cfg.terminal_cmd:
         cmd = cfg.terminal_cmd.split() + inner
     elif shutil.which("ptyxis"):

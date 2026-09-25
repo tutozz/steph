@@ -5,7 +5,6 @@ from __future__ import annotations
 import base64
 import fcntl
 import os
-import pty
 import select
 import signal
 import struct
@@ -128,16 +127,22 @@ class PtyProxy:
 
     def run(self) -> int:
         argv, env = self._shell_argv()
-        pid, master = pty.fork()
+        # openpty + login_tty plutôt que pty.fork() : on connaît le nom du
+        # terminal esclave (/dev/pts/N, /dev/ttysNNN) sur Linux comme sur macOS
+        master, slave = os.openpty()
+        slave_name = os.ttyname(slave)
+        fcntl.ioctl(slave, termios.TIOCSWINSZ, self._winsize())
+        pid = os.fork()
         if pid == 0:
-            os.execvpe(argv[0], argv, env)
-        fcntl.ioctl(master, termios.TIOCSWINSZ, self._winsize())
-        try:
-            from .ttyprobe import TtyProbe
-            slave = os.readlink(f"/proc/{pid}/fd/0")
-            self.nar.tty_probe = TtyProbe(master, slave)
-        except OSError:
-            pass
+            try:
+                os.close(master)
+                os.login_tty(slave)
+                os.execvpe(argv[0], argv, env)
+            finally:
+                os._exit(127)
+        os.close(slave)
+        from .ttyprobe import TtyProbe
+        self.nar.tty_probe = TtyProbe(master, slave_name)
 
         def on_winch(*_):
             try:

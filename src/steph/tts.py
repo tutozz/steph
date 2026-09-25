@@ -1,4 +1,4 @@
-"""Synthèse vocale : Piper en processus (voix préchargée), lecture via paplay.
+"""Synthèse vocale : Piper en processus (voix préchargée), lecture via audio.py.
 
 - `say(text)` : ajoute une annonce (par défaut, coupe ce qui est en cours).
 - `say_stream(pieces)` : lit un flux de tokens LLM phrase par phrase, pour
@@ -8,6 +8,7 @@
 
 from __future__ import annotations
 
+import os
 import queue
 import re
 import shutil
@@ -15,6 +16,7 @@ import subprocess
 import threading
 from typing import Iterable, Iterator
 
+from . import audio
 from .config import Config
 
 SENTENCE_END = re.compile(r"([.!?…]\s|\n)")
@@ -63,7 +65,6 @@ class Speaker:
         self.last_text = ""
         self.history: list[str] = []
         self.speaking = threading.Event()
-        self._player = shutil.which("paplay")
         self._thread = threading.Thread(target=self._run, daemon=True, name="tts")
         self._load_voice()
         self._thread.start()
@@ -78,7 +79,7 @@ class Speaker:
             self.rate = self.voice.config.sample_rate
             self.syn = SynthesisConfig(length_scale=1.0 / max(0.5, self.cfg.speech_rate))
         except Exception:
-            self.voice = None  # repli : spd-say
+            self.voice = None  # repli : voix du système
 
     # ---------------------------------------------------------------- API
     def say(self, text: str, interrupt: bool = True, on_done=None) -> None:
@@ -216,21 +217,27 @@ class Speaker:
     def _speak_one(self, text: str, gen: int) -> None:
         if not text:
             return
-        if self.voice is None or not self._player:
+        if self.voice is None:
+            cmd = audio.system_voice_cmd(text)
+            if not cmd:
+                return
             with self._lock:
                 if gen != self._gen:
                     return
-                self._proc = subprocess.Popen(["spd-say", "-w", "-l", "fr", text],
-                                              stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                self._proc = audio.popen_quiet(cmd)
             self._proc.wait()
             return
+        stream_cmd = audio.stream_player_cmd(self.rate)
+        if stream_cmd:
+            self._play_stream(stream_cmd, text, gen)
+        else:
+            self._play_file(text, gen)
+
+    def _play_stream(self, cmd: list[str], text: str, gen: int) -> None:
         with self._lock:
             if gen != self._gen:
                 return
-            self._proc = subprocess.Popen(
-                [self._player, "--raw", "--format=s16le", f"--rate={self.rate}", "--channels=1",
-                 "--client-name=steph", "--stream-name=voix"],
-                stdin=subprocess.PIPE, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            self._proc = audio.popen_quiet(cmd, stdin=subprocess.PIPE)
         proc = self._proc
         try:
             for chunk in self.voice.synthesize(text, syn_config=self.syn):
@@ -242,3 +249,23 @@ class Speaker:
         except (BrokenPipeError, OSError, ValueError):
             pass
         proc.wait()
+
+    def _play_file(self, text: str, gen: int) -> None:
+        pcm = b"".join(ch.audio_int16_bytes for ch in self.voice.synthesize(text, syn_config=self.syn))
+        if gen != self._gen or not pcm:
+            return
+        path = audio.write_wav(pcm, self.rate)
+        try:
+            cmd = audio.file_player_cmd(path)
+            if not cmd:
+                return
+            with self._lock:
+                if gen != self._gen:
+                    return
+                self._proc = audio.popen_quiet(cmd)
+            self._proc.wait()
+        finally:
+            try:
+                os.unlink(path)
+            except OSError:
+                pass

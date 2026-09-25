@@ -518,8 +518,12 @@ class Narrator:
         if not (partial and now - c.last_output_at >= self.cfg.prompt_idle and partial != c.last_prompt_said):
             return False
         if not looks_like_prompt(partial):
-            # pas de forme de question, mais le programme attend peut-être quand même
-            if c.interactive or self._reading() is not True:
+            # pas de forme de question, mais le programme attend peut-être quand
+            # même : on sonde une seule fois par ligne (ps coûte cher sur macOS)
+            if c.interactive or c.probed_partial == partial:
+                return False
+            c.probed_partial = partial
+            if self._reading() is not True:
                 return False
         c.last_prompt_said = partial
         c.prompts_said.append(strip_ansi(partial).strip())

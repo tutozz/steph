@@ -9,6 +9,7 @@ from pathlib import Path
 
 DATA_DIR = Path(os.environ.get("XDG_DATA_HOME", Path.home() / ".local/share")) / "steph"
 CONFIG_PATH = Path(os.environ.get("XDG_CONFIG_HOME", Path.home() / ".config")) / "steph" / "config.toml"
+# macOS n'a pas de XDG_RUNTIME_DIR ; /tmp reste court (limite de 104 octets des sockets Unix)
 RUNTIME_DIR = Path(os.environ.get("XDG_RUNTIME_DIR", f"/tmp/steph-{os.getuid()}")) / "steph"
 PROJECT_DIR = Path(__file__).resolve().parents[2]
 
@@ -21,7 +22,9 @@ def _find_llama_server() -> str:
         return str(cand)
     for cand in sorted((DATA_DIR / "llama").glob("llama-*/llama-server"), reverse=True):
         return str(cand)
-    return "llama-server"
+    import shutil
+    # Homebrew (macOS : brew install llama.cpp) ou paquet système
+    return shutil.which("llama-server") or "llama-server"
 
 
 @dataclass

@@ -2,7 +2,7 @@
 #   C;<cmd base64>          juste avant l'exécution d'une commande
 #   D;<code>;<cwd base64>   au retour au prompt
 zmodload zsh/datetime 2>/dev/null
-__steph_b64() { print -rn -- "$1" | base64 -w0 }
+__steph_b64() { print -rn -- "$1" | base64 | tr -d "\n" }
 __steph_preexec() { print -rn -- $'\e]6973;C;'"$(__steph_b64 "$1")"$'\a' }
 __steph_precmd() {
   local ret=$?

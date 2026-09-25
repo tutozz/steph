@@ -21,8 +21,30 @@ la synthèse vocale Piper (voix française). Rien ne sort de la machine.
 steph                     # lance le terminal parlant
 ```
 
-Prérequis : Linux, `uv`, PipeWire ou PulseAudio (`paplay`). Une carte NVIDIA
-est utilisée si elle est présente (4 Go suffisent), sinon Vulkan, sinon CPU.
+Prérequis : `uv` ([installation](https://docs.astral.sh/uv/)).
+
+**Linux** : PipeWire ou PulseAudio (`paplay`). Une carte NVIDIA est utilisée si
+elle est présente (4 Go suffisent), sinon Vulkan, sinon CPU.
+
+**macOS** (Apple Silicon ou Intel) :
+
+```sh
+brew install uv llama.cpp sox   # sox : voix plus réactive (sinon afplay, intégré)
+./scripts/install.sh
+steph
+```
+
+- Le modèle tourne sur le GPU via Metal (llama.cpp de Homebrew, ou le binaire
+  officiel si Homebrew est absent).
+- Sur Mac, les touches F7 à F10 sont des touches multimédia : il faut appuyer
+  sur **fn** en même temps, ou activer « Utiliser F1, F2… comme touches de
+  fonction standard » (Réglages → Clavier). On peut aussi choisir d'autres
+  touches dans `config.toml`.
+- La fenêtre de questions (F7) s'ouvre dans Terminal.app, ou dans iTerm si
+  `steph` tourne dans iTerm.
+- Si Piper n'est pas disponible, `steph` se rabat sur la voix système `say`
+  (voix « Thomas », à changer avec `STEPH_MAC_VOICE`).
+- Détection des questions : `ps -o wchan` (état `ttyin`) remplace `/proc`.
 
 ## Touches et commandes
 
@@ -92,6 +114,10 @@ Benchmark reproductible : `bench/bench.py` (fixtures réelles dans `bench/`).
 Voir `config.example.toml` → `~/.config/steph/config.toml`.
 
 ## Tests
+
+La CI GitHub Actions (`.github/workflows/ci.yml`) lance les tests sur Ubuntu
+et macOS, avec zsh et bash (le bash 3.2 de macOS compris), ainsi qu'un test
+de bout en bout du LLM sur Mac avec llama.cpp de Homebrew.
 
 ```sh
 uv run pytest tests               # unitaires (nettoyeur, marqueurs, étapes)

@@ -69,3 +69,11 @@ def test_compact():
 def test_apt_get_line():
     assert detect_stage("Réception de :3 http://deb.debian.org/debian bookworm/main amd64 curl amd64 7.88.1 [315 kB]") == "téléchargement de curl"
     assert detect_stage("Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]") == "lecture des index de bookworm"
+
+
+def test_macos_ps_probe():
+    from steph.ttyprobe import parse_ps_wchan
+    out = "  501 Ss   -\n 4242 S+   ttyin\n 4242 S+   -\n 9999 R    -\n"
+    assert parse_ps_wchan(out, 4242) is True
+    assert parse_ps_wchan(" 4242 R+ -\n", 4242) is False
+    assert parse_ps_wchan(out, 1) is None

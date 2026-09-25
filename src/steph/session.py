@@ -37,6 +37,7 @@ class Command:
     enter_at: float = 0.0
     typed: str = ""
     enter_count: int = 0
+    probed_partial: str = ""
     prompts_said: list[str] = field(default_factory=list)
 
     @property
