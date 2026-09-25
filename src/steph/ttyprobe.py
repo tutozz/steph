@@ -4,7 +4,10 @@ On regarde les processus du groupe au premier plan du PTY : si l'un d'eux est
 bloqué en lecture sur le terminal, il attend l'utilisateur. Bien plus fiable
 que de deviner à partir du texte affiché.
 - Linux : /proc/<pid>/syscall (appel read() sur le terminal esclave) ;
-- macOS : `ps -o wchan` vaut « ttyin » pour un processus qui lit le terminal.
+- macOS : le noyau n'expose plus le canal d'attente (ps -o wchan vaut « - »).
+  On lit l'état termios du terminal : un programme qui lit le clavier via
+  readline/libedit passe en mode non canonique, une saisie de mot de passe
+  coupe l'écho. Sinon : inconnu (None), le narrateur se rabat sur le texte.
 """
 
 from __future__ import annotations
@@ -12,6 +15,7 @@ from __future__ import annotations
 import os
 import subprocess
 import sys
+import termios
 
 READ_SYSCALLS = {"0", "17", "19", "295"}  # read, pread64, readv, preadv (x86_64)
 POLL_SYSCALLS = {"7", "23", "270", "271", "232", "281", "441"}  # poll, select, pselect6, ppoll, epoll_wait, epoll_pwait, epoll_pwait2
@@ -43,8 +47,8 @@ class TtyProbe:
 
     def waiting_for_input(self) -> bool | None:
         """True : lit le terminal ; False : occupé ; None : impossible à savoir."""
-        if sys.platform == "darwin" or not os.path.isdir("/proc/self"):
-            return self._waiting_ps()
+        if sys.platform == "darwin" or not os.path.isdir("/proc/self") or os.environ.get("STEPH_PROBE") == "termios":
+            return self._waiting_termios()
         pids = self._fg_pids()
         if not pids:
             return None
@@ -69,6 +73,23 @@ class TtyProbe:
                     return True
         return None if unknown else False
 
+    def _waiting_termios(self) -> bool | None:
+        try:
+            lflag = termios.tcgetattr(self.master)[3]
+        except (termios.error, OSError):
+            return None
+        if not lflag & termios.ECHO or not lflag & termios.ICANON:
+            return True
+        return self._waiting_ps()
+
+    def password_mode(self) -> bool:
+        """Écho coupé mais mode ligne : saisie de mot de passe (toutes plateformes)."""
+        try:
+            lflag = termios.tcgetattr(self.master)[3]
+        except (termios.error, OSError):
+            return False
+        return bool(lflag & termios.ICANON) and not lflag & termios.ECHO
+
     def _waiting_ps(self) -> bool | None:
         try:
             pgid = os.tcgetpgrp(self.master)
@@ -80,13 +101,12 @@ class TtyProbe:
 
 
 def parse_ps_wchan(out: str, pgid: int) -> bool | None:
-    seen = False
+    """True si un processus du groupe attend sur le terminal ; sinon None :
+    macOS récent affiche « - » partout, l'absence d'information ne prouve rien."""
     for line in out.splitlines():
         parts = line.split()
-        if len(parts) < 2 or not parts[0].isdigit() or int(parts[0]) != pgid:
+        if len(parts) < 3 or not parts[0].isdigit() or int(parts[0]) != pgid:
             continue
-        seen = True
-        wchan = parts[2] if len(parts) > 2 else ""
-        if wchan.startswith("ttyin") or wchan in ("ttread", "ttyrd"):
+        if parts[2].startswith("ttyin") or parts[2] in ("ttread", "ttyrd"):
             return True
-    return False if seen else None
+    return None

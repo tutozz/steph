@@ -525,8 +525,14 @@ class Narrator:
             # même : on sonde une seule fois par ligne (ps coûte cher sur macOS)
             if c.interactive or c.probed_partial == partial:
                 return False
+            reading = self._reading()
+            if reading is None:
+                # sonde muette (macOS, lecture en mode ligne) : ligne restée ouverte
+                # et silence prolongé = probablement une question
+                if now - c.last_output_at < 2.5 or re.search(r"\d\s*%|\.\.\.\s*$|[|/\\-]\s*$", partial):
+                    return False
             c.probed_partial = partial
-            if self._reading() is not True:
+            if reading is False:
                 return False
         c.last_prompt_said = partial
         c.prompts_said.append(strip_ansi(partial).strip())
@@ -535,7 +541,8 @@ class Narrator:
             if not re.search(r"mot de passe|password|passphrase|\[[OoYy]/[Nn]\]|\?\s*$", partial, re.I):
                 return False
         p = strip_ansi(partial).strip()
-        if re.search(r"mot de passe|password|passphrase", p, re.I):
+        pw = self.tty_probe is not None and self.tty_probe.password_mode()
+        if pw or re.search(r"mot de passe|password|passphrase", p, re.I):
             self.sp.say("Mot de passe demandé.")
         else:
             prev = [l.strip() for l in c.out.lines[-3:] if l.strip()]

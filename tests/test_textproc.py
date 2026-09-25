@@ -75,5 +75,5 @@ def test_macos_ps_probe():
     from steph.ttyprobe import parse_ps_wchan
     out = "  501 Ss   -\n 4242 S+   ttyin\n 4242 S+   -\n 9999 R    -\n"
     assert parse_ps_wchan(out, 4242) is True
-    assert parse_ps_wchan(" 4242 R+ -\n", 4242) is False
+    assert parse_ps_wchan(" 4242 S+ -\n", 4242) is None
     assert parse_ps_wchan(out, 1) is None

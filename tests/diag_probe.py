@@ -7,6 +7,7 @@ CASES = {
     "python input()": [sys.executable, "-c", "input('nom ')"],
     "python stdin.read": [sys.executable, "-c", "import sys; sys.stdin.read(1)"],
     "cat": ["cat"],
+    "getpass": [sys.executable, "-c", "import getpass; getpass.getpass('mdp ')"],
     "bash read": ["bash", "-c", "read x"],
     "sleep (occupé)": ["sleep", "5"],
 }
@@ -21,5 +22,7 @@ for name, argv in CASES.items():
     pg = os.getpgid(pid)
     ps = subprocess.run(["ps", "-A", "-o", "pid=,pgid=,stat=,wchan=,comm="], capture_output=True, text=True).stdout
     rows = [l for l in ps.splitlines() if l.split()[1:2] == [str(pg)]]
-    print(f"{name:20} probe={TtyProbe(master, sname).waiting_for_input()}  ps={rows}")
+    import termios
+    lf = termios.tcgetattr(master)[3]
+    print(f"{name:20} probe={TtyProbe(master, sname).waiting_for_input()}  icanon={bool(lf & termios.ICANON)} echo={bool(lf & termios.ECHO)}  ps={rows}")
     os.kill(pid, 9); os.waitpid(pid, 0); os.close(master)
