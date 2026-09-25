@@ -3,8 +3,10 @@ name = "steph"
 version = "0.1.0"
 description = "Terminal parlant pour personnes malvoyantes (proxy shell + LLM local + Piper)"
 readme = "README.md"
+license = "LicenseRef-PolyForm-Noncommercial-1.0.0"
+license-files = ["LICENSE.md"]
 authors = [
-    { name = "Luis Parra", email = "test@localhost.com" }
+    { name = "Luis Parra", email = "luis@lsmdx.com" }
 ]
 requires-python = ">=3.13"
 dependencies = [
