@@ -1,138 +1,174 @@
-# steph — terminal parlant
+<p align="center">
+  <a href="https://steph.lsmdx.com/en/"><img src="assets/banner.png" alt="steph: your terminal, out loud" width="100%"></a>
+</p>
 
-Un shell qui parle, pour les personnes malvoyantes. `steph` relance ton shell
-(zsh ou bash, avec ta config habituelle) et écoute tout ce qui passe. Au lieu
-de lire tout le texte à voix haute, il dit **l'essentiel, en une phrase** :
+<p align="center">
+  <a href="LICENSE.md"><img src="https://img.shields.io/badge/license-PolyForm%20Noncommercial-0e0e0e" alt="PolyForm Noncommercial license"></a>
+  <img src="https://img.shields.io/badge/platforms-Linux%20%C2%B7%20macOS-0e0e0e" alt="Linux and macOS">
+  <img src="https://img.shields.io/badge/100%25-local-ffd60a" alt="100% local">
+  <a href="https://steph.lsmdx.com/en/"><img src="https://img.shields.io/badge/site-steph.lsmdx.com-7fb8ec" alt="Website steph.lsmdx.com"></a>
+</p>
 
-- `ls /usr` → lit la sortie telle quelle (courte) ;
-- `cat /nope` → « Erreur 1 : cat: /nope: Aucun fichier ou dossier de ce nom » ;
-- `npm run build` qui échoue → « Erreur TypeScript : la propriété titel n'existe pas, utilisez title. » ;
-- `apt upgrade` → « En cours : mise à jour des paquets. » … « 35 pour cent, décompression de vim-common. » … « Terminé en 1 minute 24. 12 paquets mis à jour. » ;
-- une question `[O/n]` → « Question : il est nécessaire de prendre 24 Mo. Souhaitez-vous continuer ? oui ou non, oui par défaut » ;
-- `ssh`, `python`, `psql`… → lit la réponse à chaque commande tapée dedans.
+<p align="center"><strong>English</strong> · <a href="README.fr.md">Français</a></p>
 
-Tout tourne **en local** : un petit LLM (Gemma 4 E2B via llama.cpp, sur GPU) et
-la synthèse vocale Piper (voix française). Rien ne sort de la machine.
+# steph, the talking terminal
 
-## Installation
+**S**peaking **T**erminal, **E**verything **P**rivately **H**osted.
+
+`steph` starts your shell (zsh or bash, with your usual configuration) and
+listens to everything that goes through it. Instead of reading every line
+aloud, it says **what matters, in one sentence**. Designed and tested with
+visually impaired people.
+
+> steph speaks **French** today. The examples below are translated.
+
+- `ls /usr` → reads the output as is (it is short);
+- `cat /nope` → "Error 1: cat: /nope: no such file or directory";
+- a failing `npm run build` → "TypeScript error: property titel does not exist, use title.";
+- `apt upgrade` → "Running: upgrading packages." … "35 percent, unpacking vim-common." … "Done in 1 minute 24. 12 packages upgraded.";
+- a `[Y/n]` prompt → "Question: 24 MB of additional disk space will be used. Do you want to continue? yes or no, yes by default";
+- `ssh`, `python`, `psql`… → reads the answer to each command typed inside.
+
+Everything runs **locally**: a small LLM (Gemma 4 E2B via llama.cpp, on the
+GPU) and Piper speech synthesis. Nothing leaves the machine.
+
+Hear the voice: [steph.lsmdx.com](https://steph.lsmdx.com/en/#listen).
+
+## Install
 
 ```sh
-./scripts/install.sh      # llama.cpp + modèle (~3 Go) + voix + commande steph
-steph                     # lance le terminal parlant
+git clone https://github.com/tutozz/steph && cd steph
+./scripts/install.sh      # llama.cpp + model (~3 GB) + voice + steph command
+steph                     # start the talking terminal
 ```
 
-Prérequis : `uv` ([installation](https://docs.astral.sh/uv/)).
+Requirement: `uv` ([install](https://docs.astral.sh/uv/)). No admin rights needed.
 
-**Linux** : PipeWire ou PulseAudio (`paplay`). Une carte NVIDIA est utilisée si
-elle est présente (4 Go suffisent), sinon Vulkan, sinon CPU.
+**Linux**: PipeWire or PulseAudio (`paplay`). An NVIDIA card is used when
+present (4 GB is enough), otherwise Vulkan, otherwise CPU.
 
-**macOS** (Apple Silicon ou Intel) :
+**macOS** (Apple Silicon or Intel):
 
 ```sh
-brew install uv llama.cpp sox   # sox : voix plus réactive (sinon afplay, intégré)
+brew install uv llama.cpp sox   # sox: snappier voice (afplay otherwise, built in)
 ./scripts/install.sh
 steph
 ```
 
-- Le modèle tourne sur le GPU via Metal (llama.cpp de Homebrew, ou le binaire
-  officiel si Homebrew est absent).
-- Sur Mac, les touches F7 à F10 sont des touches multimédia : il faut appuyer
-  sur **fn** en même temps, ou activer « Utiliser F1, F2… comme touches de
-  fonction standard » (Réglages → Clavier). On peut aussi choisir d'autres
-  touches dans `config.toml`.
-- La fenêtre de questions (F7) s'ouvre dans Terminal.app, ou dans iTerm si
-  `steph` tourne dans iTerm.
-- Si Piper n'est pas disponible, `steph` se rabat sur la voix système `say`
-  (voix « Thomas », à changer avec `STEPH_MAC_VOICE`).
-- Détection des questions : `ps -o wchan` (état `ttyin`) remplace `/proc`.
+- The model runs on the GPU through Metal (Homebrew llama.cpp, or the official
+  binary when Homebrew is missing).
+- On a Mac, F7 to F10 are media keys: hold **fn**, or turn on "Use F1, F2, etc.
+  keys as standard function keys" (Settings → Keyboard). Other keys can be set
+  in `config.toml`.
+- The question window (F7) opens in Terminal.app, or in iTerm when `steph`
+  runs in iTerm.
+- Without Piper, `steph` falls back to the system `say` voice ("Thomas", change
+  it with `STEPH_MAC_VOICE`).
 
-## Touches et commandes
+## Keys and commands
 
-| Touche / commande | Effet |
+| Key / command | Effect |
 |---|---|
-| **F7** | ouvre la fenêtre de questions (2e terminal) |
-| **F8** | silence immédiat |
-| **F9** | répète la dernière annonce |
-| **F10** | explication détaillée de la dernière commande |
-| `q pourquoi ça a planté ?` | question rapide, sans quitter le shell |
-| `q` puis Entrée | pose la question à une invite `?` : apostrophes et guillemets sans échappement |
-| `steph ask` | fenêtre de questions (dans n'importe quel terminal) |
-| `steph ctl stop\|repeat\|details\|status\|history` | contrôle à distance de la session |
-| `steph say "texte"` | tester la voix |
-| `steph server status\|stop` | le modèle local |
+| **F7** | opens the question window (second terminal) |
+| **F8** | instant silence |
+| **F9** | repeats the last announcement |
+| **F10** | detailed explanation of the last command |
+| `q why did it crash?` | quick question, without leaving the shell |
+| `q` then Enter | asks at a `?` prompt: quotes and apostrophes need no escaping |
+| `steph ask` | question window (in any terminal) |
+| `steph ctl stop\|repeat\|details\|status\|history` | remote control of the session |
+| `steph say "text"` | test the voice |
+| `steph server status\|stop` | the local model |
 
-Les questions portent sur **tout l'historique de la session** : commandes,
-codes de retour et sorties. Pas besoin de recopier quoi que ce soit.
+Questions cover **the whole session history**: commands, exit codes and
+output. No need to copy anything.
 
-## Comment ça marche
+## How it works
 
 ```
-clavier ──► proxy PTY ──► ton shell (zsh/bash + marqueurs)
+keyboard ──► PTY proxy ──► your shell (zsh/bash + markers)
                 │  ▲
-   sortie ◄─────┘  │ marqueurs invisibles : début de commande, fin + code de retour
+   output ◄─────┘  │ invisible markers: command start, end + exit code
                 ▼
-          nettoyeur (ANSI, \r, barres de progression, ligne de statut d'apt)
+          cleaner (ANSI, \r, progress bars, apt status line)
                 ▼
-          narrateur ── règles déterministes (instantané) ──┐
-                │                                          ├──► Piper ──► haut-parleur
-                └── LLM local (résumés, étapes, Q&R) ──────┘
+          narrator ── deterministic rules (instant) ──┐
+                │                                     ├──► Piper ──► speaker
+                └── local LLM (summaries, steps, Q&A) ┘
 ```
 
-- **Déterministe d'abord.** Sortie vide → « OK » ; sortie courte → lue telle
-  quelle ; `cd` → « Dossier tmp » ; code 127 → « Commande introuvable » ;
-  pourcentages et étapes connues (apt, dnf, pip, git, docker, cargo, make…)
-  extraits par expressions régulières. Le LLM ne sert que pour résumer une
-  sortie longue ou expliquer une erreur.
-- **Parler tôt.** La réponse du LLM est lue phrase par phrase pendant qu'elle
-  se génère. Pour une commande longue, « Terminé en 32 secondes » est dit
-  immédiatement pendant que le résumé se calcule.
-- **Savoir quand le programme attend l'utilisateur.** `steph` regarde dans
-  `/proc/<pid>/syscall` si le programme au premier plan est bloqué en lecture
-  sur le terminal. Il distingue ainsi une vraie question d'une commande tapée
-  à l'avance.
-- **Questions rapides grâce au cache.** L'historique est construit en « ajout
-  seul » et pré-calculé pendant que le GPU est libre (préchauffage annulable).
-  Une question ne coûte donc que le calcul de ses propres mots : environ 1 s
-  au lieu de 20 à 30 s.
-- **Robuste.** Si le modèle tombe, `steph` le relance et utilise un résumé
-  déterministe en attendant.
+- **Deterministic first.** Empty output → "OK"; short output → read as is;
+  `cd` → "Folder tmp"; exit code 127 → "Command not found"; percentages and
+  known steps (apt, dnf, pip, git, docker, cargo, make…) extracted with
+  regular expressions. The LLM only summarises long output or explains an
+  error.
+- **Speak early.** The LLM answer is read sentence by sentence while it is
+  generated. For a long command, "Done in 32 seconds" is said right away while
+  the summary is computed.
+- **Know when the program waits for you.** `steph` checks whether the
+  foreground program is blocked reading the terminal. It tells a real prompt
+  apart from a command typed ahead.
+- **Fast questions thanks to the cache.** History is built append-only and
+  pre-computed while the GPU is idle (cancellable warm-up). A question only
+  costs its own words: about 1 s instead of 20 to 30 s.
+- **Robust.** If the model crashes, `steph` restarts it and uses a
+  deterministic summary meanwhile.
 
-## Choix du modèle (mesures sur NVIDIA T600 4 Go)
+## Model choice (measured on an NVIDIA T600, 4 GB)
 
-| Modèle | Latence moyenne d'un résumé | Qualité |
+| Model | Mean summary latency | Quality |
 |---|---|---|
-| Qwen3.5 0.8B | 0,6 s | invente trop |
-| LFM2.5 1.2B | 1,1 s | style télégraphique, peu utile |
-| Qwen3.5 2B | 1,1 s | correct, quelques erreurs |
-| **Gemma 4 E2B** (défaut) | 1,5 s | factuel, meilleur en Q&R |
-| granite 4.2 3B | 2,8 s | précis, laisse fuiter `</think>` |
-| Qwen3.5 4B | 3,2 s | le meilleur, trop lent |
+| Qwen3.5 0.8B | 0.6 s | makes things up |
+| LFM2.5 1.2B | 1.1 s | telegraphic, not very useful |
+| Qwen3.5 2B | 1.1 s | fair, a few mistakes |
+| **Gemma 4 E2B** (default) | 1.5 s | factual, best at Q&A |
+| granite 4.2 3B | 2.8 s | precise, leaks `</think>` |
+| Qwen3.5 4B | 3.2 s | the best, too slow |
 
-Benchmark reproductible : `bench/bench.py` (fixtures réelles dans `bench/`).
+Reproducible benchmark: `bench/bench.py` (real fixtures in `bench/`).
 
 ## Configuration
 
-Voir `config.example.toml` → `~/.config/steph/config.toml`.
+See `config.example.toml` → `~/.config/steph/config.toml`.
+
+`llama-server` settings (parallelism, batch size, flash attention, cache
+type…) auto-adapt to the detected GPU: run `steph profile` to see the
+detected hardware and the command that would be launched. Details and how to
+contribute a profile for an unrecognised card: `src/steph/profiles/README.md`
+(in French).
 
 ## Tests
 
-La CI GitHub Actions (`.github/workflows/ci.yml`) lance les tests sur Ubuntu
-et macOS, avec zsh et bash (le bash 3.2 de macOS compris), ainsi qu'un test
-de bout en bout du LLM sur Mac avec llama.cpp de Homebrew.
+GitHub Actions (`.github/workflows/ci.yml`) runs the tests on Ubuntu and
+macOS, with zsh and bash (including macOS bash 3.2), plus an end-to-end LLM
+test on a Mac with Homebrew llama.cpp.
 
 ```sh
-uv run pytest tests               # unitaires (nettoyeur, marqueurs, étapes)
-uv run python tests/e2e.py basic  # bout en bout, voix coupée, journal de parole
-#   scénarios : basic long prompt repl subshell ask keys real typeahead
+uv run pytest tests               # unit tests (cleaner, markers, steps)
+uv run python tests/e2e.py basic  # end to end, voice muted, speech log
+#   scenarios: basic long prompt repl subshell ask keys real typeahead
 ```
 
-Journal : `$XDG_RUNTIME_DIR/steph/steph.log` et `llama-server.log`.
+Logs: `$XDG_RUNTIME_DIR/steph/steph.log` and `llama-server.log`.
 
-## Limites connues
+## Known limits
 
-- Les applications plein écran (vim, htop, less) ne sont pas lues : `steph`
-  annonce seulement qu'elles sont ouvertes.
-- La touche Entrée tapée à l'avance est bien gérée, mais pas les flèches dans
-  une ligne en cours d'édition, dont le filtrage reste approximatif.
-- Le petit modèle se trompe parfois dans les comptes, par exemple « 50 nombres »
-  au lieu de 60. F10 et les questions donnent plus de détails.
+- Full-screen apps (vim, htop, less) are not read: `steph` only announces
+  that they are open.
+- Enter typed ahead is handled, but arrow keys inside a line being edited are
+  only filtered approximately.
+- The small model sometimes miscounts, for example "50 numbers" instead of 60.
+  F10 and questions give more detail.
+
+## License
+
+| Use | License | Price |
+|---|---|---|
+| Individuals, study, hobby projects | [PolyForm Noncommercial 1.0.0](LICENSE.md) | free |
+| Nonprofits, schools, public research, government | [PolyForm Noncommercial 1.0.0](LICENSE.md) | free |
+| Companies, contractors, embedding in a product | [commercial license](COMMERCIAL.md) | quote on request |
+
+The source code is open and can be modified. Any commercial use requires a
+commercial license: write to [luis@lsmdx.com](mailto:luis@lsmdx.com).
+
+3D icons on the website and banner: [Microsoft Fluent Emoji](https://github.com/microsoft/fluentui-emoji) (MIT).
