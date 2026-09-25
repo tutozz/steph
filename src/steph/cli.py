@@ -164,7 +164,7 @@ def cmd_run(args) -> int:
     if os.environ.get("STEPH_ACTIVE"):
         print("steph tourne déjà dans ce terminal.", file=sys.stderr)
         return 1
-    cfg = load_config()
+    cfg = load_config(apply_profile=True)
     if args.no_voice:
         cfg.tts_enabled = False
     from .llm import LLM
@@ -209,7 +209,7 @@ def cmd_run(args) -> int:
 
 def cmd_server(args) -> int:
     from .llm import LLM
-    llm = LLM(load_config())
+    llm = LLM(load_config(apply_profile=args.action == "start"))
     if args.action == "start":
         ok = llm.ensure_server()
         print("prêt" if ok else f"échec, voir {llm.logfile}")
@@ -218,6 +218,39 @@ def cmd_server(args) -> int:
         llm.stop_server()
         return 0
     print("en marche" if llm.healthy() else "arrêté")
+    return 0
+
+
+def cmd_profile(args) -> int:
+    """Diagnostic pour les contributeurs : GPU détectés, profil choisi, réglages
+    llama-server effectifs. Utile pour préparer un profils/gpu/<carte>.toml."""
+    from .hardware import detect_gpus_cached
+    from .llm import _build_args
+    from .profile import PROFILES_DIR, profile_name
+
+    cfg = load_config(apply_profile=True)
+    prof, _, warnings = getattr(cfg, "_hardware_debug", (None, [], []))
+    gpus = detect_gpus_cached(cfg.llama_server)
+
+    print("GPU détectés :")
+    if gpus:
+        for g in gpus:
+            suffix = f" (pci {g.pci_id})" if g.pci_id else ""
+            print(f"  - {g.vendor}/{g.kind} : {g.name}{suffix}")
+    else:
+        print("  aucun")
+
+    name = profile_name(prof, PROFILES_DIR) if prof else "aucun"
+    print(f"\nProfil retenu : {name}  (hardware_profile = {cfg.hardware_profile!r})")
+    for w in warnings:
+        print(f"  attention : {w}")
+
+    print("\nCommande llama-server :")
+    print("  " + " ".join(_build_args(cfg, str(Path(cfg.llama_server)))))
+    if cfg.llm_env:
+        print("\nVariables d'environnement (llm_env) :")
+        for k, v in cfg.llm_env.items():
+            print(f"  {k}={v}")
     return 0
 
 
@@ -250,12 +283,13 @@ def main(argv: list[str] | None = None) -> int:
     s.add_argument("action", choices=["start", "stop", "status"])
     y = sub.add_parser("say", help="tester la voix")
     y.add_argument("text", nargs="+")
+    sub.add_parser("profile", help="diagnostic matériel : GPU détectés, profil choisi, réglages llama-server")
     args = p.parse_args(argv)
     if args.sub in (None, "run"):
         if args.sub is None:
             args.no_voice = False
         return cmd_run(args)
-    return {"ask": cmd_ask, "ctl": cmd_ctl, "server": cmd_server, "say": cmd_say}[args.sub](args)
+    return {"ask": cmd_ask, "ctl": cmd_ctl, "server": cmd_server, "say": cmd_say, "profile": cmd_profile}[args.sub](args)
 
 
 if __name__ == "__main__":

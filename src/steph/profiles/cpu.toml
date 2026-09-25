@@ -1,0 +1,11 @@
+# Aucun GPU détecté : tout sur CPU. Valeurs actuelles, à mesurer.
+[match]
+kind = "cpu"
+
+[settings]
+llm_gpu_layers = 0
+llm_parallel = 2
+llm_batch = 512
+llm_ubatch = 512
+llm_flash_attn = "auto"
+llm_cache_type = "f16"

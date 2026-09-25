@@ -1,0 +1,10 @@
+# Apple Silicon (Metal), toute puce M. Valeurs actuelles, à mesurer.
+[match]
+kind = "apple"
+
+[settings]
+llm_parallel = 2
+llm_batch = 512
+llm_ubatch = 512
+llm_flash_attn = "auto"
+llm_cache_type = "f16"

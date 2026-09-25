@@ -18,6 +18,32 @@ from typing import Iterator
 from .config import RUNTIME_DIR, Config
 
 
+def _build_env(cfg: Config, exe: Path) -> dict:
+    env = dict(os.environ)
+    if exe.parent.name.startswith("llama-") or exe.parent.name == "bin":
+        for var in ("LD_LIBRARY_PATH", "DYLD_LIBRARY_PATH"):
+            env[var] = f"{exe.parent}:{env.get(var, '')}"
+    env.update(cfg.llm_env)
+    return env
+
+
+def _build_args(cfg: Config, exe: str) -> list[str]:
+    args = [
+        exe, "-m", cfg.model,
+        "--host", "127.0.0.1", "--port", str(cfg.llm_port),
+        "-c", str(cfg.llm_ctx), "-ngl", str(cfg.llm_gpu_layers),
+        "--parallel", str(cfg.llm_parallel), "--no-webui", "--jinja",
+        "-b", str(cfg.llm_batch), "-ub", str(cfg.llm_ubatch),
+        "--reasoning-budget", "0",
+    ]
+    if cfg.llm_flash_attn != "auto":
+        args += ["-fa", cfg.llm_flash_attn]
+    if cfg.llm_cache_type != "f16":
+        args += ["-ctk", cfg.llm_cache_type, "-ctv", cfg.llm_cache_type]
+    args += cfg.llm_extra_args
+    return args
+
+
 class LLM:
     def __init__(self, cfg: Config):
         self.cfg = cfg
@@ -43,17 +69,8 @@ class LLM:
         RUNTIME_DIR.mkdir(parents=True, exist_ok=True)
         if not self._pid_alive():
             exe = Path(self.cfg.llama_server)
-            env = dict(os.environ)
-            if exe.parent.name.startswith("llama-") or exe.parent.name == "bin":
-                for var in ("LD_LIBRARY_PATH", "DYLD_LIBRARY_PATH"):
-                    env[var] = f"{exe.parent}:{env.get(var, '')}"
-            args = [
-                str(exe), "-m", self.cfg.model,
-                "--host", "127.0.0.1", "--port", str(self.cfg.llm_port),
-                "-c", str(self.cfg.llm_ctx), "-ngl", str(self.cfg.llm_gpu_layers),
-                "--parallel", "2", "--no-webui", "--jinja", "-b", "512", "-ub", "512",
-                "--reasoning-budget", "0",
-            ]
+            env = _build_env(self.cfg, exe)
+            args = _build_args(self.cfg, str(exe))
             log = open(self.logfile, "ab")
             try:
                 proc = subprocess.Popen(args, stdout=log, stderr=log, stdin=subprocess.DEVNULL,

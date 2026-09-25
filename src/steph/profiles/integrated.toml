@@ -1,0 +1,10 @@
+# GPU intégré générique (aucun profil dédié pour cette carte). Valeurs mesurées.
+[match]
+kind = "integrated"
+
+[settings]
+llm_parallel = 2
+llm_batch = 512
+llm_ubatch = 128
+llm_flash_attn = "off"
+llm_cache_type = "f16"

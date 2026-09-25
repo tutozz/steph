@@ -35,6 +35,15 @@ class Config:
     llm_port: int = 8765
     llm_ctx: int = 32768  # partagé entre 2 slots : 0 = résumés, 1 = questions
     llm_gpu_layers: int = 99
+    llm_parallel: int = 2
+    llm_batch: int = 512
+    llm_ubatch: int = 512
+    llm_flash_attn: str = "auto"  # auto|on|off ; passé en -fa seulement si différent de "auto"
+    llm_cache_type: str = "f16"  # passé en -ctk/-ctv seulement si différent de "f16"
+    llm_extra_args: list[str] = field(default_factory=list)
+    llm_env: dict[str, str] = field(default_factory=dict)  # variables d'env pour llama-server (ex. GGML_VK_*)
+    # --- Matériel ---
+    hardware_profile: str = "auto"  # auto|none|nom de fichier (ex. "gpu/intel-arc-140t")
     # --- Voix ---
     voice: str = str(DATA_DIR / "voices" / "fr_FR-siwis-medium.onnx")
     speech_rate: float = 1.25  # >1 = plus rapide
@@ -58,18 +67,33 @@ class Config:
     terminal_cmd: str = ""  # vide = auto (ptyxis, gnome-terminal, konsole, xterm)
 
 
-def load_config() -> Config:
+def load_config(apply_profile: bool = False) -> Config:
+    """apply_profile=True détecte le matériel et applique le profil correspondant
+    (voir profile.py) avant la surcharge par config.toml puis par les variables
+    d'environnement. Seuls les points d'entrée qui lancent llama-server doivent
+    le passer à True : la détection lance un binaire, inutile pour `steph ask`/`ctl`."""
     cfg = Config()
-    if CONFIG_PATH.exists():
-        data = tomllib.loads(CONFIG_PATH.read_text())
-        known = {f.name for f in fields(Config)}
-        for k, v in data.items():
-            if k in known:
-                setattr(cfg, k, v)
+    data = tomllib.loads(CONFIG_PATH.read_text()) if CONFIG_PATH.exists() else {}
+    # hardware_profile doit être résolu avant le profil lui-même, donc avant
+    # le reste de la surcharge (priorité : défauts < profil < config.toml < env)
+    if "hardware_profile" in data:
+        cfg.hardware_profile = data["hardware_profile"]
+    env_hardware_profile = os.environ.get("STEPH_HARDWARE_PROFILE")
+    if env_hardware_profile is not None:
+        cfg.hardware_profile = env_hardware_profile
+    if apply_profile:
+        from .profile import apply_hardware_profile
+        cfg._hardware_debug = apply_hardware_profile(cfg)  # utilisé par `steph profile`
+    known = {f.name for f in fields(Config)}
+    for k, v in data.items():
+        if k in known:
+            setattr(cfg, k, v)
     for f in fields(Config):
         env = os.environ.get(f"STEPH_{f.name.upper()}")
         if env is not None:
             cur = getattr(cfg, f.name)
+            if isinstance(cur, (list, dict)):
+                continue  # STEPH_* ne surcharge pas les champs liste/dict
             if isinstance(cur, bool):
                 setattr(cfg, f.name, env.lower() in ("1", "true", "oui", "yes"))
             else:

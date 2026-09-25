@@ -1,0 +1,14 @@
+# Intel Arc 140T (Core Ultra 200H), Vulkan. Valeurs mesurées.
+# Le nom Vulkan est générique ("Intel(R) Graphics (ARL)") : on matche sur le
+# pci_id plutôt que sur le nom.
+# Mesuré sur Core Ultra 9 285H, llama.cpp b11182 Vulkan : pp512 213 -> 266 t/s, génération 27 -> 30 t/s
+[match]
+vendor = "intel"
+pci_ids = ["8086:7d51"]
+
+[settings]
+llm_parallel = 2
+llm_batch = 512
+llm_ubatch = 128
+llm_flash_attn = "off"
+llm_cache_type = "f16"

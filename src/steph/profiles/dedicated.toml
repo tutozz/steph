@@ -1,0 +1,10 @@
+# GPU dédié générique (aucun profil dédié pour cette carte). Valeurs actuelles, à mesurer.
+[match]
+kind = "dedicated"
+
+[settings]
+llm_parallel = 2
+llm_batch = 512
+llm_ubatch = 512
+llm_flash_attn = "auto"
+llm_cache_type = "f16"
