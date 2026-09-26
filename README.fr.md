@@ -15,6 +15,9 @@
 
 **S**hell **T**raduit **E**n **P**arole **H**umaine.
 
+> Ton build échoue. Un lecteur d'écran te lit 40 lignes de trace, une par une.
+> steph dit : *« Erreur TypeScript : la propriété titel n'existe pas, utilisez title. »*
+
 `steph` relance ton shell (zsh ou bash, avec ta config habituelle) et écoute
 tout ce qui passe. Au lieu de lire tout le texte à voix haute, il dit
 **l'essentiel, en une phrase**. Conçu et testé avec des personnes malvoyantes.
@@ -27,11 +30,23 @@ tout ce qui passe. Au lieu de lire tout le texte à voix haute, il dit
 - `ssh`, `python`, `psql`… → lit la réponse à chaque commande tapée dedans.
 
 Tout tourne **en local** : un petit LLM (Gemma 4 E2B via llama.cpp, sur GPU) et
-la synthèse vocale Piper (voix française). Rien ne sort de la machine.
+la synthèse vocale Piper (voix française). Rien ne sort de la machine. 4 Go de
+mémoire vidéo suffisent, et une question sur toute la session reçoit sa réponse
+en 1 seconde environ.
 
 Écouter la voix : [steph.lsmdx.com](https://steph.lsmdx.com/#ecouter).
 
 ## Installation
+
+```sh
+curl -fsSL https://steph.lsmdx.com/install | sh
+steph
+```
+
+Environ 3 Go à télécharger (modèle et voix). Le script clone le dépôt dans
+`~/.local/share/steph/src`, installe `uv` si besoin, puis lance `scripts/install.sh`.
+
+Ou à la main :
 
 ```sh
 git clone https://github.com/tutozz/steph && cd steph

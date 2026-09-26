@@ -1,0 +1,26 @@
+#!/bin/sh
+# Installe steph en une commande :
+#   curl -fsSL https://steph.lsmdx.com/install | sh
+# Clone (ou met à jour) le dépôt puis lance scripts/install.sh.
+# Le clone reste en place : la commande steph est installée en mode éditable.
+set -eu
+
+DIR="${STEPH_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/steph/src}"
+
+command -v git >/dev/null || { echo "steph : git est requis." >&2; exit 1; }
+
+if ! command -v uv >/dev/null; then
+  echo "steph : installation de uv (sans droits administrateur)…"
+  curl -fsSL https://astral.sh/uv/install.sh | sh
+  PATH="$HOME/.local/bin:$PATH"
+fi
+
+if [ -d "$DIR/.git" ]; then
+  git -C "$DIR" pull --ff-only -q
+else
+  mkdir -p "$(dirname "$DIR")"
+  git clone -q https://github.com/tutozz/steph "$DIR"
+fi
+
+echo "steph : environ 3 Go à télécharger (modèle et voix), quelques minutes."
+exec "$DIR/scripts/install.sh"

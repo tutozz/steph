@@ -15,12 +15,17 @@
 
 **S**peaking **T**erminal, **E**verything **P**rivately **H**osted.
 
+> Your build fails. A screen reader reads you 40 lines of stack trace, one by one.
+> steph says: *"TypeScript error: property titel does not exist, use title."*
+
 `steph` starts your shell (zsh or bash, with your usual configuration) and
 listens to everything that goes through it. Instead of reading every line
 aloud, it says **what matters, in one sentence**. Designed and tested with
 visually impaired people.
 
-> steph speaks **French** today. The examples below are translated.
+> **September 2026**: steph speaks **French** today; an English voice is the next
+> milestone. The examples below are translated. Source available: free for
+> individuals, [licensed](COMMERCIAL.md) for companies.
 
 - `ls /usr` → reads the output as is (it is short);
 - `cat /nope` → "Error 1: cat: /nope: no such file or directory";
@@ -30,11 +35,22 @@ visually impaired people.
 - `ssh`, `python`, `psql`… → reads the answer to each command typed inside.
 
 Everything runs **locally**: a small LLM (Gemma 4 E2B via llama.cpp, on the
-GPU) and Piper speech synthesis. Nothing leaves the machine.
+GPU) and Piper speech synthesis. Nothing leaves the machine. 4 GB of VRAM is
+enough, and a question about the whole session is answered in about 1 second.
 
 Hear the voice: [steph.lsmdx.com](https://steph.lsmdx.com/en/#listen).
 
 ## Install
+
+```sh
+curl -fsSL https://steph.lsmdx.com/install | sh
+steph
+```
+
+About 3 GB to download (model and voice). The script clones the repository into
+`~/.local/share/steph/src`, installs `uv` if needed, then runs `scripts/install.sh`.
+
+Or by hand:
 
 ```sh
 git clone https://github.com/tutozz/steph && cd steph

@@ -33,7 +33,7 @@ syncThemeButton();
 // ---------- copie ----------
 
 const commands = {
-  hero: "git clone https://github.com/tutozz/steph\ncd steph\n./scripts/install.sh",
+  hero: "curl -fsSL https://steph.lsmdx.com/install | sh",
   linux: "git clone https://github.com/tutozz/steph\ncd steph\n./scripts/install.sh\nsteph",
   mac: "brew install uv llama.cpp sox\ngit clone https://github.com/tutozz/steph\ncd steph\n./scripts/install.sh\nsteph",
 };
@@ -91,4 +91,9 @@ players.forEach(({ audio, button }) => {
     players.forEach((p) => p.audio.pause());
     audio.play().catch(() => {});
   });
+});
+
+// Le bouton du hero joue l'extrait sans faire défiler jusqu'à la section Écouter.
+document.querySelector("[data-hear]")?.addEventListener("click", (e) => {
+  document.querySelector(`[data-clip="${e.currentTarget.dataset.hear}"] .play`).click();
 });

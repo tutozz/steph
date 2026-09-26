@@ -42,15 +42,14 @@
   <div class="hero-text">
     <p class="label">[ Speaking terminal, everything privately hosted ]</p>
     <h1 id="h-accroche">Your terminal, out loud.</h1>
-    <p class="lede">steph listens to everything in your shell and says what matters out loud, in one sentence. Built first for people with low vision. <strong>steph speaks French only, for now.</strong></p>
+    <p class="lede">steph listens to everything in your shell and says what matters out loud, in one sentence. Built first for people with low vision.</p>
+    <p><button class="btn" type="button" data-hear="build">Hear it: a failing build</button></p>
     <div class="install">
       <div class="cmd">
-        <pre aria-label="Install commands">git clone https://github.com/tutozz/steph
-cd steph
-./scripts/install.sh</pre>
+        <pre aria-label="Install command">curl -fsSL https://steph.lsmdx.com/install | sh</pre>
         <button class="copy" type="button" data-copy="hero">Copy</button>
       </div>
-      <p class="note">Linux and macOS · no admin rights · requires uv</p>
+      <p class="note">Linux and macOS · no admin rights · about 3 GB · French voice for now</p>
     </div>
   </div>
   <div class="stage">
@@ -69,20 +68,20 @@ cd steph
   <h2 id="h-idee" class="statement">A screen reader reads <span class="boxed">everything</span>, line <span class="lines" aria-hidden="true"><i></i><i></i><i></i><i></i></span> by line. steph says <span class="voice" aria-hidden="true"></span> <span class="boxed">what matters</span>, in one sentence.</h2>
   <ul class="compare">
     <li>
-      <div class="without"><p class="label">Sans steph</p><p>A build error runs 40 lines, read one by one.</p></div>
-      <div class="with"><p class="label">Avec steph</p><p>“TypeScript error: property titel does not exist, use title.”</p></div>
+      <div class="without"><p class="label">Without steph</p><p>A build error runs 40 lines, read one by one.</p></div>
+      <div class="with"><p class="label">With steph</p><p>“TypeScript error: property titel does not exist, use title.”</p></div>
     </li>
     <li>
-      <div class="without"><p class="label">Sans steph</p><p>An update prints hundreds of lines.</p></div>
-      <div class="with"><p class="label">Avec steph</p><p>A percentage, then “Done in 1 minute 24. 12 packages updated.”</p></div>
+      <div class="without"><p class="label">Without steph</p><p>An update prints hundreds of lines.</p></div>
+      <div class="with"><p class="label">With steph</p><p>A percentage, then “Done in 1 minute 24. 12 packages updated.”</p></div>
     </li>
     <li>
-      <div class="without"><p class="label">Sans steph</p><p>A [Y/n] prompt gets lost in the stream.</p></div>
-      <div class="with"><p class="label">Avec steph</p><p>“Question: do you want to continue? Yes or no, yes by default.”</p></div>
+      <div class="without"><p class="label">Without steph</p><p>A [Y/n] prompt gets lost in the stream.</p></div>
+      <div class="with"><p class="label">With steph</p><p>“Question: do you want to continue? Yes or no, yes by default.”</p></div>
     </li>
     <li>
-      <div class="without"><p class="label">Sans steph</p><p>Understanding an error means rereading everything.</p></div>
-      <div class="with"><p class="label">Avec steph</p><p>Ask out loud: steph knows the whole session history.</p></div>
+      <div class="without"><p class="label">Without steph</p><p>Understanding an error means rereading everything.</p></div>
+      <div class="with"><p class="label">With steph</p><p>Ask out loud: steph knows the whole session history.</p></div>
     </li>
   </ul>
 </section>
@@ -211,15 +210,20 @@ cd steph
       <a class="btn" href="mailto:luis@lsmdx.com?subject=steph%20commercial%20license">Email luis@lsmdx.com</a>
     </article>
   </div>
-  <p class="fine">Source available. The license is not open source as defined by the OSI.</p>
+  <p class="fine">Source available. The license is not open source as defined by the OSI. Why? Individuals use steph for free; companies that deploy it pay for a license.</p>
 </section>
 
 <section class="wrap section ruled" id="install" aria-labelledby="h-installer">
   <div class="head-stack">
     <p class="label">[ 07 · Install ]</p>
     <h2 id="h-installer" class="big">One command.</h2>
-    <p class="intro">No admin rights. Requires uv. About 3 GB to download for the model.</p>
+    <p class="intro">No admin rights. About 3 GB to download for the model and the voice.</p>
   </div>
+  <div class="block">
+    <pre>curl -fsSL https://steph.lsmdx.com/install | sh</pre>
+    <button class="copy" type="button" data-copy="hero" aria-label="Copy install command">Copy</button>
+  </div>
+  <p class="intro">Or by hand, with uv:</p>
   <div class="oses">
     <div class="os">
       <h3>Linux</h3>

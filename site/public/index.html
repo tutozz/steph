@@ -43,14 +43,13 @@
     <p class="label">[ Shell traduit en parole humaine ]</p>
     <h1 id="h-accroche">Le terminal, à voix haute.</h1>
     <p class="lede">steph écoute tout ce qui passe dans le shell et dit l'essentiel à voix haute, en une phrase. Pensé d'abord pour les personnes malvoyantes.</p>
+    <p><button class="btn" type="button" data-hear="build">Écouter : un build qui échoue</button></p>
     <div class="install">
       <div class="cmd">
-        <pre aria-label="Commandes d'installation">git clone https://github.com/tutozz/steph
-cd steph
-./scripts/install.sh</pre>
+        <pre aria-label="Commande d'installation">curl -fsSL https://steph.lsmdx.com/install | sh</pre>
         <button class="copy" type="button" data-copy="hero">Copier</button>
       </div>
-      <p class="note">Linux et macOS · sans droits administrateur · prérequis uv</p>
+      <p class="note">Linux et macOS · sans droits administrateur · environ 3 Go</p>
     </div>
   </div>
   <div class="stage">
@@ -211,15 +210,20 @@ cd steph
       <a class="btn" href="mailto:luis@lsmdx.com?subject=steph%20%3A%20licence%20commerciale">Écrire à luis@lsmdx.com</a>
     </article>
   </div>
-  <p class="fine">Code source disponible. La licence n'est pas open source au sens de l'OSI.</p>
+  <p class="fine">Code source disponible. La licence n'est pas open source au sens de l'OSI. Pourquoi ? Les particuliers utilisent steph gratuitement ; les entreprises qui le déploient paient une licence.</p>
 </section>
 
 <section class="wrap section ruled" id="installer" aria-labelledby="h-installer">
   <div class="head-stack">
     <p class="label">[ 07 · Installer ]</p>
     <h2 id="h-installer" class="big">Une commande.</h2>
-    <p class="intro">Sans droits administrateur. Prérequis : uv. Environ 3 Go à télécharger pour le modèle.</p>
+    <p class="intro">Sans droits administrateur. Environ 3 Go à télécharger pour le modèle et la voix.</p>
   </div>
+  <div class="block">
+    <pre>curl -fsSL https://steph.lsmdx.com/install | sh</pre>
+    <button class="copy" type="button" data-copy="hero" aria-label="Copier la commande d'installation">Copier</button>
+  </div>
+  <p class="intro">Ou à la main, avec uv :</p>
   <div class="oses">
     <div class="os">
       <h3>Linux</h3>
