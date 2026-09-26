@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>steph, le terminal qui parle</title>
-<meta name="description" content="steph lit votre terminal à voix haute et dit l'essentiel en une phrase. Conçu et testé avec des personnes malvoyantes. 100 % local.">
+<meta name="description" content="steph écoute tout ce qui passe dans le shell et dit l'essentiel à voix haute, en une phrase. Conçu et testé avec des personnes malvoyantes. 100 % local.">
 <link rel="alternate" hreflang="fr" href="https://steph.lsmdx.com/">
 <link rel="alternate" hreflang="en" href="https://steph.lsmdx.com/en/">
 <meta property="og:title" content="steph, le terminal qui parle">
@@ -13,250 +13,255 @@
 <meta property="og:url" content="https://steph.lsmdx.com/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/img/speaker.png">
+<script>try { const t = localStorage.getItem("steph-theme"); if (t) document.documentElement.dataset.theme = t; } catch {}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;500;700&family=Atkinson+Hyperlegible+Next:wght@400;500;700;800&display=swap">
 <link rel="stylesheet" href="/style.css">
-<script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-<a class="skip" href="#main">Aller au contenu</a>
+<div class="grid-lines" aria-hidden="true"></div>
+<a class="skip" href="#contenu">Aller au contenu</a>
 
 <header class="wrap top">
-  <a class="brand" href="/" aria-label="steph, accueil">STEPH</a>
-  <span class="tag" aria-hidden="true">Terminal parlant</span>
+  <a class="brand" href="/" aria-label="steph, accueil"><span class="dot" aria-hidden="true"></span>steph</a>
+  <p class="tag">Terminal parlant</p>
   <nav aria-label="Navigation principale">
-    <a href="#ecouter">Écouter</a>
-    <a href="#licence">Licence</a>
-    <a href="https://github.com/tutozz/steph">GitHub</a>
-    <span class="mono" aria-hidden="true">/</span>
-    <a class="lang mono" href="/" lang="fr" aria-current="page">FR</a>
-    <a class="lang mono" href="/en/" lang="en" hreflang="en">EN</a>
+    <a class="pill" href="https://github.com/tutozz/steph">GitHub</a>
+    <div class="langs" role="group" aria-label="Langue">
+      <span aria-current="page" lang="fr">FR</span>
+      <a href="/en/" hreflang="en" lang="en" aria-label="English version">EN</a>
+    </div>
+    <button class="pill" type="button" data-theme-toggle aria-pressed="false"><span class="half" aria-hidden="true"></span>Mode sombre</button>
   </nav>
 </header>
 
-<main id="main">
+<main id="contenu">
 
-<section class="wrap hero" aria-labelledby="titre">
-  <h1 id="titre">Le terminal, à&nbsp;voix haute.</h1>
-  <p class="lede">steph écoute votre shell et dit <strong>l'essentiel, en une phrase</strong>. Les erreurs expliquées, les questions reconnues, les longues commandes suivies pas à pas.</p>
-
-  <div class="install">
-    <div class="cmd">
-      <code id="cmd-hero">git clone https://github.com/tutozz/steph &amp;&amp; cd steph &amp;&amp; ./scripts/install.sh</code>
-      <button class="copy" type="button" data-copy="cmd-hero" data-done="Commande copiée." data-label="Copié" data-fail="Copie impossible, sélectionnez le texte.">Copier</button>
-    </div>
-    <p class="mono">Linux · sur macOS, voir <a href="#installer">Installer</a> · gratuit pour les particuliers</p>
-  </div>
-
-  <div class="island" aria-hidden="true">
-    <img class="rock" src="/img/rock.png" alt="" width="256" height="256">
-    <img class="laptop" src="/img/laptop.png" alt="" width="256" height="256">
-    <img class="seed" src="/img/seedling.png" alt="" width="256" height="256">
-    <img class="speaker" src="/img/speaker.png" alt="" width="256" height="256">
-    <img class="spark" src="/img/sparkles.png" alt="" width="256" height="256">
-    <img class="ear" src="/img/ear.png" alt="" width="256" height="256">
-  </div>
-
-  <div class="note n1" data-target=".island .speaker">
-    <b>S.T.E.P.H</b>
-    Shell<br>Traduit<br>En<br>Parole<br>Humaine
-  </div>
-  <div class="note n2" data-target=".island .rock">
-    <b>100 % local</b>
-    Le modèle de langue et la voix tournent sur votre machine. Rien ne sort.
-  </div>
-  <svg class="leaders" aria-hidden="true" focusable="false"></svg>
-</section>
-
-<section class="band" aria-labelledby="idee">
-  <div class="wrap">
-    <div class="side reveal">
-      <div class="note">
-        <b>Votre shell</b>
-        zsh ou bash, sur Linux et macOS. Votre configuration reste intacte.
+<section class="wrap hero" aria-labelledby="h-accroche">
+  <div class="hero-text">
+    <p class="label">[ Shell traduit en parole humaine ]</p>
+    <h1 id="h-accroche">Le terminal, à voix haute.</h1>
+    <p class="lede">steph écoute tout ce qui passe dans le shell et dit l'essentiel à voix haute, en une phrase. Pensé d'abord pour les personnes malvoyantes.</p>
+    <div class="install">
+      <div class="cmd">
+        <pre aria-label="Commandes d'installation">git clone https://github.com/tutozz/steph
+cd steph
+./scripts/install.sh</pre>
+        <button class="copy" type="button" data-copy="hero">Copier</button>
       </div>
+      <p class="note">Linux et macOS · sans droits administrateur · prérequis uv</p>
     </div>
-    <p class="eyebrow mono">01 · L'idée</p>
-    <h2 id="idee" class="statement reveal">Un lecteur d'écran lit <span class="boxed">tout le texte</span>. steph <img class="ico" src="/img/speaker.png" alt=""> dit ce qui compte.</h2>
-    <p class="statement reveal">Une erreur <img class="ico" src="/img/balloon.png" alt=""> devient une phrase claire, une question <img class="ico" src="/img/ear.png" alt=""> devient <span class="hl">oui ou non</span>, une mise à jour devient un pourcentage.</p>
+  </div>
+  <div class="stage">
+    <div class="object" aria-hidden="true">
+      <img class="keyboard" src="/img/keyboard.png" alt="" width="256" height="256">
+      <img class="speaker" src="/img/speaker.png" alt="" width="256" height="256">
+      <div class="anno a1"><span class="txt">Une phrase, pas quarante lignes</span><span class="ln"></span><span class="sq"></span></div>
+      <div class="anno a2"><span class="txt">100 % local · rien ne sort</span><span class="ln"></span><span class="sq"></span></div>
+      <div class="anno a3"><span class="sq"></span><span class="ln"></span><span class="txt">zsh et bash, votre configuration</span></div>
+    </div>
   </div>
 </section>
 
-<section class="band" id="ecouter" aria-labelledby="ecouter-titre">
-  <div class="wrap">
-    <p class="eyebrow mono">02 · Écouter</p>
+<section class="wrap section" aria-labelledby="h-idee">
+  <p class="label">[ 01 · L'idée ]</p>
+  <h2 id="h-idee" class="statement">Un lecteur d'écran lit <span class="boxed">tout</span>, ligne <span class="lines" aria-hidden="true"><i></i><i></i><i></i><i></i></span> après ligne. steph dit <span class="voice" aria-hidden="true"></span> <span class="boxed">ce qui compte</span>, en une phrase.</h2>
+  <ul class="compare">
+    <li>
+      <div class="without"><p class="label">Sans steph</p><p>Une erreur de compilation fait 40 lignes, lues une par une.</p></div>
+      <div class="with"><p class="label">Avec steph</p><p>« Erreur TypeScript : la propriété titel n'existe pas, utilisez title. »</p></div>
+    </li>
+    <li>
+      <div class="without"><p class="label">Sans steph</p><p>Une mise à jour affiche des centaines de lignes.</p></div>
+      <div class="with"><p class="label">Avec steph</p><p>Un pourcentage, puis « Terminé en 1 minute 24. 12 paquets mis à jour. »</p></div>
+    </li>
+    <li>
+      <div class="without"><p class="label">Sans steph</p><p>Une question [O/n] se perd dans le flot.</p></div>
+      <div class="with"><p class="label">Avec steph</p><p>« Question : souhaitez-vous continuer ? Oui ou non, oui par défaut. »</p></div>
+    </li>
+    <li>
+      <div class="without"><p class="label">Sans steph</p><p>Comprendre une erreur oblige à tout relire.</p></div>
+      <div class="with"><p class="label">Avec steph</p><p>On pose la question à voix haute : steph connaît l'historique de la session.</p></div>
+    </li>
+  </ul>
+</section>
+
+<section class="listen" id="ecouter" aria-labelledby="h-ecouter">
+  <div class="listen-panel">
     <div class="listen-head">
-      <h2 id="ecouter-titre" class="reveal">Quatre commandes, quatre phrases.</h2>
-      <p>Enregistrements réels de la voix de steph : synthèse Piper, voix française, générée sur la machine.</p>
+      <p class="chip">[ 02 · Écouter ]</p>
+      <h2 id="h-ecouter" class="big">Quatre commandes, quatre phrases.</h2>
+      <p>La vraie voix de steph, générée sur la machine. Pour ce public, entendre vaut mieux que lire.</p>
     </div>
-    <ul class="clips">
-      <li class="clip reveal">
-        <h3>Un fichier introuvable</h3>
-        <pre class="term"><span class="sr-only">Commande tapée : </span><span class="p">$</span> cat /nope</pre>
-        <p class="said"><img src="/img/speaker.png" alt="" width="40" height="40"><span>« Erreur 1 : cat: /nope : aucun fichier ou dossier de ce nom. »</span></p>
-        <audio controls preload="none" src="/audio/error.mp3" aria-label="Écouter : fichier introuvable"></audio>
-      </li>
-      <li class="clip reveal">
-        <h3>Une compilation qui échoue</h3>
-        <pre class="term"><span class="sr-only">Commande tapée : </span><span class="p">$</span> npm run build</pre>
-        <p class="said"><img src="/img/speaker.png" alt="" width="40" height="40"><span>« Erreur TypeScript : la propriété titel n'existe pas, utilisez title. »</span></p>
-        <audio controls preload="none" src="/audio/build.mp3" aria-label="Écouter : compilation qui échoue"></audio>
-      </li>
-      <li class="clip reveal">
-        <h3>Une mise à jour longue</h3>
-        <pre class="term"><span class="sr-only">Commande tapée : </span><span class="p">$</span> sudo apt upgrade</pre>
-        <p class="said"><img src="/img/speaker.png" alt="" width="40" height="40"><span>« En cours : mise à jour des paquets. 35 pour cent, décompression de vim-common. Terminé en 1 minute 24. 12 paquets mis à jour. »</span></p>
-        <audio controls preload="none" src="/audio/apt.mp3" aria-label="Écouter : mise à jour longue"></audio>
-      </li>
-      <li class="clip reveal">
-        <h3>Un programme qui attend une réponse</h3>
-        <pre class="term"><span class="sr-only">Question affichée : </span>Souhaitez-vous continuer ? [O/n]</pre>
-        <p class="said"><img src="/img/speaker.png" alt="" width="40" height="40"><span>« Question : il est nécessaire de prendre 24 Mo. Souhaitez-vous continuer ? Oui ou non, oui par défaut. »</span></p>
-        <audio controls preload="none" src="/audio/question.mp3" aria-label="Écouter : question oui ou non"></audio>
-      </li>
-    </ul>
-  </div>
-</section>
-
-<section class="band" aria-labelledby="principes">
-  <div class="wrap">
-    <p class="eyebrow mono">03 · Principes</p>
-    <h2 id="principes" class="statement reveal" style="margin-left:0;max-width:22ch">Rapide, discret, <span class="boxed">privé</span> <img class="ico" src="/img/locked.png" alt="">. Il ne vous oblige à rien changer.</h2>
-    <div class="facts">
-      <article class="fact reveal">
-        <header class="mono"><span>A</span><span>Votre shell</span></header>
-        <div class="body">
-          <img src="/img/keyboard.png" alt="" width="64" height="64">
-          <h3>Rien à réapprendre</h3>
-          <p>steph relance zsh ou bash avec votre configuration habituelle. Les commandes, alias et raccourcis restent les vôtres.</p>
+    <div class="clips">
+      <article class="card" aria-labelledby="t-error">
+        <div class="card-head"><p class="label">01 · Erreur</p><h3 id="t-error"><span aria-hidden="true">$ </span>cat /nope</h3></div>
+        <p class="said">« Erreur 1 : cat: /nope : aucun fichier ou dossier de ce nom. »</p>
+        <div class="player" data-clip="error" data-name="extrait 1, cat /nope">
+          <button class="play" type="button"><span class="ico" aria-hidden="true"></span><span class="lbl">Écouter</span></button>
+          <div class="track"><div class="bar" aria-hidden="true"><i></i></div><p class="time">0:00 / 0:00</p></div>
         </div>
       </article>
-      <article class="fact reveal">
-        <header class="mono"><span>B</span><span>Temps réel</span></header>
-        <div class="body">
-          <img src="/img/sparkles.png" alt="" width="64" height="64">
-          <h3>Parle tout de suite</h3>
-          <p>Les cas simples passent par des règles instantanées. Le modèle ne sert qu'aux résumés et aux explications, lus phrase par phrase.</p>
+      <article class="card" aria-labelledby="t-build">
+        <div class="card-head"><p class="label">02 · Compilation</p><h3 id="t-build"><span aria-hidden="true">$ </span>npm run build</h3></div>
+        <p class="said">« Erreur TypeScript : la propriété titel n'existe pas, utilisez title. »</p>
+        <div class="player" data-clip="build" data-name="extrait 2, npm run build">
+          <button class="play" type="button"><span class="ico" aria-hidden="true"></span><span class="lbl">Écouter</span></button>
+          <div class="track"><div class="bar" aria-hidden="true"><i></i></div><p class="time">0:00 / 0:00</p></div>
         </div>
       </article>
-      <article class="fact reveal">
-        <header class="mono"><span>C</span><span>Sur votre machine</span></header>
-        <div class="body">
-          <img src="/img/brain.png" alt="" width="64" height="64">
-          <h3>Aucun cloud</h3>
-          <p>Un petit modèle (Gemma 4 E2B via llama.cpp) et la voix Piper tournent en local, sur le GPU si possible. 4 Go de mémoire vidéo suffisent.</p>
+      <article class="card" aria-labelledby="t-apt">
+        <div class="card-head"><p class="label">03 · Longue commande</p><h3 id="t-apt"><span aria-hidden="true">$ </span>sudo apt upgrade</h3></div>
+        <p class="said">« En cours : mise à jour des paquets. 35 pour cent, décompression de vim-common. Terminé en 1 minute 24. 12 paquets mis à jour. »</p>
+        <div class="player" data-clip="apt" data-name="extrait 3, sudo apt upgrade">
+          <button class="play" type="button"><span class="ico" aria-hidden="true"></span><span class="lbl">Écouter</span></button>
+          <div class="track"><div class="bar" aria-hidden="true"><i></i></div><p class="time">0:00 / 0:00</p></div>
+        </div>
+      </article>
+      <article class="card" aria-labelledby="t-question">
+        <div class="card-head"><p class="label">04 · Question</p><h3 id="t-question"><span aria-hidden="true">$ </span>[O/n]</h3></div>
+        <p class="said">« Question : il est nécessaire de prendre 24 Mo. Souhaitez-vous continuer ? Oui ou non, oui par défaut. »</p>
+        <div class="player" data-clip="question" data-name="extrait 4, question oui ou non">
+          <button class="play" type="button"><span class="ico" aria-hidden="true"></span><span class="lbl">Écouter</span></button>
+          <div class="track"><div class="bar" aria-hidden="true"><i></i></div><p class="time">0:00 / 0:00</p></div>
         </div>
       </article>
     </div>
+    <p class="listen-foot">Voix Piper « siwis ». Les sorties courtes, comme ls /usr, sont lues telles quelles. Dans ssh, python ou psql, steph lit la réponse à chaque commande.</p>
   </div>
 </section>
 
-<section class="band" aria-labelledby="touches">
-  <div class="wrap two">
-    <div class="reveal">
-      <p class="eyebrow mono">04 · Au clavier</p>
-      <h2 id="touches">Quatre touches pour tout contrôler.</h2>
-      <p class="intro">Posez une question sur n'importe quelle commande de la session : steph connaît l'historique, les codes de retour et les sorties.</p>
+<section class="wrap section principles" aria-labelledby="h-principes">
+  <p class="label">[ 03 · Principes ]</p>
+  <div class="split">
+    <h2 id="h-principes" class="big">Rapide, discret, privé.</h2>
+    <div class="shot" aria-hidden="true"><img src="/img/locked.png" alt="" width="256" height="256"></div>
+  </div>
+  <div class="pillars">
+    <div class="pillar">
+      <p class="label">A · Parle tôt</p>
+      <h3>Parle tout de suite.</h3>
+      <p>Les cas simples sont instantanés. Les résumés sont lus phrase par phrase, pendant leur calcul.</p>
     </div>
-    <div class="reveal">
-    <table class="keys">
-      <caption class="mono" style="text-align:left;padding-bottom:8px;color:var(--muted)">Touches et commandes</caption>
-      <tbody>
-        <tr><th scope="row"><kbd>F7</kbd></th><td>Ouvre la fenêtre de questions</td></tr>
-        <tr><th scope="row"><kbd>F8</kbd></th><td>Silence immédiat</td></tr>
-        <tr><th scope="row"><kbd>F9</kbd></th><td>Répète la dernière annonce</td></tr>
-        <tr><th scope="row"><kbd>F10</kbd></th><td>Explication détaillée de la dernière commande</td></tr>
-        <tr><th scope="row"><kbd>q</kbd> + question</th><td>Question rapide sans quitter le shell, par exemple <code>q pourquoi ça a planté ?</code></td></tr>
-      </tbody>
-    </table>
-    <p class="fine">Sur Mac, les touches F7 à F10 sont des touches multimédia : maintenez <kbd>fn</kbd> en même temps.</p>
+    <div class="pillar">
+      <p class="label">B · Rien à réapprendre</p>
+      <h3>Votre shell, tel quel.</h3>
+      <p>steph relance zsh ou bash avec votre configuration habituelle. Vos alias, votre invite, vos habitudes.</p>
+    </div>
+    <div class="pillar">
+      <p class="label">C · 100 % local</p>
+      <h3>Aucun cloud.</h3>
+      <p>Le modèle de langue et la voix tournent sur la machine. Rien ne sort. Si le modèle tombe, steph le relance et résume sans lui en attendant.</p>
+    </div>
+  </div>
+  <ul class="chips">
+    <li>Gemma 4 E2B via llama.cpp</li>
+    <li>GPU si présent, 4 Go de mémoire vidéo suffisent</li>
+    <li>Voix Piper, français</li>
+    <li>apt, dnf, pip, git, docker, cargo, make : étapes et pourcentages annoncés</li>
+  </ul>
+</section>
+
+<section class="wrap section ruled" aria-labelledby="h-clavier">
+  <p class="label">[ 04 · Au clavier ]</p>
+  <h2 id="h-clavier" class="statement keys-title">Quatre touches pour tout <span class="boxed">contrôler</span>.</h2>
+  <div class="keys">
+    <div class="key"><kbd>F7</kbd><p>Ouvre la fenêtre de questions.</p></div>
+    <div class="key"><kbd>F8</kbd><p>Silence immédiat.</p></div>
+    <div class="key"><kbd>F9</kbd><p>Répète la dernière annonce.</p></div>
+    <div class="key"><kbd>F10</kbd><p>Explique en détail la dernière commande.</p></div>
+  </div>
+  <p class="mac"><span class="tagline">Sur Mac</span>F7 à F10 sont des touches multimédia : maintenez <kbd>fn</kbd></p>
+  <dl class="cmds">
+    <div><dt>q pourquoi ça a planté ?</dt><dd>Question rapide, sans quitter le shell.</dd></div>
+    <div><dt>q puis Entrée</dt><dd>Invite de question, apostrophes et guillemets acceptés.</dd></div>
+    <div><dt>steph ask</dt><dd>Fenêtre de questions dans n'importe quel terminal.</dd></div>
+    <div><dt>steph say "texte"</dt><dd>Tester la voix.</dd></div>
+  </dl>
+</section>
+
+<section class="wrap" aria-labelledby="h-concu">
+  <div class="with-grid">
+    <div class="shot square" aria-hidden="true"><img src="/img/headphone.png" alt="" width="256" height="256"></div>
+    <div class="with-text">
+      <p class="label">[ 05 · Conçu avec ]</p>
+      <h2 id="h-concu" class="statement">Conçu et testé <span class="boxed">avec</span> des personnes malvoyantes.</h2>
+      <p>Pas pour elles, avec elles. Cette page suit la même règle : texte contrasté à 7:1, 19 px minimum, lisible à 400 %, mode sombre, tout au clavier.</p>
     </div>
   </div>
 </section>
 
-<section class="band" aria-labelledby="avec">
-  <div class="wrap with">
-    <img class="reveal" src="/img/glasses.png" alt="" width="256" height="256">
-    <div class="reveal">
-      <p class="eyebrow mono">05 · Conçu avec</p>
-      <h2 id="avec" class="statement" style="margin-left:0;max-width:24ch">Conçu et testé <span class="boxed">avec</span> des personnes malvoyantes, pas seulement pour elles.</h2>
-    </div>
+<section class="wrap section ruled" id="licence" aria-labelledby="h-licence">
+  <div class="head-stack">
+    <p class="label">[ 06 · Licence ]</p>
+    <h2 id="h-licence" class="big">Libre pour vous, sous licence pour les entreprises.</h2>
   </div>
+  <div class="offers">
+    <article class="offer free" aria-labelledby="h-gratuit">
+      <p class="label">PolyForm Noncommercial 1.0.0</p>
+      <h3 id="h-gratuit">Gratuit</h3>
+      <p class="desc">Particuliers, études, loisirs, associations, écoles, recherche publique, administrations.</p>
+      <a class="btn" href="https://github.com/tutozz/steph">Installer depuis GitHub</a>
+    </article>
+    <article class="offer pro" aria-labelledby="h-commerciale">
+      <p class="label">Sur devis</p>
+      <h3 id="h-commerciale">Licence commerciale</h3>
+      <p class="desc">Entreprises, prestataires, agences. Équiper un salarié malvoyant, déployer sur des postes, intégrer steph dans un produit ou un service.</p>
+      <a class="btn" href="mailto:luis@lsmdx.com?subject=steph%20%3A%20licence%20commerciale">Écrire à luis@lsmdx.com</a>
+    </article>
+  </div>
+  <p class="fine">Code source disponible. La licence n'est pas open source au sens de l'OSI.</p>
 </section>
 
-<section class="band" id="licence" aria-labelledby="licence-titre">
-  <div class="wrap">
-    <p class="eyebrow mono">06 · Licence</p>
-    <h2 id="licence-titre" class="statement reveal" style="margin-left:0;max-width:20ch">Libre pour vous. <span class="hl">Sous licence</span> pour les entreprises.</h2>
-    <div class="plans">
-      <article class="plan free reveal">
-        <img class="icon" src="/img/houses.png" alt="" width="256" height="256">
-        <p class="mono">Particuliers · associations · enseignement</p>
-        <h3>Gratuit</h3>
-        <p class="price">Code source disponible, sous licence PolyForm Noncommercial 1.0.0.</p>
-        <ul>
-          <li>Usage personnel, études, loisirs</li>
-          <li>Associations, écoles, recherche publique, administrations</li>
-          <li>Modifier et partager, sans usage commercial</li>
-        </ul>
-        <a class="btn" href="https://github.com/tutozz/steph">Installer depuis GitHub</a>
-      </article>
-      <article class="plan pro reveal">
-        <img class="icon" src="/img/office.png" alt="" width="256" height="256">
-        <p class="mono">Entreprises</p>
-        <h3>Licence commerciale</h3>
-        <p class="price">Sur devis.</p>
-        <ul>
-          <li>Usage dans une entreprise ou pour un client</li>
-          <li>Déploiement sur les postes de vos équipes</li>
-          <li>Intégration dans un produit ou un service</li>
-        </ul>
-        <a class="btn" href="mailto:luis@lsmdx.com?subject=Licence%20commerciale%20steph">Écrire à luis@lsmdx.com</a>
-      </article>
-    </div>
-    <p class="fine">Un doute sur votre cas ? Écrivez à <a href="mailto:luis@lsmdx.com">luis@lsmdx.com</a>.</p>
+<section class="wrap section ruled" id="installer" aria-labelledby="h-installer">
+  <div class="head-stack">
+    <p class="label">[ 07 · Installer ]</p>
+    <h2 id="h-installer" class="big">Une commande.</h2>
+    <p class="intro">Sans droits administrateur. Prérequis : uv. Environ 3 Go à télécharger pour le modèle.</p>
   </div>
-</section>
-
-<section class="band" id="installer" aria-labelledby="installer-titre">
-  <div class="wrap two">
-    <div class="reveal">
-      <p class="eyebrow mono">07 · Installer</p>
-      <h2 id="installer-titre">Une commande, et c'est prêt.</h2>
-      <p class="intro">Le script installe llama.cpp, le modèle (environ 3 Go), la voix française et la commande <code>steph</code>, sans droits administrateur. Prérequis : <a href="https://docs.astral.sh/uv/">uv</a>.</p>
-    </div>
-    <div class="steps reveal">
-      <div>
-        <h3>Linux</h3>
+  <div class="oses">
+    <div class="os">
+      <h3>Linux</h3>
+      <div class="block">
         <pre>git clone https://github.com/tutozz/steph
 cd steph
 ./scripts/install.sh
 steph</pre>
+        <button class="copy" type="button" data-copy="linux" aria-label="Copier les commandes Linux">Copier</button>
       </div>
-      <div>
-        <h3>macOS</h3>
+    </div>
+    <div class="os">
+      <h3>macOS <span>Apple Silicon et Intel</span></h3>
+      <div class="block">
         <pre>brew install uv llama.cpp sox
 git clone https://github.com/tutozz/steph
 cd steph
 ./scripts/install.sh
 steph</pre>
+        <button class="copy" type="button" data-copy="mac" aria-label="Copier les commandes macOS">Copier</button>
       </div>
     </div>
   </div>
+  <p class="limit"><strong>Limite connue :</strong> les applications plein écran (vim, htop, less) sont annoncées, pas lues.</p>
 </section>
 
 </main>
 
-<footer>
-  <div class="wrap mono">
-    <span>© LSMDX · Luis · 2026</span>
-    <span>steph parle français aujourd'hui</span>
-    <span>Icônes 3D : Microsoft Fluent Emoji (MIT)</span>
-  </div>
+<footer class="wrap">
+  <p>© LSMDX · Luis · 2026</p>
+  <p class="now">steph parle français aujourd'hui.</p>
+  <p><a href="https://github.com/tutozz/steph">github.com/tutozz/steph</a></p>
 </footer>
 
-<p id="status" class="sr-only" role="status" aria-live="polite"></p>
+<p id="live" class="sr-only" aria-live="polite"></p>
+<script>
+window.STEPH_L10N = {
+  play: "Écouter", pause: "Pause", copy: "Copier", copied: "Copié",
+  copiedMsg: "Commandes copiées dans le presse-papiers.",
+  copyFail: "Copie impossible, sélectionnez le texte."
+};
+</script>
 <script src="/main.js" defer></script>
 </body>
 </html>
