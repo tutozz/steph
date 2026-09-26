@@ -43,7 +43,6 @@
     <p class="label">[ Shell traduit en parole humaine ]</p>
     <h1 id="h-accroche">Le terminal, à voix haute.</h1>
     <p class="lede">steph écoute tout ce qui passe dans le shell et dit l'essentiel à voix haute, en une phrase. Pensé d'abord pour les personnes malvoyantes.</p>
-    <p><button class="btn" type="button" data-hear="build">Écouter : un build qui échoue</button></p>
     <div class="install">
       <div class="cmd">
         <pre aria-label="Commande d'installation">curl -fsSL https://steph.lsmdx.com/install | sh</pre>
@@ -53,13 +52,94 @@
     </div>
   </div>
   <div class="stage">
-    <div class="object" aria-hidden="true">
-      <img class="keyboard" src="/img/keyboard.png" alt="" width="256" height="256">
-      <img class="speaker" src="/img/speaker.png" alt="" width="256" height="256">
-      <div class="anno a1"><span class="txt">Une phrase, pas quarante lignes</span><span class="ln"></span><span class="sq"></span></div>
-      <div class="anno a2"><span class="txt">100 % local · rien ne sort</span><span class="ln"></span><span class="sq"></span></div>
-      <div class="anno a3"><span class="sq"></span><span class="ln"></span><span class="txt">zsh et bash, votre configuration</span></div>
-    </div>
+    <figure class="demo">
+      <div class="term" aria-hidden="true">
+        <div class="term-bar"><i></i><i></i><i></i><span>zsh · steph</span></div>
+        <div class="screen">
+          <p class="prompt" data-step="1" data-text="lspci">lspci</p>
+          <pre class="dump" data-step="2" data-text="00:00.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Root Complex
+00:00.2 IOMMU: Advanced Micro Devices, Inc. [AMD] Starship/Matisse IOMMU
+00:01.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:01.2 PCI bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse GPP Bridge
+00:02.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:03.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:03.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse GPP Bridge
+00:04.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:05.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:07.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:07.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Internal PCIe GPP Bridge 0 to bus[E:B]
+00:08.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:08.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Internal PCIe GPP Bridge 0 to bus[E:B]
+00:14.0 SMBus: Advanced Micro Devices, Inc. [AMD] FCH SMBus Controller (rev 61)
+00:14.3 ISA bridge: Advanced Micro Devices, Inc. [AMD] FCH LPC Bridge (rev 51)
+00:18.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 0
+00:18.1 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 1
+00:18.2 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 2
+00:18.3 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 3
+00:18.4 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 4
+00:18.5 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 5
+00:18.6 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 6
+00:18.7 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 7
+02:00.0 USB controller: Advanced Micro Devices, Inc. [AMD] 500 Series Chipset USB 3.1 XHCI Controller
+02:00.1 SATA controller: Advanced Micro Devices, Inc. [AMD] 500 Series Chipset SATA Controller
+02:00.2 PCI bridge: Advanced Micro Devices, Inc. [AMD] 500 Series Chipset Switch Upstream Port
+03:09.0 PCI bridge: Advanced Micro Devices, Inc. [AMD] Device 43ea
+2a:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller (rev 15)
+2b:00.0 VGA compatible controller: NVIDIA Corporation GA106 [GeForce RTX 3060 Lite Hash Rate] (rev a1)
+2b:00.1 Audio device: NVIDIA Corporation GA106 High Definition Audio Controller (rev a1)
+2c:00.0 Non-Essential Instrumentation [1300]: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Function
+2d:00.0 Non-Essential Instrumentation [1300]: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Reserved SPP
+2d:00.1 Encryption controller: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Cryptographic Coprocessor PSPCPP
+2d:00.3 USB controller: Advanced Micro Devices, Inc. [AMD] Matisse USB 3.0 Host Controller
+2d:00.4 Audio device: Advanced Micro Devices, Inc. [AMD] Starship/Matisse HD Audio Controller">00:00.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Root Complex
+00:00.2 IOMMU: Advanced Micro Devices, Inc. [AMD] Starship/Matisse IOMMU
+00:01.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:01.2 PCI bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse GPP Bridge
+00:02.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:03.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:03.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse GPP Bridge
+00:04.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:05.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:07.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:07.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Internal PCIe GPP Bridge 0 to bus[E:B]
+00:08.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:08.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Internal PCIe GPP Bridge 0 to bus[E:B]
+00:14.0 SMBus: Advanced Micro Devices, Inc. [AMD] FCH SMBus Controller (rev 61)
+00:14.3 ISA bridge: Advanced Micro Devices, Inc. [AMD] FCH LPC Bridge (rev 51)
+00:18.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 0
+00:18.1 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 1
+00:18.2 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 2
+00:18.3 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 3
+00:18.4 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 4
+00:18.5 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 5
+00:18.6 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 6
+00:18.7 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 7
+02:00.0 USB controller: Advanced Micro Devices, Inc. [AMD] 500 Series Chipset USB 3.1 XHCI Controller
+02:00.1 SATA controller: Advanced Micro Devices, Inc. [AMD] 500 Series Chipset SATA Controller
+02:00.2 PCI bridge: Advanced Micro Devices, Inc. [AMD] 500 Series Chipset Switch Upstream Port
+03:09.0 PCI bridge: Advanced Micro Devices, Inc. [AMD] Device 43ea
+2a:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller (rev 15)
+2b:00.0 VGA compatible controller: NVIDIA Corporation GA106 [GeForce RTX 3060 Lite Hash Rate] (rev a1)
+2b:00.1 Audio device: NVIDIA Corporation GA106 High Definition Audio Controller (rev a1)
+2c:00.0 Non-Essential Instrumentation [1300]: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Function
+2d:00.0 Non-Essential Instrumentation [1300]: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Reserved SPP
+2d:00.1 Encryption controller: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Cryptographic Coprocessor PSPCPP
+2d:00.3 USB controller: Advanced Micro Devices, Inc. [AMD] Matisse USB 3.0 Host Controller
+2d:00.4 Audio device: Advanced Micro Devices, Inc. [AMD] Starship/Matisse HD Audio Controller</pre>
+          <p class="prompt" data-step="4" data-text="q">q</p>
+          <p class="prompt ask" data-step="5" data-text="est-ce que j&#x27;ai de l&#x27;USB 3 ?">est-ce que j&#x27;ai de l&#x27;USB 3 ?</p>
+        </div>
+        <div class="subs">
+          <p class="say" data-step="3" hidden data-say="demo-lspci">Le système affiche 35 lignes d&#x27;informations PCI, incluant un contrôleur Ethernet Realtek, un contrôleur graphique NVIDIA et plusieurs contrôleurs AMD.</p>
+          <p class="say" data-step="6" data-say="demo-question">Oui, vous avez un contrôleur USB 3.1 XHCI. Il y a aussi un contrôleur USB 3.0 Host Controller.</p>
+        </div>
+      </div>
+      <figcaption class="sr-only">Démo. La commande lspci affiche 35 lignes. steph dit : « Le système affiche 35 lignes d&#x27;informations PCI, incluant un contrôleur Ethernet Realtek, un contrôleur graphique NVIDIA et plusieurs contrôleurs AMD. » Puis on tape q et la question « est-ce que j&#x27;ai de l&#x27;USB 3 ? ». steph répond : « Oui, vous avez un contrôleur USB 3.1 XHCI. Il y a aussi un contrôleur USB 3.0 Host Controller. »</figcaption>
+      <div class="demo-bar">
+        <button class="btn demo-play" type="button" aria-label="Écouter la démo, 20 secondes : lspci, puis une question sur l'USB"><span class="lbl">Écouter la démo</span></button>
+        <p class="note">Son · 20 s · voix réelle de steph</p>
+      </div>
+    </figure>
   </div>
 </section>
 
@@ -261,6 +341,7 @@ steph</pre>
 <p id="live" class="sr-only" aria-live="polite"></p>
 <script>
 window.STEPH_L10N = {
+  demoPlay: "Écouter la démo", demoStop: "Arrêter",
   play: "Écouter", pause: "Pause", copy: "Copier", copied: "Copié",
   copiedMsg: "Commandes copiées dans le presse-papiers.",
   copyFail: "Copie impossible, sélectionnez le texte."

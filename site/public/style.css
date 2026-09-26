@@ -306,45 +306,101 @@ a:hover { color: var(--ink); }
 
 .stage { position: relative; min-width: 0; }
 
-.object {
-  position: relative;
-  aspect-ratio: 1 / 1;
-  max-width: 560px;
-  width: 100%;
-  margin: 0 auto;
+/* Terminal de démo : toujours sombre, comme un vrai terminal, quel que soit le thème. */
+.demo { display: flex; flex-direction: column; gap: 16px; max-width: 640px; margin: 0 auto; }
+
+.term {
+  --t-bg: #0b0f16;
+  --t-ink: #e8edf4;
+  --t-dim: #7d8898;
+  --t-say: #ffd60a;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--t-bg);
+  color: var(--t-ink);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: clamp(520px, 44vw, 600px);
 }
 
-.object .keyboard { position: absolute; width: 72%; left: 14%; bottom: 16%; }
-.object .speaker { position: absolute; width: 50%; left: 25%; bottom: 40%; }
-
-.anno {
-  position: absolute;
-  display: none;
+.term-bar {
+  display: flex;
   align-items: center;
-}
-
-.anno .txt {
-  background: var(--bg);
-  border: 1px solid var(--ink2);
-  padding: 6px 10px;
+  gap: 8px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #222a36;
   font-family: var(--mono);
   font-size: 14px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  color: var(--t-dim);
+}
+.term-bar i { width: 12px; height: 12px; border-radius: 50%; background: #2c3441; }
+.term-bar span { margin-left: 8px; }
+
+/* Comme un vrai terminal : la dernière commande tapée reste en haut, sa sortie remplit
+   vers le bas et défile sous elle. */
+.screen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1 1 0;
+  min-height: 0;
+  padding: 18px 20px;
+  overflow: hidden;
+  font-family: var(--mono);
+  /* La sortie défilée ne déborde pas dans la marge au-dessus de la commande. */
+  mask-image: linear-gradient(transparent 16px, #000 16px);
 }
 
-.anno .ln { width: 56px; height: 1px; background: var(--ink2); }
-.anno .sq { width: 10px; height: 10px; border: 1.5px solid var(--ink); background: var(--bg); }
+/* Espace sous le contenu : la dernière commande peut toujours remonter en haut. */
+.screen::after { content: ""; flex: none; height: 100%; }
+.screen .prompt { font-size: 18px; white-space: pre-wrap; }
+.screen .prompt::before { content: "$ "; color: var(--t-dim); }
+.screen .prompt.ask::before { content: "? "; }
 
-.anno.a1 { top: 10%; left: -18%; }
-.anno.a2 { bottom: 14%; right: -6%; flex-direction: row-reverse; }
-.anno.a2 .ln { width: 48px; }
-.anno.a3 { bottom: -4%; left: 4%; flex-direction: column; align-items: flex-start; }
-.anno.a3 .sq { margin-left: 40px; }
-.anno.a3 .ln { margin-left: 44px; width: 1px; height: 28px; }
+.screen .dump {
+  margin: 0;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--t-dim);
+  white-space: pre;
+  overflow: hidden;
+  flex: none;
+}
 
-@media (min-width: 1100px) {
-  .anno { display: flex; }
+/* Sous-titre de ce que steph dit, ancré en bas du terminal. */
+.subs { flex: none; padding: 0 20px 20px; }
+.subs:has(.say:not([hidden])) { padding-top: 4px; }
+
+.subs .say {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: start;
+  padding: 12px 14px;
+  border: 1.5px solid var(--t-say);
+  border-radius: 14px;
+  font-family: var(--sans);
+  font-size: 19px;
+  line-height: 1.4;
+}
+.subs .say::before { content: "steph"; font-family: var(--mono); font-size: 14px; font-weight: 700; color: var(--t-bg); background: var(--t-say); border-radius: 6px; padding: 2px 8px; margin-top: 2px; }
+.subs .say small { grid-column: 2; font-size: 15px; color: var(--t-dim); }
+.subs .say[data-on] { box-shadow: 0 0 0 4px rgba(255, 214, 10, 0.25); }
+
+.term [hidden] { display: none; }
+
+.demo-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
+.demo-bar .note { font-family: var(--mono); font-size: 14px; letter-spacing: 0.04em; color: var(--ink2); }
+
+@media (max-width: 600px) {
+  .term { height: 680px; }
+  .subs .say { grid-template-columns: 1fr; gap: 8px; }
+  .subs .say::before { justify-self: start; }
+  .subs .say small { grid-column: 1; }
 }
 
 /* ---------- sections ---------- */
