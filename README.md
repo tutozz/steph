@@ -272,8 +272,8 @@ steph turns a wall of terminal output into one spoken sentence. It ships two mod
 
 | Model | For | Size | First word, i5 laptop | Memory |
 |---|---|---|---|---|
-| [steph-speak small](https://huggingface.co/tutozz/steph-speak-granite-4.0-h-350M-v2-GGUF) (Granite 4.0 H 350M) | any laptop, with or without a GPU | 223 MB | 2.33 s (9 times out of 10) | 564 MB |
-| [steph-speak base](https://huggingface.co/tutozz/steph-speak-gemma-4-E2B-v2-GGUF) (Gemma 4 E2B) | machines that read a prompt fast: `steph setup` measures yours and picks | 2.43 GB | 27.2 s | 3.9 GB |
+| [steph-speak small](https://huggingface.co/lsmdx/steph-speak-granite-4.0-h-350M-v2-GGUF) (Granite 4.0 H 350M) | any laptop, with or without a GPU | 223 MB | 2.33 s (9 times out of 10) | 564 MB |
+| [steph-speak base](https://huggingface.co/lsmdx/steph-speak-gemma-4-E2B-v2-GGUF) (Gemma 4 E2B) | machines that read a prompt fast: `steph setup` measures yours and picks | 2.43 GB | 27.2 s | 3.9 GB |
 
 Quality is measured on the hidden test set of Steph Speak Bench v3 (654 cases, 3 seeds, judge Qwen3.5 9B for inventions). The small model scores 53.0 and invents in 26.0% of answers. The base model, in its released file, scores 63.7 against 60.6 for raw Gemma 4 E2B and invents in 19.1% of answers (raw: 18.2%). Paired comparisons: the full Q4_0 build beats raw Gemma by +3.45 (95% interval +1.98 to +4.91) with no significant difference in inventions, and the released smaller file differs from that build by -0.37 in quality and +1.07 points of inventions, neither significant.
 
@@ -305,7 +305,7 @@ The steph-speak sentence above is the small model alone, without steph's code ru
 
 **Languages.** steph answers in French or English; the voice is French for now. On the Steph Speak Bench test set (steph's own production prompt), the small model scores 41.5% in French and 48.3% in English (a different protocol, not comparable to the quality bars above). German, Spanish, Portuguese and Russian outputs are read, but the answers in those languages are not reliable yet: the internal mission log (not published)).
 
-**Download.** [steph-speak small](https://huggingface.co/tutozz/steph-speak-granite-4.0-h-350M-v2-GGUF) and [steph-speak base](https://huggingface.co/tutozz/steph-speak-gemma-4-E2B-v2-GGUF) on Hugging Face (account `tutozz`), or automatically through the install script.
+**Download.** [steph-speak small](https://huggingface.co/lsmdx/steph-speak-granite-4.0-h-350M-v2-GGUF) and [steph-speak base](https://huggingface.co/lsmdx/steph-speak-gemma-4-E2B-v2-GGUF) on Hugging Face (account `lsmdx`), or automatically through the install script.
 
 ## Configuration
 

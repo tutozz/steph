@@ -1,5 +1,5 @@
 {
-  "_doc": "Catalogue (B9, B10, Z1). Deux modèles steph-speak publiés sur Hugging Face (espace tutozz, schéma de nommage docs/open-source.md 2.2, version v2 : le bloc de faits L5 change l'entrée du modèle) : llm/steph-universal, petit modèle (Granite 4.0 H 350M affiné, G5 a-sft, profil finetuned, Q4_K_M, 223 Mo), recommandé à tous les niveaux et téléchargé par défaut par scripts/install.sh (B9b) ; llm/steph-base, modèle de base (Gemma 4 E2B affiné G3b, variante off-ple3 de G4b : couches Q4_0, PLE en Q3_K, 2,43 Go, RAM pic 3,9 Go sur l'i5), profil generic. Chaque option publiée porte source (dépôt HF), file (nom dans le dépôt), sha256 complet et available=true ; replaces liste les anciens fichiers que `steph update` remplace (v1.0 dans l'ancien dépôt privé). llm/gemma-4-e2b (Gemma brut, profil generic) reste proposé sur choix explicite (STEPH_MODEL=gemma à l'installation) si la machine le permet (seuils N2 : 2 cœurs, 6 Go de RAM, docs/voice-bench/reference/options.json ; pas de VRAM exigée) ; not_recommended=true, affiché « non recommandé : pas optimisé pour steph ». Qwen3.5 9B retiré du catalogue. Schéma de docs/voice-bench/reference/options.json pour les tiers et les voix TTS (mêmes seuils, mêmes voix Piper ; Kokoro exclu, tts.py ne sait charger que des voix Piper). role small|base : steph setup mesure la vitesse de lecture du prompt et recommande base si le premier résumé prédit au p90 tient sous 3 s, sinon small (src/steph/speed.py). prompt_tokens_per_sec : lecture mesurée sur l'i5-7200U (G2 : ~200 pour le petit modèle, 28 pour Gemma), machine lente de référence ; le rapport entre deux modèles sert à prédire l'un depuis la mesure de l'autre. summary_prompt_tokens_p90 : jetons lus par résumé au p90 (G2 : 766 au format generic ; 270 pour le petit modèle, repris de v1.0 : G5 a-sft a le même p90 de premier jeton sur l'i5, 2,33 s contre 2,26 s).",
+  "_doc": "Catalogue (B9, B10, Z1). Deux modèles steph-speak publiés sur Hugging Face (espace lsmdx, schéma de nommage docs/open-source.md 2.2, version v2 : le bloc de faits L5 change l'entrée du modèle) : llm/steph-universal, petit modèle (Granite 4.0 H 350M affiné, G5 a-sft, profil finetuned, Q4_K_M, 223 Mo), recommandé à tous les niveaux et téléchargé par défaut par scripts/install.sh (B9b) ; llm/steph-base, modèle de base (Gemma 4 E2B affiné G3b, variante off-ple3 de G4b : couches Q4_0, PLE en Q3_K, 2,43 Go, RAM pic 3,9 Go sur l'i5), profil generic. Chaque option publiée porte source (dépôt HF), file (nom dans le dépôt), sha256 complet et available=true ; replaces liste les anciens fichiers que `steph update` remplace (v1.0 dans l'ancien dépôt privé). llm/gemma-4-e2b (Gemma brut, profil generic) reste proposé sur choix explicite (STEPH_MODEL=gemma à l'installation) si la machine le permet (seuils N2 : 2 cœurs, 6 Go de RAM, docs/voice-bench/reference/options.json ; pas de VRAM exigée) ; not_recommended=true, affiché « non recommandé : pas optimisé pour steph ». Qwen3.5 9B retiré du catalogue. Schéma de docs/voice-bench/reference/options.json pour les tiers et les voix TTS (mêmes seuils, mêmes voix Piper ; Kokoro exclu, tts.py ne sait charger que des voix Piper). role small|base : steph setup mesure la vitesse de lecture du prompt et recommande base si le premier résumé prédit au p90 tient sous 3 s, sinon small (src/steph/speed.py). prompt_tokens_per_sec : lecture mesurée sur l'i5-7200U (G2 : ~200 pour le petit modèle, 28 pour Gemma), machine lente de référence ; le rapport entre deux modèles sert à prédire l'un depuis la mesure de l'autre. summary_prompt_tokens_p90 : jetons lus par résumé au p90 (G2 : 766 au format generic ; 270 pour le petit modèle, repris de v1.0 : G5 a-sft a le même p90 de premier jeton sur l'i5, 2,33 s contre 2,26 s).",
   "version": 1,
   "tiers": [
     {"id": "N1", "label": "vieux portable", "cpu_physical_cores_min": 1, "ram_gb_min": 4},
@@ -21,7 +21,7 @@
       "kind": "llm",
       "label": "steph-speak, petit modèle (Granite 4.0 H 350M affiné)",
       "profile": "finetuned",
-      "source": "tutozz/steph-speak-granite-4.0-h-350M-v2-GGUF",
+      "source": "lsmdx/steph-speak-granite-4.0-h-350M-v2-GGUF",
       "file": "steph-speak-granite-4.0-h-350M-sft-v2.0-Q4_K_M.gguf",
       "sha256": "0a4b8f42884a6cc87ac8958528f7c1f95bc702f08b3cb0ee7ea32063e1717199",
       "replaces": ["steph-speak-granite-4.0-h-350M-dpo-v1.0-Q4_K_M.gguf"],
@@ -39,7 +39,7 @@
       "kind": "llm",
       "label": "steph-speak, modèle de base (Gemma 4 E2B affiné)",
       "profile": "generic",
-      "source": "tutozz/steph-speak-gemma-4-E2B-v2-GGUF",
+      "source": "lsmdx/steph-speak-gemma-4-E2B-v2-GGUF",
       "file": "steph-speak-gemma-4-E2B-sft-v2.0-off-ple3.gguf",
       "sha256": "eb6e76076b819d9e7a1bbb01e38e8cbf256eb3bd741b6cb0c6311a4a7ed3b429",
       "size_mb": 2432,

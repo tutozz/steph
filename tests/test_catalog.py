@@ -293,13 +293,13 @@ def test_catalog_prompt_speed_by_model_file():
 
 PUBLISHED = {
     "llm/steph-universal": {
-        "source": "tutozz/steph-speak-granite-4.0-h-350M-v2-GGUF",
+        "source": "lsmdx/steph-speak-granite-4.0-h-350M-v2-GGUF",
         "file": "steph-speak-granite-4.0-h-350M-sft-v2.0-Q4_K_M.gguf",
         "sha256": "0a4b8f42884a6cc87ac8958528f7c1f95bc702f08b3cb0ee7ea32063e1717199",
         "size_bytes": 222662112,
     },
     "llm/steph-base": {
-        "source": "tutozz/steph-speak-gemma-4-E2B-v2-GGUF",
+        "source": "lsmdx/steph-speak-gemma-4-E2B-v2-GGUF",
         "file": "steph-speak-gemma-4-E2B-sft-v2.0-off-ple3.gguf",
         "sha256": "eb6e76076b819d9e7a1bbb01e38e8cbf256eb3bd741b6cb0c6311a4a7ed3b429",
         "size_bytes": 2432011840,
@@ -324,7 +324,7 @@ def test_published_names_follow_the_naming_schema():
     for expected in PUBLISHED.values():
         assert expected["file"].startswith("steph-speak-") and expected["file"].endswith(".gguf")
         assert "-fr-" not in expected["file"] and "-v2.0" in expected["file"]
-        assert expected["source"].startswith("tutozz/steph-speak-") and expected["source"].endswith("-v2-GGUF")
+        assert expected["source"].startswith("lsmdx/steph-speak-") and expected["source"].endswith("-v2-GGUF")
 
 
 def test_small_model_replaces_the_private_v1_file():

@@ -273,8 +273,8 @@ steph transforme un mur de sortie de terminal en une phrase dite à voix haute. 
 
 | Modèle | Pour | Taille | Premier mot, portable i5 | Mémoire |
 |---|---|---|---|---|
-| [steph-speak petit](https://huggingface.co/tutozz/steph-speak-granite-4.0-h-350M-v2-GGUF) (Granite 4.0 H 350M) | tout portable, avec ou sans GPU | 223 Mo | 2,33 s (9 fois sur 10) | 564 Mo |
-| [steph-speak base](https://huggingface.co/tutozz/steph-speak-gemma-4-E2B-v2-GGUF) (Gemma 4 E2B) | machines qui lisent vite un prompt : `steph setup` mesure la vôtre et choisit | 2,43 Go | 27,2 s | 3,9 Go |
+| [steph-speak petit](https://huggingface.co/lsmdx/steph-speak-granite-4.0-h-350M-v2-GGUF) (Granite 4.0 H 350M) | tout portable, avec ou sans GPU | 223 Mo | 2,33 s (9 fois sur 10) | 564 Mo |
+| [steph-speak base](https://huggingface.co/lsmdx/steph-speak-gemma-4-E2B-v2-GGUF) (Gemma 4 E2B) | machines qui lisent vite un prompt : `steph setup` mesure la vôtre et choisit | 2,43 Go | 27,2 s | 3,9 Go |
 
 La qualité se mesure sur le jeu de test caché du Steph Speak Bench v3 (654 cas, 3 graines, juge Qwen3.5 9B pour les inventions). Le petit modèle obtient 53,0 et invente dans 26,0 % des réponses. Le modèle base, dans son fichier publié, obtient 63,7 contre 60,6 pour Gemma 4 E2B brut et invente dans 19,1 % des réponses (brut : 18,2 %). Comparaisons appariées : la version Q4_0 complète bat Gemma brut de +3,45 (intervalle à 95 % de +1,98 à +4,91), sans écart significatif d'inventions, et le fichier publié, plus petit, s'en écarte de -0,37 en qualité et de +1,07 point d'inventions, sans significativité.
 
@@ -306,7 +306,7 @@ La phrase steph-speak ci-dessus est celle du petit modèle seul, sans les règle
 
 **Langues.** steph répond en français ou en anglais ; la voix reste française pour l'instant. Sur le jeu de test du Steph Speak Bench (prompt de production de steph), le petit modèle obtient 41,5 % en français et 48,3 % en anglais (protocole différent, non comparable aux barres de qualité ci-dessus). Les sorties en allemand, espagnol, portugais et russe sont lues, mais les réponses dans ces langues ne sont pas encore fiables : le journal de mission interne (non publié)).
 
-**Téléchargement.** [steph-speak petit](https://huggingface.co/tutozz/steph-speak-granite-4.0-h-350M-v2-GGUF) et [steph-speak base](https://huggingface.co/tutozz/steph-speak-gemma-4-E2B-v2-GGUF) sur Hugging Face (compte `tutozz`), ou automatiquement par le script d'installation.
+**Téléchargement.** [steph-speak petit](https://huggingface.co/lsmdx/steph-speak-granite-4.0-h-350M-v2-GGUF) et [steph-speak base](https://huggingface.co/lsmdx/steph-speak-gemma-4-E2B-v2-GGUF) sur Hugging Face (compte `lsmdx`), ou automatiquement par le script d'installation.
 
 ## Configuration
 
