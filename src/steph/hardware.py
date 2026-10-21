@@ -287,12 +287,14 @@ def detect_memory() -> MemoryInfo:
     return MemoryInfo()
 
 
-def detect_gpu_vram(gpus: list[Gpu]) -> dict[str, int]:
-    """VRAM par GPU en Mo : nvidia-smi si présent, mémoire unifiée pour Apple, sinon rien."""
+def detect_gpu_vram(gpus: list[Gpu], free: bool = False) -> dict[str, int]:
+    """VRAM par GPU en Mo : nvidia-smi si présent (totale, ou libre avec free=True), mémoire
+    unifiée pour Apple, sinon rien. La mémoire unifiée n'a pas de « libre » distinct : inchangée."""
     smi = shutil.which("nvidia-smi")
     if smi:
+        column = "memory.free" if free else "memory.total"
         try:
-            r = subprocess.run([smi, "--query-gpu=name,memory.total", "--format=csv,noheader,nounits"],
+            r = subprocess.run([smi, f"--query-gpu=name,{column}", "--format=csv,noheader,nounits"],
                                 capture_output=True, text=True, timeout=5)
             vram = parse_nvidia_smi_vram(r.stdout)
             if vram:
@@ -305,6 +307,38 @@ def detect_gpu_vram(gpus: list[Gpu]) -> dict[str, int]:
         if mem.total_mb:
             return {g.name: mem.total_mb for g in apple}
     return {}
+
+
+# contexte, tampons de calcul, et de la place pour les autres processus de la carte (par exemple un service IA qui partage la carte)
+GPU_HEADROOM_MB = 1536
+
+
+def plan_gpu_layers(layers: int, model_mb: int, free_mb: int | None, language: str) -> tuple[int, str]:
+    """Couches à envoyer au GPU et, si le modèle n'y tient pas, la raison du repli sur le processeur.
+
+    free_mb None : VRAM libre inconnue (Metal, AMD, Intel), réglage inchangé."""
+    from .strings import t
+
+    if layers == 0 or free_mb is None or model_mb + GPU_HEADROOM_MB <= free_mb:
+        return layers, ""
+    return 0, t(language, "gpu.vram_low").format(free=free_mb, model=model_mb, margin=GPU_HEADROOM_MB)
+
+
+def free_vram_mb() -> int | None:
+    """VRAM libre de la meilleure carte NVIDIA, ou None si elle ne se mesure pas."""
+    free = detect_gpu_vram([], free=True)
+    return max(free.values()) if free else None
+
+
+def effective_gpu_layers(cfg, model_path: str | None = None) -> tuple[int, str]:
+    """llm_gpu_layers de cfg, ramené à 0 si le modèle ne tient pas dans la VRAM libre maintenant."""
+    if cfg.llm_gpu_layers == 0 or not cfg.llm_gpu_fit_check:
+        return cfg.llm_gpu_layers, ""
+    try:
+        model_mb = Path(model_path or cfg.model).stat().st_size // (1024 * 1024)
+    except OSError:
+        return cfg.llm_gpu_layers, ""
+    return plan_gpu_layers(cfg.llm_gpu_layers, model_mb, free_vram_mb(), cfg.language)
 
 
 def detect_gpus_cached(

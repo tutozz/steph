@@ -57,7 +57,7 @@ def detect_machine() -> Machine:
     cpu, mem = detect_cpu(), detect_memory()
     ram = mem.total_mb / 1024 if mem.total_mb else None
     gpus = detect_gpus_cached(load_config().llama_server)
-    vram_by_gpu = detect_gpu_vram(gpus)
+    vram_by_gpu = detect_gpu_vram(gpus, free=True)  # libre : une carte partagée n'offre que ce reste
     vram_gb = max(vram_by_gpu.values()) / 1024 if vram_by_gpu else 0.0
     return Machine(cpu.physical_cores, ram, vram_gb)
 

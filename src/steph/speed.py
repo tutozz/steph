@@ -65,7 +65,8 @@ def reference_model(models: list[ModelChoice]) -> ModelChoice | None:
 
 
 def assess(models: list[ModelChoice], reference: ModelChoice | None, measured: float | None,
-           gpu: bool) -> Verdict:
+           gpu: bool, vram_blocked: bool = False) -> Verdict:
+    """vram_blocked : la mesure a tourné sur GPU mais le modèle de base n'y tiendra pas (VRAM libre)."""
     base = next((m for m in models if m.role == "base" and not m.not_recommended), None)
     small = next((m for m in models if m.role == "small"), None)
     if base is None or small is None:
@@ -74,6 +75,9 @@ def assess(models: list[ModelChoice], reference: ModelChoice | None, measured: f
                       measured=bool(measured and reference is not None))
     if base.out_of_scope:
         verdict.reason = "ram"
+    elif vram_blocked:
+        verdict.reason = "vram"
+        verdict.measured = False  # la vitesse mesurée sur GPU ne se transpose pas au modèle de base
     elif verdict.measured:
         verdict.base_p90 = first_summary_p90(base, predict_tokens_per_sec(base, reference, measured))
         verdict.fast = verdict.base_p90 is not None and verdict.base_p90 <= TARGET_FIRST_SUMMARY_P90
@@ -115,6 +119,8 @@ def message_lines(verdict: Verdict, language: str) -> list[str]:
         return []
     if verdict.reason == "ram":
         lines = [t(language, "speed.ram")]
+    elif verdict.reason == "vram":
+        lines = [t(language, "speed.vram")]
     elif verdict.reason == "measured":
         lines = [t(language, "speed.measured").format(seconds=seconds_phrase(verdict.base_p90, language)),
                  t(language, "speed.fast" if verdict.fast else "speed.slow").format(
@@ -162,11 +168,12 @@ def measure_prompt_speed(cfg: Config, model_path: str, *, launch: Callable = _la
     """Jetons de prompt lus par seconde par `model_path` sur cette machine, ou None.
 
     Serveur à part, sur un port libre : celui de steph peut tourner dans une autre fenêtre."""
+    from .hardware import effective_gpu_layers
     from .llm import _build_env
 
     port = _free_port()
     args = [cfg.llama_server, "-m", model_path, "--host", "127.0.0.1", "--port", str(port),
-            "-c", "2048", "-ngl", str(cfg.llm_gpu_layers), "--parallel", "1", "--no-webui",
+            "-c", "2048", "-ngl", str(effective_gpu_layers(cfg, model_path)[0]), "--parallel", "1", "--no-webui",
             "-b", str(cfg.llm_batch), "-ub", str(cfg.llm_ubatch), "--cache-ram", "0", *cfg.llm_extra_args]
     try:
         proc = launch(args, _build_env(cfg, Path(cfg.llama_server)))

@@ -178,6 +178,49 @@ fetch() { # LABEL URL DEST [--speak]
   uv run -q python -m steph.fetch --lang "$(lang_code)" --label "$1" ${4:-} "$2" "$3"
 }
 
+# Le binaire de ce dossier s'exécute-t-il ? Les archives Linux de ggml-org visent
+# une glibc récente (Ubuntu 24.04, 2.38) : sur Debian 12 ou Ubuntu 22.04 il ne démarre pas.
+llama_usable() { # DIR
+  "$1/llama-server" --version >/dev/null 2>&1
+}
+
+# Construit llama-server depuis les sources de la release $1 et le pose dans $2.
+# Binaires statiques ; CUDA si nvcc est présent, sinon CPU.
+llama_build_source() { # TAG DIR
+  local TAG=$1 DEST=$2 SRC cuda=OFF
+  SRC=$(mktemp -d)
+  fetch "llama.cpp (sources)" "https://github.com/ggml-org/llama.cpp/archive/refs/tags/$TAG.tar.gz" "$SRC/src.tgz" || return 1
+  tar xzf "$SRC/src.tgz" -C "$SRC" || return 1
+  command -v nvcc >/dev/null && [ "$GPU" = nvidia ] && cuda=ON
+  cmake -S "$SRC/llama.cpp-$TAG" -B "$SRC/build" -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF \
+    -DGGML_CUDA=$cuda -DLLAMA_CURL=OFF -DLLAMA_BUILD_TESTS=OFF -DLLAMA_BUILD_EXAMPLES=OFF >"$SRC/cmake.log" 2>&1 &&
+    cmake --build "$SRC/build" --target llama-server llama-bench -j "$(nproc 2>/dev/null || echo 2)" >>"$SRC/cmake.log" 2>&1 || {
+      tail -n 15 "$SRC/cmake.log" >&2
+      rm -rf "$SRC"
+      return 1
+    }
+  # llama-bench sert à steph pour détecter le GPU ; les fichiers de l'archive inutilisable partent
+  rm -rf "$DEST" && mkdir -p "$DEST" && cp "$SRC/build/bin/llama-server" "$SRC/build/bin/llama-bench" "$DEST/"
+  rm -rf "$SRC"
+}
+
+# Vérifie que llama-server s'exécute ; sinon le construit depuis les sources, ou le dit.
+llama_ensure_usable() { # TAG DIR
+  local TAG=$1 D=$2
+  llama_usable "$D" && return 0
+  if [ "$OS" = Linux ] && command -v cmake >/dev/null && command -v c++ >/dev/null; then
+    smsg strong "llama.cpp : le binaire publié ne démarre pas (glibc trop ancienne). Construction depuis les sources, quelques minutes." \
+                "llama.cpp: the published binary does not start (glibc too old). Building from source, a few minutes."
+    llama_build_source "$TAG" "$D" && llama_usable "$D" && return 0
+    fail_msg "llama.cpp : la construction depuis les sources a échoué. steph n'est pas utilisable." \
+             "llama.cpp: the build from source failed. steph is not usable."
+    return 1
+  fi
+  fail_msg "llama.cpp : le binaire publié ne démarre pas (glibc trop ancienne). Installez cmake et un compilateur C++ (paquets cmake et g++), puis relancez l'installation. steph n'est pas utilisable." \
+           "llama.cpp: the published binary does not start (glibc too old). Install cmake and a C++ compiler (packages cmake and g++), then run the installer again. steph is not usable."
+  return 1
+}
+
 # Télécharge la release $1 dans vendor/llama.new puis remplace vendor/llama :
 # un téléchargement interrompu laisse l'ancienne version en place.
 install_llama() {
@@ -194,7 +237,10 @@ install_llama() {
     [ "$(basename "$D")" = bin ] && mv "$D"/* "$D/.." 2>/dev/null || true
     xattr -dr com.apple.quarantine "$NEW" 2>/dev/null || true
   fi
-  if [ -n "$CUDART" ]; then
+  # testé avant cudart : un binaire qui ne démarre pas est reconstruit, inutile de télécharger CUDA
+  local D=$NEW/llama-$TAG built=""
+  llama_usable "$D" || { llama_ensure_usable "$TAG" "$D" || { rm -rf "$TMP" "$NEW"; return 1; }; built=1; }
+  if [ -n "$CUDART" ] && [ -z "$built" ]; then
     fetch "CUDA" "$B/cudart-llama-$TAG-bin-$FLAVOR.tar.gz" "$TMP/cudart.tgz"
     mkdir -p "$TMP/cudart" && tar xzf "$TMP/cudart.tgz" -C "$TMP/cudart"
     cp -n "$TMP"/cudart/*/* "$NEW/llama-$TAG/" 2>/dev/null || true
@@ -239,7 +285,7 @@ section_llama() {
       msg "llama.cpp : $TAG à installer (actuel : ${CURRENT:-inconnu})" \
           "llama.cpp: $TAG to install (current: ${CURRENT:-unknown})"
     else
-      install_llama "$TAG"
+      install_llama "$TAG" || exit 1
     fi
   fi
 }

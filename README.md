@@ -113,7 +113,7 @@ git clone https://github.com/tutozz/steph && cd steph
 steph                     # start the talking terminal
 ```
 
-Requirement by hand: `uv` ([install](https://docs.astral.sh/uv/)); the one-line install gets it for you. No admin rights needed.
+Requirement by hand: `uv` ([install](https://docs.astral.sh/uv/)); the one-line install gets it for you. No admin rights needed. On Linux older than Debian 13 or Ubuntu 24.04 (glibc below 2.38), the prebuilt llama.cpp does not start: the installer then builds it, which needs `cmake` and a C++ compiler.
 
 ### Hardware
 

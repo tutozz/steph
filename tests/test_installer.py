@@ -281,7 +281,11 @@ def _stubbed_install(tmp_path, extra=None) -> str:
     stubs = tmp_path / "stubs"
     stubs.mkdir()
     uv = '#!/bin/sh\ncase "$*" in *"python -c"*) echo b9999 ;; "tool dir --bin") echo "$HOME/bin" ;; esac\n'
-    for name, body in {"uv": uv, "curl": "#!/bin/sh\n", "tar": "#!/bin/sh\n"}.items():
+    # le faux tar pose un llama-server qui s'exécute, comme une archive publiée valide
+    tar = ('#!/bin/sh\nwhile [ $# -gt 0 ]; do [ "$1" = -C ] && d=$2; shift; done\n'
+           'mkdir -p "$d/llama-b9999" && printf "#!/bin/sh\\n" > "$d/llama-b9999/llama-server" '
+           '&& chmod +x "$d/llama-b9999/llama-server"\n')
+    for name, body in {"uv": uv, "curl": "#!/bin/sh\n", "tar": tar}.items():
         (stubs / name).write_text(body)
         (stubs / name).chmod(0o755)
     home = tmp_path / "home"
@@ -385,3 +389,59 @@ def test_model_download_checks_the_catalog_sha256():
     line = next(l for l in src.splitlines() if 'fetch "$(msg Modèle Model)"' in l)
     nxt = src.splitlines()[src.splitlines().index(line) + 1]
     assert "--sha256" in line + nxt
+
+
+# ------------------------------------------------------------ install.sh : binaire llama.cpp inutilisable (glibc trop ancienne)
+
+
+def _fake_server(directory: Path, works: bool) -> None:
+    directory.mkdir(parents=True, exist_ok=True)
+    body = "echo version: 1\n" if works else "echo 'GLIBC_2.38 not found' >&2\nexit 1\n"
+    (directory / "llama-server").write_text("#!/bin/sh\n" + body)
+    (directory / "llama-server").chmod(0o755)
+
+
+def test_llama_usable_runs_the_binary(tmp_path):
+    _fake_server(tmp_path / "ok", True)
+    _fake_server(tmp_path / "ko", False)
+    assert bash(f'llama_usable "{tmp_path / "ok"}"').returncode == 0
+    assert bash(f'llama_usable "{tmp_path / "ko"}"').returncode != 0
+
+
+def test_unusable_binary_without_build_tools_is_reported_not_installed(tmp_path):
+    _fake_server(tmp_path / "d", False)
+    r = bash(f'OS=Linux; PATH="{tmp_path / "empty"}"; llama_ensure_usable b1 "{tmp_path / "d"}"', {"LANG": "fr_FR.UTF-8"})
+    assert r.returncode != 0
+    assert "glibc" in r.stderr and "cmake" in r.stderr
+
+
+def test_unusable_binary_is_rebuilt_from_source_when_tools_exist(tmp_path):
+    _fake_server(tmp_path / "d", False)
+    tools = tmp_path / "tools"
+    tools.mkdir()
+    for tool in ("cmake", "c++"):
+        (tools / tool).write_text("#!/bin/sh\n")
+        (tools / tool).chmod(0o755)
+    stub = f'llama_build_source() {{ echo "build $1" >&2; printf "#!/bin/sh\\n" > "$2/llama-server"; }}'
+    r = bash(f'OS=Linux; PATH="{tools}"; {stub}; llama_ensure_usable b1 "{tmp_path / "d"}"')
+    assert r.returncode == 0, r.stderr
+    assert "build b1" in r.stderr
+
+
+def test_usable_binary_is_never_rebuilt(tmp_path):
+    _fake_server(tmp_path / "d", True)
+    stub = 'llama_build_source() { echo BUILD >&2; return 1; }'
+    r = bash(f'OS=Linux; {stub}; llama_ensure_usable b1 "{tmp_path / "d"}"')
+    assert r.returncode == 0
+    assert "BUILD" not in r.stderr
+
+
+def test_binary_still_broken_after_the_rebuild_is_an_error(tmp_path):
+    _fake_server(tmp_path / "d", False)
+    tools = tmp_path / "tools"
+    tools.mkdir()
+    for tool in ("cmake", "c++"):
+        (tools / tool).write_text("#!/bin/sh\n")
+        (tools / tool).chmod(0o755)
+    r = bash(f'OS=Linux; PATH="{tools}"; llama_build_source() {{ return 0; }}; llama_ensure_usable b1 "{tmp_path / "d"}"')
+    assert r.returncode != 0

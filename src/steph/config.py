@@ -52,6 +52,7 @@ class Config:
     llm_port: int = 8765
     llm_ctx: int = 32768  # partagé entre 2 slots : 0 = résumés, 1 = questions
     llm_gpu_layers: int = 99
+    llm_gpu_fit_check: bool = True  # repli sur le processeur si le modèle ne tient pas dans la VRAM libre
     llm_parallel: int = 2
     llm_batch: int = 512
     llm_ubatch: int = 512

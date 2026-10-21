@@ -108,7 +108,7 @@ git clone https://github.com/tutozz/steph && cd steph
 steph                     # lance le terminal parlant
 ```
 
-Prérequis à la main : `uv` ([installation](https://docs.astral.sh/uv/)). La ligne unique l'installe seule.
+Prérequis à la main : `uv` ([installation](https://docs.astral.sh/uv/)). La ligne unique l'installe seule. Sur un Linux plus ancien que Debian 13 ou Ubuntu 24.04 (glibc inférieure à 2.38), le llama.cpp précompilé ne démarre pas : l'installeur le construit alors, ce qui demande `cmake` et un compilateur C++.
 
 ### Matériel
 

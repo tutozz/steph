@@ -93,7 +93,7 @@ def test_detect_machine_reads_real_vram(monkeypatch):
     monkeypatch.setattr(hardware, "detect_memory", lambda: hardware.MemoryInfo(total_mb=16384))
     gpu = hardware.Gpu(vendor="nvidia", kind="dedicated", name="RTX 3060")
     monkeypatch.setattr("steph.hardware.detect_gpus_cached", lambda *a, **k: [gpu])
-    monkeypatch.setattr("steph.hardware.detect_gpu_vram", lambda gpus: {"RTX 3060": 12288})
+    monkeypatch.setattr("steph.hardware.detect_gpu_vram", lambda gpus, free=False: {"RTX 3060": 12288})
     machine = catalog.detect_machine()
     assert machine.physical_cores == 4
     assert machine.ram_gb == 16.0
@@ -106,7 +106,7 @@ def test_detect_machine_without_gpu_has_zero_vram(monkeypatch):
     monkeypatch.setattr(hardware, "detect_cpu", lambda: hardware.CpuInfo(physical_cores=2))
     monkeypatch.setattr(hardware, "detect_memory", lambda: hardware.MemoryInfo(total_mb=8192))
     monkeypatch.setattr("steph.hardware.detect_gpus_cached", lambda *a, **k: [])
-    monkeypatch.setattr("steph.hardware.detect_gpu_vram", lambda gpus: {})
+    monkeypatch.setattr("steph.hardware.detect_gpu_vram", lambda gpus, free=False: {})
     assert catalog.detect_machine().vram_gb == 0.0
 
 

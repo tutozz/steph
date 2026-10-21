@@ -1,0 +1,17 @@
+GPU détectés :
+  - nvidia/dedicated : NVIDIA GeForce RTX 3080
+
+Profil retenu : dedicated  (hardware_profile = 'auto')
+
+Commande llama-server :
+  /root/steph-z9/bin/llama-server -m /root/steph-z9/home/.local/share/steph/models/gemma-4-E2B_q4_0-it.gguf --host 127.0.0.1 --port 8765 -c 32768 -ngl 99 --parallel 2 --no-webui --jinja -b 512 -ub 512 --reasoning-budget 0
+======
+machine Machine(physical_cores=6, ram_gb=62.71875, vram_gb=10.0)
+tier GPU
+Mesure de la vitesse de cette machine, quelques secondes.
+llm/steph-universal recommended= False tps= 2571.9 path_present= True
+llm/steph-base recommended= True tps= 360.1 path_present= True
+llm/gemma-4-e2b recommended= False tps= 360.1 path_present= False
+Vitesse mesurée : premier résumé estimé à 2,1 secondes avec le modèle de base.
+Sous le seuil de 3 secondes : modèle de base recommandé.
+L'autre choix reste possible.

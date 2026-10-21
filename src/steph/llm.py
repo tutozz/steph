@@ -16,6 +16,7 @@ from pathlib import Path
 from typing import Iterator
 
 from .config import RUNTIME_DIR, Config
+from .hardware import effective_gpu_layers
 
 
 def _build_env(cfg: Config, exe: Path) -> dict:
@@ -35,7 +36,7 @@ def _build_args(cfg: Config, exe: str) -> list[str]:
     args = [
         exe, "-m", cfg.model,
         "--host", "127.0.0.1", "--port", str(cfg.llm_port),
-        "-c", str(FINETUNED_CTX if finetuned else cfg.llm_ctx), "-ngl", str(cfg.llm_gpu_layers),
+        "-c", str(FINETUNED_CTX if finetuned else cfg.llm_ctx), "-ngl", str(effective_gpu_layers(cfg)[0]),
         "--parallel", str(cfg.llm_parallel), "--no-webui", "--jinja",
         "-b", str(cfg.llm_batch), "-ub", str(cfg.llm_ubatch),
         "--reasoning-budget", "0",
@@ -81,6 +82,9 @@ class LLM:
             env = _build_env(self.cfg, exe)
             args = _build_args(self.cfg, str(exe))
             log = open(self.logfile, "ab")
+            reason = effective_gpu_layers(self.cfg)[1]
+            if reason:
+                log.write(f"{reason}\n".encode())
             try:
                 proc = subprocess.Popen(args, stdout=log, stderr=log, stdin=subprocess.DEVNULL,
                                         env=env, start_new_session=True)

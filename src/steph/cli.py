@@ -262,7 +262,7 @@ def cmd_server(args) -> int:
 def cmd_profile(args) -> int:
     """Diagnostic pour les contributeurs : GPU détectés, profil choisi, réglages
     llama-server effectifs. Utile pour préparer un profils/gpu/<carte>.toml."""
-    from .hardware import detect_gpus_cached
+    from .hardware import detect_gpus_cached, effective_gpu_layers
     from .llm import _build_args
     from .profile import PROFILES_DIR, profile_name
 
@@ -285,6 +285,9 @@ def cmd_profile(args) -> int:
 
     print("\nCommande llama-server :")
     print("  " + " ".join(_build_args(cfg, str(Path(cfg.llama_server)))))
+    why = effective_gpu_layers(cfg)[1]
+    if why:
+        print(f"  attention : {why}")
     if cfg.llm_env:
         print("\nVariables d'environnement (llm_env) :")
         for k, v in cfg.llm_env.items():

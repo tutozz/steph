@@ -16,6 +16,7 @@ from typing import Callable
 from . import speed
 from .catalog import ModelChoice, detect_machine, detect_tier, llm_choices, load_catalog, tts_choices
 from .config import CONFIG_PATH, DATA_DIR, Config, load_config
+from .hardware import effective_gpu_layers, free_vram_mb, plan_gpu_layers
 from .strings import t
 from .term_style import Style, for_stream
 
@@ -461,11 +462,18 @@ def _setup_llm(cfg: Config, say: Callable[[str], None]) -> tuple[list[ModelChoic
         return [], []
     machine = detect_machine()
     reference = speed.reference_model(models)
-    measured = None
+    measured, blocked = None, False
     if reference is not None:
+        profiled = load_config(apply_profile=True)
         say(t(cfg.language, "setup.speed_measuring"))
-        measured = speed.measure_prompt_speed(load_config(apply_profile=True), reference.path)
-    verdict = speed.assess(models, reference, measured, gpu=detect_tier(load_catalog(), machine) == "GPU")
+        measured = speed.measure_prompt_speed(profiled, reference.path)
+        # la mesure sur GPU ne vaut pas pour un modèle de base qui ne tiendra pas dans la VRAM libre
+        base = next((m for m in models if m.role == "base" and not m.not_recommended), None)
+        blocked = (measured is not None and base is not None
+                   and effective_gpu_layers(profiled, reference.path)[0] > 0
+                   and bool(plan_gpu_layers(profiled.llm_gpu_layers, base.size_mb, free_vram_mb(), cfg.language)[1]))
+    verdict = speed.assess(models, reference, measured, gpu=detect_tier(load_catalog(), machine) == "GPU",
+                           vram_blocked=blocked)
     return speed.apply(models, verdict), speed.message_lines(verdict, cfg.language)
 
 
