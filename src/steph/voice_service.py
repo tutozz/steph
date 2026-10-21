@@ -309,6 +309,7 @@ class VoiceService:
         self.idle_exit = idle_exit
         self.sched = Scheduler(focus or Focus(), on_cut=self._cut)
         self._closed = threading.Event()
+        self._closing = False
         self._engine_ready = threading.Event()
         self._idle_timer: threading.Timer | None = None
         self._conns: set[socket.socket] = set()
@@ -336,9 +337,10 @@ class VoiceService:
         return not self._closed.is_set()
 
     def close(self) -> None:
-        if self._closed.is_set():
-            return
-        self._closed.set()
+        with self.sched.cond:
+            if self._closing:
+                return
+            self._closing = True
         try:
             self.sock.close()
         except OSError:
@@ -355,8 +357,11 @@ class VoiceService:
         with self.sched.cond:
             for w in list(self.sched.windows):
                 self.sched.remove_window(w)
-            self.sched.cond.notify_all()
         self._cut()
+        with self.sched.cond:
+            # en dernier : serve_forever rend la main, le processus peut s'arrêter
+            self._closed.set()
+            self.sched.cond.notify_all()
 
     def _cut(self) -> None:
         if self.engine is not None:
@@ -364,7 +369,7 @@ class VoiceService:
 
     def _schedule_idle_exit(self) -> None:
         with self.sched.cond:
-            if self.sched.windows or self._closed.is_set():
+            if self.sched.windows or self._closing:
                 return
             if self._idle_timer is not None:
                 self._idle_timer.cancel()

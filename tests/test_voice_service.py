@@ -406,10 +406,26 @@ def test_service_stops_when_the_last_window_closes(sock_path):
     svc = start_service(sock_path, idle_exit=0.1)
     a = client(sock_path)
     a.close()
-    deadline = time.time() + 3
+    deadline = time.time() + 10
     while svc.running() and time.time() < deadline:
         time.sleep(0.02)
     assert not svc.running()
+    assert not os.path.exists(sock_path)
+
+
+def test_serve_forever_returns_only_once_the_socket_is_removed(sock_path, monkeypatch):
+    # le processus du service s'arrête dès que serve_forever rend la main : la socket doit
+    # alors déjà être retirée, sinon elle reste sur le disque
+    real_unlink = os.unlink
+
+    def slow_unlink(path, *a, **kw):
+        time.sleep(0.3)
+        return real_unlink(path, *a, **kw)
+
+    svc = VoiceService(sock_path, engine_factory=FakeEngine, focus=Focus(probe=lambda: None))
+    monkeypatch.setattr(os, "unlink", slow_unlink)
+    threading.Timer(0.05, svc.close).start()
+    svc.serve_forever()
     assert not os.path.exists(sock_path)
 
 
