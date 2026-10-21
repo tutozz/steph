@@ -416,3 +416,44 @@ def test_model_choice_exposes_the_sha256(tmp_path):
     choices = catalog.llm_choices(catalog.load_catalog(), tmp_path, catalog.Machine(8, 32, 8))
     small = next(c for c in choices if c.id == "llm/steph-universal")
     assert small.sha256 == "0a4b8f42884a6cc87ac8958528f7c1f95bc702f08b3cb0ee7ea32063e1717199"
+
+
+def _adopt_setup(tmp_path):
+    models = tmp_path / "models"
+    models.mkdir()
+    (models / "s-v2.gguf").write_bytes(b"y")
+    return models, tmp_path / "config" / "config.toml"
+
+
+def test_adopt_writes_model_and_profile_when_there_is_no_config(tmp_path):
+    models, cfg = _adopt_setup(tmp_path)
+    cat = _opts(profile="finetuned", prompt_tokens_per_sec=300)
+    assert catalog.adopt_model(cat, models, cfg, "s-v2.gguf") == str(models / "s-v2.gguf")
+    text = cfg.read_text()
+    assert f'model = "{models / "s-v2.gguf"}"' in text
+    assert 'llm_profile = "finetuned"' in text and "llm_prompt_tokens_per_sec = 300.0" in text
+
+
+def test_adopt_replaces_a_configured_model_missing_from_disk(tmp_path):
+    models, cfg = _adopt_setup(tmp_path)
+    cfg.parent.mkdir()
+    cfg.write_text(f'model = "{models / "gone.gguf"}"\nspeech_rate = 1.5\n')
+    assert catalog.adopt_model(_opts(profile="finetuned"), models, cfg, "s-v2.gguf")
+    assert "s-v2.gguf" in cfg.read_text() and "speech_rate = 1.5" in cfg.read_text()
+
+
+def test_adopt_keeps_a_configured_model_present_on_disk(tmp_path):
+    models, cfg = _adopt_setup(tmp_path)
+    (models / "mine.gguf").write_bytes(b"x")
+    cfg.parent.mkdir()
+    cfg.write_text(f'model = "{models / "mine.gguf"}"\n')
+    assert catalog.adopt_model(_opts(profile="finetuned"), models, cfg, "s-v2.gguf") is None
+    assert "mine.gguf" in cfg.read_text() and "llm_profile" not in cfg.read_text()
+
+
+def test_adopt_ignores_a_file_the_catalog_does_not_know_or_that_is_absent(tmp_path):
+    models, cfg = _adopt_setup(tmp_path)
+    assert catalog.adopt_model(_opts(), models, cfg, "unknown.gguf") is None
+    (models / "s-v2.gguf").unlink()
+    assert catalog.adopt_model(_opts(), models, cfg, "s-v2.gguf") is None
+    assert not cfg.exists()

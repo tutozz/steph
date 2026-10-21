@@ -334,6 +334,8 @@ main() {
   fi
   # ancien modèle v1.0 : config.toml pointe vers le fichier qui le remplace (l'ancien reste sur le disque)
   [ "$MODE" = update ] && { uv run -q python -m steph.catalog migrate || true; }
+  # sans `steph setup` (pas de terminal, refus), config.toml doit quand même désigner le modèle téléchargé
+  [ "$MODEL_CHOICE" = steph ] && { uv run -q python -m steph.catalog adopt "$FILE" || true; }
 
   # --- fin -------------------------------------------------------------------------
   smsg accent "steph est installé." "steph is installed."

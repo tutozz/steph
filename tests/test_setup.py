@@ -778,3 +778,17 @@ def test_rerun_keeps_the_model_chosen_in_config_toml(tmp_path):
     code, path, _ = _run(tmp_path, ["o", "", "", "", "", ""], existing=existing, models=models,
                          cfg=Config(model=models[1].path))
     assert tomllib.loads(path.read_text())["model"] == models[1].path
+
+
+def test_first_run_still_offered_after_an_installer_only_config(tmp_path):
+    """L'installeur écrit seulement le modèle téléchargé : ce n'est pas un réglage de l'utilisateur."""
+    cfg_path = tmp_path / "config.toml"
+    cfg_path.write_text('model = "/x/small.gguf"\nllm_profile = "finetuned"\nllm_prompt_tokens_per_sec = 200.0\n')
+    assert setup.should_run_first_setup(cfg_path, tmp_path / "m", ask=lambda p: "o", interactive=True)
+
+
+def test_no_offer_when_the_user_already_set_something(tmp_path):
+    cfg_path = tmp_path / "config.toml"
+    cfg_path.write_text('model = "/x/small.gguf"\nvoice = "/x/v.onnx"\n')
+    boom = lambda p: (_ for _ in ()).throw(AssertionError("ne doit pas demander"))  # noqa: E731
+    assert setup.should_run_first_setup(cfg_path, tmp_path / "m", ask=boom, interactive=True) is False

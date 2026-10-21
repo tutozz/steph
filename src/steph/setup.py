@@ -332,10 +332,25 @@ def apply_plan(plan, cfg: Config, config_path: Path, say: Callable[[str], None],
     return 0
 
 
+# clés écrites par l'installeur (catalog adopt) : elles ne disent rien des choix de l'utilisateur
+INSTALLER_KEYS = {"model", "llm_profile", "llm_prompt_tokens_per_sec"}
+
+
+def _user_configured(config_path: Path) -> bool:
+    if not config_path.exists():
+        return False
+    import tomllib
+    try:
+        keys = set(tomllib.loads(config_path.read_text()))
+    except tomllib.TOMLDecodeError:
+        return True
+    return not keys <= INSTALLER_KEYS or not keys
+
+
 def should_run_first_setup(config_path: Path, marker: Path, ask: Callable[[str], str], interactive: bool,
                            language: str = "fr") -> bool:
-    """Proposé une seule fois, au premier `steph` sans config.toml ; refusable."""
-    if config_path.exists() or marker.exists() or not interactive:
+    """Proposé une seule fois, au premier `steph` sans réglage de l'utilisateur ; refusable."""
+    if _user_configured(config_path) or marker.exists() or not interactive:
         return False
     marker.parent.mkdir(parents=True, exist_ok=True)
     marker.touch()

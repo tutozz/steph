@@ -70,8 +70,13 @@ def run(name):
     t0 = time.time()
     # démarrage shell + modèle : attendre l'annonce de steph, pas un délai fixe (runner lent : plus de 8 s)
     deadline = time.time() + 60
+    answered = False
     while time.time() < deadline and "F6" not in open(LOG).read():
         pump(0.5)
+        # HOME vierge (runner CI) : steph propose `steph setup` et attend la réponse avant d'annoncer quoi que ce soit
+        if not answered and "Oui ou non" in out.decode("utf-8", "replace"):
+            os.write(fd, b"non\r")
+            answered = True
     pump(2)
     import glob, subprocess
     for cmd, wait in SCENARIOS[name]:

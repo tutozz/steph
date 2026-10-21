@@ -183,6 +183,31 @@ def migrate_config(catalog: dict, models_dir: Path, config_path: Path) -> str | 
     return None
 
 
+def adopt_model(catalog: dict, models_dir: Path, config_path: Path, file: str) -> str | None:
+    """Fait pointer config.toml vers `file`, le modèle que l'installeur vient de télécharger.
+
+    Sans cela, une installation sans `steph setup` (pas de terminal, refus) retombe sur le défaut
+    de config.py. Un `model` déjà configuré et présent sur le disque est un choix : il reste.
+    Retourne le chemin adopté, ou None si rien ne change."""
+    import tomllib
+    option = next((o for o in _llm_options(catalog) if o.get("file") == file), None)
+    target = Path(models_dir) / file
+    if option is None or not target.is_file():
+        return None
+    try:
+        current = tomllib.loads(config_path.read_text()).get("model")
+    except (OSError, tomllib.TOMLDecodeError):
+        current = None
+    if current and Path(os.path.expanduser(current)).is_file():
+        return None
+    from .setup import save_settings
+    answers = {"model": str(target), "llm_profile": option.get("profile", "generic")}
+    if option.get("prompt_tokens_per_sec"):
+        answers["llm_prompt_tokens_per_sec"] = float(option["prompt_tokens_per_sec"])
+    save_settings(config_path, answers)
+    return str(target)
+
+
 def main(argv: list[str] | None = None) -> int:
     """`python -m steph.catalog install-model [--update]` : « dépôt fichier », « keep » ou rien.
     `python -m steph.catalog migrate` : met config.toml à jour après le téléchargement."""
@@ -207,7 +232,12 @@ def main(argv: list[str] | None = None) -> int:
         if new:
             print(f"steph : modèle remplacé dans {CONFIG_PATH} : {new}")
         return 0
-    print("usage : python -m steph.catalog install-model [--update] | migrate", file=sys.stderr)
+    if args[:1] == ["adopt"] and len(args) == 2:
+        new = adopt_model(catalog, models_dir, CONFIG_PATH, args[1])
+        if new:
+            print(f"steph : modèle configuré dans {CONFIG_PATH} : {new}")
+        return 0
+    print("usage : python -m steph.catalog install-model [--update] | migrate | adopt FICHIER", file=sys.stderr)
     return 2
 
 
