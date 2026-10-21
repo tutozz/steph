@@ -282,7 +282,7 @@ Quality is measured on the hidden test set of Steph Speak Bench v3 (654 cases, 3
   <img src="assets/charts/quality.en.light.png" alt="Bench v3 quality, over 654 test cases: steph-speak (base) 63.7, Gemma 4 E2B (raw) 60.6, steph-speak (small) 53.0. Answers with an invention, in percent: steph-speak (base) 19.1%, Gemma 4 E2B (raw) 18.2%, steph-speak (small) 26.0%." width="100%">
 </picture>
 
-The target machine is an Intel Core i5-7200U laptop from 2017: 2 cores, no GPU. There the small model speaks its first word within 2.33 s nine times out of ten, where a raw 2B model takes 13.3 s. The raw models of the speed chart were measured with a simpler prompt than steph's production prompt, so read their bars as an order of magnitude.
+The target machine is an Intel Core i5-7200U laptop: 2 cores, no GPU. There the small model speaks its first word within 2.33 s nine times out of ten, where a raw 2B model takes 13.3 s. The raw models of the speed chart were measured with a simpler prompt than steph's production prompt, so read their bars as an order of magnitude.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/charts/speed.en.dark.png">
@@ -291,7 +291,7 @@ The target machine is an Intel Core i5-7200U laptop from 2017: 2 cores, no GPU. 
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/charts/size.en.dark.png">
-  <img src="assets/charts/size.en.light.png" alt="GGUF file size on disk: steph-speak (small) 223 MB, steph-speak (base) 2,432 MB, Gemma 4 E2B (raw) 3,350 MB, Qwen3.5 9B (teacher) 5,681 MB. Peak memory: steph-speak (small) 564 MB, steph-speak (base) 3,894 MB, Gemma 4 E2B (raw) 4,772 MB, Qwen3.5 9B (teacher) 6,506 MB." width="100%">
+  <img src="assets/charts/size.en.light.png" alt="GGUF file size on disk: steph-speak (small) 223 MB, steph-speak (base) 2,432 MB, Gemma 4 E2B (raw) 3,350 MB, Qwen3.5 9B (teacher) 5,681 MB. Peak memory: steph-speak (small) 564 MB, steph-speak (base) 3,894 MB, Gemma 4 E2B (raw) 4,769 MB, Qwen3.5 9B (teacher) 6,506 MB." width="100%">
 </picture>
 
 <picture>

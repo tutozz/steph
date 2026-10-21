@@ -446,3 +446,15 @@ details[open] > summary::before { transform: rotate(90deg); }
 .bar-val { display: flex; align-items: center; gap: 12px; font: 500 19px var(--font-code); white-space: nowrap; }
 .bar-fill { display: block; height: 32px; min-width: 4px; background: var(--color-text-muted); }
 .bar-val.win .bar-fill { background: var(--color-lemon); }
+
+.card-name { font: 700 24px / 1.2 var(--font-brand); }
+.spec { margin: 0; display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 8px 20px; font-size: 20px; }
+.spec dt { color: var(--color-text-muted); }
+.tile.lemon .spec dt { color: inherit; }
+.spec dd { margin: 0; }
+.tile .strong-link { margin-top: auto; }
+@media (max-width: 560px) {
+  .chart-rows { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .chart-rows > span:nth-child(odd) { margin-top: 8px; }
+  .data { min-width: 560px; }
+}

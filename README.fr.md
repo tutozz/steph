@@ -283,7 +283,7 @@ La qualité se mesure sur le jeu de test caché du Steph Speak Bench v3 (654 cas
   <img src="assets/charts/quality.fr.light.png" alt="Qualité au banc v3, sur 654 cas de test : steph-speak (base) 63,7, Gemma 4 E2B (brut) 60,6, steph-speak (petit) 53,0. Réponses avec une invention, en pourcentage : steph-speak (base) 19,1 %, Gemma 4 E2B (brut) 18,2 %, steph-speak (petit) 26,0 %." width="100%">
 </picture>
 
-La cible : un portable Intel Core i5-7200U de 2017, 2 cœurs, sans GPU. Là, le petit modèle dit son premier mot en 2,33 s neuf fois sur dix, quand un modèle brut de 2B met 13,3 s. Les modèles bruts du graphique de vitesse ont été mesurés avec un prompt plus simple que celui de production de steph : lisez leurs barres comme un ordre de grandeur.
+La cible : un portable Intel Core i5-7200U, 2 cœurs, sans GPU. Là, le petit modèle dit son premier mot en 2,33 s neuf fois sur dix, quand un modèle brut de 2B met 13,3 s. Les modèles bruts du graphique de vitesse ont été mesurés avec un prompt plus simple que celui de production de steph : lisez leurs barres comme un ordre de grandeur.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/charts/speed.fr.dark.png">
@@ -292,7 +292,7 @@ La cible : un portable Intel Core i5-7200U de 2017, 2 cœurs, sans GPU. Là, le 
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/charts/size.fr.dark.png">
-  <img src="assets/charts/size.fr.light.png" alt="Taille du fichier GGUF sur disque : steph-speak (petit) 223 Mo, steph-speak (base) 2 432 Mo, Gemma 4 E2B (brut) 3 350 Mo, Qwen3.5 9B (enseignant) 5 681 Mo. Mémoire au pic : steph-speak (petit) 564 Mo, steph-speak (base) 3 894 Mo, Gemma 4 E2B (brut) 4 772 Mo, Qwen3.5 9B (enseignant) 6 506 Mo." width="100%">
+  <img src="assets/charts/size.fr.light.png" alt="Taille du fichier GGUF sur disque : steph-speak (petit) 223 Mo, steph-speak (base) 2 432 Mo, Gemma 4 E2B (brut) 3 350 Mo, Qwen3.5 9B (enseignant) 5 681 Mo. Mémoire au pic : steph-speak (petit) 564 Mo, steph-speak (base) 3 894 Mo, Gemma 4 E2B (brut) 4 769 Mo, Qwen3.5 9B (enseignant) 6 506 Mo." width="100%">
 </picture>
 
 <picture>

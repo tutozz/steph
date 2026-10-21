@@ -25,12 +25,12 @@
    "table": "| Model | i5-7200U | Mac M3 Pro |\n|---|---|---|\n| steph-speak (small) | 2.3 s |  |\n| Qwen3.5 0.8B (raw) | 5.7 s |  |\n| Qwen3.5 2B | 13.3 s |  |\n| SmolLM3 3B | 22.4 s |  |\n| Ministral 3 3B | 27.0 s |  |\n| steph-speak (base) | 27.2 s |  |\n| Gemma 4 E2B (raw) |  | 0.68 s |\n| Qwen3.5 9B (teacher) |  | 2.26 s |"
   },
   "size.fr": {
-   "alt": "Taille du fichier GGUF sur disque : steph-speak (petit) 223 Mo, steph-speak (base) 2 432 Mo, Gemma 4 E2B (brut) 3 350 Mo, Qwen3.5 9B (enseignant) 5 681 Mo. Mémoire au pic : steph-speak (petit) 564 Mo, steph-speak (base) 3 894 Mo, Gemma 4 E2B (brut) 4 772 Mo, Qwen3.5 9B (enseignant) 6 506 Mo.",
-   "table": "| Modèle | Taille sur disque | Mémoire au pic |\n|---|---|---|\n| steph-speak (petit) | 223 Mo | 564 Mo |\n| steph-speak (base) | 2 432 Mo | 3 894 Mo |\n| Gemma 4 E2B (brut) | 3 350 Mo | 4 772 Mo |\n| Qwen3.5 9B (enseignant) | 5 681 Mo | 6 506 Mo |"
+   "alt": "Taille du fichier GGUF sur disque : steph-speak (petit) 223 Mo, steph-speak (base) 2 432 Mo, Gemma 4 E2B (brut) 3 350 Mo, Qwen3.5 9B (enseignant) 5 681 Mo. Mémoire au pic : steph-speak (petit) 564 Mo, steph-speak (base) 3 894 Mo, Gemma 4 E2B (brut) 4 769 Mo, Qwen3.5 9B (enseignant) 6 506 Mo.",
+   "table": "| Modèle | Taille sur disque | Mémoire au pic |\n|---|---|---|\n| steph-speak (petit) | 223 Mo | 564 Mo |\n| steph-speak (base) | 2 432 Mo | 3 894 Mo |\n| Gemma 4 E2B (brut) | 3 350 Mo | 4 769 Mo |\n| Qwen3.5 9B (enseignant) | 5 681 Mo | 6 506 Mo |"
   },
   "size.en": {
-   "alt": "GGUF file size on disk: steph-speak (small) 223 MB, steph-speak (base) 2,432 MB, Gemma 4 E2B (raw) 3,350 MB, Qwen3.5 9B (teacher) 5,681 MB. Peak memory: steph-speak (small) 564 MB, steph-speak (base) 3,894 MB, Gemma 4 E2B (raw) 4,772 MB, Qwen3.5 9B (teacher) 6,506 MB.",
-   "table": "| Model | Size on disk | Peak memory |\n|---|---|---|\n| steph-speak (small) | 223 MB | 564 MB |\n| steph-speak (base) | 2,432 MB | 3,894 MB |\n| Gemma 4 E2B (raw) | 3,350 MB | 4,772 MB |\n| Qwen3.5 9B (teacher) | 5,681 MB | 6,506 MB |"
+   "alt": "GGUF file size on disk: steph-speak (small) 223 MB, steph-speak (base) 2,432 MB, Gemma 4 E2B (raw) 3,350 MB, Qwen3.5 9B (teacher) 5,681 MB. Peak memory: steph-speak (small) 564 MB, steph-speak (base) 3,894 MB, Gemma 4 E2B (raw) 4,769 MB, Qwen3.5 9B (teacher) 6,506 MB.",
+   "table": "| Model | Size on disk | Peak memory |\n|---|---|---|\n| steph-speak (small) | 223 MB | 564 MB |\n| steph-speak (base) | 2,432 MB | 3,894 MB |\n| Gemma 4 E2B (raw) | 3,350 MB | 4,769 MB |\n| Qwen3.5 9B (teacher) | 5,681 MB | 6,506 MB |"
   },
   "example.fr": {
    "alt": "La commande rm /etc/hostname échoue : rm: impossible de supprimer '/etc/hostname': Permission non accordée. Qwen3.5 0.8B brut parle de Header.tsx, un fichier absent de la sortie : « Échec. Header.tsx ligne 42 : titel inconnu, utiliser title. » steph, par une règle écrite en code, dit : « Échec. hostname : permission refusée. »",
