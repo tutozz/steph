@@ -1,0 +1,77 @@
+{
+ "raw": 2900,
+ "stats_filter": {
+  "repeated_output_cap": 375,
+  "prior_corpus_duplicate": 60,
+  "empty_cap": 98,
+  "sandbox_leak": 4,
+  "timeout": 2,
+  "host_fingerprint": 2
+ },
+ "kept_before_contamination": 2359,
+ "contamination": {
+  "v3_3long": 255,
+  "removed": 555,
+  "v3_same_cmd": 197,
+  "v3_fingerprints": 157,
+  "pii_dropped": 25,
+  "speak_line": 87,
+  "bench36_line": 40,
+  "v3_shingle": 52,
+  "v3_line": 98,
+  "speak_cmd": 124,
+  "bench36_cmd": 12
+ },
+ "final": 1779,
+ "final_by_lang": {
+  "fr": 883,
+  "en": 896
+ },
+ "final_by_family": {
+  "tests": 302,
+  "lint-format": 274,
+  "typage": 64,
+  "python": 32,
+  "js-node": 6,
+  "packages-system": 144,
+  "rust-go": 12,
+  "build-native": 139,
+  "bases": 155,
+  "docker": 86,
+  "network-transfer": 46,
+  "network": 30,
+  "services-logs": 60,
+  "processes": 2,
+  "shell-scripts": 36,
+  "files": 314,
+  "vcs-git": 77
+ },
+ "final_distinct_cmds": 579,
+ "final_exit_nonzero": 696,
+ "final_empty": 32,
+ "max_v3_line_jaccard_kept": 0.3333333333333333,
+ "top_v3_line_jaccard_kept": [
+  [
+   0.3333333333333333,
+   "find . -type f -size +100k -exec ls -lh {} + | awk '{print $"
+  ],
+  [
+   0.3333333333333333,
+   "find . -type f -size +100k -exec ls -lh {} + | awk '{print $"
+  ],
+  [
+   0.3333333333333333,
+   "find . -type f -size +100k -exec ls -lh {} + | awk '{print $"
+  ],
+  [
+   0.3333333333333333,
+   "find . -type f -size +100k -exec ls -lh {} + | awk '{print $"
+  ],
+  [
+   0.3333333333333333,
+   "find . -type f -size +100k -exec ls -lh {} + | awk '{print $"
+  ]
+ ],
+ "v3_cases_checked": 1105,
+ "v3_fingerprint_cases": 1083
+}

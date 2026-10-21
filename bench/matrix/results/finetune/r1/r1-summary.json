@@ -1,0 +1,802 @@
+{
+ "deliverable": {
+  "gguf": "steph-speak-granite-4.0-h-350M-dpo-v1.0-Q4_K_M.gguf",
+  "name_rule": "docs/open-source.md 2.2 : segment langue absent = cible fr + en",
+  "sha256": "45414bd2af2daf5fb9fbcb1ade078e6a2bb3cb3f341c8d0eb5fa8c3abb92ec5b",
+  "size_bytes": 222662112,
+  "general.name": "steph-speak-granite-4.0-h-350M-dpo-v1.0",
+  "identical_tensors_to": "r1-i1-l07 (402/402 tenseurs égaux)",
+  "location": "machine d'entraînement 3080, /root/steph-ft/r1/gguf/ ; rien sur Hugging Face"
+ },
+ "recipe": {
+  "base": "P17 fusionné reconstruit (base Granite 4.0 H 350M snapshot 3b17b717 + moyenne des 4 adaptateurs SFT P15 + moyenne des 4 adaptateurs DPO P17 ep12) ; 402/402 tenseurs égaux au GGUF P17 d548f3fc",
+  "mix": {
+   "script": "compose_r1.py --base mix K3 --extra mix-extra --repeat en_summary=2 --keep detail=0.5",
+   "extra": "compose_k3.py --qa qa-fr.filtered qa-en.filtered --feature detail_en/start_en/progress_en (rejets juge A7 exclus) --bench bench/matrix/cases.json --speak-bench benchmark/data/v1 --max-chars 587",
+   "counts": {
+    "extra_train": 720,
+    "extra_val": 36,
+    "dropped_by_keep": 293,
+    "train_by_source": {
+     "detail": 282,
+     "detail_en": 228,
+     "en_summary": 884,
+     "flux": 12,
+     "fr_summary": 1576,
+     "progress": 119,
+     "progress_en": 12,
+     "qa": 282,
+     "qa_en": 211,
+     "start": 270,
+     "start_en": 133,
+     "summary_residual": 3
+    },
+    "val_by_source": {
+     "detail": 31,
+     "detail_en": 10,
+     "en_summary": 26,
+     "fr_summary": 94,
+     "progress": 8,
+     "qa": 12,
+     "qa_en": 7,
+     "start": 14,
+     "start_en": 14
+    },
+    "train": 4012,
+    "val": 216
+   },
+   "extra_counts": {
+    "detail_en": {
+     "duplicate": 10,
+     "judge_reject": 30,
+     "kept": 238,
+     "lost_fact": 37,
+     "speak_bench": 2
+    },
+    "progress_en": {
+     "kept": 12
+    },
+    "qa": {
+     "bench": 4,
+     "kept": 141,
+     "lost_fact": 7,
+     "speak_bench": 11
+    },
+    "qa_en": {
+     "kept": 218,
+     "lost_fact": 10,
+     "speak_bench": 26
+    },
+    "start_en": {
+     "duplicate": 27,
+     "judge_reject": 6,
+     "kept": 147,
+     "lost_fact": 38
+    },
+    "kept_by_lang": {
+     "en": 615,
+     "fr": 141
+    },
+    "train": 720,
+    "val": 36
+   }
+  },
+  "questions": {
+   "teacher": "Qwen3.5-9B Q4_K_M (sha256 03b74727), température 0, presence_penalty 1.0",
+   "judge": "A7 d'origine judge_lib md5 079468ba, 2 passes, revalidé 6/6 A et B",
+   "fr": "qa_corpus.py --lang fr --seed 7 --n 240 --error-weight 3",
+   "en": "qa_corpus.py --lang en --seed 42 --n 330 --error-weight 3",
+   "generated": {
+    "fr": "{\"ok\": 170, \"rejet_teacher\": 4, \"rejet_juge\": 66, \"deja_fait\": 0}",
+    "en": "{\"ok\": 255, \"rejet_teacher\": 0, \"rejet_juge\": 75, \"deja_fait\": 0}"
+   },
+   "refilter_mixed_abstention": [
+    "fr 170 163",
+    "en 255 254"
+   ]
+  },
+  "features_en": {
+   "inputs": "build_feature_corpus.py --lang en --n-detail 320 --n-start 220 --n-progress-sources 80 (captures EN de K2, liste privée de noms non appliquée : fichier vide)",
+   "labels": "label_features.py --lang en (TRAIN_*_EN, TEACHER_DETAILS_SYSTEM_EN), --max-tokens 160",
+   "judge": {
+    "detail": {
+     "machine": "detail-en",
+     "judged": 307,
+     "verdicts": {
+      "ok": 246,
+      "invention": 30,
+      "douteux": 30,
+      "erreur": 1
+     },
+     "rejected": 30,
+     "categories": {
+      "ligne": 7,
+      "statut": 4,
+      "nombre": 15,
+      "cause": 8,
+      "nom": 5
+     }
+    },
+    "start": {
+     "machine": "start-en",
+     "judged": 191,
+     "verdicts": {
+      "ok": 174,
+      "douteux": 11,
+      "invention": 6
+     },
+     "rejected": 6,
+     "categories": {
+      "cause": 6
+     }
+    },
+    "progress": {
+     "machine": "progress-en",
+     "judged": 12,
+     "verdicts": {
+      "ok": 12
+     },
+     "rejected": 0,
+     "categories": {}
+    }
+   }
+  },
+  "sft": {
+   "script": "train_sft.py via run_k3.sh sft",
+   "mode": "LoRA r16 alpha32 dropout 0.05 all-linear",
+   "lr": 0.0002,
+   "epochs": 3,
+   "patience": 3,
+   "batch": 16,
+   "micro": 8,
+   "maxlen": 1536,
+   "seeds": [
+    42,
+    7,
+    123,
+    2024
+   ],
+   "gradient_checkpointing": true,
+   "best": {
+    "42": 1.976,
+    "7": 1.976,
+    "123": 1.976,
+    "2024": 1.976
+   },
+   "soup": {
+    "members": [
+     "s42",
+     "s7",
+     "s123",
+     "s2024"
+    ],
+    "val": 0.3484
+   }
+  },
+  "dpo": {
+   "script": "train_dpo.py via run_k3.sh dpo (RPO : DPO + terme SFT)",
+   "pairs": {
+    "verdicts": {
+     "ok": 1862,
+     "douteux": 155,
+     "invention": 165
+    },
+    "train": {
+     "pairs": 152,
+     "prompts": 122,
+     "prompts_total": 4012
+    },
+    "val": {
+     "pairs": 20,
+     "prompts": 17,
+     "prompts_total": 216
+    }
+   },
+   "extra_pairs": "71 paires P17 (/root/steph-ft/p17/pairs-train.jsonl) ajoutées",
+   "total_pairs": 223,
+   "lr": 2e-05,
+   "beta": 0.1,
+   "sft_weight": 1.0,
+   "epochs": 4.29,
+   "steps": 60,
+   "seeds": [
+    42,
+    7,
+    123,
+    2024
+   ],
+   "gen": "gen_outputs.py graines 42 7 123, repeat_penalty 1.0, max_tokens 160"
+  },
+  "merge": "merge_pref.py --base P17 --sft 4 adaptateurs SFT --pref 4 adaptateurs DPO --sft-scale 0.7 --pref-scale 1.0, puis convert_hf_to_gguf f16 --model-name, llama-quantize Q4_K_M",
+  "versions": {
+   "llama.cpp": "b11205 (9588757)",
+   "torch": "2.11.0+cu128",
+   "transformers": "5.17.0",
+   "peft": "0.21.0",
+   "safetensors": "0.8.0",
+   "gpu": "RTX 3080 10 Go, pilote 610.43.02",
+   "bench_run.py_md5": "d08275efa72800e97e6df8526366f9e3"
+  }
+ },
+ "iterations": {
+  "screen_single_seed_42": {
+   "note": "SFT seul sur le mix K3, départ P17, graine 42, banc 3 graines",
+   "k3_lr2e-4": 80.9,
+   "lr1e-4": 81.4,
+   "lr5e-5": 79.2,
+   "lr2e-4_half_detail": 82.0,
+   "qa0": "0/3 pour les quatre",
+   "conclusion": "aucun taux ne garde la qualité de P17 ; moitié du détail retenue, preuve faible (graine seule)"
+  },
+  "i1": "mix R1, SFT lr 2e-4, DPO 223 paires : r1-i1-dpo",
+  "i2": "interpolation vers P17 sans réentraînement : lambda SFT 0.5 et 0.7 ; 0.7 retenu (seul non inférieur à P17 selon T5)"
+ },
+ "models": {
+  "r1-i1-l07": {
+   "v2": 84.5,
+   "holdout": 69.4,
+   "summary": 86.1,
+   "spoken": 87.2,
+   "per_seed": [
+    86.3,
+    83.6,
+    83.6
+   ],
+   "qa": {
+    "qa0": [
+     0,
+     0,
+     0
+    ],
+    "qa1": [
+     100,
+     100,
+     100
+    ],
+    "qa2": [
+     100,
+     100,
+     100
+    ]
+   },
+   "inv": [
+    5,
+    3,
+    4
+   ],
+   "inv_ids": [
+    "fx04",
+    "fx08",
+    "fx15",
+    "fx22",
+    "fx24",
+    "fx25"
+   ],
+   "inv_ground": [
+    4,
+    4,
+    3
+   ],
+   "speak_dev": {
+    "fr": [
+     33.9,
+     7
+    ],
+    "en": [
+     40.5,
+     5
+    ]
+   },
+   "lang": {
+    "model-steph_fr_test": 74.2,
+    "model-steph_en_test": 51.6,
+    "model_fr_test": 66.1,
+    "model_en_test": 59.7
+   },
+   "test": {
+    "steph_fr": 44.8,
+    "steph_en": 47.2,
+    "std_fr": 45.4,
+    "std_en": 49.4
+   }
+  },
+  "r1-i1-dpo": {
+   "v2": 83.1,
+   "holdout": 69.5,
+   "summary": 84.6,
+   "spoken": 85.9,
+   "per_seed": [
+    82.2,
+    83.6,
+    83.6
+   ],
+   "qa": {
+    "qa0": [
+     0,
+     0,
+     0
+    ],
+    "qa1": [
+     100,
+     100,
+     100
+    ],
+    "qa2": [
+     100,
+     100,
+     100
+    ]
+   },
+   "inv": [
+    5,
+    5,
+    7
+   ],
+   "inv_ids": [
+    "fx04",
+    "fx08",
+    "fx15",
+    "fx22",
+    "fx25",
+    "fx27",
+    "qa0"
+   ],
+   "inv_ground": [
+    3,
+    3,
+    4
+   ],
+   "speak_dev": {
+    "fr": [
+     38.5,
+     7
+    ],
+    "en": [
+     39.9,
+     5
+    ]
+   },
+   "lang": {
+    "model-steph_fr_test": 75.8,
+    "model-steph_en_test": 59.7,
+    "model_fr_test": 66.1,
+    "model_en_test": 66.1
+   },
+   "test": {
+    "steph_fr": 42.3,
+    "steph_en": 49.1,
+    "std_fr": 38.0,
+    "std_en": 55.2
+   }
+  },
+  "r1-i1-l05": {
+   "v2": 82.2,
+   "holdout": 73.9,
+   "summary": 83.6,
+   "spoken": 85.0,
+   "per_seed": [
+    82.2,
+    82.2,
+    82.2
+   ],
+   "qa": {
+    "qa0": [
+     0,
+     0,
+     0
+    ],
+    "qa1": [
+     100,
+     100,
+     100
+    ],
+    "qa2": [
+     100,
+     100,
+     100
+    ]
+   },
+   "inv": [
+    7,
+    7,
+    7
+   ],
+   "inv_ids": [
+    "fx04",
+    "fx06",
+    "fx10",
+    "fx22",
+    "fx24",
+    "fx25",
+    "fx28"
+   ],
+   "inv_ground": [
+    8,
+    8,
+    7
+   ],
+   "speak_dev": {
+    "fr": [
+     43.5,
+     3
+    ],
+    "en": [
+     38.7,
+     3
+    ]
+   },
+   "lang": {
+    "model-steph_fr_test": 71.0,
+    "model-steph_en_test": 59.7,
+    "model_fr_test": 66.1,
+    "model_en_test": 54.8
+   },
+   "test": {
+    "steph_fr": 37.6,
+    "steph_en": 44.4,
+    "std_fr": 40.1,
+    "std_en": 45.8
+   }
+  },
+  "r1-i1-sft": {
+   "v2": 82.3,
+   "holdout": 75.6,
+   "summary": 83.7,
+   "spoken": 85.1,
+   "per_seed": [
+    82.3,
+    82.3,
+    82.3
+   ],
+   "qa": {
+    "qa0": [
+     0,
+     0,
+     0
+    ],
+    "qa1": [
+     100,
+     100,
+     100
+    ],
+    "qa2": [
+     100,
+     100,
+     100
+    ]
+   },
+   "inv": [
+    6,
+    7,
+    7
+   ],
+   "inv_ids": [
+    "fx04",
+    "fx08",
+    "fx15",
+    "fx18",
+    "fx22",
+    "fx24",
+    "fx25"
+   ],
+   "inv_ground": [
+    6,
+    6,
+    6
+   ],
+   "speak_dev": {
+    "fr": [
+     19.6,
+     7
+    ],
+    "en": [
+     35.7,
+     4
+    ]
+   },
+   "lang": {
+    "model-steph_fr_test": 58.1,
+    "model-steph_en_test": 54.8,
+    "model_fr_test": 62.9,
+    "model_en_test": 71.0
+   },
+   "test": {
+    "steph_fr": 44.4,
+    "steph_en": 40.3,
+    "std_fr": 41.7,
+    "std_en": 52.3
+   }
+  },
+  "p17": {
+   "v2": 87.7,
+   "holdout": 80.6,
+   "summary": 86.6,
+   "spoken": 90.5,
+   "per_seed": [
+    86.3,
+    89.1,
+    87.7
+   ],
+   "qa": {
+    "qa0": [
+     100,
+     100,
+     100
+    ],
+    "qa1": [
+     100,
+     100,
+     100
+    ],
+    "qa2": [
+     100,
+     100,
+     100
+    ]
+   },
+   "inv": [
+    5,
+    5,
+    6
+   ],
+   "inv_ids": [
+    "fx04",
+    "fx08",
+    "fx19",
+    "fx22",
+    "fx24",
+    "fx25"
+   ],
+   "inv_ground": [
+    4,
+    4,
+    5
+   ],
+   "speak_dev": {
+    "fr": [
+     21.4,
+     6
+    ],
+    "en": [
+     41.8,
+     1
+    ]
+   },
+   "lang": {
+    "model-steph_fr_test": 66.1,
+    "model-steph_en_test": 56.5,
+    "model_fr_test": 64.5,
+    "model_en_test": 54.8
+   },
+   "test": {
+    "steph_fr": 38.5,
+    "steph_en": 39.6,
+    "std_fr": 37.5,
+    "std_en": 44.3
+   }
+  },
+  "k3-a-dpo": {
+   "v2": 84.3,
+   "holdout": 75.6,
+   "summary": 84.9,
+   "spoken": 87.0,
+   "per_seed": [
+    84.3,
+    84.3,
+    84.3
+   ],
+   "qa": {
+    "qa0": [
+     0,
+     100,
+     0
+    ],
+    "qa1": [
+     100,
+     100,
+     100
+    ],
+    "qa2": [
+     100,
+     100,
+     100
+    ]
+   },
+   "inv": [
+    4,
+    4,
+    3
+   ],
+   "inv_ids": [
+    "fx04",
+    "fx19",
+    "fx22",
+    "fx28",
+    "qa0"
+   ],
+   "inv_ground": [
+    2,
+    3,
+    3
+   ],
+   "speak_dev": {
+    "fr": [
+     26.8,
+     7
+    ],
+    "en": [
+     26.2,
+     4
+    ]
+   },
+   "lang": {
+    "model-steph_fr_test": 80.6,
+    "model-steph_en_test": 54.8,
+    "model_fr_test": 69.4,
+    "model_en_test": 61.3
+   },
+   "test": {
+    "steph_fr": 37.6,
+    "steph_en": 45.0,
+    "std_fr": 38.2,
+    "std_en": 48.2
+   }
+  }
+ },
+ "decision_rule": "docs/loop-ledger.md, règle T5",
+ "paired_vs_references": {
+  "r1-i1-l07 vs p17": {
+   "v2_diff_pts": -3.2,
+   "v2_ci95_pts": [
+    -11.1,
+    2.8
+   ],
+   "v2_discordant_cases": 3,
+   "inv": {
+    "per36_a": 4.0,
+    "per36_b": 5.33,
+    "per36_a_without_contested": 1.33,
+    "per36_b_without_contested": 1.67,
+    "cases_worse": 2,
+    "cases_better": 1,
+    "sign_test_p": 1.0,
+    "new_cases_2_of_3_seeds": []
+   },
+   "ground": {
+    "per36_a": 3.67,
+    "per36_b": 4.33,
+    "per36_a_without_contested": 1.0,
+    "per36_b_without_contested": 1.33,
+    "cases_worse": 1,
+    "cases_better": 1,
+    "sign_test_p": 1.0,
+    "new_cases_2_of_3_seeds": [
+     "fx25"
+    ]
+   },
+   "speak_test_fr": {
+    "diff_pts": 6.3,
+    "ci95_pts": [
+     -1.5,
+     14.6
+    ],
+    "n": 62
+   },
+   "speak_test_en": {
+    "diff_pts": 7.6,
+    "ci95_pts": [
+     -1.3,
+     16.3
+    ],
+    "n": 62
+   },
+   "verdict": {
+    "v2_better": false,
+    "inventions_better": false,
+    "non_inferior": true
+   }
+  },
+  "r1-i1-l07 vs k3-a-dpo": {
+   "v2_diff_pts": 0.2,
+   "v2_ci95_pts": [
+    -5.3,
+    5.8
+   ],
+   "v2_discordant_cases": 6,
+   "inv": {
+    "per36_a": 4.0,
+    "per36_b": 3.67,
+    "per36_a_without_contested": 1.33,
+    "per36_b_without_contested": 1.33,
+    "cases_worse": 2,
+    "cases_better": 2,
+    "sign_test_p": 1.0,
+    "new_cases_2_of_3_seeds": [
+     "fx25"
+    ]
+   },
+   "ground": {
+    "per36_a": 3.67,
+    "per36_b": 2.67,
+    "per36_a_without_contested": 1.0,
+    "per36_b_without_contested": 0.67,
+    "cases_worse": 1,
+    "cases_better": 1,
+    "sign_test_p": 1.0,
+    "new_cases_2_of_3_seeds": [
+     "fx25"
+    ]
+   },
+   "speak_test_fr": {
+    "diff_pts": 7.2,
+    "ci95_pts": [
+     -0.7,
+     15.3
+    ],
+    "n": 62
+   },
+   "speak_test_en": {
+    "diff_pts": 2.2,
+    "ci95_pts": [
+     -4.7,
+     9.1
+    ],
+    "n": 62
+   },
+   "verdict": {
+    "v2_better": false,
+    "inventions_better": false,
+    "non_inferior": false
+   }
+  }
+ },
+ "contested_cases": [
+  "fx00",
+  "fx01",
+  "fx04",
+  "fx08",
+  "fx11",
+  "fx16",
+  "fx20",
+  "fx22",
+  "fx24",
+  "fx27",
+  "qa0"
+ ],
+ "i5": {
+  "settings": "llama-b11205, -c 8192 --parallel 2 -b 512 -ub 512 -t 4 --cache-ram 0, 36 cas granite200 maxc 0, ordre p17, r1, r1, p17",
+  "p17": {
+   "ttft_median": 0.594,
+   "ttft_p90": 1.283,
+   "ram_repos_avant_mb": 490,
+   "ram_repos_apres_mb": 543,
+   "ram_peak_mb": 543,
+   "gen_tok_s_median": 61.1
+  },
+  "r1": {
+   "ttft_median": 0.639,
+   "ttft_p90": 1.406,
+   "ram_repos_avant_mb": 488,
+   "ram_repos_apres_mb": 545,
+   "ram_peak_mb": 545,
+   "gen_tok_s_median": 58.3
+  },
+  "r1-rep": {
+   "ttft_median": 0.641,
+   "ttft_p90": 1.394,
+   "ram_repos_avant_mb": 490,
+   "ram_repos_apres_mb": 544,
+   "ram_peak_mb": 544,
+   "gen_tok_s_median": 58.1
+  },
+  "p17-rep": {
+   "ttft_median": 0.633,
+   "ttft_p90": 1.401,
+   "ram_repos_avant_mb": 490,
+   "ram_repos_apres_mb": 546,
+   "ram_peak_mb": 546,
+   "gen_tok_s_median": 57.9
+  }
+ },
+ "legend": "inv : inventions/36 par graine de banc (7, 42, 123) ; speak_dev : [score %, inventions/14] ; test : Steph Speak Bench split test 62 cas/langue, protocole steph (TRAIN_SYSTEM) et standard ; lang : % bonne langue, classifieur trigramme L2p ; valcheck : validation du mix R1 (216 lignes x 3 graines), inventions au juge A7"
+}

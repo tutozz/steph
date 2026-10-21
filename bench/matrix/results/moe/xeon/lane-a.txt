@@ -1,0 +1,1 @@
+euromoe-2.6b-a0.6b /root/steph-ft/g6/models/EuroMoE-2.6B-A0.6B-Instruct-2512-Q4_K_M.gguf gen

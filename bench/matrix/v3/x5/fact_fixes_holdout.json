@@ -1,0 +1,292 @@
+{
+ "v3-history-qa-0017": {
+  "need": {
+   "absent": {
+    "fr": [
+     "aucune? \\w+( \\w+)? n.appara[iî]t|impossible de (determiner|savoir|dire)"
+    ],
+    "en": [
+     "\\bno \\w+( \\w+)? (version|number|value)?\\s*appears|impossible to (determine|tell|know)"
+    ]
+   }
+  }
+ },
+ "v3-history-qa-0005": {
+  "need": {
+   "absent": {
+    "fr": [
+     "aucune? \\w+( \\w+)? n.appara[iî]t|impossible de (determiner|savoir|dire)"
+    ],
+    "en": [
+     "\\bno \\w+( \\w+)? (version|number|value)?\\s*appears|impossible to (determine|tell|know)"
+    ]
+   }
+  }
+ },
+ "v3-data-0011": {
+  "need": {
+   "syntax": {
+    "fr": [
+     "from|faute|erreur"
+    ],
+    "en": [
+     "from|typo|error"
+    ]
+   }
+  },
+  "add_never": [
+   {
+    "id": "wrong_near",
+    "desc": "autre mot",
+    "fr": [
+     "pres de (?!orders)\\w+"
+    ],
+    "en": [
+     "near (?!orders)\\w+"
+    ]
+   }
+  ]
+ },
+ "v3-disk-memory-0001": {
+  "need": {
+   "none_processed": {
+    "fr": [
+     "\\b(0|zero|aucun) (systemes? de fichiers|montages?|partages?) nfs|nfs[^.]{0,20}\\b(0|zero|aucun)"
+    ],
+    "en": [
+     "\\b(0|zero) (nfs )?(file ?systems?|mounts?|shares?)|count is (0|zero)"
+    ]
+   }
+  }
+ },
+ "v3-js-node-0035": {
+  "need": {
+   "vulns": {
+    "fr": [
+     "\\b(5|cinq) (failles|problemes|vulnerab)"
+    ],
+    "en": [
+     "\\b(5|five) (security )?(issues|flaws|problems|vulns)"
+    ]
+   }
+  }
+ },
+ "v3-lint-format-0020": {
+  "need": {
+   "line": {
+    "fr": [
+     "dixieme ligne"
+    ],
+    "en": [
+     "tenth line"
+    ]
+   }
+  }
+ },
+ "v3-lint-format-0027": {
+  "need": {
+   "file": {
+    "fr": [
+     "runner"
+    ],
+    "en": [
+     "tool runner|runner file"
+    ]
+   }
+  }
+ },
+ "v3-processes-0007": {
+  "need": {
+   "pid": {
+    "fr": [
+     "processus (un|numero un)\\b"
+    ],
+    "en": [
+     "process one\\b"
+    ]
+   }
+  }
+ },
+ "v3-python-0002": {
+  "need": {
+   "installed": {
+    "fr": [
+     "ajout|mis en place"
+    ],
+    "en": [
+     "added|set up"
+    ]
+   }
+  }
+ },
+ "v3-python-0012": {
+  "need": {
+   "not_found": {
+    "fr": [
+     "pas trouve"
+    ],
+    "en": [
+     "not found"
+    ]
+   }
+  }
+ },
+ "v3-shell-scripts-0018": {
+  "need": {
+   "permission": {
+    "fr": [
+     "acces (bloque|refuse)|refus"
+    ],
+    "en": [
+     "access (blocked|refused)|denial"
+    ]
+   }
+  },
+  "add_never": [
+   {
+    "id": "wrong_path",
+    "desc": "autre dossier",
+    "fr": [
+     "backups/(?!storefront)\\w+"
+    ],
+    "en": [
+     "backups/(?!storefront)\\w+"
+    ]
+   }
+  ]
+ },
+ "v3-shell-scripts-0015": {
+  "need": {
+   "declare": {
+    "fr": [
+     "-a\\b"
+    ],
+    "en": [
+     "-a\\b"
+    ]
+   }
+  }
+ },
+ "v3-tests-0048": {
+  "need": {
+   "passed_2": {
+    "fr": [
+     "\\b(2|deux)\\b[^.;,]{0,40}(reussi|passe)"
+    ],
+    "en": [
+     "\\b(2|two)\\b[^.;,]{0,40}(pass|succe)"
+    ]
+   }
+  }
+ },
+ "v3-tests-0027": {
+  "need": {
+   "passed_4": {
+    "fr": [
+     "succes pour (4|quatre)"
+    ],
+    "en": [
+     "success for (4|four)"
+    ]
+   }
+  }
+ },
+ "v3-rust-go-0008": {
+  "need": {
+   "kind": {
+    "fr": [
+     "depasse"
+    ],
+    "en": [
+     "exceeds"
+    ]
+   }
+  }
+ },
+ "v3-containers-0016": {
+  "add_never": [
+   {
+    "id": "wrong_current",
+    "desc": "autre contexte courant",
+    "fr": [
+     "(courant|actif)\\w*[^.,;]{0,15}\\blocal\\b"
+    ],
+    "en": [
+     "current (one )?(is )?local\\b"
+    ]
+   }
+  ]
+ },
+ "v3-network-0013": {
+  "add_never": [
+   {
+    "id": "swapped",
+    "desc": "interfaces interverties",
+    "fr": [
+     "via docker0|wlp2s0[^.;]{0,15}(linkdown|down|inactive?)"
+    ],
+    "en": [
+     "via docker0|wlp2s0[^.;]{0,15}(linkdown|down|inactive)"
+    ]
+   }
+  ]
+ },
+ "v3-packages-system-0066": {
+  "add_never": [
+   {
+    "id": "wrong_version",
+    "desc": "autre révision",
+    "fr": [
+     "deb13u(?!4)\\d"
+    ],
+    "en": [
+     "deb13u(?!4)\\d"
+    ]
+   }
+  ]
+ },
+ "v3-processes-0012": {
+  "add_never": [
+   {
+    "id": "swapped",
+    "desc": "valeurs interverties",
+    "fr": [
+     "photolibraryd[^.;]{0,40}\\b65[.,]0"
+    ],
+    "en": [
+     "photolibraryd[^.;]{0,40}\\b65[.,]0"
+    ]
+   }
+  ]
+ },
+ "v3-rust-go-0016": {
+  "add_never": [
+   {
+    "id": "wrong_prompt",
+    "desc": "autre demande",
+    "fr": [
+     "mot de passe"
+    ],
+    "en": [
+     "password"
+    ]
+   }
+  ]
+ },
+ "v3-vcs-git-0015": {
+  "add_never": [
+   {
+    "id": "wrong_branch",
+    "desc": "autre branche",
+    "fr": [
+     "origin (?!feature/barcode-scan\\b)[\\w/-]+",
+     "branche (?!feature/barcode-scan)\\S+ n.a pas"
+    ],
+    "en": [
+     "origin (?!feature/barcode-scan\\b)[\\w/-]+",
+     "branch (?!feature/barcode-scan)\\S+ has no"
+    ]
+   }
+  ]
+ }
+}

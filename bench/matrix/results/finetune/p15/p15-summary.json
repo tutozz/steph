@@ -1,0 +1,169 @@
+{
+ "cases": "bench/matrix/cases_compact_granite200_train.json (36 cas, TRAIN_SYSTEM, maxc 587)",
+ "harness": "a1000 A1000, llama-server Vulkan1, bench_run.py, payload seed 7/42/123, Q4_K_M",
+ "judge": "juge A7 d'origine (judge_lib 079468ba), Qwen3.5-9B Q4_K_M sur une RTX 3080 du labo, 2 passes, revalidé 6/6 A et B, graine de banc 42",
+ "p15_soup_uniform": {
+  "v2": {
+   "total": 82.9,
+   "range": [
+    80.1,
+    85.6
+   ],
+   "holdout": 75.6,
+   "summary": 81.3,
+   "qa": {
+    "qa0": [
+     100,
+     100,
+     100
+    ],
+    "qa1": [
+     100,
+     100,
+     100
+    ],
+    "qa2": [
+     100,
+     100,
+     100
+    ]
+   },
+   "per_seed": [
+    80.1,
+    82.9,
+    85.6
+   ]
+  },
+  "v2_spoken": {
+   "total": 85.6,
+   "range": [
+    82.9,
+    88.4
+   ],
+   "holdout": 75.6,
+   "summary": 84.3,
+   "qa": {
+    "qa0": [
+     100,
+     100,
+     100
+    ],
+    "qa1": [
+     100,
+     100,
+     100
+    ],
+    "qa2": [
+     100,
+     100,
+     100
+    ]
+   },
+   "per_seed": [
+    82.9,
+    85.6,
+    88.4
+   ]
+  },
+  "judge_b42": {
+   "invention": 6,
+   "douteux": 2,
+   "invention_ids": [
+    "fx04",
+    "fx06",
+    "fx19",
+    "fx22",
+    "fx24",
+    "fx28"
+   ]
+  }
+ },
+ "a12_soup_uniform": {
+  "v2": {
+   "total": 79.5,
+   "range": [
+    77.5,
+    80.8
+   ],
+   "holdout": 73.9,
+   "summary": 80.7,
+   "qa": {
+    "qa0": [
+     100,
+     100,
+     100
+    ],
+    "qa1": [
+     100,
+     100,
+     100
+    ],
+    "qa2": [
+     0,
+     0,
+     0
+    ]
+   },
+   "per_seed": [
+    77.5,
+    80.8,
+    80.2
+   ]
+  },
+  "v2_spoken": {
+   "total": 79.5,
+   "range": [
+    77.5,
+    80.8
+   ],
+   "holdout": 73.9,
+   "summary": 80.7,
+   "qa": {
+    "qa0": [
+     100,
+     100,
+     100
+    ],
+    "qa1": [
+     100,
+     100,
+     100
+    ],
+    "qa2": [
+     0,
+     0,
+     0
+    ]
+   },
+   "per_seed": [
+    77.5,
+    80.8,
+    80.2
+   ]
+  },
+  "judge_b42": {
+   "invention": 7,
+   "douteux": 4,
+   "invention_ids": [
+    "fx02",
+    "fx06",
+    "fx19",
+    "fx21",
+    "fx27",
+    "fx29",
+    "qa2"
+   ]
+  }
+ },
+ "corpus": {
+  "qa_kept": 173,
+  "qa_lost_fact": 13,
+  "summary_kept": 1686,
+  "summary_label_stripped": 868,
+  "summary_lost_fact": 184,
+  "summary_lost_fact_by_truncation": 52,
+  "summary_unmatched": 3,
+  "train": 1762,
+  "val": 97
+ }
+}

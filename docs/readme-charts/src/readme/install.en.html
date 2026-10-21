@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;600&display=block">
+<link rel="stylesheet" href="../readme-brand.css">
+<style>body { background: rgb(255, 0, 254); }</style><style>
+.chev { display: inline-grid; }
+.chev i { display: block; }
+.who .sq { width: 14px; height: 14px; background: var(--black); flex: none; }
+.arrow { color: var(--neutral); }
+</style>
+</head><body><div class="card">
+<span class="tag">Install</span>
+<h1>One line.<br><em>No admin rights.</em></h1>
+<div class="inst"><div class="c1">curl -fsSL https://steph.lsmdx.com/install | sh</div><div class="c1">steph</div></div>
+<div class="stats"><div class="st"><div class="num">223 MB</div><div class="cap">the small model; 2.4 GB for the base model</div></div><div class="st"><div class="num">0</div><div class="cap">admin rights needed</div></div><div class="st"><div class="num">2</div><div class="cap">systems: Linux and macOS</div></div><div class="st"><div class="num">9.9 s</div><div class="cap">before the first spoken word, from launch</div></div><div class="st"><div class="num">1.6 GB</div><div class="cap">freed by steph uninstall in 1.6 s</div></div></div>
+<p class="foot">With the small model: about 300 MB to download with no GPU, 1.05 GB with NVIDIA (model 223 MB + voice 63 MB + llama.cpp) - a calculation, not a measurement.</p>
+<style>
+.inst { margin-top: 28px; padding: 20px 26px; background: var(--lemon); color: var(--black); clip-path: var(--notch-card);
+  font-family: var(--mono); font-feature-settings: "calt" 0, "liga" 0; font-size: 21px; font-weight: 500; line-height: 1.55; }
+.c1::before { content: "$ "; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+.st { padding: 20px 22px; background: var(--block); }
+.st .num { font-size: 60px; font-weight: 500; line-height: 0.9; letter-spacing: -0.05em; }
+.st .cap { margin-top: 12px; font-size: 19px; line-height: 1.35; color: var(--soft); }
+.foot { margin-top: 20px; }
+</style></div></body></html>

@@ -1,0 +1,86 @@
+{
+  "host": [
+    "Darwin",
+    "mac.local",
+    "27.0.0",
+    "Darwin Kernel Version 27.0.0: Wed Aug  5 22:03:55 PDT 2026; root:xnu-13432.1.6.501.1~1/RELEASE_ARM64_T6030",
+    "arm64"
+  ],
+  "started_at": 1790569288.366444,
+  "steph_cmd": [
+    "/Users/user/.local/bin/steph"
+  ],
+  "idle": {
+    "skipped": true
+  },
+  "idle_unload": {
+    "with_anticipation": {
+      "idle_unload_minutes": 0.2,
+      "anticipate": true,
+      "ram_before_mb": 449.671875,
+      "unloaded": true,
+      "unload_observed_after_s": 15.111672163009644,
+      "ram_after_unload_mb": 0.0,
+      "first_command_after_pause": {
+        "cmd": "sleep 6 && find /Applications -maxdepth 1 -type d | head -40",
+        "t_send": 1790569306.373137,
+        "t_cmd_end": 1790569312.4559512,
+        "t_first_sound": 1790569312.4872499,
+        "t_speech_end": 1790569313.89438,
+        "latency_cmdend_to_sound_s": 0.03129863739013672,
+        "latency_sound_duration_s": 1.407130241394043
+      },
+      "llm_ready_relative_to_send_s": 0.4393730163574219,
+      "llm_ready_before_cmd_end": true,
+      "reloaded": true,
+      "ram_after_reload_mb": 449.8125
+    },
+    "without_anticipation": {
+      "idle_unload_minutes": 0.2,
+      "anticipate": false,
+      "ram_before_mb": 449.046875,
+      "unloaded": true,
+      "unload_observed_after_s": 15.129441976547241,
+      "ram_after_unload_mb": 0.0,
+      "first_command_after_pause": {
+        "cmd": "sleep 6 && find /Applications -maxdepth 1 -type d | head -40",
+        "t_send": 1790569332.1119418,
+        "t_cmd_end": 1790569338.2294972,
+        "t_first_sound": 1790569338.255908,
+        "t_speech_end": 1790569339.139071,
+        "latency_cmdend_to_sound_s": 0.026410818099975586,
+        "latency_sound_duration_s": 0.8831629753112793
+      },
+      "llm_ready_relative_to_send_s": 6.55462121963501,
+      "llm_ready_before_cmd_end": false,
+      "reloaded": true,
+      "ram_after_reload_mb": 451.578125
+    }
+  },
+  "multiwindow": {
+    "skipped": true
+  },
+  "disk": {
+    "install_uv_tool_mb": null,
+    "models_mb": 3194.34765625,
+    "voices_mb": 60.28515625,
+    "config_kb": 0,
+    "disk_free_gb": 14.691478729248047
+  },
+  "log_growth": {
+    "steph.log": {
+      "size_bytes": 65647,
+      "span_hours_observed": 60.61,
+      "avg_bytes_per_hour": 1083.1,
+      "note": "moyenne sur l'historique du fichier, pas une mesure controlee sur 1h"
+    },
+    "llama-server.log": {
+      "size_bytes": 108381,
+      "span_hours_observed": 57.8,
+      "avg_bytes_per_hour": 1875.0,
+      "note": "moyenne sur l'historique du fichier, pas une mesure controlee sur 1h"
+    }
+  },
+  "mem_free_mb_end": 28.8203125,
+  "finished_at": 1790569340.426903
+}

@@ -1,0 +1,627 @@
+{
+ "variant": "V1",
+ "rows": [
+  {
+   "id": "v3-history-qa-0004@fr",
+   "out": "Pas dans l'historique.",
+   "fallback": false,
+   "calls": 1,
+   "rounds": 2,
+   "trace": [
+    [
+     "get_output",
+     {
+      "command_id": 1,
+      "count": 1,
+      "start": 1
+     }
+    ]
+   ],
+   "first_text": "Pas dans l'historique.",
+   "s": 4.43,
+   "prompt_n": [
+    573,
+    679
+   ],
+   "cached": [
+    397,
+    595
+   ]
+  },
+  {
+   "id": "v3-history-qa-0004@en",
+   "out": "One test failed on the first pytest run.",
+   "fallback": false,
+   "calls": 1,
+   "rounds": 2,
+   "trace": [
+    [
+     "get_output",
+     {
+      "command_id": 1,
+      "count": 1,
+      "start": 1
+     }
+    ]
+   ],
+   "first_text": "One test failed on the first pytest run.",
+   "s": 4.51,
+   "prompt_n": [
+    562,
+    656
+   ],
+   "cached": [
+    392,
+    584
+   ]
+  },
+  {
+   "id": "v3-history-qa-0005@fr",
+   "out": "Pas dans l'historique.",
+   "fallback": false,
+   "calls": 1,
+   "rounds": 2,
+   "trace": [
+    [
+     "search_history",
+     {
+      "command_id": 1,
+      "pattern": "pytest"
+     }
+    ]
+   ],
+   "first_text": "Pas dans l'historique.",
+   "s": 3.68,
+   "prompt_n": [
+    566,
+    660
+   ],
+   "cached": [
+    397,
+    586
+   ]
+  },
+  {
+   "id": "v3-history-qa-0005@en",
+   "out": "Not in the history.",
+   "fallback": false,
+   "calls": 1,
+   "rounds": 2,
+   "trace": [
+    [
+     "search_history",
+     {
+      "command_id": 1,
+      "pattern": "pytest version"
+     }
+    ]
+   ],
+   "first_text": "Not in the history.",
+   "s": 3.14,
+   "prompt_n": [
+    557,
+    639
+   ],
+   "cached": [
+    392,
+    578
+   ]
+  },
+  {
+   "id": "v3-history-qa-0010@fr",
+   "out": "Erreur jq. config.json est mal formaté. Erreur de syntaxe à la ligne 4.",
+   "fallback": false,
+   "calls": 1,
+   "rounds": 2,
+   "trace": [
+    [
+     "get_output",
+     {
+      "command_id": 3,
+      "count": 1,
+      "start": 1
+     }
+    ]
+   ],
+   "first_text": "Erreur jq. config.json est mal formaté. Erreur de syntaxe à la ligne 4.",
+   "s": 4.74,
+   "prompt_n": [
+    538,
+    650
+   ],
+   "cached": [
+    397,
+    560
+   ]
+  },
+  {
+   "id": "v3-history-qa-0010@en",
+   "out": "jq parse error line 4 column 22 config.json. Not in the history.",
+   "fallback": false,
+   "calls": 1,
+   "rounds": 2,
+   "trace": [
+    [
+     "get_output",
+     {
+      "command_id": 3,
+      "count": 1,
+      "start": 1
+     }
+    ]
+   ],
+   "first_text": "jq parse error line 4 column 22 config.json. Not in the history.",
+   "s": 7.2,
+   "prompt_n": [
+    524,
+    624
+   ],
+   "cached": [
+    392,
+    546
+   ]
+  },
+  {
+   "id": "v3-history-qa-0016@fr",
+   "out": "Pour déterminer quel fichier source n'a pas compilé, j'ai besoin de voir la sortie de la commande `make -k`.\n\nVeuillez me fournir la sortie de la commande [1].",
+   "fallback": false,
+   "calls": 0,
+   "rounds": 1,
+   "trace": [],
+   "first_text": "Pour déterminer quel fichier source n'a pas compilé, j'ai besoin de voir la sortie de la commande `make -k`.\n\nVeuillez me fournir la sortie de la commande [1].",
+   "s": 3.94,
+   "prompt_n": [
+    481
+   ],
+   "cached": [
+    397
+   ]
+  },
+  {
+   "id": "v3-history-qa-0016@en",
+   "out": "Not in the history.",
+   "fallback": false,
+   "calls": 1,
+   "rounds": 2,
+   "trace": [
+    [
+     "get_output",
+     {
+      "command_id": 1,
+      "count": 1,
+      "start": 1
+     }
+    ]
+   ],
+   "first_text": "Not in the history.",
+   "s": 5.11,
+   "prompt_n": [
+    470,
+    569
+   ],
+   "cached": [
+    392,
+    465
+   ]
+  },
+  {
+   "id": "v3-history-qa-0017@fr",
+   "out": "Pas dans l'historique.",
+   "fallback": false,
+   "calls": 1,
+   "rounds": 2,
+   "trace": [
+    [
+     "get_output",
+     {
+      "command_id": 1,
+      "count": 1,
+      "start": 1
+     }
+    ]
+   ],
+   "first_text": "Pas dans l'historique.",
+   "s": 4.82,
+   "prompt_n": [
+    478,
+    589
+   ],
+   "cached": [
+    397,
+    473
+   ]
+  },
+  {
+   "id": "v3-history-qa-0017@en",
+   "out": "gcc version not in history",
+   "fallback": false,
+   "calls": 1,
+   "rounds": 2,
+   "trace": [
+    [
+     "get_output",
+     {
+      "command_id": 1,
+      "count": 1,
+      "start": 1
+     }
+    ]
+   ],
+   "first_text": "gcc version not in history",
+   "s": 4.66,
+   "prompt_n": [
+    469,
+    568
+   ],
+   "cached": [
+    392,
+    464
+   ]
+  },
+  {
+   "id": "v3-history-qa-0019@fr",
+   "out": "Le dossier tmp n'était pas vide.",
+   "fallback": false,
+   "calls": 1,
+   "rounds": 2,
+   "trace": [
+    [
+     "get_output",
+     {
+      "command_id": 4,
+      "count": 1,
+      "start": 1
+     }
+    ]
+   ],
+   "first_text": "Le dossier tmp n'était pas vide.",
+   "s": 5.52,
+   "prompt_n": [
+    560,
+    671
+   ],
+   "cached": [
+    397,
+    582
+   ]
+  },
+  {
+   "id": "v3-history-qa-0019@en",
+   "out": "rmdir failed directory not empty error",
+   "fallback": false,
+   "calls": 1,
+   "rounds": 2,
+   "trace": [
+    [
+     "get_output",
+     {
+      "command_id": 4,
+      "count": 1,
+      "start": 1
+     }
+    ]
+   ],
+   "first_text": "rmdir failed directory not empty error",
+   "s": 5.78,
+   "prompt_n": [
+    550,
+    649
+   ],
+   "cached": [
+    392,
+    572
+   ]
+  },
+  {
+   "id": "v3-history-qa-0020@fr",
+   "out": "desk shelf",
+   "fallback": false,
+   "calls": 1,
+   "rounds": 2,
+   "trace": [
+    [
+     "get_output",
+     {
+      "command_id": 2,
+      "count": 2,
+      "start": 1
+     }
+    ]
+   ],
+   "first_text": "desk shelf",
+   "s": 3.62,
+   "prompt_n": [
+    538,
+    637
+   ],
+   "cached": [
+    397,
+    560
+   ]
+  },
+  {
+   "id": "v3-history-qa-0020@en",
+   "out": "desk shelf",
+   "fallback": false,
+   "calls": 1,
+   "rounds": 2,
+   "trace": [
+    [
+     "get_output",
+     {
+      "command_id": 2,
+      "count": 2,
+      "start": 1
+     }
+    ]
+   ],
+   "first_text": "desk shelf",
+   "s": 3.95,
+   "prompt_n": [
+    528,
+    615
+   ],
+   "cached": [
+    392,
+    550
+   ]
+  },
+  {
+   "id": "v3-history-qa-0023@fr",
+   "out": "Formats acceptés : csv, json.",
+   "fallback": false,
+   "calls": 1,
+   "rounds": 2,
+   "trace": [
+    [
+     "search_history",
+     {
+      "command_id": 1,
+      "pattern": "--format"
+     }
+    ]
+   ],
+   "first_text": "Formats acceptés : csv, json.",
+   "s": 4.51,
+   "prompt_n": [
+    527,
+    657
+   ],
+   "cached": [
+    397,
+    548
+   ]
+  },
+  {
+   "id": "v3-history-qa-0023@en",
+   "out": "convert accepts csv and json formats.",
+   "fallback": false,
+   "calls": 1,
+   "rounds": 2,
+   "trace": [
+    [
+     "search_history",
+     {
+      "command_id": 1,
+      "pattern": "--format"
+     }
+    ]
+   ],
+   "first_text": "convert accepts csv and json formats.",
+   "s": 5.03,
+   "prompt_n": [
+    518,
+    636
+   ],
+   "cached": [
+    392,
+    539
+   ]
+  },
+  {
+   "id": "v3-history-qa-0024@fr",
+   "out": "Erreur syntaxique ligne 4. `def mul(a, b)` manque un deux-points.",
+   "fallback": false,
+   "calls": 1,
+   "rounds": 2,
+   "trace": [
+    [
+     "get_output",
+     {
+      "command_id": 1,
+      "count": 4,
+      "start": 1
+     }
+    ]
+   ],
+   "first_text": "Erreur syntaxique ligne 4. `def mul(a, b)` manque un deux-points.",
+   "s": 5.43,
+   "prompt_n": [
+    525,
+    661
+   ],
+   "cached": [
+    397,
+    547
+   ]
+  },
+  {
+   "id": "v3-history-qa-0024@en",
+   "out": "SyntaxError line 4 expected colon.",
+   "fallback": false,
+   "calls": 1,
+   "rounds": 2,
+   "trace": [
+    [
+     "get_output",
+     {
+      "command_id": 1,
+      "count": 4,
+      "start": 1
+     }
+    ]
+   ],
+   "first_text": "SyntaxError line 4 expected colon.",
+   "s": 3.71,
+   "prompt_n": [
+    516,
+    640
+   ],
+   "cached": [
+    392,
+    538
+   ]
+  },
+  {
+   "id": "v3-history-qa-0028@fr",
+   "out": "nginx inactif.",
+   "fallback": false,
+   "calls": 1,
+   "rounds": 2,
+   "trace": [
+    [
+     "get_output",
+     {
+      "command_id": 2,
+      "count": 1,
+      "start": 1
+     }
+    ]
+   ],
+   "first_text": "nginx inactif.",
+   "s": 4.01,
+   "prompt_n": [
+    544,
+    639
+   ],
+   "cached": [
+    397,
+    566
+   ]
+  },
+  {
+   "id": "v3-history-qa-0028@en",
+   "out": "nginx inactive.",
+   "fallback": false,
+   "calls": 1,
+   "rounds": 2,
+   "trace": [
+    [
+     "get_output",
+     {
+      "command_id": 2,
+      "count": 1,
+      "start": 1
+     }
+    ]
+   ],
+   "first_text": "nginx inactive.",
+   "s": 3.65,
+   "prompt_n": [
+    533,
+    616
+   ],
+   "cached": [
+    392,
+    555
+   ]
+  },
+  {
+   "id": "v3-history-qa-0029@fr",
+   "out": "1 fichier objet.",
+   "fallback": false,
+   "calls": 1,
+   "rounds": 2,
+   "trace": [
+    [
+     "get_output",
+     {
+      "command_id": 1,
+      "count": 1,
+      "start": 1
+     }
+    ]
+   ],
+   "first_text": "1 fichier objet.",
+   "s": 3.26,
+   "prompt_n": [
+    492,
+    607
+   ],
+   "cached": [
+    397,
+    514
+   ]
+  },
+  {
+   "id": "v3-history-qa-0029@en",
+   "out": "18 lines show 8 object files built before error.",
+   "fallback": false,
+   "calls": 1,
+   "rounds": 2,
+   "trace": [
+    [
+     "get_output",
+     {
+      "command_id": 1,
+      "count": 18,
+      "start": 1
+     }
+    ]
+   ],
+   "first_text": "18 lines show 8 object files built before error.",
+   "s": 7.23,
+   "prompt_n": [
+    480,
+    973
+   ],
+   "cached": [
+    392,
+    475
+   ]
+  },
+  {
+   "id": "v3-history-qa-0030@fr",
+   "out": "Je n'ai pas trouvé d'information sur le mot de passe de la base dans les commandes fournies.\n\nLa commande `cat .env` a renvoyé une sortie, mais je n'ai pas pu voir le contenu de cette sortie.\n\nPour trouver le mot de passe, vous devrez probablement examiner le fichier `.env` (qui a été affiché par la commande [3]).",
+   "fallback": false,
+   "calls": 0,
+   "rounds": 1,
+   "trace": [],
+   "first_text": "Je n'ai pas trouvé d'information sur le mot de passe de la base dans les commandes fournies.\n\nLa commande `cat .env` a renvoyé une sortie, mais je n'ai pas pu voir le contenu de cette sortie.\n\nPour trouver le mot de passe, vous devrez probablement examiner le fichier `.env` (qui a été affiché par la commande [3]).",
+   "s": 6.65,
+   "prompt_n": [
+    512
+   ],
+   "cached": [
+    397
+   ]
+  },
+  {
+   "id": "v3-history-qa-0030@en",
+   "out": "Not in the history.",
+   "fallback": false,
+   "calls": 1,
+   "rounds": 2,
+   "trace": [
+    [
+     "get_output",
+     {
+      "command_id": 1,
+      "count": 3,
+      "start": 1
+     }
+    ]
+   ],
+   "first_text": "Not in the history.",
+   "s": 5.79,
+   "prompt_n": [
+    500,
+    613
+   ],
+   "cached": [
+    392,
+    522
+   ]
+  }
+ ]
+}

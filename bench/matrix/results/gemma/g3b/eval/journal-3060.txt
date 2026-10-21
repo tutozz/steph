@@ -1,0 +1,37 @@
+22:20 juge 03b74727a860a563
+22:21 VALIDATION avant rc=0 {"fr": {"A": "6/6", "B": "6/6"}, "en": {"A": "6/6", "B": "6/6"}}
+22:43 JUGE gemma-raw-test-b7 rc=0 {"invention": 152, "douteux": 72, "erreur": 0, "vide": 0, "ok": 602}
+22:50 ARRÊT volontaire : partage avec un second juge sur la 3080 (G3b et v1.0), reprise brut et G3 SFT 42 ici
+22:51 juge 03b74727a860a563
+22:51 VALIDATION avant rc=0 {"fr": {"A": "6/6", "B": "6/6"}, "en": {"A": "6/6", "B": "6/6"}}
+22:51 JUGE gemma-raw-test-b7 rc=0 {"invention": 152, "douteux": 72, "erreur": 0, "vide": 0, "ok": 602}
+22:58 JUGE gemma-raw-test-b42 rc=0 {"invention": 147, "douteux": 63, "erreur": 1, "vide": 0, "ok": 615}
+23:04 JUGE gemma-raw-test-b123 rc=0 {"invention": 153, "douteux": 68, "erreur": 0, "vide": 0, "ok": 605}
+23:21 JUGE sft-s42-test-b7 rc=0 {"invention": 128, "douteux": 49, "erreur": 0, "vide": 0, "ok": 649}
+23:30 JUGE sft-s42-test-b42 rc=0 {"invention": 134, "douteux": 46, "erreur": 0, "vide": 0, "ok": 646}
+23:34 JUGE sft-s42-test-b123 rc=0 {"invention": 135, "douteux": 50, "erreur": 0, "vide": 0, "ok": 641}
+23:34 VALIDATION après rc=0 {"fr": {"A": "6/6", "B": "6/6"}, "en": {"A": "6/6", "B": "6/6"}}
+23:34 FIN
+16:57 juge et enseignant 03b74727a860a563
+16:57 VALIDATION avant rc=0 {"fr": {"A": "6/6", "B": "6/6"}, "en": {"A": "6/6", "B": "6/6"}}
+16:59 ÉTIQUETTES rc=0 {"traites": 281, "elapsed_s": 132.6, "par_min": 127.1, "ok": 281, "think": 0, "vide": 0, "trop long": 0, "erreur": 0}
+16:59 LANGUE {"labeled": 281, "en": 134, "fr": 116, "undetermined": 31}
+17:00 ARRÊT volontaire : enseignant en français 116 fois sur 281, étiquetage repris avec consigne de langue
+17:01 juge et enseignant 03b74727a860a563
+17:02 VALIDATION avant rc=0 {"fr": {"A": "6/6", "B": "6/6"}, "en": {"A": "6/6", "B": "6/6"}}
+17:04 ÉTIQUETTES rc=0 {"ok": 281}
+17:04 LANGUE {"labeled": 281, "en": 178, "fr": 77, "undetermined": 26}
+17:07 JUGE rc=0 {"machine": "langfix", "judged": 178, "verdicts": {"ok": 126, "invention": 50, "douteux": 2}, "rejected": 50, "categories": {"ligne": 48, "nombre": 2}}
+17:07 VALIDATION après rc=0 {"fr": {"A": "6/6", "B": "6/6"}, "en": {"A": "6/6", "B": "6/6"}}
+17:07 GARDÉES {"candidates": 178, "ok": 126, "invention": 50, "douteux": 2, "unjudged": 0, "kept": 126}
+17:07 FUITE rc=0 {"examples": 4162, "canary_lines": 0, "rejected": ["v3-build-native-0024", "v3-build-native-0031", "v3-rust-go-0002", "v3-python-0033", "v3-containers-0001", "v3-containers-0002", "v3-files-0044", "v3-files-0078", "v3-network-0031", "v3-services-logs-0032", "v3-files-0053", "v3-files-0059", "v3-packages-system-0043", "v3-packages-system-0061", "v3-packages-system-0074", "v3-packages-system-0078", "v3-packages-system-0083", "v3-packages-system-0086", "v3-build-native-0031", "v3-rust-go-0002", "v3-build-native-0024", "v3-containers-0002", "v3-python-0033"], "max_line": 0.571, "max_shingle": 0.643, "top_line": [["v3-network-0031", 0.571, 0.511, 0.0], ["v3-build-native-0031", 0.556, 0.583, 0.0], ["v3-build-native-0031", 0.556, 0.583, 0.0], ["v3-files-0053", 0.545, 0.643, 0.545], ["v3-build-native-0024", 0.5, 0.224, 0.0]]}
+17:07 MIX 3966 / 196
+17:07 ARRÊT : cas du banc dans le mix
+17:10 SANS FUITE langfix {"rows": 126, "dropped": 1, "kept": 125, "cases": ["v3-packages-system-0043", "v3-packages-system-0061", "v3-packages-system-0074", "v3-packages-system-0078", "v3-packages-system-0083", "v3-packages-system-0086"]}
+17:13 SANS FUITE mix-x4r1-l5/train {"rows": 3840, "dropped": 172, "kept": 3668, "cases": ["v3-build-native-0024", "v3-build-native-0031", "v3-containers-0001", "v3-containers-0002", "v3-files-0044", "v3-files-0053", "v3-files-0059", "v3-files-0078", "v3-network-0031", "v3-packages-system-0043", "v3-packages-system-0061", "v3-packages-system-0074", "v3-packages-system-0078", "v3-packages-system-0083", "v3-packages-system-0086", "v3-python-0033", "v3-rust-go-0002", "v3-services-logs-0032"]}
+17:13 SANS FUITE mix-x4r1-l5/val {"rows": 196, "dropped": 11, "kept": 185, "cases": ["v3-build-native-0024", "v3-build-native-0031", "v3-files-0044", "v3-files-0059", "v3-files-0078", "v3-rust-go-0002"]}
+17:13 FUITE rc=0 {"examples": 4103, "canary_lines": 0, "rejected": [], "max_line": 0.455, "max_shingle": 0.583, "top_line": [["v3-build-native-0029", 0.455, 0.255, 0.0], ["v3-build-native-0029", 0.455, 0.255, 0.0], ["v3-shell-scripts-0013", 0.444, 0.235, 0.0], ["v3-shell-scripts-0013", 0.444, 0.235, 0.0], ["v3-files-0009", 0.429, 0.317, 0.0]]}
+17:13 MIX 3918 / 185
+20:30 SFT départ
+22:19 SFT rc=0 meilleure perte val 0.2531 à l'époque 1.992 ; 6307.2 s ; adaptateur écrit
+22:19 FIN

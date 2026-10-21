@@ -1,0 +1,8 @@
+gemma-raw-Q4_0.gguf  fa401b55b07ee70a54c6dae3903c783a6e65064312529ea57175cb5f8dec6634  (Q4_0 QAT officiel, copie de xeon /root/steph-ft/gemma/)
+sft-s42-Q4_0.gguf  93eb13e9040bcd9e4d66db5499d875678741593560d19653fc4f707bb5e10b2f
+dpo-s42-Q4_0.gguf  3bb6e19c372f5380c0ad08f4a78b77a6a294ed157140bbe4880251c7d951888e
+v10 steph-speak-granite-4.0-h-350M-dpo-v1.0-Q4_K_M.gguf  45414bd2af2daf5fb9fbcb1ade078e6a2bb3cb3f341c8d0eb5fa8c3abb92ec5b
+granite41-3b r3t3-teacher-s42-Q4_K_M.gguf  102aba5b4bd85bca2570e4ea857d699c360cae5ae03abb2f0f945090709f05a1
+juge A7 Qwen3.5-9B-Q4_K_M.gguf  03b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8
+juge de formulation Qwen3.5-27B-Q4_K_M.gguf  84b5f7f112156d63836a01a69dc3f11a6ba63b10a23b8ca7a7efaf52d5a2d806
+harnais test.json md5 9bb44843… ; test.generic.json md5 1ea3b078… (identiques à X3)

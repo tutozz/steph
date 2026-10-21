@@ -1,0 +1,13 @@
+{
+  "machine": "h3a-start",
+  "judged": 340,
+  "verdicts": {
+    "ok": 324,
+    "douteux": 14,
+    "invention": 2
+  },
+  "rejected": 2,
+  "categories": {
+    "cause": 2
+  }
+}

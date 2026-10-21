@@ -1,0 +1,564 @@
+{
+ "benchmark": "termspeak",
+ "data_version": "v1",
+ "lang": "en",
+ "split": "dev",
+ "data_sha256": {
+  "en/dev.jsonl": "392c005e9d4d9fb710560acb4804a2e4011abd19eace4d8d6c00667c427562e4"
+ },
+ "config_sha256": {
+  "prompts": "47721ddfe019c4093ab891d4c9483d949d227376183076120dbaba5ea31abeee",
+  "scoring": "aeafc6c2ea6bc926059943f415df399ebd894ed7fcbc303b8b6a6b347e84893b"
+ },
+ "date": "2026-09-27T15:19:30Z",
+ "model": {
+  "label": "steph-resolve",
+  "name": "steph.digest.resolve"
+ },
+ "protocol": {
+  "mode": "resolve",
+  "decoding": null,
+  "note": "règles Python déterministes, aucun LLM"
+ },
+ "backend": {
+  "name": "steph.digest",
+  "version": null
+ },
+ "hardware": null,
+ "hardware_note": "sans objet : aucun modèle, temps de réponse non pertinent",
+ "notes": "resolve() seul (src/steph/digest.py), toujours en français, sans repli sur un modèle ; cas qa hors périmètre car resolve() n'a pas l'historique (4 sur 43 exclus) ; jamais à comparer à une colonne de score d'un modèle sans lire ce champ notes",
+ "rows": [
+  {
+   "id": "build-cmake-missing-package",
+   "category": "build-failure",
+   "task": "summary",
+   "answer": null,
+   "score": 0.0,
+   "facts_hit": 0,
+   "facts_total": 4,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 0
+  },
+  {
+   "id": "build-go-unused-import",
+   "category": "build-failure",
+   "task": "summary",
+   "answer": "Échec, 3 erreurs. main.go ligne 6 : fmt imported and not used.",
+   "score": 0.3333,
+   "facts_hit": 1,
+   "facts_total": 3,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 12
+  },
+  {
+   "id": "build-npm-ts-property",
+   "category": "build-failure",
+   "task": "summary",
+   "answer": "Échec. Header.tsx ligne 42 : Property titel does not exist on type Props. Did you mean title?",
+   "score": 0.75,
+   "facts_hit": 3,
+   "facts_total": 4,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 17
+  },
+  {
+   "id": "runtime-command-not-found",
+   "category": "runtime-error",
+   "task": "summary",
+   "answer": null,
+   "score": 0.0,
+   "facts_hit": 0,
+   "facts_total": 3,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 0
+  },
+  {
+   "id": "runtime-oom-killed",
+   "category": "runtime-error",
+   "task": "summary",
+   "answer": null,
+   "score": 0.0,
+   "facts_hit": 0,
+   "facts_total": 3,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 0
+  },
+  {
+   "id": "runtime-python-keyerror",
+   "category": "runtime-error",
+   "task": "summary",
+   "answer": "Échec. string ligne 1 : KeyError key.",
+   "score": 1.0,
+   "facts_hit": 2,
+   "facts_total": 2,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 7
+  },
+  {
+   "id": "tests-flaky-timeout",
+   "category": "tests",
+   "task": "summary",
+   "answer": "Échec. 1 test échoué, 5 réussis. Premier : test_sync_remote_cache, test_integration.py ligne 64.",
+   "score": 0.6667,
+   "facts_hit": 2,
+   "facts_total": 3,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 12
+  },
+  {
+   "id": "tests-mocha-vitest",
+   "category": "tests",
+   "task": "summary",
+   "answer": null,
+   "score": 0.0,
+   "facts_hit": 0,
+   "facts_total": 3,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 0
+  },
+  {
+   "id": "git-clone-auth-fail",
+   "category": "git",
+   "task": "summary",
+   "answer": "Échec. Authentification refusée pour private-repo.",
+   "score": 0.5,
+   "facts_hit": 1,
+   "facts_total": 2,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 5
+  },
+  {
+   "id": "git-push-rejected",
+   "category": "git",
+   "task": "summary",
+   "answer": "Échec. Push de main refusé : le distant a des commits absents en local, faire git pull.",
+   "score": 0.5,
+   "facts_hit": 1,
+   "facts_total": 2,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 17
+  },
+  {
+   "id": "git-status-untracked",
+   "category": "git",
+   "task": "summary",
+   "answer": "Branche master, aucun commit, 7 fichiers non suivis.",
+   "score": 0.5,
+   "facts_hit": 1,
+   "facts_total": 2,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 8
+  },
+  {
+   "id": "pkg-apt-lock",
+   "category": "packages",
+   "task": "summary",
+   "answer": "Échec. Verrou dpkg tenu par unattended-upgr, processus 4321.",
+   "score": 0.5,
+   "facts_hit": 1,
+   "facts_total": 2,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 8
+  },
+  {
+   "id": "pkg-apt-upgrade",
+   "category": "packages",
+   "task": "summary",
+   "answer": "12 paquets mis à jour.",
+   "score": 0.5,
+   "facts_hit": 1,
+   "facts_total": 2,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 5
+  },
+  {
+   "id": "pkg-dnf-check-update",
+   "category": "packages",
+   "task": "summary",
+   "answer": "29 éléments affichés : xen-licenses, xfsprogs, xorg-x11-drv-nvidia.",
+   "score": 0.5,
+   "facts_hit": 1,
+   "facts_total": 2,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 7
+  },
+  {
+   "id": "pkg-pip-install",
+   "category": "packages",
+   "task": "summary",
+   "answer": "requests 2.32.3 installé, avec 4 dépendances.",
+   "score": 1.0,
+   "facts_hit": 2,
+   "facts_total": 2,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 6
+  },
+  {
+   "id": "net-ifconfig-macos",
+   "category": "network",
+   "task": "summary",
+   "answer": "en0 192.168.1.62, utun4 10.8.0.46.",
+   "score": 1.0,
+   "facts_hit": 2,
+   "facts_total": 2,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 4
+  },
+  {
+   "id": "net-ip-a-hypervisor",
+   "category": "network",
+   "task": "summary",
+   "answer": "wg0 10.8.0.123, vmbr0 192.168.1.200, pan0 192.168.99.1. Plus 3 réseaux virtuels.",
+   "score": 1.0,
+   "facts_hit": 2,
+   "facts_total": 2,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 10
+  },
+  {
+   "id": "net-ip-br-addr",
+   "category": "network",
+   "task": "summary",
+   "answer": "wlp0s20f3 192.168.1.20, wg0 10.8.0.34, tun0 172.16.1.2. Plus 8 réseaux virtuels.",
+   "score": 1.0,
+   "facts_hit": 3,
+   "facts_total": 3,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 10
+  },
+  {
+   "id": "net-ping-local",
+   "category": "network",
+   "task": "summary",
+   "answer": "3 reçus sur 3, 0 % de perte, moyenne 0.024 ms.",
+   "score": 1.0,
+   "facts_hit": 2,
+   "facts_total": 2,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 11
+  },
+  {
+   "id": "disk-df-hypervisor",
+   "category": "disks",
+   "task": "summary",
+   "answer": "racine : 8.9G libres sur 94G, 91 %. backup-hdd : 134G libres sur 442G, 70 %.",
+   "score": 1.0,
+   "facts_hit": 2,
+   "facts_total": 2,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 16
+  },
+  {
+   "id": "disk-df-workstation",
+   "category": "disks",
+   "task": "summary",
+   "answer": "racine : 685G libres sur 953G, 29 %. boot : 284M libres sur 974M, 69 %.",
+   "score": 1.0,
+   "facts_hit": 2,
+   "facts_total": 2,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 16
+  },
+  {
+   "id": "disk-du-projects",
+   "category": "disks",
+   "task": "summary",
+   "answer": "10 éléments affichés, les plus gros : OLD_INVENTORY 12G, kickstart-iso 7.9G, inventory 2.4G.",
+   "score": 1.0,
+   "facts_hit": 2,
+   "facts_total": 2,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 13
+  },
+  {
+   "id": "disk-smartctl-health",
+   "category": "disks",
+   "task": "summary",
+   "answer": null,
+   "score": 0.0,
+   "facts_hit": 0,
+   "facts_total": 2,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 0
+  },
+  {
+   "id": "mem-cgroup-limit",
+   "category": "memory",
+   "task": "summary",
+   "answer": "Conteneur worker proche de la limite, 99,96 % de 512MiB.",
+   "score": 1.0,
+   "facts_hit": 3,
+   "facts_total": 3,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 10
+  },
+  {
+   "id": "mem-vmstat",
+   "category": "memory",
+   "task": "summary",
+   "answer": null,
+   "score": 0.0,
+   "facts_hit": 0,
+   "facts_total": 3,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 0
+  },
+  {
+   "id": "hw-lscpu",
+   "category": "hardware",
+   "task": "summary",
+   "answer": null,
+   "score": 0.0,
+   "facts_hit": 0,
+   "facts_total": 3,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 0
+  },
+  {
+   "id": "hw-lspci-desktop",
+   "category": "hardware",
+   "task": "summary",
+   "answer": "GPU : NVIDIA Corporation GA106 [GeForce RTX 3060 Lite Hash Rate], réseau : Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, chipset : Advanced Micro Devices, Inc. [AMD] Starship/Matisse Root Complex, USB : 2, autres périphériques : 14.",
+   "score": 0.8,
+   "facts_hit": 2,
+   "facts_total": 2,
+   "forbidden_hit": [],
+   "over_length": true,
+   "words": 40
+  },
+  {
+   "id": "hw-lsusb",
+   "category": "hardware",
+   "task": "summary",
+   "answer": null,
+   "score": 0.0,
+   "facts_hit": 0,
+   "facts_total": 3,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 0
+  },
+  {
+   "id": "hw-nvidia-smi",
+   "category": "hardware",
+   "task": "summary",
+   "answer": null,
+   "score": 0.0,
+   "facts_hit": 0,
+   "facts_total": 3,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 0
+  },
+  {
+   "id": "hw-system-profiler-macos",
+   "category": "hardware",
+   "task": "summary",
+   "answer": null,
+   "score": 0.0,
+   "facts_hit": 0,
+   "facts_total": 3,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 0
+  },
+  {
+   "id": "ctr-docker-ps-restarting",
+   "category": "containers",
+   "task": "summary",
+   "answer": "9 conteneurs, 8 actifs ; shop_vault redémarre en boucle.",
+   "score": 0.5,
+   "facts_hit": 1,
+   "facts_total": 2,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 9
+  },
+  {
+   "id": "ctr-podman-ps-exited",
+   "category": "containers",
+   "task": "summary",
+   "answer": null,
+   "score": 0.0,
+   "facts_hit": 0,
+   "facts_total": 3,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 0
+  },
+  {
+   "id": "ctr-system-df",
+   "category": "containers",
+   "task": "summary",
+   "answer": "images 3,8GB, 2,1GB récupérables, cache de build 890MB, entièrement récupérable.",
+   "score": 1.0,
+   "facts_hit": 3,
+   "facts_total": 3,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 10
+  },
+  {
+   "id": "list-find-python-docs",
+   "category": "long-lists",
+   "task": "summary",
+   "answer": "20 éléments affichés : python-systemd, python3-argcomplete, python3-attrs.",
+   "score": 1.0,
+   "facts_hit": 2,
+   "facts_total": 2,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 7
+  },
+  {
+   "id": "list-grep-functions",
+   "category": "long-lists",
+   "task": "summary",
+   "answer": null,
+   "score": 0.0,
+   "facts_hit": 0,
+   "facts_total": 2,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 0
+  },
+  {
+   "id": "list-ls-etc",
+   "category": "long-lists",
+   "task": "summary",
+   "answer": "37 éléments affichés : abrt, adjtime, aliases.",
+   "score": 0.5,
+   "facts_hit": 1,
+   "facts_total": 2,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 7
+  },
+  {
+   "id": "list-passwd-accounts",
+   "category": "long-lists",
+   "task": "summary",
+   "answer": "30 éléments affichés : abrt, adm, akmods.",
+   "score": 1.0,
+   "facts_hit": 2,
+   "facts_total": 2,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 7
+  },
+  {
+   "id": "long-find-permission-denied",
+   "category": "long-truncated",
+   "task": "summary",
+   "answer": null,
+   "score": 0.0,
+   "facts_hit": 0,
+   "facts_total": 3,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 0
+  },
+  {
+   "id": "long-rsync-transfer",
+   "category": "long-truncated",
+   "task": "summary",
+   "answer": null,
+   "score": 0.0,
+   "facts_hit": 0,
+   "facts_total": 2,
+   "forbidden_hit": [],
+   "over_length": false,
+   "words": 0
+  }
+ ],
+ "summary": {
+  "n": 39,
+  "score": 50.1,
+  "fact_recall": 46.4,
+  "forbidden_rate": 0.0,
+  "over_length_rate": 2.6,
+  "errors": 0,
+  "by_category": {
+   "build-failure": {
+    "n": 3,
+    "score": 36.1
+   },
+   "containers": {
+    "n": 3,
+    "score": 50.0
+   },
+   "disks": {
+    "n": 4,
+    "score": 75.0
+   },
+   "git": {
+    "n": 3,
+    "score": 50.0
+   },
+   "hardware": {
+    "n": 5,
+    "score": 16.0
+   },
+   "long-lists": {
+    "n": 4,
+    "score": 62.5
+   },
+   "long-truncated": {
+    "n": 2,
+    "score": 0.0
+   },
+   "memory": {
+    "n": 2,
+    "score": 50.0
+   },
+   "network": {
+    "n": 4,
+    "score": 100.0
+   },
+   "packages": {
+    "n": 4,
+    "score": 62.5
+   },
+   "runtime-error": {
+    "n": 3,
+    "score": 33.3
+   },
+   "tests": {
+    "n": 2,
+    "score": 33.3
+   }
+  },
+  "by_task": {
+   "summary": {
+    "n": 39,
+    "score": 50.1
+   }
+  }
+ }
+}

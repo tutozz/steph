@@ -1,0 +1,343 @@
+{
+ "_doc": "Source unique des chiffres des graphiques du README. Banc v3 test (654 cas) pour la qualité et les inventions, i5-7200U pour la vitesse et la mémoire. build.py relit les valeurs avec un bloc derive et échoue si la source diverge.",
+ "models": {
+  "qwen35_9b": {
+   "label": "Qwen3.5 9B",
+   "sub_fr": "enseignant",
+   "sub_en": "teacher"
+  },
+  "gemma4_e2b": {
+   "label": "Gemma 4 E2B",
+   "sub_fr": "brut",
+   "sub_en": "raw"
+  },
+  "qwen35_2b": {
+   "label": "Qwen3.5 2B",
+   "sub_fr": "",
+   "sub_en": ""
+  },
+  "qwen35_08b": {
+   "label": "Qwen3.5 0.8B",
+   "sub_fr": "brut",
+   "sub_en": "raw"
+  },
+  "lfm25_350m": {
+   "label": "LFM2.5 350M",
+   "sub_fr": "brut",
+   "sub_en": "raw"
+  },
+  "gemma3_270m": {
+   "label": "Gemma 3 270M",
+   "sub_fr": "brut",
+   "sub_en": "raw"
+  },
+  "granite4h_350m": {
+   "label": "Granite 4.0 H 350M",
+   "sub_fr": "brut",
+   "sub_en": "raw"
+  },
+  "smollm3_3b": {
+   "label": "SmolLM3 3B",
+   "sub_fr": "",
+   "sub_en": ""
+  },
+  "ministral3_3b": {
+   "label": "Ministral 3 3B",
+   "sub_fr": "",
+   "sub_en": ""
+  },
+  "steph_small": {
+   "label": "steph-speak",
+   "sub_fr": "petit",
+   "sub_en": "small"
+  },
+  "steph_base": {
+   "label": "steph-speak",
+   "sub_fr": "base",
+   "sub_en": "base"
+  }
+ },
+ "values": {
+  "ttft_p90_i5.qwen35_08b": {
+   "value": 5.678,
+   "unit": "s",
+   "status": "measured",
+   "source": "bench/matrix/results/i5-7200u-cpu-qwen3.5-0.8b.json",
+   "note": "i5-7200U, CPU only, 4 threads, 90th percentile of first token",
+   "derive": {
+    "file": "bench/matrix/results/i5-7200u-cpu-qwen3.5-0.8b.json",
+    "field": "ttft_p90"
+   }
+  },
+  "ttft_p90_i5.qwen35_2b": {
+   "value": 13.299,
+   "unit": "s",
+   "status": "measured",
+   "source": "bench/matrix/results/i5-7200u-cpu-qwen3.5-2b.json",
+   "note": "i5-7200U, CPU only, 4 threads",
+   "derive": {
+    "file": "bench/matrix/results/i5-7200u-cpu-qwen3.5-2b.json",
+    "field": "ttft_p90"
+   }
+  },
+  "ttft_p90_i5.smollm3_3b": {
+   "value": 22.397,
+   "unit": "s",
+   "status": "measured",
+   "source": "bench/matrix/results/i5-7200u-cpu-smollm3-3b.json",
+   "note": "i5-7200U, CPU only, 4 threads",
+   "derive": {
+    "file": "bench/matrix/results/i5-7200u-cpu-smollm3-3b.json",
+    "field": "ttft_p90"
+   }
+  },
+  "ttft_p90_i5.ministral3_3b": {
+   "value": 26.993,
+   "unit": "s",
+   "status": "measured",
+   "source": "bench/matrix/results/i5-7200u-cpu-ministral3-3b.json",
+   "note": "i5-7200U, CPU only, 4 threads",
+   "derive": {
+    "file": "bench/matrix/results/i5-7200u-cpu-ministral3-3b.json",
+    "field": "ttft_p90"
+   }
+  },
+  "ttft_p90_mac.gemma4_e2b": {
+   "value": 0.679,
+   "unit": "s",
+   "status": "measured",
+   "source": "bench/matrix/results/mac-m3pro-metal-gemma4e2b.json",
+   "note": "Mac M3 Pro, Metal, 90th percentile",
+   "derive": {
+    "file": "bench/matrix/results/mac-m3pro-metal-gemma4e2b.json",
+    "field": "ttft_p90"
+   }
+  },
+  "ttft_p90_mac.qwen35_9b": {
+   "value": 2.259,
+   "unit": "s",
+   "status": "measured",
+   "source": "bench/matrix/results/mac-m3pro-metal-qwen3.5-9b.json",
+   "note": "Mac M3 Pro, Metal, 90th percentile",
+   "derive": {
+    "file": "bench/matrix/results/mac-m3pro-metal-qwen3.5-9b.json",
+    "field": "ttft_p90"
+   }
+  },
+  "disk_mb.qwen35_08b": {
+   "value": 533,
+   "unit": "MB",
+   "status": "measured",
+   "source": "https://huggingface.co/unsloth/Qwen3.5-0.8B-GGUF/resolve/main/Qwen3.5-0.8B-Q4_K_M.gguf",
+   "note": "content-length 532517120 bytes, Q4_K_M"
+  },
+  "disk_mb.qwen35_2b": {
+   "value": 1281,
+   "unit": "MB",
+   "status": "measured",
+   "source": "https://huggingface.co/unsloth/Qwen3.5-2B-GGUF/resolve/main/Qwen3.5-2B-Q4_K_M.gguf",
+   "note": "content-length 1280835840 bytes, Q4_K_M"
+  },
+  "disk_mb.gemma4_e2b": {
+   "value": 3350,
+   "unit": "MB",
+   "status": "measured",
+   "source": "https://huggingface.co/google/gemma-4-E2B-it-qat-q4_0-gguf/resolve/main/gemma-4-E2B_q4_0-it.gguf",
+   "note": "content-length 3349516256 bytes, q4_0"
+  },
+  "disk_mb.qwen35_9b": {
+   "value": 5681,
+   "unit": "MB",
+   "status": "measured",
+   "source": "https://huggingface.co/unsloth/Qwen3.5-9B-GGUF/resolve/main/Qwen3.5-9B-Q4_K_M.gguf",
+   "note": "content-length 5680522464 bytes, Q4_K_M"
+  },
+  "ram_mb.qwen35_08b": {
+   "value": 1654,
+   "unit": "MB",
+   "status": "measured",
+   "source": "bench/matrix/results/i5-7200u-cpu-qwen3.5-0.8b.json",
+   "note": "peak RAM, i5-7200U CPU only",
+   "derive": {
+    "file": "bench/matrix/results/i5-7200u-cpu-qwen3.5-0.8b.json",
+    "field": "ram_peak_mb"
+   }
+  },
+  "ram_mb.qwen35_2b": {
+   "value": 2712,
+   "unit": "MB",
+   "status": "measured",
+   "source": "bench/matrix/results/i5-7200u-cpu-qwen3.5-2b.json",
+   "note": "peak RAM, i5-7200U CPU only",
+   "derive": {
+    "file": "bench/matrix/results/i5-7200u-cpu-qwen3.5-2b.json",
+    "field": "ram_peak_mb"
+   }
+  },
+  "ram_mb.gemma4_e2b": {
+   "value": 4784,
+   "unit": "MB",
+   "status": "measured",
+   "source": "bench/matrix/results/mac-m3pro-cpu-gemma4e2b.json",
+   "note": "peak RAM, Mac M3 Pro CPU only (-ngl 0), not the Metal figure: do not show it as Metal",
+   "derive": {
+    "file": "bench/matrix/results/mac-m3pro-cpu-gemma4e2b.json",
+    "field": "ram_peak_mb"
+   }
+  },
+  "ram_mb.gemma4_e2b_metal": {
+   "value": 3445,
+   "unit": "MB",
+   "status": "measured",
+   "source": "bench/perf/results/mac.json",
+   "note": "Mac M3 Pro Metal, llama-server RSS in production (-c 32768): 3445 Mo cold, 3577 Mo warm (bench/perf/results/mac.json), up to 3673 Mo (same file); shown as 3,4 to 3,7 GB"
+  },
+  "ram_mb.qwen35_9b": {
+   "value": 6506,
+   "unit": "MB",
+   "status": "measured",
+   "source": "bench/matrix/results/mac-m3pro-metal-qwen3.5-9b.json",
+   "note": "peak memory, Mac M3 Pro Metal, unified memory (no CPU-only run)",
+   "derive": {
+    "file": "bench/matrix/results/mac-m3pro-metal-qwen3.5-9b.json",
+    "field": "ram_peak_mb"
+   }
+  },
+  "laptop.cpu": {
+   "value": "Intel Core i5-7200U",
+   "status": "measured",
+   "source": "bench/matrix/results/i5-7200u-cpu-qwen3.5-2b.json",
+   "note": "sys.cpu of the test laptop",
+   "derive": {
+    "file": "bench/matrix/results/i5-7200u-cpu-qwen3.5-2b.json",
+    "field": "sys.cpu",
+    "contains": "i5-7200U"
+   }
+  },
+  "laptop.cores": {
+   "value": 2,
+   "unit": "cores",
+   "status": "measured",
+   "source": "Intel spec of the i5-7200U (2 cores, 4 threads)",
+   "note": "not read from a bench file"
+  },
+  "bench3.n": {
+   "value": 654,
+   "unit": "cases",
+   "status": "measured",
+   "source": "bench/matrix/results/g5/G5.md",
+   "note": "banc v3 test aligné sur le bloc de faits, 3 graines, même session"
+  },
+  "quality.steph_small": {
+   "value": 53.0,
+   "unit": "pts",
+   "status": "measured",
+   "source": "bench/matrix/results/g5/G5.md",
+   "note": "a-sft, qualité score_v3 ; le modèle précédent faisait 50,6 (+2,35 [+0,22 ; +4,47])"
+  },
+  "quality.steph_base": {
+   "value": 63.7,
+   "unit": "pts",
+   "status": "measured",
+   "source": "bench/matrix/results/gemma/G4b.md",
+   "note": "G3b en variante livrée off-ple3, qualité score_v3, 3 graines (G3b Q4_0 : 64,0 ; écart -0,37 [-1,11 ; +0,38] n.s.) ; le brut 60,6 vient de la session G3b, générations reproduites à l'identique en G4b"
+  },
+  "quality.gemma4_e2b": {
+   "value": 60.6,
+   "unit": "pts",
+   "status": "measured",
+   "source": "bench/matrix/results/gemma/G3b.md",
+   "note": "Gemma 4 E2B brut QAT q4_0, même banc, même session"
+  },
+  "invent.steph_small": {
+   "value": 26.0,
+   "unit": "%",
+   "status": "measured",
+   "source": "bench/matrix/results/g5/G5.md",
+   "note": "inventions, juge Qwen3.5 9B, 3 graines (le modèle précédent : 30,6 %)"
+  },
+  "invent.steph_base": {
+   "value": 19.1,
+   "unit": "%",
+   "status": "measured",
+   "source": "bench/matrix/results/gemma/G4b.md",
+   "note": "inventions, juge Qwen3.5 9B, 3 graines, variante livrée off-ple3 (G3b Q4_0 : 18,0 % dans la même session G4b, 17,6 % en G3b)"
+  },
+  "invent.gemma4_e2b": {
+   "value": 18.2,
+   "unit": "%",
+   "status": "measured",
+   "source": "bench/matrix/results/gemma/G3b.md",
+   "note": "inventions, juge Qwen3.5 9B, 3 graines"
+  },
+  "ttft_p90_i5.steph_small": {
+   "value": 2.33,
+   "unit": "s",
+   "status": "measured",
+   "source": "bench/matrix/results/g5/G5.md",
+   "note": "i5-7200U, CPU seul, premier jeton p90, 36 cas, production -c 8192 --parallel 2 -t 4 --cache-ram 0 (2,33 et 2,32 s sur deux passes)"
+  },
+  "ttft_p90_i5.steph_base": {
+   "value": 27.2,
+   "unit": "s",
+   "status": "measured",
+   "source": "bench/matrix/results/gemma/G4b.md",
+   "note": "i5-7200U, premier jeton p90, off-ple3 (27,1 s avant la quantification)"
+  },
+  "disk_mb.steph_small": {
+   "value": 223,
+   "unit": "MB",
+   "status": "measured",
+   "source": "bench/matrix/results/g5/G5.md",
+   "note": "g5-a-sft-Q4_K_M.gguf, 222 662 112 octets"
+  },
+  "disk_mb.steph_base": {
+   "value": 2432,
+   "unit": "MB",
+   "status": "measured",
+   "source": "bench/matrix/results/gemma/G4b.md",
+   "note": "g3b-off-ple3.gguf, 2,43 Go"
+  },
+  "ram_mb.steph_small": {
+   "value": 564,
+   "unit": "MB",
+   "status": "measured",
+   "source": "bench/matrix/results/g5/G5.md",
+   "note": "i5-7200U, pic llama-server (564 et 565 Mo sur deux passes)"
+  },
+  "ram_mb.steph_base": {
+   "value": 3894,
+   "unit": "MB",
+   "status": "measured",
+   "source": "bench/matrix/results/gemma/G4b.md",
+   "note": "i5-7200U, pic llama-server"
+  },
+  "ram_mb.gemma4_e2b_i5": {
+   "value": 4772,
+   "unit": "MB",
+   "status": "measured",
+   "source": "bench/matrix/results/gemma/G4b.md",
+   "note": "i5-7200U, pic llama-server du Gemma affiné non réduit (3,35 Go) ; le Gemma brut a la même taille"
+  }
+ },
+ "example": {
+  "fixture": "fx17",
+  "status": "measured",
+  "command": "rm /etc/hostname",
+  "output": "rm: impossible de supprimer '/etc/hostname': Permission non accordée",
+  "output_en": "rm: cannot remove '/etc/hostname': Permission denied",
+  "raw": {
+   "model": "qwen35_08b",
+   "status": "measured",
+   "source": "bench/matrix/results/mac-m3pro-metal-qwen3.5-0.8b.json",
+   "text": "Échec. Header.tsx ligne 42 : titel inconnu, utiliser title.",
+   "text_en": "Failed. Header.tsx line 42: unknown titel, use title."
+  },
+  "steph": {
+   "model": "steph_small",
+   "text": "Échec. hostname : permission refusée.",
+   "text_en": "Failed. hostname: permission denied.",
+   "source": "steph.digest.resolve('rm /etc/hostname', 1, sortie du cas fx17, language fr|en) : phrase construite en code, sans appel au modèle ; cas bench/fixtures.json index 17"
+  }
+ }
+}

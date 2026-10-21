@@ -1,0 +1,1 @@
+{"20260928-031814_p17-steph_fr_test.json": {"lang": "fr", "n": 62, "right_lang_pct": 66.1}, "20260928-031823_p17-steph_en_test.json": {"lang": "en", "n": 62, "right_lang_pct": 56.5}, "20260928-031831_p17_fr_test.json": {"lang": "fr", "n": 62, "right_lang_pct": 64.5}, "20260928-031840_p17_en_test.json": {"lang": "en", "n": 62, "right_lang_pct": 54.8}}

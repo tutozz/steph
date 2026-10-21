@@ -1,0 +1,39 @@
+{
+ "warmup_s": 0.189,
+ "voice_load_s": 1.4,
+ "results": [
+  {
+   "text": "37 elements : abrt, adjtime, aliases.",
+   "first_audio_s": 0.218,
+   "total_s": 0.218,
+   "chunks": 1
+  },
+  {
+   "text": "Racine 685G libres sur 953G, 29 %. Boot 284M libres sur 974M, 69 %.",
+   "first_audio_s": 0.967,
+   "total_s": 5.841,
+   "chunks": 1
+  },
+  {
+   "text": "Echec, code 1.",
+   "first_audio_s": 0.084,
+   "total_s": 0.084,
+   "chunks": 1
+  },
+  {
+   "text": "5 processus python en cours, dont un a 12 % de CPU.",
+   "first_audio_s": 0.286,
+   "total_s": 0.764,
+   "chunks": 1
+  },
+  {
+   "text": "Commande terminee avec succes en 0,3 seconde, aucune sortie.",
+   "first_audio_s": 0.283,
+   "total_s": 0.679,
+   "chunks": 1
+  }
+ ],
+ "first_audio_median": 0.283,
+ "first_audio_p90": 0.967,
+ "first_audio_max": 0.967
+}

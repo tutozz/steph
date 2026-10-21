@@ -1,0 +1,4 @@
+[
+ {"name": "r1-v1.0", "label": "R1 steph-speak v1.0 (rebanqué G6, CPU xeon)", "kind": "affiné", "profile": "ft", "size_mb": 222.7, "sha256": "45414bd2", "i5_p90": 2.26, "i5_src": "R2, 36 cas"},
+ {"name": "euromoe-2.6b-a0.6b", "label": "EuroMoE 2.6B-A0.6B Instruct 2512 Q4_K_M", "kind": "brut MoE", "profile": "gen", "size_mb": 1616.1, "sha256": "cbb3bf2d", "i5_p90": 8.20, "i5_src": "G6, 151 résumés dev generic"}
+]

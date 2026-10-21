@@ -1,0 +1,189 @@
+{
+ "judge": "google/gemma-4-31b-it",
+ "reasoning": "off",
+ "report": {
+  "n": 15,
+  "exact": 11,
+  "adjacent": 15,
+  "errors": 0,
+  "by_rung": {
+   "100": [
+    100,
+    100,
+    100
+   ],
+   "75": [
+    100,
+    100,
+    100
+   ],
+   "50": [
+    50,
+    50,
+    50
+   ],
+   "25": [
+    25,
+    50,
+    25
+   ],
+   "0": [
+    0,
+    0,
+    0
+   ]
+  }
+ },
+ "rows": [
+  {
+   "case": "v3-containers-0011",
+   "lang": "fr",
+   "rung": 100,
+   "answer": "Échec. Dockerfile ligne 3 : instruction inconnue COPPY, Docker propose COPY.",
+   "note": 100,
+   "invention": false,
+   "raison": "La réponse est exacte, courte et donne la cause précise de l'erreur ainsi que la solution suggérée.",
+   "cost": 4.732e-05
+  },
+  {
+   "case": "v3-shell-scripts-0005",
+   "lang": "fr",
+   "rung": 100,
+   "answer": "Échec. 8 fichiers copiés, 2 introuvables : export-04.csv et export-09.csv.",
+   "note": 100,
+   "invention": false,
+   "raison": "La réponse est exacte, concise et donne les informations clés (succès partiel, nombre d'échecs et fichiers concernés) pour l'utilisateur.",
+   "cost": 7.572e-05
+  },
+  {
+   "case": "v3-network-0024",
+   "lang": "en",
+   "rung": 100,
+   "answer": "example.com replies, 4 of 4 packets, average 7 ms.",
+   "note": 100,
+   "invention": false,
+   "raison": "Exact, concise, and provides the key information (success, packet count, and average latency) in the correct language.",
+   "cost": 8.28e-05
+  },
+  {
+   "case": "v3-shell-scripts-0005",
+   "lang": "fr",
+   "rung": 75,
+   "answer": "Échec. 8 copiés, 2 en échec.",
+   "note": 100,
+   "invention": false,
+   "raison": "La réponse est courte, exacte et donne le résultat clé (nombre de succès et d'échecs) conformément au code de sortie et à la sortie brute.",
+   "cost": 7.888e-05
+  },
+  {
+   "case": "v3-network-0024",
+   "lang": "fr",
+   "rung": 75,
+   "answer": "Succès. example.com : 4 paquets reçus sur 4, aucune perte, minimum 5.775 ms, moyenne 7.045 ms, maximum 9.381 ms, écart type 1.383 ms.",
+   "note": 100,
+   "invention": false,
+   "raison": "La réponse est exacte, contient tous les faits clés et est adaptée à une lecture orale.",
+   "cost": 8.352e-05
+  },
+  {
+   "case": "v3-js-node-0017",
+   "lang": "en",
+   "rung": 75,
+   "answer": "Failed. Wrong package tsc@2.0.4 ran, not the TypeScript compiler.",
+   "note": 100,
+   "invention": false,
+   "raison": "The response is accurate, concise, and identifies the key cause of the failure (wrong package installed) as per the output.",
+   "cost": 4.726e-05
+  },
+  {
+   "case": "v3-containers-0011",
+   "lang": "en",
+   "rung": 50,
+   "answer": "Failed. Docker build error.",
+   "note": 50,
+   "invention": false,
+   "raison": "The response is correct but lacks the key fact: the typo 'COPPY' on line 3, which is essential for the user to fix the error.",
+   "cost": 4.946e-05
+  },
+  {
+   "case": "v3-network-transfer-0032",
+   "lang": "en",
+   "rung": 50,
+   "answer": "Failed. rsync error, unexpected end of file.",
+   "note": 50,
+   "invention": false,
+   "raison": "The response mentions a generic rsync error but misses the key cause: the SSH connection was refused on port 2222.",
+   "cost": 7.416e-05
+  },
+  {
+   "case": "v3-lint-format-0002",
+   "lang": "fr",
+   "rung": 50,
+   "answer": "Échec. ESLint 9.39.5, quelque chose a mal tourné.",
+   "note": 50,
+   "invention": false,
+   "raison": "L'échec est mentionné, mais la cause principale (absence du fichier de configuration eslint.config.js) manque, obligeant l'utilisateur à relire la sortie.",
+   "cost": 5.161e-05
+  },
+  {
+   "case": "v3-network-0024",
+   "lang": "en",
+   "rung": 25,
+   "answer": "64 bytes from 203.0.113.25: icmp_seq=0 ttl=60 time=5.775 ms, 64 bytes from 203.0.113.25: icmp_seq=1 ttl=60 time=6.430 ms, 64 bytes from 203.0.113.25: icmp_seq=2 ttl=60 time=9.381 ms.",
+   "note": 25,
+   "invention": false,
+   "raison": "Recopie brute partielle et trop longue pour l'oral, sans synthèse du résultat (succès/perte de paquets).",
+   "cost": 6.268e-05
+  },
+  {
+   "case": "v3-shell-scripts-0005",
+   "lang": "fr",
+   "rung": 25,
+   "answer": "Le script collect.sh a affiché plusieurs lignes.",
+   "note": 50,
+   "invention": false,
+   "raison": "La réponse est exacte mais manque le fait clé : l'échec du script et la cause (fichiers manquants). L'utilisateur sait que ça a tourné mais ne peut pas agir sans relire la sortie.",
+   "cost": 7.872e-05
+  },
+  {
+   "case": "v3-lint-format-0002",
+   "lang": "en",
+   "rung": 25,
+   "answer": "Échec. ESLint n'a pas trouvé son fichier de configuration eslint.config.js.",
+   "note": 25,
+   "invention": false,
+   "raison": "La réponse est en français alors que la langue attendue était l'anglais.",
+   "cost": 4.481e-05
+  },
+  {
+   "case": "v3-containers-0011",
+   "lang": "fr",
+   "rung": 0,
+   "answer": "Échec. Dockerfile ligne 4 : instruction inconnue COPPY.",
+   "note": 0,
+   "invention": true,
+   "raison": "L'erreur est à la ligne 3, pas à la ligne 4.",
+   "cost": 4.458e-05
+  },
+  {
+   "case": "v3-network-0024",
+   "lang": "fr",
+   "rung": 0,
+   "answer": "Succès. example.com : 4 paquets reçus, 25 % de perte.",
+   "note": 0,
+   "invention": true,
+   "raison": "La réponse indique 25 % de perte alors que la sortie brute indique 0.0 % de perte.",
+   "cost": 5.176e-05
+  },
+  {
+   "case": "v3-network-transfer-0032",
+   "lang": "fr",
+   "rung": 0,
+   "answer": "Succès. proj synchronisé vers /srv/www.",
+   "note": 0,
+   "invention": true,
+   "raison": "La réponse indique un succès alors que la commande a échoué (code 255, Connection refused).",
+   "cost": 7.73e-05
+  }
+ ]
+}

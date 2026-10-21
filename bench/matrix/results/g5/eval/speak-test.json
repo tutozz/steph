@@ -1,0 +1,151 @@
+{
+ "protocol": "steph (train_system_prompt FR / EN), split test, température 0, 3080 CUDA, --cache-ram 0",
+ "models": {
+  "v10@fr": {
+   "file": "20260930-214743_v10-steph_fr_test.json",
+   "sha256": null,
+   "n": 62,
+   "score": 43.2,
+   "fact_recall": 44.4,
+   "forbidden_rate": 4.8,
+   "over_length_rate": 9.7,
+   "errors": 0
+  },
+  "v10@en": {
+   "file": "20260930-214758_v10-steph_en_test.json",
+   "sha256": null,
+   "n": 62,
+   "score": 47.2,
+   "fact_recall": 47.2,
+   "forbidden_rate": 3.2,
+   "over_length_rate": 4.8,
+   "errors": 0
+  },
+  "a-sft@fr": {
+   "file": "20260930-214815_a-sft-steph_fr_test.json",
+   "sha256": null,
+   "n": 62,
+   "score": 41.5,
+   "fact_recall": 43.3,
+   "forbidden_rate": 4.8,
+   "over_length_rate": 6.5,
+   "errors": 0
+  },
+  "a-sft@en": {
+   "file": "20260930-214829_a-sft-steph_en_test.json",
+   "sha256": null,
+   "n": 62,
+   "score": 48.3,
+   "fact_recall": 48.9,
+   "forbidden_rate": 1.6,
+   "over_length_rate": 4.8,
+   "errors": 0
+  },
+  "b-sft@fr": {
+   "file": "20260930-220953_b-sft-steph_fr_test.json",
+   "sha256": null,
+   "n": 62,
+   "score": 39.9,
+   "fact_recall": 43.3,
+   "forbidden_rate": 8.1,
+   "over_length_rate": 4.8,
+   "errors": 0
+  },
+  "b-sft@en": {
+   "file": "20260930-221009_b-sft-steph_en_test.json",
+   "sha256": null,
+   "n": 62,
+   "score": 49.8,
+   "fact_recall": 51.1,
+   "forbidden_rate": 6.5,
+   "over_length_rate": 4.8,
+   "errors": 0
+  }
+ },
+ "pairs": {
+  "a-sft - v10@fr": {
+   "n": 62,
+   "score": {
+    "a": 41.5,
+    "b": 43.2,
+    "diff": -1.67,
+    "ci95": [
+     -9.33,
+     6.26
+    ]
+   },
+   "forbidden": {
+    "a": 4.8,
+    "b": 4.8,
+    "diff": 0.0,
+    "ci95": [
+     -6.45,
+     6.45
+    ]
+   }
+  },
+  "a-sft - v10@en": {
+   "n": 62,
+   "score": {
+    "a": 48.3,
+    "b": 47.2,
+    "diff": 1.13,
+    "ci95": [
+     -6.99,
+     9.68
+    ]
+   },
+   "forbidden": {
+    "a": 1.6,
+    "b": 3.2,
+    "diff": -1.61,
+    "ci95": [
+     -4.84,
+     0.0
+    ]
+   }
+  },
+  "b-sft - v10@fr": {
+   "n": 62,
+   "score": {
+    "a": 39.9,
+    "b": 43.2,
+    "diff": -3.23,
+    "ci95": [
+     -13.04,
+     6.53
+    ]
+   },
+   "forbidden": {
+    "a": 8.1,
+    "b": 4.8,
+    "diff": 3.23,
+    "ci95": [
+     -3.23,
+     9.68
+    ]
+   }
+  },
+  "b-sft - v10@en": {
+   "n": 62,
+   "score": {
+    "a": 49.8,
+    "b": 47.2,
+    "diff": 2.63,
+    "ci95": [
+     -5.56,
+     11.29
+    ]
+   },
+   "forbidden": {
+    "a": 6.5,
+    "b": 3.2,
+    "diff": 3.23,
+    "ci95": [
+     0.0,
+     8.06
+    ]
+   }
+  }
+ }
+}

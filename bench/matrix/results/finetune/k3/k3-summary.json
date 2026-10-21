@@ -1,0 +1,311 @@
+{
+ "harness": "RTX 3080 du labo, bench_run.py (md5 identique P15/P17), 36 cas granite200 TRAIN_SYSTEM maxc 0, graines 7/42/123, Q4_K_M ; juge A7 d'origine (judge_lib 079468ba), Qwen3.5-9B Q4_K_M, 2 passes, revalidé 6/6 A et 6/6 B avant les juges d'éval ; P17 rebanqué et rejugé sur ce même harnais",
+ "detail_relabel": {
+  "teacher": "Qwen3.5-9B, TEACHER_DETAILS_SYSTEM (label_features.py)",
+  "pilot_same_120_inputs": {
+   "old_labels": "28/119 = 23,5 %",
+   "new_labels": "13/119 = 10,9 %"
+  },
+  "full": {
+   "judged": 777,
+   "invention": 75,
+   "rate_pct": 9.7,
+   "douteux": 81,
+   "erreur": 1
+  },
+  "h3a_reference": "195/759 = 25,7 %"
+ },
+ "corpus": {
+  "fr_summary": {
+   "kept": 1670,
+   "lost_fact": 183,
+   "speak_bench": 17,
+   "unmatched": 3
+  },
+  "en_summary": {
+   "kept": 468,
+   "judge_reject": 16,
+   "invented_line_or_number": 7,
+   "lost_fact": 37,
+   "duplicate": 26,
+   "speak_bench": 4,
+   "bench": 1
+  },
+  "detail": {
+   "kept": 606,
+   "judge_reject": 75,
+   "lost_fact": 85,
+   "duplicate": 17,
+   "speak_bench": 10,
+   "bench": 1
+  },
+  "start": {
+   "kept": 284,
+   "lost_fact": 54,
+   "duplicate": 37,
+   "judge_reject": 2
+  },
+  "progress": {
+   "kept": 127,
+   "speak_bench": 13
+  },
+  "flux": {
+   "kept": 12
+  },
+  "summary_residual": {
+   "kept": 3,
+   "lost_fact": 2
+  },
+  "qa": {
+   "kept": 153,
+   "lost_fact": 10,
+   "speak_bench": 22,
+   "bench": 1
+  },
+  "by_lang": {
+   "fr": 2855,
+   "en": 468
+  },
+  "train": 3143,
+  "val": 180
+ },
+ "pairs": {
+  "a": {
+   "verdicts": {
+    "ok": 1421,
+    "douteux": 109,
+    "invention": 139
+   },
+   "train_pairs": 122,
+   "val_pairs": 17,
+   "dpo_epochs": 7.5,
+   "steps_per_epoch": 8
+  },
+  "b": {
+   "verdicts": {
+    "ok": 1754,
+    "douteux": 163,
+    "invention": 208
+   },
+   "train_pairs": 190,
+   "val_pairs": 18,
+   "dpo_epochs": 5.0,
+   "steps_per_epoch": 12
+  },
+  "note": "même nombre de pas que P17 (60), 12 époques au plus"
+ },
+ "models": {
+  "p17": {
+   "v2": 87.7,
+   "holdout": 80.6,
+   "summary": 86.6,
+   "spoken": 90.5,
+   "qa0": [
+    100,
+    100,
+    100
+   ],
+   "inv": [
+    6,
+    5,
+    7
+   ],
+   "inv_ground": [
+    6,
+    4,
+    5
+   ],
+   "speak_dev_fr": [
+    21.4,
+    6
+   ],
+   "speak_dev_en": [
+    41.8,
+    1
+   ],
+   "test_std_fr": 37.5,
+   "test_std_en": 44.3,
+   "test_steph_fr": 38.5,
+   "test_steph_en": 39.6,
+   "lang_steph": [
+    66.1,
+    56.5
+   ],
+   "lang_std": [
+    64.5,
+    54.8
+   ]
+  },
+  "k3_a_sft": {
+   "v2": 82.9,
+   "holdout": 72.2,
+   "summary": 81.3,
+   "spoken": 85.6,
+   "qa0": [
+    100,
+    100,
+    100
+   ],
+   "inv": [
+    4,
+    4,
+    5
+   ],
+   "inv_ground": [
+    4,
+    3,
+    3
+   ],
+   "speak_dev_fr": [
+    33.5,
+    5
+   ],
+   "speak_dev_en": [
+    37.5,
+    1
+   ],
+   "test_std_fr": 39.0,
+   "test_std_en": 42.9,
+   "test_steph_fr": 41.3,
+   "test_steph_en": 42.8,
+   "lang_steph": [
+    66.1,
+    45.2
+   ],
+   "lang_std": [
+    71.0,
+    53.2
+   ]
+  },
+  "k3_a_dpo": {
+   "v2": 84.3,
+   "holdout": 75.6,
+   "summary": 84.9,
+   "spoken": 87.0,
+   "qa0": [
+    0,
+    100,
+    0
+   ],
+   "inv": [
+    4,
+    4,
+    4
+   ],
+   "inv_ground": [
+    3,
+    3,
+    3
+   ],
+   "speak_dev_fr": [
+    26.8,
+    6
+   ],
+   "speak_dev_en": [
+    26.2,
+    4
+   ],
+   "test_std_fr": 38.2,
+   "test_std_en": 48.2,
+   "test_steph_fr": 37.6,
+   "test_steph_en": 45.0,
+   "lang_steph": [
+    80.6,
+    54.8
+   ],
+   "lang_std": [
+    69.4,
+    61.3
+   ]
+  },
+  "k3_b_sft": {
+   "v2": 79.0,
+   "holdout": 65.6,
+   "summary": 77.2,
+   "spoken": 81.8,
+   "qa0": [
+    100,
+    100,
+    100
+   ],
+   "inv": [
+    5,
+    5,
+    4
+   ],
+   "inv_ground": [
+    4,
+    4,
+    3
+   ],
+   "speak_dev_fr": [
+    31.2,
+    5
+   ],
+   "speak_dev_en": [
+    33.9,
+    3
+   ],
+   "test_std_fr": 42.4,
+   "test_std_en": 46.7,
+   "test_steph_fr": 46.9,
+   "test_steph_en": 44.5,
+   "lang_steph": [
+    67.7,
+    59.7
+   ],
+   "lang_std": [
+    64.5,
+    69.4
+   ]
+  },
+  "k3_b_dpo": {
+   "v2": 75.0,
+   "holdout": 57.8,
+   "summary": 75.8,
+   "spoken": 77.8,
+   "qa0": [
+    0,
+    0,
+    0
+   ],
+   "inv": [
+    4,
+    4,
+    4
+   ],
+   "inv_ground": [
+    2,
+    2,
+    3
+   ],
+   "speak_dev_fr": [
+    28.0,
+    2
+   ],
+   "speak_dev_en": [
+    36.3,
+    4
+   ],
+   "test_std_fr": 41.7,
+   "test_std_en": 50.5,
+   "test_steph_fr": 39.3,
+   "test_steph_en": 39.5,
+   "lang_steph": [
+    62.9,
+    53.2
+   ],
+   "lang_std": [
+    59.7,
+    62.9
+   ]
+  }
+ },
+ "legend": "inv : inventions/36 par graine de banc ; speak_dev_* : [score %, inventions/14] sur les 14 cas non résolus de P14, protocole steph (TRAIN_SYSTEM FR, TRAIN_SYSTEM_EN EN) ; lang_* : [FR, EN] % de bonne langue, split test, classifieur trigramme L2p",
+ "gguf_sha256": {
+  "k3-a-sft": "b0f5b7b174abc83b98bf0c782c4b034edc281ad17b390d65da423e0b9e14b5a5",
+  "k3-a-dpo": "c0fd7afd71dfba2394e2173e0ffc3e12dc826dd2f1c334099d7c54ee43ee6914",
+  "k3-b-sft": "25e6b97dfd8e8f02a490c7d18711120e6b602ada137e077509c1e7ff8f477760",
+  "k3-b-dpo": "151f356a3f69cd454cf6b04fd924021ef854b8b96cb85b7bfc9a07c39d20fbc1"
+ }
+}

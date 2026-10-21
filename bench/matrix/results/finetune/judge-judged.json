@@ -1,0 +1,1180 @@
+{
+  "meta": {
+    "juge": "Qwen3.5-9B-Q4_K_M sur rtx3060 (RTX 3060, llama-server Vulkan b11205, jinja, enable_thinking=false, température 0, 4 slots x 8192) ; même prompt que les passes 1 et 2 (judge_lib.py inchangé)",
+    "methode": "2 passes par cas ; invention si les 2 passes s'accordent, douteux si une seule.",
+    "validation_juge": "6/6 cas de contrôle corrects sur passe A et passe B, sur ce même serveur juste avant le run",
+    "plancher": "au plus 1 cas sur 36 avec un fait inventé",
+    "contexte": "modèles entraînés sur le corpus filtré au juge (mix-judged, train 1771, val 102) ; une seule graine de banc par modèle (b42 pour les fichiers séparés, bench_seed 1 pour le fichier combiné Qwen)",
+    "absent": "Gemma 3 270M s7 (rtx3060) : conversion GGUF en échec dans le pipeline, aucune sortie de banc"
+  },
+  "par_modele": {
+    "judged-qwen3.5-0.8b-s42.json": {
+      "label": "Qwen3.5 0.8B jugé s42 (Q4_K_M, rtx3060, graine de banc 1)",
+      "n_total": 36,
+      "n_hors_qa": 33,
+      "invention_sur_36": 2,
+      "invention_sur_33": 1,
+      "douteux_sur_36": 2,
+      "douteux_sur_33": 2,
+      "inventions_discutables": 0,
+      "erreurs": 0,
+      "plancher_ok_36": false,
+      "categories_inventions": {
+        "ligne": 1,
+        "nombre": 1,
+        "statut": 0,
+        "nom": 0,
+        "autre": 0
+      },
+      "cas_inventions": [
+        {
+          "id": "fx06@1500",
+          "kind": "summary",
+          "phrase": "Échec. main ligne 21 : expected expression before ; token.",
+          "categorie": "ligne",
+          "note": "colonne 21 prise pour la ligne (<stdin>:1:21)",
+          "discutable": false,
+          "pass_A": [
+            "main",
+            "ligne 21"
+          ],
+          "pass_B": [
+            "main",
+            "ligne 21"
+          ]
+        },
+        {
+          "id": "qa2",
+          "kind": "qa",
+          "phrase": "Python 3.11",
+          "categorie": "nombre",
+          "note": "version Python fabriquée, aucune commande Python dans l'historique",
+          "discutable": false,
+          "pass_A": [
+            "Python 3.11"
+          ],
+          "pass_B": [
+            "Python 3.11"
+          ]
+        }
+      ],
+      "cas_douteux": [
+        {
+          "id": "fx22@1500",
+          "kind": "summary",
+          "phrase": "9 conteneurs : shopapp_api, nginx, hashic.",
+          "pass_A": [
+            "shopapp_nginx_admin",
+            "shopapp_vault",
+            "iso-builder"
+          ],
+          "pass_B": []
+        },
+        {
+          "id": "fx27@1500",
+          "kind": "summary",
+          "phrase": "Échec. Header.tsx ligne 42 : propriété titel manquant sur type Props.",
+          "pass_A": [
+            "Header.tsx"
+          ],
+          "pass_B": []
+        }
+      ]
+    },
+    "judged-granite-350m-s42-Q8_0-b42.json": {
+      "label": "Granite 350M jugé s42 (Q8_0, 3080, banc b42)",
+      "n_total": 36,
+      "n_hors_qa": 33,
+      "invention_sur_36": 7,
+      "invention_sur_33": 5,
+      "douteux_sur_36": 5,
+      "douteux_sur_33": 5,
+      "inventions_discutables": 1,
+      "erreurs": 0,
+      "plancher_ok_36": false,
+      "categories_inventions": {
+        "ligne": 0,
+        "nombre": 2,
+        "statut": 0,
+        "nom": 2,
+        "autre": 3
+      },
+      "cas_inventions": [
+        {
+          "id": "fx02@1500",
+          "kind": "summary",
+          "phrase": "Succès. Un commit sur master, 15 fichiers non suivus : python-version, README.md, bench/, pyproject.toml, src/.",
+          "categorie": "nombre",
+          "note": "« Un commit » pour « Aucun commit », 15 fichiers pour 7",
+          "discutable": false,
+          "pass_A": [
+            "Un commit sur master",
+            "15 fichiers non suivus",
+            "pyproject.toml",
+            "src/"
+          ],
+          "pass_B": [
+            "Un commit sur master",
+            "15 fichiers non suivus",
+            "bench/"
+          ]
+        },
+        {
+          "id": "fx13@1500",
+          "kind": "summary",
+          "phrase": "Devbox 7.0.9-202.fc44.x86_64, X86_64, Ubuntu 22.04 LTS.",
+          "categorie": "nom",
+          "note": "« Ubuntu 22.04 LTS » inventé, le noyau est fc44",
+          "discutable": false,
+          "pass_A": [
+            "Ubuntu 22.04 LTS"
+          ],
+          "pass_B": [
+            "Ubuntu 22.04 LTS"
+          ]
+        },
+        {
+          "id": "fx19@1500",
+          "kind": "summary",
+          "phrase": "10 éléments : OLD_SHOPAPP 12G, install-iso 7.9G, shopapp 2.4G.",
+          "categorie": "nom",
+          "note": "« install-iso » pour « installer-iso »",
+          "discutable": false,
+          "pass_A": [
+            "nom du fichier 'install-iso' au lieu de 'installer-iso'"
+          ],
+          "pass_B": [
+            "install-iso"
+          ]
+        },
+        {
+          "id": "fx27@1500",
+          "kind": "summary",
+          "phrase": "Échec. Header.tsx ligne 42 : titre inexistant, TypeScript.",
+          "categorie": "autre",
+          "note": "« titre inexistant » pour « propriété titel absente, utiliser title »",
+          "discutable": false,
+          "pass_A": [
+            "Header.tsx",
+            "titre inexistant"
+          ],
+          "pass_B": [
+            "Header.tsx"
+          ]
+        },
+        {
+          "id": "fx24@1500",
+          "kind": "summary",
+          "phrase": "Succès. 24,3 Mo réceptionnés en 6s. Curl_7.88.1-10+deb12u8 installé sur 7.88.1-10+deb12u7.",
+          "categorie": "autre",
+          "note": "faux positif probable : « curl u8 installé sur u7 » est fidèle à « Dépaquetage de curl (u8) sur (u7) »",
+          "discutable": true,
+          "pass_A": [
+            "Curl_7.88.1-10+deb12u8 installé sur 7.88.1-10+deb12u7"
+          ],
+          "pass_B": [
+            "Curl_7.88.1-10+deb12u8 installé sur 7.88.1-10+deb12u7"
+          ]
+        },
+        {
+          "id": "qa0",
+          "kind": "qa",
+          "phrase": "Échec. src/components/Header.tsx ligne 42 : Titre inexistant.",
+          "categorie": "autre",
+          "note": "« Titre inexistant » : cause reformulée à côté du sens réel",
+          "discutable": false,
+          "pass_A": [
+            "Titre inexistant"
+          ],
+          "pass_B": [
+            "Titre inexistant"
+          ]
+        },
+        {
+          "id": "qa2",
+          "kind": "qa",
+          "phrase": "Python 3.11 installé.",
+          "categorie": "nombre",
+          "note": "version Python fabriquée",
+          "discutable": false,
+          "pass_A": [
+            "Python 3.11 installé"
+          ],
+          "pass_B": [
+            "Python 3.11"
+          ]
+        }
+      ],
+      "cas_douteux": [
+        {
+          "id": "fx05@1500",
+          "kind": "summary",
+          "phrase": "Ping 127.0.0.1 : 3 paquets envoyés, 3 reçus, 0 perte, temps moyen 0.024 ms.",
+          "pass_A": [],
+          "pass_B": [
+            "0 perte"
+          ]
+        },
+        {
+          "id": "fx06@1500",
+          "kind": "summary",
+          "phrase": "Échec. main ligne 1 : expected expression before ';' token.",
+          "pass_A": [
+            "main"
+          ],
+          "pass_B": []
+        },
+        {
+          "id": "fx09@1500",
+          "kind": "summary",
+          "phrase": "8 éléments : def __init__(self, cfg), def healthy(self), def ensure_server.",
+          "pass_A": [
+            "8 éléments : def __init__(self, cfg), def healthy(self), def ensure_server."
+          ],
+          "pass_B": []
+        },
+        {
+          "id": "fx21@1500",
+          "kind": "summary",
+          "phrase": "Échec. /tmp/x.tgz : non existent, tar : source inconnue.",
+          "pass_A": [],
+          "pass_B": [
+            "/tmp/x.tgz : non existent",
+            "tar : source inconnue"
+          ]
+        },
+        {
+          "id": "fx22@1500",
+          "kind": "summary",
+          "phrase": "9 conteneurs : shopapp_api, shopapp_nginx_admin, shopapp_vault.",
+          "pass_A": [
+            "shopapp_api",
+            "shopapp_nginx_admin",
+            "shopapp_vault"
+          ],
+          "pass_B": []
+        }
+      ]
+    },
+    "judged-granite-350m-s42-Q4_K_M-b42.json": {
+      "label": "Granite 350M jugé s42 (Q4_K_M, 3080, banc b42)",
+      "n_total": 36,
+      "n_hors_qa": 33,
+      "invention_sur_36": 7,
+      "invention_sur_33": 6,
+      "douteux_sur_36": 3,
+      "douteux_sur_33": 3,
+      "inventions_discutables": 0,
+      "erreurs": 0,
+      "plancher_ok_36": false,
+      "categories_inventions": {
+        "ligne": 1,
+        "nombre": 2,
+        "statut": 0,
+        "nom": 1,
+        "autre": 3
+      },
+      "cas_inventions": [
+        {
+          "id": "fx02@1500",
+          "kind": "summary",
+          "phrase": "Succès. Un commit, 15 fichiers non suivus : python-version, README.md, bench, pyproject.toml, src, uv.lock, vendor.",
+          "categorie": "nombre",
+          "note": "« Un commit » pour « Aucun commit », 15 = lignes affichées et non fichiers",
+          "discutable": false,
+          "pass_A": [
+            "Un commit"
+          ],
+          "pass_B": [
+            "Un commit"
+          ]
+        },
+        {
+          "id": "fx06@1500",
+          "kind": "summary",
+          "phrase": "Échec. main ligne 21 : expecteur avant ; token.",
+          "categorie": "ligne",
+          "note": "colonne 21 prise pour la ligne",
+          "discutable": false,
+          "pass_A": [
+            "main",
+            "ligne 21",
+            "expecteur avant ; token"
+          ],
+          "pass_B": [
+            "main",
+            "ligne 21",
+            "expecteur avant ; token"
+          ]
+        },
+        {
+          "id": "fx10@1500",
+          "kind": "summary",
+          "phrase": "Échec. Curl : nonexistent.invalid résolue-tout.",
+          "categorie": "autre",
+          "note": "cause déformée (« résolue-tout ») pour « Could not resolve host »",
+          "discutable": false,
+          "pass_A": [
+            "Curl : nonexistent.invalid résolue-tout"
+          ],
+          "pass_B": [
+            "résolue-tout"
+          ]
+        },
+        {
+          "id": "fx19@1500",
+          "kind": "summary",
+          "phrase": "10 éléments : OLD_SHOPAPP 12G, install-iso 7.9G, shopapp 2.4G.",
+          "categorie": "nom",
+          "note": "« install-iso » pour « installer-iso »",
+          "discutable": false,
+          "pass_A": [
+            "nom du fichier 'install-iso' au lieu de 'installer-iso'"
+          ],
+          "pass_B": [
+            "install-iso"
+          ]
+        },
+        {
+          "id": "fx25@1500",
+          "kind": "summary",
+          "phrase": "Échec. apt install nginx : lock frontend vide, autres utilisateurs.",
+          "categorie": "autre",
+          "note": "cause reformulée à côté (« lock frontend vide, autres utilisateurs »)",
+          "discutable": false,
+          "pass_A": [
+            "lock frontend vide"
+          ],
+          "pass_B": [
+            "lock frontend vide"
+          ]
+        },
+        {
+          "id": "fx27@1500",
+          "kind": "summary",
+          "phrase": "Échec. Header.tsx ligne 42 : titl échec TS2339.",
+          "categorie": "autre",
+          "note": "cause tronquée et déformée (« titl échec TS2339 »)",
+          "discutable": false,
+          "pass_A": [
+            "titl échec TS2339"
+          ],
+          "pass_B": [
+            "titl",
+            "échec TS2339"
+          ]
+        },
+        {
+          "id": "qa2",
+          "kind": "qa",
+          "phrase": "Python 3.11 installé.",
+          "categorie": "nombre",
+          "note": "version Python fabriquée",
+          "discutable": false,
+          "pass_A": [
+            "Python 3.11 installé"
+          ],
+          "pass_B": [
+            "Python 3.11"
+          ]
+        }
+      ],
+      "cas_douteux": [
+        {
+          "id": "fx05@1500",
+          "kind": "summary",
+          "phrase": "Ping 127.0.0.1 : 3 envoyés, 3 récisés, perte zéro, temps moyen 0.024 ms.",
+          "pass_A": [],
+          "pass_B": [
+            "3 récisés"
+          ]
+        },
+        {
+          "id": "fx09@1500",
+          "kind": "summary",
+          "phrase": "8 éléments : def __init__(self, cfg), def healthy, ensure_server.",
+          "pass_A": [
+            "def __init__(self, cfg) : le contexte indique 'def __init__(self, cfg: Config):', l'argument 'cfg' est incomplet sans le type 'Config'"
+          ],
+          "pass_B": []
+        },
+        {
+          "id": "fx22@1500",
+          "kind": "summary",
+          "phrase": "9 conteneurs : shopapp_api, nginx, postgres.",
+          "pass_A": [
+            "shopapp_nginx_admin",
+            "shopapp_vault",
+            "shopapp-client-webapp",
+            "iso-builder"
+          ],
+          "pass_B": []
+        }
+      ]
+    },
+    "judged-granite-350m-s7-Q8_0-b42.json": {
+      "label": "Granite 350M jugé s7 (Q8_0, a1000, banc b42)",
+      "n_total": 36,
+      "n_hors_qa": 33,
+      "invention_sur_36": 9,
+      "invention_sur_33": 7,
+      "douteux_sur_36": 5,
+      "douteux_sur_33": 5,
+      "inventions_discutables": 0,
+      "erreurs": 0,
+      "plancher_ok_36": false,
+      "categories_inventions": {
+        "ligne": 1,
+        "nombre": 2,
+        "statut": 0,
+        "nom": 4,
+        "autre": 2
+      },
+      "cas_inventions": [
+        {
+          "id": "fx02@1500",
+          "kind": "summary",
+          "phrase": "Succès. Un commit, 3 fichiers : python-version, README.md, bench/.",
+          "categorie": "nombre",
+          "note": "« Un commit » pour « Aucun commit », 3 fichiers pour 7",
+          "discutable": false,
+          "pass_A": [
+            "Un commit",
+            "3 fichiers"
+          ],
+          "pass_B": [
+            "Un commit",
+            "3 fichiers"
+          ]
+        },
+        {
+          "id": "fx06@1500",
+          "kind": "summary",
+          "phrase": "Échec. main ligne 21 : expect expression before semicolon.",
+          "categorie": "ligne",
+          "note": "colonne 21 prise pour la ligne",
+          "discutable": false,
+          "pass_A": [
+            "main",
+            "ligne 21",
+            "expect expression before semicolon"
+          ],
+          "pass_B": [
+            "main",
+            "ligne 21",
+            "expect expression before semicolon"
+          ]
+        },
+        {
+          "id": "fx09@1500",
+          "kind": "summary",
+          "phrase": "8 éléments : init_cfg, healthy, ensure_server.",
+          "categorie": "nom",
+          "note": "« init_cfg » : nom de fonction inventé",
+          "discutable": false,
+          "pass_A": [
+            "init_cfg",
+            "healthy",
+            "ensure_server"
+          ],
+          "pass_B": [
+            "init_cfg",
+            "healthy",
+            "ensure_server"
+          ]
+        },
+        {
+          "id": "fx13@1500",
+          "kind": "summary",
+          "phrase": "Debian 7.0, X86_64, CPU m5a-t75d.",
+          "categorie": "nom",
+          "note": "« Debian 7.0 » et « CPU m5a-t75d » inventés",
+          "discutable": false,
+          "pass_A": [
+            "Debian 7.0",
+            "CPU m5a-t75d"
+          ],
+          "pass_B": [
+            "Debian",
+            "CPU m5a-t75d"
+          ]
+        },
+        {
+          "id": "fx19@1500",
+          "kind": "summary",
+          "phrase": "10 éléments : OLD_SHOPAPP 12G, install-iso 7.9G, shopapp 2.4G.",
+          "categorie": "nom",
+          "note": "« install-iso » pour « installer-iso »",
+          "discutable": false,
+          "pass_A": [
+            "nom du fichier 'install-iso' au lieu de 'installer-iso'"
+          ],
+          "pass_B": [
+            "install-iso"
+          ]
+        },
+        {
+          "id": "fx27@1500",
+          "kind": "summary",
+          "phrase": "Échec. Header.tsx ligne 42 : Propiedad \"titel\" no definida, debe ser titlo.",
+          "categorie": "autre",
+          "note": "phrase en espagnol, « titlo » inventé",
+          "discutable": false,
+          "pass_A": [
+            "Propiedad \"titel\" no definida, debe ser titlo"
+          ],
+          "pass_B": [
+            "Propiedad \"titel\" no definida, debe ser titlo"
+          ]
+        },
+        {
+          "id": "fx29@1500",
+          "kind": "summary",
+          "phrase": "GPU NVIDIA GA106, Ethernet RTL8111/8168/8411, VGA compatible GBA106 GPU.",
+          "categorie": "nom",
+          "note": "« GBA106 » pour GA106",
+          "discutable": false,
+          "pass_A": [
+            "VGA compatible GBA106 GPU"
+          ],
+          "pass_B": [
+            "VGA compatible GBA106 GPU"
+          ]
+        },
+        {
+          "id": "qa0",
+          "kind": "qa",
+          "phrase": "Échec. Header.tsx ligne 42 : Titre inexistant.",
+          "categorie": "autre",
+          "note": "« Titre inexistant » : cause reformulée à côté du sens réel",
+          "discutable": false,
+          "pass_A": [
+            "Header.tsx",
+            "Titre inexistant"
+          ],
+          "pass_B": [
+            "Titre inexistant"
+          ]
+        },
+        {
+          "id": "qa2",
+          "kind": "qa",
+          "phrase": "Python 3.x installé.",
+          "categorie": "nombre",
+          "note": "version Python « 3.x » fabriquée",
+          "discutable": false,
+          "pass_A": [
+            "Python 3.x installé"
+          ],
+          "pass_B": [
+            "Python 3.x"
+          ]
+        }
+      ],
+      "cas_douteux": [
+        {
+          "id": "fx05@1500",
+          "kind": "summary",
+          "phrase": "Ping 127.0.0.1 : 3 paquets envoyés, 3 reçus, 0 perte, temps moyen 0.024 ms.",
+          "pass_A": [],
+          "pass_B": [
+            "0 perte"
+          ]
+        },
+        {
+          "id": "fx12@1500",
+          "kind": "summary",
+          "phrase": "6 éléments : bench, pyproject.toml, README.md, src.",
+          "pass_A": [
+            "README.md",
+            "uv.lock",
+            "vendor"
+          ],
+          "pass_B": []
+        },
+        {
+          "id": "fx22@1500",
+          "kind": "summary",
+          "phrase": "9 conteneurs : shopapp_api, shopapp_nginx_admin, shopapp_vault.",
+          "pass_A": [
+            "shopapp_api",
+            "shopapp_nginx_admin",
+            "shopapp_vault"
+          ],
+          "pass_B": []
+        },
+        {
+          "id": "fx21@1500",
+          "kind": "summary",
+          "phrase": "Échec. /tmp/x.tgz : non existent, tar : prefixe zéro point.",
+          "pass_A": [
+            "Échec. /tmp/x.tgz : non existent",
+            "tar : prefixe zéro point."
+          ],
+          "pass_B": []
+        },
+        {
+          "id": "df_proxmox@1500",
+          "kind": "summary",
+          "phrase": "Racine 8.9G libres sur 94G, Backup hdd 134G libres sur 442G, Backup à 70 %.",
+          "pass_A": [
+            "Backup hdd",
+            "Backup à 70 %"
+          ],
+          "pass_B": []
+        }
+      ]
+    },
+    "judged-gemma-270m-s42-Q8_0-b42.json": {
+      "label": "Gemma 3 270M jugé s42 (Q8_0, 3080, banc b42)",
+      "n_total": 36,
+      "n_hors_qa": 33,
+      "invention_sur_36": 16,
+      "invention_sur_33": 13,
+      "douteux_sur_36": 1,
+      "douteux_sur_33": 1,
+      "inventions_discutables": 3,
+      "erreurs": 0,
+      "plancher_ok_36": false,
+      "categories_inventions": {
+        "ligne": 1,
+        "nombre": 2,
+        "statut": 0,
+        "nom": 5,
+        "autre": 8
+      },
+      "cas_inventions": [
+        {
+          "id": "fx00@1500",
+          "kind": "summary",
+          "phrase": "Abrt, adjtime, aliases, chromium, cifs-utils, cni, cockpit, containerd, containers, crutchwords, credstore, cron.d",
+          "categorie": "nom",
+          "note": "« crutchwords » absent de /etc",
+          "discutable": false,
+          "pass_A": [
+            "crutchwords"
+          ],
+          "pass_B": [
+            "crutchwords"
+          ]
+        },
+        {
+          "id": "fx02@1500",
+          "kind": "summary",
+          "phrase": "Sous master, zéro commit, fichiers manquants dans README.md, points-virgules dans src.",
+          "categorie": "autre",
+          "note": "« fichiers manquants dans README.md, points-virgules dans src » inventés",
+          "discutable": false,
+          "pass_A": [
+            "fichiers manquants dans README.md",
+            "points-virgules dans src"
+          ],
+          "pass_B": [
+            "zéro commit",
+            "fichiers manquants dans README.md",
+            "points-virgules dans src"
+          ]
+        },
+        {
+          "id": "fx04@1500",
+          "kind": "summary",
+          "phrase": "Échec. Key non trouvé ligne 1 : KeyError key on variable None.",
+          "categorie": "autre",
+          "note": "« KeyError key on variable None » ; ligne 1 correcte, reste discutable (même cas limite qu'en passe 1)",
+          "discutable": true,
+          "pass_A": [
+            "Key non trouvé ligne 1",
+            "KeyError key on variable None"
+          ],
+          "pass_B": [
+            "Key non trouvé",
+            "variable None"
+          ]
+        },
+        {
+          "id": "fx06@1500",
+          "kind": "summary",
+          "phrase": "Échec. gcc compilé ligne 1 : expected expression before ; token.",
+          "categorie": "autre",
+          "note": "« gcc compilé » ; ligne 1 correcte, seule la tournure est reprochée",
+          "discutable": true,
+          "pass_A": [
+            "gcc compilé ligne 1"
+          ],
+          "pass_B": [
+            "gcc compilé"
+          ]
+        },
+        {
+          "id": "fx09@1500",
+          "kind": "summary",
+          "phrase": "8 éléments : def __init__, healthy, ensure_server, _pid_alive, stop_server, _payload, streams.",
+          "categorie": "nom",
+          "note": "« streams » absent de la liste",
+          "discutable": false,
+          "pass_A": [
+            "streams"
+          ],
+          "pass_B": [
+            "streams"
+          ]
+        },
+        {
+          "id": "fx08@1500",
+          "kind": "summary",
+          "phrase": "Succès. PipeWire Multimedia Service actif, PID 7126 active, mémoire 6.7M, temps de réponse 250 ms.",
+          "categorie": "nombre",
+          "note": "« temps de réponse 250 ms » absent de la sortie",
+          "discutable": false,
+          "pass_A": [
+            "temps de réponse 250 ms"
+          ],
+          "pass_B": [
+            "temps de réponse 250 ms"
+          ]
+        },
+        {
+          "id": "fx19@1500",
+          "kind": "summary",
+          "phrase": "10 éléments : OLD_SHOPAPP 12G, fitness-app 2G, notes-backup 2G.",
+          "categorie": "nom",
+          "note": "« fitness-app », « notes-backup » inventés",
+          "discutable": false,
+          "pass_A": [
+            "fitness-app 2G",
+            "notes-backup 2G"
+          ],
+          "pass_B": [
+            "fitness-app 2G",
+            "notes-backup 2G"
+          ]
+        },
+        {
+          "id": "fx21@1500",
+          "kind": "summary",
+          "phrase": "Échec. /nonexistent : stat impossible, aucun fichier ou dossier zéro.",
+          "categorie": "autre",
+          "note": "« aucun fichier ou dossier zéro » : fragment sans source",
+          "discutable": false,
+          "pass_A": [
+            "aucun fichier ou dossier zéro"
+          ],
+          "pass_B": [
+            "zéro"
+          ]
+        },
+        {
+          "id": "fx07@1500",
+          "kind": "summary",
+          "phrase": "Mémoire 31G total, 25G disponibles. Swap 8G total, 72Ki disponibles.",
+          "categorie": "nombre",
+          "note": "25G disponibles au lieu de 24Gi ; 72Ki utilisés donnés comme disponibles",
+          "discutable": false,
+          "pass_A": [
+            "25G disponibles (la sortie indique 24Gi disponibles)",
+            "72Ki disponibles (la sortie indique 72Ki disponibles, mais le contexte ne précise pas l'état 'disponibles' pour le swap, seulement les colonnes total/used/free, et l'assistant affirme une disponibilité spécifique qui n'est pas explicitement confirmée par le terme 'available' dans la ligne Swap du contexte qui montre 8,0Gi free, pas 72Ki free. En fait, la ligne Swap montre: total 8,0Gi, used 72Ki, free 8,0Gi. L'assistant dit '72Ki disponibles', ce qui est faux car 72Ki est 'used'. C'est une inversion de fait ou une invention de l'état 'disponibles' pour la valeur utilisée."
+          ],
+          "pass_B": [
+            "25G disponibles (la sortie indique 24Gi disponibles)",
+            "72Ki disponibles (la sortie indique 72Ki utilisés, pas disponibles)"
+          ]
+        },
+        {
+          "id": "fx24@1500",
+          "kind": "summary",
+          "phrase": "Succès. 12 paquets mis à jour, 0 extras en supprimant.",
+          "categorie": "autre",
+          "note": "« 0 extras en supprimant » pour « 0 à enlever » : reformulation maladroite, discutable",
+          "discutable": true,
+          "pass_A": [
+            "0 extras en supprimant"
+          ],
+          "pass_B": [
+            "0 extras en supprimant"
+          ]
+        },
+        {
+          "id": "fx27@1500",
+          "kind": "summary",
+          "phrase": "Échec. Header.tsx ligne 42 : tinsel non trouvé sur Props.",
+          "categorie": "nom",
+          "note": "« tinsel » pour « titel »",
+          "discutable": false,
+          "pass_A": [
+            "tinsel non trouvé sur Props"
+          ],
+          "pass_B": [
+            "tinsel",
+            "Header.tsx"
+          ]
+        },
+        {
+          "id": "fx28@1500",
+          "kind": "summary",
+          "phrase": "Échec. push : refs travail source, réstring.",
+          "categorie": "autre",
+          "note": "cause du rejet git fabriquée (« refs travail source, réstring »)",
+          "discutable": false,
+          "pass_A": [
+            "refs travail source",
+            "réstring"
+          ],
+          "pass_B": [
+            "refs travail source",
+            "réstring"
+          ]
+        },
+        {
+          "id": "qa1",
+          "kind": "qa",
+          "phrase": "Échec. src/components/Header.tsx ligne 42 : titel non trouvé.",
+          "categorie": "autre",
+          "note": "hors sujet : erreur de build au lieu de la place disque",
+          "discutable": false,
+          "pass_A": [
+            "Échec"
+          ],
+          "pass_B": [
+            "titel non trouvé"
+          ]
+        },
+        {
+          "id": "qa0",
+          "kind": "qa",
+          "phrase": "Échec. src/components/Header.tsx ligne TS2339 propitel inexistant.",
+          "categorie": "ligne",
+          "note": "« ligne TS2339 » : code d'erreur pris pour un numéro de ligne",
+          "discutable": false,
+          "pass_A": [
+            "src/components/Header.tsx ligne TS2339",
+            "propitel inexistant"
+          ],
+          "pass_B": [
+            "ligne TS2339",
+            "propitel"
+          ]
+        },
+        {
+          "id": "qa2",
+          "kind": "qa",
+          "phrase": "Échec. src/components/Header.tsx ligne 42 : titel non trouvé.",
+          "categorie": "autre",
+          "note": "hors sujet : erreur de build au lieu de la version Python",
+          "discutable": false,
+          "pass_A": [
+            "titel non trouvé"
+          ],
+          "pass_B": [
+            "titel non trouvé"
+          ]
+        },
+        {
+          "id": "fx30@1500",
+          "kind": "summary",
+          "phrase": "En0 192.168.1.62, en0 192.168.1.62, en0 192.168.1.62.",
+          "categorie": "nom",
+          "note": "en0 répété trois fois, utun4 omis",
+          "discutable": false,
+          "pass_A": [
+            "Mention de 'en0 192.168.1.62' répété trois fois alors que la sortie originale ne contient cette ligne qu'une seule fois",
+            "Absence de mention de 'utun4 100.64.0.11' présent dans la sortie originale"
+          ],
+          "pass_B": [
+            "répétition de l'entrée 'en0 192.168.1.62' trois fois au lieu d'une seule occurrence",
+            "absence de l'interface 'utun4' et de son adresse IP '100.64.0.11'"
+          ]
+        }
+      ],
+      "cas_douteux": [
+        {
+          "id": "fx22@1500",
+          "kind": "summary",
+          "phrase": "9 conteneurs : shopapp_api, shopapp_nginx_admin, shopapp_vault.",
+          "pass_A": [
+            "shopapp_api",
+            "shopapp_nginx_admin",
+            "shopapp_vault"
+          ],
+          "pass_B": []
+        }
+      ]
+    },
+    "judged-granite-350m-s7-Q4_K_M-b42.json": {
+      "label": "Granite 350M jugé s7 (Q4_K_M, a1000, banc b42)",
+      "n_total": 36,
+      "n_hors_qa": 33,
+      "invention_sur_36": 16,
+      "invention_sur_33": 15,
+      "douteux_sur_36": 1,
+      "douteux_sur_33": 1,
+      "inventions_discutables": 0,
+      "erreurs": 0,
+      "plancher_ok_36": false,
+      "categories_inventions": {
+        "ligne": 1,
+        "nombre": 6,
+        "statut": 1,
+        "nom": 3,
+        "autre": 5
+      },
+      "cas_inventions": [
+        {
+          "id": "fx02@1500",
+          "kind": "summary",
+          "phrase": "Succès. Un commit, 15 fichiers non suivus : python-version, README.md, bench, pyproject.toml, src/.",
+          "categorie": "nombre",
+          "note": "« Un commit » pour « Aucun commit », 15 fichiers pour 7",
+          "discutable": false,
+          "pass_A": [
+            "Un commit",
+            "15 fichiers non suivus"
+          ],
+          "pass_B": [
+            "Un commit",
+            "15 fichiers non suivus",
+            "python-version",
+            "README.md",
+            "bench",
+            "pyproject.toml",
+            "src/"
+          ]
+        },
+        {
+          "id": "fx07@1500",
+          "kind": "summary",
+          "phrase": "Total 31G, disponible 26G. Swap total 8G, libre 8G.",
+          "categorie": "nombre",
+          "note": "26G disponibles au lieu de 24Gi",
+          "discutable": false,
+          "pass_A": [
+            "disponible 26G"
+          ],
+          "pass_B": [
+            "disponible 26G"
+          ]
+        },
+        {
+          "id": "fx06@1500",
+          "kind": "summary",
+          "phrase": "Échec. main ligne : point-virgule manquant, identifier le point-virgule avant l'expression.",
+          "categorie": "ligne",
+          "note": "« ligne » sans numéro et cause reformulée",
+          "discutable": false,
+          "pass_A": [
+            "main",
+            "ligne"
+          ],
+          "pass_B": [
+            "main",
+            "ligne",
+            "point-virgule manquant",
+            "identifier le point-virgule avant l'expression"
+          ]
+        },
+        {
+          "id": "fx08@1500",
+          "kind": "summary",
+          "phrase": "18 éléments : PipeWire Multimedia Service actif, PID 7126, mémoire 6.7M, temps d'attente 7,981859.",
+          "categorie": "nombre",
+          "note": "« temps d'attente 7,981859 » absent de la sortie",
+          "discutable": false,
+          "pass_A": [
+            "temps d'attente 7,981859"
+          ],
+          "pass_B": [
+            "temps d'attente 7,981859"
+          ]
+        },
+        {
+          "id": "fx09@1500",
+          "kind": "summary",
+          "phrase": "8 éléments : init_cfg, healthy, ensure_server.",
+          "categorie": "nom",
+          "note": "« init_cfg » : nom de fonction inventé",
+          "discutable": false,
+          "pass_A": [
+            "init_cfg",
+            "healthy",
+            "ensure_server"
+          ],
+          "pass_B": [
+            "init_cfg",
+            "healthy",
+            "ensure_server"
+          ]
+        },
+        {
+          "id": "fx10@1500",
+          "kind": "summary",
+          "phrase": "Échec. Curl : fichier inexistant.",
+          "categorie": "autre",
+          "note": "« fichier inexistant » pour un hôte introuvable",
+          "discutable": false,
+          "pass_A": [
+            "Curl : fichier inexistant"
+          ],
+          "pass_B": [
+            "fichier inexistant"
+          ]
+        },
+        {
+          "id": "fx13@1500",
+          "kind": "summary",
+          "phrase": "Un Linux devbox 7.0.9, serveur actif.",
+          "categorie": "autre",
+          "note": "« serveur actif » absent de la sortie uname",
+          "discutable": false,
+          "pass_A": [
+            "serveur actif"
+          ],
+          "pass_B": [
+            "serveur actif"
+          ]
+        },
+        {
+          "id": "fx16@1500",
+          "kind": "summary",
+          "phrase": "Succès. Host key verification faible.",
+          "categorie": "statut",
+          "note": "« Succès » alors que ssh sort en code 255",
+          "discutable": false,
+          "pass_A": [
+            "Succès",
+            "Host key verification faible"
+          ],
+          "pass_B": [
+            "Succès",
+            "Host key verification faible"
+          ]
+        },
+        {
+          "id": "fx19@1500",
+          "kind": "summary",
+          "phrase": "10 éléments : OLD_SHOPAPP 12G, install-iso 7.9G, shopapp 2,4G.",
+          "categorie": "nom",
+          "note": "« install-iso » pour « installer-iso »",
+          "discutable": false,
+          "pass_A": [
+            "nom du fichier 'install-iso' au lieu de 'installer-iso'"
+          ],
+          "pass_B": [
+            "install-iso"
+          ]
+        },
+        {
+          "id": "fx21@1500",
+          "kind": "summary",
+          "phrase": "Échec. tar : /nonexistent inexistant, tarzondé.",
+          "categorie": "autre",
+          "note": "« tarzondé » : fragment sans source",
+          "discutable": false,
+          "pass_A": [
+            "tarzondé"
+          ],
+          "pass_B": [
+            "tarzondé"
+          ]
+        },
+        {
+          "id": "fx24@1500",
+          "kind": "summary",
+          "phrase": "Succès. 112 paquets mis à jour, 24,3 Mo réceptionnés en 6s.",
+          "categorie": "nombre",
+          "note": "« 112 paquets » : 112 est la taille en ko",
+          "discutable": false,
+          "pass_A": [
+            "112 paquets mis à jour"
+          ],
+          "pass_B": [
+            "112 paquets mis à jour"
+          ]
+        },
+        {
+          "id": "fx25@1500",
+          "kind": "summary",
+          "phrase": "Échec. apt install nginx : impossible obtenir lock-frontend un vide, autres processus utilisés.",
+          "categorie": "autre",
+          "note": "cause déformée (« un vide, autres processus »)",
+          "discutable": false,
+          "pass_A": [
+            "un vide"
+          ],
+          "pass_B": [
+            "un vide"
+          ]
+        },
+        {
+          "id": "fx27@1500",
+          "kind": "summary",
+          "phrase": "Échec. Header.tsx ligne 42 : prop title manquant, devrà être titre.",
+          "categorie": "autre",
+          "note": "« prop title manquant, devrà être titre » : sens inversé",
+          "discutable": false,
+          "pass_A": [
+            "Header.tsx",
+            "prop title manquant",
+            "devrà être titre"
+          ],
+          "pass_B": [
+            "prop title manquant"
+          ]
+        },
+        {
+          "id": "fx26@1500",
+          "kind": "summary",
+          "phrase": "Requests 2.32.3, Charset_normalizer 3.4.0, Idna 3.10, urllib3 1.21.1, Certifi 2024.8.30 installés.",
+          "categorie": "nombre",
+          "note": "version urllib3 1.21.1 absente de la sortie",
+          "discutable": false,
+          "pass_A": [
+            "urllib3 1.21.1"
+          ],
+          "pass_B": [
+            "urllib3 1.21.1"
+          ]
+        },
+        {
+          "id": "df_proxmox@1500",
+          "kind": "summary",
+          "phrase": "Racine 8.9G libres sur 94G, Backup hôte 134G libres sur 442G, Backup hôte 70 %.",
+          "categorie": "nom",
+          "note": "« Backup hôte » pour « backup-hdd »",
+          "discutable": false,
+          "pass_A": [
+            "Racine 8.9G libres sur 94G, Backup hôte 134G libres sur 442G, Backup hôte 70 %"
+          ],
+          "pass_B": [
+            "Backup hôte"
+          ]
+        },
+        {
+          "id": "qa2",
+          "kind": "qa",
+          "phrase": "Python 3.11 installé.",
+          "categorie": "nombre",
+          "note": "version Python fabriquée",
+          "discutable": false,
+          "pass_A": [
+            "Python 3.11 installé"
+          ],
+          "pass_B": [
+            "Python 3.11"
+          ]
+        }
+      ],
+      "cas_douteux": [
+        {
+          "id": "fx22@1500",
+          "kind": "summary",
+          "phrase": "9 conteneurs : shopapp_api, shopapp_nginx_admin, shopapp_vault.",
+          "pass_A": [
+            "shopapp_api",
+            "shopapp_nginx_admin",
+            "shopapp_vault"
+          ],
+          "pass_B": []
+        }
+      ]
+    }
+  }
+}

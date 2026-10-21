@@ -1,0 +1,10 @@
+b98a27cd83c89da26393db5dd46ba9fd9100f0199a6fd6910a73ff16a2297ff6 mix-x4r1-l5/train.jsonl
+505fa1fb92aae6b495c21f2f6b3c98d55e95116dd536fd79de29b7450a00a67b mix-x4r1-l5/val.jsonl
+b53e0c427c1a698736401366d2de7089a37fc1a79886343016b0ad8199d6a87d mix/train.jsonl
+a1c9c90a5d0a1d20647d65d1166c676ae151479c5b3ff1f1f5794fee819fb006 mix/val.jsonl
+a42d1e3cc133ab2abd7e4e5f88d45e8038a230f8aa9c02f38818e910ce32fc43 langfix.jsonl
+logs/drop-langfix.log {"rows": 126, "dropped": 1, "kept": 125, "cases": ["v3-packages-system-0043", "v3-packages-system-0061", "v3-packages-system-0074", "v3-packages-system-0078", "v3-packages-system-0083", "v3-packages-system-0086"]}
+logs/drop-mix-x4r1-l5-train.log {"rows": 3840, "dropped": 172, "kept": 3668, "cases": ["v3-build-native-0024", "v3-build-native-0031", "v3-containers-0001", "v3-containers-0002", "v3-files-0044", "v3-files-0053", "v3-files-0059", "v3-files-0078", "v3-network-0031", "v3-packages-system-0043", "v3-packages-system-0061", "v3-packages-system-0074", "v3-packages-system-0078", "v3-packages-system-0083", "v3-packages-system-0086", "v3-python-0033", "v3-rust-go-0002", "v3-services-logs-0032"]}
+logs/drop-mix-x4r1-l5-val.log {"rows": 196, "dropped": 11, "kept": 185, "cases": ["v3-build-native-0024", "v3-build-native-0031", "v3-files-0044", "v3-files-0059", "v3-files-0078", "v3-rust-go-0002"]}
+logs/keep.log {"candidates": 178, "ok": 126, "invention": 50, "douteux": 2, "unjudged": 0, "kept": 126}
+logs/rows.log {"labeled": 281, "en": 178, "fr": 77, "undetermined": 26}

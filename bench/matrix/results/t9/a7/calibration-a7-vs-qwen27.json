@@ -1,0 +1,648 @@
+{
+ "judge_ref": "qwen/qwen3.8-27b",
+ "n": 68,
+ "population": {
+  "invention": 186,
+  "ok": 1070,
+  "douteux": 110
+ },
+ "strict": {
+  "raw": {
+   "precision": 0.5813953488372093,
+   "recall": 0.9615384615384616,
+   "tp": 25.0,
+   "fp": 18.0,
+   "fn": 1.0
+  },
+  "weighted": {
+   "precision": 0.5813953488372092,
+   "recall": 0.9609026285336418,
+   "tp": 108.13953488372088,
+   "fp": 77.86046511627904,
+   "fn": 4.4
+  }
+ },
+ "with_douteux": {
+  "raw": {
+   "precision": 0.38235294117647056,
+   "recall": 1.0,
+   "tp": 26.0,
+   "fp": 42.0,
+   "fn": 0.0
+  },
+  "weighted": {
+   "precision": 0.3802011313639218,
+   "recall": 1.0,
+   "tp": 112.53953488372088,
+   "fp": 183.46046511627918,
+   "fn": 0.0
+  }
+ },
+ "phase_spent_usd": 0.462304,
+ "rows": [
+  {
+   "id": "v3-build-native-0001@en",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": "Failed. stats.c line 16: signedness. Line 18: %d, long int. Line 9: unused sum_sq.",
+   "final": "invention",
+   "ref": "invention",
+   "ref_inventions": [
+    "Failed"
+   ]
+  },
+  {
+   "id": "v3-build-native-0001@fr",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": " Échec. stats.c ligne 16 : comparaison signée. Ligne 18 : format %d pour long. Ligne 9 : sum_sq inutilisée.",
+   "final": "invention",
+   "ref": "invention",
+   "ref_inventions": [
+    "Échec"
+   ]
+  },
+  {
+   "id": "v3-build-native-0047@en",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": "Failed. sensor.c: format %d expects int, got double. Unused variables count, buf.",
+   "final": "invention",
+   "ref": "invention",
+   "ref_inventions": [
+    "Failed"
+   ]
+  },
+  {
+   "id": "v3-build-native-0047@fr",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": " Échec. sensor.c : format %d attend int, reçu double ; variables inutilisées count, buf.",
+   "final": "douteux",
+   "ref": "invention",
+   "ref_inventions": [
+    "Échec"
+   ]
+  },
+  {
+   "id": "v3-disk-memory-0006@fr",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": " Échec. /dev/sda5 : 6,1G, priorité -2.",
+   "final": "invention",
+   "ref": "invention",
+   "ref_inventions": [
+    "Échec"
+   ]
+  },
+  {
+   "id": "v3-files-0003@en",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": " 21 items: stock.py, auth.py, suppliers.py, export.py.",
+   "final": "invention",
+   "ref": "invention",
+   "ref_inventions": [
+    "L'affirmation que seuls les fichiers stock.py, auth.py, suppliers.py et export.py contiennent des TODO, alors que le contexte montre également des résultats pour models.py, routes.py et utils.py."
+   ]
+  },
+  {
+   "id": "v3-files-0003@fr",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": "21 éléments : src/stock.py:10, src/stock.py:12, src/auth.py:10",
+   "final": "douteux",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-files-0023@fr",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": "5 éléments : 203.0.113.7, 203.0.113.45, 198.51.100.3.",
+   "final": "invention",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-files-0062@fr",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": "Échec. Archive tronquée. Fichiers partiellement extraits.",
+   "final": "douteux",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-files-0063@en",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": "3 files. m4 1.6 MiB, gzip 765 KiB, patch 765 KiB. Total 3.2 MiB.",
+   "final": "invention",
+   "ref": "invention",
+   "ref_inventions": [
+    "m4 1.6 MiB",
+    "gzip 765 KiB",
+    "patch 765 KiB",
+    "Total 3.2 MiB"
+   ]
+  },
+  {
+   "id": "v3-files-0066@en",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": " Failed. Diff: 11 sections. 3 changes: parametre_3, 52, 70. Deleted parametre_76.",
+   "final": "invention",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-files-0066@fr",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": "Échec. Diff : 11 sections, 3 paramètres modifiés, 1 supprimé.",
+   "final": "invention",
+   "ref": "invention",
+   "ref_inventions": [
+    "3 paramètres modifiés",
+    "1 supprimé"
+   ]
+  },
+  {
+   "id": "v3-js-node-0031@en",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": "Failed. main.ts line 2: 3 arguments attendus, mais 2 reçus. stock.ts line 7: propriété warehouse absente. stock.ts line 10: threshold introuvable.",
+   "final": "douteux",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-js-node-0031@fr",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": "Échec. main.ts ligne 2 : 3 arguments attendus, 2 reçus. stock.ts ligne 7 : propriété warehouse absente. stock.ts ligne 10 : threshold introuvable.",
+   "final": "douteux",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-packages-system-0026@en",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": " Failed. brew uses: 17 lines, 3 names: aircrack-ng, ansible, apr-util.",
+   "final": "invention",
+   "ref": "invention",
+   "ref_inventions": [
+    "Failed",
+    "3 names"
+   ]
+  },
+  {
+   "id": "v3-packages-system-0026@fr",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": " Échec. 17 lignes : aircrack-ng, ansible, apr-util, aria2, astgen, bat, cocoapods, cryptography, crytic-compile, curl, dex2jar, dotnet, eza, fastlane, fb-client.",
+   "final": "invention",
+   "ref": "invention",
+   "ref_inventions": [
+    "Échec"
+   ]
+  },
+  {
+   "id": "v3-packages-system-0029@fr",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": " Aucun service actif. 12 services listés, tous arrêtés.",
+   "final": "invention",
+   "ref": "invention",
+   "ref_inventions": [
+    "12 services listés"
+   ]
+  },
+  {
+   "id": "v3-python-0002@en",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": " Success. Installed 15 packages.",
+   "final": "invention",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-python-0002@fr",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": "Succès. 15 paquets installés. Flask 3.0.3, requests 2.32.3, gunicorn 23.0.0.",
+   "final": "douteux",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-python-0039@en",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": " Failed. 4 sections: file_00.py line 2, file_05.py line 2, file_10.py line 2.",
+   "final": "invention",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-python-0039@fr",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": "Échec. tree/tests/file_10.py ligne 2 : TODO invalide.",
+   "final": "douteux",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-rust-go-0025@fr",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": " 80 éléments affichés : start, run, output.",
+   "final": "douteux",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-shell-scripts-0013@en",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": " Failed. backups/factures-2026-09.tar.gz: open impossible. Line 6.",
+   "final": "douteux",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-shell-scripts-0018@en",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": " Failed. backup.sh line 7: cd permission denied.",
+   "final": "invention",
+   "ref": "invention",
+   "ref_inventions": [
+    "Statut 'Failed' (le contexte indique 'success' avec code 0)"
+   ]
+  },
+  {
+   "id": "v3-shell-scripts-0018@fr",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": " Échec. backup.sh ligne 7 : permission refusée. 3 fichiers non copiés.",
+   "final": "invention",
+   "ref": "invention",
+   "ref_inventions": [
+    "Échec"
+   ]
+  },
+  {
+   "id": "v3-tests-0055@en",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": "4 tests. 2 ok, 1 no test files, 1 coverage 0%.",
+   "final": "invention",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-tests-0087@en",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": "Failed. 3 failed, 89 passed. KeyError: 'alarm_id'. Lines 154, 184, 265.",
+   "final": "douteux",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-tests-0117@en",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": " Failed. stock.test.js line 65: expected 2, got 1. 74 pass, 3 fail.",
+   "final": "douteux",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-tests-0117@fr",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": " Échec. 3 tests : stock 11, 14, 62. stock.test.js ligne 65 : attendu [62,2], obtenu [62,1].",
+   "final": "invention",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-vcs-git-0046@en",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": " 6 commits. module_05, module_36, module_37, module_38.",
+   "final": "invention",
+   "ref": "invention",
+   "ref_inventions": [
+    "module_05",
+    "module_36",
+    "module_37",
+    "module_38"
+   ]
+  },
+  {
+   "id": "v3-vcs-git-0046@fr",
+   "model_file": "sub-deepseek-deepseek-v4-flash.json",
+   "phrase": "6 commits. 3 affichés : module_05, module_36-38, module_33-34.",
+   "final": "invention",
+   "ref": "invention",
+   "ref_inventions": [
+    "3 affichés"
+   ]
+  },
+  {
+   "id": "v3-build-native-0047@en",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "42 sections: sensor.c:10:14: warning: format ‘%d’ exp, sensor.c:8:9: warning: unused variable ‘, sensor.c:7:10: warning: unused variable",
+   "final": "douteux",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-build-native-0062@fr",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "Makefile config.h créés. Version 1.8-dirty. Compilé avec gcc. Installé en /usr/local.",
+   "final": "invention",
+   "ref": "invention",
+   "ref_inventions": [
+    "Installé en /usr/local"
+   ]
+  },
+  {
+   "id": "v3-build-native-0076@fr",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "12 sections, 8 fichiers .o, libtime.a créé, compilation réussie",
+   "final": "invention",
+   "ref": "invention",
+   "ref_inventions": [
+    "8 fichiers .o"
+   ]
+  },
+  {
+   "id": "v3-build-native-0117@fr",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "7 sections : gl, unistring. 3 répertoires : doc, tests, racine.",
+   "final": "invention",
+   "ref": "invention",
+   "ref_inventions": [
+    "7 sections : gl, unistring"
+   ]
+  },
+  {
+   "id": "v3-containers-0028@fr",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "9 éléments : Normal Scheduled, Normal Pulling, Warning Unhealthy",
+   "final": "invention",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-files-0003@en",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "21 items: src/stock.py:10, src/stock.py:12, src/auth.py:10",
+   "final": "douteux",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-files-0003@fr",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "21 éléments : src/stock.py, src/auth.py, src/suppliers.py",
+   "final": "invention",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-files-0023@en",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "5 items: 203.0.113.7, 203.0.113.45, 198.51.100.3",
+   "final": "invention",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-files-0041@fr",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "116 éléments : 2026-09-27 09:00:29,588 ERROR inventory.stock: IntegrityErro, 2026-09-27 09:00:44,632 ERROR inventory.routes: IntegrityErr, 2026-09-27 09:00:47,52",
+   "final": "douteux",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-files-0066@en",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "11 sections, parametre_3, parametre_52, parametre_70 modified, parametre_76 removed",
+   "final": "invention",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-files-0066@fr",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "11 sections modifiées : parametre_3, parametre_52, parametre_70",
+   "final": "invention",
+   "ref": "invention",
+   "ref_inventions": [
+    "11 sections modifiées"
+   ]
+  },
+  {
+   "id": "v3-history-qa-0016@fr",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "beta.c n'a pas compilé à cause d'une erreur de type return dans une fonction void.  \nsrc/gamma.c a généré un avertissement mais a compilé.\n\nCommande : cat src/beta.c",
+   "final": "douteux",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-history-qa-0024@en",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "SyntaxError on line 4: missing colon after function definition  \nCommand: sed -i '4s/$/:/' calc.py",
+   "final": "douteux",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-history-qa-0024@fr",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "Erreur de syntaxe ligne 4 : deux-points manquants après déclaration fonction mul.  \nCommande : head -n 5 calc.py",
+   "final": "invention",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-js-node-0031@en",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "Failed. main.ts line 2: 3 arguments attendus, mais 2 reçus. stock.ts line 7: warehouse absente. threshold introuvable line 10.",
+   "final": "invention",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-js-node-0033@en",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "Failed. pnpm outdated: command not found",
+   "final": "invention",
+   "ref": "invention",
+   "ref_inventions": [
+    "command not found"
+   ]
+  },
+  {
+   "id": "v3-lint-format-0009@en",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "Failed. queue.go line 13: Len passes lock by value. main.go line 12: %d arg port string. line 16: fmt.Errorf not used.",
+   "final": "douteux",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-lint-format-0023@en",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "Failed. widget0.js to widget2.js: 140 errors, 35 warnings.",
+   "final": "douteux",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-lint-format-0040@en",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "Failed. quota/core.py line 3: B006 mutable default. 65 errors, 5 fixable.",
+   "final": "invention",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-network-transfer-0037@en",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "ChangeLog-6.6.1 43K, ChangeLog-6.6.2 745K, ChangeLog-6.6.3 754K, ChangeLog-6.6.99 168K",
+   "final": "invention",
+   "ref": "invention",
+   "ref_inventions": [
+    "ChangeLog-6.6.2 745K"
+   ]
+  },
+  {
+   "id": "v3-packages-system-0026@en",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "27 items: aircrack-ng gnupg libshout",
+   "final": "invention",
+   "ref": "invention",
+   "ref_inventions": [
+    "27 items"
+   ]
+  },
+  {
+   "id": "v3-packages-system-0026@fr",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "27 paquets : aircrack-ng gnupg libshout",
+   "final": "invention",
+   "ref": "invention",
+   "ref_inventions": [
+    "27 paquets"
+   ]
+  },
+  {
+   "id": "v3-packages-system-0029@fr",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "12 services, tous inactifs",
+   "final": "douteux",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-packages-system-0054@en",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "42 new packages, 2 updates. kicad, kicad-demos, kicad-footprints.",
+   "final": "invention",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-packages-system-0054@fr",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "42 nouveaux paquets, 2 mis à jour : kicad kicad-demos kicad-footprints",
+   "final": "invention",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-python-0039@fr",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "Échec. file_10.py ligne 2 : TODO invalide, syntaxe incorrecte",
+   "final": "douteux",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-shell-scripts-0018@en",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "Failed. backup.sh line 7: Permission denied",
+   "final": "invention",
+   "ref": "invention",
+   "ref_inventions": [
+    "Statut 'Failed' (le contexte indique un statut de succès avec code 0)"
+   ]
+  },
+  {
+   "id": "v3-shell-scripts-0018@fr",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "Échec. backup.sh ligne 7 : Permission denied, 3 fichiers non copiés",
+   "final": "invention",
+   "ref": "invention",
+   "ref_inventions": [
+    "Échec"
+   ]
+  },
+  {
+   "id": "v3-shell-scripts-0071@fr",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "Échec. bulletins/*.pdf introuvable, documents endommagés, écart élève 65 et 78",
+   "final": "douteux",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-tests-0005@fr",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "Échec. test_config.py ligne 1 : ModuleNotFoundError, yaml manquant.",
+   "final": "douteux",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-tests-0017@fr",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "Échec. tomlish.lexer manquant, ligne 1.",
+   "final": "douteux",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-tests-0055@fr",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "2 tests réussis : codec 100 %, store 100 %, kvctl 0 %",
+   "final": "invention",
+   "ref": "invention",
+   "ref_inventions": [
+    "2 tests réussis"
+   ]
+  },
+  {
+   "id": "v3-tests-0092@en",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "61 pass, 3 fail. Failed. coupon.test.js line 63: actual 60 1, expected 60 2",
+   "final": "invention",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-tests-0092@fr",
+   "model_file": "sub-qwen-qwen3-235b-a22b-2507.json",
+   "phrase": "Échec. coupon.test.js ligne 63 : [60,1] vs [60,2]. 61 pass, 3 fail.",
+   "final": "invention",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-js-node-0031@en",
+   "model_file": "sub-google-gemma-4-31b-it.json",
+   "phrase": "Failed. main.ts line 2: 3 arguments attendus, 2 reçus. stock.ts line 7, 10.",
+   "final": "invention",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-js-node-0031@fr",
+   "model_file": "sub-google-gemma-4-31b-it.json",
+   "phrase": "Échec. main.ts ligne 2 : 3 arguments attendus, 2 reçus. stock.ts ligne 10 : threshold introuvable.",
+   "final": "douteux",
+   "ref": "ok",
+   "ref_inventions": []
+  },
+  {
+   "id": "v3-lint-format-0009@en",
+   "model_file": "sub-google-gemma-4-31b-it.json",
+   "phrase": "Failed. queue.go line 13: lock by value. main.go line 12: wrong type.",
+   "final": "douteux",
+   "ref": "ok",
+   "ref_inventions": []
+  }
+ ]
+}

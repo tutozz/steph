@@ -1,0 +1,17 @@
+[
+ {"case": "v3-containers-0011", "lang": "fr", "rung": 100, "answer": "Échec. Dockerfile ligne 3 : instruction inconnue COPPY, Docker propose COPY."},
+ {"case": "v3-shell-scripts-0005", "lang": "fr", "rung": 100, "answer": "Échec. 8 fichiers copiés, 2 introuvables : export-04.csv et export-09.csv."},
+ {"case": "v3-network-0024", "lang": "en", "rung": 100, "answer": "example.com replies, 4 of 4 packets, average 7 ms."},
+ {"case": "v3-shell-scripts-0005", "lang": "fr", "rung": 75, "answer": "Échec. 8 copiés, 2 en échec."},
+ {"case": "v3-network-0024", "lang": "fr", "rung": 75, "answer": "Succès. example.com : 4 paquets reçus sur 4, aucune perte, minimum 5.775 ms, moyenne 7.045 ms, maximum 9.381 ms, écart type 1.383 ms."},
+ {"case": "v3-js-node-0017", "lang": "en", "rung": 75, "answer": "Failed. Wrong package tsc@2.0.4 ran, not the TypeScript compiler."},
+ {"case": "v3-containers-0011", "lang": "en", "rung": 50, "answer": "Failed. Docker build error."},
+ {"case": "v3-network-transfer-0032", "lang": "en", "rung": 50, "answer": "Failed. rsync error, unexpected end of file."},
+ {"case": "v3-lint-format-0002", "lang": "fr", "rung": 50, "answer": "Échec. ESLint 9.39.5, quelque chose a mal tourné."},
+ {"case": "v3-network-0024", "lang": "en", "rung": 25, "answer": "64 bytes from 203.0.113.25: icmp_seq=0 ttl=60 time=5.775 ms, 64 bytes from 203.0.113.25: icmp_seq=1 ttl=60 time=6.430 ms, 64 bytes from 203.0.113.25: icmp_seq=2 ttl=60 time=9.381 ms."},
+ {"case": "v3-shell-scripts-0005", "lang": "fr", "rung": 25, "answer": "Le script collect.sh a affiché plusieurs lignes."},
+ {"case": "v3-lint-format-0002", "lang": "en", "rung": 25, "answer": "Échec. ESLint n'a pas trouvé son fichier de configuration eslint.config.js."},
+ {"case": "v3-containers-0011", "lang": "fr", "rung": 0, "answer": "Échec. Dockerfile ligne 4 : instruction inconnue COPPY."},
+ {"case": "v3-network-0024", "lang": "fr", "rung": 0, "answer": "Succès. example.com : 4 paquets reçus, 25 % de perte."},
+ {"case": "v3-network-transfer-0032", "lang": "fr", "rung": 0, "answer": "Succès. proj synchronisé vers /srv/www."}
+]

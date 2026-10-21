@@ -1,0 +1,113 @@
+{
+ "protocol": "i5-7200U, llama-server b11205, -c 8192 --parallel 2 -t 4 --cache-ram 0 -ub 512 -b 512 ; 36 cas (granite_ram.py) et 90 questions dev v3 à froid (qa_dev_a52223c), 2 passes ; a-sft et G5b alternés, puis v1.0 (passes G5b reprises)",
+ "runs": {
+  "a-sft-36-p1": {
+   "load_s": 0.92,
+   "ram_repos_avant_mb": 489,
+   "ram_repos_apres_mb": 541,
+   "ttft_median": 0.621,
+   "ttft_p90": 2.387,
+   "gen_tok_s_median": 58.3,
+   "ram_peak_mb": 563
+  },
+  "a-sft-36-p2": {
+   "load_s": 0.94,
+   "ram_repos_avant_mb": 488,
+   "ram_repos_apres_mb": 542,
+   "ttft_median": 0.624,
+   "ttft_p90": 2.365,
+   "gen_tok_s_median": 59.7,
+   "ram_peak_mb": 563
+  },
+  "a-sft-qa-p1": {
+   "load_s": 1.02,
+   "ttft_median": 2.229,
+   "ttft_p90": 7.206,
+   "total_median": 2.409,
+   "gen_tok_s_median": 57.5,
+   "ram_peak_mb": 590,
+   "vram_peak_mb": 0
+  },
+  "a-sft-qa-p2": {
+   "load_s": 1.03,
+   "ttft_median": 2.252,
+   "ttft_p90": 7.275,
+   "total_median": 2.425,
+   "gen_tok_s_median": 57.6,
+   "ram_peak_mb": 587,
+   "vram_peak_mb": 0
+  },
+  "g5b-36-p1": {
+   "load_s": 0.92,
+   "ram_repos_avant_mb": 490,
+   "ram_repos_apres_mb": 542,
+   "ttft_median": 0.642,
+   "ttft_p90": 2.333,
+   "gen_tok_s_median": 59.3,
+   "ram_peak_mb": 564
+  },
+  "g5b-36-p2": {
+   "load_s": 0.93,
+   "ram_repos_avant_mb": 488,
+   "ram_repos_apres_mb": 542,
+   "ttft_median": 0.634,
+   "ttft_p90": 2.34,
+   "gen_tok_s_median": 59.5,
+   "ram_peak_mb": 563
+  },
+  "g5b-qa-p1": {
+   "load_s": 1.02,
+   "ttft_median": 2.261,
+   "ttft_p90": 7.144,
+   "total_median": 2.446,
+   "gen_tok_s_median": 57.1,
+   "ram_peak_mb": 589,
+   "vram_peak_mb": 0
+  },
+  "g5b-qa-p2": {
+   "load_s": 1.03,
+   "ttft_median": 2.268,
+   "ttft_p90": 7.179,
+   "total_median": 2.428,
+   "gen_tok_s_median": 57.5,
+   "ram_peak_mb": 587,
+   "vram_peak_mb": 0
+  },
+  "v10-36-p1": {
+   "load_s": 0.92,
+   "ram_repos_avant_mb": 488,
+   "ram_repos_apres_mb": 543,
+   "ttft_median": 0.646,
+   "ttft_p90": 2.331,
+   "gen_tok_s_median": 59.8,
+   "ram_peak_mb": 565
+  },
+  "v10-36-p2": {
+   "load_s": 0.92,
+   "ram_repos_avant_mb": 488,
+   "ram_repos_apres_mb": 543,
+   "ttft_median": 0.625,
+   "ttft_p90": 2.365,
+   "gen_tok_s_median": 59.3,
+   "ram_peak_mb": 564
+  },
+  "v10-qa-p1": {
+   "load_s": 1.02,
+   "ttft_median": 2.265,
+   "ttft_p90": 7.221,
+   "total_median": 2.437,
+   "gen_tok_s_median": 58.1,
+   "ram_peak_mb": 588,
+   "vram_peak_mb": 0
+  },
+  "v10-qa-p2": {
+   "load_s": 1.03,
+   "ttft_median": 2.228,
+   "ttft_p90": 7.278,
+   "total_median": 2.442,
+   "gen_tok_s_median": 57.9,
+   "ram_peak_mb": 587,
+   "vram_peak_mb": 0
+  }
+ }
+}

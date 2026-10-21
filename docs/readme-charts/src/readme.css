@@ -1,0 +1,58 @@
+/* README section images: extends charts.css (same tokens, grid, tag, titles). */
+:root {
+  --t-line: #222a36;
+  --say-glow: rgba(255, 214, 10, 0.16);
+  --panel: #ffffff;
+  --panel-line: #d5dce5;
+}
+.dark {
+  --panel: #111722;
+  --panel-line: #263041;
+}
+
+h1 { font-size: 42px; }
+.sub { font-size: 17px; }
+.foot { font-size: 13px; }
+
+/* Dark terminal block, identical in both themes, like the example chart. */
+.term {
+  border-radius: 14px;
+  background: var(--t-bg);
+  color: var(--t-ink);
+  border: 1px solid var(--t-line);
+  font-family: var(--mono);
+}
+.term .bar3 { display: flex; gap: 6px; padding: 10px 14px 0; }
+.term .bar3 i { width: 9px; height: 9px; border-radius: 50%; background: #3a4455; }
+.cmd::before { content: "$ "; color: var(--t-dim); }
+.dim { color: var(--t-dim); }
+
+/* What steph says: yellow on terminal black. */
+.say {
+  border-radius: 14px;
+  background: var(--t-bg);
+  color: var(--t-ink);
+  border: 2px solid var(--t-say);
+  box-shadow: 0 0 0 4px var(--say-glow), 0 0 32px rgba(255, 214, 10, 0.2);
+}
+.say .who {
+  display: flex; align-items: center; gap: 8px;
+  font-family: var(--mono); font-size: 13px; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase; color: var(--t-say);
+}
+.say .q { font-weight: 700; line-height: 1.3; }
+.say .gl { margin-top: 4px; font-size: 13px; line-height: 1.35; color: #c3ccd8; }
+
+.panel { border-radius: 14px; background: var(--panel); border: 1.5px solid var(--panel-line); }
+.label {
+  font-family: var(--mono); font-size: 13px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+}
+.accent { color: var(--accent); }
+.big {
+  font-weight: 800; line-height: 0.9; letter-spacing: -0.05em;
+  background: linear-gradient(180deg, var(--accent) 20%, var(--accent2));
+  -webkit-background-clip: text; color: transparent;
+  filter: drop-shadow(0 0 30px var(--glow)); padding-bottom: 6px;
+}
+svg.ico { display: block; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }

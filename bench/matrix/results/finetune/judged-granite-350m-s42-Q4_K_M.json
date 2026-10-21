@@ -1,0 +1,35 @@
+{
+ "model": "judged-granite-350m-s42-Q4_K_M",
+ "quant": "Q4_K_M",
+ "train_seed": 42,
+ "data": "mix-judged (train 1771, val 102)",
+ "train": {
+  "best_val": 0.1697672069357913,
+  "best_epoch": 3.0,
+  "train_s": 396.8,
+  "vram_peak_mb": 2935,
+  "args": {
+   "mode": "lora",
+   "rank": 16,
+   "alpha": 32,
+   "lr": 0.0002,
+   "epochs": 3.0,
+   "targets": "all-linear",
+   "seed": 42,
+   "gc": true
+  }
+ },
+ "bench": "cases_ft.json (prompt système court, qa inchangés), parallel 1, repeat_penalty 1.1, graines 42 7 123",
+ "summary": {
+  "total": 77.9,
+  "tune": 84.9,
+  "holdout": 68.0,
+  "resume": 78.9,
+  "par_graine_total": [
+   75.0,
+   80.7,
+   77.9
+  ],
+  "ligne_non_ancree": "0/108"
+ }
+}

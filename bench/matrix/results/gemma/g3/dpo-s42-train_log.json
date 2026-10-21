@@ -1,0 +1,58 @@
+{
+ "args": {
+  "model": "/mnt/backup-hdd/stephbench-tmp/gemma/qat",
+  "sft_adapters": [
+   "/mnt/backup-hdd/stephbench-tmp/gemma/g3/sft-s42/adapter"
+  ],
+  "pairs": "/mnt/backup-hdd/stephbench-tmp/gemma/g3/dpo/pairs/pairs-train.jsonl",
+  "val_pairs": "/mnt/backup-hdd/stephbench-tmp/gemma/g3/dpo/pairs/pairs-val.jsonl",
+  "val": "/mnt/backup-hdd/stephbench-tmp/loop/r3t3/work/mix-x4r1/val.jsonl",
+  "out": "/mnt/backup-hdd/stephbench-tmp/gemma/g3/dpo/dpo-s42",
+  "rank": 16,
+  "alpha": 32,
+  "lr": 1e-05,
+  "beta": 0.1,
+  "sft_weight": 1.0,
+  "epochs": 3.0,
+  "batch": 16,
+  "micro": 2,
+  "maxlen": 2048,
+  "seed": 42,
+  "generic_prompt": true,
+  "max_steps": 0,
+  "device": "cuda"
+ },
+ "evals": [
+  {
+   "pair_loss": 1.2848,
+   "acc": 0.111,
+   "margin": -0.0,
+   "sft_val": 0.2316,
+   "epoch": 0.0
+  },
+  {
+   "pair_loss": 1.1828,
+   "acc": 0.861,
+   "margin": 0.188,
+   "sft_val": 0.2339,
+   "epoch": 1.0
+  },
+  {
+   "pair_loss": 1.0331,
+   "acc": 0.889,
+   "margin": 0.619,
+   "sft_val": 0.242,
+   "epoch": 2.0
+  },
+  {
+   "pair_loss": 1.0057,
+   "acc": 0.917,
+   "margin": 0.739,
+   "sft_val": 0.2448,
+   "epoch": 3.0
+  }
+ ],
+ "steps": 66,
+ "train_s": 3098.6,
+ "vram_peak_mb": 8161
+}

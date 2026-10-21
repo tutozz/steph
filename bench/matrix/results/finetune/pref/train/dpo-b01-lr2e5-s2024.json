@@ -1,0 +1,58 @@
+{
+ "args": {
+  "model": "/root/steph-ft/hf-cache/hub/models--ibm-granite--granite-4.0-h-350m/snapshots/3b17b717b8f2f5d305b0a92c1491e239aeda19c8",
+  "sft_adapters": [
+   "/root/steph-ft/soup/runs/granite-s42/adapter",
+   "/root/steph-ft/soup/runs/granite-s123/adapter",
+   "/root/steph-ft/soup/adapters/granite-s7",
+   "/root/steph-ft/soup/adapters/granite-s2024"
+  ],
+  "pairs": "pairs-train.jsonl",
+  "val_pairs": "pairs-val.jsonl",
+  "val": "/root/steph-ft/data/mix-judged/val.jsonl",
+  "out": "runs/dpo-b01-lr2e5-s2024",
+  "rank": 16,
+  "alpha": 32,
+  "lr": 2e-05,
+  "beta": 0.1,
+  "sft_weight": 1.0,
+  "epochs": 3.0,
+  "batch": 16,
+  "micro": 8,
+  "maxlen": 1536,
+  "seed": 2024
+ },
+ "evals": [
+  {
+   "pair_loss": 1.1624,
+   "acc": 0.0,
+   "margin": 0.0,
+   "sft_val": 0.1669,
+   "epoch": 0.0
+  },
+  {
+   "pair_loss": 0.9775,
+   "acc": 0.923,
+   "margin": 0.39,
+   "sft_val": 0.1829,
+   "epoch": 1.0
+  },
+  {
+   "pair_loss": 0.8667,
+   "acc": 0.923,
+   "margin": 0.824,
+   "sft_val": 0.2124,
+   "epoch": 2.0
+  },
+  {
+   "pair_loss": 0.8855,
+   "acc": 0.923,
+   "margin": 0.835,
+   "sft_val": 0.2145,
+   "epoch": 3.0
+  }
+ ],
+ "steps": 60,
+ "train_s": 187.9,
+ "vram_peak_mb": 4183
+}

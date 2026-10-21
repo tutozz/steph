@@ -1,0 +1,4 @@
+18bb5c29905c632d705f4235e1d82648beb5beaac671b58d5c4bb702245a12cc  /root/steph-ft/data/mix-g5d/train.jsonl
+b1d7ada3836ab1db7a464e89188c6b97758f3cec9fbc38d2a6e324db4c8bb7aa  /root/steph-ft/data/mix-g5d/val.jsonl
+0452e9235f2510169db9a85dc7c32f248ebcd4f7c7149d8c0745113c434fb48e  /root/steph-ft/g5/langfix/langfix.jsonl
+0452e9235f2510169db9a85dc7c32f248ebcd4f7c7149d8c0745113c434fb48e  /root/steph-ft/g5d/clean/langfix.jsonl

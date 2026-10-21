@@ -1,0 +1,37 @@
+1	qwen35	p1ref (P1 de référence)	65.2	55.0	cases_p1ref.json
+2	lfm25	p2ref (P2 de référence)	59.5	53.3	cases_p2ref.json
+3	qwen35	a-s0 (système A, 0 exemples de même catégorie)	73.8	50.7	cases_a-s0.json ; écart tune-contrôle > 20
+4	qwen35	a-s1 (système A, 1 exemples de même catégorie)	83.3	55.0	cases_a-s1.json ; écart tune-contrôle > 20
+5	qwen35	a-s2 (système A, 2 exemples de même catégorie)	71.4	48.3	cases_a-s2.json ; écart tune-contrôle > 20
+6	qwen35	a-s3 (système A, 3 exemples de même catégorie)	73.8	55.0	cases_a-s3.json
+7	lfm25	a-s0 (système A, 0 exemples de même catégorie)	57.1	45.0	cases_a-s0.json
+8	lfm25	a-s1 (système A, 1 exemples de même catégorie)	47.6	53.3	cases_a-s1.json
+9	lfm25	a-s2 (système A, 2 exemples de même catégorie)	47.6	48.3	cases_a-s2.json
+10	lfm25	a-s3 (système A, 3 exemples de même catégorie)	57.1	40.0	cases_a-s3.json
+11	qwen35	a-s1-r2 (répétition bruit)	76.2	53.3	cases_a-s1.json ; écart tune-contrôle > 20
+12	qwen35	a-s1-r3 (répétition bruit)	81.0	55.0	cases_a-s1.json ; écart tune-contrôle > 20
+13	qwen35	bsp-s1-r1 (système B + catégories service et ping, 1 exemple)	85.7	58.3	cases_bsp-s1.json ; catégories service et ping, abandonnées (calquées sur le tune) ; écart tune-contrôle > 20
+14	qwen35	bsp-s1-r2 (système B + catégories service et ping, 1 exemple)	85.7	61.7	cases_bsp-s1.json ; catégories service et ping, abandonnées (calquées sur le tune) ; écart tune-contrôle > 20
+15	qwen35	bsp-s1-r3 (système B + catégories service et ping, 1 exemple)	81.0	53.7	cases_bsp-s1.json ; catégories service et ping, abandonnées (calquées sur le tune) ; écart tune-contrôle > 20
+16	qwen35	bsp-s2-r1 (système B, 2 exemples de même catégorie)	88.1	58.3	cases_bsp-s2.json ; catégories service et ping, abandonnées (calquées sur le tune) ; écart tune-contrôle > 20
+17	qwen35	bsp-s2-r2 (système B, 2 exemples de même catégorie)	85.7	55.0	cases_bsp-s2.json ; catégories service et ping, abandonnées (calquées sur le tune) ; écart tune-contrôle > 20
+18	qwen35	bsp-s2-r3 (système B, 2 exemples de même catégorie)	81.0	48.3	cases_bsp-s2.json ; catégories service et ping, abandonnées (calquées sur le tune) ; écart tune-contrôle > 20
+19	lfm25	bsp-s0-r1 (système B, 0 exemple)	31.0	26.7	cases_bsp-s0.json ; catégories service et ping, abandonnées (calquées sur le tune)
+20	lfm25	bsp-s0-r2 (système B, 0 exemple)	31.0	26.7	cases_bsp-s0.json ; catégories service et ping, abandonnées (calquées sur le tune)
+21	lfm25	bsp-s0-r3 (système B, 0 exemple)	31.0	33.3	cases_bsp-s0.json ; catégories service et ping, abandonnées (calquées sur le tune)
+22	lfm25	bsp-s1-r1 (système B, 1 exemple)	52.4	53.3	cases_bsp-s1.json ; catégories service et ping, abandonnées (calquées sur le tune)
+23	lfm25	bsp-s1-r2 (système B, 1 exemple)	52.4	50.0	cases_bsp-s1.json ; catégories service et ping, abandonnées (calquées sur le tune)
+24	lfm25	bsp-s1-r3 (système B, 1 exemple)	47.6	53.3	cases_bsp-s1.json ; catégories service et ping, abandonnées (calquées sur le tune)
+25	qwen35	g1-r1 (B, 0 exemple, statut en clair et sortie encadrée)	74.3	52.0	cases_g1.json ; écart tune-contrôle > 20
+26	qwen35	g1-r2 (B, 0 exemple, statut en clair et sortie encadrée)	71.0	52.0	cases_g1.json
+27	qwen35	g2-r1 (B, 0 exemple, consigne finale Réponse en une ligne)	76.2	67.7	cases_g2.json
+28	qwen35	g2-r2 (B, 0 exemple, consigne finale Réponse en une ligne)	81.9	68.3	cases_g2.json
+29	qwen35	g3-r1 (B, 2 exemples de catégories mêlées)	61.9	25.0	cases_g3.json ; écart tune-contrôle > 20
+30	qwen35	g3-r2 (B, 2 exemples de catégories mêlées)	54.8	43.3	cases_g3.json
+31	qwen35	g4-r1 (B sans règle au système, règle répétée en fin de message)	71.4	45.0	cases_g4.json ; écart tune-contrôle > 20
+32	qwen35	g4-r2 (B sans règle au système, règle répétée en fin de message)	80.0	36.7	cases_g4.json ; écart tune-contrôle > 20
+33	qwen35	g5-r1 (B, statut en clair, consigne finale, 2 exemples mêlés)	81.0	48.3	cases_g5.json ; écart tune-contrôle > 20
+34	qwen35	g5-r2 (B, statut en clair, consigne finale, 2 exemples mêlés)	83.3	56.7	cases_g5.json ; écart tune-contrôle > 20
+35	lfm25	g1-r1 (B, 0 exemple, statut en clair et sortie encadrée)	35.7	26.7	cases_g1.json
+36	lfm25	g1-r2 (B, 0 exemple, statut en clair et sortie encadrée)	33.3	26.7	cases_g1.json
+37	lfm25	g2-r1 (B, 0 exemple, consigne finale Réponse en une ligne)	31.0	30.0	cases_g2.json

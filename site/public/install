@@ -1,0 +1,103 @@
+#!/bin/sh
+# Installe steph en une commande :
+#   curl -fsSL https://steph.lsmdx.com/install | sh
+# Vérifie d'abord tous les prérequis (outils, machine, place, accès au dépôt) :
+# en cas d'échec, rien n'a été modifié. Puis installe uv si besoin (sans toucher
+# aux fichiers de démarrage du shell), clone ou met à jour le dépôt et lance
+# scripts/install.sh. Messages en français ou en anglais selon la locale.
+set -eu
+
+REPO="${STEPH_REPO:-https://github.com/tutozz/steph}"
+DIR="${STEPH_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/steph/src}"
+# Petit modèle par défaut, pire cas NVIDIA : dépôt 0,35 Go (arbre 0,26 Go + historique), venv et Python 0,25 Go,
+# modèle 0,22 Go + voix 0,06 Go, llama.cpp avec CUDA 1,5 Go au pic (archive + extraction) : 2,4 Go, soit 3 Go avec marge.
+# Sans GPU NVIDIA : environ 1 Go.
+NEED_KB=3000000
+
+case "${LC_ALL:-${LC_MESSAGES:-${LANG:-}}}" in fr*) FR=1 ;; *) FR= ;; esac
+msg() { if [ -n "$FR" ]; then printf '%s\n' "$1"; else printf '%s\n' "$2"; fi; }
+
+# copie de src/steph/shell/style.sh (ce script est téléchargé seul)
+__steph_color_depth() {
+  if [ -n "${NO_COLOR:-}" ]; then printf none; return; fi
+  case "${TERM:-}" in ''|dumb) printf none; return ;; esac
+  case "${COLORTERM:-}" in truecolor|24bit) printf truecolor; return ;; esac
+  case "$TERM" in *256color*) printf 256 ;; *) printf 16 ;; esac
+}
+
+# erreur en gras, couleur du thème, si stderr est un terminal sans NO_COLOR ni TERM=dumb
+fail() {
+  if [ -t 2 ] && [ "$(__steph_color_depth)" != none ]; then
+    printf '\033[1m%s\033[0m\n' "$(msg "steph : $1" "steph: $2")" >&2
+  else
+    msg "steph : $1" "steph: $2" >&2
+  fi
+  exit 1
+}
+
+# --- prérequis : rien n'est modifié avant la fin de ce bloc ------------------------
+if command -v apt-get >/dev/null 2>&1; then PKG="sudo apt-get install"
+elif command -v dnf >/dev/null 2>&1; then PKG="sudo dnf install"
+elif command -v pacman >/dev/null 2>&1; then PKG="sudo pacman -S"
+elif command -v zypper >/dev/null 2>&1; then PKG="sudo zypper install"
+else PKG=""; fi
+
+OS=$(uname -s)
+ARCH=$(uname -m)
+case "$OS/$ARCH" in
+  Linux/x86_64|Linux/amd64|Linux/aarch64|Linux/arm64|Darwin/arm64|Darwin/x86_64) ;;
+  *) fail "machine non prise en charge ($OS $ARCH). Linux ou macOS, x86_64 ou arm64." \
+          "unsupported machine ($OS $ARCH). Linux or macOS, x86_64 or arm64." ;;
+esac
+
+# macOS neuf : le premier appel à git ouvrirait une fenêtre d'installation graphique
+if [ "$OS" = Darwin ] && ! xcode-select -p >/dev/null 2>&1; then
+  fail "les outils de ligne de commande Apple sont requis. Lancez : xcode-select --install, puis relancez cette commande." \
+       "Apple command line tools are required. Run: xcode-select --install, then run this command again."
+fi
+
+for tool in curl git tar; do
+  if ! command -v "$tool" >/dev/null 2>&1; then
+    if [ -n "$PKG" ]; then
+      fail "$tool est requis. Installez-le : $PKG $tool" "$tool is required. Install it: $PKG $tool"
+    else
+      fail "$tool est requis." "$tool is required."
+    fi
+  fi
+done
+
+FREE_KB=$(df -Pk "$HOME" 2>/dev/null | awk 'NR == 2 { print $4 }')
+if [ -n "$FREE_KB" ] && [ "$FREE_KB" -lt "$NEED_KB" ]; then
+  fail "place insuffisante dans $HOME : 3 Go libres nécessaires, $((FREE_KB / 1000000)) Go disponibles." \
+       "not enough space in $HOME: 3 GB free needed, $((FREE_KB / 1000000)) GB available."
+fi
+
+# le dépôt doit répondre avant tout clone : sans invite de mot de passe
+if [ ! -d "$DIR/.git" ] && ! GIT_TERMINAL_PROMPT=0 git ls-remote -q "$REPO" HEAD >/dev/null 2>&1; then
+  fail "dépôt inaccessible : $REPO. Il n'est peut-être pas encore public, ou le réseau est coupé. Rien n'a été modifié." \
+       "repository unreachable: $REPO. It may not be public yet, or the network is down. Nothing was changed."
+fi
+
+# --- installation -----------------------------------------------------------------
+# PATH du terminal de la personne : install.sh dira si steph y sera trouvé
+export STEPH_USER_PATH="${STEPH_USER_PATH:-$PATH}"
+if ! command -v uv >/dev/null 2>&1; then
+  msg "steph : installation de uv, le gestionnaire Python (sans droits administrateur)." \
+      "steph: installing uv, the Python manager (no admin rights)."
+  # UV_NO_MODIFY_PATH : aucun fichier de démarrage du shell modifié ; install.sh dit quoi ajouter
+  curl -fsSL https://astral.sh/uv/install.sh | UV_NO_MODIFY_PATH=1 sh -s -- --quiet ||
+    fail "échec de l'installation de uv." "uv installation failed."
+  PATH="$HOME/.local/bin:$PATH"
+fi
+
+if [ -d "$DIR/.git" ]; then
+  GIT_TERMINAL_PROMPT=0 git -C "$DIR" pull --ff-only -q ||
+    fail "mise à jour du dépôt impossible dans $DIR (modifications locales ?)." \
+         "could not update the repository in $DIR (local changes?)."
+else
+  mkdir -p "$(dirname "$DIR")"
+  GIT_TERMINAL_PROMPT=0 git clone -q "$REPO" "$DIR" 2>/dev/null ||
+    fail "clonage du dépôt impossible : $REPO." "could not clone the repository: $REPO."
+fi
+
+exec "$DIR/scripts/install.sh"

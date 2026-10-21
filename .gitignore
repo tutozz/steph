@@ -1,0 +1,21 @@
+.venv/
+__pycache__/
+vendor/
+bench/results-*.json
+bench/*.log
+*.egg-info/
+.playwright-mcp/
+dist/
+
+# Corpus d'affinage : sorties brutes de machines réelles, jamais versionnées
+bench/matrix/finetune/corpus/
+bench/matrix/finetune/snapshot-*/
+bench/matrix/finetune/labeled/
+bench/matrix/**/*.log
+__pycache__/
+.DS_Store
+bench/matrix/finetune/models/
+
+# Publication Hugging Face : poids et gros fichiers de données restent hors git, les cartes restent suivies
+release/hf/**/*.gguf
+release/hf/steph-speak-train/data/

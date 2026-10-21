@@ -1,0 +1,142 @@
+{
+ "n": 80,
+ "errors": 0,
+ "identical": 0,
+ "unstable_global": 2,
+ "position_bias": {
+  "clarte": {
+   "decided": 60,
+   "first_wins": 46,
+   "first_share": 76.7
+  },
+  "ordre": {
+   "decided": 97,
+   "first_wins": 56,
+   "first_share": 57.7
+  },
+  "concision": {
+   "decided": 118,
+   "first_wins": 60,
+   "first_share": 50.8
+  },
+  "naturel": {
+   "decided": 114,
+   "first_wins": 60,
+   "first_share": 52.6
+  },
+  "global": {
+   "decided": 119,
+   "first_wins": 58,
+   "first_share": 48.7
+  }
+ },
+ "controls": {
+  "clarte": {
+   "planted": {
+    "n": 60,
+    "agree": 14,
+    "rate": 23.3
+   },
+   "identical": {
+    "n": 20,
+    "agree": 20,
+    "rate": 100.0
+   },
+   "all": {
+    "n": 80,
+    "agree": 34,
+    "rate": 42.5
+   }
+  },
+  "ordre": {
+   "planted": {
+    "n": 60,
+    "agree": 35,
+    "rate": 58.3
+   },
+   "identical": {
+    "n": 20,
+    "agree": 20,
+    "rate": 100.0
+   },
+   "all": {
+    "n": 80,
+    "agree": 55,
+    "rate": 68.8
+   }
+  },
+  "concision": {
+   "planted": {
+    "n": 60,
+    "agree": 56,
+    "rate": 93.3
+   },
+   "identical": {
+    "n": 20,
+    "agree": 20,
+    "rate": 100.0
+   },
+   "all": {
+    "n": 80,
+    "agree": 76,
+    "rate": 95.0
+   }
+  },
+  "naturel": {
+   "planted": {
+    "n": 60,
+    "agree": 52,
+    "rate": 86.7
+   },
+   "identical": {
+    "n": 20,
+    "agree": 20,
+    "rate": 100.0
+   },
+   "all": {
+    "n": 80,
+    "agree": 72,
+    "rate": 90.0
+   }
+  },
+  "global": {
+   "planted": {
+    "n": 60,
+    "agree": 57,
+    "rate": 95.0
+   },
+   "identical": {
+    "n": 20,
+    "agree": 20,
+    "rate": 100.0
+   },
+   "all": {
+    "n": 80,
+    "agree": 77,
+    "rate": 96.2
+   }
+  }
+ },
+ "controls_by_kind": {
+  "identical": {
+   "n": 20,
+   "agree": 20,
+   "rate": 100.0
+  },
+  "log": {
+   "n": 20,
+   "agree": 19,
+   "rate": 95.0
+  },
+  "preamble": {
+   "n": 20,
+   "agree": 18,
+   "rate": 90.0
+  },
+  "repeat": {
+   "n": 20,
+   "agree": 20,
+   "rate": 100.0
+  }
+ }
+}

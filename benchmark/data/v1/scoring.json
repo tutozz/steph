@@ -1,0 +1,25 @@
+{
+  "version": "1",
+  "max_words": {"summary": 20, "qa": 30},
+  "length_penalty": 0.8,
+  "global_forbidden": [
+    "</?think>",
+    "\\*\\*",
+    "```",
+    "(?m)^#{1,6} ",
+    "(?<![0-9a-f:])(?:[0-9a-f]{2}[:-]){5}[0-9a-f]{2}(?![0-9a-f:])",
+    "\\blet me\\b",
+    "\\bthe user (?:wants|asked|is asking|needs)\\b",
+    "\\bl.utilisateur (?:veut|demande|souhaite)\\b",
+    "\\bthinking process\\b",
+    "\\banalyse de la requete\\b",
+    "\\bder (?:benutzer|nutzer) (?:will|mochte|fragt|braucht)\\b",
+    "\\blass mich\\b",
+    "\\bel usuario (?:quiere|pide|pregunta|necesita)\\b",
+    "\\bdejame\\b",
+    "\\bo (?:utilizador|usuario) quer\\b",
+    "\\bdeixa[- ]me\\b",
+    "\\bпользователь (?:хочет|просит|спрашивает|нуждается)\\b",
+    "\\bдаи мне подумать\\b"
+  ]
+}

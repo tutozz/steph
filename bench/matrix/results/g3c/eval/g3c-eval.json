@@ -1,0 +1,1064 @@
+{
+ "models": {
+  "g3c": {
+   "seeds": 3,
+   "missing": 0,
+   "quality": 64.1,
+   "fr": 64.9,
+   "en": 63.4,
+   "summary": 61.2,
+   "qa": 88.3,
+   "quality_by_seed": [
+    63.8,
+    64.5,
+    64.1
+   ],
+   "reaches_model": 64.0,
+   "qa_present": 89.0,
+   "qa_absent": 86.7,
+   "abst_present": [
+    1,
+    2,
+    2
+   ],
+   "abst_absent": [
+    33,
+    34,
+    33
+   ],
+   "wrong_lang_pct": {
+    "@fr": 5.57,
+    "@en": 2.18
+   },
+   "wrong_lang_en_fr_output_pct": 6.8,
+   "wrong_lang_en_fr_output_n": 98,
+   "production": {
+    "quality": 72.7,
+    "by_seed": [
+     72.5,
+     72.7,
+     72.8
+    ],
+    "code_share": 57.7,
+    "fallback": [
+     15,
+     10,
+     9
+    ],
+    "fr": 72.2,
+    "en": 73.1
+   },
+   "inventions": {
+    "seeds": [
+     7,
+     42,
+     123
+    ],
+    "n": 2478,
+    "pct": 15.2,
+    "douteux_pct": 6.9
+   }
+  },
+  "g3b": {
+   "seeds": 3,
+   "missing": 0,
+   "quality": 63.7,
+   "fr": 63.9,
+   "en": 63.4,
+   "summary": 60.7,
+   "qa": 88.6,
+   "quality_by_seed": [
+    63.0,
+    63.9,
+    64.1
+   ],
+   "reaches_model": 61.9,
+   "qa_present": 90.0,
+   "qa_absent": 85.0,
+   "abst_present": [
+    1,
+    2,
+    2
+   ],
+   "abst_absent": [
+    29,
+    34,
+    35
+   ],
+   "wrong_lang_pct": {
+    "@fr": 5.0,
+    "@en": 2.58
+   },
+   "wrong_lang_en_fr_output_pct": 8.84,
+   "wrong_lang_en_fr_output_n": 98,
+   "production": {
+    "quality": 72.3,
+    "by_seed": [
+     72.0,
+     72.4,
+     72.6
+    ],
+    "code_share": 57.7,
+    "fallback": [
+     16,
+     18,
+     14
+    ],
+    "fr": 71.9,
+    "en": 72.8
+   },
+   "inventions": {
+    "seeds": [
+     7,
+     42,
+     123
+    ],
+    "n": 2478,
+    "pct": 17.3,
+    "douteux_pct": 7.0
+   }
+  },
+  "gemma-raw": {
+   "seeds": 3,
+   "missing": 0,
+   "quality": 60.6,
+   "fr": 60.8,
+   "en": 60.4,
+   "summary": 57.6,
+   "qa": 85.7,
+   "quality_by_seed": [
+    59.9,
+    61.2,
+    60.6
+   ],
+   "reaches_model": 59.1,
+   "qa_present": 86.7,
+   "qa_absent": 83.3,
+   "abst_present": [
+    1,
+    1,
+    2
+   ],
+   "abst_absent": [
+    20,
+    29,
+    30
+   ],
+   "wrong_lang_pct": {
+    "@fr": 6.3,
+    "@en": 2.74
+   },
+   "wrong_lang_en_fr_output_pct": 10.54,
+   "wrong_lang_en_fr_output_n": 98,
+   "production": {
+    "quality": 71.6,
+    "by_seed": [
+     71.2,
+     72.1,
+     71.5
+    ],
+    "code_share": 57.7,
+    "fallback": [
+     21,
+     22,
+     27
+    ],
+    "fr": 71.2,
+    "en": 72.0
+   },
+   "inventions": {
+    "seeds": [
+     7,
+     42,
+     123
+    ],
+    "n": 2477,
+    "pct": 17.4,
+    "douteux_pct": 7.6
+   }
+  },
+  "v10": {
+   "seeds": 3,
+   "missing": 0,
+   "quality": 50.6,
+   "fr": 49.8,
+   "en": 51.5,
+   "summary": 51.1,
+   "qa": 46.9,
+   "quality_by_seed": [
+    50.6,
+    50.5,
+    50.8
+   ],
+   "reaches_model": 47.4,
+   "qa_present": 47.0,
+   "qa_absent": 46.7,
+   "abst_present": [
+    8,
+    9,
+    9
+   ],
+   "abst_absent": [
+    19,
+    19,
+    18
+   ],
+   "wrong_lang_pct": {
+    "@fr": 8.96,
+    "@en": 12.27
+   },
+   "wrong_lang_en_fr_output_pct": 39.46,
+   "wrong_lang_en_fr_output_n": 98,
+   "production": {
+    "quality": 65.5,
+    "by_seed": [
+     65.2,
+     65.5,
+     65.8
+    ],
+    "code_share": 57.7,
+    "fallback": [
+     10,
+     9,
+     10
+    ],
+    "fr": 64.7,
+    "en": 66.4
+   },
+   "inventions": {
+    "seeds": [
+     7,
+     42,
+     123
+    ],
+    "n": 2478,
+    "pct": 29.2,
+    "douteux_pct": 9.1
+   }
+  }
+ },
+ "pairs": {
+  "g3c - g3b": {
+   "quality": {
+    "n_cases": 654,
+    "a": 64.13,
+    "b": 63.66,
+    "diff": 0.48,
+    "ci95": [
+     -0.76,
+     1.67
+    ],
+    "sign_test_p": 0.2995
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 64.0,
+    "b": 61.94,
+    "diff": 2.06,
+    "ci95": [
+     0.48,
+     3.61
+    ],
+    "sign_test_p": 0.0098
+   },
+   "summary": {
+    "n_cases": 584,
+    "a": 61.23,
+    "b": 60.67,
+    "diff": 0.56,
+    "ci95": [
+     -0.78,
+     1.88
+    ],
+    "sign_test_p": 0.1955
+   },
+   "qa": {
+    "n_cases": 70,
+    "a": 88.33,
+    "b": 88.57,
+    "diff": -0.24,
+    "ci95": [
+     -2.62,
+     2.38
+    ],
+    "sign_test_p": 0.3877
+   },
+   "qa_present": {
+    "n_cases": 50,
+    "a": 89.0,
+    "b": 90.0,
+    "diff": -1.0,
+    "ci95": [
+     -3.83,
+     1.83
+    ],
+    "sign_test_p": 0.3438
+   },
+   "qa_absent": {
+    "n_cases": 20,
+    "a": 86.67,
+    "b": 85.0,
+    "diff": 1.67,
+    "ci95": [
+     -2.5,
+     7.5
+    ],
+    "sign_test_p": 1.0
+   },
+   "fr": {
+    "n_cases": 654,
+    "a": 64.86,
+    "b": 63.88,
+    "diff": 0.97,
+    "ci95": [
+     -0.55,
+     2.57
+    ],
+    "sign_test_p": 0.1746
+   },
+   "en": {
+    "n_cases": 654,
+    "a": 63.41,
+    "b": 63.43,
+    "diff": -0.02,
+    "ci95": [
+     -1.71,
+     1.67
+    ],
+    "sign_test_p": 0.8884
+   },
+   "wrong_lang_fr": {
+    "n": 413,
+    "a": 5.57,
+    "b": 5.0,
+    "diff": 0.56,
+    "ci95": [
+     -1.21,
+     2.34
+    ]
+   },
+   "wrong_lang_en": {
+    "n": 413,
+    "a": 2.18,
+    "b": 2.58,
+    "diff": -0.4,
+    "ci95": [
+     -1.53,
+     0.65
+    ]
+   },
+   "wrong_lang_en_fr_output": {
+    "n": 98,
+    "a": 6.8,
+    "b": 8.84,
+    "diff": -2.04,
+    "ci95": [
+     -6.12,
+     2.04
+    ]
+   },
+   "production": {
+    "n_cases": 654,
+    "a": 72.7,
+    "b": 72.32,
+    "diff": 0.38,
+    "ci95": [
+     -0.43,
+     1.17
+    ],
+    "sign_test_p": 0.5887
+   },
+   "inventions": {
+    "seeds": [
+     7,
+     42,
+     123
+    ],
+    "n_cases": 413,
+    "a": 15.21,
+    "b": 17.31,
+    "diff": -2.1,
+    "ci95": [
+     -4.28,
+     0.04
+    ],
+    "sign_test_p": 0.0487
+   }
+  },
+  "g3c - gemma-raw": {
+   "quality": {
+    "n_cases": 654,
+    "a": 64.13,
+    "b": 60.57,
+    "diff": 3.56,
+    "ci95": [
+     1.89,
+     5.21
+    ],
+    "sign_test_p": 0.0003
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 64.0,
+    "b": 59.13,
+    "diff": 4.87,
+    "ci95": [
+     2.68,
+     7.02
+    ],
+    "sign_test_p": 0.0001
+   },
+   "summary": {
+    "n_cases": 584,
+    "a": 61.23,
+    "b": 57.56,
+    "diff": 3.67,
+    "ci95": [
+     1.95,
+     5.49
+    ],
+    "sign_test_p": 0.0007
+   },
+   "qa": {
+    "n_cases": 70,
+    "a": 88.33,
+    "b": 85.71,
+    "diff": 2.62,
+    "ci95": [
+     -0.24,
+     6.19
+    ],
+    "sign_test_p": 0.2266
+   },
+   "qa_present": {
+    "n_cases": 50,
+    "a": 89.0,
+    "b": 86.67,
+    "diff": 2.33,
+    "ci95": [
+     -1.33,
+     7.0
+    ],
+    "sign_test_p": 0.5078
+   },
+   "qa_absent": {
+    "n_cases": 20,
+    "a": 86.67,
+    "b": 83.33,
+    "diff": 3.33,
+    "ci95": [
+     0.0,
+     9.17
+    ],
+    "sign_test_p": 0.5
+   },
+   "fr": {
+    "n_cases": 654,
+    "a": 64.86,
+    "b": 60.75,
+    "diff": 4.11,
+    "ci95": [
+     1.89,
+     6.33
+    ],
+    "sign_test_p": 0.0005
+   },
+   "en": {
+    "n_cases": 654,
+    "a": 63.41,
+    "b": 60.4,
+    "diff": 3.01,
+    "ci95": [
+     0.95,
+     5.09
+    ],
+    "sign_test_p": 0.0242
+   },
+   "wrong_lang_fr": {
+    "n": 413,
+    "a": 5.57,
+    "b": 6.3,
+    "diff": -0.73,
+    "ci95": [
+     -2.91,
+     1.37
+    ]
+   },
+   "wrong_lang_en": {
+    "n": 413,
+    "a": 2.18,
+    "b": 2.74,
+    "diff": -0.56,
+    "ci95": [
+     -1.86,
+     0.73
+    ]
+   },
+   "wrong_lang_en_fr_output": {
+    "n": 98,
+    "a": 6.8,
+    "b": 10.54,
+    "diff": -3.74,
+    "ci95": [
+     -8.84,
+     1.36
+    ]
+   },
+   "production": {
+    "n_cases": 654,
+    "a": 72.7,
+    "b": 71.6,
+    "diff": 1.1,
+    "ci95": [
+     0.11,
+     2.11
+    ],
+    "sign_test_p": 0.0034
+   },
+   "inventions": {
+    "seeds": [
+     7,
+     42,
+     123
+    ],
+    "n_cases": 413,
+    "a": 15.21,
+    "b": 17.35,
+    "diff": -2.14,
+    "ci95": [
+     -4.76,
+     0.52
+    ],
+    "sign_test_p": 0.0567
+   }
+  },
+  "g3c - v10": {
+   "quality": {
+    "n_cases": 654,
+    "a": 64.13,
+    "b": 50.65,
+    "diff": 13.48,
+    "ci95": [
+     10.8,
+     16.21
+    ],
+    "sign_test_p": 0.0
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 64.0,
+    "b": 47.45,
+    "diff": 16.55,
+    "ci95": [
+     12.88,
+     20.37
+    ],
+    "sign_test_p": 0.0
+   },
+   "summary": {
+    "n_cases": 584,
+    "a": 61.23,
+    "b": 51.1,
+    "diff": 10.13,
+    "ci95": [
+     7.41,
+     12.84
+    ],
+    "sign_test_p": 0.0
+   },
+   "qa": {
+    "n_cases": 70,
+    "a": 88.33,
+    "b": 46.9,
+    "diff": 41.43,
+    "ci95": [
+     30.95,
+     51.55
+    ],
+    "sign_test_p": 0.0
+   },
+   "qa_present": {
+    "n_cases": 50,
+    "a": 89.0,
+    "b": 47.0,
+    "diff": 42.0,
+    "ci95": [
+     29.33,
+     54.5
+    ],
+    "sign_test_p": 0.0
+   },
+   "qa_absent": {
+    "n_cases": 20,
+    "a": 86.67,
+    "b": 46.67,
+    "diff": 40.0,
+    "ci95": [
+     22.5,
+     56.67
+    ],
+    "sign_test_p": 0.0018
+   },
+   "fr": {
+    "n_cases": 654,
+    "a": 64.86,
+    "b": 49.84,
+    "diff": 15.02,
+    "ci95": [
+     11.87,
+     18.21
+    ],
+    "sign_test_p": 0.0
+   },
+   "en": {
+    "n_cases": 654,
+    "a": 63.41,
+    "b": 51.47,
+    "diff": 11.94,
+    "ci95": [
+     8.76,
+     15.21
+    ],
+    "sign_test_p": 0.0
+   },
+   "wrong_lang_fr": {
+    "n": 413,
+    "a": 5.57,
+    "b": 8.96,
+    "diff": -3.39,
+    "ci95": [
+     -6.38,
+     -0.48
+    ]
+   },
+   "wrong_lang_en": {
+    "n": 413,
+    "a": 2.18,
+    "b": 12.27,
+    "diff": -10.09,
+    "ci95": [
+     -13.32,
+     -6.94
+    ]
+   },
+   "wrong_lang_en_fr_output": {
+    "n": 98,
+    "a": 6.8,
+    "b": 39.46,
+    "diff": -32.65,
+    "ci95": [
+     -43.54,
+     -21.77
+    ]
+   },
+   "production": {
+    "n_cases": 654,
+    "a": 72.7,
+    "b": 65.51,
+    "diff": 7.19,
+    "ci95": [
+     5.12,
+     9.34
+    ],
+    "sign_test_p": 0.0
+   },
+   "inventions": {
+    "seeds": [
+     7,
+     42,
+     123
+    ],
+    "n_cases": 413,
+    "a": 15.21,
+    "b": 29.22,
+    "diff": -14.0,
+    "ci95": [
+     -17.88,
+     -10.21
+    ],
+    "sign_test_p": 0.0
+   }
+  },
+  "g3b - gemma-raw": {
+   "quality": {
+    "n_cases": 654,
+    "a": 63.66,
+    "b": 60.57,
+    "diff": 3.08,
+    "ci95": [
+     1.66,
+     4.49
+    ],
+    "sign_test_p": 0.0012
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 61.94,
+    "b": 59.13,
+    "diff": 2.82,
+    "ci95": [
+     0.97,
+     4.75
+    ],
+    "sign_test_p": 0.013
+   },
+   "summary": {
+    "n_cases": 584,
+    "a": 60.67,
+    "b": 57.56,
+    "diff": 3.11,
+    "ci95": [
+     1.56,
+     4.69
+    ],
+    "sign_test_p": 0.0027
+   },
+   "qa": {
+    "n_cases": 70,
+    "a": 88.57,
+    "b": 85.71,
+    "diff": 2.86,
+    "ci95": [
+     0.12,
+     6.43
+    ],
+    "sign_test_p": 0.1797
+   },
+   "qa_present": {
+    "n_cases": 50,
+    "a": 90.0,
+    "b": 86.67,
+    "diff": 3.33,
+    "ci95": [
+     -0.17,
+     8.33
+    ],
+    "sign_test_p": 0.2891
+   },
+   "qa_absent": {
+    "n_cases": 20,
+    "a": 85.0,
+    "b": 83.33,
+    "diff": 1.67,
+    "ci95": [
+     0.0,
+     5.0
+    ],
+    "sign_test_p": 1.0
+   },
+   "fr": {
+    "n_cases": 654,
+    "a": 63.88,
+    "b": 60.75,
+    "diff": 3.14,
+    "ci95": [
+     1.11,
+     5.19
+    ],
+    "sign_test_p": 0.071
+   },
+   "en": {
+    "n_cases": 654,
+    "a": 63.43,
+    "b": 60.4,
+    "diff": 3.03,
+    "ci95": [
+     1.15,
+     4.88
+    ],
+    "sign_test_p": 0.0056
+   },
+   "wrong_lang_fr": {
+    "n": 413,
+    "a": 5.0,
+    "b": 6.3,
+    "diff": -1.29,
+    "ci95": [
+     -3.55,
+     0.97
+    ]
+   },
+   "wrong_lang_en": {
+    "n": 413,
+    "a": 2.58,
+    "b": 2.74,
+    "diff": -0.16,
+    "ci95": [
+     -1.21,
+     0.97
+    ]
+   },
+   "wrong_lang_en_fr_output": {
+    "n": 98,
+    "a": 8.84,
+    "b": 10.54,
+    "diff": -1.7,
+    "ci95": [
+     -5.78,
+     2.38
+    ]
+   },
+   "production": {
+    "n_cases": 654,
+    "a": 72.32,
+    "b": 71.6,
+    "diff": 0.72,
+    "ci95": [
+     -0.21,
+     1.66
+    ],
+    "sign_test_p": 0.0778
+   },
+   "inventions": {
+    "seeds": [
+     7,
+     42,
+     123
+    ],
+    "n_cases": 413,
+    "a": 17.31,
+    "b": 17.35,
+    "diff": -0.04,
+    "ci95": [
+     -2.7,
+     2.62
+    ],
+    "sign_test_p": 1.0
+   }
+  },
+  "g3b - v10": {
+   "quality": {
+    "n_cases": 654,
+    "a": 63.66,
+    "b": 50.65,
+    "diff": 13.0,
+    "ci95": [
+     10.31,
+     15.71
+    ],
+    "sign_test_p": 0.0
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 61.94,
+    "b": 47.45,
+    "diff": 14.49,
+    "ci95": [
+     10.94,
+     18.09
+    ],
+    "sign_test_p": 0.0
+   },
+   "summary": {
+    "n_cases": 584,
+    "a": 60.67,
+    "b": 51.1,
+    "diff": 9.57,
+    "ci95": [
+     6.94,
+     12.13
+    ],
+    "sign_test_p": 0.0
+   },
+   "qa": {
+    "n_cases": 70,
+    "a": 88.57,
+    "b": 46.9,
+    "diff": 41.67,
+    "ci95": [
+     31.67,
+     51.43
+    ],
+    "sign_test_p": 0.0
+   },
+   "qa_present": {
+    "n_cases": 50,
+    "a": 90.0,
+    "b": 47.0,
+    "diff": 43.0,
+    "ci95": [
+     30.67,
+     55.33
+    ],
+    "sign_test_p": 0.0
+   },
+   "qa_absent": {
+    "n_cases": 20,
+    "a": 85.0,
+    "b": 46.67,
+    "diff": 38.33,
+    "ci95": [
+     21.67,
+     54.17
+    ],
+    "sign_test_p": 0.0018
+   },
+   "fr": {
+    "n_cases": 654,
+    "a": 63.88,
+    "b": 49.84,
+    "diff": 14.04,
+    "ci95": [
+     10.96,
+     17.21
+    ],
+    "sign_test_p": 0.0
+   },
+   "en": {
+    "n_cases": 654,
+    "a": 63.43,
+    "b": 51.47,
+    "diff": 11.96,
+    "ci95": [
+     8.76,
+     15.2
+    ],
+    "sign_test_p": 0.0
+   },
+   "wrong_lang_fr": {
+    "n": 413,
+    "a": 5.0,
+    "b": 8.96,
+    "diff": -3.95,
+    "ci95": [
+     -6.78,
+     -1.21
+    ]
+   },
+   "wrong_lang_en": {
+    "n": 413,
+    "a": 2.58,
+    "b": 12.27,
+    "diff": -9.69,
+    "ci95": [
+     -12.75,
+     -6.7
+    ]
+   },
+   "wrong_lang_en_fr_output": {
+    "n": 98,
+    "a": 8.84,
+    "b": 39.46,
+    "diff": -30.61,
+    "ci95": [
+     -40.82,
+     -20.07
+    ]
+   },
+   "production": {
+    "n_cases": 654,
+    "a": 72.32,
+    "b": 65.51,
+    "diff": 6.81,
+    "ci95": [
+     4.75,
+     8.88
+    ],
+    "sign_test_p": 0.0
+   },
+   "inventions": {
+    "seeds": [
+     7,
+     42,
+     123
+    ],
+    "n_cases": 413,
+    "a": 17.31,
+    "b": 29.22,
+    "diff": -11.9,
+    "ci95": [
+     -15.78,
+     -8.03
+    ],
+    "sign_test_p": 0.0
+   }
+  }
+ },
+ "style": {
+  "g3c-vs-g3b": {
+   "n": 240,
+   "errors": 0,
+   "unstable": 80,
+   "all": {
+    "n": 240,
+    "x": 68,
+    "y": 62,
+    "=": 110,
+    "net_x": 2.5,
+    "ci95": [
+     -6.7,
+     12.1
+    ]
+   },
+   "fr": {
+    "n": 117,
+    "x": 36,
+    "y": 31,
+    "=": 50,
+    "net_x": 4.3,
+    "ci95": [
+     -9.4,
+     17.9
+    ]
+   },
+   "en": {
+    "n": 123,
+    "x": 32,
+    "y": 31,
+    "=": 60,
+    "net_x": 0.8,
+    "ci95": [
+     -11.4,
+     13.8
+    ]
+   }
+  }
+ },
+ "reproducibility": {
+  "g3b b7": {
+   "ref": "/root/steph-ft/g4b/runs/g3b-ple3-test-b7.json",
+   "n": 1308,
+   "identical": 1308
+  },
+  "g3b b42": {
+   "ref": "/root/steph-ft/g4b/runs/g3b-ple3-test-b42.json",
+   "n": 1308,
+   "identical": 1308
+  },
+  "g3b b123": {
+   "ref": "/root/steph-ft/g4b/runs/g3b-ple3-test-b123.json",
+   "n": 1308,
+   "identical": 1308
+  },
+  "gemma-raw b7": {
+   "ref": "/root/steph-ft/g3b/runs/gemma-raw-test-b7.json",
+   "n": 1308,
+   "identical": 1308
+  },
+  "gemma-raw b42": {
+   "ref": "/root/steph-ft/g3b/runs/gemma-raw-test-b42.json",
+   "n": 1308,
+   "identical": 1308
+  },
+  "gemma-raw b123": {
+   "ref": "/root/steph-ft/g3b/runs/gemma-raw-test-b123.json",
+   "n": 1308,
+   "identical": 1308
+  },
+  "v10 b7": {
+   "ref": "/root/steph-ft/g3b/runs/v10-test-b7.json",
+   "n": 1308,
+   "identical": 1308
+  },
+  "v10 b42": {
+   "ref": "/root/steph-ft/g3b/runs/v10-test-b42.json",
+   "n": 1308,
+   "identical": 1308
+  },
+  "v10 b123": {
+   "ref": "/root/steph-ft/g3b/runs/v10-test-b123.json",
+   "n": 1308,
+   "identical": 1308
+  }
+ }
+}

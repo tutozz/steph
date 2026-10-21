@@ -1,0 +1,267 @@
+{
+ "@context": {
+  "@language": "en",
+  "@vocab": "https://schema.org/",
+  "sc": "https://schema.org/",
+  "cr": "http://mlcommons.org/croissant/",
+  "rai": "http://mlcommons.org/croissant/RAI/",
+  "dct": "http://purl.org/dc/terms/",
+  "citeAs": "cr:citeAs",
+  "column": "cr:column",
+  "conformsTo": "dct:conformsTo",
+  "data": {
+   "@id": "cr:data",
+   "@type": "@json"
+  },
+  "dataType": {
+   "@id": "cr:dataType",
+   "@type": "@vocab"
+  },
+  "examples": {
+   "@id": "cr:examples",
+   "@type": "@json"
+  },
+  "extract": "cr:extract",
+  "field": "cr:field",
+  "fileProperty": "cr:fileProperty",
+  "fileObject": "cr:fileObject",
+  "fileSet": "cr:fileSet",
+  "format": "cr:format",
+  "includes": "cr:includes",
+  "isLiveDataset": "cr:isLiveDataset",
+  "jsonPath": "cr:jsonPath",
+  "key": "cr:key",
+  "md5": "cr:md5",
+  "parentField": "cr:parentField",
+  "path": "cr:path",
+  "recordSet": "cr:recordSet",
+  "references": "cr:references",
+  "regex": "cr:regex",
+  "repeated": "cr:repeated",
+  "replace": "cr:replace",
+  "separator": "cr:separator",
+  "source": "cr:source",
+  "subField": "cr:subField",
+  "transform": "cr:transform"
+ },
+ "@type": "sc:Dataset",
+ "conformsTo": [
+  "http://mlcommons.org/croissant/1.0",
+  "http://mlcommons.org/croissant/RAI/1.0"
+ ],
+ "name": "steph-speak-train",
+ "description": "DRAFT (task I2, docs/mission-finetune.md, private, not published to the Hub yet). Fine-tuning data (SFT and DPO configurations) for steph-speak, a small language model that turns a terminal command's output into a short spoken summary for a blind or visually impaired person. File sha256 below are from the 2026-09-27 pre-R1 validation run of bench/matrix/finetune/build_dataset_release.py, not the final published version.",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "url": "https://huggingface.co/datasets/lsmdx/steph-speak-train",
+ "version": "0.0.0-draft",
+ "datePublished": "2026-09-27",
+ "creator": {
+  "@type": "sc:Person",
+  "name": "Luis Parra"
+ },
+ "inLanguage": [
+  "fr",
+  "en"
+ ],
+ "keywords": [
+  "dataset",
+  "accessibility",
+  "screen reader",
+  "terminal",
+  "fine-tuning",
+  "small language models",
+  "steph"
+ ],
+ "citeAs": "Parra, L. (2026). steph-speak-train: fine-tuning data for spoken summaries of terminal output (draft). https://huggingface.co/datasets/lsmdx/steph-speak-train",
+ "isLiveDataset": false,
+ "distribution": [
+  {
+   "@type": "cr:FileObject",
+   "@id": "sft/train.jsonl",
+   "name": "sft-train",
+   "contentUrl": "https://huggingface.co/datasets/lsmdx/steph-speak-train/resolve/main/sft/train.jsonl",
+   "encodingFormat": "application/jsonlines",
+   "sha256": "a7edaa250ee086f8a510a8040a97051ed72df66ad7dc1e8fc5d8c17a9eefe297"
+  },
+  {
+   "@type": "cr:FileObject",
+   "@id": "sft/validation.jsonl",
+   "name": "sft-validation",
+   "contentUrl": "https://huggingface.co/datasets/lsmdx/steph-speak-train/resolve/main/sft/validation.jsonl",
+   "encodingFormat": "application/jsonlines",
+   "sha256": "5b44fd03c402d40d9bbbf0ef94cdd77ad8d32b78b5f2d66a09400a868602a5ef"
+  },
+  {
+   "@type": "cr:FileObject",
+   "@id": "dpo/train.jsonl",
+   "name": "dpo-train",
+   "description": "Empty in this draft: DPO pairs are built from a trained SFT model's own generations (pref/build_pairs.py), not from raw corpus assembly. Populated at R1.",
+   "contentUrl": "https://huggingface.co/datasets/lsmdx/steph-speak-train/resolve/main/dpo/train.jsonl",
+   "encodingFormat": "application/jsonlines",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "@type": "cr:FileObject",
+   "@id": "dpo/validation.jsonl",
+   "name": "dpo-validation",
+   "description": "Empty in this draft, see dpo-train.",
+   "contentUrl": "https://huggingface.co/datasets/lsmdx/steph-speak-train/resolve/main/dpo/validation.jsonl",
+   "encodingFormat": "application/jsonlines",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "@type": "cr:FileSet",
+   "@id": "sft",
+   "name": "sft",
+   "encodingFormat": "application/jsonlines",
+   "containedIn": [
+    { "@id": "sft/train.jsonl" },
+    { "@id": "sft/validation.jsonl" }
+   ]
+  },
+  {
+   "@type": "cr:FileSet",
+   "@id": "dpo",
+   "name": "dpo",
+   "encodingFormat": "application/jsonlines",
+   "containedIn": [
+    { "@id": "dpo/train.jsonl" },
+    { "@id": "dpo/validation.jsonl" }
+   ]
+  }
+ ],
+ "recordSet": [
+  {
+   "@type": "cr:RecordSet",
+   "@id": "sft-records",
+   "name": "sft-records",
+   "description": "Supervised fine-tuning pairs: a chat-format conversation and its documentation fields.",
+   "field": [
+    {
+     "@type": "cr:Field", "@id": "sft-records/messages", "name": "messages",
+     "description": "JSON-encoded chat messages ({role, content}), system/user/assistant (or, for the qa task, two user/assistant turns).",
+     "dataType": "sc:Text",
+     "source": { "fileSet": { "@id": "sft" }, "extract": { "column": "messages" } }
+    },
+    {
+     "@type": "cr:Field", "@id": "sft-records/language", "name": "language",
+     "description": "fr or en.",
+     "dataType": "sc:Text",
+     "source": { "fileSet": { "@id": "sft" }, "extract": { "column": "language" } }
+    },
+    {
+     "@type": "cr:Field", "@id": "sft-records/task", "name": "task",
+     "description": "summary, detail, start, progress, flux, summary_residual or qa.",
+     "dataType": "sc:Text",
+     "source": { "fileSet": { "@id": "sft" }, "extract": { "column": "task" } }
+    },
+    {
+     "@type": "cr:Field", "@id": "sft-records/source", "name": "source",
+     "description": "Neutral capture category (never a real machine name), e.g. linux-dev, macos.en, snapshot-linux-low, detail, qa-synth.",
+     "dataType": "sc:Text",
+     "source": { "fileSet": { "@id": "sft" }, "extract": { "column": "source" } }
+    },
+    {
+     "@type": "cr:Field", "@id": "sft-records/provenance", "name": "provenance",
+     "description": "real_capture (real terminal output) or synthetic_session (synthetic multi-turn arrangement of real captures, qa task only).",
+     "dataType": "sc:Text",
+     "source": { "fileSet": { "@id": "sft" }, "extract": { "column": "provenance" } }
+    },
+    {
+     "@type": "cr:Field", "@id": "sft-records/labeler", "name": "labeler",
+     "description": "Teacher model that wrote the reference answer, always qwen3.5-9b.",
+     "dataType": "sc:Text",
+     "source": { "fileSet": { "@id": "sft" }, "extract": { "column": "labeler" } }
+    },
+    {
+     "@type": "cr:Field", "@id": "sft-records/judge", "name": "judge",
+     "description": "Invention judge, always qwen3.5-9b-2pass (two-pass consensus, rejects only when both passes agree).",
+     "dataType": "sc:Text",
+     "source": { "fileSet": { "@id": "sft" }, "extract": { "column": "judge" } }
+    },
+    {
+     "@type": "cr:Field", "@id": "sft-records/resynced", "name": "resynced",
+     "description": "true if the row was re-rendered against the current steph.digest/steph.prompts code from its raw capture; false if kept as already-finalized (no raw capture available, or a task whose format needs no resync).",
+     "dataType": "sc:Boolean",
+     "source": { "fileSet": { "@id": "sft" }, "extract": { "column": "resynced" } }
+    }
+   ]
+  },
+  {
+   "@type": "cr:RecordSet",
+   "@id": "dpo-records",
+   "name": "dpo-records",
+   "description": "Preference pairs for DPO: a prompt, the grounded chosen answer and a model-generated rejected answer judged inventive. Empty in this draft, see dpo-train's description.",
+   "field": [
+    {
+     "@type": "cr:Field", "@id": "dpo-records/prompt", "name": "prompt",
+     "description": "JSON-encoded chat messages (system, user), same shape as sft-records/messages without the assistant turn.",
+     "dataType": "sc:Text",
+     "source": { "fileSet": { "@id": "dpo" }, "extract": { "column": "prompt" } }
+    },
+    {
+     "@type": "cr:Field", "@id": "dpo-records/chosen", "name": "chosen",
+     "description": "Grounded reference answer (same one the sft configuration would train on for this input).",
+     "dataType": "sc:Text",
+     "source": { "fileSet": { "@id": "dpo" }, "extract": { "column": "chosen" } }
+    },
+    {
+     "@type": "cr:Field", "@id": "dpo-records/rejected", "name": "rejected",
+     "description": "Answer generated by an already-SFT-trained model, judged inventive by the two-pass judge.",
+     "dataType": "sc:Text",
+     "source": { "fileSet": { "@id": "dpo" }, "extract": { "column": "rejected" } }
+    },
+    {
+     "@type": "cr:Field", "@id": "dpo-records/language", "name": "language",
+     "description": "fr or en.",
+     "dataType": "sc:Text",
+     "source": { "fileSet": { "@id": "dpo" }, "extract": { "column": "language" } }
+    },
+    {
+     "@type": "cr:Field", "@id": "dpo-records/task", "name": "task",
+     "description": "Always summary in this draft (DPO pairs are only built for the spoken-summary task).",
+     "dataType": "sc:Text",
+     "source": { "fileSet": { "@id": "dpo" }, "extract": { "column": "task" } }
+    },
+    {
+     "@type": "cr:Field", "@id": "dpo-records/source", "name": "source",
+     "description": "Always preference-pairs.",
+     "dataType": "sc:Text",
+     "source": { "fileSet": { "@id": "dpo" }, "extract": { "column": "source" } }
+    },
+    {
+     "@type": "cr:Field", "@id": "dpo-records/provenance", "name": "provenance",
+     "description": "real_capture_chosen_model_generated_rejected: chosen comes from a real capture, rejected from the model under training.",
+     "dataType": "sc:Text",
+     "source": { "fileSet": { "@id": "dpo" }, "extract": { "column": "provenance" } }
+    },
+    {
+     "@type": "cr:Field", "@id": "dpo-records/labeler", "name": "labeler",
+     "description": "Teacher model behind the chosen answer, always qwen3.5-9b.",
+     "dataType": "sc:Text",
+     "source": { "fileSet": { "@id": "dpo" }, "extract": { "column": "labeler" } }
+    },
+    {
+     "@type": "cr:Field", "@id": "dpo-records/judge", "name": "judge",
+     "description": "Invention judge that flagged the rejected answer, always qwen3.5-9b-2pass.",
+     "dataType": "sc:Text",
+     "source": { "fileSet": { "@id": "dpo" }, "extract": { "column": "judge" } }
+    }
+   ]
+  }
+ ],
+ "rai:dataCollection": "Real captures: terminal command outputs captured on the author's own Linux and macOS machines (French, and English under a forced English locale for the summary task), then anonymized. Synthetic sessions (qa task): multi-turn question/answer sessions composed from the same real captures, arrangement synthetic but content real.",
+ "rai:dataCollectionType": "Terminal session capture and teacher-model labeling",
+ "rai:dataCollectionTimeframe": "2026",
+ "rai:dataCollectionRawData": "false",
+ "rai:dataPreprocessingProtocol": "Anonymization (user/host/project names, network ranges, MAC/UUID/serials), two independent PII audits (see the dataset card, section Anonymisation, PII), composition matching bench/matrix/finetune/compose_train.py (exact-duplicate and judge-reject removal, per-program cap on supplemental snapshot rows), and, for the summary task where a raw capture is still available, re-rendering against the current bench/matrix/finetune/label.py-based production format with a grounding check against bench/matrix/steph/grounding.py.",
+ "rai:dataAnnotationProtocol": "Reference answers written by the teacher model Qwen/Qwen3.5-9B (temperature 0, per-task short system prompt), filtered by a two-pass consensus judge of the same model (rejects only when both passes agree on an invention).",
+ "rai:dataAnnotationPlatform": "Local llama-server (Qwen3.5-9B), bench/matrix/finetune/label.py and judge_corpus_2pass.py",
+ "rai:annotationsPerItem": "1",
+ "rai:dataUseCases": "Supervised fine-tuning (sft) and preference fine-tuning (dpo) of the steph-speak small language model.",
+ "rai:dataLimitations": "French covers every task; English covers only the summary task. Linux and macOS tools only, no Windows. The detail task carries a residual invention rate measured at 26 percent by the judge before filtering. Rows with source starting with snapshot- were not re-verified against the current production code (no raw capture available). The dpo configuration is empty in this draft.",
+ "rai:dataBiases": "Reflects the author's own machines, shell history and tool choices; command frequency is not a controlled sample of general terminal usage.",
+ "rai:personalSensitiveInformation": "None to our knowledge: anonymized before capture, scanned by two independent automated audits (bench/matrix/finetune/audit_pii.py and audit_pii_second_pass.py), both at zero confirmed findings on this exact release on 2026-09-27 (see the dataset card for sampling detail).",
+ "rai:dataSocialImpact": "Training data for an accessibility tool (spoken terminal output for blind and visually impaired users).",
+ "rai:dataReleaseMaintenancePlan": "Rebuilt by bench/matrix/finetune/build_dataset_release.py from the finalized rtx3060 corpus, never hand-edited. The version to publish is the one rebuilt after R1 (final retraining); this draft is a pre-R1 validation run."
+}

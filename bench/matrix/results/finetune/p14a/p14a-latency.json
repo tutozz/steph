@@ -1,0 +1,857 @@
+{
+ "model": "/root/stephbench-ft/models/granite-soup-Q4_K_M.gguf",
+ "voice": "/root/stephbench-ft/voices/fr_FR-siwis-medium.onnx",
+ "llm_ctx": 4096,
+ "llm_threads": 4,
+ "summary": {
+  "warmup_llm_s": 0.746,
+  "warmup_tts_first_audio_s": 0.9,
+  "n_cases": 33,
+  "n_code": 32,
+  "n_model": 1,
+  "premier_son": {
+   "code": {
+    "n": 32,
+    "median": 0.2841,
+    "p90": 0.7021,
+    "max": 0.9987
+   },
+   "model": {
+    "n": 1,
+    "median": 0.1242,
+    "p90": 0.1242,
+    "max": 0.1242
+   },
+   "all": {
+    "n": 33,
+    "median": 0.2613,
+    "p90": 0.6988,
+    "max": 0.9987
+   }
+  },
+  "premier_fait_utile": {
+   "code": {
+    "n": 32,
+    "median": 0.3172,
+    "p90": 0.9857,
+    "max": 2.078
+   },
+   "model": {
+    "n": 1,
+    "median": 2.3123,
+    "p90": 2.3123,
+    "max": 2.3123
+   },
+   "all": {
+    "n": 33,
+    "median": 0.323,
+    "p90": 1.6657,
+    "max": 2.3123
+   }
+  }
+ },
+ "results": [
+  {
+   "id": "fx00",
+   "cmd": "ls -la /etc | head -40",
+   "exit": 0,
+   "duration_fixture_s": 0.02,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "37 éléments affichés : abrt, adjtime, aliases.",
+   "n_prefix_sentences": 0,
+   "prefix_used": "",
+   "n_sentences_spoken": 1,
+   "timed_out": false,
+   "premier_son_s": 0.2577,
+   "premier_fait_utile_s": 0.2577,
+   "spoken_text": "37 éléments affichés : abrt, adjtime, aliases.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0016,
+     "text": "37 éléments affichés : abrt, adjtime, aliases."
+    }
+   ]
+  },
+  {
+   "id": "fx01",
+   "cmd": "df -h",
+   "exit": 0,
+   "duration_fixture_s": 0.01,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "racine : 685G libres sur 953G, 29 %. boot : 284M libres sur 974M, 69 %.",
+   "n_prefix_sentences": 0,
+   "prefix_used": "",
+   "n_sentences_spoken": 2,
+   "timed_out": false,
+   "premier_son_s": 0.3363,
+   "premier_fait_utile_s": 0.3363,
+   "spoken_text": "racine : 685G libres sur 953G, 29 %. boot : 284M libres sur 974M, 69 %.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0001,
+     "text": "racine : 685G libres sur 953G, 29 %."
+    },
+    {
+     "t_rel": 4.9271,
+     "text": "boot : 284M libres sur 974M, 69 %."
+    }
+   ]
+  },
+  {
+   "id": "fx02",
+   "cmd": "git -C /home/alice/Projects/steph status",
+   "exit": 0,
+   "duration_fixture_s": 0.0,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "Branche master, aucun commit, rien à valider.",
+   "n_prefix_sentences": 0,
+   "prefix_used": "",
+   "n_sentences_spoken": 1,
+   "timed_out": false,
+   "premier_son_s": 0.1867,
+   "premier_fait_utile_s": 0.1867,
+   "spoken_text": "Branche master, aucun commit, rien à valider.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0006,
+     "text": "Branche master, aucun commit, rien à valider."
+    }
+   ]
+  },
+  {
+   "id": "fx03",
+   "cmd": "cat /nonexistent/file.txt",
+   "exit": 1,
+   "duration_fixture_s": 0.0,
+   "bucket": "verbatim",
+   "long_cmd": false,
+   "resolve_said": null,
+   "n_prefix_sentences": 0,
+   "prefix_used": "",
+   "n_sentences_spoken": 1,
+   "timed_out": false,
+   "premier_son_s": 0.3069,
+   "premier_fait_utile_s": 0.3069,
+   "spoken_text": "Erreur 1 : cat: /nonexistent/file.txt: Aucun fichier ou dossier de ce nom",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0005,
+     "text": "Erreur 1 : cat: /nonexistent/file.txt: Aucun fichier ou dossier de ce nom"
+    }
+   ]
+  },
+  {
+   "id": "fx04",
+   "cmd": "python3 -c 'import json; d={}; print(d[\"key\"])'",
+   "exit": 1,
+   "duration_fixture_s": 0.05,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "Échec. string ligne 1 : KeyError key.",
+   "n_prefix_sentences": 0,
+   "prefix_used": "",
+   "n_sentences_spoken": 2,
+   "timed_out": false,
+   "premier_son_s": 0.057,
+   "premier_fait_utile_s": 0.057,
+   "spoken_text": "Échec. string ligne 1 : KeyError key.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0008,
+     "text": "Échec."
+    },
+    {
+     "t_rel": 0.7048,
+     "text": "string ligne 1 : KeyError key."
+    }
+   ]
+  },
+  {
+   "id": "fx05",
+   "cmd": "ping -c 3 127.0.0.1",
+   "exit": 0,
+   "duration_fixture_s": 2.06,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "3 reçus sur 3, 0 % de perte, moyenne 0.024 ms.",
+   "n_prefix_sentences": 0,
+   "prefix_used": "",
+   "n_sentences_spoken": 1,
+   "timed_out": false,
+   "premier_son_s": 0.5053,
+   "premier_fait_utile_s": 0.5053,
+   "spoken_text": "3 reçus sur 3, 0 % de perte, moyenne 0.024 ms.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0002,
+     "text": "3 reçus sur 3, 0 % de perte, moyenne 0.024 ms."
+    }
+   ]
+  },
+  {
+   "id": "fx06",
+   "cmd": "gcc -x c - -o /dev/null <<< 'int main(){ int x = ; return 0; }'",
+   "exit": 1,
+   "duration_fixture_s": 0.15,
+   "bucket": "verbatim",
+   "long_cmd": false,
+   "resolve_said": null,
+   "n_prefix_sentences": 0,
+   "prefix_used": "",
+   "n_sentences_spoken": 2,
+   "timed_out": false,
+   "premier_son_s": 0.1709,
+   "premier_fait_utile_s": 0.1709,
+   "spoken_text": "Erreur 1 : <stdin>: Dans la fonction « main »:. <stdin>:1:21: error: expected expression before « ; » token",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0002,
+     "text": "Erreur 1 : <stdin>: Dans la fonction « main »:."
+    },
+    {
+     "t_rel": 2.4962,
+     "text": "<stdin>:1:21: error: expected expression before « ; » token"
+    }
+   ]
+  },
+  {
+   "id": "fx07",
+   "cmd": "free -h",
+   "exit": 0,
+   "duration_fixture_s": 0.01,
+   "bucket": "verbatim",
+   "long_cmd": false,
+   "resolve_said": null,
+   "n_prefix_sentences": 0,
+   "prefix_used": "",
+   "n_sentences_spoken": 3,
+   "timed_out": false,
+   "premier_son_s": 0.2158,
+   "premier_fait_utile_s": 0.2158,
+   "spoken_text": "total        used        free      shared  buff/cache   available. Mem:            31Gi       6,6Gi       865Mi       354Mi        25Gi        24Gi. Swap:          8,0Gi        72Ki       8,0Gi",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0006,
+     "text": "total        used        free      shared  buff/cache   available."
+    },
+    {
+     "t_rel": 3.2206,
+     "text": "Mem:            31Gi       6,6Gi       865Mi       354Mi        25Gi        24Gi."
+    },
+    {
+     "t_rel": 9.2796,
+     "text": "Swap:          8,0Gi        72Ki       8,0Gi"
+    }
+   ]
+  },
+  {
+   "id": "fx08",
+   "cmd": "systemctl --user status pipewire --no-pager | head -20",
+   "exit": 0,
+   "duration_fixture_s": 0.03,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "pipewire actif depuis 2 jours.",
+   "n_prefix_sentences": 0,
+   "prefix_used": "",
+   "n_sentences_spoken": 1,
+   "timed_out": false,
+   "premier_son_s": 0.1403,
+   "premier_fait_utile_s": 0.1403,
+   "spoken_text": "pipewire actif depuis 2 jours.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0002,
+     "text": "pipewire actif depuis 2 jours."
+    }
+   ]
+  },
+  {
+   "id": "fx09",
+   "cmd": "grep -rn 'def ' /home/alice/Projects/steph/src/steph/llm.py",
+   "exit": 0,
+   "duration_fixture_s": 0.0,
+   "bucket": "llm",
+   "long_cmd": false,
+   "resolve_said": null,
+   "n_prefix_sentences": 2,
+   "prefix_used": "Succès. 8 lignes. ",
+   "n_sentences_spoken": 3,
+   "timed_out": false,
+   "premier_son_s": 0.1242,
+   "premier_fait_utile_s": 2.3123,
+   "spoken_text": "Succès. 8 lignes. 8 éléments : def __init__(self, cfg: Config), def healthy(self), def ensure_server.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0021,
+     "text": "Succès."
+    },
+    {
+     "t_rel": 0.8731,
+     "text": "8 lignes."
+    },
+    {
+     "t_rel": 1.9371,
+     "text": "8 éléments : def __init__(self, cfg: Config), def healthy(self), def ensure_server."
+    }
+   ]
+  },
+  {
+   "id": "fx10",
+   "cmd": "curl -qsS https://nonexistent.invalid/",
+   "exit": 6,
+   "duration_fixture_s": 0.02,
+   "bucket": "verbatim",
+   "long_cmd": false,
+   "resolve_said": null,
+   "n_prefix_sentences": 0,
+   "prefix_used": "",
+   "n_sentences_spoken": 1,
+   "timed_out": false,
+   "premier_son_s": 0.323,
+   "premier_fait_utile_s": 0.323,
+   "spoken_text": "Erreur 6 : curl: (6) Could not resolve host: nonexistent.invalid",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0005,
+     "text": "Erreur 6 : curl: (6) Could not resolve host: nonexistent.invalid"
+    }
+   ]
+  },
+  {
+   "id": "fx11",
+   "cmd": "ip -br addr",
+   "exit": 0,
+   "duration_fixture_s": 0.01,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "wlp0s20f3 192.168.1.20, tailscale0 100.64.0.10, tun0 10.9.0.2. Plus 8 réseaux virtuels.",
+   "n_prefix_sentences": 0,
+   "prefix_used": "",
+   "n_sentences_spoken": 2,
+   "timed_out": false,
+   "premier_son_s": 0.673,
+   "premier_fait_utile_s": 0.673,
+   "spoken_text": "wlp0s20f3 192.168.1.20, tailscale0 100.64.0.10, tun0 10.9.0.2. Plus 8 réseaux virtuels.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0007,
+     "text": "wlp0s20f3 192.168.1.20, tailscale0 100.64.0.10, tun0 10.9.0.2."
+    },
+    {
+     "t_rel": 9.7867,
+     "text": "Plus 8 réseaux virtuels."
+    }
+   ]
+  },
+  {
+   "id": "fx12",
+   "cmd": "ls /home/alice/Projects/steph",
+   "exit": 0,
+   "duration_fixture_s": 0.0,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "6 éléments : bench, pyproject.toml, README.md.",
+   "n_prefix_sentences": 0,
+   "prefix_used": "",
+   "n_sentences_spoken": 1,
+   "timed_out": false,
+   "premier_son_s": 0.227,
+   "premier_fait_utile_s": 0.227,
+   "spoken_text": "6 éléments : bench, pyproject.toml, README.md.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0006,
+     "text": "6 éléments : bench, pyproject.toml, README.md."
+    }
+   ]
+  },
+  {
+   "id": "fx13",
+   "cmd": "uname -a",
+   "exit": 0,
+   "duration_fixture_s": 0.0,
+   "bucket": "verbatim",
+   "long_cmd": false,
+   "resolve_said": null,
+   "n_prefix_sentences": 0,
+   "prefix_used": "",
+   "n_sentences_spoken": 1,
+   "timed_out": false,
+   "premier_son_s": 0.9987,
+   "premier_fait_utile_s": 0.9987,
+   "spoken_text": "Linux devbox 7.0.9-202.fc44.x86_64 #1 SMP PREEMPT_DYNAMIC Mon May 18 22:33:24 UTC 2026 x86_64 GNU/Linux",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0001,
+     "text": "Linux devbox 7.0.9-202.fc44.x86_64 #1 SMP PREEMPT_DYNAMIC Mon May 18 22:33:24 UTC 2026 x86_64 GNU/Linux"
+    }
+   ]
+  },
+  {
+   "id": "fx14",
+   "cmd": "python3 -m pip --version",
+   "exit": 0,
+   "duration_fixture_s": 0.17,
+   "bucket": "verbatim",
+   "long_cmd": false,
+   "resolve_said": null,
+   "n_prefix_sentences": 0,
+   "prefix_used": "",
+   "n_sentences_spoken": 1,
+   "timed_out": false,
+   "premier_son_s": 0.5479,
+   "premier_fait_utile_s": 0.5479,
+   "spoken_text": "pip 26.0.1 from /usr/lib/python3.14/site-packages/pip (python 3.14)",
+   "spoken_sentences": [
+    {
+     "t_rel": -0.0,
+     "text": "pip 26.0.1 from /usr/lib/python3.14/site-packages/pip (python 3.14)"
+    }
+   ]
+  },
+  {
+   "id": "fx15",
+   "cmd": "find /usr/share/doc -maxdepth 1 -name 'py*' | head -20",
+   "exit": 0,
+   "duration_fixture_s": 0.01,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "20 éléments affichés : python-systemd, python3-argcomplete, python3-attrs.",
+   "n_prefix_sentences": 0,
+   "prefix_used": "",
+   "n_sentences_spoken": 1,
+   "timed_out": false,
+   "premier_son_s": 0.3114,
+   "premier_fait_utile_s": 0.3114,
+   "spoken_text": "20 éléments affichés : python-systemd, python3-argcomplete, python3-attrs.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0006,
+     "text": "20 éléments affichés : python-systemd, python3-argcomplete, python3-attrs."
+    }
+   ]
+  },
+  {
+   "id": "fx16",
+   "cmd": "ssh -o BatchMode=yes -o ConnectTimeout=3 nobody@127.0.0.1 true",
+   "exit": 255,
+   "duration_fixture_s": 0.02,
+   "bucket": "verbatim",
+   "long_cmd": false,
+   "resolve_said": null,
+   "n_prefix_sentences": 0,
+   "prefix_used": "",
+   "n_sentences_spoken": 1,
+   "timed_out": false,
+   "premier_son_s": 0.2613,
+   "premier_fait_utile_s": 0.2613,
+   "spoken_text": "Erreur 255 : Host key verification failed.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0007,
+     "text": "Erreur 255 : Host key verification failed."
+    }
+   ]
+  },
+  {
+   "id": "fx17",
+   "cmd": "rm /etc/hostname",
+   "exit": 1,
+   "duration_fixture_s": 0.0,
+   "bucket": "verbatim",
+   "long_cmd": false,
+   "resolve_said": null,
+   "n_prefix_sentences": 0,
+   "prefix_used": "",
+   "n_sentences_spoken": 1,
+   "timed_out": false,
+   "premier_son_s": 0.3696,
+   "premier_fait_utile_s": 0.3696,
+   "spoken_text": "Erreur 1 : rm: impossible de supprimer '/etc/hostname': Permission non accordée",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0008,
+     "text": "Erreur 1 : rm: impossible de supprimer '/etc/hostname': Permission non accordée"
+    }
+   ]
+  },
+  {
+   "id": "fx18",
+   "cmd": "sort /etc/passwd | cut -d: -f1 | head -30",
+   "exit": 0,
+   "duration_fixture_s": 0.01,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "30 éléments affichés : abrt, adm, akmods.",
+   "n_prefix_sentences": 0,
+   "prefix_used": "",
+   "n_sentences_spoken": 1,
+   "timed_out": false,
+   "premier_son_s": 0.1999,
+   "premier_fait_utile_s": 0.1999,
+   "spoken_text": "30 éléments affichés : abrt, adm, akmods.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0008,
+     "text": "30 éléments affichés : abrt, adm, akmods."
+    }
+   ]
+  },
+  {
+   "id": "fx19",
+   "cmd": "du -sh /home/alice/Projects/* 2>/dev/null | sort -h | tail",
+   "exit": 0,
+   "duration_fixture_s": 1.03,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "10 éléments affichés, les plus gros : OLD_SHOPAPP 12G, installer-iso 7,9G, shopapp 2,4G.",
+   "n_prefix_sentences": 0,
+   "prefix_used": "",
+   "n_sentences_spoken": 1,
+   "timed_out": false,
+   "premier_son_s": 0.5063,
+   "premier_fait_utile_s": 0.5063,
+   "spoken_text": "10 éléments affichés, les plus gros : OLD_SHOPAPP 12G, installer-iso 7,9G, shopapp 2,4G.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0003,
+     "text": "10 éléments affichés, les plus gros : OLD_SHOPAPP 12G, installer-iso 7,9G, shopapp 2,4G."
+    }
+   ]
+  },
+  {
+   "id": "fx20",
+   "cmd": "dnf check-update --cacheonly 2>&1 | tail -30",
+   "exit": 0,
+   "duration_fixture_s": 2.28,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "29 éléments affichés : xen-licenses, xfsprogs, xorg-x11-drv-nvidia.",
+   "n_prefix_sentences": 0,
+   "prefix_used": "",
+   "n_sentences_spoken": 1,
+   "timed_out": false,
+   "premier_son_s": 0.3898,
+   "premier_fait_utile_s": 0.3898,
+   "spoken_text": "29 éléments affichés : xen-licenses, xfsprogs, xorg-x11-drv-nvidia.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0003,
+     "text": "29 éléments affichés : xen-licenses, xfsprogs, xorg-x11-drv-nvidia."
+    }
+   ]
+  },
+  {
+   "id": "fx21",
+   "cmd": "tar czf /tmp/x.tgz /nonexistent",
+   "exit": 2,
+   "duration_fixture_s": 0.01,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "Échec. nonexistent : fichier introuvable.",
+   "n_prefix_sentences": 0,
+   "prefix_used": "",
+   "n_sentences_spoken": 2,
+   "timed_out": false,
+   "premier_son_s": 0.0564,
+   "premier_fait_utile_s": 0.0564,
+   "spoken_text": "Échec. nonexistent : fichier introuvable.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0004,
+     "text": "Échec."
+    },
+    {
+     "t_rel": 0.7424,
+     "text": "nonexistent : fichier introuvable."
+    }
+   ]
+  },
+  {
+   "id": "fx22",
+   "cmd": "docker ps",
+   "exit": 0,
+   "duration_fixture_s": 0.07,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "9 conteneurs, 8 actifs ; shopapp_vault redémarre en boucle.",
+   "n_prefix_sentences": 0,
+   "prefix_used": "",
+   "n_sentences_spoken": 1,
+   "timed_out": false,
+   "premier_son_s": 0.3806,
+   "premier_fait_utile_s": 0.3806,
+   "spoken_text": "9 conteneurs, 8 actifs ; shopapp_vault redémarre en boucle.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0003,
+     "text": "9 conteneurs, 8 actifs ; shopapp_vault redémarre en boucle."
+    }
+   ]
+  },
+  {
+   "id": "fx23",
+   "cmd": "whoami",
+   "exit": 0,
+   "duration_fixture_s": 0.0,
+   "bucket": "verbatim",
+   "long_cmd": false,
+   "resolve_said": null,
+   "n_prefix_sentences": 0,
+   "prefix_used": "",
+   "n_sentences_spoken": 1,
+   "timed_out": false,
+   "premier_son_s": 0.0685,
+   "premier_fait_utile_s": 0.0685,
+   "spoken_text": "alice",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0008,
+     "text": "alice"
+    }
+   ]
+  },
+  {
+   "id": "fx24",
+   "cmd": "sudo apt upgrade -y",
+   "exit": 0,
+   "duration_fixture_s": 84.2,
+   "bucket": "resolve",
+   "long_cmd": true,
+   "resolve_said": "12 paquets mis à jour.",
+   "n_prefix_sentences": 1,
+   "prefix_used": "Terminé en 1 minute 24. ",
+   "n_sentences_spoken": 2,
+   "timed_out": false,
+   "premier_son_s": 0.1963,
+   "premier_fait_utile_s": 2.075,
+   "spoken_text": "Terminé en 1 minute 24. 12 paquets mis à jour.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0006,
+     "text": "Terminé en 1 minute 24."
+    },
+    {
+     "t_rel": 1.9376,
+     "text": "12 paquets mis à jour."
+    }
+   ]
+  },
+  {
+   "id": "fx25",
+   "cmd": "sudo apt install nginx",
+   "exit": 100,
+   "duration_fixture_s": 1.3,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "Échec. Verrou dpkg tenu par unattended-upgr, processus 4321.",
+   "n_prefix_sentences": 0,
+   "prefix_used": "",
+   "n_sentences_spoken": 2,
+   "timed_out": false,
+   "premier_son_s": 0.0773,
+   "premier_fait_utile_s": 0.0773,
+   "spoken_text": "Échec. Verrou dpkg tenu par unattended-upgr, processus 4321.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0008,
+     "text": "Échec."
+    },
+    {
+     "t_rel": 0.7878,
+     "text": "Verrou dpkg tenu par unattended-upgr, processus 4321."
+    }
+   ]
+  },
+  {
+   "id": "fx26",
+   "cmd": "pip install requests",
+   "exit": 0,
+   "duration_fixture_s": 4.1,
+   "bucket": "resolve",
+   "long_cmd": true,
+   "resolve_said": "requests 2.32.3 installé, avec 4 dépendances.",
+   "n_prefix_sentences": 1,
+   "prefix_used": "Terminé en 4 secondes. ",
+   "n_sentences_spoken": 2,
+   "timed_out": false,
+   "premier_son_s": 0.1327,
+   "premier_fait_utile_s": 1.8325,
+   "spoken_text": "Terminé en 4 secondes. requests 2.32.3 installé, avec 4 dépendances.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0008,
+     "text": "Terminé en 4 secondes."
+    },
+    {
+     "t_rel": 1.5548,
+     "text": "requests 2.32.3 installé, avec 4 dépendances."
+    }
+   ]
+  },
+  {
+   "id": "fx27",
+   "cmd": "npm run build",
+   "exit": 1,
+   "duration_fixture_s": 12.5,
+   "bucket": "resolve",
+   "long_cmd": true,
+   "resolve_said": "Échec. Header.tsx ligne 42 : Property titel does not exist on type Props. Did you mean title?",
+   "n_prefix_sentences": 1,
+   "prefix_used": "Échec après 13 secondes. ",
+   "n_sentences_spoken": 3,
+   "timed_out": false,
+   "premier_son_s": 0.1199,
+   "premier_fait_utile_s": 2.078,
+   "spoken_text": "Échec après 13 secondes. Header.tsx ligne 42 : Property titel does not exist on type Props. Did you mean title?",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0002,
+     "text": "Échec après 13 secondes."
+    },
+    {
+     "t_rel": 1.7682,
+     "text": "Header.tsx ligne 42 : Property titel does not exist on type Props."
+    },
+    {
+     "t_rel": 6.2482,
+     "text": "Did you mean title?"
+    }
+   ]
+  },
+  {
+   "id": "fx28",
+   "cmd": "git push",
+   "exit": 1,
+   "duration_fixture_s": 2.2,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "Échec. Push de main refusé : le distant a des commits absents en local, faire git pull.",
+   "n_prefix_sentences": 0,
+   "prefix_used": "",
+   "n_sentences_spoken": 2,
+   "timed_out": false,
+   "premier_son_s": 0.0778,
+   "premier_fait_utile_s": 0.0778,
+   "spoken_text": "Échec. Push de main refusé : le distant a des commits absents en local, faire git pull.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0001,
+     "text": "Échec."
+    },
+    {
+     "t_rel": 0.7891,
+     "text": "Push de main refusé : le distant a des commits absents en local, faire git pull."
+    }
+   ]
+  },
+  {
+   "id": "fx29",
+   "cmd": "lspci",
+   "exit": 0,
+   "duration_fixture_s": 0.1,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "GPU : NVIDIA Corporation GA106 [GeForce RTX 3060 Lite Hash Rate], réseau : Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, chipset : Advanced Micro Devices, Inc. [AMD] Starship/Matisse Root Complex, USB : 2, autres périphériques : 14.",
+   "n_prefix_sentences": 0,
+   "prefix_used": "",
+   "n_sentences_spoken": 3,
+   "timed_out": false,
+   "premier_son_s": 0.8684,
+   "premier_fait_utile_s": 0.8684,
+   "spoken_text": "GPU : NVIDIA Corporation GA106 [GeForce RTX 3060 Lite Hash Rate], réseau : Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, chipset : Advanced Micro Devices, Inc. [AMD] Starship/Matisse Root Complex, USB : 2, autres périphériques : 14.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0009,
+     "text": "GPU : NVIDIA Corporation GA106 [GeForce RTX 3060 Lite Hash Rate], réseau : Realtek Semiconductor Co., Ltd."
+    },
+    {
+     "t_rel": 8.5509,
+     "text": "RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, chipset : Advanced Micro Devices, Inc."
+    },
+    {
+     "t_rel": 18.6199,
+     "text": "[AMD] Starship/Matisse Root Complex, USB : 2, autres périphériques : 14."
+    }
+   ]
+  },
+  {
+   "id": "fx30",
+   "cmd": "ifconfig",
+   "exit": 0,
+   "duration_fixture_s": 0.1,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "en0 192.168.1.62, utun4 203.0.113.2.",
+   "n_prefix_sentences": 0,
+   "prefix_used": "",
+   "n_sentences_spoken": 1,
+   "timed_out": false,
+   "premier_son_s": 0.7053,
+   "premier_fait_utile_s": 0.7053,
+   "spoken_text": "en0 192.168.1.62, utun4 203.0.113.2.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0011,
+     "text": "en0 192.168.1.62, utun4 203.0.113.2."
+    }
+   ]
+  },
+  {
+   "id": "df_proxmox",
+   "cmd": "df -h",
+   "exit": 0,
+   "duration_fixture_s": 0.1,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "racine : 8.9G libres sur 94G, 91 %. backup-hdd : 134G libres sur 442G, 70 %.",
+   "n_prefix_sentences": 0,
+   "prefix_used": "",
+   "n_sentences_spoken": 2,
+   "timed_out": false,
+   "premier_son_s": 0.311,
+   "premier_fait_utile_s": 0.311,
+   "spoken_text": "racine : 8.9G libres sur 94G, 91 %. backup-hdd : 134G libres sur 442G, 70 %.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0005,
+     "text": "racine : 8.9G libres sur 94G, 91 %."
+    },
+    {
+     "t_rel": 4.6255,
+     "text": "backup-hdd : 134G libres sur 442G, 70 %."
+    }
+   ]
+  },
+  {
+   "id": "ip_a_proxmox",
+   "cmd": "ip a",
+   "exit": 0,
+   "duration_fixture_s": 0.1,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "tailscale0 100.96.222.123, vmbr0 192.168.1.200, pan0 192.168.44.1. Plus 3 réseaux virtuels.",
+   "n_prefix_sentences": 0,
+   "prefix_used": "",
+   "n_sentences_spoken": 2,
+   "timed_out": false,
+   "premier_son_s": 0.7593,
+   "premier_fait_utile_s": 0.7593,
+   "spoken_text": "tailscale0 100.96.222.123, vmbr0 192.168.1.200, pan0 192.168.44.1. Plus 3 réseaux virtuels.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0004,
+     "text": "tailscale0 100.96.222.123, vmbr0 192.168.1.200, pan0 192.168.44.1."
+    },
+    {
+     "t_rel": 11.1984,
+     "text": "Plus 3 réseaux virtuels."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+404K	/root/stephbench-v2/results
+452K	/root/steph-corpus/raw_i5.jsonl
+836K	/root/stephbench-ft/pysrc
+2,8M	/root/steph-corpus/files
+3,0M	/root/stephbench-ft/results
+20M	/root/steph-corpus/repos
+23M	/root/steph-corpus/venv
+44M	/root/stephbench-g2/bin
+61M	/root/stephbench-ft/voices
+119M	/root/steph-corpus/proj
+199M	/root/stephbench-ft/tts-venv
+4,0G	/root/stephbench-ft/models

@@ -1,0 +1,121 @@
+{
+ "args": {
+  "model": "/root/steph-ft/hf-cache/hub/models--ibm-granite--granite-4.0-h-350m/snapshots/3b17b717b8f2f5d305b0a92c1491e239aeda19c8",
+  "sft_adapters": [
+   "/root/steph-ft/p15/runs/granite-s42/adapter",
+   "/root/steph-ft/p15/runs/granite-s7/adapter",
+   "/root/steph-ft/p15/runs/granite-s123/adapter",
+   "/root/steph-ft/p15/runs/granite-s2024/adapter"
+  ],
+  "pairs": "pairs-train.jsonl",
+  "val_pairs": "pairs-val.jsonl",
+  "val": "/root/steph-ft/p15/mix-p15/val.jsonl",
+  "out": "runs/p17-dpo-lr2e5-ep12-s42",
+  "rank": 16,
+  "alpha": 32,
+  "lr": 2e-05,
+  "beta": 0.1,
+  "sft_weight": 1.0,
+  "epochs": 12.0,
+  "batch": 16,
+  "micro": 8,
+  "maxlen": 1536,
+  "seed": 42
+ },
+ "evals": [
+  {
+   "pair_loss": 1.4994,
+   "acc": 0.125,
+   "margin": 0.0,
+   "sft_val": 0.2703,
+   "epoch": 0.0
+  },
+  {
+   "pair_loss": 1.4923,
+   "acc": 0.625,
+   "margin": 0.021,
+   "sft_val": 0.2687,
+   "epoch": 1.0
+  },
+  {
+   "pair_loss": 1.4966,
+   "acc": 0.5,
+   "margin": 0.03,
+   "sft_val": 0.2713,
+   "epoch": 2.0
+  },
+  {
+   "pair_loss": 1.4913,
+   "acc": 0.5,
+   "margin": 0.059,
+   "sft_val": 0.2751,
+   "epoch": 3.0
+  },
+  {
+   "pair_loss": 1.5089,
+   "acc": 0.5,
+   "margin": 0.079,
+   "sft_val": 0.2808,
+   "epoch": 4.0
+  },
+  {
+   "pair_loss": 1.5017,
+   "acc": 0.5,
+   "margin": 0.128,
+   "sft_val": 0.2857,
+   "epoch": 5.0
+  },
+  {
+   "pair_loss": 1.5079,
+   "acc": 0.5,
+   "margin": 0.148,
+   "sft_val": 0.2926,
+   "epoch": 6.0
+  },
+  {
+   "pair_loss": 1.5488,
+   "acc": 0.5,
+   "margin": 0.159,
+   "sft_val": 0.298,
+   "epoch": 7.0
+  },
+  {
+   "pair_loss": 1.5749,
+   "acc": 0.5,
+   "margin": 0.164,
+   "sft_val": 0.3032,
+   "epoch": 8.0
+  },
+  {
+   "pair_loss": 1.6082,
+   "acc": 0.5,
+   "margin": 0.197,
+   "sft_val": 0.3072,
+   "epoch": 9.0
+  },
+  {
+   "pair_loss": 1.6299,
+   "acc": 0.5,
+   "margin": 0.19,
+   "sft_val": 0.3109,
+   "epoch": 10.0
+  },
+  {
+   "pair_loss": 1.66,
+   "acc": 0.5,
+   "margin": 0.175,
+   "sft_val": 0.3102,
+   "epoch": 11.0
+  },
+  {
+   "pair_loss": 1.6833,
+   "acc": 0.375,
+   "margin": 0.162,
+   "sft_val": 0.3111,
+   "epoch": 12.0
+  }
+ ],
+ "steps": 60,
+ "train_s": 182.0,
+ "vram_peak_mb": 4722
+}

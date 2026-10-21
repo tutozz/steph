@@ -1,0 +1,414 @@
+{
+ "cases": "bench/matrix/cases_compact_granite200_train.json (36 cas, TRAIN_SYSTEM, maxc 587)",
+ "harness": "RTX 3080 du labo, llama-server CUDA, bench_run.py (md5 identique au harnais P15), payload graine seule 7/42/123, maxc 0, Q4_K_M ; P15 rebanqué sur ce même harnais",
+ "judge": "juge A7 d'origine (judge_lib 079468ba), Qwen3.5-9B Q4_K_M sur la même RTX 3080, 2 passes, revalidé 6/6 A et B avant chaque banc jugé",
+ "method": "DPO + terme SFT (RPO, poids 1), beta 0.1, lr 2e-5, LoRA r16 a32 all-linear neuve sur la soupe P15 (référence), 4 graines 42/7/123/2024, soupe uniforme, GGUF Q4_K_M ; paires générées par la soupe P15 sur le corpus P15 (décodage du banc : temp 0.2, top_p 0.9, sans repeat_penalty, graines 42/7/123)",
+ "pairs": {
+  "verdicts": {
+   "ok": 904,
+   "invention": 79,
+   "douteux": 41
+  },
+  "train": {
+   "pairs": 71,
+   "prompts": 56,
+   "prompts_total": 1762
+  },
+  "val": {
+   "pairs": 8,
+   "prompts": 5,
+   "prompts_total": 97
+  }
+ },
+ "p15_a1000_reference": {
+  "source": "bench/matrix/results/finetune/p15/p15-summary.json",
+  "scores": {
+   "v2": {
+    "total": 82.9,
+    "holdout": 75.6,
+    "summary": 81.3,
+    "range": [
+     80.1,
+     85.6
+    ],
+    "per_seed": [
+     80.1,
+     82.9,
+     85.6
+    ],
+    "qa": {
+     "qa0": [
+      100,
+      100,
+      100
+     ],
+     "qa1": [
+      100,
+      100,
+      100
+     ],
+     "qa2": [
+      100,
+      100,
+      100
+     ]
+    }
+   },
+   "v2_spoken": {
+    "total": 85.6,
+    "holdout": 75.6,
+    "summary": 84.3,
+    "range": [
+     82.9,
+     88.4
+    ],
+    "per_seed": [
+     82.9,
+     85.6,
+     88.4
+    ],
+    "qa": {
+     "qa0": [
+      100,
+      100,
+      100
+     ],
+     "qa1": [
+      100,
+      100,
+      100
+     ],
+     "qa2": [
+      100,
+      100,
+      100
+     ]
+    }
+   }
+  },
+  "judge_b42": {
+   "invention": 6
+  }
+ },
+ "p15_uniform_3080": {
+  "scores": {
+   "v2": {
+    "total": 80.9,
+    "holdout": 72.2,
+    "summary": 79.2,
+    "range": [
+     80.9,
+     80.9
+    ],
+    "per_seed": [
+     80.9,
+     80.9,
+     80.9
+    ],
+    "qa": {
+     "qa0": [
+      100,
+      100,
+      100
+     ],
+     "qa1": [
+      100,
+      100,
+      100
+     ],
+     "qa2": [
+      100,
+      100,
+      100
+     ]
+    }
+   },
+   "v2_spoken": {
+    "total": 83.7,
+    "holdout": 72.2,
+    "summary": 82.2,
+    "range": [
+     83.7,
+     83.7
+    ],
+    "per_seed": [
+     83.7,
+     83.7,
+     83.7
+    ],
+    "qa": {
+     "qa0": [
+      100,
+      100,
+      100
+     ],
+     "qa1": [
+      100,
+      100,
+      100
+     ],
+     "qa2": [
+      100,
+      100,
+      100
+     ]
+    }
+   }
+  },
+  "judge": {
+   "b7": {
+    "invention": 7,
+    "douteux": 2,
+    "erreur": 0,
+    "invention_ids": [
+     "fx04",
+     "fx06",
+     "fx08",
+     "fx18",
+     "fx19",
+     "fx24",
+     "fx25"
+    ]
+   },
+   "b42": {
+    "invention": 7,
+    "douteux": 1,
+    "erreur": 0,
+    "invention_ids": [
+     "fx04",
+     "fx06",
+     "fx08",
+     "fx18",
+     "fx19",
+     "fx24",
+     "fx25"
+    ]
+   },
+   "b123": {
+    "invention": 7,
+    "douteux": 1,
+    "erreur": 0,
+    "invention_ids": [
+     "fx04",
+     "fx06",
+     "fx18",
+     "fx19",
+     "fx22",
+     "fx24",
+     "fx25"
+    ]
+   }
+  }
+ },
+ "p17_lr2e5_ep3": {
+  "scores": {
+   "v2": {
+    "total": 83.4,
+    "holdout": 75.5,
+    "summary": 83.8,
+    "range": [
+     82.9,
+     83.6
+    ],
+    "per_seed": [
+     83.6,
+     82.9,
+     83.6
+    ],
+    "qa": {
+     "qa0": [
+      100,
+      0,
+      0
+     ],
+     "qa1": [
+      100,
+      100,
+      100
+     ],
+     "qa2": [
+      100,
+      100,
+      100
+     ]
+    }
+   },
+   "v2_spoken": {
+    "total": 86.1,
+    "holdout": 75.5,
+    "summary": 86.9,
+    "range": [
+     85.6,
+     86.3
+    ],
+    "per_seed": [
+     86.3,
+     85.6,
+     86.3
+    ],
+    "qa": {
+     "qa0": [
+      100,
+      0,
+      0
+     ],
+     "qa1": [
+      100,
+      100,
+      100
+     ],
+     "qa2": [
+      100,
+      100,
+      100
+     ]
+    }
+   }
+  },
+  "judge": {
+   "b7": {
+    "invention": 6,
+    "douteux": 1,
+    "erreur": 0,
+    "invention_ids": [
+     "fx04",
+     "fx08",
+     "fx19",
+     "fx22",
+     "fx24",
+     "fx25"
+    ]
+   },
+   "b42": {
+    "invention": 4,
+    "douteux": 4,
+    "erreur": 0,
+    "invention_ids": [
+     "fx04",
+     "fx19",
+     "fx24",
+     "fx25"
+    ],
+    "note": "rejugé : la première passe avait 1 erreur de format du juge (fx07)"
+   },
+   "b123": {
+    "invention": 6,
+    "douteux": 2,
+    "erreur": 0,
+    "invention_ids": [
+     "fx04",
+     "fx19",
+     "fx22",
+     "fx24",
+     "fx27",
+     "qa0"
+    ]
+   }
+  }
+ },
+ "p17_lr2e5_ep12": {
+  "note": "même recette, 12 époques : 71 paires donnent 15 pas en 3 époques contre 57 pas en P16 ; 12 époques ramènent le nombre de pas à celui de P16",
+  "scores": {
+   "v2": {
+    "total": 87.7,
+    "holdout": 80.6,
+    "summary": 86.6,
+    "range": [
+     86.3,
+     89.1
+    ],
+    "per_seed": [
+     86.3,
+     89.1,
+     87.7
+    ],
+    "qa": {
+     "qa0": [
+      100,
+      100,
+      100
+     ],
+     "qa1": [
+      100,
+      100,
+      100
+     ],
+     "qa2": [
+      100,
+      100,
+      100
+     ]
+    }
+   },
+   "v2_spoken": {
+    "total": 90.5,
+    "holdout": 80.6,
+    "summary": 89.6,
+    "range": [
+     89.1,
+     91.9
+    ],
+    "per_seed": [
+     89.1,
+     91.9,
+     90.5
+    ],
+    "qa": {
+     "qa0": [
+      100,
+      100,
+      100
+     ],
+     "qa1": [
+      100,
+      100,
+      100
+     ],
+     "qa2": [
+      100,
+      100,
+      100
+     ]
+    }
+   }
+  },
+  "judge": {
+   "b7": {
+    "invention": 4,
+    "douteux": 2,
+    "erreur": 0,
+    "invention_ids": [
+     "fx04",
+     "fx19",
+     "fx24",
+     "fx25"
+    ]
+   },
+   "b42": {
+    "invention": 5,
+    "douteux": 2,
+    "erreur": 0,
+    "invention_ids": [
+     "fx04",
+     "fx08",
+     "fx19",
+     "fx22",
+     "fx24"
+    ]
+   },
+   "b123": {
+    "invention": 6,
+    "douteux": 1,
+    "erreur": 0,
+    "invention_ids": [
+     "fx04",
+     "fx08",
+     "fx19",
+     "fx22",
+     "fx24",
+     "fx25"
+    ]
+   }
+  }
+ }
+}

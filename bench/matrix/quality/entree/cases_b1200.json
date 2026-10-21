@@ -1,0 +1,614 @@
+[
+{
+"id": "fx00@1200",
+"fixture": "fx00",
+"cmd": "ls -la /etc | head -40",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. La sortie commence par un compte : répète exactement ce compte et les 3 noms qui le suivent."
+},
+{
+"role": "user",
+"content": "Commande : ls -la /etc | head -40\nStatut : succès (code 0)\nDurée : 0.0 s ; 40 lignes affichées\nSortie :\n37 éléments : abrt, adjtime, aliases\ntotal 1516\ndrwxr-xr-x. 1 root                 root                   5460  7 août  11:02 .\ndr-xr-xr-x. 1 root                 root                    180  4 juin  10:42 ..\ndrwxr-xr-x. 1 root                 root                    126 16 janv.  2026 abrt\n-rw-r--r--. 1 root                 root                     16 17 sept.  2025 adjtime\n-rw-r--r--. 1 root                 root                   1\n[…]\nrwxr-xr-x. 1 root                 root                     10 23 sept.  2025 cni\ndrwxr-xr-x. 1 root                 root                     72 21 avril 02:00 cockpit\ndrwxr-xr-x. 1 colord               colord                    0 17 sept.  2025 colord\ndrwxr-xr-x. 1 root                 root                     22 14 avril 02:00 containerd\ndrwxr-xr-x. 1 root                 root                    184 11 févr.  2026 containers\n-rw-r--r--. 1 root                 root                   1255 18 mai   02:00 cpupower-service.conf\ndrwx------. 1 root                 root                      0 13 mars   2026 credstore\ndrwx------. 1 root                 root                      0 13 mars   2026 credstore.encrypted\ndrwxr-xr-x. 1 root                 root                     14 16 janv.  2026 cron.d"
+}
+]
+},
+{
+"id": "fx01@1200",
+"fixture": "fx01",
+"cmd": "df -h",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. Donne l'espace libre de chaque disque, tel qu'écrit dans la sortie."
+},
+{
+"role": "user",
+"content": "Commande : df -h\nStatut : succès (code 0)\nDurée : 0.0 s ; 14 lignes affichées\nSortie :\nracine : 685G libres sur 953G, 29 %\nboot : 284M libres sur 974M, 69 %"
+}
+]
+},
+{
+"id": "fx02@1200",
+"fixture": "fx02",
+"cmd": "git -C /home/alice/Projects/steph status",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. Donne le résultat utile, avec les nombres en chiffres."
+},
+{
+"role": "user",
+"content": "Commande : git -C /home/alice/Projects/steph status\nStatut : succès (code 0)\nDurée : 0.0 s ; 15 lignes affichées\nSortie :\nSur la branche master\nAucun commit\nFichiers non suivis:\n  (utilisez \"git add <fichier>...\" pour inclure dans ce qui sera validé)\n\t.python-version\n\tREADME.md\n\tbench/\n\tpyproject.toml\n\tsrc/\n\tuv.lock\n\tvendor/\naucune modification ajoutée à la validation mais des fichiers non suivis sont présents (utilisez \"git add\" pour les suivre)"
+}
+]
+},
+{
+"id": "fx03@1200",
+"fixture": "fx03",
+"cmd": "cat /nonexistent/file.txt",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. La commande a échoué : commence par « Échec. », puis la cause, et le fichier et la ligne s'ils sont écrits."
+},
+{
+"role": "user",
+"content": "Commande : cat /nonexistent/file.txt\nStatut : échec (code 1)\nDurée : 0.0 s ; 1 lignes affichées\nSortie :\ncat: /nonexistent/file.txt: Aucun fichier ou dossier de ce nom"
+}
+]
+},
+{
+"id": "fx04@1200",
+"fixture": "fx04",
+"cmd": "python3 -c 'import json; d={}; print(d[\"key\"])'",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. La commande a échoué : commence par « Échec. », puis la cause, et le fichier et la ligne s'ils sont écrits."
+},
+{
+"role": "user",
+"content": "Commande : python3 -c 'import json; d={}; print(d[\"key\"])'\nStatut : échec (code 1)\nDurée : 0.1 s ; 5 lignes affichées\nSortie :\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import json; d={}; print(d[\"key\"])\n                             ~^^^^^^^\nKeyError: 'key'"
+}
+]
+},
+{
+"id": "fx05@1200",
+"fixture": "fx05",
+"cmd": "ping -c 3 127.0.0.1",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. Donne le résultat utile, avec les nombres en chiffres."
+},
+{
+"role": "user",
+"content": "Commande : ping -c 3 127.0.0.1\nStatut : succès (code 0)\nDurée : 2.1 s ; 8 lignes affichées\nSortie :\nPING 127.0.0.1 (127.0.0.1) 56(84) octets de données.\n64 octets de 127.0.0.1 : icmp_seq=1 ttl=64 temps=0.020 ms\n64 octets de 127.0.0.1 : icmp_seq=2 ttl=64 temps=0.017 ms\n64 octets de 127.0.0.1 : icmp_seq=3 ttl=64 temps=0.036 ms\n--- statistiques ping 127.0.0.1 ---\n3 paquets transmis, 3 reçus, 0% packet loss, time 2059ms\nrtt min/avg/max/mdev = 0.017/0.024/0.036/0.008 ms"
+}
+]
+},
+{
+"id": "fx06@1200",
+"fixture": "fx06",
+"cmd": "gcc -x c - -o /dev/null <<< 'int main(){ int x = ; return 0; }'",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. La commande a échoué : commence par « Échec. », puis la cause, et le fichier et la ligne s'ils sont écrits."
+},
+{
+"role": "user",
+"content": "Commande : gcc -x c - -o /dev/null <<< 'int main(){ int x = ; return 0; }'\nStatut : échec (code 1)\nDurée : 0.1 s ; 2 lignes affichées\nSortie :\n<stdin>: Dans la fonction « main »:\n<stdin>:1:21: error: expected expression before « ; » token"
+}
+]
+},
+{
+"id": "fx07@1200",
+"fixture": "fx07",
+"cmd": "free -h",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. Donne la mémoire totale et la mémoire disponible."
+},
+{
+"role": "user",
+"content": "Commande : free -h\nStatut : succès (code 0)\nDurée : 0.0 s ; 3 lignes affichées\nSortie :\n               total        used        free      shared  buff/cache   available\nMem:            31Gi       6,6Gi       865Mi       354Mi        25Gi        24Gi\nSwap:          8,0Gi        72Ki       8,0Gi"
+}
+]
+},
+{
+"id": "fx08@1200",
+"fixture": "fx08",
+"cmd": "systemctl --user status pipewire --no-pager | head -20",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. La sortie commence par un compte : répète exactement ce compte et les 3 noms qui le suivent."
+},
+{
+"role": "user",
+"content": "Commande : systemctl --user status pipewire --no-pager | head -20\nStatut : succès (code 0)\nDurée : 0.0 s ; 19 lignes affichées\nSortie :\n18 éléments : ● pipewire.service - PipeWire Multimedia Service, Loaded: loaded (/usr/lib/systemd/user/pipewire.service; disa, Drop-In: /usr/lib/systemd/user/pipewire.service.d\n● pipewire.service - PipeWire Multimedia Service\n     Loaded: loaded (/usr/lib/systemd/user/pipewire.service; disabled; preset: disabled)\n    Drop-In: /usr/lib/systemd/user/pipewire.service.d\n             └─00-uresourced.conf\n             /usr/lib/systemd/user/service.d\n             └─10-timeout-abort.conf\n     Active: active (running) since Wed 2026-09-23 09:58:56 CEST; 2 days ago\n Invocation: 00000000000000000000000000000000\nTriggeredBy: ● pipewire.socket\n   Main PID: 7126 (pipewire)\n      Tasks: 3 (limit: 37933)\n     Memory: 6.7M (peak: 10.8M)\n        CPU: 1.548s\n     CGroup: /user.slice/user-1000.slice/user@1000.service/session.slice/pipewire.service\n             └─7126 /usr/bin/pipewire\nsept. 23 09:58:56 devbox systemd[6761]: Started pipewire.service - PipeWire Multimedia Service.\nsept. 23 09:58:56 devbox pipewire[7126]: mod.raop-sink: sess.latency.msec 250,000000 should be an integer multiple of rtp.ptime 7,981859\nsept. 23 12:05:00 devbox pipewire[7126]: mod.raop-sink: sess.latency.msec 250,000000 should be an integer multiple of rtp.ptime 7,981859"
+}
+]
+},
+{
+"id": "fx09@1200",
+"fixture": "fx09",
+"cmd": "grep -rn 'def ' /home/alice/Projects/steph/src/steph/llm.py",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. La sortie commence par un compte : répète exactement ce compte et les 3 noms qui le suivent."
+},
+{
+"role": "user",
+"content": "Commande : grep -rn 'def ' /home/alice/Projects/steph/src/steph/llm.py\nStatut : succès (code 0)\nDurée : 0.0 s ; 8 lignes affichées\nSortie :\n8 éléments : def __init__(self, cfg: Config):, def healthy(self) -> bool:, def ensure_server(self, wait: float = 60.0) -> bool:\n19:    def __init__(self, cfg: Config):\n26:    def healthy(self) -> bool:\n33:    def ensure_server(self, wait: float = 60.0) -> bool:\n62:    def _pid_alive(self) -> bool:\n70:    def stop_server(self) -> None:\n79:    def _payload(self, messages, max_tokens, temperature, stream):\n90:    def stream(self, messages: list[dict], max_tokens: int = 120,\n111:    def complete(self, messages: list[dict], max_tokens: int = 120,"
+}
+]
+},
+{
+"id": "fx10@1200",
+"fixture": "fx10",
+"cmd": "curl -qsS https://nonexistent.invalid/",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. La commande a échoué : commence par « Échec. », puis la cause, et le fichier et la ligne s'ils sont écrits."
+},
+{
+"role": "user",
+"content": "Commande : curl -qsS https://nonexistent.invalid/\nStatut : échec (code 6)\nDurée : 0.0 s ; 1 lignes affichées\nSortie :\ncurl: (6) Could not resolve host: nonexistent.invalid"
+}
+]
+},
+{
+"id": "fx11@1200",
+"fixture": "fx11",
+"cmd": "ip -br addr",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. Donne chaque interface avec son adresse IPv4, telles qu'écrites en tête de la sortie."
+},
+{
+"role": "user",
+"content": "Commande : ip -br addr\nStatut : succès (code 0)\nDurée : 0.0 s ; 21 lignes affichées\nSortie :\nwlp0s20f3 192.168.1.20\ntailscale0 100.64.0.10\ntun0 10.9.0.2\nréseaux virtuels : 8"
+}
+]
+},
+{
+"id": "fx12@1200",
+"fixture": "fx12",
+"cmd": "ls /home/alice/Projects/steph",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. La sortie commence par un compte : répète exactement ce compte et les 3 noms qui le suivent."
+},
+{
+"role": "user",
+"content": "Commande : ls /home/alice/Projects/steph\nStatut : succès (code 0)\nDurée : 0.0 s ; 6 lignes affichées\nSortie :\n6 éléments : bench, pyproject.toml, README.md\nbench\npyproject.toml\nREADME.md\nsrc\nuv.lock\nvendor"
+}
+]
+},
+{
+"id": "fx13@1200",
+"fixture": "fx13",
+"cmd": "uname -a",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. Donne le résultat utile, avec les nombres en chiffres."
+},
+{
+"role": "user",
+"content": "Commande : uname -a\nStatut : succès (code 0)\nDurée : 0.0 s ; 1 lignes affichées\nSortie :\nLinux devbox 7.0.9-202.fc44.x86_64 #1 SMP PREEMPT_DYNAMIC Mon May 18 22:33:24 UTC 2026 x86_64 GNU/Linux"
+}
+]
+},
+{
+"id": "fx14@1200",
+"fixture": "fx14",
+"cmd": "python3 -m pip --version",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. Donne le résultat utile, avec les nombres en chiffres."
+},
+{
+"role": "user",
+"content": "Commande : python3 -m pip --version\nStatut : succès (code 0)\nDurée : 0.2 s ; 1 lignes affichées\nSortie :\npip 26.0.1 from /usr/lib/python3.14/site-packages/pip (python 3.14)"
+}
+]
+},
+{
+"id": "fx15@1200",
+"fixture": "fx15",
+"cmd": "find /usr/share/doc -maxdepth 1 -name 'py*' | head -20",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. La sortie commence par un compte : répète exactement ce compte et les 3 noms qui le suivent."
+},
+{
+"role": "user",
+"content": "Commande : find /usr/share/doc -maxdepth 1 -name 'py*' | head -20\nStatut : succès (code 0)\nDurée : 0.0 s ; 20 lignes affichées\nSortie :\n20 éléments : python-systemd, python3-argcomplete, python3-attrs\n/usr/share/doc/python-systemd\n/usr/share/doc/python3-argcomplete\n/usr/share/doc/python3-attrs\n/usr/share/doc/python3-augeas\n/usr/share/doc/python3-beaker\n/usr/share/doc/python3-beautifulsoup4\n/usr/share/doc/python3-blivet\n/usr/share/doc/python3-boto3\n/usr/share/doc/python3-botocore\n/usr/share/doc/python3-cairo\n/usr/share/doc/python3-cffi\n/usr/share/doc/python3-charset-normalizer\n/usr/share/doc/python3-click\n/usr/share/doc/python3-crypt-r\n/usr/share/doc/python3-cryptography\n/usr/share/doc/python3-cups\n/usr/share/doc/python3-dasbus\n/usr/share/doc/python3-dateutil\n/usr/share/doc/python3-dbus-next\n/usr/share/doc/python3-dbus"
+}
+]
+},
+{
+"id": "fx16@1200",
+"fixture": "fx16",
+"cmd": "ssh -o BatchMode=yes -o ConnectTimeout=3 nobody@127.0.0.1 true",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. Donne le résultat utile, avec les nombres en chiffres."
+},
+{
+"role": "user",
+"content": "Commande : ssh -o BatchMode=yes -o ConnectTimeout=3 nobody@127.0.0.1 true\nStatut : tuée par un signal (code 255)\nDurée : 0.0 s ; 1 lignes affichées\nSortie :\nHost key verification failed."
+}
+]
+},
+{
+"id": "fx17@1200",
+"fixture": "fx17",
+"cmd": "rm /etc/hostname",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. La commande a échoué : commence par « Échec. », puis la cause, et le fichier et la ligne s'ils sont écrits."
+},
+{
+"role": "user",
+"content": "Commande : rm /etc/hostname\nStatut : échec (code 1)\nDurée : 0.0 s ; 1 lignes affichées\nSortie :\nrm: impossible de supprimer '/etc/hostname': Permission non accordée"
+}
+]
+},
+{
+"id": "fx18@1200",
+"fixture": "fx18",
+"cmd": "sort /etc/passwd | cut -d: -f1 | head -30",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. La sortie commence par un compte : répète exactement ce compte et les 3 noms qui le suivent."
+},
+{
+"role": "user",
+"content": "Commande : sort /etc/passwd | cut -d: -f1 | head -30\nStatut : succès (code 0)\nDurée : 0.0 s ; 30 lignes affichées\nSortie :\n30 éléments : abrt, adm, akmods\nabrt\nadm\nakmods\napache\n_apt\navahi\nbin\nchrony\nclevis\ncolord\ndaemon\ndbus\ndnsmasq\nflatpak\nftp\ngames\ngdm\ngeoclue\ngluster\ngnome-initial-setup\ngnome-remote-desktop\nhalt\nlp\nalice\nmail\nmalcontent-timerd\nmalcontent-timer-ext-agent\nmalcontent-webd\nnm-openconnect\nnm-openvpn"
+}
+]
+},
+{
+"id": "fx19@1200",
+"fixture": "fx19",
+"cmd": "du -sh /home/alice/Projects/* 2>/dev/null | sort -h | tail",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. La sortie commence par un compte : répète exactement ce compte et les 3 noms qui le suivent."
+},
+{
+"role": "user",
+"content": "Commande : du -sh /home/alice/Projects/* 2>/dev/null | sort -h | tail\nStatut : succès (code 0)\nDurée : 1.0 s ; 10 lignes affichées\nSortie :\n10 éléments, les plus gros : OLD_SHOPAPP 12G, installer-iso 7,9G, shopapp 2,4G\n225M\t/home/alice/Projects/fitness-app\n246M\t/home/alice/Projects/notes-backup\n261M\t/home/alice/Projects/ansible-deploy\n411M\t/home/alice/Projects/score-board\n673M\t/home/alice/Projects/debian-image\n1,2G\t/home/alice/Projects/steph\n1,4G\t/home/alice/Projects/ops-tools\n2,4G\t/home/alice/Projects/shopapp\n7,9G\t/home/alice/Projects/installer-iso\n12G\t/home/alice/Projects/OLD_SHOPAPP"
+}
+]
+},
+{
+"id": "fx20@1200",
+"fixture": "fx20",
+"cmd": "dnf check-update --cacheonly 2>&1 | tail -30",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. La sortie commence par un compte : répète exactement ce compte et les 3 noms qui le suivent."
+},
+{
+"role": "user",
+"content": "Commande : dnf check-update --cacheonly 2>&1 | tail -30\nStatut : succès (code 0)\nDurée : 2.3 s ; 30 lignes affichées\nSortie :\n29 éléments : xen-licenses.x86_64                              4.21.2-1.fc, xfsprogs.x86_64                                  7.1.1-1.fc4, xorg-x11-drv-nvidia.x86_64                       3:610.57.04\nxen-licenses.x86_64                              4.21.2-1.fc44                   updates\nxfsprogs.x86_64                                  7.1.1-1.fc44                    updates\nxorg-x11-drv-nvidia.x86_64                       3:610.57.04-1.fc44              rpmfusion-nonfree-updates\nxorg-x11-drv-nvidia.x86_64                       3:610.57.04-1.fc44              rpmfusion-nonfree-nvidia-driver\nxo\n[…]\n                             2:49.2-1.fc44                   updates\nyubikey-manager.noarch                           5.9.2-1.20260630git60ab055.fc44 updates\nzchunk-libs.x86_64                               1.5.4-1.fc44                    updates\nzsh.x86_64                                       5.9-21.fc44                     updates\nObsoleting packages\nfwupd.x86_64                                     2.1.7-1.fc44                    updates\n    fwupd.x86_64                                 2.1.3-1.fc44                    updates\n    fwupd-plugin-flashrom.x86_64                 2.1.3-1.fc44                    updates\nkernel-headers.x86_64                            7.1.3-200.fc44                  updates\n    kernel-headers.x86_64                        7.0.6-200.fc44                  updates"
+}
+]
+},
+{
+"id": "fx21@1200",
+"fixture": "fx21",
+"cmd": "tar czf /tmp/x.tgz /nonexistent",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. La commande a échoué : commence par « Échec. », puis la cause, et le fichier et la ligne s'ils sont écrits."
+},
+{
+"role": "user",
+"content": "Commande : tar czf /tmp/x.tgz /nonexistent\nStatut : échec (code 2)\nDurée : 0.0 s ; 3 lignes affichées\nSortie :\ntar: Suppression de « / » au début des noms des membres\ntar: /nonexistent : stat impossible: Aucun fichier ou dossier de ce nom\ntar: Arrêt avec code d'échec à cause des erreurs précédentes"
+}
+]
+},
+{
+"id": "fx22@1200",
+"fixture": "fx22",
+"cmd": "docker ps",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. La sortie commence par un compte : répète exactement ce compte et les 3 noms qui le suivent."
+},
+{
+"role": "user",
+"content": "Commande : docker ps\nStatut : succès (code 0)\nDurée : 0.1 s ; 10 lignes affichées\nSortie :\n9 conteneurs : shopapp_api, shopapp_nginx_admin, shopapp_vault\nCONTAINER ID   IMAGE                         COMMAND                  CREATED        STATUS                          PORTS                             NAMES\n9300195b93b5   shopapp-api:dev             \"sh -c 'uvicorn app.…\"   4 months ago   Up 2 days                       0.0.0.0:8888->8000/tcp            shopapp\n754bd4aa1438   nginx:alpine                  \"/docker-entrypoint.…\"   4 months ago\n[…]\n212d0f60   postgres:15                   \"docker-entrypoint.s…\"   4 months ago   Up 2 days                       5432/tcp                          shopapp\nc4b0e16e9e8c   shopapp-client-webapp:dev   \"python client_web.py\"   4 months ago   Up 2 days                       127.0.0.1:8081->8080/tcp          shopapp\n33197f7d94e8   nginx:alpine                  \"/docker-entrypoint.…\"   5 months ago   Up 2 days                       80/tcp, 127.0.0.1:8443->443/tcp   shopapp\nb2373f5d78b9   nginx:alpine                  \"/docker-entrypoint.…\"   5 months ago   Up 2 days                       127.0.0.1:8080->80/tcp            shopapp\na7aeb340bbbf   iso-builder                   \"python3 /opt/iso-bu…\"   6 months ago   Up 2 days                                                         iso-build"
+}
+]
+},
+{
+"id": "fx23@1200",
+"fixture": "fx23",
+"cmd": "whoami",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. Donne le résultat utile, avec les nombres en chiffres."
+},
+{
+"role": "user",
+"content": "Commande : whoami\nStatut : succès (code 0)\nDurée : 0.0 s ; 1 lignes affichées\nSortie :\nalice"
+}
+]
+},
+{
+"id": "fx24@1200",
+"fixture": "fx24",
+"cmd": "sudo apt upgrade -y",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. Donne le résultat utile, avec les nombres en chiffres."
+},
+{
+"role": "user",
+"content": "Commande : sudo apt upgrade -y\nStatut : succès (code 0)\nDurée : 84.2 s ; 19 lignes affichées\nSortie :\nLecture des listes de paquets... Fait\nConstruction de l'arbre des dépendances... Fait\nLecture des informations d'état... Fait\nCalcul de la mise à jour... Fait\nLes paquets suivants seront mis à jour :\n  curl libcurl4 openssl libssl3 linux-libc-dev tzdata vim vim-common vim-runtime xxd python3.11 libpython3.11\n12 mis à jour, 0 nouvellement installés, 0 à enlever et 0 non mis à jour.\nIl est nécessair\n[…]\ns.\nAprès cette opération, 112 ko d'espace disque supplémentaires seront utilisés.\nRéception de :1 http://deb.debian.org/debian bookworm/main amd64 curl amd64 7.88.1-10+deb12u8 [315 kB]\nRéception de :2 http://deb.debian.org/debian bookworm/main amd64 libcurl4 amd64 7.88.1-10+deb12u8 [390 kB]\n24,3 Mo réceptionnés en 6s (4 012 ko/s)\n(Lecture de la base de données... 187432 fichiers et répertoires déjà installés.)\nPréparation du dépaquetage de .../curl_7.88.1-10+deb12u8_amd64.deb ...\nDépaquetage de curl (7.88.1-10+deb12u8) sur (7.88.1-10+deb12u7) ...\nParamétrage de curl (7.88.1-10+deb12u8) ...\nParamétrage de openssl (3.0.15-1~deb12u1) ...\nTraitement des actions différées (« triggers ») pour man-db (2.11.2-2) ...\nTraitement des actions différées (« triggers ») pour libc-bin (2.36-9+deb12u9) ..."
+}
+]
+},
+{
+"id": "fx25@1200",
+"fixture": "fx25",
+"cmd": "sudo apt install nginx",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. La commande a échoué : commence par « Échec. », puis la cause, et le fichier et la ligne s'ils sont écrits."
+},
+{
+"role": "user",
+"content": "Commande : sudo apt install nginx\nStatut : échec (code 100)\nDurée : 1.3 s ; 6 lignes affichées\nSortie :\nLecture des listes de paquets... Fait\nConstruction de l'arbre des dépendances... Fait\nLecture des informations d'état... Fait\nE: Impossible d'obtenir le verrou /var/lib/dpkg/lock-frontend. Il est tenu par le processus 4321 (unattended-upgr)\nN: Faites attention de ne pas supprimer les fichiers de verrouillage\nE: Impossible d'obtenir le verrou de l'interface dpkg (/var/lib/dpkg/lock-frontend). Un autre processus l'utilise-t-il ?"
+}
+]
+},
+{
+"id": "fx26@1200",
+"fixture": "fx26",
+"cmd": "pip install requests",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. Donne le résultat utile, avec les nombres en chiffres."
+},
+{
+"role": "user",
+"content": "Commande : pip install requests\nStatut : succès (code 0)\nDurée : 4.1 s ; 12 lignes affichées\nSortie :\nCollecting requests\n  Downloading requests-2.32.3-py3-none-any.whl (64 kB)\nCollecting charset-normalizer<4,>=2\n  Downloading charset_normalizer-3.4.0-cp312-cp312-manylinux_2_17_x86_64.whl (143 kB)\nCollecting idna<4,>=2.5\n  Using cached idna-3.10-py3-none-any.whl (70 kB)\nCollecting urllib3<3,>=1.21.1\n  Downloading urllib3-2.2.3-py3-none-any.whl (126 kB)\nCollecting certifi>=2017.4.17\n  Downloading certifi-2024.8.30-py3-none-any.whl (167 kB)\nInstalling collected packages: urllib3, idna, charset-normalizer, certifi, requests\nSuccessfully installed certifi-2024.8.30 charset-normalizer-3.4.0 idna-3.10 requests-2.32.3 urllib3-2.2.3"
+}
+]
+},
+{
+"id": "fx27@1200",
+"fixture": "fx27",
+"cmd": "npm run build",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. La commande a échoué : commence par « Échec. », puis la cause, et le fichier et la ligne s'ils sont écrits."
+},
+{
+"role": "user",
+"content": "Commande : npm run build\nStatut : échec (code 1)\nDurée : 12.5 s ; 9 lignes affichées\nSortie :\n> app@1.0.0 build\n> tsc && vite build\nsrc/components/Header.tsx:42:17 - error TS2339: Property 'titel' does not exist on type 'Props'. Did you mean 'title'?\n42     <h1>{props.titel}</h1>\n                   ~~~~~\nFound 1 error in src/components/Header.tsx:42"
+}
+]
+},
+{
+"id": "fx28@1200",
+"fixture": "fx28",
+"cmd": "git push",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. La commande a échoué : commence par « Échec. », puis la cause, et le fichier et la ligne s'ils sont écrits."
+},
+{
+"role": "user",
+"content": "Commande : git push\nStatut : échec (code 1)\nDurée : 2.2 s ; 7 lignes affichées\nSortie :\nTo gitlab.com:acme/app.git\n ! [rejected]        main -> main (fetch first)\nerror: failed to push some refs to 'gitlab.com:acme/app.git'\nhint: Updates were rejected because the remote contains work that you do\nhint: not have locally. This is usually caused by another repository pushing\nhint: to the same ref. You may want to first integrate the remote changes\nhint: (e.g., 'git pull ...') before pushing again."
+}
+]
+},
+{
+"id": "fx29@1200",
+"fixture": "fx29",
+"cmd": "lspci",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. Donne le GPU, le contrôleur réseau et le chipset."
+},
+{
+"role": "user",
+"content": "Commande : lspci\nStatut : succès (code 0)\nDurée : 0.1 s ; 35 lignes affichées\nSortie :\n00:00.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Root Complex\n00:00.2 IOMMU: Advanced Micro Devices, Inc. [AMD] Starship/Matisse IOMMU\n00:01.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge\n00:01.2 PCI bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse GPP Bridge\n00:02.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starsh\n[…]\nr Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller (rev 15)\n2b:00.0 VGA compatible controller: NVIDIA Corporation GA106 [GeForce RTX 3060 Lite Hash Rate] (rev a1)\n2b:00.1 Audio device: NVIDIA Corporation GA106 High Definition Audio Controller (rev a1)\n2c:00.0 Non-Essential Instrumentation [1300]: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Function\n2d:00.0 Non-Essential Instrumentation [1300]: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Reserved SPP\n2d:00.1 Encryption controller: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Cryptographic Coprocessor PSPCPP\n2d:00.3 USB controller: Advanced Micro Devices, Inc. [AMD] Matisse USB 3.0 Host Controller\n2d:00.4 Audio device: Advanced Micro Devices, Inc. [AMD] Starship/Matisse HD Audio Controller"
+}
+]
+},
+{
+"id": "fx30@1200",
+"fixture": "fx30",
+"cmd": "ifconfig",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. Donne chaque interface avec son adresse IPv4, telles qu'écrites en tête de la sortie."
+},
+{
+"role": "user",
+"content": "Commande : ifconfig\nStatut : succès (code 0)\nDurée : 0.1 s ; 129 lignes affichées\nSortie :\nen0 192.168.1.62\nutun4 100.64.0.11"
+}
+]
+},
+{
+"id": "df_proxmox@1200",
+"fixture": "df_proxmox",
+"cmd": "df -h",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. Donne l'espace libre de chaque disque, tel qu'écrit dans la sortie."
+},
+{
+"role": "user",
+"content": "Commande : df -h\nStatut : succès (code 0)\nDurée : 0.1 s ; 11 lignes affichées\nSortie :\nracine : 8.9G libres sur 94G, 91 %\nbackup-hdd : 134G libres sur 442G, 70 %"
+}
+]
+},
+{
+"id": "ip_a_proxmox@1200",
+"fixture": "ip_a_proxmox",
+"cmd": "ip a",
+"kind": "summary",
+"maxc": 1200,
+"messages": [
+{
+"role": "system",
+"content": "Tu résumes la sortie d'une commande pour une personne aveugle qui écoute. Réponds en une seule ligne de 15 mots maximum, en français, en mots-clés, sans phrase. N'écris que ce qui figure dans la sortie ; n'invente rien. Donne chaque interface avec son adresse IPv4, telles qu'écrites en tête de la sortie."
+},
+{
+"role": "user",
+"content": "Commande : ip a\nStatut : succès (code 0)\nDurée : 0.1 s ; 60 lignes affichées\nSortie :\ntailscale0 100.64.0.12\nvmbr0 192.168.1.200\npan0 10.8.9.1\nréseaux virtuels : 3"
+}
+]
+},
+{
+"id": "qa0",
+"fixture": "qa0",
+"cmd": "Pourquoi le build a planté ?",
+"kind": "qa",
+"maxc": 0,
+"messages": [
+{
+"role": "system",
+"content": "Tu es l'assistant vocal d'un terminal pour une personne malvoyante. Tu as accès à l'historique de la session (commandes, codes de sortie, sorties).\nRéponds en français, en style télégraphique : des mots-clés, jamais de phrase complète, ni article, ni verbe conjugué, ni politesse ; 25 mots maximum, sauf si on te demande le détail. Base-toi sur l'historique ; si la réponse n'y est pas : « Pas dans l'historique. »\nPas de markdown ni de tableaux : ta réponse est lue à voix haute. Si tu proposes une commande, écris-la seule sur sa propre ligne, précédée de « Commande : »."
+},
+{
+"role": "user",
+"content": "Historique :\nCommande : npm run build\nStatut : échec (code 1)\nSortie :\nsrc/components/Header.tsx:42:17 - error TS2339: Property 'titel' does not exist on type 'Props'. Did you mean 'title'?\n\nCommande : df -h\nStatut : succès\nSortie :\nracine : 8.9G libres sur 94G, 91 %\nbackup-hdd : 134G libres sur 442G, 70 %\n\nQuestion : Pourquoi le build a planté ?"
+}
+]
+},
+{
+"id": "qa1",
+"fixture": "qa1",
+"cmd": "Il me reste combien de place sur le disque ?",
+"kind": "qa",
+"maxc": 0,
+"messages": [
+{
+"role": "system",
+"content": "Tu es l'assistant vocal d'un terminal pour une personne malvoyante. Tu as accès à l'historique de la session (commandes, codes de sortie, sorties).\nRéponds en français, en style télégraphique : des mots-clés, jamais de phrase complète, ni article, ni verbe conjugué, ni politesse ; 25 mots maximum, sauf si on te demande le détail. Base-toi sur l'historique ; si la réponse n'y est pas : « Pas dans l'historique. »\nPas de markdown ni de tableaux : ta réponse est lue à voix haute. Si tu proposes une commande, écris-la seule sur sa propre ligne, précédée de « Commande : »."
+},
+{
+"role": "user",
+"content": "Historique :\nCommande : npm run build\nStatut : échec (code 1)\nSortie :\nsrc/components/Header.tsx:42:17 - error TS2339: Property 'titel' does not exist on type 'Props'. Did you mean 'title'?\n\nCommande : df -h\nStatut : succès\nSortie :\nracine : 8.9G libres sur 94G, 91 %\nbackup-hdd : 134G libres sur 442G, 70 %\n\nQuestion : Il me reste combien de place sur le disque ?"
+}
+]
+},
+{
+"id": "qa2",
+"fixture": "qa2",
+"cmd": "Quelle version de Python est installée ?",
+"kind": "qa",
+"maxc": 0,
+"messages": [
+{
+"role": "system",
+"content": "Tu es l'assistant vocal d'un terminal pour une personne malvoyante. Tu as accès à l'historique de la session (commandes, codes de sortie, sorties).\nRéponds en français, en style télégraphique : des mots-clés, jamais de phrase complète, ni article, ni verbe conjugué, ni politesse ; 25 mots maximum, sauf si on te demande le détail. Base-toi sur l'historique ; si la réponse n'y est pas : « Pas dans l'historique. »\nPas de markdown ni de tableaux : ta réponse est lue à voix haute. Si tu proposes une commande, écris-la seule sur sa propre ligne, précédée de « Commande : »."
+},
+{
+"role": "user",
+"content": "Historique :\nCommande : npm run build\nStatut : échec (code 1)\nSortie :\nsrc/components/Header.tsx:42:17 - error TS2339: Property 'titel' does not exist on type 'Props'. Did you mean 'title'?\n\nCommande : df -h\nStatut : succès\nSortie :\nracine : 8.9G libres sur 94G, 91 %\nbackup-hdd : 134G libres sur 442G, 70 %\n\nQuestion : Quelle version de Python est installée ?"
+}
+]
+}
+]

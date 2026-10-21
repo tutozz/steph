@@ -1,0 +1,58 @@
+12:52:57 load 0.32 smallthinker-4b-a0.6b sha OK 2630212704
+12:53:07 load 0.27 smallthinker-4b-a0.6b 36
+smallthinker-4b-a0.6b-36: ttft 1.612 p90 7.922 repos_avant 5306 repos_apres 5608 pic 5608 
+12:58:51 load 0.26 smallthinker-4b-a0.6b sum dev
+smallthinker-4b-a0.6b-sum-dev: ttft 6.502 p90 11.476 total 7.686 ram 5429 vram 0 
+13:20:24 load 4.11 smallthinker-4b-a0.6b résumés p90 11.476
+13:20:24 load 4.11 DONE smallthinker-4b-a0.6b
+13:22:38 load 0.83 trinity-nano-6b-a1b sha OK 3786957088
+13:23:48 load 0.28 trinity-nano-6b-a1b 36
+trinity-nano-6b-a1b-36: ttft 2.021 p90 7.668 repos_avant 6901 repos_apres 8129 pic 8129 
+13:30:04 load 0.25 trinity-nano-6b-a1b sum dev
+trinity-nano-6b-a1b-sum-dev: ttft 6.346 p90 11.025 total 8.288 ram 7415 vram 0 
+13:52:11 load 4.16 trinity-nano-6b-a1b résumés p90 11.025
+13:52:12 load 4.16 DONE trinity-nano-6b-a1b
+13:54:11 load 1.22 olmoe-7b-a1b sha OK 4213512192
+13:55:51 load 0.27 olmoe-7b-a1b 36
+olmoe-7b-a1b-36: ttft 2.728 p90 11.789 repos_avant 11087 repos_apres 12541 pic 12541 
+14:31:36 load 0.27 olmoe-7b-a1b sum dev
+olmoe-7b-a1b-sum-dev: ttft 9.593 p90 16.756 total 12.324 ram 10497 vram 0 
+15:05:04 load 4.12 olmoe-7b-a1b résumés p90 16.756
+15:05:04 load 4.12 DONE olmoe-7b-a1b
+15:08:01 load 0.96 granite-h-tiny-7b-a1b sha OK 4230976352
+15:09:31 load 0.28 granite-h-tiny-7b-a1b 36
+granite-h-tiny-7b-a1b-36: ttft 3.444 p90 13.646 repos_avant 7583 repos_apres 7727 pic 7782 
+15:17:32 load 0.28 granite-h-tiny-7b-a1b sum dev
+granite-h-tiny-7b-a1b-sum-dev: ttft 22.596 p90 29.877 total 25.632 ram 7785 vram 0 
+16:22:10 load 4.22 granite-h-tiny-7b-a1b résumés p90 29.877
+16:22:11 load 4.22 DONE granite-h-tiny-7b-a1b
+16:24:19 load 1.12 ling3-tiny-8b-a1.3b sha OK 4823894944
+16:25:49 load 0.27 ling3-tiny-8b-a1.3b 36
+ling3-tiny-8b-a1.3b-36: ttft 3.159 p90 12.89 repos_avant 8271 repos_apres 8369 pic 8386 
+16:47:43 load 0.28 ling3-tiny-8b-a1.3b sum dev
+ling3-tiny-8b-a1.3b-sum-dev: ttft 21.86 p90 29.512 total 23.701 ram 8415 vram 0 
+17:47:55 load 4.35 ling3-tiny-8b-a1.3b résumés p90 29.512
+17:47:56 load 4.35 DONE ling3-tiny-8b-a1.3b
+17:50:57 load 1.01 lfm2.5-8b-a1b sha OK 5155564768
+18:08:47 load 0.26 lfm2.5-8b-a1b 36
+lfm2.5-8b-a1b-36: ttft 6.184 p90 16.836 repos_avant 9126 repos_apres 9190 pic 9190 
+18:19:45 load 0.28 lfm2.5-8b-a1b sum dev
+18:23:01 load 4.02 lfm2.5-8b-a1b résumés p90 
+18:23:01 load 4.02 DONE lfm2.5-8b-a1b
+QUEUEDONE queue1.txt
+18:23:06 lfm2.5-8b-a1b résumés interrompus à 5 cas (médiane 29,9 s), repris après les modèles convertis
+19:11:49 load 5.08 euromoe-2.6b-a0.6b sha OK 1616055200
+19:44:20 load 0.27 euromoe-2.6b-a0.6b 36
+euromoe-2.6b-a0.6b-36: ttft 0.982 p90 5.521 repos_avant 3447 repos_apres 3756 pic 3756 
+19:48:56 load 0.29 euromoe-2.6b-a0.6b sum dev
+euromoe-2.6b-a0.6b-sum-dev: ttft 4.348 p90 8.204 total 5.183 ram 3592 vram 0 
+20:03:12 load 4.09 euromoe-2.6b-a0.6b résumés p90 8.204
+20:03:12 load 4.09 DONE euromoe-2.6b-a0.6b
+20:03:28 load 3.40 marco-nano-8b-a0.6b sha OK 5371986208
+20:06:18 load 0.29 marco-nano-8b-a0.6b 36
+marco-nano-8b-a0.6b-36: ttft 1.359 p90 6.959 repos_avant 11540 repos_apres 12842 pic 12842 
+20:12:31 load 0.25 marco-nano-8b-a0.6b sum dev
+marco-nano-8b-a0.6b-sum-dev: ttft 5.866 p90 10.307 total 8.378 ram 11816 vram 0 
+20:36:19 load 4.10 marco-nano-8b-a0.6b résumés p90 10.307
+20:36:20 load 4.10 DONE marco-nano-8b-a0.6b
+QUEUEDONE queue2.txt

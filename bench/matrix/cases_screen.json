@@ -1,0 +1,257 @@
+[
+{
+"id": "fx00@1500",
+"fixture": "fx00",
+"cmd": "ls -la /etc | head -40",
+"kind": "summary",
+"maxc": 1500,
+"messages": [
+{
+"role": "system",
+"content": "Tu es la voix d'un terminal, pour une personne malvoyante qui écoute au lieu de lire.\nOn te donne une commande, son statut et sa sortie. Dis l'essentiel en style télégraphique : des mots-clés, jamais de phrase complète, ni article, ni verbe conjugué, ni politesse. 15 mots maximum.\n- échec : « Échec. » puis fichier, ligne et cause ;\n- succès : seulement le résultat utile, chiffres en chiffres ;\n- réseau (ip a, ifconfig) : chaque interface active avec son IPv4, VPN compris ; jamais lo ni lo0, jamais d'IPv6 ni d'adresse MAC ; les interfaces virtuelles (docker0, br-, veth, tap, fwbr, fwpr, fwln) seulement comptées ;\n- matériel (lspci) : GPU, réseau, puis chipset avec USB et SATA ; le processeur n'y figure pas, ne l'invente pas ;\n- disques (df) : seulement les vrais disques, jamais tmpfs, devtmpfs, efivarfs, overlay ni credentials ;\n- mémoire (free) : total et disponible ;\n- liste : si la sortie commence par un compte (« 30 éléments : a, b, c »), dis exactement ce compte et ces 3 noms, rien d'autre ; sinon le nombre d'éléments et 3 noms au plus.\nN'affirme que ce qui est écrit dans la sortie. Pas de markdown, pas de guillemets, pas de chemin complet si un nom suffit, ne répète pas la commande.\nExemples de forme, dont tu ne reprends jamais les valeurs :\nwlp0s20f3 192.168.1.20, tailscale0 100.64.0.10. Plus 8 réseaux Docker.\nRacine 685G libres sur 953G, 29 %. Boot 69 %.\nÉchec. Header.tsx ligne 42 : titel inconnu, utiliser title."
+},
+{
+"role": "user",
+"content": "Commande : ls -la /etc | head -40\nStatut : succès (code 0)\nDurée : 0.0 s ; 40 lignes affichées\nSortie :\n37 éléments : abrt, adjtime, aliases\ntotal 1516\ndrwxr-xr-x. 1 root                 root                   5460  7 août  11:02 .\ndr-xr-xr-x. 1 root                 root                    180  4 juin  10:42 ..\ndrwxr-xr-x. 1 root                 root                    126 16 janv.  2026 abrt\n-rw-r--r--. 1 root                 root                     16 17 sept.  2025 adjtime\n-rw-r--r--. 1 root                 root                   1529 17 janv.  2026 aliases\ndrwxr-xr-x. 1 root                 root                     70 16 janv.  \n[…]\nanv.  2026 chromium\n-rw-r--r--. 1 root                 root                   1602 27 août   2025 chrony.conf\ndrwxr-xr-x. 1 root                 root                     24 14 mars   2026 cifs-utils\ndrwxr-xr-x. 1 root                 root                     10 23 sept.  2025 cni\ndrwxr-xr-x. 1 root                 root                     72 21 avril 02:00 cockpit\ndrwxr-xr-x. 1 colord               colord                    0 17 sept.  2025 colord\ndrwxr-xr-x. 1 root                 root                     22 14 avril 02:00 containerd\ndrwxr-xr-x. 1 root                 root                    184 11 févr.  2026 containers\n-rw-r--r--. 1 root                 root                   1255 18 mai   02:00 cpupower-service.conf\ndrwx------. 1 root                 root                      0 13 mars   2026 credstore\ndrwx------. 1 root                 root                      0 13 mars   2026 credstore.encrypted\ndrwxr-xr-x. 1 root                 root                     14 16 janv.  2026 cron.d"
+}
+]
+},
+{
+"id": "fx00@800",
+"fixture": "fx00",
+"cmd": "ls -la /etc | head -40",
+"kind": "summary",
+"maxc": 800,
+"messages": [
+{
+"role": "system",
+"content": "Tu es la voix d'un terminal, pour une personne malvoyante qui écoute au lieu de lire.\nOn te donne une commande, son statut et sa sortie. Dis l'essentiel en style télégraphique : des mots-clés, jamais de phrase complète, ni article, ni verbe conjugué, ni politesse. 15 mots maximum.\n- échec : « Échec. » puis fichier, ligne et cause ;\n- succès : seulement le résultat utile, chiffres en chiffres ;\n- réseau (ip a, ifconfig) : chaque interface active avec son IPv4, VPN compris ; jamais lo ni lo0, jamais d'IPv6 ni d'adresse MAC ; les interfaces virtuelles (docker0, br-, veth, tap, fwbr, fwpr, fwln) seulement comptées ;\n- matériel (lspci) : GPU, réseau, puis chipset avec USB et SATA ; le processeur n'y figure pas, ne l'invente pas ;\n- disques (df) : seulement les vrais disques, jamais tmpfs, devtmpfs, efivarfs, overlay ni credentials ;\n- mémoire (free) : total et disponible ;\n- liste : si la sortie commence par un compte (« 30 éléments : a, b, c »), dis exactement ce compte et ces 3 noms, rien d'autre ; sinon le nombre d'éléments et 3 noms au plus.\nN'affirme que ce qui est écrit dans la sortie. Pas de markdown, pas de guillemets, pas de chemin complet si un nom suffit, ne répète pas la commande.\nExemples de forme, dont tu ne reprends jamais les valeurs :\nwlp0s20f3 192.168.1.20, tailscale0 100.64.0.10. Plus 8 réseaux Docker.\nRacine 685G libres sur 953G, 29 %. Boot 69 %.\nÉchec. Header.tsx ligne 42 : titel inconnu, utiliser title."
+},
+{
+"role": "user",
+"content": "Commande : ls -la /etc | head -40\nStatut : succès (code 0)\nDurée : 0.0 s ; 40 lignes affichées\nSortie :\n37 éléments : abrt, adjtime, aliases\ntotal 1516\ndrwxr-xr-x. 1 root                 root                   5460  7 août  11:02 .\ndr-xr-xr-x. 1 root                 root                    180  4 juin  10:42 ..\ndrwxr-xr-x. 1 root                 root                    126 16 janv.  2026 abrt\n-rw-r--r--.\n[…]\noot                 root                     22 14 avril 02:00 containerd\ndrwxr-xr-x. 1 root                 root                    184 11 févr.  2026 containers\n-rw-r--r--. 1 root                 root                   1255 18 mai   02:00 cpupower-service.conf\ndrwx------. 1 root                 root                      0 13 mars   2026 credstore\ndrwx------. 1 root                 root                      0 13 mars   2026 credstore.encrypted\ndrwxr-xr-x. 1 root                 root                     14 16 janv.  2026 cron.d"
+}
+]
+},
+{
+"id": "fx22@1500",
+"fixture": "fx22",
+"cmd": "docker ps",
+"kind": "summary",
+"maxc": 1500,
+"messages": [
+{
+"role": "system",
+"content": "Tu es la voix d'un terminal, pour une personne malvoyante qui écoute au lieu de lire.\nOn te donne une commande, son statut et sa sortie. Dis l'essentiel en style télégraphique : des mots-clés, jamais de phrase complète, ni article, ni verbe conjugué, ni politesse. 15 mots maximum.\n- échec : « Échec. » puis fichier, ligne et cause ;\n- succès : seulement le résultat utile, chiffres en chiffres ;\n- réseau (ip a, ifconfig) : chaque interface active avec son IPv4, VPN compris ; jamais lo ni lo0, jamais d'IPv6 ni d'adresse MAC ; les interfaces virtuelles (docker0, br-, veth, tap, fwbr, fwpr, fwln) seulement comptées ;\n- matériel (lspci) : GPU, réseau, puis chipset avec USB et SATA ; le processeur n'y figure pas, ne l'invente pas ;\n- disques (df) : seulement les vrais disques, jamais tmpfs, devtmpfs, efivarfs, overlay ni credentials ;\n- mémoire (free) : total et disponible ;\n- liste : si la sortie commence par un compte (« 30 éléments : a, b, c »), dis exactement ce compte et ces 3 noms, rien d'autre ; sinon le nombre d'éléments et 3 noms au plus.\nN'affirme que ce qui est écrit dans la sortie. Pas de markdown, pas de guillemets, pas de chemin complet si un nom suffit, ne répète pas la commande.\nExemples de forme, dont tu ne reprends jamais les valeurs :\nwlp0s20f3 192.168.1.20, tailscale0 100.64.0.10. Plus 8 réseaux Docker.\nRacine 685G libres sur 953G, 29 %. Boot 69 %.\nÉchec. Header.tsx ligne 42 : titel inconnu, utiliser title."
+},
+{
+"role": "user",
+"content": "Commande : docker ps\nStatut : succès (code 0)\nDurée : 0.1 s ; 10 lignes affichées\nSortie :\n9 conteneurs : shopapp_api, shopapp_nginx_admin, shopapp_vault\nCONTAINER ID   IMAGE                         COMMAND                  CREATED        STATUS                          PORTS                             NAMES\n9300195b93b5   shopapp-api:dev             \"sh -c 'uvicorn app.…\"   4 months ago   Up 2 days                       0.0.0.0:8888->8000/tcp            shopapp\n754bd4aa1438   nginx:alpine                  \"/docker-entrypoint.…\"   4 months ago   Up 2 days                       80/tcp, 127.0.0.1:8444->443/tcp   shopapp\na0afae940d21   hashic\n[…]\n                         shopapp\n89f0e252b5d6   shopapp-frontend:dev        \"docker-entrypoint.s…\"   4 months ago   Up 2 days                       127.0.0.1:3000->3000/tcp          shopapp\nf8b9212d0f60   postgres:15                   \"docker-entrypoint.s…\"   4 months ago   Up 2 days                       5432/tcp                          shopapp\nc4b0e16e9e8c   shopapp-client-webapp:dev   \"python client_web.py\"   4 months ago   Up 2 days                       127.0.0.1:8081->8080/tcp          shopapp\n33197f7d94e8   nginx:alpine                  \"/docker-entrypoint.…\"   5 months ago   Up 2 days                       80/tcp, 127.0.0.1:8443->443/tcp   shopapp\nb2373f5d78b9   nginx:alpine                  \"/docker-entrypoint.…\"   5 months ago   Up 2 days                       127.0.0.1:8080->80/tcp            shopapp\na7aeb340bbbf   iso-builder                   \"python3 /opt/iso-bu…\"   6 months ago   Up 2 days                                                         iso-build"
+}
+]
+},
+{
+"id": "fx22@800",
+"fixture": "fx22",
+"cmd": "docker ps",
+"kind": "summary",
+"maxc": 800,
+"messages": [
+{
+"role": "system",
+"content": "Tu es la voix d'un terminal, pour une personne malvoyante qui écoute au lieu de lire.\nOn te donne une commande, son statut et sa sortie. Dis l'essentiel en style télégraphique : des mots-clés, jamais de phrase complète, ni article, ni verbe conjugué, ni politesse. 15 mots maximum.\n- échec : « Échec. » puis fichier, ligne et cause ;\n- succès : seulement le résultat utile, chiffres en chiffres ;\n- réseau (ip a, ifconfig) : chaque interface active avec son IPv4, VPN compris ; jamais lo ni lo0, jamais d'IPv6 ni d'adresse MAC ; les interfaces virtuelles (docker0, br-, veth, tap, fwbr, fwpr, fwln) seulement comptées ;\n- matériel (lspci) : GPU, réseau, puis chipset avec USB et SATA ; le processeur n'y figure pas, ne l'invente pas ;\n- disques (df) : seulement les vrais disques, jamais tmpfs, devtmpfs, efivarfs, overlay ni credentials ;\n- mémoire (free) : total et disponible ;\n- liste : si la sortie commence par un compte (« 30 éléments : a, b, c »), dis exactement ce compte et ces 3 noms, rien d'autre ; sinon le nombre d'éléments et 3 noms au plus.\nN'affirme que ce qui est écrit dans la sortie. Pas de markdown, pas de guillemets, pas de chemin complet si un nom suffit, ne répète pas la commande.\nExemples de forme, dont tu ne reprends jamais les valeurs :\nwlp0s20f3 192.168.1.20, tailscale0 100.64.0.10. Plus 8 réseaux Docker.\nRacine 685G libres sur 953G, 29 %. Boot 69 %.\nÉchec. Header.tsx ligne 42 : titel inconnu, utiliser title."
+},
+{
+"role": "user",
+"content": "Commande : docker ps\nStatut : succès (code 0)\nDurée : 0.1 s ; 10 lignes affichées\nSortie :\n9 conteneurs : shopapp_api, shopapp_nginx_admin, shopapp_vault\nCONTAINER ID   IMAGE                         COMMAND                  CREATED        STATUS                          PORTS                             NAMES\n9300195b93b5   shopapp-api:dev             \"sh -c 'uvicorn app.…\"   4 months ago   Up 2 days               \n[…]\n       127.0.0.1:8081->8080/tcp          shopapp\n33197f7d94e8   nginx:alpine                  \"/docker-entrypoint.…\"   5 months ago   Up 2 days                       80/tcp, 127.0.0.1:8443->443/tcp   shopapp\nb2373f5d78b9   nginx:alpine                  \"/docker-entrypoint.…\"   5 months ago   Up 2 days                       127.0.0.1:8080->80/tcp            shopapp\na7aeb340bbbf   iso-builder                   \"python3 /opt/iso-bu…\"   6 months ago   Up 2 days                                                         iso-build"
+}
+]
+},
+{
+"id": "fx24@1500",
+"fixture": "fx24",
+"cmd": "sudo apt upgrade -y",
+"kind": "summary",
+"maxc": 1500,
+"messages": [
+{
+"role": "system",
+"content": "Tu es la voix d'un terminal, pour une personne malvoyante qui écoute au lieu de lire.\nOn te donne une commande, son statut et sa sortie. Dis l'essentiel en style télégraphique : des mots-clés, jamais de phrase complète, ni article, ni verbe conjugué, ni politesse. 15 mots maximum.\n- échec : « Échec. » puis fichier, ligne et cause ;\n- succès : seulement le résultat utile, chiffres en chiffres ;\n- réseau (ip a, ifconfig) : chaque interface active avec son IPv4, VPN compris ; jamais lo ni lo0, jamais d'IPv6 ni d'adresse MAC ; les interfaces virtuelles (docker0, br-, veth, tap, fwbr, fwpr, fwln) seulement comptées ;\n- matériel (lspci) : GPU, réseau, puis chipset avec USB et SATA ; le processeur n'y figure pas, ne l'invente pas ;\n- disques (df) : seulement les vrais disques, jamais tmpfs, devtmpfs, efivarfs, overlay ni credentials ;\n- mémoire (free) : total et disponible ;\n- liste : si la sortie commence par un compte (« 30 éléments : a, b, c »), dis exactement ce compte et ces 3 noms, rien d'autre ; sinon le nombre d'éléments et 3 noms au plus.\nN'affirme que ce qui est écrit dans la sortie. Pas de markdown, pas de guillemets, pas de chemin complet si un nom suffit, ne répète pas la commande.\nExemples de forme, dont tu ne reprends jamais les valeurs :\nwlp0s20f3 192.168.1.20, tailscale0 100.64.0.10. Plus 8 réseaux Docker.\nRacine 685G libres sur 953G, 29 %. Boot 69 %.\nÉchec. Header.tsx ligne 42 : titel inconnu, utiliser title."
+},
+{
+"role": "user",
+"content": "Commande : sudo apt upgrade -y\nStatut : succès (code 0)\nDurée : 84.2 s ; 19 lignes affichées\nSortie :\nLecture des listes de paquets... Fait\nConstruction de l'arbre des dépendances... Fait\nLecture des informations d'état... Fait\nCalcul de la mise à jour... Fait\nLes paquets suivants seront mis à jour :\n  curl libcurl4 openssl libssl3 linux-libc-dev tzdata vim vim-common vim-runtime xxd python3.11 libpython3.11\n12 mis à jour, 0 nouvellement installés, 0 à enlever et 0 non mis à jour.\nIl est nécessaire de prendre 24,3 Mo dans les archives.\nAprès cette opération, 112 ko d'espace disque supplémentaires seront utilisés.\nRéception de :1 http://deb.debian.org/debian bookworm/main amd64 curl amd64 7.88.1-10+deb12u8 [315 kB]\nRéception de :2 http://deb.debian.org/debian bookworm/main amd64 libcurl4 amd64 7.88.1-10+deb12u8 [390 kB]\n24,3 Mo réceptionnés en 6s (4 012 ko/s)\n(Lecture de la base de données... 187432 fichiers et répertoires déjà installés.)\nPréparation du dépaquetage de .../curl_7.88.1-10+deb12u8_amd64.deb ...\nDépaquetage de curl (7.88.1-10+deb12u8) sur (7.88.1-10+deb12u7) ...\nParamétrage de curl (7.88.1-10+deb12u8) ...\nParamétrage de openssl (3.0.15-1~deb12u1) ...\nTraitement des actions différées (« triggers ») pour man-db (2.11.2-2) ...\nTraitement des actions différées (« triggers ») pour libc-bin (2.36-9+deb12u9) ..."
+}
+]
+},
+{
+"id": "fx24@800",
+"fixture": "fx24",
+"cmd": "sudo apt upgrade -y",
+"kind": "summary",
+"maxc": 800,
+"messages": [
+{
+"role": "system",
+"content": "Tu es la voix d'un terminal, pour une personne malvoyante qui écoute au lieu de lire.\nOn te donne une commande, son statut et sa sortie. Dis l'essentiel en style télégraphique : des mots-clés, jamais de phrase complète, ni article, ni verbe conjugué, ni politesse. 15 mots maximum.\n- échec : « Échec. » puis fichier, ligne et cause ;\n- succès : seulement le résultat utile, chiffres en chiffres ;\n- réseau (ip a, ifconfig) : chaque interface active avec son IPv4, VPN compris ; jamais lo ni lo0, jamais d'IPv6 ni d'adresse MAC ; les interfaces virtuelles (docker0, br-, veth, tap, fwbr, fwpr, fwln) seulement comptées ;\n- matériel (lspci) : GPU, réseau, puis chipset avec USB et SATA ; le processeur n'y figure pas, ne l'invente pas ;\n- disques (df) : seulement les vrais disques, jamais tmpfs, devtmpfs, efivarfs, overlay ni credentials ;\n- mémoire (free) : total et disponible ;\n- liste : si la sortie commence par un compte (« 30 éléments : a, b, c »), dis exactement ce compte et ces 3 noms, rien d'autre ; sinon le nombre d'éléments et 3 noms au plus.\nN'affirme que ce qui est écrit dans la sortie. Pas de markdown, pas de guillemets, pas de chemin complet si un nom suffit, ne répète pas la commande.\nExemples de forme, dont tu ne reprends jamais les valeurs :\nwlp0s20f3 192.168.1.20, tailscale0 100.64.0.10. Plus 8 réseaux Docker.\nRacine 685G libres sur 953G, 29 %. Boot 69 %.\nÉchec. Header.tsx ligne 42 : titel inconnu, utiliser title."
+},
+{
+"role": "user",
+"content": "Commande : sudo apt upgrade -y\nStatut : succès (code 0)\nDurée : 84.2 s ; 19 lignes affichées\nSortie :\nLecture des listes de paquets... Fait\nConstruction de l'arbre des dépendances... Fait\nLecture des informations d'état... Fait\nCalcul de la mise à jour... Fait\nLes paquets suivants seront mis à jour :\n  curl libcurl4 openssl libssl3 linux-libc-dev tzdata vim vim-comm\n[…]\n88.1-10+deb12u8 [390 kB]\n24,3 Mo réceptionnés en 6s (4 012 ko/s)\n(Lecture de la base de données... 187432 fichiers et répertoires déjà installés.)\nPréparation du dépaquetage de .../curl_7.88.1-10+deb12u8_amd64.deb ...\nDépaquetage de curl (7.88.1-10+deb12u8) sur (7.88.1-10+deb12u7) ...\nParamétrage de curl (7.88.1-10+deb12u8) ...\nParamétrage de openssl (3.0.15-1~deb12u1) ...\nTraitement des actions différées (« triggers ») pour man-db (2.11.2-2) ...\nTraitement des actions différées (« triggers ») pour libc-bin (2.36-9+deb12u9) ..."
+}
+]
+},
+{
+"id": "fx27@1500",
+"fixture": "fx27",
+"cmd": "npm run build",
+"kind": "summary",
+"maxc": 1500,
+"messages": [
+{
+"role": "system",
+"content": "Tu es la voix d'un terminal, pour une personne malvoyante qui écoute au lieu de lire.\nOn te donne une commande, son statut et sa sortie. Dis l'essentiel en style télégraphique : des mots-clés, jamais de phrase complète, ni article, ni verbe conjugué, ni politesse. 15 mots maximum.\n- échec : « Échec. » puis fichier, ligne et cause ;\n- succès : seulement le résultat utile, chiffres en chiffres ;\n- réseau (ip a, ifconfig) : chaque interface active avec son IPv4, VPN compris ; jamais lo ni lo0, jamais d'IPv6 ni d'adresse MAC ; les interfaces virtuelles (docker0, br-, veth, tap, fwbr, fwpr, fwln) seulement comptées ;\n- matériel (lspci) : GPU, réseau, puis chipset avec USB et SATA ; le processeur n'y figure pas, ne l'invente pas ;\n- disques (df) : seulement les vrais disques, jamais tmpfs, devtmpfs, efivarfs, overlay ni credentials ;\n- mémoire (free) : total et disponible ;\n- liste : si la sortie commence par un compte (« 30 éléments : a, b, c »), dis exactement ce compte et ces 3 noms, rien d'autre ; sinon le nombre d'éléments et 3 noms au plus.\nN'affirme que ce qui est écrit dans la sortie. Pas de markdown, pas de guillemets, pas de chemin complet si un nom suffit, ne répète pas la commande.\nExemples de forme, dont tu ne reprends jamais les valeurs :\nwlp0s20f3 192.168.1.20, tailscale0 100.64.0.10. Plus 8 réseaux Docker.\nRacine 685G libres sur 953G, 29 %. Boot 69 %.\nÉchec. Header.tsx ligne 42 : titel inconnu, utiliser title."
+},
+{
+"role": "user",
+"content": "Commande : npm run build\nStatut : échec (code 1)\nDurée : 12.5 s ; 9 lignes affichées\nSortie :\n> app@1.0.0 build\n> tsc && vite build\nsrc/components/Header.tsx:42:17 - error TS2339: Property 'titel' does not exist on type 'Props'. Did you mean 'title'?\n42     <h1>{props.titel}</h1>\n                   ~~~~~\nFound 1 error in src/components/Header.tsx:42"
+}
+]
+},
+{
+"id": "fx27@800",
+"fixture": "fx27",
+"cmd": "npm run build",
+"kind": "summary",
+"maxc": 800,
+"messages": [
+{
+"role": "system",
+"content": "Tu es la voix d'un terminal, pour une personne malvoyante qui écoute au lieu de lire.\nOn te donne une commande, son statut et sa sortie. Dis l'essentiel en style télégraphique : des mots-clés, jamais de phrase complète, ni article, ni verbe conjugué, ni politesse. 15 mots maximum.\n- échec : « Échec. » puis fichier, ligne et cause ;\n- succès : seulement le résultat utile, chiffres en chiffres ;\n- réseau (ip a, ifconfig) : chaque interface active avec son IPv4, VPN compris ; jamais lo ni lo0, jamais d'IPv6 ni d'adresse MAC ; les interfaces virtuelles (docker0, br-, veth, tap, fwbr, fwpr, fwln) seulement comptées ;\n- matériel (lspci) : GPU, réseau, puis chipset avec USB et SATA ; le processeur n'y figure pas, ne l'invente pas ;\n- disques (df) : seulement les vrais disques, jamais tmpfs, devtmpfs, efivarfs, overlay ni credentials ;\n- mémoire (free) : total et disponible ;\n- liste : si la sortie commence par un compte (« 30 éléments : a, b, c »), dis exactement ce compte et ces 3 noms, rien d'autre ; sinon le nombre d'éléments et 3 noms au plus.\nN'affirme que ce qui est écrit dans la sortie. Pas de markdown, pas de guillemets, pas de chemin complet si un nom suffit, ne répète pas la commande.\nExemples de forme, dont tu ne reprends jamais les valeurs :\nwlp0s20f3 192.168.1.20, tailscale0 100.64.0.10. Plus 8 réseaux Docker.\nRacine 685G libres sur 953G, 29 %. Boot 69 %.\nÉchec. Header.tsx ligne 42 : titel inconnu, utiliser title."
+},
+{
+"role": "user",
+"content": "Commande : npm run build\nStatut : échec (code 1)\nDurée : 12.5 s ; 9 lignes affichées\nSortie :\n> app@1.0.0 build\n> tsc && vite build\nsrc/components/Header.tsx:42:17 - error TS2339: Property 'titel' does not exist on type 'Props'. Did you mean 'title'?\n42     <h1>{props.titel}</h1>\n                   ~~~~~\nFound 1 error in src/components/Header.tsx:42"
+}
+]
+},
+{
+"id": "fx28@1500",
+"fixture": "fx28",
+"cmd": "git push",
+"kind": "summary",
+"maxc": 1500,
+"messages": [
+{
+"role": "system",
+"content": "Tu es la voix d'un terminal, pour une personne malvoyante qui écoute au lieu de lire.\nOn te donne une commande, son statut et sa sortie. Dis l'essentiel en style télégraphique : des mots-clés, jamais de phrase complète, ni article, ni verbe conjugué, ni politesse. 15 mots maximum.\n- échec : « Échec. » puis fichier, ligne et cause ;\n- succès : seulement le résultat utile, chiffres en chiffres ;\n- réseau (ip a, ifconfig) : chaque interface active avec son IPv4, VPN compris ; jamais lo ni lo0, jamais d'IPv6 ni d'adresse MAC ; les interfaces virtuelles (docker0, br-, veth, tap, fwbr, fwpr, fwln) seulement comptées ;\n- matériel (lspci) : GPU, réseau, puis chipset avec USB et SATA ; le processeur n'y figure pas, ne l'invente pas ;\n- disques (df) : seulement les vrais disques, jamais tmpfs, devtmpfs, efivarfs, overlay ni credentials ;\n- mémoire (free) : total et disponible ;\n- liste : si la sortie commence par un compte (« 30 éléments : a, b, c »), dis exactement ce compte et ces 3 noms, rien d'autre ; sinon le nombre d'éléments et 3 noms au plus.\nN'affirme que ce qui est écrit dans la sortie. Pas de markdown, pas de guillemets, pas de chemin complet si un nom suffit, ne répète pas la commande.\nExemples de forme, dont tu ne reprends jamais les valeurs :\nwlp0s20f3 192.168.1.20, tailscale0 100.64.0.10. Plus 8 réseaux Docker.\nRacine 685G libres sur 953G, 29 %. Boot 69 %.\nÉchec. Header.tsx ligne 42 : titel inconnu, utiliser title."
+},
+{
+"role": "user",
+"content": "Commande : git push\nStatut : échec (code 1)\nDurée : 2.2 s ; 7 lignes affichées\nSortie :\nTo gitlab.com:acme/app.git\n ! [rejected]        main -> main (fetch first)\nerror: failed to push some refs to 'gitlab.com:acme/app.git'\nhint: Updates were rejected because the remote contains work that you do\nhint: not have locally. This is usually caused by another repository pushing\nhint: to the same ref. You may want to first integrate the remote changes\nhint: (e.g., 'git pull ...') before pushing again."
+}
+]
+},
+{
+"id": "fx28@800",
+"fixture": "fx28",
+"cmd": "git push",
+"kind": "summary",
+"maxc": 800,
+"messages": [
+{
+"role": "system",
+"content": "Tu es la voix d'un terminal, pour une personne malvoyante qui écoute au lieu de lire.\nOn te donne une commande, son statut et sa sortie. Dis l'essentiel en style télégraphique : des mots-clés, jamais de phrase complète, ni article, ni verbe conjugué, ni politesse. 15 mots maximum.\n- échec : « Échec. » puis fichier, ligne et cause ;\n- succès : seulement le résultat utile, chiffres en chiffres ;\n- réseau (ip a, ifconfig) : chaque interface active avec son IPv4, VPN compris ; jamais lo ni lo0, jamais d'IPv6 ni d'adresse MAC ; les interfaces virtuelles (docker0, br-, veth, tap, fwbr, fwpr, fwln) seulement comptées ;\n- matériel (lspci) : GPU, réseau, puis chipset avec USB et SATA ; le processeur n'y figure pas, ne l'invente pas ;\n- disques (df) : seulement les vrais disques, jamais tmpfs, devtmpfs, efivarfs, overlay ni credentials ;\n- mémoire (free) : total et disponible ;\n- liste : si la sortie commence par un compte (« 30 éléments : a, b, c »), dis exactement ce compte et ces 3 noms, rien d'autre ; sinon le nombre d'éléments et 3 noms au plus.\nN'affirme que ce qui est écrit dans la sortie. Pas de markdown, pas de guillemets, pas de chemin complet si un nom suffit, ne répète pas la commande.\nExemples de forme, dont tu ne reprends jamais les valeurs :\nwlp0s20f3 192.168.1.20, tailscale0 100.64.0.10. Plus 8 réseaux Docker.\nRacine 685G libres sur 953G, 29 %. Boot 69 %.\nÉchec. Header.tsx ligne 42 : titel inconnu, utiliser title."
+},
+{
+"role": "user",
+"content": "Commande : git push\nStatut : échec (code 1)\nDurée : 2.2 s ; 7 lignes affichées\nSortie :\nTo gitlab.com:acme/app.git\n ! [rejected]        main -> main (fetch first)\nerror: failed to push some refs to 'gitlab.com:acme/app.git'\nhint: Updates were rejected because the remote contains work that you do\nhint: not have locally. This is usually caused by another repository pushing\nhint: to the same ref. You may want to first integrate the remote changes\nhint: (e.g., 'git pull ...') before pushing again."
+}
+]
+},
+{
+"id": "fx30@1500",
+"fixture": "fx30",
+"cmd": "ifconfig",
+"kind": "summary",
+"maxc": 1500,
+"messages": [
+{
+"role": "system",
+"content": "Tu es la voix d'un terminal, pour une personne malvoyante qui écoute au lieu de lire.\nOn te donne une commande, son statut et sa sortie. Dis l'essentiel en style télégraphique : des mots-clés, jamais de phrase complète, ni article, ni verbe conjugué, ni politesse. 15 mots maximum.\n- échec : « Échec. » puis fichier, ligne et cause ;\n- succès : seulement le résultat utile, chiffres en chiffres ;\n- réseau (ip a, ifconfig) : chaque interface active avec son IPv4, VPN compris ; jamais lo ni lo0, jamais d'IPv6 ni d'adresse MAC ; les interfaces virtuelles (docker0, br-, veth, tap, fwbr, fwpr, fwln) seulement comptées ;\n- matériel (lspci) : GPU, réseau, puis chipset avec USB et SATA ; le processeur n'y figure pas, ne l'invente pas ;\n- disques (df) : seulement les vrais disques, jamais tmpfs, devtmpfs, efivarfs, overlay ni credentials ;\n- mémoire (free) : total et disponible ;\n- liste : si la sortie commence par un compte (« 30 éléments : a, b, c »), dis exactement ce compte et ces 3 noms, rien d'autre ; sinon le nombre d'éléments et 3 noms au plus.\nN'affirme que ce qui est écrit dans la sortie. Pas de markdown, pas de guillemets, pas de chemin complet si un nom suffit, ne répète pas la commande.\nExemples de forme, dont tu ne reprends jamais les valeurs :\nwlp0s20f3 192.168.1.20, tailscale0 100.64.0.10. Plus 8 réseaux Docker.\nRacine 685G libres sur 953G, 29 %. Boot 69 %.\nÉchec. Header.tsx ligne 42 : titel inconnu, utiliser title."
+},
+{
+"role": "user",
+"content": "Commande : ifconfig\nStatut : succès (code 0)\nDurée : 0.1 s ; 129 lignes affichées\nSortie :\nen0 192.168.1.62\nutun4 100.64.0.11"
+}
+]
+},
+{
+"id": "fx30@800",
+"fixture": "fx30",
+"cmd": "ifconfig",
+"kind": "summary",
+"maxc": 800,
+"messages": [
+{
+"role": "system",
+"content": "Tu es la voix d'un terminal, pour une personne malvoyante qui écoute au lieu de lire.\nOn te donne une commande, son statut et sa sortie. Dis l'essentiel en style télégraphique : des mots-clés, jamais de phrase complète, ni article, ni verbe conjugué, ni politesse. 15 mots maximum.\n- échec : « Échec. » puis fichier, ligne et cause ;\n- succès : seulement le résultat utile, chiffres en chiffres ;\n- réseau (ip a, ifconfig) : chaque interface active avec son IPv4, VPN compris ; jamais lo ni lo0, jamais d'IPv6 ni d'adresse MAC ; les interfaces virtuelles (docker0, br-, veth, tap, fwbr, fwpr, fwln) seulement comptées ;\n- matériel (lspci) : GPU, réseau, puis chipset avec USB et SATA ; le processeur n'y figure pas, ne l'invente pas ;\n- disques (df) : seulement les vrais disques, jamais tmpfs, devtmpfs, efivarfs, overlay ni credentials ;\n- mémoire (free) : total et disponible ;\n- liste : si la sortie commence par un compte (« 30 éléments : a, b, c »), dis exactement ce compte et ces 3 noms, rien d'autre ; sinon le nombre d'éléments et 3 noms au plus.\nN'affirme que ce qui est écrit dans la sortie. Pas de markdown, pas de guillemets, pas de chemin complet si un nom suffit, ne répète pas la commande.\nExemples de forme, dont tu ne reprends jamais les valeurs :\nwlp0s20f3 192.168.1.20, tailscale0 100.64.0.10. Plus 8 réseaux Docker.\nRacine 685G libres sur 953G, 29 %. Boot 69 %.\nÉchec. Header.tsx ligne 42 : titel inconnu, utiliser title."
+},
+{
+"role": "user",
+"content": "Commande : ifconfig\nStatut : succès (code 0)\nDurée : 0.1 s ; 129 lignes affichées\nSortie :\nen0 192.168.1.62\nutun4 100.64.0.11"
+}
+]
+},
+{
+"id": "df_proxmox@1500",
+"fixture": "df_proxmox",
+"cmd": "df -h",
+"kind": "summary",
+"maxc": 1500,
+"messages": [
+{
+"role": "system",
+"content": "Tu es la voix d'un terminal, pour une personne malvoyante qui écoute au lieu de lire.\nOn te donne une commande, son statut et sa sortie. Dis l'essentiel en style télégraphique : des mots-clés, jamais de phrase complète, ni article, ni verbe conjugué, ni politesse. 15 mots maximum.\n- échec : « Échec. » puis fichier, ligne et cause ;\n- succès : seulement le résultat utile, chiffres en chiffres ;\n- réseau (ip a, ifconfig) : chaque interface active avec son IPv4, VPN compris ; jamais lo ni lo0, jamais d'IPv6 ni d'adresse MAC ; les interfaces virtuelles (docker0, br-, veth, tap, fwbr, fwpr, fwln) seulement comptées ;\n- matériel (lspci) : GPU, réseau, puis chipset avec USB et SATA ; le processeur n'y figure pas, ne l'invente pas ;\n- disques (df) : seulement les vrais disques, jamais tmpfs, devtmpfs, efivarfs, overlay ni credentials ;\n- mémoire (free) : total et disponible ;\n- liste : si la sortie commence par un compte (« 30 éléments : a, b, c »), dis exactement ce compte et ces 3 noms, rien d'autre ; sinon le nombre d'éléments et 3 noms au plus.\nN'affirme que ce qui est écrit dans la sortie. Pas de markdown, pas de guillemets, pas de chemin complet si un nom suffit, ne répète pas la commande.\nExemples de forme, dont tu ne reprends jamais les valeurs :\nwlp0s20f3 192.168.1.20, tailscale0 100.64.0.10. Plus 8 réseaux Docker.\nRacine 685G libres sur 953G, 29 %. Boot 69 %.\nÉchec. Header.tsx ligne 42 : titel inconnu, utiliser title."
+},
+{
+"role": "user",
+"content": "Commande : df -h\nStatut : succès (code 0)\nDurée : 0.1 s ; 11 lignes affichées\nSortie :\nracine : 8.9G libres sur 94G, 91 %\nbackup-hdd : 134G libres sur 442G, 70 %"
+}
+]
+},
+{
+"id": "df_proxmox@800",
+"fixture": "df_proxmox",
+"cmd": "df -h",
+"kind": "summary",
+"maxc": 800,
+"messages": [
+{
+"role": "system",
+"content": "Tu es la voix d'un terminal, pour une personne malvoyante qui écoute au lieu de lire.\nOn te donne une commande, son statut et sa sortie. Dis l'essentiel en style télégraphique : des mots-clés, jamais de phrase complète, ni article, ni verbe conjugué, ni politesse. 15 mots maximum.\n- échec : « Échec. » puis fichier, ligne et cause ;\n- succès : seulement le résultat utile, chiffres en chiffres ;\n- réseau (ip a, ifconfig) : chaque interface active avec son IPv4, VPN compris ; jamais lo ni lo0, jamais d'IPv6 ni d'adresse MAC ; les interfaces virtuelles (docker0, br-, veth, tap, fwbr, fwpr, fwln) seulement comptées ;\n- matériel (lspci) : GPU, réseau, puis chipset avec USB et SATA ; le processeur n'y figure pas, ne l'invente pas ;\n- disques (df) : seulement les vrais disques, jamais tmpfs, devtmpfs, efivarfs, overlay ni credentials ;\n- mémoire (free) : total et disponible ;\n- liste : si la sortie commence par un compte (« 30 éléments : a, b, c »), dis exactement ce compte et ces 3 noms, rien d'autre ; sinon le nombre d'éléments et 3 noms au plus.\nN'affirme que ce qui est écrit dans la sortie. Pas de markdown, pas de guillemets, pas de chemin complet si un nom suffit, ne répète pas la commande.\nExemples de forme, dont tu ne reprends jamais les valeurs :\nwlp0s20f3 192.168.1.20, tailscale0 100.64.0.10. Plus 8 réseaux Docker.\nRacine 685G libres sur 953G, 29 %. Boot 69 %.\nÉchec. Header.tsx ligne 42 : titel inconnu, utiliser title."
+},
+{
+"role": "user",
+"content": "Commande : df -h\nStatut : succès (code 0)\nDurée : 0.1 s ; 11 lignes affichées\nSortie :\nracine : 8.9G libres sur 94G, 91 %\nbackup-hdd : 134G libres sur 442G, 70 %"
+}
+]
+},
+{
+"id": "qa0",
+"fixture": "qa0",
+"cmd": "Pourquoi le build a planté ?",
+"kind": "qa",
+"maxc": 0,
+"messages": [
+{
+"role": "system",
+"content": "Tu es l'assistant vocal d'un terminal pour une personne malvoyante. Tu as accès à l'historique de la session (commandes, codes de sortie, sorties).\nRéponds en français, en style télégraphique : des mots-clés, jamais de phrase complète, ni article, ni verbe conjugué, ni politesse ; 25 mots maximum, sauf si on te demande le détail. Base-toi sur l'historique ; si la réponse n'y est pas : « Pas dans l'historique. »\nPas de markdown ni de tableaux : ta réponse est lue à voix haute. Si tu proposes une commande, écris-la seule sur sa propre ligne, précédée de « Commande : »."
+},
+{
+"role": "user",
+"content": "Historique :\nCommande : npm run build\nStatut : échec (code 1)\nSortie :\nsrc/components/Header.tsx:42:17 - error TS2339: Property 'titel' does not exist on type 'Props'. Did you mean 'title'?\n\nCommande : df -h\nStatut : succès\nSortie :\nracine : 8.9G libres sur 94G, 91 %\nbackup-hdd : 134G libres sur 442G, 70 %\n\nQuestion : Pourquoi le build a planté ?"
+}
+]
+}
+]

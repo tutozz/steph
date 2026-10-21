@@ -1,0 +1,12 @@
+Collecting requests
+  Downloading requests-2.32.3-py3-none-any.whl (64 kB)
+Collecting charset-normalizer<4,>=2
+  Downloading charset_normalizer-3.4.0-cp312-cp312-manylinux_2_17_x86_64.whl (143 kB)
+Collecting idna<4,>=2.5
+  Using cached idna-3.10-py3-none-any.whl (70 kB)
+Collecting urllib3<3,>=1.21.1
+  Downloading urllib3-2.2.3-py3-none-any.whl (126 kB)
+Collecting certifi>=2017.4.17
+  Downloading certifi-2024.8.30-py3-none-any.whl (167 kB)
+Installing collected packages: urllib3, idna, charset-normalizer, certifi, requests
+Successfully installed certifi-2024.8.30 charset-normalizer-3.4.0 idna-3.10 requests-2.32.3 urllib3-2.2.3

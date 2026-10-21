@@ -1,0 +1,10 @@
+Dateisystem    Größe Benutzt Verf. Verw% Eingehängt auf
+udev            7,6G       0  7,6G    0% /dev
+tmpfs           1,6G    1,6M  1,6G    1% /run
+/dev/sda1       111G     19G   87G   18% /
+tmpfs           7,7G       0  7,7G    0% /dev/shm
+tmpfs           5,0M    8,0K  5,0M    1% /run/lock
+tmpfs           1,0M       0  1,0M    0% /run/credentials/systemd-journald.service
+tmpfs           7,7G    1,1M  7,7G    1% /tmp
+tmpfs           1,6G    100K  1,6G    1% /run/user/1000
+tmpfs           1,6G     72K  1,6G    1% /run/user/0

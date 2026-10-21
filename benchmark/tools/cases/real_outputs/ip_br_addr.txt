@@ -1,0 +1,21 @@
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enp0s31f6        DOWN           
+wlp0s20f3        UP             192.168.1.20/24 fe80::1/64 
+wg0              UNKNOWN        10.8.0.34/32 fe80::2/64 
+br-04a0d4f12d05  DOWN           172.19.0.1/16 
+br-16ddcd73fe2b  DOWN           172.22.0.1/16 
+br-88aafb449d19  UP             172.20.0.1/16 fe80::3/64 
+br-dc8e68e8aefe  DOWN           172.24.0.1/16 
+br-ed7fd6782a3f  UP             172.23.0.1/16 fe80::4/64 
+br-ee29eb47e8bf  DOWN           172.18.0.1/16 
+docker0          DOWN           172.17.0.1/16 
+br-03547a095dfe  DOWN           172.21.0.1/16 
+veth332a3f1@if2  UP             fe80::5/64 
+vethac97aac@if2  UP             fe80::6/64 
+veth0fb6630@if2  UP             fe80::7/64 
+veth5552bb1@if2  UP             fe80::8/64 
+vethc558267@if2  UP             fe80::9/64 
+vethc09a033@if2  UP             fe80::a/64 
+veth896a996@if2  UP             fe80::b/64 
+vethf44b446@if2  UP             fe80::c/64 
+tun0             UNKNOWN        172.16.1.2/24 fe80::d/64 

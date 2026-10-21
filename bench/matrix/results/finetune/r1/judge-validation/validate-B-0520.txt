@@ -1,0 +1,8 @@
+[OK] C1-fidele-disque: attendu=ok obtenu=ok inventions=[]
+[OK] C2-fidele-memoire: attendu=ok obtenu=ok inventions=[]
+[OK] C3-fidele-erreur-ligne: attendu=ok obtenu=ok inventions=[]
+[OK] C4-invention-statut: attendu=invention obtenu=invention inventions=['Statut : Échec (le contexte indique succès/code 0)', 'Racine pleine à 91 % (le contexte indique 29 %)', '8,9G libres (le contexte indique 685G libres)']
+[OK] C5-invention-chiffre: attendu=invention obtenu=invention inventions=['16 Gi disponibles']
+[OK] C6-invention-ligne: attendu=invention obtenu=invention inventions=['Header.tsx', 'ligne 58']
+
+6/6 corrects (passe B)

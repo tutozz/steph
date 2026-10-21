@@ -1,0 +1,1552 @@
+{
+ "label": "mistralai/mistral-small-2603",
+ "model": "mistralai/mistral-small-2603",
+ "reasoning": "off",
+ "harness": "dev.generic.json",
+ "rows": [
+  {
+   "id": "v3-build-native-0001@en",
+   "fixture": "v3-build-native-0001",
+   "kind": "summary",
+   "out": "count 12 total 65",
+   "cost": 5.646e-05,
+   "prompt_n": 686,
+   "gen_n": 9,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.47
+  },
+  {
+   "id": "v3-build-native-0001@fr",
+   "fixture": "v3-build-native-0001",
+   "kind": "summary",
+   "out": "12 65",
+   "cost": 5.472e-05,
+   "prompt_n": 744,
+   "gen_n": 6,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.42
+  },
+  {
+   "id": "v3-build-native-0015@en",
+   "fixture": "v3-build-native-0015",
+   "kind": "summary",
+   "out": "Failed. listwalk.c line 13",
+   "cost": 2.205e-05,
+   "prompt_n": 467,
+   "gen_n": 10,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 1.17
+  },
+  {
+   "id": "v3-build-native-0015@fr",
+   "fixture": "v3-build-native-0015",
+   "kind": "summary",
+   "out": "Échec. listwalk.c ligne 139",
+   "cost": 2.592e-05,
+   "prompt_n": 524,
+   "gen_n": 13,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 2.77
+  },
+  {
+   "id": "v3-build-native-0027@en",
+   "fixture": "v3-build-native-0027",
+   "kind": "summary",
+   "out": "Failed. index_05.c line 4: expected , or ; before return",
+   "cost": 0.00013806,
+   "prompt_n": 1194,
+   "gen_n": 18,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.62
+  },
+  {
+   "id": "v3-build-native-0027@fr",
+   "fixture": "v3-build-native-0027",
+   "kind": "summary",
+   "out": "Échec. index_05.c ligne 4 : expected , or ; before return",
+   "cost": 0.00013947,
+   "prompt_n": 1253,
+   "gen_n": 20,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 1.04
+  },
+  {
+   "id": "v3-build-native-0047@en",
+   "fixture": "v3-build-native-0047",
+   "kind": "summary",
+   "out": "42 warnings sensor.c",
+   "cost": 0.00010206,
+   "prompt_n": 1002,
+   "gen_n": 6,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.63
+  },
+  {
+   "id": "v3-build-native-0047@fr",
+   "fixture": "v3-build-native-0047",
+   "kind": "summary",
+   "out": "42 sections : sensor.c",
+   "cost": 0.00010272,
+   "prompt_n": 1060,
+   "gen_n": 7,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.48
+  },
+  {
+   "id": "v3-build-native-0062@en",
+   "fixture": "v3-build-native-0062",
+   "kind": "summary",
+   "out": "Makefile config.h",
+   "cost": 0.0001305,
+   "prompt_n": 850,
+   "gen_n": 5,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.57
+  },
+  {
+   "id": "v3-build-native-0062@fr",
+   "fixture": "v3-build-native-0062",
+   "kind": "summary",
+   "out": "5 fichiers",
+   "cost": 0.00013905,
+   "prompt_n": 911,
+   "gen_n": 4,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.53
+  },
+  {
+   "id": "v3-build-native-0076@en",
+   "fixture": "v3-build-native-0076",
+   "kind": "summary",
+   "out": "12 sections",
+   "cost": 0.0001587,
+   "prompt_n": 1042,
+   "gen_n": 4,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.41
+  },
+  {
+   "id": "v3-build-native-0076@fr",
+   "fixture": "v3-build-native-0076",
+   "kind": "summary",
+   "out": "12 sections\ntime-1.9",
+   "cost": 0.000171,
+   "prompt_n": 1100,
+   "gen_n": 10,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.57
+  },
+  {
+   "id": "v3-build-native-0117@en",
+   "fixture": "v3-build-native-0117",
+   "kind": "summary",
+   "out": "7 sections gl' gl' unistring'",
+   "cost": 9.705e-05,
+   "prompt_n": 963,
+   "gen_n": 11,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.74
+  },
+  {
+   "id": "v3-build-native-0117@fr",
+   "fixture": "v3-build-native-0117",
+   "kind": "summary",
+   "out": "7 sections gl' gl' unistring'",
+   "cost": 9.711e-05,
+   "prompt_n": 1021,
+   "gen_n": 11,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.59
+  },
+  {
+   "id": "v3-containers-0022@en",
+   "fixture": "v3-containers-0022",
+   "kind": "summary",
+   "out": "0 failed",
+   "cost": 2.466e-05,
+   "prompt_n": 498,
+   "gen_n": 3,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.46
+  },
+  {
+   "id": "v3-containers-0022@fr",
+   "fixture": "v3-containers-0022",
+   "kind": "summary",
+   "out": "1 chart linté, 0 échec",
+   "cost": 2.877e-05,
+   "prompt_n": 559,
+   "gen_n": 9,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.53
+  },
+  {
+   "id": "v3-containers-0028@en",
+   "fixture": "v3-containers-0028",
+   "kind": "summary",
+   "out": "9 items shown: Type Reason Age From Message",
+   "cost": 5.856e-05,
+   "prompt_n": 696,
+   "gen_n": 10,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.61
+  },
+  {
+   "id": "v3-containers-0028@fr",
+   "fixture": "v3-containers-0028",
+   "kind": "summary",
+   "out": "9 éléments : Normal Scheduled 57s default-scheduler Successfully assigned default/liveness-exec to node01\nNormal Pulling 55s kubelet node01 Pulling image registry.k8s.io/busybox:1.27.2\nWarning Unhealthy 10s kubelet node01 Liveness probe failed cat can't open /tmp/healthy No such file or directory",
+   "cost": 0.00010587,
+   "prompt_n": 753,
+   "gen_n": 89,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 1.05
+  },
+  {
+   "id": "v3-data-0019@en",
+   "fixture": "v3-data-0019",
+   "kind": "summary",
+   "out": "orders id customer_id status total created_at",
+   "cost": 4.596e-05,
+   "prompt_n": 616,
+   "gen_n": 9,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.53
+  },
+  {
+   "id": "v3-data-0019@fr",
+   "fixture": "v3-data-0019",
+   "kind": "summary",
+   "out": "Table orders\nColonnes : id customer_id status total created_at\nClé primaire : id\nContraintes : orders_customer_id_fkey",
+   "cost": 5.892e-05,
+   "prompt_n": 672,
+   "gen_n": 31,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.54
+  },
+  {
+   "id": "v3-data-0021@en",
+   "fixture": "v3-data-0021",
+   "kind": "summary",
+   "out": "db0 keys 44",
+   "cost": 2.436e-05,
+   "prompt_n": 480,
+   "gen_n": 7,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.62
+  },
+  {
+   "id": "v3-data-0021@fr",
+   "fixture": "v3-data-0021",
+   "kind": "summary",
+   "out": "db0 44 clés",
+   "cost": 2.412e-05,
+   "prompt_n": 536,
+   "gen_n": 7,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.59
+  },
+  {
+   "id": "v3-disk-memory-0006@en",
+   "fixture": "v3-disk-memory-0006",
+   "kind": "summary",
+   "out": "6.1G",
+   "cost": 2.166e-05,
+   "prompt_n": 470,
+   "gen_n": 5,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.45
+  },
+  {
+   "id": "v3-disk-memory-0006@fr",
+   "fixture": "v3-disk-memory-0006",
+   "kind": "summary",
+   "out": "6.1G",
+   "cost": 2.142e-05,
+   "prompt_n": 526,
+   "gen_n": 5,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.56
+  },
+  {
+   "id": "v3-disk-memory-0020@en",
+   "fixture": "v3-disk-memory-0020",
+   "kind": "summary",
+   "out": "Failed. vm_stat illegal option -x",
+   "cost": 2.286e-05,
+   "prompt_n": 462,
+   "gen_n": 9,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.46
+  },
+  {
+   "id": "v3-disk-memory-0020@fr",
+   "fixture": "v3-disk-memory-0020",
+   "kind": "summary",
+   "out": "Échec. vm_stat ligne 1 : illegal option -- x",
+   "cost": 2.622e-05,
+   "prompt_n": 518,
+   "gen_n": 15,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.69
+  },
+  {
+   "id": "v3-files-0003@en",
+   "fixture": "v3-files-0003",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-files-0003@fr",
+   "fixture": "v3-files-0003",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-files-0023@en",
+   "fixture": "v3-files-0023",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-files-0023@fr",
+   "fixture": "v3-files-0023",
+   "kind": "summary",
+   "out": "5 éléments : 1935 203.0.113.7, 1241 203.0.113.45, 528 198.51.100.3",
+   "cost": 0.00013635,
+   "prompt_n": 677,
+   "gen_n": 58,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.7
+  },
+  {
+   "id": "v3-files-0041@en",
+   "fixture": "v3-files-0041",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-files-0041@fr",
+   "fixture": "v3-files-0041",
+   "kind": "summary",
+   "out": "3\n2026-09-27 09:00:29,588 ERROR inventory.stock: IntegrityError\n2026-09-27 09:00:44,632 ERROR inventory.routes: IntegrityError\n2026-09-27 09:00:47,529 ERROR",
+   "cost": 0.00025755,
+   "prompt_n": 1357,
+   "gen_n": 90,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.92
+  },
+  {
+   "id": "v3-files-0062@en",
+   "fixture": "v3-files-0062",
+   "kind": "summary",
+   "out": "Failed. releves_tronque.tar line 44",
+   "cost": 0.00016965,
+   "prompt_n": 1079,
+   "gen_n": 13,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.47
+  },
+  {
+   "id": "v3-files-0062@fr",
+   "fixture": "v3-files-0062",
+   "kind": "summary",
+   "out": "Échec. releves_tronque.tar erreur non récupérable",
+   "cost": 0.00011907,
+   "prompt_n": 1137,
+   "gen_n": 15,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.44
+  },
+  {
+   "id": "v3-files-0063@en",
+   "fixture": "v3-files-0063",
+   "kind": "summary",
+   "out": "3 files\nm4-1.4.19.tar.xz 14.2 MiB 1616.1 KiB\ngzip-1.13.tar.xz 5.2 MiB 765.4 KiB",
+   "cost": 0.00012756,
+   "prompt_n": 968,
+   "gen_n": 57,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.67
+  },
+  {
+   "id": "v3-files-0063@fr",
+   "fixture": "v3-files-0063",
+   "kind": "summary",
+   "out": "3 fichiers\nm4-1.4.19.tar.xz 1616,1 KiB 14,2 MiB\ngzip-1.13.tar.xz 765,4 KiB 5340,0 KiB",
+   "cost": 0.00012972,
+   "prompt_n": 1024,
+   "gen_n": 61,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 1.01
+  },
+  {
+   "id": "v3-files-0066@en",
+   "fixture": "v3-files-0066",
+   "kind": "summary",
+   "out": "Failed. application.conf line 11, 13, 71",
+   "cost": 0.00011706,
+   "prompt_n": 1058,
+   "gen_n": 17,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.49
+  },
+  {
+   "id": "v3-files-0066@fr",
+   "fixture": "v3-files-0066",
+   "kind": "summary",
+   "out": "Échec. application.conf lignes 4, 53, 80",
+   "cost": 0.00011742,
+   "prompt_n": 1114,
+   "gen_n": 18,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.53
+  },
+  {
+   "id": "v3-hardware-system-0007@en",
+   "fixture": "v3-hardware-system-0007",
+   "kind": "summary",
+   "out": "Failed. hw.nosuchkey",
+   "cost": 7.365e-05,
+   "prompt_n": 459,
+   "gen_n": 8,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.86
+  },
+  {
+   "id": "v3-hardware-system-0007@fr",
+   "fixture": "v3-hardware-system-0007",
+   "kind": "summary",
+   "out": "Échec. hw.nosuchkey",
+   "cost": 2.277e-05,
+   "prompt_n": 515,
+   "gen_n": 10,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.39
+  },
+  {
+   "id": "v3-hardware-system-0016@en",
+   "fixture": "v3-hardware-system-0016",
+   "kind": "summary",
+   "out": "Intel HD Graphics 620",
+   "cost": 2.736e-05,
+   "prompt_n": 492,
+   "gen_n": 9,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.42
+  },
+  {
+   "id": "v3-hardware-system-0016@fr",
+   "fixture": "v3-hardware-system-0016",
+   "kind": "summary",
+   "out": "Intel HD Graphics 620",
+   "cost": 2.727e-05,
+   "prompt_n": 549,
+   "gen_n": 9,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.41
+  },
+  {
+   "id": "v3-history-qa-0016@en",
+   "fixture": "v3-history-qa-0016",
+   "kind": "qa",
+   "out": "beta.c",
+   "cost": 8.025e-05,
+   "prompt_n": 523,
+   "gen_n": 3,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.58
+  },
+  {
+   "id": "v3-history-qa-0016@fr",
+   "fixture": "v3-history-qa-0016",
+   "kind": "qa",
+   "out": "beta.c",
+   "cost": 8.58e-05,
+   "prompt_n": 560,
+   "gen_n": 3,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.36
+  },
+  {
+   "id": "v3-history-qa-0017@en",
+   "fixture": "v3-history-qa-0017",
+   "kind": "qa",
+   "out": "Not in the history.",
+   "cost": 1.494e-05,
+   "prompt_n": 522,
+   "gen_n": 6,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.41
+  },
+  {
+   "id": "v3-history-qa-0017@fr",
+   "fixture": "v3-history-qa-0017",
+   "kind": "qa",
+   "out": "Pas dans l'historique.",
+   "cost": 1.737e-05,
+   "prompt_n": 559,
+   "gen_n": 8,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.59
+  },
+  {
+   "id": "v3-history-qa-0023@en",
+   "fixture": "v3-history-qa-0023",
+   "kind": "qa",
+   "out": "csv json",
+   "cost": 3.513e-05,
+   "prompt_n": 323,
+   "gen_n": 3,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.58
+  },
+  {
+   "id": "v3-history-qa-0023@fr",
+   "fixture": "v3-history-qa-0023",
+   "kind": "qa",
+   "out": "Pas dans l'historique.",
+   "cost": 3.69e-05,
+   "prompt_n": 358,
+   "gen_n": 8,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 1.19
+  },
+  {
+   "id": "v3-history-qa-0024@en",
+   "fixture": "v3-history-qa-0024",
+   "kind": "qa",
+   "out": "SyntaxError: expected ':'",
+   "cost": 3.603e-05,
+   "prompt_n": 313,
+   "gen_n": 7,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.58
+  },
+  {
+   "id": "v3-history-qa-0024@fr",
+   "fixture": "v3-history-qa-0024",
+   "kind": "qa",
+   "out": "SyntaxError: expected ':' ligne 4",
+   "cost": 5.85e-05,
+   "prompt_n": 350,
+   "gen_n": 10,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 1.14
+  },
+  {
+   "id": "v3-history-qa-0029@en",
+   "fixture": "v3-history-qa-0029",
+   "kind": "qa",
+   "out": "Command: ls src/*.o | wc -l",
+   "cost": 7.338e-05,
+   "prompt_n": 546,
+   "gen_n": 11,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.61
+  },
+  {
+   "id": "v3-history-qa-0029@fr",
+   "fixture": "v3-history-qa-0029",
+   "kind": "qa",
+   "out": "Commande :\nls src/*.o | wc -l",
+   "cost": 9.495e-05,
+   "prompt_n": 585,
+   "gen_n": 12,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.54
+  },
+  {
+   "id": "v3-history-qa-0042@en",
+   "fixture": "v3-history-qa-0042",
+   "kind": "qa",
+   "out": "ZeroDivisionError: division by zero",
+   "cost": 8.07e-05,
+   "prompt_n": 506,
+   "gen_n": 8,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 1.07
+  },
+  {
+   "id": "v3-history-qa-0042@fr",
+   "fixture": "v3-history-qa-0042",
+   "kind": "qa",
+   "out": "ZeroDivisionError division by zero",
+   "cost": 6.39e-05,
+   "prompt_n": 542,
+   "gen_n": 7,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.54
+  },
+  {
+   "id": "v3-history-qa-0084@en",
+   "fixture": "v3-history-qa-0084",
+   "kind": "qa",
+   "out": "B-220, C-310, E-512",
+   "cost": 4.608e-05,
+   "prompt_n": 336,
+   "gen_n": 18,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.54
+  },
+  {
+   "id": "v3-history-qa-0084@fr",
+   "fixture": "v3-history-qa-0084",
+   "kind": "qa",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-history-qa-0093@en",
+   "fixture": "v3-history-qa-0093",
+   "kind": "qa",
+   "out": "Command:\nfind proj -type f -size +100k",
+   "cost": 4.278e-05,
+   "prompt_n": 326,
+   "gen_n": 15,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.48
+  },
+  {
+   "id": "v3-history-qa-0093@fr",
+   "fixture": "v3-history-qa-0093",
+   "kind": "qa",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-infra-0014@en",
+   "fixture": "v3-infra-0014",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-infra-0014@fr",
+   "fixture": "v3-infra-0014",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-js-node-0017@en",
+   "fixture": "v3-js-node-0017",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-js-node-0017@fr",
+   "fixture": "v3-js-node-0017",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-js-node-0031@en",
+   "fixture": "v3-js-node-0031",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-js-node-0031@fr",
+   "fixture": "v3-js-node-0031",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-js-node-0033@en",
+   "fixture": "v3-js-node-0033",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-js-node-0033@fr",
+   "fixture": "v3-js-node-0033",
+   "kind": "summary",
+   "out": null,
+   "error": "SSLError(1, '[SSL: SSLV3_ALERT_BAD_RECORD_MAC] ssl/tls alert bad record mac (_ssl.c:2713)')"
+  },
+  {
+   "id": "v3-lint-format-0009@en",
+   "fixture": "v3-lint-format-0009",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-lint-format-0009@fr",
+   "fixture": "v3-lint-format-0009",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-lint-format-0023@en",
+   "fixture": "v3-lint-format-0023",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-lint-format-0023@fr",
+   "fixture": "v3-lint-format-0023",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-lint-format-0040@en",
+   "fixture": "v3-lint-format-0040",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-lint-format-0040@fr",
+   "fixture": "v3-lint-format-0040",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-network-0005@en",
+   "fixture": "v3-network-0005",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-network-0005@fr",
+   "fixture": "v3-network-0005",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-network-0028@en",
+   "fixture": "v3-network-0028",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-network-0028@fr",
+   "fixture": "v3-network-0028",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-network-transfer-0008@en",
+   "fixture": "v3-network-transfer-0008",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-network-transfer-0008@fr",
+   "fixture": "v3-network-transfer-0008",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-network-transfer-0032@en",
+   "fixture": "v3-network-transfer-0032",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-network-transfer-0032@fr",
+   "fixture": "v3-network-transfer-0032",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-network-transfer-0037@en",
+   "fixture": "v3-network-transfer-0037",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-network-transfer-0037@fr",
+   "fixture": "v3-network-transfer-0037",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-packages-system-0026@en",
+   "fixture": "v3-packages-system-0026",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-packages-system-0026@fr",
+   "fixture": "v3-packages-system-0026",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-packages-system-0029@en",
+   "fixture": "v3-packages-system-0029",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-packages-system-0029@fr",
+   "fixture": "v3-packages-system-0029",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-packages-system-0032@en",
+   "fixture": "v3-packages-system-0032",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-packages-system-0032@fr",
+   "fixture": "v3-packages-system-0032",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-packages-system-0037@en",
+   "fixture": "v3-packages-system-0037",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-packages-system-0037@fr",
+   "fixture": "v3-packages-system-0037",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-packages-system-0054@en",
+   "fixture": "v3-packages-system-0054",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-packages-system-0054@fr",
+   "fixture": "v3-packages-system-0054",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-packages-system-0084@en",
+   "fixture": "v3-packages-system-0084",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-packages-system-0084@fr",
+   "fixture": "v3-packages-system-0084",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-permissions-users-0001@en",
+   "fixture": "v3-permissions-users-0001",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-permissions-users-0001@fr",
+   "fixture": "v3-permissions-users-0001",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-permissions-users-0011@en",
+   "fixture": "v3-permissions-users-0011",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-permissions-users-0011@fr",
+   "fixture": "v3-permissions-users-0011",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-processes-0001@en",
+   "fixture": "v3-processes-0001",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-processes-0001@fr",
+   "fixture": "v3-processes-0001",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-processes-0011@en",
+   "fixture": "v3-processes-0011",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-processes-0011@fr",
+   "fixture": "v3-processes-0011",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-python-0002@en",
+   "fixture": "v3-python-0002",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-python-0002@fr",
+   "fixture": "v3-python-0002",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-python-0009@en",
+   "fixture": "v3-python-0009",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-python-0009@fr",
+   "fixture": "v3-python-0009",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-python-0025@en",
+   "fixture": "v3-python-0025",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-python-0025@fr",
+   "fixture": "v3-python-0025",
+   "kind": "summary",
+   "out": null,
+   "error": "HTTPFailure('HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-2603 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\""
+  },
+  {
+   "id": "v3-python-0039@en",
+   "fixture": "v3-python-0039",
+   "kind": "summary",
+   "out": "Failed. file_10.py line 2, file_15.py line 2",
+   "cost": 8.031e-05,
+   "prompt_n": 801,
+   "gen_n": 20,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.45
+  },
+  {
+   "id": "v3-python-0039@fr",
+   "fixture": "v3-python-0039",
+   "kind": "summary",
+   "out": "Échec. file_00.py ligne 2, file_05.py ligne 2, file_10.py ligne 2",
+   "cost": 8.667e-05,
+   "prompt_n": 857,
+   "gen_n": 31,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.56
+  },
+  {
+   "id": "v3-rust-go-0002@en",
+   "fixture": "v3-rust-go-0002",
+   "kind": "summary",
+   "out": "Failed. main.rs line 8: mismatched types",
+   "cost": 5.661e-05,
+   "prompt_n": 675,
+   "gen_n": 12,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.41
+  },
+  {
+   "id": "v3-rust-go-0002@fr",
+   "fixture": "v3-rust-go-0002",
+   "kind": "summary",
+   "out": "Échec.\nmain.rs ligne 8 : types incompatibles",
+   "cost": 5.847e-05,
+   "prompt_n": 733,
+   "gen_n": 15,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.41
+  },
+  {
+   "id": "v3-rust-go-0011@en",
+   "fixture": "v3-rust-go-0011",
+   "kind": "summary",
+   "out": "Failed. main.rs line 4",
+   "cost": 4.521e-05,
+   "prompt_n": 615,
+   "gen_n": 8,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.47
+  },
+  {
+   "id": "v3-rust-go-0011@fr",
+   "fixture": "v3-rust-go-0011",
+   "kind": "summary",
+   "out": "Échec. main.rs ligne 4 : Err Os code 2",
+   "cost": 5.052e-05,
+   "prompt_n": 676,
+   "gen_n": 16,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.47
+  },
+  {
+   "id": "v3-rust-go-0025@en",
+   "fixture": "v3-rust-go-0025",
+   "kind": "summary",
+   "out": "80 items: example.com/ledger TestBalance TestBalance/account_A0",
+   "cost": 0.00014505,
+   "prompt_n": 1259,
+   "gen_n": 17,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 1.23
+  },
+  {
+   "id": "v3-rust-go-0025@fr",
+   "fixture": "v3-rust-go-0025",
+   "kind": "summary",
+   "out": "80 éléments : example.com/ledger TestBalance TestBalance/account_R0",
+   "cost": 0.00014712,
+   "prompt_n": 1316,
+   "gen_n": 17,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.84
+  },
+  {
+   "id": "v3-services-logs-0002@en",
+   "fixture": "v3-services-logs-0002",
+   "kind": "summary",
+   "out": "ssh, smartd, docker enabled",
+   "cost": 2.151e-05,
+   "prompt_n": 457,
+   "gen_n": 8,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.38
+  },
+  {
+   "id": "v3-services-logs-0002@fr",
+   "fixture": "v3-services-logs-0002",
+   "kind": "summary",
+   "out": "3 activés : ssh, docker, nginx",
+   "cost": 2.247e-05,
+   "prompt_n": 513,
+   "gen_n": 10,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.51
+  },
+  {
+   "id": "v3-services-logs-0014@en",
+   "fixture": "v3-services-logs-0014",
+   "kind": "summary",
+   "out": "Failed. dmesg kernel buffer read failure Operation not permitted",
+   "cost": 2.556e-05,
+   "prompt_n": 464,
+   "gen_n": 13,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.53
+  },
+  {
+   "id": "v3-services-logs-0014@fr",
+   "fixture": "v3-services-logs-0014",
+   "kind": "summary",
+   "out": "Échec. dmesg tampon noyau opération non permise",
+   "cost": 2.652e-05,
+   "prompt_n": 520,
+   "gen_n": 15,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.58
+  },
+  {
+   "id": "v3-shell-scripts-0001@en",
+   "fixture": "v3-shell-scripts-0001",
+   "kind": "summary",
+   "out": "Failed. deploy.sh line 7: rsyncx commande introuvable",
+   "cost": 3.216e-05,
+   "prompt_n": 496,
+   "gen_n": 16,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.35
+  },
+  {
+   "id": "v3-shell-scripts-0001@fr",
+   "fixture": "v3-shell-scripts-0001",
+   "kind": "summary",
+   "out": "Échec. deploy.sh ligne 7 : rsyncx commande introuvable",
+   "cost": 3.357e-05,
+   "prompt_n": 555,
+   "gen_n": 18,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.6
+  },
+  {
+   "id": "v3-shell-scripts-0013@en",
+   "fixture": "v3-shell-scripts-0013",
+   "kind": "summary",
+   "out": "Failed. archive.sh line 6: tar -xzf backups/factures-2026-09.tar.gz -C out/archive",
+   "cost": 5.376e-05,
+   "prompt_n": 572,
+   "gen_n": 33,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.45
+  },
+  {
+   "id": "v3-shell-scripts-0013@fr",
+   "fixture": "v3-shell-scripts-0013",
+   "kind": "summary",
+   "out": "Échec. backups/factures-2026-09.tar.gz ligne 6",
+   "cost": 4.782e-05,
+   "prompt_n": 630,
+   "gen_n": 23,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.53
+  },
+  {
+   "id": "v3-shell-scripts-0018@en",
+   "fixture": "v3-shell-scripts-0018",
+   "kind": "summary",
+   "out": "Failed. backup.sh line 7: cd: /var/backups/storefront: Permission denied",
+   "cost": 4.881e-05,
+   "prompt_n": 587,
+   "gen_n": 21,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.69
+  },
+  {
+   "id": "v3-shell-scripts-0018@fr",
+   "fixture": "v3-shell-scripts-0018",
+   "kind": "summary",
+   "out": "Échec. backup.sh ligne 7 : Permission denied",
+   "cost": 4.422e-05,
+   "prompt_n": 646,
+   "gen_n": 13,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 1.57
+  },
+  {
+   "id": "v3-shell-scripts-0039@en",
+   "fixture": "v3-shell-scripts-0039",
+   "kind": "summary",
+   "out": "48 items: 37, 74, 14",
+   "cost": 0.00011001,
+   "prompt_n": 1015,
+   "gen_n": 16,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.51
+  },
+  {
+   "id": "v3-shell-scripts-0039@fr",
+   "fixture": "v3-shell-scripts-0039",
+   "kind": "summary",
+   "out": "Échec. reservations.sh ligne 17, 34 : valeur hors plage",
+   "cost": 0.00011232,
+   "prompt_n": 1076,
+   "gen_n": 19,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.51
+  },
+  {
+   "id": "v3-shell-scripts-0063@en",
+   "fixture": "v3-shell-scripts-0063",
+   "kind": "summary",
+   "out": "Failed. ventes.sh line 11: division par 0",
+   "cost": 8.406e-05,
+   "prompt_n": 850,
+   "gen_n": 14,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.48
+  },
+  {
+   "id": "v3-shell-scripts-0063@fr",
+   "fixture": "v3-shell-scripts-0063",
+   "kind": "summary",
+   "out": "Échec. ventes.sh ligne 11 : division par 0",
+   "cost": 8.547e-05,
+   "prompt_n": 909,
+   "gen_n": 16,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.61
+  },
+  {
+   "id": "v3-shell-scripts-0071@en",
+   "fixture": "v3-shell-scripts-0071",
+   "kind": "summary",
+   "out": "Failed. bulletins/*.pdf line I/O Error",
+   "cost": 7.236e-05,
+   "prompt_n": 784,
+   "gen_n": 11,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.41
+  },
+  {
+   "id": "v3-shell-scripts-0071@fr",
+   "fixture": "v3-shell-scripts-0071",
+   "kind": "summary",
+   "out": "Échec. bulletins.sh I/O Error fichier bulletins/*.pdf ligne 84",
+   "cost": 7.752e-05,
+   "prompt_n": 840,
+   "gen_n": 20,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.69
+  },
+  {
+   "id": "v3-tests-0005@en",
+   "fixture": "v3-tests-0005",
+   "kind": "summary",
+   "out": "Failed. test_config.py line 1: ModuleNotFoundError: No module named 'yaml'",
+   "cost": 7.926e-05,
+   "prompt_n": 790,
+   "gen_n": 21,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.72
+  },
+  {
+   "id": "v3-tests-0005@fr",
+   "fixture": "v3-tests-0005",
+   "kind": "summary",
+   "out": "Échec. test_config.py ligne 1 : ModuleNotFoundError yaml",
+   "cost": 7.752e-05,
+   "prompt_n": 852,
+   "gen_n": 17,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.85
+  },
+  {
+   "id": "v3-tests-0017@en",
+   "fixture": "v3-tests-0017",
+   "kind": "summary",
+   "out": "Failed. test_parser.py line 2, parser.py line 1: ModuleNotFoundError tomlish.lexer",
+   "cost": 6.216e-05,
+   "prompt_n": 660,
+   "gen_n": 25,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.62
+  },
+  {
+   "id": "v3-tests-0017@fr",
+   "fixture": "v3-tests-0017",
+   "kind": "summary",
+   "out": "Échec. test_parser.py ligne 2 : ModuleNotFoundError No module named tomlish.lexer",
+   "cost": 6.222e-05,
+   "prompt_n": 722,
+   "gen_n": 24,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.63
+  },
+  {
+   "id": "v3-tests-0025@en",
+   "fixture": "v3-tests-0025",
+   "kind": "summary",
+   "out": "7 passed, 2 suites",
+   "cost": 3.126e-05,
+   "prompt_n": 526,
+   "gen_n": 7,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.53
+  },
+  {
+   "id": "v3-tests-0025@fr",
+   "fixture": "v3-tests-0025",
+   "kind": "summary",
+   "out": "2 tests, store.test.js filter.test.js",
+   "cost": 3.357e-05,
+   "prompt_n": 587,
+   "gen_n": 10,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.78
+  },
+  {
+   "id": "v3-tests-0055@en",
+   "fixture": "v3-tests-0055",
+   "kind": "summary",
+   "out": "example.com/kvstore/codec 100.0%, example.com/kvstore/store 100.0%",
+   "cost": 4.671e-05,
+   "prompt_n": 545,
+   "gen_n": 28,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.66
+  },
+  {
+   "id": "v3-tests-0055@fr",
+   "fixture": "v3-tests-0055",
+   "kind": "summary",
+   "out": "example.com/kvstore/codec 100\nexample.com/kvstore/store 100",
+   "cost": 4.347e-05,
+   "prompt_n": 601,
+   "gen_n": 23,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.57
+  },
+  {
+   "id": "v3-tests-0087@en",
+   "fixture": "v3-tests-0087",
+   "kind": "summary",
+   "out": "Failed. test_alarm.py line 154, 184, 265",
+   "cost": 0.00016035,
+   "prompt_n": 981,
+   "gen_n": 22,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.48
+  },
+  {
+   "id": "v3-tests-0087@fr",
+   "fixture": "v3-tests-0087",
+   "kind": "summary",
+   "out": "Échec. test_alarm.py ligne 154, 184, 265 : KeyError alarm_id",
+   "cost": 0.00011337,
+   "prompt_n": 1043,
+   "gen_n": 29,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.73
+  },
+  {
+   "id": "v3-tests-0092@en",
+   "fixture": "v3-tests-0092",
+   "kind": "summary",
+   "out": "Failed. coupon.test.js line 63",
+   "cost": 8.526e-05,
+   "prompt_n": 874,
+   "gen_n": 10,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.6
+  },
+  {
+   "id": "v3-tests-0092@fr",
+   "fixture": "v3-tests-0092",
+   "kind": "summary",
+   "out": "Échec. coupon.test.js ligne 63",
+   "cost": 8.697e-05,
+   "prompt_n": 935,
+   "gen_n": 12,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.48
+  },
+  {
+   "id": "v3-tests-0117@en",
+   "fixture": "v3-tests-0117",
+   "kind": "summary",
+   "out": "Failed. stock.test.js line 65",
+   "cost": 9.069e-05,
+   "prompt_n": 939,
+   "gen_n": 10,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.4
+  },
+  {
+   "id": "v3-tests-0117@fr",
+   "fixture": "v3-tests-0117",
+   "kind": "summary",
+   "out": "Échec. stock.test.js ligne 65",
+   "cost": 9.672e-05,
+   "prompt_n": 1000,
+   "gen_n": 12,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.55
+  },
+  {
+   "id": "v3-vcs-git-0020@en",
+   "fixture": "v3-vcs-git-0020",
+   "kind": "summary",
+   "out": "Failed. inventaire Could not resolve hostname example.invalid",
+   "cost": 3.411e-05,
+   "prompt_n": 525,
+   "gen_n": 12,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.57
+  },
+  {
+   "id": "v3-vcs-git-0020@fr",
+   "fixture": "v3-vcs-git-0020",
+   "kind": "summary",
+   "out": "Échec. inventaire.git, hostname inconnu",
+   "cost": 3.357e-05,
+   "prompt_n": 583,
+   "gen_n": 11,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.45
+  },
+  {
+   "id": "v3-vcs-git-0040@en",
+   "fixture": "v3-vcs-git-0040",
+   "kind": "summary",
+   "out": "Failed. Not possible to fast-forward, aborting",
+   "cost": 3.786e-05,
+   "prompt_n": 554,
+   "gen_n": 11,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.37
+  },
+  {
+   "id": "v3-vcs-git-0040@fr",
+   "fixture": "v3-vcs-git-0040",
+   "kind": "summary",
+   "out": "Échec. origin/main diverge",
+   "cost": 3.672e-05,
+   "prompt_n": 612,
+   "gen_n": 9,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.79
+  },
+  {
+   "id": "v3-vcs-git-0046@en",
+   "fixture": "v3-vcs-git-0046",
+   "kind": "summary",
+   "out": "6 sections: Date: Tue Sep 1 10:00:00 2026 +0200, feature step 15: extend modules, feature step 12: extend modules, feature step 11: extend modules, feature step 10: extend modules",
+   "cost": 0.0001935,
+   "prompt_n": 1026,
+   "gen_n": 66,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 0.77
+  },
+  {
+   "id": "v3-vcs-git-0046@fr",
+   "fixture": "v3-vcs-git-0046",
+   "kind": "summary",
+   "out": "6\ne0d079c feature step 15\n29bce21 feature step 12\nf71f942 feature step 11\n5ad5605 feature step 10",
+   "cost": 0.00013302,
+   "prompt_n": 1082,
+   "gen_n": 52,
+   "reasoning_n": 0,
+   "provider": "Mistral",
+   "total": 1.32
+  }
+ ]
+}

@@ -1,0 +1,142 @@
+{
+ "n": 80,
+ "errors": 0,
+ "identical": 0,
+ "unstable_global": 33,
+ "position_bias": {
+  "clarte": {
+   "decided": 146,
+   "first_wins": 139,
+   "first_share": 95.2
+  },
+  "ordre": {
+   "decided": 119,
+   "first_wins": 100,
+   "first_share": 84.0
+  },
+  "concision": {
+   "decided": 110,
+   "first_wins": 95,
+   "first_share": 86.4
+  },
+  "naturel": {
+   "decided": 63,
+   "first_wins": 48,
+   "first_share": 76.2
+  },
+  "global": {
+   "decided": 97,
+   "first_wins": 84,
+   "first_share": 86.6
+  }
+ },
+ "controls": {
+  "clarte": {
+   "planted": {
+    "n": 60,
+    "agree": 4,
+    "rate": 6.7
+   },
+   "identical": {
+    "n": 20,
+    "agree": 20,
+    "rate": 100.0
+   },
+   "all": {
+    "n": 80,
+    "agree": 24,
+    "rate": 30.0
+   }
+  },
+  "ordre": {
+   "planted": {
+    "n": 60,
+    "agree": 0,
+    "rate": 0.0
+   },
+   "identical": {
+    "n": 20,
+    "agree": 20,
+    "rate": 100.0
+   },
+   "all": {
+    "n": 80,
+    "agree": 20,
+    "rate": 25.0
+   }
+  },
+  "concision": {
+   "planted": {
+    "n": 60,
+    "agree": 2,
+    "rate": 3.3
+   },
+   "identical": {
+    "n": 20,
+    "agree": 19,
+    "rate": 95.0
+   },
+   "all": {
+    "n": 80,
+    "agree": 21,
+    "rate": 26.2
+   }
+  },
+  "naturel": {
+   "planted": {
+    "n": 60,
+    "agree": 1,
+    "rate": 1.7
+   },
+   "identical": {
+    "n": 20,
+    "agree": 20,
+    "rate": 100.0
+   },
+   "all": {
+    "n": 80,
+    "agree": 21,
+    "rate": 26.2
+   }
+  },
+  "global": {
+   "planted": {
+    "n": 60,
+    "agree": 4,
+    "rate": 6.7
+   },
+   "identical": {
+    "n": 20,
+    "agree": 20,
+    "rate": 100.0
+   },
+   "all": {
+    "n": 80,
+    "agree": 24,
+    "rate": 30.0
+   }
+  }
+ },
+ "controls_by_kind": {
+  "identical": {
+   "n": 20,
+   "agree": 20,
+   "rate": 100.0
+  },
+  "log": {
+   "n": 20,
+   "agree": 3,
+   "rate": 15.0
+  },
+  "preamble": {
+   "n": 20,
+   "agree": 0,
+   "rate": 0.0
+  },
+  "repeat": {
+   "n": 20,
+   "agree": 1,
+   "rate": 5.0
+  }
+ }
+}

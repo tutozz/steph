@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;600;700&display=block">
+<link rel="stylesheet" href="charts.css">
+<style>html, body { background: rgb(255, 0, 255); }</style>
+</head><body><div class="card">
+<span class="tag">Avant, après</span>
+<h1>Une commande échoue.<br><em>Voici ce que vous entendez.</em></h1>
+<div class="term">
+  <div class="prompt"><span class="dollar">$ </span>rm /etc/hostname</div>
+  <div class="dump">rm: impossible de supprimer &#x27;/etc/hostname&#x27;: Permission non accordée</div>
+  
+</div>
+<div class="pair">
+  <div class="say raw">
+    <div class="head">Petit modèle brut · Qwen3.5 0.8B</div>
+    <div class="quote">« Échec. Header.tsx ligne 42 : titel inconnu, utiliser title. »</div>
+    <div class="why">Parle d'un fichier absent de la sortie.</div>
+  </div>
+  <div class="say ref">
+    <div class="head">steph · règle écrite en code</div>
+    <div class="quote">« Échec. hostname : permission refusée. »</div>
+    <div class="why">Nomme le fichier et la cause.</div>
+  </div>
+</div>
+<style>
+.term { margin-top: 20px; padding: 16px 20px; background: var(--code-bg); border: 2px solid var(--stroke); font-family: var(--mono); }
+.prompt { font: 500 20px var(--mono); }
+.dollar { color: var(--lemon); }
+.dump { margin-top: 6px; font: 400 19px/1.45 var(--mono); color: var(--muted); }
+.gloss { margin-top: 4px; font: 400 19px/1.4 var(--sans); color: var(--muted); }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+.say { padding: 20px; }
+.raw { background: var(--block); }
+.ref { background: var(--lemon); color: var(--black); }
+.head { font: 500 19px/1.35 var(--mono); }
+.raw .head, .raw .why { color: var(--muted); }
+.quote { margin-top: 10px; font: 500 24px/1.25 var(--sans); letter-spacing: -0.02em; }
+.ref .gloss, .ref .why { color: #2e2e2b; }
+.why { margin-top: 10px; font: 400 19px/1.4 var(--sans); }
+.final { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin-top: 16px; }
+.fh { font: 700 19px var(--mono); color: var(--lemon); }
+</style></div></body></html>

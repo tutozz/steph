@@ -1,0 +1,1 @@
+{"qa_kept": 173, "qa_lost_fact": 13, "summary_kept": 1686, "summary_label_stripped": 868, "summary_lost_fact": 184, "summary_lost_fact_by_truncation": 52, "summary_unmatched": 3, "train": 1762, "val": 97}

@@ -1,0 +1,1 @@
+{"k3-a-dpo-b7.json": {"invention": 2, "douteux": 3, "erreur": 0, "vide": 2, "invention_ids": ["fx04", "fx22"]}, "k3-a-dpo-b42.json": {"invention": 3, "douteux": 1, "erreur": 0, "vide": 2, "invention_ids": ["fx04", "fx22", "fx28"]}, "k3-a-dpo-b123.json": {"invention": 3, "douteux": 3, "erreur": 0, "vide": 2, "invention_ids": ["fx04", "fx22", "fx28"]}}

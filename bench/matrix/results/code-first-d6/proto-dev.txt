@@ -1,0 +1,139 @@
+v3-files-0050@fr                   0.50 | Succès. 39 dossiers créés.
+v3-files-0050@en                   0.50 | Success. 39 directories created.
+v3-files-0082@fr                   0.50 | Succès. 70 éléments supprimés.
+v3-files-0082@en                   0.50 | Success. 70 items removed.
+v3-files-0086@fr                   1.00 | Succès. 14 fichiers écrasés et supprimés.
+v3-files-0086@en                   1.00 | Success. 14 files shredded and removed.
+v3-files-0087@fr                   1.00 | Succès. 40 fichiers créés.
+v3-files-0087@en                   1.00 | Success. 40 files created.
+v3-infra-0001@fr                   0.50 | Succès. Terraform initialisé.
+v3-infra-0001@en                   0.50 | Success. Terraform initialized.
+v3-infra-0002@fr                   0.50 | Succès. Application terminée : 4 ajoutées, 0 modifiées, 0 détruites.
+v3-infra-0002@en                   0.50 | Success. Apply complete: 4 added, 0 changed, 0 destroyed.
+v3-infra-0004@fr                   0.33 | Succès. Plan : 1 à ajouter, 0 à modifier, 1 à détruire.
+v3-infra-0004@en                   0.33 | Success. Plan: 1 to add, 0 to change, 1 to destroy.
+v3-js-node-0003@fr                 0.50 | Succès. 24 paquets ajoutés, 0 vulnérabilités.
+v3-js-node-0003@en                 0.50 | Success. 24 packages added, 0 vulnerabilities.
+v3-js-node-0010@fr                 1.00 | Succès. 55 paquets ajoutés, 11 vulnérabilités (3 faibles, 7 élevées, 1 critiques).
+v3-js-node-0010@en                 1.00 | Success. 55 packages added, 11 vulnerabilities (3 low, 7 high, 1 critical).
+v3-js-node-0011@fr                 0.67 | Échec, code 1. 11 vulnérabilités (3 faibles, 7 élevées, 1 critiques).
+v3-js-node-0011@en                 0.67 | Failed, code 1. 11 vulnerabilities (3 low, 7 high, 1 critical).
+v3-js-node-0035@fr                 0.50 | Échec, code 1. 5 vulnérabilités (3 élevées, 2 critiques).
+v3-js-node-0035@en                 0.50 | Failed, code 1. 5 vulnerabilities (3 high, 2 critical).
+v3-lint-format-0026@fr             1.00 | Succès. Compilation réussie en 0,12 s. 27 avertissements dans tally.
+v3-lint-format-0026@en             1.00 | Success. Build finished in 0.12 s. 27 warnings in tally.
+v3-lint-format-0027@fr             0.50 | Échec, code 1. Ruff : 151 erreurs. 1 corrigeables avec --fix.
+v3-lint-format-0027@en             0.50 | Failed, code 1. Ruff: 151 errors. 1 fixable with --fix.
+v3-lint-format-0033@fr             0.50 | Échec, code 20. Note pylint : 1,66 sur 10.
+v3-lint-format-0033@en             0.50 | Failed, code 20. pylint score: 1.66 out of 10.
+v3-lint-format-0035@fr             1.00 | Échec, code 1. Ruff : 65 erreurs, surtout dans report/core.py. 5 corrigeables avec --fix.
+v3-lint-format-0035@en             1.00 | Failed, code 1. Ruff: 65 errors, mostly in report/core.py. 5 fixable with --fix.
+v3-lint-format-0036@fr             1.00 | Échec, code 1. Ruff : 65 erreurs, surtout dans catalog/core.py. 5 corrigeables avec --fix.
+v3-lint-format-0036@en             1.00 | Failed, code 1. Ruff: 65 errors, mostly in catalog/core.py. 5 fixable with --fix.
+v3-lint-format-0039@fr             1.00 | Échec, code 1. Ruff : 65 erreurs, surtout dans profile/core.py. 5 corrigeables avec --fix.
+v3-lint-format-0039@en             1.00 | Failed, code 1. Ruff: 65 errors, mostly in profile/core.py. 5 fixable with --fix.
+v3-lint-format-0040@fr             1.00 | Échec, code 1. Ruff : 65 erreurs, surtout dans quota/core.py. 5 corrigeables avec --fix.
+v3-lint-format-0040@en             1.00 | Failed, code 1. Ruff: 65 errors, mostly in quota/core.py. 5 fixable with --fix.
+v3-network-transfer-0019@fr        0.00 | Succès. Réponse HTTP 200.
+v3-network-transfer-0019@en        0.00 | Success. HTTP 200.
+v3-network-transfer-0023@fr        0.50 | Succès. Réponse HTTP 404 Not Found.
+v3-network-transfer-0023@en        0.50 | Success. HTTP 404 Not Found.
+v3-network-transfer-0037@fr        1.00 | Succès. 4 fichiers téléchargés, 1,7M au total.
+v3-network-transfer-0037@en        1.00 | Success. 4 files downloaded, 1,7M total.
+v3-network-transfer-0039@fr        0.50 | Échec, code 8. 3 fichiers téléchargés, 10K au total.
+v3-network-transfer-0039@en        0.50 | Failed, code 8. 3 files downloaded, 10K total.
+v3-network-transfer-0040@fr        1.00 | Échec, code 8. 4 fichiers téléchargés, 2,5K au total.
+v3-network-transfer-0040@en        1.00 | Failed, code 8. 4 files downloaded, 2,5K total.
+v3-network-transfer-0041@fr        0.50 | Échec, code 8. 3 fichiers téléchargés, 2,6K au total.
+v3-network-transfer-0041@en        0.50 | Failed, code 8. 3 files downloaded, 2,6K total.
+v3-permissions-users-0015@fr       0.50 | Succès. 39 éléments traités.
+v3-permissions-users-0015@en       0.50 | Success. 39 items processed.
+v3-permissions-users-0016@fr       0.50 | Succès. 105 éléments traités.
+v3-permissions-users-0016@en       0.50 | Success. 105 items processed.
+v3-rust-go-0008@fr                 0.80 | Échec, code 101. Panique dans main.rs ligne 9 : index out of bounds: the len is 3 but the index is 3.
+v3-rust-go-0008@en                 0.80 | Failed, code 101. Panic in main.rs line 9: index out of bounds: the len is 3 but the index is 3.
+v3-rust-go-0011@fr                 0.80 | Échec, code 101. Panique dans main.rs ligne 4 : called `Result::unwrap()` on an `Err` value: Os { code: 2, kind: NotFound, messa.
+v3-rust-go-0011@en                 0.80 | Failed, code 101. Panic in main.rs line 4: called `Result::unwrap()` on an `Err` value: Os { code: 2, kind: NotFound, messa.
+v3-rust-go-0013@fr                 0.33 | Succès. Compilation réussie en 8,95 s.
+v3-rust-go-0013@en                 0.33 | Success. Build finished in 8.95 s.
+v3-rust-go-0022@fr                 0.00 | Succès. Compilation réussie en 8,83 s.
+v3-rust-go-0022@en                 0.00 | Success. Build finished in 8.83 s.
+v3-shell-scripts-0005@fr           0.00 | Échec, code 1. Erreur de cp : impossible d'évaluer 'data/export-09.csv': Aucun fichier ou dossier de ce nom.
+v3-shell-scripts-0005@en           0.00 | Failed, code 1. cp error: impossible d'évaluer 'data/export-09.csv': Aucun fichier ou dossier de ce nom.
+v3-shell-scripts-0013@fr           0.00 | Échec, code 2. Erreur de tar : Error is not recoverable: exiting now.
+v3-shell-scripts-0013@en           0.00 | Failed, code 2. tar error: Error is not recoverable: exiting now.
+v3-shell-scripts-0022@fr           0.50 | Échec, code 1. rotation.sh ligne 7 : DUREE_RETENTION : variable sans liaison.
+v3-shell-scripts-0022@en           0.00 | Failed, code 1. rotation.sh line 7: DUREE_RETENTION : variable sans liaison.
+v3-shell-scripts-0023@fr           0.50 | Échec, code 1. Erreur de cat : ../bureau/factures/recapitulatif_annuel.txt: Aucun fichier ou dossier de ce nom.
+v3-shell-scripts-0023@en           0.00 | Failed, code 1. cat error: ../bureau/factures/recapitulatif_annuel.txt: Aucun fichier ou dossier de ce nom.
+v3-shell-scripts-0024@fr           0.50 | Échec, code 1. Erreur de mkdir : cannot create directory ‘/proc/boutique_release’: Aucun fichier ou dossier de ce nom.
+v3-shell-scripts-0024@en           0.50 | Failed, code 1. mkdir error: cannot create directory ‘/proc/boutique_release’: Aucun fichier ou dossier de ce nom.
+v3-shell-scripts-0036@fr           0.50 | Échec, code 1. paie.sh ligne 11 : REPERTOIRE_VIREMENTS : variable sans liaison.
+v3-shell-scripts-0036@en           0.50 | Failed, code 1. paie.sh line 11: REPERTOIRE_VIREMENTS : variable sans liaison.
+v3-shell-scripts-0052@fr           0.50 | Échec, code 1. Erreur de cp : /nonexistent/reports: No such file or directory.
+v3-shell-scripts-0052@en           0.50 | Failed, code 1. cp error: /nonexistent/reports: No such file or directory.
+v3-shell-scripts-0053@fr           0.67 | Échec, code 1. sync.sh ligne 8 : REPORT_BUCKET: unbound variable.
+v3-shell-scripts-0053@en           0.67 | Failed, code 1. sync.sh line 8: REPORT_BUCKET: unbound variable.
+v3-shell-scripts-0055@fr           0.67 | Échec, code 1. sync.sh ligne 8 : REPORT_BUCKET: unbound variable.
+v3-shell-scripts-0055@en           0.67 | Failed, code 1. sync.sh line 8: REPORT_BUCKET: unbound variable.
+v3-shell-scripts-0057@fr           1.00 | Échec, code 1. abonnements.sh ligne 11 : MONTANT_TOTAL : variable sans liaison.
+v3-shell-scripts-0057@en           0.67 | Failed, code 1. abonnements.sh line 11: MONTANT_TOTAL : variable sans liaison.
+v3-shell-scripts-0062@fr           1.00 | Échec, code 1. Erreur de mv : impossible d'évaluer 'export_pointage.csv': Aucun fichier ou dossier de ce nom.
+v3-shell-scripts-0062@en           0.67 | Failed, code 1. mv error: impossible d'évaluer 'export_pointage.csv': Aucun fichier ou dossier de ce nom.
+v3-shell-scripts-0063@fr           0.80 | Échec, code 1. ventes.sh ligne 11 : 100 / (ventes - ventes)  : division par 0 (le symbole erroné est « (ventes - ventes)  »).
+v3-shell-scripts-0063@en           0.40 | Failed, code 1. ventes.sh line 11: 100 / (ventes - ventes)  : division par 0 (le symbole erroné est « (ventes - ventes)  »).
+v3-shell-scripts-0064@fr           1.00 | Échec, code 1. devis.sh ligne 10 : relance.txt: Aucun fichier ou dossier de ce nom.
+v3-shell-scripts-0064@en           0.67 | Failed, code 1. devis.sh line 10: relance.txt: Aucun fichier ou dossier de ce nom.
+v3-shell-scripts-0067@fr           1.00 | Échec, code 2. Erreur de sort : impossible de lire: suivi_transporteur.txt: Aucun fichier ou dossier de ce nom.
+v3-shell-scripts-0067@en           0.67 | Failed, code 2. sort error: impossible de lire: suivi_transporteur.txt: Aucun fichier ou dossier de ce nom.
+v3-shell-scripts-0072@fr           0.50 | Échec, code 1. sync.sh ligne 8 : REPORT_BUCKET: unbound variable.
+v3-shell-scripts-0072@en           0.50 | Failed, code 1. sync.sh line 8: REPORT_BUCKET: unbound variable.
+v3-shell-scripts-0078@fr           1.00 | Échec, code 1. Erreur de cp : impossible d'évaluer 'commande_fournisseur.csv': Aucun fichier ou dossier de ce nom.
+v3-shell-scripts-0078@en           0.67 | Failed, code 1. cp error: impossible d'évaluer 'commande_fournisseur.csv': Aucun fichier ou dossier de ce nom.
+v3-tests-0016@fr                   0.67 | Échec, code 1. 9 tests : 2 échecs, 1 erreur. Premier : test_port_default.
+v3-tests-0016@en                   0.67 | Failed, code 1. 9 tests: 2 failed, 1 errors. First: test_port_default.
+v3-tests-0017@fr                   0.50 | Échec, code 1. 1 tests : 0 échecs, 1 erreur. Premier : test_parser.
+v3-tests-0017@en                   0.50 | Failed, code 1. 1 tests: 0 failed, 1 errors. First: test_parser.
+v3-tests-0034@fr                   0.00 | Échec, code 1. 2 échecs sur 7 tests. Premier : prerelease is lower.
+v3-tests-0034@en                   0.00 | Failed, code 1. 2 of 7 tests failed. First: prerelease is lower.
+v3-tests-0035@fr                   1.00 | Succès. 5 tests réussis.
+v3-tests-0035@en                   1.00 | Success. 5 tests passed.
+v3-tests-0042@fr                   1.00 | Succès. Paquets réussis : codec, store ; sans tests : kvctl, version.
+v3-tests-0042@en                   1.00 | Success. Packages passing: codec, store; no tests: kvctl, version.
+v3-tests-0054@fr                   1.00 | Succès. Paquets réussis : codec, store ; sans tests : kvctl, version.
+v3-tests-0054@en                   1.00 | Success. Packages passing: codec, store; no tests: kvctl, version.
+v3-tests-0055@fr                   0.00 | Succès. Paquets réussis : codec, store ; sans tests : version.
+v3-tests-0055@en                   0.00 | Success. Packages passing: codec, store; no tests: version.
+v3-tests-0059@fr                   0.50 | Échec, code 1. 70 tests : 2 échecs, 1 erreur. Premier : test_day_40.
+v3-tests-0059@en                   0.50 | Failed, code 1. 70 tests: 2 failed, 1 errors. First: test_day_40.
+v3-tests-0090@fr                   1.00 | Échec, code 1. 74 tests : 3 échecs. Premier : test_ticket_00.
+v3-tests-0090@en                   1.00 | Failed, code 1. 74 tests: 3 failed. First: test_ticket_00.
+v3-tests-0092@fr                   0.00 | Échec, code 1. 3 échecs sur 64 tests. Premier : coupon 19.
+v3-tests-0092@en                   0.00 | Failed, code 1. 3 of 64 tests failed. First: coupon 19.
+v3-tests-0102@fr                   0.67 | Échec, code 1. 80 tests : 3 échecs. Premier : test_feed_00.
+v3-tests-0102@en                   0.67 | Failed, code 1. 80 tests: 3 failed. First: test_feed_00.
+v3-tests-0115@fr                   0.67 | Échec, code 1. 67 tests : 3 échecs. Premier : test_catalog_00.
+v3-tests-0115@en                   0.67 | Failed, code 1. 67 tests: 3 failed. First: test_catalog_00.
+v3-tests-0116@fr                   0.00 | Échec, code 1. 1 échecs sur 70 tests. Premier : rating 47.
+v3-tests-0116@en                   0.00 | Failed, code 1. 1 of 70 tests failed. First: rating 47.
+v3-tests-0117@fr                   0.00 | Échec, code 1. 3 échecs sur 77 tests. Premier : stock 11.
+v3-tests-0117@en                   0.00 | Failed, code 1. 3 of 77 tests failed. First: stock 11.
+A cargo 6 code 0.44 v10: +0.12 (2+/3-) hyb +0.12 gemmaL5: +0.16 (3+/1-) hyb +0.13
+A go_pkgs 6 code 0.67 v10: +0.31 (4+/2-) hyb +0.40 gemmaL5: +0.14 (3+/2-) hyb +0.29
+A node_test 10 code 0.20 v10: -0.33 (1+/5-) hyb -0.39 gemmaL5: -0.60 (0+/7-) hyb -0.45
+A pylint 2 code 0.50 v10: +0.10 (2+/0-) hyb +0.10 gemmaL5: +0.06 (1+/0-) hyb +0.05
+A ruff 10 code 0.90 v10: +0.73 (10+/0-) hyb +0.57 gemmaL5: +0.30 (8+/0-) hyb +0.14
+A rust_panic 4 code 0.80 v10: +0.15 (3+/1-) hyb +0.15 gemmaL5: -0.03 (2+/2-) hyb -0.03
+A unittest 12 code 0.67 v10: +0.62 (12+/0-) hyb +0.60 gemmaL5: +0.57 (10+/1-) hyb +0.53
+B script 32 code 0.54 v10: +0.80 (16+/1-) hyb +0.43 gemmaL5: +0.00 (4+/5-) hyb -0.03
+B shred 2 code 1.00 v10: +0.23 (2+/0-) hyb +0.23 gemmaL5: +0.23 (2+/0-) hyb +0.23
+B verbose 10 code 0.60 v10: +0.45 (6+/0-) hyb +0.53 gemmaL5: +0.41 (7+/2-) hyb +0.56
+C npm 8 code 0.67 v10: +0.14 (4+/1-) hyb +0.36 gemmaL5: -0.01 (2+/2-) hyb +0.13
+C terraform 6 code 0.44 v10: +0.02 (2+/1-) hyb +0.21 gemmaL5: -0.22 (1+/4-) hyb +0.02
+D curl_status 4 code 0.25 v10: -0.06 (0+/1-) hyb +0.12 gemmaL5: -0.06 (0+/1-) hyb +0.06
+D wget 8 code 0.75 v10: +0.43 (6+/0-) hyb +0.58 gemmaL5: +0.17 (2+/1-) hyb +0.41
+LOT A 50 v10: +1.70 hyb +1.55 gemmaL5: +0.59 hyb +0.65
+LOT B 44 v10: +1.48 hyb +1.20 gemmaL5: +0.64 hyb +0.76
+LOT C 14 v10: +0.16 hyb +0.56 gemmaL5: -0.23 hyb +0.15
+LOT D 12 v10: +0.37 hyb +0.70 gemmaL5: +0.12 hyb +0.47
+ALL 120 v10: +3.70 gemmaL5: +1.13 share 40.8 -> 54.8

@@ -1,0 +1,401 @@
+{
+  "host": [
+    "Darwin",
+    "mac.local",
+    "27.0.0",
+    "Darwin Kernel Version 27.0.0: Wed Aug  5 22:03:55 PDT 2026; root:xnu-13432.1.6.501.1~1/RELEASE_ARM64_T6030",
+    "arm64"
+  ],
+  "started_at": 1790539112.475445,
+  "steph_cmd": [
+    "env",
+    "PYTHONPATH=/private/tmp/claude-501/-Users-user-Documents-steph/1e2944f6-517a-41c1-a876-072782ab3986/scratchpad/before/src",
+    "/Users/user/Documents/steph/.claude/worktrees/agent-af4e3cc375dc6be8d/.venv/bin/python",
+    "-m",
+    "steph.cli"
+  ],
+  "cold": {
+    "scenario": "froid",
+    "prewarm": false,
+    "commands": {
+      "courte": {
+        "cmd": "pwd",
+        "t_send": 1790539116.151906,
+        "t_cmd_end": 1790539116.223453,
+        "t_first_sound": 1790539116.569607,
+        "t_speech_end": 1790539124.7711082,
+        "latency_cmdend_to_sound_s": 0.34615397453308105,
+        "latency_sound_duration_s": 8.20150113105774
+      },
+      "longue": {
+        "cmd": "sleep 6 && echo fini",
+        "t_send": 1790539124.771914,
+        "t_cmd_end": 1790539130.8212988,
+        "t_first_sound": 1790539130.855683,
+        "t_speech_end": 1790539132.279139,
+        "latency_cmdend_to_sound_s": 0.03438425064086914,
+        "latency_sound_duration_s": 1.4234559535980225
+      },
+      "erreur": {
+        "cmd": "ls /chemin/totalement/inexistant/xyz",
+        "t_send": 1790539132.2805262,
+        "t_cmd_end": 1790539132.3557272,
+        "t_first_sound": 1790539132.468907,
+        "t_speech_end": 1790539134.02206,
+        "latency_cmdend_to_sound_s": 0.11317992210388184,
+        "latency_sound_duration_s": 1.5531527996063232
+      },
+      "resolue_code": {
+        "cmd": "git status",
+        "t_send": 1790539134.023068,
+        "t_cmd_end": 1790539134.128866,
+        "t_first_sound": 1790539134.22877,
+        "t_speech_end": 1790539135.6019049,
+        "latency_cmdend_to_sound_s": 0.09990406036376953,
+        "latency_sound_duration_s": 1.3731348514556885
+      },
+      "modele": {
+        "cmd": "find /Applications -maxdepth 1 -type d | head -40",
+        "t_send": 1790539135.602889,
+        "t_cmd_end": 1790539135.673533,
+        "t_first_sound": 1790539135.8374012,
+        "t_speech_end": 1790539137.448482,
+        "latency_cmdend_to_sound_s": 0.16386818885803223,
+        "latency_sound_duration_s": 1.6110808849334717
+      }
+    },
+    "boot": {
+      "t_launch": 1790539112.4862878,
+      "t_first_sound": 1790539114.095835,
+      "t_speech_end": 1790539115.648182,
+      "latency_launch_to_sound": 1.6095471382141113,
+      "latency_sound_duration": 1.55234694480896,
+      "llm_healthy_after_s": 0.503087043762207
+    },
+    "weights_after_commands": {
+      "steph_cpu_pct": {
+        "peak": 31.3,
+        "avg": 11.05
+      },
+      "steph_rss_mb": {
+        "peak": 307.015625,
+        "avg": 306.9375
+      },
+      "llama_cpu_pct": {
+        "peak": 0.1,
+        "avg": 0.025
+      },
+      "llama_rss_mb": {
+        "peak": 3544.953125,
+        "avg": 3544.953125
+      }
+    },
+    "voice_service_exited_cleanly": null
+  },
+  "warm": {
+    "scenario": "chaud",
+    "prewarm": true,
+    "commands": {
+      "courte": {
+        "cmd": "pwd",
+        "t_send": 1790539143.992613,
+        "t_cmd_end": 1790539144.065522,
+        "t_first_sound": 1790539144.3748631,
+        "t_speech_end": 1790539152.531965,
+        "latency_cmdend_to_sound_s": 0.3093411922454834,
+        "latency_sound_duration_s": 8.15710186958313
+      },
+      "longue": {
+        "cmd": "sleep 6 && echo fini",
+        "t_send": 1790539152.532764,
+        "t_cmd_end": 1790539158.593444,
+        "t_first_sound": 1790539158.655065,
+        "t_speech_end": 1790539160.0378199,
+        "latency_cmdend_to_sound_s": 0.06162095069885254,
+        "latency_sound_duration_s": 1.3827548027038574
+      },
+      "erreur": {
+        "cmd": "ls /chemin/totalement/inexistant/xyz",
+        "t_send": 1790539160.042018,
+        "t_cmd_end": 1790539160.1183228,
+        "t_first_sound": 1790539160.20453,
+        "t_speech_end": 1790539161.330076,
+        "latency_cmdend_to_sound_s": 0.08620715141296387,
+        "latency_sound_duration_s": 1.1255459785461426
+      },
+      "resolue_code": {
+        "cmd": "git status",
+        "t_send": 1790539161.330979,
+        "t_cmd_end": 1790539161.401113,
+        "t_first_sound": 1790539161.593054,
+        "t_speech_end": 1790539162.4242718,
+        "latency_cmdend_to_sound_s": 0.1919410228729248,
+        "latency_sound_duration_s": 0.8312177658081055
+      },
+      "modele": {
+        "cmd": "find /Applications -maxdepth 1 -type d | head -40",
+        "t_send": 1790539162.426029,
+        "t_cmd_end": 1790539162.497183,
+        "t_first_sound": 1790539162.691041,
+        "t_speech_end": 1790539164.857728,
+        "latency_cmdend_to_sound_s": 0.19385790824890137,
+        "latency_sound_duration_s": 2.16668701171875
+      }
+    },
+    "prewarm_wait_s": 1.8267571926116943,
+    "boot": {
+      "t_launch": 1790539141.540042,
+      "t_first_sound": 1790539142.6291032,
+      "t_speech_end": 1790539143.9908118,
+      "latency_launch_to_sound": 1.0890612602233887,
+      "latency_sound_duration": 1.361708641052246,
+      "llm_healthy_after_s": 0.0012831687927246094
+    },
+    "weights_after_commands": {
+      "steph_cpu_pct": {
+        "peak": 39.3,
+        "avg": 18.575
+      },
+      "steph_rss_mb": {
+        "peak": 298.625,
+        "avg": 294.95703125
+      },
+      "llama_cpu_pct": {
+        "peak": 0.1,
+        "avg": 0.025
+      },
+      "llama_rss_mb": {
+        "peak": 3538.3125,
+        "avg": 3519.515625
+      }
+    },
+    "voice_service_exited_cleanly": null
+  },
+  "idle": {
+    "skipped": true
+  },
+  "multiwindow": {
+    "1": {
+      "n": 1,
+      "latency_cmdend_to_sound_s": [
+        0.08825993537902832
+      ],
+      "latency_by_window_s": [
+        0.08825993537902832
+      ],
+      "active_window_latency_s": 0.08825993537902832,
+      "windows_heard": 1,
+      "speech_span_s": 4.689718961715698,
+      "tick_s_avg": 0.08071940916555899,
+      "overlap_fraction": 0.0,
+      "overlap_of_speech_fraction": 0.0,
+      "cpu_total_pct": {
+        "peak": 157.3,
+        "avg": 15.430864197530864
+      },
+      "rss_total_mb_peak": 221.609375,
+      "weights": {
+        "steph_cpu_pct": {
+          "peak": 0.6,
+          "avg": 0.275
+        },
+        "steph_rss_mb": {
+          "peak": 228.390625,
+          "avg": 226.0390625
+        },
+        "llama_cpu_pct": {
+          "peak": 0.5,
+          "avg": 0.2
+        },
+        "llama_rss_mb": {
+          "peak": 3682.4375,
+          "avg": 3682.4375
+        }
+      },
+      "llama_rss_mb_total": 3682.4375,
+      "steph_rss_mb_sum": 228.40625,
+      "voice_rss_mb": 0.0,
+      "steph_plus_voice_rss_mb": 228.40625,
+      "voice_service_exited_cleanly": null
+    },
+    "2": {
+      "n": 2,
+      "latency_cmdend_to_sound_s": [
+        0.0,
+        0.09823322296142578
+      ],
+      "latency_by_window_s": [
+        0.0,
+        0.09823322296142578
+      ],
+      "active_window_latency_s": 0.09823322296142578,
+      "windows_heard": 2,
+      "speech_span_s": 5.750039100646973,
+      "tick_s_avg": 0.08586559184761934,
+      "overlap_fraction": 0.47674418604651164,
+      "overlap_of_speech_fraction": 0.6119402985074627,
+      "cpu_total_pct": {
+        "peak": 149.4,
+        "avg": 22.355813953488372
+      },
+      "rss_total_mb_peak": 450.078125,
+      "weights": {
+        "steph_cpu_pct": {
+          "peak": 0.0,
+          "avg": 0.0
+        },
+        "steph_rss_mb": {
+          "peak": 84.09375,
+          "avg": 84.09375
+        },
+        "llama_cpu_pct": {
+          "peak": 0.3,
+          "avg": 0.225
+        },
+        "llama_rss_mb": {
+          "peak": 3613.984375,
+          "avg": 3613.984375
+        }
+      },
+      "llama_rss_mb_total": 3613.984375,
+      "steph_rss_mb_sum": 254.609375,
+      "voice_rss_mb": 0.0,
+      "steph_plus_voice_rss_mb": 254.609375,
+      "voice_service_exited_cleanly": null
+    },
+    "4": {
+      "n": 4,
+      "latency_cmdend_to_sound_s": [
+        0.0,
+        0.0,
+        0.0,
+        0.09109926223754883
+      ],
+      "latency_by_window_s": [
+        0.0,
+        0.0,
+        0.0,
+        0.09109926223754883
+      ],
+      "active_window_latency_s": 0.09109926223754883,
+      "windows_heard": 4,
+      "speech_span_s": 5.836260795593262,
+      "tick_s_avg": 0.08597504681554334,
+      "overlap_fraction": 0.735632183908046,
+      "overlap_of_speech_fraction": 0.9696969696969697,
+      "cpu_total_pct": {
+        "peak": 610.3,
+        "avg": 61.45632183908046
+      },
+      "rss_total_mb_peak": 929.671875,
+      "weights": {
+        "steph_cpu_pct": {
+          "peak": 0.0,
+          "avg": 0.0
+        },
+        "steph_rss_mb": {
+          "peak": 232.0625,
+          "avg": 232.05078125
+        },
+        "llama_cpu_pct": {
+          "peak": 0.3,
+          "avg": 0.275
+        },
+        "llama_rss_mb": {
+          "peak": 3740.34375,
+          "avg": 3740.34375
+        }
+      },
+      "llama_rss_mb_total": 3740.34375,
+      "steph_rss_mb_sum": 929.859375,
+      "voice_rss_mb": 0.0,
+      "steph_plus_voice_rss_mb": 929.859375,
+      "voice_service_exited_cleanly": null
+    },
+    "8": {
+      "n": 8,
+      "latency_cmdend_to_sound_s": [
+        0.3905320167541504,
+        0.30677080154418945,
+        0.21081995964050293,
+        0.3905320167541504,
+        0.21081995964050293,
+        0.3905320167541504,
+        0.3905320167541504,
+        0.2001206874847412
+      ],
+      "latency_by_window_s": [
+        0.3905320167541504,
+        0.30677080154418945,
+        0.21081995964050293,
+        0.3905320167541504,
+        0.21081995964050293,
+        0.3905320167541504,
+        0.3905320167541504,
+        0.2001206874847412
+      ],
+      "active_window_latency_s": 0.2001206874847412,
+      "windows_heard": 8,
+      "speech_span_s": 6.6824328899383545,
+      "tick_s_avg": 0.08706170198868732,
+      "overlap_fraction": 0.7857142857142857,
+      "overlap_of_speech_fraction": 0.9871794871794872,
+      "cpu_total_pct": {
+        "peak": 851.2,
+        "avg": 137.77142857142857
+      },
+      "rss_total_mb_peak": 1535.375,
+      "weights": {
+        "steph_cpu_pct": {
+          "peak": 0.0,
+          "avg": 0.0
+        },
+        "steph_rss_mb": {
+          "peak": 182.234375,
+          "avg": 182.1875
+        },
+        "llama_cpu_pct": {
+          "peak": 0.4,
+          "avg": 0.325
+        },
+        "llama_rss_mb": {
+          "peak": 3629.578125,
+          "avg": 3629.578125
+        }
+      },
+      "llama_rss_mb_total": 3629.578125,
+      "steph_rss_mb_sum": 1535.25,
+      "voice_rss_mb": 0.0,
+      "steph_plus_voice_rss_mb": 1535.25,
+      "voice_service_exited_cleanly": null
+    }
+  },
+  "disk": {
+    "install_uv_tool_mb": 148.30078125,
+    "models_mb": 3194.34765625,
+    "voices_mb": 60.28515625,
+    "config_kb": 16.0,
+    "disk_free_gb": 1.952667236328125
+  },
+  "log_growth": {
+    "steph.log": {
+      "size_bytes": 37834,
+      "span_hours_observed": 52.32,
+      "avg_bytes_per_hour": 723.2,
+      "note": "moyenne sur l'historique du fichier, pas une mesure controlee sur 1h"
+    },
+    "llama-server.log": {
+      "size_bytes": 104159,
+      "span_hours_observed": 33.94,
+      "avg_bytes_per_hour": 3068.9,
+      "note": "moyenne sur l'historique du fichier, pas une mesure controlee sur 1h"
+    }
+  },
+  "mem_free_mb_end": 223.37890625,
+  "finished_at": 1790539167.196178,
+  "runs": [
+    "/private/tmp/claude-501/-Users-user-Documents-steph/1e2944f6-517a-41c1-a876-072782ab3986/scratchpad/b-single.json",
+    "/private/tmp/claude-501/-Users-user-Documents-steph/1e2944f6-517a-41c1-a876-072782ab3986/scratchpad/b-mw124.json",
+    "/private/tmp/claude-501/-Users-user-Documents-steph/1e2944f6-517a-41c1-a876-072782ab3986/scratchpad/b-mw8.json"
+  ]
+}

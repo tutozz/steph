@@ -1,0 +1,10 @@
+14:34:19 ATTENTE couloirs finis et 27B copié
+14:58:00 27B sha256 ok
+14:58:23 27B PRÊT ngl 32 8741 MiB
+14:58:23 PAIRES sft-s42 contre gemma-raw {"differ": 1146, "picked": 240, "fr": 104, "en": 136}
+15:34:04 STYLE sft-s42 contre gemma-raw rc=0
+15:34:04 PAIRES dpo-s42 contre gemma-raw {"differ": 1170, "picked": 240, "fr": 107, "en": 133}
+16:00:40 STYLE dpo-s42 contre gemma-raw rc=0
+16:00:40 PAIRES dpo-s42 contre sft-s42 {"differ": 590, "picked": 240, "fr": 119, "en": 121}
+16:28:21 STYLE dpo-s42 contre sft-s42 rc=0
+16:28:21 FIN

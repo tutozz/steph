@@ -1,0 +1,8 @@
+19:    def __init__(self, cfg: Config):
+26:    def healthy(self) -> bool:
+33:    def ensure_server(self, wait: float = 60.0) -> bool:
+62:    def _pid_alive(self) -> bool:
+70:    def stop_server(self) -> None:
+79:    def _payload(self, messages, max_tokens, temperature, stream):
+90:    def stream(self, messages: list[dict], max_tokens: int = 120,
+111:    def complete(self, messages: list[dict], max_tokens: int = 120,

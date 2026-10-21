@@ -1,0 +1,256 @@
+{
+ "model": "soup-granite-uniform (Granite 4.0 H 350M, soupe uniforme s42/s123/s7/s2024), f16 reconstruit sur xeon, 402/402 tenseurs Q4_K_M identiques à la soupe livrée",
+ "selection": {
+  "c32768": "corpus mix-judged seul (6 690 jetons utilisés, 8 600 avec fermeture BPE, spéciaux et octets), complété par rang BPE",
+  "c65536": "idem, cible 65 536",
+  "b32768": "corpus + banc steph + TermSpeak FR/EN (9 098 utilisés, 11 202 avec fermeture), complété à 32 768"
+ },
+ "corpus_tokenization_check": {
+  "c32768": {
+   "texts": 9365,
+   "tokens": 1382114,
+   "unknown": 0,
+   "different": 0
+  },
+  "c65536": {
+   "texts": 9365,
+   "tokens": 1382114,
+   "unknown": 0,
+   "different": 0
+  },
+  "b32768": {
+   "texts": 9365,
+   "tokens": 1382114,
+   "unknown": 0,
+   "different": 0
+  }
+ },
+ "variants": {
+  "full": {
+   "vocab": 100352,
+   "params_embedding": 77070336,
+   "gguf_q4_bytes": 222662112,
+   "xeon_bench": {
+    "seeds": [
+     42,
+     7,
+     123
+    ],
+    "v1": 75.6,
+    "v2": 74.7,
+    "v1_per_seed": [
+     75.1,
+     78.6,
+     73.1
+    ],
+    "v2_per_seed": [
+     72.4,
+     78.6,
+     73.1
+    ],
+    "v1_tune": 82.6,
+    "v1_holdout": 65.9,
+    "gen_tok_s_median": [
+     86.7,
+     91.5,
+     105.6
+    ]
+   },
+   "i5": {
+    "passes": 6,
+    "ttft_median_per_pass": [
+     0.621,
+     0.643,
+     0.639,
+     0.643,
+     0.64,
+     0.646
+    ],
+    "ttft_p90_per_pass": [
+     2.317,
+     2.455,
+     2.462,
+     2.456,
+     2.454,
+     2.539
+    ],
+    "ttft_p90_median_of_passes": 2.455,
+    "ttft_ratio_vs_full_per_case_median": 1.0,
+    "prompt_tokens_36_cases": 6178.0,
+    "gen_tok_s_median": 59.2,
+    "ram_peak_mb": 2547,
+    "v1_unseeded": 78.5,
+    "v2_unseeded": 80.6
+   }
+  },
+  "c32768": {
+   "vocab": 32768,
+   "params_embedding": 25165824,
+   "gguf_q4_bytes": 177639840,
+   "xeon_bench": {
+    "seeds": [
+     42,
+     7,
+     123
+    ],
+    "v1": 74.5,
+    "v2": 73.5,
+    "v1_per_seed": [
+     73.1,
+     77.2,
+     73.1
+    ],
+    "v2_per_seed": [
+     71.7,
+     75.8,
+     73.1
+    ],
+    "v1_tune": 90.5,
+    "v1_holdout": 52.0,
+    "gen_tok_s_median": [
+     134.5,
+     136.7,
+     156.3
+    ]
+   },
+   "i5": {
+    "passes": 2,
+    "ttft_median_per_pass": [
+     0.669,
+     0.671
+    ],
+    "ttft_p90_per_pass": [
+     2.544,
+     2.55
+    ],
+    "ttft_p90_median_of_passes": 2.547,
+    "ttft_ratio_vs_full_per_case_median": 1.047,
+    "prompt_tokens_36_cases": 6498.0,
+    "gen_tok_s_median": 68.2,
+    "ram_peak_mb": 2054,
+    "v1_unseeded": 72.6,
+    "v2_unseeded": 75.3
+   },
+   "eval_tokenization_llamacpp": {
+    "texts": 5079,
+    "tokens": 561963,
+    "tokens_reduced": 593781,
+    "different": 2386,
+    "hf_mismatch": 0
+   }
+  },
+  "c65536": {
+   "vocab": 65536,
+   "params_embedding": 50331648,
+   "gguf_q4_bytes": 199455424,
+   "xeon_bench": {
+    "seeds": [
+     42,
+     7,
+     123
+    ],
+    "v1": 74.1,
+    "v2": 74.1,
+    "v1_per_seed": [
+     76.5,
+     72.9,
+     72.9
+    ],
+    "v2_per_seed": [
+     76.5,
+     72.9,
+     72.9
+    ],
+    "v1_tune": 85.7,
+    "v1_holdout": 57.9,
+    "gen_tok_s_median": [
+     118.4,
+     124.5,
+     128.5
+    ]
+   },
+   "i5": {
+    "passes": 2,
+    "ttft_median_per_pass": [
+     0.649,
+     0.659
+    ],
+    "ttft_p90_per_pass": [
+     2.458,
+     2.454
+    ],
+    "ttft_p90_median_of_passes": 2.456,
+    "ttft_ratio_vs_full_per_case_median": 0.998,
+    "prompt_tokens_36_cases": 6215.0,
+    "gen_tok_s_median": 62.9,
+    "ram_peak_mb": 2536,
+    "v1_unseeded": 81.4,
+    "v2_unseeded": 83.5
+   },
+   "eval_tokenization_llamacpp": {
+    "texts": 5079,
+    "tokens": 561963,
+    "tokens_reduced": 571979,
+    "different": 1511,
+    "hf_mismatch": 0
+   }
+  },
+  "b32768": {
+   "vocab": 32768,
+   "params_embedding": 25165824,
+   "gguf_q4_bytes": 177640128,
+   "xeon_bench": {
+    "seeds": [
+     42,
+     7,
+     123
+    ],
+    "v1": 75.6,
+    "v2": 74.7,
+    "v1_per_seed": [
+     75.1,
+     78.6,
+     73.1
+    ],
+    "v2_per_seed": [
+     72.4,
+     78.6,
+     73.1
+    ],
+    "v1_tune": 82.6,
+    "v1_holdout": 65.9,
+    "gen_tok_s_median": [
+     103.6,
+     112.9,
+     118.4
+    ]
+   },
+   "i5": {
+    "passes": 2,
+    "ttft_median_per_pass": [
+     0.643,
+     0.637
+    ],
+    "ttft_p90_per_pass": [
+     2.455,
+     2.466
+    ],
+    "ttft_p90_median_of_passes": 2.461,
+    "ttft_ratio_vs_full_per_case_median": 0.995,
+    "prompt_tokens_36_cases": 6178.0,
+    "gen_tok_s_median": 67.9,
+    "ram_peak_mb": 2488,
+    "v1_unseeded": 77.2,
+    "v2_unseeded": 81.3
+   },
+   "eval_tokenization_llamacpp": {
+    "texts": 5079,
+    "tokens": 561963,
+    "tokens_reduced": 561963,
+    "different": 0,
+    "hf_mismatch": 0
+   }
+  }
+ },
+ "verdict": "ne pas garder : aucune variante n'a un premier mot plus rapide au-delà du bruit, ni un meilleur score au banc à graines fixes"
+}

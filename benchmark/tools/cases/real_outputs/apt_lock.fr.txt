@@ -1,0 +1,6 @@
+Lecture des listes de paquets... Fait
+Construction de l'arbre des dépendances... Fait
+Lecture des informations d'état... Fait
+E: Impossible d'obtenir le verrou /var/lib/dpkg/lock-frontend. Il est tenu par le processus 4321 (unattended-upgr)
+N: Faites attention de ne pas supprimer les fichiers de verrouillage
+E: Impossible d'obtenir le verrou de l'interface dpkg (/var/lib/dpkg/lock-frontend). Un autre processus l'utilise-t-il ?

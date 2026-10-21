@@ -1,0 +1,2 @@
+root ::= "Échec. " char{0,132}
+char ::= [^\n\r`<]

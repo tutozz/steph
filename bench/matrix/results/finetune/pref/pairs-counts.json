@@ -1,0 +1,17 @@
+{
+ "verdicts": {
+  "ok": 1159,
+  "invention": 318,
+  "douteux": 115
+ },
+ "train": {
+  "pairs": 305,
+  "prompts": 212,
+  "prompts_total": 1771
+ },
+ "val": {
+  "pairs": 13,
+  "prompts": 9,
+  "prompts_total": 102
+ }
+}

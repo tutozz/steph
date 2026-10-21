@@ -1,0 +1,730 @@
+{
+ "regime": "cold",
+ "delay": 5.0,
+ "budget": 0,
+ "profile": "generic",
+ "qa_tools": false,
+ "seed": 123,
+ "rows": [
+  {
+   "out": "Deux tests échouaient.",
+   "ttft": 6.23,
+   "first_speech": 0.002,
+   "said": "Je regarde l'historique. Deux tests échouaient.",
+   "prompt_chars": 3087,
+   "id": "v3-history-qa-0004@fr"
+  },
+  {
+   "out": "2 tests failed.",
+   "ttft": 5.697,
+   "first_speech": 0.002,
+   "said": "Checking the history. 2 tests failed.",
+   "prompt_chars": 3038,
+   "id": "v3-history-qa-0004@en"
+  },
+  {
+   "out": "Version pytest non dans l'historique.",
+   "ttft": 6.561,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Version pytest non dans l'historique.",
+   "prompt_chars": 3087,
+   "id": "v3-history-qa-0005@fr"
+  },
+  {
+   "out": "Not in the history.",
+   "ttft": 6.172,
+   "first_speech": 0.001,
+   "said": "Checking the history. Not in the history.",
+   "prompt_chars": 3038,
+   "id": "v3-history-qa-0005@en"
+  },
+  {
+   "out": "Erreur de syntaxe JSON.",
+   "ttft": 2.403,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Erreur de syntaxe JSON.",
+   "prompt_chars": 946,
+   "id": "v3-history-qa-0010@fr"
+  },
+  {
+   "out": "Parse error at line 4. config.json.",
+   "ttft": 2.476,
+   "first_speech": 0.0,
+   "said": "Checking the history. Parse error at line 4. config.json.",
+   "prompt_chars": 897,
+   "id": "v3-history-qa-0010@en"
+  },
+  {
+   "out": "beta.c.",
+   "ttft": 4.031,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. beta.c.",
+   "prompt_chars": 1679,
+   "id": "v3-history-qa-0016@fr"
+  },
+  {
+   "out": "beta.c.",
+   "ttft": 3.901,
+   "first_speech": 0.001,
+   "said": "Checking the history. beta.c.",
+   "prompt_chars": 1630,
+   "id": "v3-history-qa-0016@en"
+  },
+  {
+   "out": "Version gcc non dans l'historique.",
+   "ttft": 4.902,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Version gcc non dans l'historique.",
+   "prompt_chars": 1679,
+   "id": "v3-history-qa-0017@fr"
+  },
+  {
+   "out": "Command: gcc --version.",
+   "ttft": 4.306,
+   "first_speech": 0.001,
+   "said": "Checking the history. Command: gcc --version.",
+   "prompt_chars": 1630,
+   "id": "v3-history-qa-0017@en"
+  },
+  {
+   "out": "Dossier tmp n'est pas vide.",
+   "ttft": 3.944,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Dossier tmp n'est pas vide.",
+   "prompt_chars": 1304,
+   "id": "v3-history-qa-0019@fr"
+  },
+  {
+   "out": "The directory 'tmp' was not empty.",
+   "ttft": 3.55,
+   "first_speech": 0.001,
+   "said": "Checking the history. The directory 'tmp' was not empty.",
+   "prompt_chars": 1255,
+   "id": "v3-history-qa-0019@en"
+  },
+  {
+   "out": "desk, shelf.",
+   "ttft": 2.752,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. desk, shelf.",
+   "prompt_chars": 1123,
+   "id": "v3-history-qa-0020@fr"
+  },
+  {
+   "out": "desk, shelf. Command: python3 q.py 'select name from products where stock = 0'.",
+   "ttft": 2.247,
+   "first_speech": 0.001,
+   "said": "Checking the history. desk, shelf. Command: python3 q.py 'select name from products where stock = 0'.",
+   "prompt_chars": 1074,
+   "id": "v3-history-qa-0020@en"
+  },
+  {
+   "out": "csv, json.",
+   "ttft": 2.553,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. csv, json.",
+   "prompt_chars": 1145,
+   "id": "v3-history-qa-0023@fr"
+  },
+  {
+   "out": "csv, json.",
+   "ttft": 2.726,
+   "first_speech": 0.0,
+   "said": "Checking the history. csv, json.",
+   "prompt_chars": 1096,
+   "id": "v3-history-qa-0023@en"
+  },
+  {
+   "out": "SyntaxError: expected ':' après parenthèse.",
+   "ttft": 2.979,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. SyntaxError: expected ':' après parenthèse.",
+   "prompt_chars": 1031,
+   "id": "v3-history-qa-0024@fr"
+  },
+  {
+   "out": "Line 4: function definition missing colon after parameters. b)/def mul(a, b):/' calc.py.",
+   "ttft": 3.387,
+   "first_speech": 0.001,
+   "said": "Checking the history. Line 4: function definition missing colon after parameters. b)/def mul(a, b):/' calc.py.",
+   "prompt_chars": 982,
+   "id": "v3-history-qa-0024@en"
+  },
+  {
+   "out": "Nginx inactive.",
+   "ttft": 2.441,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Nginx inactive.",
+   "prompt_chars": 942,
+   "id": "v3-history-qa-0028@fr"
+  },
+  {
+   "out": "No, nginx is inactive.",
+   "ttft": 1.881,
+   "first_speech": 0.001,
+   "said": "Checking the history. No, nginx is inactive.",
+   "prompt_chars": 893,
+   "id": "v3-history-qa-0028@en"
+  },
+  {
+   "out": "Huit fichiers objets.",
+   "ttft": 4.89,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Huit fichiers objets.",
+   "prompt_chars": 1528,
+   "id": "v3-history-qa-0029@fr"
+  },
+  {
+   "out": "8 object files built before error.",
+   "ttft": 4.508,
+   "first_speech": 0.001,
+   "said": "Checking the history. 8 object files built before error.",
+   "prompt_chars": 1479,
+   "id": "v3-history-qa-0029@en"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 2.586,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "prompt_chars": 910,
+   "id": "v3-history-qa-0030@fr"
+  },
+  {
+   "out": "Not in the history.",
+   "ttft": 2.127,
+   "first_speech": 0.001,
+   "said": "Checking the history. Not in the history.",
+   "prompt_chars": 861,
+   "id": "v3-history-qa-0030@en"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 3.499,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "prompt_chars": 1140,
+   "id": "v3-history-qa-0031@fr"
+  },
+  {
+   "out": "Command: lspci | grep -i vga.",
+   "ttft": 3.201,
+   "first_speech": 0.001,
+   "said": "Checking the history. Command: lspci | grep -i vga.",
+   "prompt_chars": 1091,
+   "id": "v3-history-qa-0031@en"
+  },
+  {
+   "out": "Sept fichiers .tmp dépassent 10 Ko.",
+   "ttft": 3.386,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Sept fichiers .tmp dépassent 10 Ko.",
+   "prompt_chars": 985,
+   "id": "v3-history-qa-0034@fr"
+  },
+  {
+   "out": "Seven files over 10 KB found. Command: find. -name '*.tmp' -size +10k | wc -l.",
+   "ttft": 2.817,
+   "first_speech": 0.0,
+   "said": "Checking the history. Seven files over 10 KB found. Command: find. -name '*.tmp' -size +10k | wc -l.",
+   "prompt_chars": 936,
+   "id": "v3-history-qa-0034@en"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 8.949,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "prompt_chars": 1113,
+   "id": "v3-history-qa-0041@fr"
+  },
+  {
+   "out": "Not in the history.",
+   "ttft": 16.507,
+   "first_speech": 0.001,
+   "said": "Checking the history. Not in the history.",
+   "prompt_chars": 1064,
+   "id": "v3-history-qa-0041@en"
+  },
+  {
+   "out": "Erreur ZeroDivisionError. Division par zéro.",
+   "ttft": 11.329,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Erreur ZeroDivisionError. Division par zéro.",
+   "prompt_chars": 1524,
+   "id": "v3-history-qa-0042@fr"
+  },
+  {
+   "out": "ZeroDivisionError: division by zero.",
+   "ttft": 12.717,
+   "first_speech": 0.001,
+   "said": "Checking the history. ZeroDivisionError: division by zero.",
+   "prompt_chars": 1475,
+   "id": "v3-history-qa-0042@en"
+  },
+  {
+   "out": "9.1Ko.",
+   "ttft": 11.697,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. 9.1Ko.",
+   "prompt_chars": 1509,
+   "id": "v3-history-qa-0044@fr"
+  },
+  {
+   "out": "9.1K.",
+   "ttft": 11.531,
+   "first_speech": 0.001,
+   "said": "Checking the history. 9.1K.",
+   "prompt_chars": 1460,
+   "id": "v3-history-qa-0044@en"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 15.819,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "prompt_chars": 1045,
+   "id": "v3-history-qa-0049@fr"
+  },
+  {
+   "out": "Not in the history.",
+   "ttft": 6.978,
+   "first_speech": 0.001,
+   "said": "Checking the history. Not in the history.",
+   "prompt_chars": 996,
+   "id": "v3-history-qa-0049@en"
+  },
+  {
+   "out": "420 lignes.",
+   "ttft": 70.13,
+   "first_speech": 0.007,
+   "said": "Je regarde l'historique. 420 lignes.",
+   "prompt_chars": 9579,
+   "id": "v3-history-qa-0052@fr"
+  },
+  {
+   "out": "420 lines.",
+   "ttft": 72.72,
+   "first_speech": 0.005,
+   "said": "Checking the history. 420 lines.",
+   "prompt_chars": 9530,
+   "id": "v3-history-qa-0052@en"
+  },
+  {
+   "out": "Mailer a le plus d'erreurs.",
+   "ttft": 72.373,
+   "first_speech": 0.005,
+   "said": "Je regarde l'historique. Mailer a le plus d'erreurs.",
+   "prompt_chars": 9579,
+   "id": "v3-history-qa-0053@fr"
+  },
+  {
+   "out": "Mailer has most errors. Command: grep ERROR big.log | awk '{print $4}' | sort | uniq -c | sort -rn.",
+   "ttft": 68.719,
+   "first_speech": 0.01,
+   "said": "Checking the history. Mailer has most errors. Command: grep ERROR big.log | awk '{print $4}' | sort | uniq -c | sort -rn.",
+   "prompt_chars": 9530,
+   "id": "v3-history-qa-0053@en"
+  },
+  {
+   "out": "36 avertissements.",
+   "ttft": 31.011,
+   "first_speech": 0.006,
+   "said": "Je regarde l'historique. 36 avertissements.",
+   "prompt_chars": 5206,
+   "id": "v3-history-qa-0054@fr"
+  },
+  {
+   "out": "36 warnings.",
+   "ttft": 31.397,
+   "first_speech": 0.004,
+   "said": "Checking the history. 36 warnings.",
+   "prompt_chars": 5157,
+   "id": "v3-history-qa-0054@en"
+  },
+  {
+   "out": "test_km_3, test_km_7, test_kg_4.",
+   "ttft": 20.62,
+   "first_speech": 0.007,
+   "said": "Je regarde l'historique. test_km_3, test_km_7, test_kg_4.",
+   "prompt_chars": 4515,
+   "id": "v3-history-qa-0055@fr"
+  },
+  {
+   "out": "test_km_3, test_km_7, test_kg_4 fail.",
+   "ttft": 22.609,
+   "first_speech": 0.004,
+   "said": "Checking the history. test_km_3, test_km_7, test_kg_4 fail.",
+   "prompt_chars": 4466,
+   "id": "v3-history-qa-0055@en"
+  },
+  {
+   "out": "45 tests au total.",
+   "ttft": 22.108,
+   "first_speech": 0.002,
+   "said": "Je regarde l'historique. 45 tests au total.",
+   "prompt_chars": 4515,
+   "id": "v3-history-qa-0056@fr"
+  },
+  {
+   "out": "45 tests total.",
+   "ttft": 21.437,
+   "first_speech": 0.002,
+   "said": "Checking the history. 45 tests total.",
+   "prompt_chars": 4466,
+   "id": "v3-history-qa-0056@en"
+  },
+  {
+   "out": "server.conf.",
+   "ttft": 8.484,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. server.conf.",
+   "prompt_chars": 1276,
+   "id": "v3-history-qa-0058@fr"
+  },
+  {
+   "out": "server.conf.",
+   "ttft": 5.638,
+   "first_speech": 0.003,
+   "said": "Checking the history. server.conf.",
+   "prompt_chars": 1227,
+   "id": "v3-history-qa-0058@en"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 10.105,
+   "first_speech": 0.002,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "prompt_chars": 1276,
+   "id": "v3-history-qa-0059@fr"
+  },
+  {
+   "out": "Not in the history.",
+   "ttft": 120.296,
+   "first_speech": 0.002,
+   "said": "Checking the history. Not in the history.",
+   "prompt_chars": 1227,
+   "id": "v3-history-qa-0059@en"
+  },
+  {
+   "out": "Deux stashes.",
+   "ttft": 7.668,
+   "first_speech": 0.003,
+   "said": "Je regarde l'historique. Deux stashes.",
+   "prompt_chars": 1333,
+   "id": "v3-history-qa-0062@fr"
+  },
+  {
+   "out": "Two stashes existed.",
+   "ttft": 9.407,
+   "first_speech": 0.004,
+   "said": "Checking the history. Two stashes existed.",
+   "prompt_chars": 1284,
+   "id": "v3-history-qa-0062@en"
+  },
+  {
+   "out": "Erreur ENOENT. Fichier config.json manquant.",
+   "ttft": 9.44,
+   "first_speech": 0.003,
+   "said": "Je regarde l'historique. Erreur ENOENT. Fichier config.json manquant.",
+   "prompt_chars": 1775,
+   "id": "v3-history-qa-0067@fr"
+  },
+  {
+   "out": "Missing config.json file. Command: touch config.json.",
+   "ttft": 10.846,
+   "first_speech": 0.004,
+   "said": "Checking the history. Missing config.json file. Command: touch config.json.",
+   "prompt_chars": 1726,
+   "id": "v3-history-qa-0067@en"
+  },
+  {
+   "out": "Erreur : undefined, propriété name, lecture impossible.",
+   "ttft": 11.44,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Erreur : undefined, propriété name, lecture impossible.",
+   "prompt_chars": 2390,
+   "id": "v3-history-qa-0069@fr"
+  },
+  {
+   "out": "TypeError: Cannot read properties of undefined (reading 'name') at greet.",
+   "ttft": 13.779,
+   "first_speech": 0.001,
+   "said": "Checking the history. TypeError: Cannot read properties of undefined (reading 'name') at greet.",
+   "prompt_chars": 2341,
+   "id": "v3-history-qa-0069@en"
+  },
+  {
+   "out": "Dune, Hyperion.",
+   "ttft": 7.026,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Dune, Hyperion.",
+   "prompt_chars": 1309,
+   "id": "v3-history-qa-0079@fr"
+  },
+  {
+   "out": "Dune, Hyperion.",
+   "ttft": 6.479,
+   "first_speech": 0.001,
+   "said": "Checking the history. Dune, Hyperion.",
+   "prompt_chars": 1260,
+   "id": "v3-history-qa-0079@en"
+  },
+  {
+   "out": "7.0Gi libres.",
+   "ttft": 8.232,
+   "first_speech": 0.005,
+   "said": "Je regarde l'historique. 7.0Gi libres.",
+   "prompt_chars": 933,
+   "id": "v3-history-qa-0080@fr"
+  },
+  {
+   "out": "7.0Gi free, 78% used. Command: df -h / | tail -n 1.",
+   "ttft": 6.992,
+   "first_speech": 0.0,
+   "said": "Checking the history. 7.0Gi free, 78% used. Command: df -h / | tail -n 1.",
+   "prompt_chars": 884,
+   "id": "v3-history-qa-0080@en"
+  },
+  {
+   "out": "354 formules installées.",
+   "ttft": 10.235,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. 354 formules installées.",
+   "prompt_chars": 1117,
+   "id": "v3-history-qa-0082@fr"
+  },
+  {
+   "out": "354 formulae installed.",
+   "ttft": 9.022,
+   "first_speech": 0.001,
+   "said": "Checking the history. 354 formulae installed.",
+   "prompt_chars": 1068,
+   "id": "v3-history-qa-0082@en"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 8.743,
+   "first_speech": 0.004,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "prompt_chars": 1040,
+   "id": "v3-history-qa-0083@fr"
+  },
+  {
+   "out": "vite version is not in the history.",
+   "ttft": 8.386,
+   "first_speech": 0.002,
+   "said": "Checking the history. vite version is not in the history.",
+   "prompt_chars": 991,
+   "id": "v3-history-qa-0083@en"
+  },
+  {
+   "out": "Articles en stock bas : B-220, C-310, E-512..",
+   "ttft": 6.718,
+   "first_speech": 0.004,
+   "said": "Je regarde l'historique. Articles en stock bas : B-220, C-310, E-512..",
+   "prompt_chars": 985,
+   "id": "v3-history-qa-0084@fr"
+  },
+  {
+   "out": "B-220, C-310.",
+   "ttft": 6.006,
+   "first_speech": 0.001,
+   "said": "Checking the history. B-220, C-310.",
+   "prompt_chars": 936,
+   "id": "v3-history-qa-0084@en"
+  },
+  {
+   "out": "14.",
+   "ttft": 10.545,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. 14.",
+   "prompt_chars": 1795,
+   "id": "v3-history-qa-0086@fr"
+  },
+  {
+   "out": "14.",
+   "ttft": 10.767,
+   "first_speech": 0.002,
+   "said": "Checking the history. 14.",
+   "prompt_chars": 1746,
+   "id": "v3-history-qa-0086@en"
+  },
+  {
+   "out": "Zéro test lancé.",
+   "ttft": 11.93,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Zéro test lancé.",
+   "prompt_chars": 1795,
+   "id": "v3-history-qa-0087@fr"
+  },
+  {
+   "out": "Zero tests were run. Command: pytest.",
+   "ttft": 11.289,
+   "first_speech": 0.001,
+   "said": "Checking the history. Zero tests were run. Command: pytest.",
+   "prompt_chars": 1746,
+   "id": "v3-history-qa-0087@en"
+  },
+  {
+   "out": "abc donne 193485963..",
+   "ttft": 8.023,
+   "first_speech": 0.002,
+   "said": "Je regarde l'historique. abc donne 193485963..",
+   "prompt_chars": 934,
+   "id": "v3-history-qa-0088@fr"
+  },
+  {
+   "out": "193485963.",
+   "ttft": 10.988,
+   "first_speech": 0.002,
+   "said": "Checking the history. 193485963.",
+   "prompt_chars": 885,
+   "id": "v3-history-qa-0088@en"
+  },
+  {
+   "out": "Deux erreurs. Ligne 12, conversion incompatible. Ligne 13, fonction non déclarée.",
+   "ttft": 11.588,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Deux erreurs. Ligne 12, conversion incompatible. Ligne 13, fonction non déclarée.",
+   "prompt_chars": 1301,
+   "id": "v3-history-qa-0089@fr"
+  },
+  {
+   "out": "Two errors. Line 12: incompatible pointer to integer. Line 13: undeclared function queue_pop.",
+   "ttft": 6.841,
+   "first_speech": 0.003,
+   "said": "Checking the history. Two errors. Line 12: incompatible pointer to integer. Line 13: undeclared function queue_pop.",
+   "prompt_chars": 1252,
+   "id": "v3-history-qa-0089@en"
+  },
+  {
+   "out": "proj/build/bundle.js.",
+   "ttft": 11.26,
+   "first_speech": 0.002,
+   "said": "Je regarde l'historique. proj/build/bundle.js.",
+   "prompt_chars": 982,
+   "id": "v3-history-qa-0093@fr"
+  },
+  {
+   "out": "Not in the history.",
+   "ttft": 11.105,
+   "first_speech": 0.001,
+   "said": "Checking the history. Not in the history.",
+   "prompt_chars": 933,
+   "id": "v3-history-qa-0093@en"
+  },
+  {
+   "out": "Port 5432 vs 5433. Timeout 30 vs 60..",
+   "ttft": 9.43,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Port 5432 vs 5433. Timeout 30 vs 60..",
+   "prompt_chars": 983,
+   "id": "v3-history-qa-0095@fr"
+  },
+  {
+   "out": "Port and timeout values differ. Command: diff prod.conf staging.conf.",
+   "ttft": 8.894,
+   "first_speech": 0.001,
+   "said": "Checking the history. Port and timeout values differ. Command: diff prod.conf staging.conf.",
+   "prompt_chars": 934,
+   "id": "v3-history-qa-0095@en"
+  },
+  {
+   "out": "Non, requests n'est pas installé.",
+   "ttft": 6.195,
+   "first_speech": 0.003,
+   "said": "Je regarde l'historique. Non, requests n'est pas installé.",
+   "prompt_chars": 1185,
+   "id": "v3-history-qa-0096@fr"
+  },
+  {
+   "out": "No, requests is not installed.",
+   "ttft": 8.538,
+   "first_speech": 0.002,
+   "said": "Checking the history. No, requests is not installed.",
+   "prompt_chars": 1136,
+   "id": "v3-history-qa-0096@en"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 6.72,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "prompt_chars": 1100,
+   "id": "v3-history-qa-0100@fr"
+  },
+  {
+   "out": "Not in the history.",
+   "ttft": 10.477,
+   "first_speech": 0.001,
+   "said": "Checking the history. Not in the history.",
+   "prompt_chars": 1051,
+   "id": "v3-history-qa-0100@en"
+  },
+  {
+   "out": "Paquet manquant : left-pad-ultra-missing-pkg.",
+   "ttft": 11.678,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Paquet manquant : left-pad-ultra-missing-pkg.",
+   "prompt_chars": 1411,
+   "id": "v3-history-qa-0101@fr"
+  },
+  {
+   "out": "left-pad-ultra-missing-pkg.",
+   "ttft": 8.359,
+   "first_speech": 0.002,
+   "said": "Checking the history. left-pad-ultra-missing-pkg.",
+   "prompt_chars": 1362,
+   "id": "v3-history-qa-0101@en"
+  },
+  {
+   "out": "36 fois.",
+   "ttft": 2.73,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. 36 fois.",
+   "prompt_chars": 993,
+   "id": "v3-history-qa-0103@fr"
+  },
+  {
+   "out": "36 times.",
+   "ttft": 2.555,
+   "first_speech": 0.001,
+   "said": "Checking the history. 36 times.",
+   "prompt_chars": 944,
+   "id": "v3-history-qa-0103@en"
+  },
+  {
+   "out": "Module github.com/google/uuid introuvable.",
+   "ttft": 3.57,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Module github.com/google/uuid introuvable.",
+   "prompt_chars": 1205,
+   "id": "v3-history-qa-0105@fr"
+  },
+  {
+   "out": "github.com/google/uuid.",
+   "ttft": 2.937,
+   "first_speech": 0.001,
+   "said": "Checking the history. github.com/google/uuid.",
+   "prompt_chars": 1156,
+   "id": "v3-history-qa-0105@en"
+  },
+  {
+   "out": "Oui, mail2.eml est dans archive.",
+   "ttft": 3.257,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Oui, mail2.eml est dans archive.",
+   "prompt_chars": 1221,
+   "id": "v3-history-qa-0110@fr"
+  },
+  {
+   "out": "Yes, mail2.eml was moved to archive. Command: ls archive.",
+   "ttft": 2.787,
+   "first_speech": 0.001,
+   "said": "Checking the history. Yes, mail2.eml was moved to archive. Command: ls archive.",
+   "prompt_chars": 1172,
+   "id": "v3-history-qa-0110@en"
+  }
+ ]
+}

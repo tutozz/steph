@@ -1,0 +1,31 @@
+{
+ "evaluations": 825,
+ "discordant": 279,
+ "judged": 268,
+ "diff_27b": {
+  "diff": -6.56,
+  "ci95": [
+   -9.84,
+   -3.28
+  ]
+ },
+ "diff_9b_same_subset": {
+  "diff": -5.55,
+  "ci95": [
+   -9.59,
+   -1.51
+  ]
+ },
+ "shift_27b_minus_9b": {
+  "diff": -1.01,
+  "ci95": [
+   -3.53,
+   1.51
+  ]
+ },
+ "inventions_27b": {
+  "a": 99,
+  "b": 151
+ },
+ "agreement_9b_27b_pct": 82.1
+}

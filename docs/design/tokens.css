@@ -1,0 +1,70 @@
+/* Jetons de la charte steph v1 (28 septembre 2026), source : docs/design/source/charte.dc.html.
+   Thème unique sombre : la charte ne définit pas de thème clair. La section Entreprises
+   inverse localement fond et texte (voir --section-light-*). */
+:root {
+  color-scheme: dark;
+
+  /* couleurs */
+  --color-black: #0b0b0b;
+  --color-offwhite: #f4f4f0;
+  --color-lemon: #e2ff3b;
+  --color-lemon-pressed: #c3dc2a;
+  --color-block: #262626;
+  --color-surface: #161616;
+  --color-code-bg: #1f1f1f;
+  --color-grid: #1a1a1a;
+  --color-text-muted: #cfcfca;
+  --color-text-soft: #e6e6e1;
+  --color-chart-neutral: #8a8a85;
+  --color-chart-gridline: #2a2a28;
+  --color-stroke: #77776f;
+  --color-stroke-deco: #3a3a37;
+  --color-hatch-lemon: #3d4410;
+  --color-hatch-neutral: #3a3a37;
+  --section-light-bg: #f4f4f0;
+  --section-light-text: #0b0b0b;
+  --section-light-text-soft: #2e2e2b;
+
+  /* typographie */
+  --font-brand: "Space Grotesk", sans-serif;
+  --font-code: "JetBrains Mono", monospace;
+  --text-h1: clamp(60px, 9vw, 136px);      --leading-h1: 0.92;  --tracking-h1: -0.05em;
+  --text-h2: clamp(40px, 5.4vw, 76px);     --leading-h2: 0.98;  --tracking-h2: -0.04em;
+  --text-figure: clamp(88px, 11vw, 168px); --leading-figure: 0.85; --tracking-figure: -0.06em;
+  --text-h3: clamp(26px, 2.6vw, 38px);     --leading-h3: 1.15;  --tracking-h3: -0.02em;
+  --text-quote: clamp(24px, 2.5vw, 36px);  --leading-quote: 1.2; --tracking-quote: -0.02em;
+  --text-body: clamp(20px, 1.6vw, 23px);   --leading-body: 1.5;
+  --text-eyebrow: 20px;                    --leading-eyebrow: 1.45;
+  --text-min: 19px;                        --leading-min: 1.5;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600; /* JetBrains Mono uniquement */
+  --weight-bold: 700;     /* Space Grotesk uniquement */
+
+  /* espace et forme */
+  --pixel: 32px;
+  --page-max: 1440px;
+  --gutter-page: clamp(19px, 4.5vw, 64px);
+  --section-pad: clamp(64px, 8vw, 112px);
+  --gap: 16px;
+  --card-pad: 28px;
+  --notch-button: 6px;
+  --notch-card: 8px;
+  --radius: 0;
+  --shadow: none;
+  --border-card: 2px solid var(--color-stroke-deco);
+  --border-field: 2px solid var(--color-stroke);
+
+  /* focus et mouvement */
+  --focus-ring: 3px solid var(--color-lemon);
+  --focus-offset: 4px;
+  --duration-short: 100ms;
+  --duration-long: 200ms;
+  --easing: ease-out;
+  --copied-hold: 2000ms;
+  --target-min: 44px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --duration-short: 0ms; --duration-long: 0ms; }
+}

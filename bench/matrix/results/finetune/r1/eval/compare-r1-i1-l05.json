@@ -1,0 +1,1138 @@
+{
+ "contested_cases": [
+  "fx00",
+  "fx01",
+  "fx04",
+  "fx08",
+  "fx11",
+  "fx16",
+  "fx20",
+  "fx22",
+  "fx24",
+  "fx27",
+  "qa0"
+ ],
+ "pairs": {
+  "r1-i1-l05 vs p17": {
+   "v2_diff_pts": -5.6,
+   "v2_ci95_pts": [
+    -13.9,
+    0.0
+   ],
+   "v2_discordant_cases": 2,
+   "inv": {
+    "per36_a": 7.0,
+    "per36_b": 5.33,
+    "per36_a_without_contested": 4.0,
+    "per36_b_without_contested": 1.67,
+    "cases_worse": 4,
+    "cases_better": 1,
+    "sign_test_p": 0.375,
+    "new_cases_2_of_3_seeds": [
+     "fx06",
+     "fx10",
+     "fx28"
+    ]
+   },
+   "ground": {
+    "per36_a": 7.67,
+    "per36_b": 4.33,
+    "per36_a_without_contested": 4.0,
+    "per36_b_without_contested": 1.33,
+    "cases_worse": 3,
+    "cases_better": 0,
+    "sign_test_p": 0.25,
+    "new_cases_2_of_3_seeds": [
+     "fx10",
+     "fx25",
+     "fx28"
+    ]
+   },
+   "speak_test_fr": {
+    "diff_pts": -0.9,
+    "ci95_pts": [
+     -8.9,
+     7.0
+    ],
+    "n": 62
+   },
+   "speak_test_en": {
+    "diff_pts": 4.8,
+    "ci95_pts": [
+     -2.8,
+     12.3
+    ],
+    "n": 62
+   },
+   "verdict": {
+    "v2_better": false,
+    "inventions_better": false,
+    "non_inferior": false
+   }
+  },
+  "r1-i1-l05 vs k3-a-dpo": {
+   "v2_diff_pts": -2.1,
+   "v2_ci95_pts": [
+    -7.2,
+    2.3
+   ],
+   "v2_discordant_cases": 5,
+   "inv": {
+    "per36_a": 7.0,
+    "per36_b": 3.67,
+    "per36_a_without_contested": 4.0,
+    "per36_b_without_contested": 1.33,
+    "cases_worse": 4,
+    "cases_better": 1,
+    "sign_test_p": 0.375,
+    "new_cases_2_of_3_seeds": [
+     "fx06",
+     "fx10",
+     "fx25",
+     "fx28"
+    ]
+   },
+   "ground": {
+    "per36_a": 7.67,
+    "per36_b": 2.67,
+    "per36_a_without_contested": 4.0,
+    "per36_b_without_contested": 0.67,
+    "cases_worse": 4,
+    "cases_better": 0,
+    "sign_test_p": 0.125,
+    "new_cases_2_of_3_seeds": [
+     "fx07",
+     "fx10",
+     "fx25"
+    ]
+   },
+   "speak_test_fr": {
+    "diff_pts": -0.1,
+    "ci95_pts": [
+     -7.3,
+     7.1
+    ],
+    "n": 62
+   },
+   "speak_test_en": {
+    "diff_pts": -0.6,
+    "ci95_pts": [
+     -8.6,
+     7.4
+    ],
+    "n": 62
+   },
+   "verdict": {
+    "v2_better": false,
+    "inventions_better": false,
+    "non_inferior": false
+   }
+  }
+ },
+ "per_case": {
+  "fx00": {
+   "r1-i1-l05": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "p17": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "fx01": {
+   "r1-i1-l05": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "p17": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "fx02": {
+   "r1-i1-l05": {
+    "v2_mean": 0.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "p17": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 0.5,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "fx03": {
+   "r1-i1-l05": {
+    "v2_mean": 0.5,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "p17": {
+    "v2_mean": 0.5,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 0.5,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "fx04": {
+   "r1-i1-l05": {
+    "v2_mean": 1.0,
+    "inv_seeds": 3,
+    "inv_ground_seeds": 3
+   },
+   "p17": {
+    "v2_mean": 1.0,
+    "inv_seeds": 3,
+    "inv_ground_seeds": 3
+   },
+   "k3-a-dpo": {
+    "v2_mean": 1.0,
+    "inv_seeds": 3,
+    "inv_ground_seeds": 3
+   }
+  },
+  "fx05": {
+   "r1-i1-l05": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "p17": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "fx06": {
+   "r1-i1-l05": {
+    "v2_mean": 0.5,
+    "inv_seeds": 3,
+    "inv_ground_seeds": 0
+   },
+   "p17": {
+    "v2_mean": 0.5,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 0.5,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "fx07": {
+   "r1-i1-l05": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 3
+   },
+   "p17": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 3
+   },
+   "k3-a-dpo": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "fx08": {
+   "r1-i1-l05": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "p17": {
+    "v2_mean": 1.0,
+    "inv_seeds": 2,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "fx09": {
+   "r1-i1-l05": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "p17": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "fx10": {
+   "r1-i1-l05": {
+    "v2_mean": 1.0,
+    "inv_seeds": 3,
+    "inv_ground_seeds": 3
+   },
+   "p17": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "fx11": {
+   "r1-i1-l05": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "p17": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "fx12": {
+   "r1-i1-l05": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "p17": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "fx13": {
+   "r1-i1-l05": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "p17": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "fx14": {
+   "r1-i1-l05": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "p17": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "fx15": {
+   "r1-i1-l05": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "p17": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "fx16": {
+   "r1-i1-l05": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "p17": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "fx17": {
+   "r1-i1-l05": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "p17": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "fx18": {
+   "r1-i1-l05": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "p17": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "fx19": {
+   "r1-i1-l05": {
+    "v2_mean": 0.5,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "p17": {
+    "v2_mean": 0.5,
+    "inv_seeds": 3,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 0.5,
+    "inv_seeds": 3,
+    "inv_ground_seeds": 0
+   }
+  },
+  "fx20": {
+   "r1-i1-l05": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "p17": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "fx21": {
+   "r1-i1-l05": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "p17": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "fx22": {
+   "r1-i1-l05": {
+    "v2_mean": 1.0,
+    "inv_seeds": 3,
+    "inv_ground_seeds": 2
+   },
+   "p17": {
+    "v2_mean": 1.0,
+    "inv_seeds": 3,
+    "inv_ground_seeds": 3
+   },
+   "k3-a-dpo": {
+    "v2_mean": 1.0,
+    "inv_seeds": 3,
+    "inv_ground_seeds": 3
+   }
+  },
+  "fx23": {
+   "r1-i1-l05": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "p17": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "fx24": {
+   "r1-i1-l05": {
+    "v2_mean": 0.0,
+    "inv_seeds": 3,
+    "inv_ground_seeds": 3
+   },
+   "p17": {
+    "v2_mean": 0.0,
+    "inv_seeds": 3,
+    "inv_ground_seeds": 3
+   },
+   "k3-a-dpo": {
+    "v2_mean": 0.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "fx25": {
+   "r1-i1-l05": {
+    "v2_mean": 0.5,
+    "inv_seeds": 3,
+    "inv_ground_seeds": 3
+   },
+   "p17": {
+    "v2_mean": 0.5,
+    "inv_seeds": 2,
+    "inv_ground_seeds": 1
+   },
+   "k3-a-dpo": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "fx26": {
+   "r1-i1-l05": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "p17": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "fx27": {
+   "r1-i1-l05": {
+    "v2_mean": 0.75,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "p17": {
+    "v2_mean": 0.75,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 0.5,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "fx28": {
+   "r1-i1-l05": {
+    "v2_mean": 1.0,
+    "inv_seeds": 3,
+    "inv_ground_seeds": 3
+   },
+   "p17": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 0.667,
+    "inv_seeds": 1,
+    "inv_ground_seeds": 2
+   }
+  },
+  "fx29": {
+   "r1-i1-l05": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "p17": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "fx30": {
+   "r1-i1-l05": {
+    "v2_mean": 0.5,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "p17": {
+    "v2_mean": 0.5,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 0.5,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "df_proxmox": {
+   "r1-i1-l05": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "p17": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "ip_a_proxmox": {
+   "r1-i1-l05": {
+    "v2_mean": 0.333,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "p17": {
+    "v2_mean": 0.333,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 0.333,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "qa0": {
+   "r1-i1-l05": {
+    "v2_mean": 0.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 3
+   },
+   "p17": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 0.333,
+    "inv_seeds": 1,
+    "inv_ground_seeds": 0
+   }
+  },
+  "qa1": {
+   "r1-i1-l05": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "p17": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  },
+  "qa2": {
+   "r1-i1-l05": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "p17": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   },
+   "k3-a-dpo": {
+    "v2_mean": 1.0,
+    "inv_seeds": 0,
+    "inv_ground_seeds": 0
+   }
+  }
+ },
+ "speak_test_per_case": {
+  "r1-i1-l05": {
+   "fr": {
+    "build-gcc-undeclared": 0.75,
+    "build-make-linker-undefined": 0.5,
+    "build-maven-compile-error": 0.25,
+    "build-rustc-borrow-e0502": 0.5,
+    "build-tsc-type-error": 0.75,
+    "runtime-java-npe": 0.0,
+    "runtime-node-promise-reject": 0.25,
+    "runtime-permission-denied": 0.5333,
+    "runtime-python-traceback": 0.0,
+    "runtime-segfault": 0.0,
+    "tests-cargo-test-failure": 0.3333,
+    "tests-go-test-fail": 0.0,
+    "tests-jest-failing-suite": 0.3333,
+    "tests-pytest-all-green": 0.0,
+    "tests-pytest-failures": 0.0,
+    "tests-unittest-errors": 0.0,
+    "git-diff-stat-totals": 0.3333,
+    "git-log-oneline": 0.0,
+    "git-merge-conflict": 1.0,
+    "git-pull-fast-forward": 0.0,
+    "git-rebase-conflict": 0.6667,
+    "pkg-apt-unmet-deps": 0.6667,
+    "pkg-brew-upgrade-macos": 0.6667,
+    "pkg-npm-install-vulns": 0.6667,
+    "pkg-pip-resolution-impossible": 0.6667,
+    "net-curl-tls-expired": 0.6667,
+    "net-dig-nxdomain": 0.0,
+    "net-ping-unreachable": 0.0,
+    "net-ss-listening": 0.3333,
+    "disk-df-almost-full": 0.3333,
+    "disk-du-var-log": 1.0,
+    "disk-lsblk-3disks": 0.6667,
+    "disk-no-space-cp": 0.3333,
+    "mem-free-h": 0.0,
+    "mem-oom-dmesg": 0.6667,
+    "mem-proc-meminfo": 0.8,
+    "mem-ps-sort": 0.8,
+    "mem-top-b": 0.0,
+    "mem-vm-stat-macos": 0.2667,
+    "hw-inxi-lshw": 0.0,
+    "hw-lspci-intel-laptop": 0.2667,
+    "hw-sensors-hot": 0.0,
+    "ctr-build-run-step": 0.75,
+    "ctr-compose-unhealthy": 0.6667,
+    "ctr-crashloop": 0.3333,
+    "ctr-images": 0.6667,
+    "ctr-logs-crash": 0.0,
+    "list-ls-bigdir": 0.0,
+    "list-pip-list": 0.8,
+    "list-ps-cpu": 0.0,
+    "list-systemctl-units": 0.5,
+    "long-apt-fullupgrade-count": 0.5,
+    "long-docker-build-naming": 0.5,
+    "long-journalctl-failure": 0.0,
+    "long-make-linker-error": 0.25,
+    "long-pytest-summary": 0.3333,
+    "long-tar-unexpected-eof": 0.0,
+    "qa-failed-test": 0.0,
+    "qa-node-version": 1.0,
+    "qa-not-in-history": 1.0,
+    "qa-ram-free": 0.0,
+    "qa-server-port": 1.0
+   },
+   "en": {
+    "build-gcc-undeclared": 0.75,
+    "build-make-linker-undefined": 0.75,
+    "build-maven-compile-error": 0.0,
+    "build-rustc-borrow-e0502": 0.25,
+    "build-tsc-type-error": 0.5,
+    "runtime-java-npe": 0.5,
+    "runtime-node-promise-reject": 0.75,
+    "runtime-permission-denied": 0.3333,
+    "runtime-python-traceback": 0.25,
+    "runtime-segfault": 0.0,
+    "tests-cargo-test-failure": 0.6667,
+    "tests-go-test-fail": 0.2667,
+    "tests-jest-failing-suite": 0.3333,
+    "tests-pytest-all-green": 1.0,
+    "tests-pytest-failures": 0.0,
+    "tests-unittest-errors": 0.0,
+    "git-diff-stat-totals": 0.0,
+    "git-log-oneline": 0.4,
+    "git-merge-conflict": 1.0,
+    "git-pull-fast-forward": 0.3333,
+    "git-rebase-conflict": 0.3333,
+    "pkg-apt-unmet-deps": 0.6667,
+    "pkg-brew-upgrade-macos": 0.6667,
+    "pkg-npm-install-vulns": 0.2667,
+    "pkg-pip-resolution-impossible": 1.0,
+    "net-curl-tls-expired": 0.6667,
+    "net-dig-nxdomain": 0.0,
+    "net-ping-unreachable": 0.6667,
+    "net-ss-listening": 0.0,
+    "disk-df-almost-full": 0.0,
+    "disk-du-var-log": 1.0,
+    "disk-lsblk-3disks": 1.0,
+    "disk-no-space-cp": 0.6667,
+    "mem-free-h": 0.3333,
+    "mem-oom-dmesg": 0.6667,
+    "mem-proc-meminfo": 0.5,
+    "mem-ps-sort": 0.0,
+    "mem-top-b": 0.0,
+    "mem-vm-stat-macos": 0.3333,
+    "hw-inxi-lshw": 1.0,
+    "hw-lspci-intel-laptop": 0.0,
+    "hw-sensors-hot": 0.0,
+    "ctr-build-run-step": 0.5,
+    "ctr-compose-unhealthy": 0.6667,
+    "ctr-crashloop": 0.3333,
+    "ctr-images": 0.6667,
+    "ctr-logs-crash": 0.75,
+    "list-ls-bigdir": 0.0,
+    "list-pip-list": 0.4,
+    "list-ps-cpu": 0.0,
+    "list-systemctl-units": 0.0,
+    "long-apt-fullupgrade-count": 0.25,
+    "long-docker-build-naming": 1.0,
+    "long-journalctl-failure": 0.0,
+    "long-make-linker-error": 0.25,
+    "long-pytest-summary": 0.3333,
+    "long-tar-unexpected-eof": 0.5,
+    "qa-failed-test": 0.0,
+    "qa-node-version": 1.0,
+    "qa-not-in-history": 1.0,
+    "qa-ram-free": 1.0,
+    "qa-server-port": 1.0
+   }
+  },
+  "p17": {
+   "fr": {
+    "build-gcc-undeclared": 0.75,
+    "build-make-linker-undefined": 0.25,
+    "build-maven-compile-error": 0.5,
+    "build-rustc-borrow-e0502": 0.5,
+    "build-tsc-type-error": 0.5,
+    "runtime-java-npe": 0.0,
+    "runtime-node-promise-reject": 0.75,
+    "runtime-permission-denied": 0.6667,
+    "runtime-python-traceback": 0.0,
+    "runtime-segfault": 0.3333,
+    "tests-cargo-test-failure": 0.3333,
+    "tests-go-test-fail": 0.0,
+    "tests-jest-failing-suite": 0.6667,
+    "tests-pytest-all-green": 0.0,
+    "tests-pytest-failures": 0.0,
+    "tests-unittest-errors": 0.0,
+    "git-diff-stat-totals": 0.6667,
+    "git-log-oneline": 0.0,
+    "git-merge-conflict": 1.0,
+    "git-pull-fast-forward": 0.0,
+    "git-rebase-conflict": 0.6667,
+    "pkg-apt-unmet-deps": 0.6667,
+    "pkg-brew-upgrade-macos": 0.6667,
+    "pkg-npm-install-vulns": 0.3333,
+    "pkg-pip-resolution-impossible": 0.6667,
+    "net-curl-tls-expired": 0.6667,
+    "net-dig-nxdomain": 0.5,
+    "net-ping-unreachable": 0.0,
+    "net-ss-listening": 0.0,
+    "disk-df-almost-full": 0.0,
+    "disk-du-var-log": 0.6667,
+    "disk-lsblk-3disks": 1.0,
+    "disk-no-space-cp": 0.3333,
+    "mem-free-h": 0.3333,
+    "mem-oom-dmesg": 0.6667,
+    "mem-proc-meminfo": 0.0,
+    "mem-ps-sort": 0.0,
+    "mem-top-b": 0.0,
+    "mem-vm-stat-macos": 0.2667,
+    "hw-inxi-lshw": 1.0,
+    "hw-lspci-intel-laptop": 0.0,
+    "hw-sensors-hot": 0.0,
+    "ctr-build-run-step": 0.25,
+    "ctr-compose-unhealthy": 0.6667,
+    "ctr-crashloop": 0.3333,
+    "ctr-images": 0.6667,
+    "ctr-logs-crash": 0.75,
+    "list-ls-bigdir": 0.0,
+    "list-pip-list": 0.0,
+    "list-ps-cpu": 0.0,
+    "list-systemctl-units": 0.5,
+    "long-apt-fullupgrade-count": 0.0,
+    "long-docker-build-naming": 1.0,
+    "long-journalctl-failure": 0.25,
+    "long-make-linker-error": 0.25,
+    "long-pytest-summary": 0.3333,
+    "long-tar-unexpected-eof": 0.5,
+    "qa-failed-test": 0.0,
+    "qa-node-version": 1.0,
+    "qa-not-in-history": 1.0,
+    "qa-ram-free": 0.0,
+    "qa-server-port": 1.0
+   },
+   "en": {
+    "build-gcc-undeclared": 0.75,
+    "build-make-linker-undefined": 0.25,
+    "build-maven-compile-error": 0.0,
+    "build-rustc-borrow-e0502": 0.0,
+    "build-tsc-type-error": 0.0,
+    "runtime-java-npe": 0.25,
+    "runtime-node-promise-reject": 0.0,
+    "runtime-permission-denied": 0.3333,
+    "runtime-python-traceback": 0.0,
+    "runtime-segfault": 0.3333,
+    "tests-cargo-test-failure": 0.3333,
+    "tests-go-test-fail": 1.0,
+    "tests-jest-failing-suite": 0.3333,
+    "tests-pytest-all-green": 0.6667,
+    "tests-pytest-failures": 0.75,
+    "tests-unittest-errors": 0.0,
+    "git-diff-stat-totals": 0.0,
+    "git-log-oneline": 0.0,
+    "git-merge-conflict": 0.3333,
+    "git-pull-fast-forward": 0.6667,
+    "git-rebase-conflict": 0.3333,
+    "pkg-apt-unmet-deps": 0.6667,
+    "pkg-brew-upgrade-macos": 1.0,
+    "pkg-npm-install-vulns": 0.6667,
+    "pkg-pip-resolution-impossible": 1.0,
+    "net-curl-tls-expired": 0.6667,
+    "net-dig-nxdomain": 0.5,
+    "net-ping-unreachable": 0.6667,
+    "net-ss-listening": 0.0,
+    "disk-df-almost-full": 0.0,
+    "disk-du-var-log": 1.0,
+    "disk-lsblk-3disks": 1.0,
+    "disk-no-space-cp": 0.6667,
+    "mem-free-h": 0.0,
+    "mem-oom-dmesg": 0.6667,
+    "mem-proc-meminfo": 0.0,
+    "mem-ps-sort": 0.0,
+    "mem-top-b": 0.0,
+    "mem-vm-stat-macos": 0.2667,
+    "hw-inxi-lshw": 1.0,
+    "hw-lspci-intel-laptop": 0.5333,
+    "hw-sensors-hot": 0.0,
+    "ctr-build-run-step": 0.0,
+    "ctr-compose-unhealthy": 0.3333,
+    "ctr-crashloop": 0.3333,
+    "ctr-images": 0.6667,
+    "ctr-logs-crash": 0.25,
+    "list-ls-bigdir": 0.0,
+    "list-pip-list": 0.0,
+    "list-ps-cpu": 0.0,
+    "list-systemctl-units": 0.5,
+    "long-apt-fullupgrade-count": 0.25,
+    "long-docker-build-naming": 0.5,
+    "long-journalctl-failure": 0.0,
+    "long-make-linker-error": 0.25,
+    "long-pytest-summary": 0.3333,
+    "long-tar-unexpected-eof": 0.5,
+    "qa-failed-test": 0.0,
+    "qa-node-version": 1.0,
+    "qa-not-in-history": 1.0,
+    "qa-ram-free": 1.0,
+    "qa-server-port": 1.0
+   }
+  },
+  "k3-a-dpo": {
+   "fr": {
+    "build-gcc-undeclared": 0.75,
+    "build-make-linker-undefined": 0.5,
+    "build-maven-compile-error": 0.25,
+    "build-rustc-borrow-e0502": 0.0,
+    "build-tsc-type-error": 0.75,
+    "runtime-java-npe": 0.5,
+    "runtime-node-promise-reject": 0.75,
+    "runtime-permission-denied": 0.5333,
+    "runtime-python-traceback": 0.5,
+    "runtime-segfault": 0.3333,
+    "tests-cargo-test-failure": 0.3333,
+    "tests-go-test-fail": 0.3333,
+    "tests-jest-failing-suite": 0.3333,
+    "tests-pytest-all-green": 0.6667,
+    "tests-pytest-failures": 0.0,
+    "tests-unittest-errors": 0.0,
+    "git-diff-stat-totals": 0.3333,
+    "git-log-oneline": 0.0,
+    "git-merge-conflict": 0.6667,
+    "git-pull-fast-forward": 0.3333,
+    "git-rebase-conflict": 0.6667,
+    "pkg-apt-unmet-deps": 0.6667,
+    "pkg-brew-upgrade-macos": 0.6667,
+    "pkg-npm-install-vulns": 0.6667,
+    "pkg-pip-resolution-impossible": 0.3333,
+    "net-curl-tls-expired": 0.6667,
+    "net-dig-nxdomain": 0.5,
+    "net-ping-unreachable": 0.0,
+    "net-ss-listening": 0.0,
+    "disk-df-almost-full": 0.0,
+    "disk-du-var-log": 1.0,
+    "disk-lsblk-3disks": 0.6667,
+    "disk-no-space-cp": 0.6667,
+    "mem-free-h": 0.0,
+    "mem-oom-dmesg": 0.6667,
+    "mem-proc-meminfo": 1.0,
+    "mem-ps-sort": 0.0,
+    "mem-top-b": 0.0,
+    "mem-vm-stat-macos": 0.2667,
+    "hw-inxi-lshw": 0.0,
+    "hw-lspci-intel-laptop": 0.5333,
+    "hw-sensors-hot": 0.0,
+    "ctr-build-run-step": 0.25,
+    "ctr-compose-unhealthy": 0.0,
+    "ctr-crashloop": 0.3333,
+    "ctr-images": 0.6667,
+    "ctr-logs-crash": 0.0,
+    "list-ls-bigdir": 0.0,
+    "list-pip-list": 0.0,
+    "list-ps-cpu": 0.0,
+    "list-systemctl-units": 0.5,
+    "long-apt-fullupgrade-count": 0.5,
+    "long-docker-build-naming": 0.5,
+    "long-journalctl-failure": 0.0,
+    "long-make-linker-error": 0.25,
+    "long-pytest-summary": 0.0,
+    "long-tar-unexpected-eof": 0.5,
+    "qa-failed-test": 0.0,
+    "qa-node-version": 1.0,
+    "qa-not-in-history": 1.0,
+    "qa-ram-free": 0.0,
+    "qa-server-port": 1.0
+   },
+   "en": {
+    "build-gcc-undeclared": 0.75,
+    "build-make-linker-undefined": 0.5,
+    "build-maven-compile-error": 0.0,
+    "build-rustc-borrow-e0502": 0.25,
+    "build-tsc-type-error": 0.75,
+    "runtime-java-npe": 0.0,
+    "runtime-node-promise-reject": 0.5,
+    "runtime-permission-denied": 0.3333,
+    "runtime-python-traceback": 0.5,
+    "runtime-segfault": 0.3333,
+    "tests-cargo-test-failure": 0.3333,
+    "tests-go-test-fail": 0.3333,
+    "tests-jest-failing-suite": 0.3333,
+    "tests-pytest-all-green": 1.0,
+    "tests-pytest-failures": 0.0,
+    "tests-unittest-errors": 0.0,
+    "git-diff-stat-totals": 0.3333,
+    "git-log-oneline": 0.4,
+    "git-merge-conflict": 1.0,
+    "git-pull-fast-forward": 0.3333,
+    "git-rebase-conflict": 0.0,
+    "pkg-apt-unmet-deps": 0.6667,
+    "pkg-brew-upgrade-macos": 0.6667,
+    "pkg-npm-install-vulns": 0.3333,
+    "pkg-pip-resolution-impossible": 1.0,
+    "net-curl-tls-expired": 0.6667,
+    "net-dig-nxdomain": 0.5,
+    "net-ping-unreachable": 0.6667,
+    "net-ss-listening": 0.6667,
+    "disk-df-almost-full": 0.0,
+    "disk-du-var-log": 1.0,
+    "disk-lsblk-3disks": 0.3333,
+    "disk-no-space-cp": 0.6667,
+    "mem-free-h": 0.0,
+    "mem-oom-dmesg": 0.3333,
+    "mem-proc-meminfo": 0.5,
+    "mem-ps-sort": 0.0,
+    "mem-top-b": 0.0,
+    "mem-vm-stat-macos": 0.3333,
+    "hw-inxi-lshw": 1.0,
+    "hw-lspci-intel-laptop": 0.5333,
+    "hw-sensors-hot": 1.0,
+    "ctr-build-run-step": 0.0,
+    "ctr-compose-unhealthy": 0.6667,
+    "ctr-crashloop": 0.3333,
+    "ctr-images": 0.6667,
+    "ctr-logs-crash": 0.25,
+    "list-ls-bigdir": 0.0,
+    "list-pip-list": 0.4,
+    "list-ps-cpu": 0.4,
+    "list-systemctl-units": 0.5,
+    "long-apt-fullupgrade-count": 1.0,
+    "long-docker-build-naming": 1.0,
+    "long-journalctl-failure": 0.25,
+    "long-make-linker-error": 0.25,
+    "long-pytest-summary": 0.3333,
+    "long-tar-unexpected-eof": 0.0,
+    "qa-failed-test": 0.0,
+    "qa-node-version": 1.0,
+    "qa-not-in-history": 1.0,
+    "qa-ram-free": 0.0,
+    "qa-server-port": 1.0
+   }
+  }
+ }
+}

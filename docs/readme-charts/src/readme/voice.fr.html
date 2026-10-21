@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;600&display=block">
+<link rel="stylesheet" href="../readme-brand.css">
+<style>body { background: rgb(255, 0, 254); }</style><style>
+.chev { display: inline-grid; }
+.chev i { display: block; }
+.who .sq { width: 14px; height: 14px; background: var(--black); flex: none; }
+.arrow { color: var(--neutral); }
+</style>
+</head><body><div class="card">
+<span class="tag">Voix et prononciation</span>
+<h1>Les mots techniques,<br><em>enfin prononcés.</em></h1>
+<div class="vc">
+  <div class="term words"><div class="wl">écrit → dit</div><div class="w"><code>lspci</code><svg class="ico arrow" width="28" height="28" viewBox="0 0 24 24"><path d="M3 12h16"/><path d="M13 6l6 6-6 6"/></svg><span class="sp">« L S, P C I »</span></div><div class="w"><code>GA106</code><svg class="ico arrow" width="28" height="28" viewBox="0 0 24 24"><path d="M3 12h16"/><path d="M13 6l6 6-6 6"/></svg><span class="sp">« G A 106 »</span></div><div class="w"><code>xHCI</code><svg class="ico arrow" width="28" height="28" viewBox="0 0 24 24"><path d="M3 12h16"/><path d="M13 6l6 6-6 6"/></svg><span class="sp">« X H C I »</span></div><div class="w"><code>lsusb</code><svg class="ico arrow" width="28" height="28" viewBox="0 0 24 24"><path d="M3 12h16"/><path d="M13 6l6 6-6 6"/></svg><span class="sp">« L S U S B »</span></div></div>
+  <div class="score">
+    <div class="label">Mots reconnus par Whisper</div>
+    <div class="nums"><span class="before">45</span><svg class="ico arrow" width="28" height="28" viewBox="0 0 24 24"><path d="M3 12h16"/><path d="M13 6l6 6-6 6"/></svg><span class="big after">68</span><span class="of">/94</span></div>
+    <p class="cap">Voix Piper siwis, française, sur 35 phrases de terminal. Aucun mot français de contrôle dégradé.</p>
+  </div>
+</div>
+<p class="foot">Mesure par aller-retour Whisper sur MacBook Pro M3 Pro : un indicateur, pas une écoute humaine. docs/pronunciation.fr.md</p>
+<style>
+.vc { display: grid; grid-template-columns: 340px 1fr; gap: 32px; align-items: center; margin-top: 26px; }
+.words { padding: 16px 20px; }
+.wl { margin-bottom: 6px; }
+.w { display: grid; grid-template-columns: 80px 28px 1fr; gap: 12px; align-items: center; padding: 5px 0; }
+.w code { color: var(--offwhite); }
+.w .sp { font-family: var(--sans); font-size: 21px; font-weight: 500; color: var(--lemon); white-space: nowrap; }
+.nums { display: flex; align-items: baseline; gap: 14px; margin-top: 12px; }
+.nums svg { align-self: center; }
+.before { font-size: 60px; font-weight: 500; letter-spacing: -0.05em; color: var(--muted); }
+.after { font-size: 112px; }
+.of { font-family: var(--mono); font-size: 28px; font-weight: 600; color: var(--muted); }
+.score .cap { margin: 12px 0 0; font-size: 19px; line-height: 1.4; color: var(--soft); }
+</style></div></body></html>

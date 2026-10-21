@@ -1,0 +1,7 @@
+{'n': 240, 'errors': 0, 'identical': 0, 'unstable_global': 63} biais {'decided': 432, 'first_wins': 208, 'first_share': 48.1}
+global {'x': 94, 'y': 51, '=': 95, 'n': 240, 'net_x': 17.9}
+fr {'x': 53, 'y': 20, '=': 41, 'n': 114, 'net_x': 28.9}
+en {'x': 41, 'y': 31, '=': 54, 'n': 126, 'net_x': 7.9}
+net R2 17.9 [8.3, 27.5]
+fr 114 28.9 [14.9, 42.1]
+en 126 7.9 [-5.6, 21.4]

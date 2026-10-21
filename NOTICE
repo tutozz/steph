@@ -1,0 +1,11 @@
+steph
+Copyright 2026 Luis Parra
+
+Ce produit contient des données de tiers, sous leur propre licence :
+
+- src/steph/data/english_words.txt.gz
+  Liste de mots dérivée de deux sources, toutes deux sous licence Creative Commons
+  Attribution-ShareAlike 4.0 (https://creativecommons.org/licenses/by-sa/4.0/) :
+  - wordfreq (Robyn Speer, https://github.com/rspeer/wordfreq) ;
+  - Lexique 3.83 (Boris New et Christophe Pallier, http://www.lexique.org).
+  Liste filtrée par scripts/build_english_words.py ; ce fichier dérivé reste sous CC BY-SA 4.0.

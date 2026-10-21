@@ -1,0 +1,328 @@
+g3b: avant [69.7, 69.4, 69.4] après [82.7, 82.7, 82.9] | part en code 40.8 -> 72.4 | note des lignes en code 78.0 -> 87.2 | écart apparié +13.23 IC95 [10.83, 15.7] sur 429 cas, p signe 0.0 | évaluations mieux 216, moins bien 3
+v10: avant [58.5, 58.1, 57.7] après [77.9, 77.1, 77.1] | part en code 40.8 -> 72.4 | note des lignes en code 78.0 -> 87.2 | écart apparié +19.22 IC95 [16.26, 22.24] sur 429 cas, p signe 0.0 | évaluations mieux 257, moins bien 4
+évaluations dont la phrase de code change : 325
+v3-build-native-0022@en	Compiled with warnings in legacy.c. First, line 6: unused parameter unused_hint.
+v3-build-native-0022@fr	Compilation réussie avec avertissements dans legacy.c. Premier, ligne 6 : unused parameter unused_hint.
+v3-build-native-0031@en	Failed. Link error: undefined symbol hash_bytes, referenced from main.
+v3-build-native-0031@fr	Échec. Édition de liens : symbole hash_bytes non défini, utilisé dans main.
+v3-build-native-0047@en	Compiled with warnings in sensor.c. First, line 10.
+v3-build-native-0047@fr	Compilation réussie avec avertissements dans sensor.c. Premier, ligne 10.
+v3-containers-0011@en	Failed. Dockerfile line 3: unknown instruction COPPY, did you mean COPY.
+v3-containers-0011@fr	Échec. Dockerfile ligne 3 : instruction inconnue COPPY, peut-être COPY.
+v3-containers-0012@en	Failed. Image node:99-alpine not found, Dockerfile line 1.
+v3-containers-0012@fr	Échec. Image node:99-alpine introuvable, Dockerfile ligne 1.
+v3-containers-0015@en	Failed, code 1. Kubernetes server 192.0.2.10:6443 unreachable: timed out.
+v3-containers-0015@fr	Échec, code 1. Serveur Kubernetes 192.0.2.10:6443 injoignable : délai dépassé.
+v3-containers-0024@en	Chart storefront rendered for release shop, 4 manifests: ServiceAccount, Service, Deployment and Pod.
+v3-containers-0024@fr	Chart storefront rendu pour la release shop, 4 manifestes : ServiceAccount, Service, Deployment et Pod.
+v3-data-0011@en	Failed. SQL syntax error near orders.
+v3-data-0011@fr	Échec. Erreur de syntaxe SQL près de orders.
+v3-data-0016@en	Failed. Connection refused: localhost port 5433.
+v3-data-0016@fr	Échec. Connexion refusée : localhost port 5433.
+v3-data-0017@en	Failed. Database shop_prod does not exist on localhost.
+v3-data-0017@fr	Échec. Base shop_prod inexistante sur localhost.
+v3-data-0020@en	4 rows: shipped 1437, paid 1374, refunded 703, pending 703.
+v3-data-0020@fr	4 lignes : shipped 1437, paid 1374, refunded 703, pending 703.
+v3-disk-memory-0008@en	SMART health of sda: passed.
+v3-disk-memory-0008@fr	Santé SMART de sda : test réussi.
+v3-disk-memory-0030@en	disk0: APPLE SSD AP0512Z, 500.3 GB, internal, SSD, SMART verified.
+v3-disk-memory-0030@fr	disk0 : APPLE SSD AP0512Z, 500,3 Go, interne, SSD, SMART vérifié.
+v3-disk-memory-0032@en	44% memory free, 5405 free pages.
+v3-disk-memory-0032@fr	Mémoire libre à 44 %, 5405 pages libres.
+v3-disk-memory-0035@en	Total memory 31.0 GB, free 1.8 GB.
+v3-disk-memory-0035@fr	Mémoire totale 31,0 Go, libre 1,8 Go.
+v3-files-0003@en	21 lines match TODO, in 7 files, 7 in src/models.py.
+v3-files-0003@fr	21 lignes contiennent TODO, dans 7 fichiers, dont 7 dans src/models.py.
+v3-files-0005@en	1707 lines in 3 files, 1289 in stock.csv.
+v3-files-0005@fr	1707 lignes au total dans 3 fichiers, dont 1289 dans stock.csv.
+v3-files-0020@en	3 files differ, including firmware.bin. Only in release-1.3: CHANGELOG.md. Only in release-1.4: migrations.
+v3-files-0020@fr	3 fichiers diffèrent, dont firmware.bin. Seulement dans release-1.3 : CHANGELOG.md. Seulement dans release-1.4 : migrations.
+v3-files-0027@en	15 lines match FIXME, in 7 files, 4 in src/auth.py.
+v3-files-0027@fr	15 lignes contiennent FIXME, dans 7 fichiers, dont 4 dans src/auth.py.
+v3-files-0045@en	77 items archived in tree.tgz.
+v3-files-0045@fr	77 éléments archivés dans tree.tgz.
+v3-files-0046@en	Sync finished, 77 files in the transfer, total size 23380 bytes.
+v3-files-0046@fr	Synchronisation terminée, 77 fichiers dans le transfert, taille totale 23380 octets.
+v3-files-0050@en	39 directories created, including 2024, 2025 and 2026.
+v3-files-0050@fr	39 dossiers créés, dont 2024, 2025 et 2026.
+v3-files-0056@en	Failed. 1 checksum did not match: rapports/rapport_2024_11.txt, 2 files could not be read, including archives/archive_2025_04.txt, 93 files OK.
+v3-files-0056@fr	Échec. 1 somme de contrôle ne correspond pas : rapports/rapport_2024_11.txt, 2 fichiers illisibles, dont archives/archive_2025_04.txt, 93 fichiers conformes.
+v3-files-0057@en	13 files overwritten, including cache_1.tmp, 2 passes each.
+v3-files-0057@fr	13 fichiers écrasés, dont cache_1.tmp, 2 passes chacun.
+v3-files-0058@en	Failed, 4 ls errors, not found, including devi_2026_17.txt.
+v3-files-0058@fr	Échec, 4 erreurs de ls, introuvables, dont devi_2026_17.txt.
+v3-files-0062@en	Failed. tar, truncated archive, unrecoverable error.
+v3-files-0062@fr	Échec. tar, archive tronquée, erreur non récupérable.
+v3-files-0069@en	Failed, 2 ln errors: courrier_07.txt and courrier_33.txt, already exist.
+v3-files-0069@fr	Échec, 2 erreurs de ln : courrier_07.txt et courrier_33.txt, existent déjà.
+v3-files-0082@en	70 items removed in cache_navigateur.
+v3-files-0082@fr	70 éléments supprimés dans cache_navigateur.
+v3-files-0084@en	Failed. mkdir, projet_client/src/module_07: already exists.
+v3-files-0084@fr	Échec. mkdir, projet_client/src/module_07 : existe déjà.
+v3-files-0086@en	14 files shredded and removed, including confidentiel/bulletin_01.txt, 2 passes each.
+v3-files-0086@fr	14 fichiers écrasés puis supprimés, dont confidentiel/bulletin_01.txt, 2 passes chacun.
+v3-files-0087@en	40 files created, partie_00 to partie_39.
+v3-files-0087@fr	40 fichiers créés, de partie_00 à partie_39.
+v3-files-0089@en	1 checksum did not match: site_web/index.html.
+v3-files-0089@fr	1 somme de contrôle ne correspond pas : site_web/index.html.
+v3-files-0106@en	Failed. 2 checksums did not match, including mesures/mesure_017.dat, 1 file could not be read: mesures/mesure_060.dat, 63 files OK.
+v3-files-0106@fr	Échec. 2 sommes de contrôle ne correspondent pas, dont mesures/mesure_017.dat, 1 fichier illisible : mesures/mesure_060.dat, 63 fichiers conformes.
+v3-infra-0001@en	Terraform initialized, hashicorp/random 3.9.1 installed.
+v3-infra-0001@fr	Terraform initialisé, hashicorp/random 3.9.1 installé.
+v3-infra-0002@en	Apply complete: 4 resources added. Outputs: app_port 27254, bucket_name staging-elegant-boar.
+v3-infra-0002@fr	Application terminée : 4 ressources ajoutées. Sorties : app_port 27254, bucket_name staging-elegant-boar.
+v3-infra-0004@en	Plan: 1 to add, 1 to destroy. Replace: terraform_data.release.
+v3-infra-0004@fr	Plan : 1 ajout, 1 destruction. À remplacer : terraform_data.release.
+v3-infra-0005@en	4 resources in state: random_integer.port, random_password.db, random_pet.bucket and terraform_data.release.
+v3-infra-0005@fr	4 ressources dans l'état : random_integer.port, random_password.db, random_pet.bucket et terraform_data.release.
+v3-infra-0014@en	Failed. GitHub CLI is not logged in: run gh auth login or set GH_TOKEN.
+v3-infra-0014@fr	Échec. GitHub CLI non connecté : lancer gh auth login ou définir GH_TOKEN.
+v3-js-node-0003@en	24 packages added, no vulnerabilities. Deprecated: react-beautiful-dnd.
+v3-js-node-0003@fr	24 paquets ajoutés, aucune vulnérabilité. Déprécié : react-beautiful-dnd.
+v3-js-node-0010@en	55 packages added, 11 vulnerabilities: 3 low, 7 high, 1 critical. Deprecated: axios.
+v3-js-node-0010@fr	55 paquets ajoutés, 11 vulnérabilités : 3 faibles, 7 élevées, 1 critique. Déprécié : axios.
+v3-js-node-0011@en	Failed. 11 vulnerabilities: 3 low, 7 high, 1 critical. 11 packages affected, including axios, body-parser and express.
+v3-js-node-0011@fr	Échec. 11 vulnérabilités : 3 faibles, 7 élevées, 1 critique. 11 paquets concernés, dont axios, body-parser et express.
+v3-js-node-0013@en	Failed. edge-worker requires Node 24.0.0 or later, installed version 22.23.3.
+v3-js-node-0013@fr	Échec. edge-worker exige Node 24.0.0 ou plus, version installée 22.23.3.
+v3-js-node-0019@en	Failed. npm ci refused: package.json and package-lock.json are out of sync, dayjs 1.11.23 is missing from the lock file.
+v3-js-node-0019@fr	Échec. npm ci refusé : package.json et package-lock.json ne sont pas synchronisés, dayjs 1.11.23 manque dans le lock.
+v3-js-node-0025@en	70 packages added. Deprecated: uuid.
+v3-js-node-0025@fr	70 paquets ajoutés. Déprécié : uuid.
+v3-js-node-0026@en	Failed. @acme-internal/ui-kit not found in the npm registry, error 404.
+v3-js-node-0026@fr	Échec. @acme-internal/ui-kit introuvable sur le registre npm, erreur 404.
+v3-js-node-0033@en	3 outdated packages: express to 5.2.1, uuid to 14.0.2 and zod to 4.6.5.
+v3-js-node-0033@fr	3 paquets en retard : express vers 5.2.1, uuid vers 14.0.2 et zod vers 4.6.5.
+v3-js-node-0035@en	Failed. 5 vulnerabilities: 3 high, 2 critical. 5 packages affected, including axios, ejs and lodash.
+v3-js-node-0035@fr	Échec. 5 vulnérabilités : 3 élevées, 2 critiques. 5 paquets concernés, dont axios, ejs et lodash.
+v3-lint-format-0001@en	Failed, 10 errors and 4 warnings. basket.js line 1: formatPrice is defined but never used.
+v3-lint-format-0001@fr	Échec, 10 erreurs et 4 avertissements. basket.js ligne 1 : formatPrice is defined but never used.
+v3-lint-format-0002@en	Failed. ESLint found no eslint.config file.
+v3-lint-format-0002@fr	Échec. ESLint ne trouve aucun fichier eslint.config.
+v3-lint-format-0011@en	Failed, 7 errors and 5 warnings. ci.yaml line 4: too many spaces inside brackets.
+v3-lint-format-0011@fr	Échec, 7 erreurs et 5 avertissements. ci.yaml ligne 4 : too many spaces inside brackets.
+v3-lint-format-0012@en	Failed. ShellCheck: 10 findings. backup.sh line 5: SC2034, RETENTION appears unused.
+v3-lint-format-0012@fr	Échec. ShellCheck : 10 remarques. backup.sh ligne 5 : SC2034, RETENTION appears unused.
+v3-lint-format-0021@en	Failed. Invalid ruff configuration, pyproject.toml line 11: unknown field max-complexity.
+v3-lint-format-0021@fr	Échec. Configuration de ruff invalide, pyproject.toml ligne 11 : unknown field max-complexity.
+v3-lint-format-0023@en	Failed, 140 errors and 35 warnings. widget0.js line 1: w0_0 is defined but never used.
+v3-lint-format-0023@fr	Échec, 140 erreurs et 35 avertissements. widget0.js ligne 1 : w0_0 is defined but never used.
+v3-lint-format-0026@en	Clippy check of tally finished, 27 warnings, 26 fixable automatically.
+v3-lint-format-0026@fr	Clippy : vérification de tally terminée, 27 avertissements, 26 corrigeables automatiquement.
+v3-lint-format-0027@en	Failed. Ruff: 151 errors in tool/runner.py, 1 fixable automatically.
+v3-lint-format-0027@fr	Échec. Ruff : 151 erreurs dans tool/runner.py, 1 corrigeable automatiquement.
+v3-lint-format-0033@en	Failed. Pylint score 1.66 out of 10, 126 messages.
+v3-lint-format-0033@fr	Échec. Pylint : note de 1,66 sur 10, 126 messages.
+v3-lint-format-0035@en	Failed. Ruff: 65 errors in report/core.py, 5 fixable automatically.
+v3-lint-format-0035@fr	Échec. Ruff : 65 erreurs dans report/core.py, 5 corrigeables automatiquement.
+v3-lint-format-0036@en	Failed. Ruff: 65 errors in catalog/core.py, 5 fixable automatically.
+v3-lint-format-0036@fr	Échec. Ruff : 65 erreurs dans catalog/core.py, 5 corrigeables automatiquement.
+v3-lint-format-0039@en	Failed. Ruff: 65 errors in profile/core.py, 5 fixable automatically.
+v3-lint-format-0039@fr	Échec. Ruff : 65 erreurs dans profile/core.py, 5 corrigeables automatiquement.
+v3-lint-format-0040@en	Failed. Ruff: 65 errors in quota/core.py, 5 fixable automatically.
+v3-lint-format-0040@fr	Échec. Ruff : 65 erreurs dans quota/core.py, 5 corrigeables automatiquement.
+v3-network-0003@en	6 listening ports: sshd on 22, python3 on 8081, 8082 and 8443, llama-server on 8894 and 8961.
+v3-network-0003@fr	6 ports en écoute : sshd sur 22, python3 sur 8081, 8082 et 8443, llama-server sur 8894 et 8961.
+v3-network-0008@en	wlp0s20f3 connected to office1 and p2p-dev-wlp0s20f3 disconnected.
+v3-network-0008@fr	wlp0s20f3 connecté à office1 et p2p-dev-wlp0s20f3 déconnecté.
+v3-network-0013@en	Default gateway 192.0.2.254 on wlp2s0. docker0: link down.
+v3-network-0013@fr	Passerelle par défaut 192.0.2.254 sur wlp2s0. docker0 : sans lien.
+v3-network-0020@en	4 connections: homenet on wlp2s0, docker0 on docker0, lo on lo and Wired connection 1 inactive.
+v3-network-0020@fr	4 connexions : homenet sur wlp2s0, docker0 sur docker0, lo sur lo et Wired connection 1 inactive.
+v3-network-transfer-0001@en	app-fr.tar.gz downloaded, 3.0M.
+v3-network-transfer-0001@fr	app-fr.tar.gz téléchargé, 3,0M.
+v3-network-transfer-0005@en	Failed. Host mirror.nonexistent.invalid not found.
+v3-network-transfer-0005@fr	Échec. Hôte mirror.nonexistent.invalid introuvable.
+v3-network-transfer-0008@en	Failed. Host key for 127.0.0.1 has changed, verification failed.
+v3-network-transfer-0008@fr	Échec. Clé d'hôte de 127.0.0.1 changée, vérification refusée.
+v3-network-transfer-0016@en	Failed. HTTP 401 Unauthorized on admin.
+v3-network-transfer-0016@fr	Échec. HTTP 401 Unauthorized sur admin.
+v3-network-transfer-0017@en	Failed. TLS, expired.badssl.com: certificate has expired.
+v3-network-transfer-0017@fr	Échec. TLS, expired.badssl.com : certificat expiré.
+v3-network-transfer-0019@en	HTTP 200 from deb.debian.org, resource debian, 6153 bytes received.
+v3-network-transfer-0019@fr	Réponse HTTP 200 de deb.debian.org, ressource debian, 6153 octets reçus.
+v3-network-transfer-0023@en	HTTP 404 Not Found from localhost, resource 88412.
+v3-network-transfer-0023@fr	Réponse HTTP 404 Not Found de localhost, ressource 88412.
+v3-network-transfer-0027@en	tool-1.8.0.zip downloaded, 5120k.
+v3-network-transfer-0027@fr	tool-1.8.0.zip téléchargé, 5120k.
+v3-network-transfer-0037@en	4 files downloaded, 1.7M total.
+v3-network-transfer-0037@fr	4 fichiers téléchargés, 1,7M au total.
+v3-network-transfer-0039@en	Failed. 3 files downloaded, 10K total. HTTP error 404 on SHASUMS256.txt.
+v3-network-transfer-0039@fr	Échec. 3 fichiers téléchargés, 10K au total. Erreur HTTP 404 sur SHASUMS256.txt.
+v3-network-transfer-0040@en	Failed, code 8. 4 files downloaded, 2.5K total. HTTP error 404 on tar-9.99.tar.xz.sig.
+v3-network-transfer-0040@fr	Échec, code 8. 4 fichiers téléchargés, 2,5K au total. Erreur HTTP 404 sur tar-9.99.tar.xz.sig.
+v3-network-transfer-0041@en	Failed. 3 files downloaded, 2.6K total. HTTP error 404 on absent.txt.
+v3-network-transfer-0041@fr	Échec. 3 fichiers téléchargés, 2,6K au total. Erreur HTTP 404 sur absent.txt.
+v3-packages-system-0008@en	2 packages installed out of 4 listed: linux-image-6.12.94+deb13-amd64 and linux-image-amd64.
+v3-packages-system-0008@fr	2 paquets installés sur 4 listés : linux-image-6.12.94+deb13-amd64 et linux-image-amd64.
+v3-packages-system-0022@en	188 outdated packages, including aarch64-elf-binutils to 2.47, aarch64-elf-gcc to 16.2.0 and abseil to 20260817.0.
+v3-packages-system-0022@fr	188 paquets en retard, dont aarch64-elf-binutils vers 2.47, aarch64-elf-gcc vers 16.2.0 et abseil vers 20260817.0.
+v3-packages-system-0026@en	82 installed formulae use openssl@3, including aircrack-ng, gnupg and libshout.
+v3-packages-system-0026@fr	82 formules installées utilisent openssl@3, dont aircrack-ng, gnupg et libshout.
+v3-packages-system-0029@en	12 services, none started: atuin, jupyterlab, mysql, ola, openvpn, and 7 more.
+v3-packages-system-0029@fr	12 services, aucun démarré : atuin, jupyterlab, mysql, ola, openvpn, et 7 autres.
+v3-packages-system-0065@en	87 packages can be upgraded, including at-spi2-common, at-spi2-core and auditd.
+v3-packages-system-0065@fr	87 paquets peuvent être mis à jour, dont at-spi2-common, at-spi2-core et auditd.
+v3-packages-system-0066@en	libc6 and bash can be upgraded; openssl, systemd, python3 and gcc are up to date.
+v3-packages-system-0066@fr	libc6 et bash peuvent être mis à jour ; openssl, systemd, python3 et gcc sont à jour.
+v3-packages-system-0067@en	14 packages installed out of 17 listed, including libgtk-3-0t64, libgtk-3-bin and libgtk-3-common.
+v3-packages-system-0067@fr	14 paquets installés sur 17 listés, dont libgtk-3-0t64, libgtk-3-bin et libgtk-3-common.
+v3-packages-system-0087@en	395 packages found, including python3-absl, python3-acoustid and python3-aeidon.
+v3-packages-system-0087@fr	395 paquets trouvés, dont python3-absl, python3-acoustid et python3-aeidon.
+v3-permissions-users-0015@en	Mode changed on 39 items, now 640.
+v3-permissions-users-0015@fr	Droits modifiés sur 39 éléments, mode 640.
+v3-permissions-users-0016@en	Mode changed on 105 items.
+v3-permissions-users-0016@fr	Droits modifiés sur 105 éléments.
+v3-permissions-users-0017@en	Owner changed on 27 items, now nobody:nogroup.
+v3-permissions-users-0017@fr	Propriétaire changé sur 27 éléments, désormais nobody:nogroup.
+v3-processes-0010@en	app.log open by tail, PID 38981.
+v3-processes-0010@fr	app.log ouvert par tail, PID 38981.
+v3-processes-0019@en	Failed. User postgres does not exist.
+v3-processes-0019@fr	Échec. Utilisateur postgres inexistant.
+v3-processes-0029@en	Up 5 days 14:50, 468 tasks, 2 running, load 2.49.
+v3-processes-0029@fr	Allumé depuis 5 jours 14 h 50, 468 tâches dont 2 en cours, charge 2,49.
+v3-python-0002@en	Success. 15 packages installed from requirements.txt, including flask, requests and python-dotenv.
+v3-python-0002@fr	Succès. 15 paquets installés depuis requirements.txt, dont flask, requests et python-dotenv.
+v3-python-0003@en	4 outdated packages: Flask to 3.1.3, gunicorn to 26.2.0, python-dotenv to 1.2.3 and requests to 2.34.2.
+v3-python-0003@fr	4 paquets en retard : Flask vers 3.1.3, gunicorn vers 26.2.0, python-dotenv vers 1.2.3 et requests vers 2.34.2.
+v3-python-0009@en	Success. 11 packages installed; project inventory 0.3.0 installed.
+v3-python-0009@fr	Succès. 11 paquets installés ; projet inventory 0.3.0 installé.
+v3-python-0014@en	Failed. Dependency conflict between requests 2.32.3 and urllib3 1.20.
+v3-python-0014@fr	Échec. Conflit de dépendances entre requests 2.32.3 et urllib3 1.20.
+v3-python-0023@en	4 packages installed, including pandas 3.0.6.
+v3-python-0023@fr	4 paquets installés, dont pandas 3.0.6.
+v3-python-0025@en	23 packages resolved from requirements.in.
+v3-python-0025@fr	23 paquets résolus depuis requirements.in.
+v3-rust-go-0006@en	Failed, 1 error and 8 warnings. metrics.rs line 4: E0282, type annotations needed for Vec<_>.
+v3-rust-go-0006@fr	Échec, 1 erreur et 8 avertissements. metrics.rs ligne 4 : E0282, type annotations needed for Vec<_>.
+v3-rust-go-0008@en	Failed. Panic at main.rs line 9: index out of bounds: the len is 3 but the index is 3.
+v3-rust-go-0008@fr	Échec. Panique à main.rs ligne 9 : index out of bounds: the len is 3 but the index is 3.
+v3-rust-go-0011@en	Failed. Panic at main.rs line 4: unwrap on an error, No such file or directory.
+v3-rust-go-0011@fr	Échec. Panique à main.rs ligne 4 : unwrap sur une erreur, No such file or directory.
+v3-rust-go-0013@en	Success. Build of logscan finished, no warnings, 15 packages locked.
+v3-rust-go-0013@fr	Succès. Compilation de logscan terminée, sans avertissement, 15 paquets verrouillés.
+v3-rust-go-0018@en	Failed. Deadlock: all goroutines are asleep. In main, main.go line 8.
+v3-rust-go-0018@fr	Échec. Interblocage : toutes les goroutines sont bloquées. Dans main, main.go ligne 8.
+v3-rust-go-0021@en	Failed. Panic: runtime error: invalid memory address or nil pointer dereference. In Cache.Get, main.go line 9.
+v3-rust-go-0021@fr	Échec. Panique : runtime error: invalid memory address or nil pointer dereference. Dans Cache.Get, main.go ligne 9.
+v3-rust-go-0022@en	Success. Build of rs-deps finished, no warnings, 64 packages locked.
+v3-rust-go-0022@fr	Succès. Compilation de rs-deps terminée, sans avertissement, 64 paquets verrouillés.
+v3-services-logs-0002@en	Enabled: ssh and docker. Alias: smartd. Not found: nginx.
+v3-services-logs-0002@fr	Activés : ssh et docker. Alias : smartd. Introuvable : nginx.
+v3-services-logs-0003@en	14 timers, the next in 8 min: sysstat-collect.
+v3-services-logs-0003@fr	14 minuteries, la prochaine dans 8 min : sysstat-collect.
+v3-shell-scripts-0005@en	Failed, 2 cp errors: data/export-04.csv and data/export-09.csv, not found. Last message: done: 8 copied, 2 failed.
+v3-shell-scripts-0005@fr	Échec, 2 erreurs de cp : data/export-04.csv et data/export-09.csv, introuvables. Dernier message : done: 8 copied, 2 failed.
+v3-shell-scripts-0013@en	Failed. tar, backups/factures-2026-09.tar.gz: not found, unrecoverable error.
+v3-shell-scripts-0013@fr	Échec. tar, backups/factures-2026-09.tar.gz : introuvable, erreur non récupérable.
+v3-shell-scripts-0021@en	Finished, but one error: sauvegarde.sh line 10: command rsync_securise not found.
+v3-shell-scripts-0021@fr	Terminé, mais une erreur : sauvegarde.sh ligne 10 : commande rsync_securise introuvable.
+v3-shell-scripts-0022@en	Failed. rotation.sh line 7: unbound variable DUREE_RETENTION.
+v3-shell-scripts-0022@fr	Échec. rotation.sh ligne 7 : variable DUREE_RETENTION non définie. Dernier message : journal 40 archivé dans archives/journal_40.gz.
+v3-shell-scripts-0023@en	Failed. cat, factures/recapitulatif_annuel.txt: not found.
+v3-shell-scripts-0023@fr	Échec. cat, factures/recapitulatif_annuel.txt : introuvable.
+v3-shell-scripts-0024@en	Failed. mkdir, cannot create /proc/boutique_release, no such file or directory.
+v3-shell-scripts-0024@fr	Échec. mkdir, création de /proc/boutique_release impossible, aucun fichier ou dossier de ce nom. Dernier message : empaquetage : tâche 12 terminée.
+v3-shell-scripts-0036@en	Failed. paie.sh line 11: unbound variable REPERTOIRE_VIREMENTS.
+v3-shell-scripts-0036@fr	Échec. paie.sh ligne 11 : variable REPERTOIRE_VIREMENTS non définie. Dernier message : 45 salariés traités, total 2114.
+v3-shell-scripts-0052@en	Failed. cp, /nonexistent/reports: not found. Last message: 82 items synced.
+v3-shell-scripts-0052@fr	Échec. cp, /nonexistent/reports : introuvable. Dernier message : 82 items synced.
+v3-shell-scripts-0053@en	Failed. sync.sh line 8: unbound variable REPORT_BUCKET. Last message: 73 items synced.
+v3-shell-scripts-0053@fr	Échec. sync.sh ligne 8 : variable REPORT_BUCKET non définie. Dernier message : 73 items synced.
+v3-shell-scripts-0055@en	Failed. sync.sh line 8: unbound variable REPORT_BUCKET. Last message: 77 items synced.
+v3-shell-scripts-0055@fr	Échec. sync.sh ligne 8 : variable REPORT_BUCKET non définie. Dernier message : 77 items synced.
+v3-shell-scripts-0057@en	Failed. abonnements.sh line 11: unbound variable MONTANT_TOTAL.
+v3-shell-scripts-0057@fr	Échec. abonnements.sh ligne 11 : variable MONTANT_TOTAL non définie. Dernier message : Bilan : 72 lignes traitées, total 3453.
+v3-shell-scripts-0062@en	Failed. mv, export_pointage.csv: not found.
+v3-shell-scripts-0062@fr	Échec. mv, export_pointage.csv : introuvable. Dernier message : Bilan : 75 lignes traitées, total 3460.
+v3-shell-scripts-0063@en	Failed. ventes.sh line 11: division by zero.
+v3-shell-scripts-0063@fr	Échec. ventes.sh ligne 11 : division par zéro. Dernier message : Bilan : 69 lignes traitées, total 3306.
+v3-shell-scripts-0064@en	Failed. devis.sh line 10: relance.txt: not found.
+v3-shell-scripts-0064@fr	Échec. devis.sh ligne 10 : relance.txt : introuvable. Dernier message : Bilan : 75 lignes traitées, total 3480.
+v3-shell-scripts-0067@en	Failed. sort, suivi_transporteur.txt: not found.
+v3-shell-scripts-0067@fr	Échec. sort, suivi_transporteur.txt : introuvable. Dernier message : Bilan : 69 lignes traitées, total 3306.
+v3-shell-scripts-0072@en	Failed. sync.sh line 8: unbound variable REPORT_BUCKET. Last message: 70 items synced.
+v3-shell-scripts-0072@fr	Échec. sync.sh ligne 8 : variable REPORT_BUCKET non définie. Dernier message : 70 items synced.
+v3-shell-scripts-0078@en	Failed. cp, commande_fournisseur.csv: not found.
+v3-shell-scripts-0078@fr	Échec. cp, commande_fournisseur.csv : introuvable. Dernier message : Bilan : 82 lignes traitées, total 4136.
+v3-shell-scripts-0079@fr	Terminé, mais une erreur : planning_bus.sh ligne 11 : [: 3 : opérateur unaire attendu. Dernier message : Bilan : 77 lignes traitées, total 3675.
+v3-tests-0008@en	Failed. 1 failed, 3 passed. First: test_refill_after_wait, test_bucket.py line 14: timed out after 2 s.
+v3-tests-0008@fr	Échec. 1 test échoué, 3 réussis. Premier : test_refill_after_wait, test_bucket.py ligne 14 : délai de 2 s dépassé.
+v3-tests-0010@en	Failed. 2 errors, 3 passed. First: test_insert_user, test_repo.py line 6: ConnectionRefusedError, Connection refused.
+v3-tests-0010@fr	Échec. 2 erreurs, 3 réussis. Premier : test_insert_user, test_repo.py ligne 6 : ConnectionRefusedError, Connection refused.
+v3-tests-0016@en	Failed. 2 failures and 1 error out of 9 tests, including test_port_default, loader.py line 19: KeyError, port.
+v3-tests-0016@fr	Échec. 2 échecs et 1 erreur sur 9 tests, dont test_port_default, loader.py ligne 19 : KeyError, port.
+v3-tests-0017@en	Failed. Could not import test module test_parser: ModuleNotFoundError, No module named tomlish.lexer.
+v3-tests-0017@fr	Échec. Import du module de test test_parser impossible : ModuleNotFoundError, No module named tomlish.lexer.
+v3-tests-0029@en	Failed. No tests found, 2 files checked.
+v3-tests-0029@fr	Échec. Aucun test trouvé, 2 fichiers examinés.
+v3-tests-0039@en	7 tests passed, 100% line coverage.
+v3-tests-0039@fr	7 tests réussis, couverture des lignes 100 %.
+v3-tests-0042@en	2 packages passed: codec and store. No tests: kvctl and version.
+v3-tests-0042@fr	2 paquets réussis : codec et store. Sans tests : kvctl et version.
+v3-tests-0049@en	Failed. 1 failed, 3 passed. First: capacity_rounds_up, lib.rs line 20: left 64, right 128.
+v3-tests-0049@fr	Échec. 1 test échoué, 3 réussis. Premier : capacity_rounds_up, lib.rs ligne 20 : gauche 64, droite 128.
+v3-tests-0053@en	5 tests passed.
+v3-tests-0053@fr	5 tests réussis.
+v3-tests-0054@en	2 packages passed: codec and store. No tests: kvctl and version.
+v3-tests-0054@fr	2 paquets réussis : codec et store. Sans tests : kvctl et version.
+v3-tests-0055@en	2 packages passed: codec 100% and store 100%. No tests: kvctl and version.
+v3-tests-0055@fr	2 paquets réussis : codec 100 % et store 100 %. Sans tests : kvctl et version.
+v3-tests-0059@en	Failed. 2 failures and 1 error out of 70 tests, including test_day_40, test_calendar.py line 87: KeyError, timezone.
+v3-tests-0059@fr	Échec. 2 échecs et 1 erreur sur 70 tests, dont test_day_40, test_calendar.py ligne 87 : KeyError, timezone.
+v3-tests-0061@en	Failed. 3 tests failed. Package shop, TestPrice qty_08, price_test.go line 51: Price(8,3) = 24, want 25.
+v3-tests-0061@fr	Échec. 3 tests échoués. Paquet shop, TestPrice qty_08, price_test.go ligne 51 : Price(8,3) = 24, want 25.
+v3-tests-0063@en	Failed. 5 failed, 56 passed. First: test_refund_03, test_refunds.py line 13: AssertionError.
+v3-tests-0063@fr	Échec. 5 tests échoués, 56 réussis. Premier : test_refund_03, test_refunds.py ligne 13 : AssertionError.
+v3-tests-0064@en	Failed. 12 errors, 20 passed. First: test_endpoint_00, test_endpoints.py line 6: OperationalError, unable to open database file.
+v3-tests-0064@fr	Échec. 12 erreurs, 20 réussis. Premier : test_endpoint_00, test_endpoints.py ligne 6 : OperationalError, unable to open database file.
+v3-tests-0068@en	Failed. 1 failed, 65 passed. First: test_forecast_33, test_forecast.py line 104: AssertionError.
+v3-tests-0068@fr	Échec. 1 test échoué, 65 réussis. Premier : test_forecast_33, test_forecast.py ligne 104 : AssertionError.
+v3-tests-0076@en	Failed. 6 failed, 66 passed. First: test_query_01, test_search.py line 7: AssertionError.
+v3-tests-0076@fr	Échec. 6 tests échoués, 66 réussis. Premier : test_query_01, test_search.py ligne 7 : AssertionError.
+v3-tests-0083@en	Failed. 2 failed, 39 passed. First: cols_18, lib.rs line 42: left 19, right 21.
+v3-tests-0083@fr	Échec. 2 tests échoués, 39 réussis. Premier : cols_18, lib.rs ligne 42 : gauche 19, droite 21.
+v3-tests-0084@en	Failed. 3 failed, 70 passed. First: test_rating_update_09, test_rating.py line 31: AssertionError.
+v3-tests-0084@fr	Échec. 3 tests échoués, 70 réussis. Premier : test_rating_update_09, test_rating.py ligne 31 : AssertionError.
+v3-tests-0087@en	Failed. 3 failed, 89 passed. First: test_alarm_render_50, test_alarm.py line 154: KeyError, alarm_id.
+v3-tests-0087@fr	Échec. 3 tests échoués, 89 réussis. Premier : test_alarm_render_50, test_alarm.py ligne 154 : KeyError, alarm_id.
+v3-tests-0090@en	Failed. 3 failures out of 74 tests, including test_ticket_00, test_ticket.py line 5.
+v3-tests-0090@fr	Échec. 3 échecs sur 74 tests, dont test_ticket_00, test_ticket.py ligne 5.
+v3-tests-0094@en	Failed. 2 tests failed. Package billing, TestBilling02, billing_test.go line 7: Len = 2, want 3.
+v3-tests-0094@fr	Échec. 2 tests échoués. Paquet billing, TestBilling02, billing_test.go ligne 7 : Len = 2, want 3.
+v3-tests-0095@en	Failed. 5 failed, 77 passed. First: test_rating_delete_16, test_rating.py line 52: ZeroDivisionError, division by zero.
+v3-tests-0095@fr	Échec. 5 tests échoués, 77 réussis. Premier : test_rating_delete_16, test_rating.py ligne 52 : ZeroDivisionError, division by zero.
+v3-tests-0098@en	Failed. 3 failed, 62 passed. First: test_coupon_create_00, test_coupon.py line 4: ZeroDivisionError, division by zero.
+v3-tests-0098@fr	Échec. 3 tests échoués, 62 réussis. Premier : test_coupon_create_00, test_coupon.py ligne 4 : ZeroDivisionError, division by zero.
+v3-tests-0099@en	Failed. 1 failed, 84 passed. First: test_billing_update_42, test_billing.py line 130: AttributeError, NoneType object has no attribute billing.
+v3-tests-0099@fr	Échec. 1 test échoué, 84 réussis. Premier : test_billing_update_42, test_billing.py ligne 130 : AttributeError, NoneType object has no attribute billing.
+v3-tests-0101@en	Failed. 5 failed, 70 passed. First: test_webhook_list_02, test_webhook.py line 10: AssertionError.
+v3-tests-0101@fr	Échec. 5 tests échoués, 70 réussis. Premier : test_webhook_list_02, test_webhook.py ligne 10 : AssertionError.
+v3-tests-0102@en	Failed. 3 failures out of 80 tests, including test_feed_00, test_feed.py line 5.
+v3-tests-0102@fr	Échec. 3 échecs sur 80 tests, dont test_feed_00, test_feed.py ligne 5.
+v3-tests-0109@en	Failed. 2 failed, 90 passed. First: test_cart_delete_45, test_cart.py line 139: AssertionError.
+v3-tests-0109@fr	Échec. 2 tests échoués, 90 réussis. Premier : test_cart_delete_45, test_cart.py ligne 139 : AssertionError.
+v3-tests-0113@en	Failed. 5 failed, 78 passed. First: test_billing_parse_16, test_billing.py line 52: AttributeError, NoneType object has no attribute billing.
+v3-tests-0113@fr	Échec. 5 tests échoués, 78 réussis. Premier : test_billing_parse_16, test_billing.py ligne 52 : AttributeError, NoneType object has no attribute billing.
+v3-tests-0115@en	Failed. 3 failures out of 67 tests, including test_catalog_00, test_catalog.py line 5.
+v3-tests-0115@fr	Échec. 3 échecs sur 67 tests, dont test_catalog_00, test_catalog.py ligne 5.
+v3-tests-0126@en	Failed. 5 failed, 77 passed. First: test_upload_delete_06, test_upload.py line 22: AssertionError.
+v3-tests-0126@fr	Échec. 5 tests échoués, 77 réussis. Premier : test_upload_delete_06, test_upload.py ligne 22 : AssertionError.
+v3-vcs-git-0015@en	Failed. Branch feature/barcode-scan has no upstream; run git push --set-upstream origin feature/barcode-scan.
+v3-vcs-git-0015@fr	Échec. La branche feature/barcode-scan n'a pas de branche amont ; lancer git push --set-upstream origin feature/barcode-scan.
+v3-vcs-git-0020@en	Failed. Host example.invalid not found.
+v3-vcs-git-0020@fr	Échec. Hôte example.invalid introuvable.
+v3-vcs-git-0024@en	HEAD detached at 8fa15ac, Document installation.
+v3-vcs-git-0024@fr	HEAD détachée sur 8fa15ac, Document installation.
+v3-vcs-git-0029@en	4 local branches, current feature/search-ui; 6 remote.
+v3-vcs-git-0029@fr	4 branches locales, courante feature/search-ui ; 6 distantes.
+v3-vcs-git-0031@en	8 local branches, current main. Upstream gone: feature/old-ui. Ahead: feature/search. Behind: fix/csv-quotes and release/0.5.
+v3-vcs-git-0031@fr	8 branches locales, courante main. Amont disparu : feature/old-ui. En avance : feature/search. En retard : fix/csv-quotes et release/0.5.
+v3-vcs-git-0039@en	Interactive rebase of feature/units in progress onto 128160e, conflict in models.py, 1 command remaining.
+v3-vcs-git-0039@fr	Rebase interactif de feature/units en cours sur 128160e, conflit dans models.py, 1 commande restante.
+v3-vcs-git-0040@en	Failed. Fast-forward impossible, the branches have diverged.
+v3-vcs-git-0040@fr	Échec. Avance rapide impossible, les branches ont divergé.
+v3-vcs-git-0043@en	Interactive rebase of feature/lots in progress onto c5c5495, conflict in models.py, 1 command remaining.
+v3-vcs-git-0043@fr	Rebase interactif de feature/lots en cours sur c5c5495, conflit dans models.py, 1 commande restante.
+v3-vcs-git-0046@en	6 commits. Last: feature step 15: extend modules, 1 file changed: module_05.py.
+v3-vcs-git-0046@fr	6 commits. Dernier : feature step 15: extend modules, 1 fichier modifié : module_05.py.

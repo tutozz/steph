@@ -1,0 +1,72 @@
+{
+ "args": {
+  "model": "/root/steph-ft/r1/base-p17",
+  "sft_adapters": [
+   "/root/steph-ft/r1/i1/sft-s42/adapter",
+   "/root/steph-ft/r1/i1/sft-s7/adapter",
+   "/root/steph-ft/r1/i1/sft-s123/adapter",
+   "/root/steph-ft/r1/i1/sft-s2024/adapter"
+  ],
+  "pairs": "pairs-train.jsonl",
+  "val_pairs": "pairs-val.jsonl",
+  "val": "/root/steph-ft/r1/mix-i1/val.jsonl",
+  "out": "dpo-s7",
+  "rank": 16,
+  "alpha": 32,
+  "lr": 2e-05,
+  "beta": 0.1,
+  "sft_weight": 1.0,
+  "epochs": 4.29,
+  "batch": 16,
+  "micro": 8,
+  "maxlen": 1536,
+  "seed": 7
+ },
+ "evals": [
+  {
+   "pair_loss": 1.6963,
+   "acc": 0.1,
+   "margin": 0.0,
+   "sft_val": 0.3484,
+   "epoch": 0.0
+  },
+  {
+   "pair_loss": 1.7046,
+   "acc": 0.6,
+   "margin": 0.044,
+   "sft_val": 0.3562,
+   "epoch": 1.0
+  },
+  {
+   "pair_loss": 1.7324,
+   "acc": 0.7,
+   "margin": 0.154,
+   "sft_val": 0.3804,
+   "epoch": 2.0
+  },
+  {
+   "pair_loss": 1.7687,
+   "acc": 0.6,
+   "margin": 0.224,
+   "sft_val": 0.4065,
+   "epoch": 3.0
+  },
+  {
+   "pair_loss": 1.7772,
+   "acc": 0.65,
+   "margin": 0.222,
+   "sft_val": 0.4125,
+   "epoch": 4.0
+  },
+  {
+   "pair_loss": 1.7845,
+   "acc": 0.6,
+   "margin": 0.228,
+   "sft_val": 0.4139,
+   "epoch": 4.29
+  }
+ ],
+ "steps": 60,
+ "train_s": 272.7,
+ "vram_peak_mb": 6058
+}

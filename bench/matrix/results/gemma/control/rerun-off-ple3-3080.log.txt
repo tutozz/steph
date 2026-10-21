@@ -1,0 +1,4 @@
+23:42:50 ollama arrêté
+control-off-ple3-b47196ac-v3test-cuda-b7: ttft 0.125 p90 0.169 total 0.223 ram 2152 vram 1823 
+23:48:17 bench rc=0
+23:48:17 ollama relancé active

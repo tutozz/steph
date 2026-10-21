@@ -1,0 +1,13 @@
+Sys. de fichiers Taille Utilisé Dispo Uti% Monté sur
+/dev/dm-0          953G    267G  685G  29% /
+devtmpfs            16G       0   16G   0% /dev
+tmpfs               16G    8,0K   16G   1% /dev/shm
+efivarfs           196K     47K  144K  25% /sys/firmware/efi/efivars
+tmpfs              6,3G    3,2M  6,3G   1% /run
+none               1,0M       0  1,0M   0% /run/credentials/systemd-journald.service
+none               1,0M       0  1,0M   0% /run/credentials/systemd-resolved.service
+tmpfs               16G    8,4M   16G   1% /tmp
+/dev/nvme0n1p2     974M    624M  284M  69% /boot
+/dev/dm-0          953G    267G  685G  29% /home
+/dev/nvme0n1p1     599M     21M  579M   4% /boot/efi
+tmpfs              3,2G    4,1M  3,1G   1% /run/user/1000

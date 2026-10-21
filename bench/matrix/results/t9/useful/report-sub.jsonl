@@ -1,0 +1,7 @@
+{"file": "sub-deepseek-deepseek-v4-pro.json", "useful": 87.7, "fr": 86.8, "en": 88.7, "summary": 86.3, "qa": 100.0, "inventions_pct": 5.3, "n": 151, "errors": 1}
+{"file": "sub-qwen-qwen3.8-27b.json", "useful": 87.9, "fr": 87.3, "en": 88.5, "summary": 87.2, "qa": 93.8, "inventions_pct": 3.4, "n": 149, "errors": 3}
+{"file": "sub-qwen-qwen3.8-flash.json", "useful": 85.2, "fr": 85.3, "en": 85.0, "summary": 83.4, "qa": 100.0, "inventions_pct": 4.0, "n": 150, "errors": 2}
+{"file": "sub-qwen-qwen3-235b-a22b-2507.json", "useful": 80.4, "fr": 85.0, "en": 75.7, "summary": 78.2, "qa": 100.0, "inventions_pct": 8.1, "n": 149, "errors": 3}
+{"file": "sub-gemma-raw.json", "useful": 74.7, "fr": 76.3, "en": 73.0, "summary": 71.6, "qa": 100.0, "inventions_pct": 10.0, "n": 150, "errors": 2}
+{"file": "sub-g3b.json", "useful": 78.5, "fr": 75.3, "en": 81.6, "summary": 75.9, "qa": 100.0, "inventions_pct": 10.7, "n": 150, "errors": 2}
+{"file": "sub-v1.0.json", "useful": 46.8, "fr": 50.7, "en": 43.0, "summary": 45.0, "qa": 62.5, "inventions_pct": 30.7, "n": 150, "errors": 2}

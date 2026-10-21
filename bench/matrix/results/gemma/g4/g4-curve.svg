@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 330" font-family="Helvetica, Arial, sans-serif" role="img" aria-label="Écart au Q4_0 officiel selon la taille du GGUF">
+<rect width="760" height="330" fill="#0b0b0b"/>
+<text x="56.0" y="24" fill="#e6e6e1" font-size="14">Qualité, écart en points</text>
+<line x1="56.0" x2="352.0" y1="270.0" y2="270.0" stroke="#2a2a28" stroke-width="1"/>
+<text x="50.0" y="274.0" fill="#cfcfca" font-size="11" text-anchor="end">-7</text>
+<line x1="56.0" x2="352.0" y1="244.4" y2="244.4" stroke="#2a2a28" stroke-width="1"/>
+<text x="50.0" y="248.4" fill="#cfcfca" font-size="11" text-anchor="end">-6</text>
+<line x1="56.0" x2="352.0" y1="218.9" y2="218.9" stroke="#2a2a28" stroke-width="1"/>
+<text x="50.0" y="222.9" fill="#cfcfca" font-size="11" text-anchor="end">-5</text>
+<line x1="56.0" x2="352.0" y1="193.3" y2="193.3" stroke="#2a2a28" stroke-width="1"/>
+<text x="50.0" y="197.3" fill="#cfcfca" font-size="11" text-anchor="end">-4</text>
+<line x1="56.0" x2="352.0" y1="167.8" y2="167.8" stroke="#2a2a28" stroke-width="1"/>
+<text x="50.0" y="171.8" fill="#cfcfca" font-size="11" text-anchor="end">-3</text>
+<line x1="56.0" x2="352.0" y1="142.2" y2="142.2" stroke="#2a2a28" stroke-width="1"/>
+<text x="50.0" y="146.2" fill="#cfcfca" font-size="11" text-anchor="end">-2</text>
+<line x1="56.0" x2="352.0" y1="116.7" y2="116.7" stroke="#2a2a28" stroke-width="1"/>
+<text x="50.0" y="120.7" fill="#cfcfca" font-size="11" text-anchor="end">-1</text>
+<line x1="56.0" x2="352.0" y1="91.1" y2="91.1" stroke="#2a2a28" stroke-width="1"/>
+<text x="50.0" y="95.1" fill="#cfcfca" font-size="11" text-anchor="end">+0</text>
+<line x1="56.0" x2="352.0" y1="65.6" y2="65.6" stroke="#2a2a28" stroke-width="1"/>
+<text x="50.0" y="69.6" fill="#cfcfca" font-size="11" text-anchor="end">+1</text>
+<line x1="56.0" x2="352.0" y1="40.0" y2="40.0" stroke="#2a2a28" stroke-width="1"/>
+<text x="50.0" y="44.0" fill="#cfcfca" font-size="11" text-anchor="end">+2</text>
+<line x1="56.0" x2="352.0" y1="91.1" y2="91.1" stroke="#8a8a85" stroke-width="1.5"/>
+<text x="77.1" y="288" fill="#cfcfca" font-size="11" text-anchor="middle">2.2 Go</text>
+<text x="161.7" y="288" fill="#cfcfca" font-size="11" text-anchor="middle">2.6 Go</text>
+<text x="246.3" y="288" fill="#cfcfca" font-size="11" text-anchor="middle">3.0 Go</text>
+<text x="330.9" y="288" fill="#cfcfca" font-size="11" text-anchor="middle">3.4 Go</text>
+<circle cx="320.2" cy="91.1" r="6" fill="#8a8a85" stroke="#8a8a85" stroke-width="2"><title>officiel : 3.35 Go, +0.00 (3 graines)</title></circle>
+<text x="329.2" y="95.1" fill="#e6e6e1" font-size="11">officiel</text>
+<circle cx="192.2" cy="88.0" r="6" fill="#8a8a85" stroke="#8a8a85" stroke-width="2"><title>off-ple4 : 2.74 Go, +0.12 (3 graines)</title></circle>
+<text x="201.2" y="92.0" fill="#e6e6e1" font-size="11">off-ple4</text>
+<circle cx="126.2" cy="90.6" r="6" fill="#e2ff3b" stroke="#e2ff3b" stroke-width="2"><title>off-ple3 : 2.43 Go, +0.02 (3 graines)</title></circle>
+<text x="135.2" y="94.6" fill="#e6e6e1" font-size="11">off-ple3</text>
+<circle cx="75.8" cy="102.6" r="6" fill="#8a8a85" stroke="#8a8a85" stroke-width="2"><title>off-ple2 : 2.19 Go, -0.45 (3 graines)</title></circle>
+<text x="84.8" y="106.6" fill="#e6e6e1" font-size="11">off-ple2</text>
+<circle cx="320.7" cy="109.8" r="4.5" fill="#0b0b0b" stroke="#8a8a85" stroke-width="2"><title>q4_0 : 3.35 Go, -0.73 (1 graine)</title></circle>
+<text x="329.7" y="113.8" fill="#e6e6e1" font-size="11">q4_0</text>
+<circle cx="334.3" cy="122.0" r="4.5" fill="#0b0b0b" stroke="#8a8a85" stroke-width="2"><title>q4_k_m : 3.42 Go, -1.21 (1 graine)</title></circle>
+<circle cx="192.7" cy="105.4" r="4.5" fill="#0b0b0b" stroke="#8a8a85" stroke-width="2"><title>q4_0-ple4 : 2.75 Go, -0.56 (1 graine)</title></circle>
+<circle cx="126.7" cy="113.3" r="4.5" fill="#0b0b0b" stroke="#8a8a85" stroke-width="2"><title>q4_0-ple3 : 2.43 Go, -0.87 (1 graine)</title></circle>
+<circle cx="76.3" cy="100.1" r="4.5" fill="#0b0b0b" stroke="#8a8a85" stroke-width="2"><title>q4_0-ple2 : 2.20 Go, -0.35 (1 graine)</title></circle>
+<circle cx="286.9" cy="234.5" r="4.5" fill="#0b0b0b" stroke="#8a8a85" stroke-width="2"><title>q3_k_m : 3.19 Go, -5.61 (1 graine)</title></circle>
+<text x="295.9" y="238.5" fill="#e6e6e1" font-size="11">q3_k_m</text>
+<circle cx="272.8" cy="220.2" r="4.5" fill="#0b0b0b" stroke="#8a8a85" stroke-width="2"><title>iq3_m : 3.13 Go, -5.05 (1 graine)</title></circle>
+<text x="281.8" y="224.2" fill="#e6e6e1" font-size="11">iq3_m</text>
+<text x="408.0" y="24" fill="#e6e6e1" font-size="14">Inventions, écart en points de %</text>
+<line x1="408.0" x2="704.0" y1="270.0" y2="270.0" stroke="#2a2a28" stroke-width="1"/>
+<text x="402.0" y="274.0" fill="#cfcfca" font-size="11" text-anchor="end">-3</text>
+<line x1="408.0" x2="704.0" y1="224.0" y2="224.0" stroke="#2a2a28" stroke-width="1"/>
+<text x="402.0" y="228.0" fill="#cfcfca" font-size="11" text-anchor="end">-1</text>
+<line x1="408.0" x2="704.0" y1="178.0" y2="178.0" stroke="#2a2a28" stroke-width="1"/>
+<text x="402.0" y="182.0" fill="#cfcfca" font-size="11" text-anchor="end">+1</text>
+<line x1="408.0" x2="704.0" y1="132.0" y2="132.0" stroke="#2a2a28" stroke-width="1"/>
+<text x="402.0" y="136.0" fill="#cfcfca" font-size="11" text-anchor="end">+3</text>
+<line x1="408.0" x2="704.0" y1="86.0" y2="86.0" stroke="#2a2a28" stroke-width="1"/>
+<text x="402.0" y="90.0" fill="#cfcfca" font-size="11" text-anchor="end">+5</text>
+<line x1="408.0" x2="704.0" y1="40.0" y2="40.0" stroke="#2a2a28" stroke-width="1"/>
+<text x="402.0" y="44.0" fill="#cfcfca" font-size="11" text-anchor="end">+7</text>
+<line x1="408.0" x2="704.0" y1="201.0" y2="201.0" stroke="#8a8a85" stroke-width="1.5"/>
+<text x="429.1" y="288" fill="#cfcfca" font-size="11" text-anchor="middle">2.2 Go</text>
+<text x="513.7" y="288" fill="#cfcfca" font-size="11" text-anchor="middle">2.6 Go</text>
+<text x="598.3" y="288" fill="#cfcfca" font-size="11" text-anchor="middle">3.0 Go</text>
+<text x="682.9" y="288" fill="#cfcfca" font-size="11" text-anchor="middle">3.4 Go</text>
+<circle cx="672.2" cy="201.0" r="6" fill="#8a8a85" stroke="#8a8a85" stroke-width="2"><title>officiel : 3.35 Go, +0.00 (3 graines)</title></circle>
+<text x="681.2" y="205.0" fill="#e6e6e1" font-size="11">officiel</text>
+<circle cx="544.2" cy="230.7" r="6" fill="#8a8a85" stroke="#8a8a85" stroke-width="2"><title>off-ple4 : 2.74 Go, -1.29 (3 graines)</title></circle>
+<text x="553.2" y="234.7" fill="#e6e6e1" font-size="11">off-ple4</text>
+<circle cx="478.2" cy="194.6" r="6" fill="#e2ff3b" stroke="#e2ff3b" stroke-width="2"><title>off-ple3 : 2.43 Go, +0.28 (3 graines)</title></circle>
+<text x="487.2" y="198.6" fill="#e6e6e1" font-size="11">off-ple3</text>
+<circle cx="427.8" cy="144.4" r="6" fill="#8a8a85" stroke="#8a8a85" stroke-width="2"><title>off-ple2 : 2.19 Go, +2.46 (3 graines)</title></circle>
+<text x="436.8" y="148.4" fill="#e6e6e1" font-size="11">off-ple2</text>
+<circle cx="672.7" cy="86.9" r="4.5" fill="#0b0b0b" stroke="#8a8a85" stroke-width="2"><title>q4_0 : 3.35 Go, +4.96 (1 graine)</title></circle>
+<text x="681.7" y="90.9" fill="#e6e6e1" font-size="11">q4_0</text>
+<circle cx="686.3" cy="145.3" r="4.5" fill="#0b0b0b" stroke="#8a8a85" stroke-width="2"><title>q4_k_m : 3.42 Go, +2.42 (1 graine)</title></circle>
+<circle cx="544.7" cy="81.2" r="4.5" fill="#0b0b0b" stroke="#8a8a85" stroke-width="2"><title>q4_0-ple4 : 2.75 Go, +5.21 (1 graine)</title></circle>
+<circle cx="478.7" cy="84.2" r="4.5" fill="#0b0b0b" stroke="#8a8a85" stroke-width="2"><title>q4_0-ple3 : 2.43 Go, +5.08 (1 graine)</title></circle>
+<circle cx="428.3" cy="117.5" r="4.5" fill="#0b0b0b" stroke="#8a8a85" stroke-width="2"><title>q4_0-ple2 : 2.20 Go, +3.63 (1 graine)</title></circle>
+<circle cx="638.9" cy="237.1" r="4.5" fill="#0b0b0b" stroke="#8a8a85" stroke-width="2"><title>q3_k_m : 3.19 Go, -1.57 (1 graine)</title></circle>
+<text x="647.9" y="241.1" fill="#e6e6e1" font-size="11">q3_k_m</text>
+<circle cx="624.8" cy="134.1" r="4.5" fill="#0b0b0b" stroke="#8a8a85" stroke-width="2"><title>iq3_m : 3.13 Go, +2.91 (1 graine)</title></circle>
+<text x="633.8" y="138.1" fill="#e6e6e1" font-size="11">iq3_m</text>
+<text x="56" y="308" fill="#cfcfca" font-size="11">Plein : 3 graines ; creux : 1 graine (7). Hors cadre : q2_k -22,9 et iq3_xxs -16,9 pts de qualité. Référence : Q4_0 officiel QAT, 3,35 Go.</text>
+</svg>

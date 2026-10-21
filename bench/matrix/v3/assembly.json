@@ -1,0 +1,365 @@
+{
+ "lots": 1105,
+ "kept": 1083,
+ "dropped": {
+  "v3-build-native-0007": "fuite v3-fp1 (t7-public) : Jaccard de lignes 1.0, shingles 1.0, même commande 1.0",
+  "v3-tests-0007": "fuite v3-fp1 (t7-public) : Jaccard de lignes 0.333, shingles 0.189, même commande 0.333",
+  "v3-packages-system-0011": "fuite v3-fp1 (t7-public) : Jaccard de lignes 0.333, shingles 0.615, même commande 0.0",
+  "v3-services-logs-0010": "fuite v3-fp1 (t7-public) : Jaccard de lignes 0.5, shingles 0.0, même commande 0.5",
+  "v3-hardware-system-0009": "fuite v3-fp1 (t7-public) : Jaccard de lignes 1.0, shingles 0.0, même commande 1.0",
+  "v3-containers-0001": "fuite v3-fp1 (rtx3080-final, rtx3080-r1-k3-r2c2, xeon-final, a1000-k3-mix, a1000-r1-k3) : Jaccard de lignes 0.333, shingles 0.333, même commande 0.333",
+  "v3-containers-0014": "fuite v3-fp1 (t7-public) : Jaccard de lignes 0.5, shingles 0.756, même commande 0.333",
+  "v3-files-0011": "fuite v3-fp1 (t7-public) : Jaccard de lignes 0.4, shingles 0.688, même commande 0.4",
+  "v3-history-qa-0011": "fuite v3-fp1 (t7-public) : Jaccard de lignes 0.667, shingles 0.062, même commande 0.0",
+  "v3-files-0044": "fuite v3-fp1 (rtx3080-r1-k3-r2c2, xeon-final, a1000-r1-k3, x2b-rtx3080, x2b-xeon-final, x2b-a1000-k3-r1) : Jaccard de lignes 0.333, shingles 0.083, même commande 0.333",
+  "v3-files-0078": "fuite v3-fp1 (rtx3080-r1-k3-r2c2, xeon-final, a1000-r1-k3, x2b-rtx3080, x2b-xeon-final, x2b-a1000-k3-r1) : Jaccard de lignes 0.333, shingles 0.083, même commande 0.333",
+  "v3-network-0031": "fuite v3-fp1 (rtx3080-r1-k3-r2c2, xeon-final, a1000-r1-k3, x2b-rtx3080, x2b-xeon-final, x2b-a1000-k3-r1) : Jaccard de lignes 0.571, shingles 0.511, même commande 0.0",
+  "v3-network-0032": "fuite v3-fp1 (rtx3080-r1-k3-r2c2, xeon-final, a1000-r1-k3, x2b-rtx3080, x2b-xeon-final, x2b-a1000-k3-r1) : Jaccard de lignes 0.5, shingles 0.143, même commande 0.0",
+  "v3-services-logs-0032": "fuite v3-fp1 (rtx3080-r1-k3-r2c2, xeon-final, a1000-r1-k3, x2b-rtx3080, x2b-xeon-final, x2b-a1000-k3-r1) : Jaccard de lignes 0.308, shingles 0.33, même commande 0.308",
+  "v3-files-0053": "fuite v3-fp1 (xeon-final, x2b-rtx3080, x2b-xeon-final) : Jaccard de lignes 0.545, shingles 0.643, même commande 0.545",
+  "v3-files-0059": "fuite v3-fp1 (rtx3080-r1-k3-r2c2, xeon-final, a1000-r1-k3, t7-public, x2b-rtx3080, x2b-xeon-final, x2b-a1000-k3-r1, x2b-t7-r2c4-repo) : Jaccard de lignes 0.5, shingles 0.059, même commande 0.0",
+  "v3-packages-system-0043": "fuite v3-fp1 (rtx3080-r1-k3-r2c2, a1000-r1-k3, x2b-rtx3080, x2b-a1000-k3-r1) : Jaccard de lignes 0.3, shingles 0.312, même commande 0.3",
+  "v3-packages-system-0061": "fuite v3-fp1 (rtx3080-r1-k3-r2c2, a1000-r1-k3, x2b-rtx3080, x2b-a1000-k3-r1) : Jaccard de lignes 0.3, shingles 0.32, même commande 0.3",
+  "v3-packages-system-0074": "fuite v3-fp1 (rtx3080-r1-k3-r2c2, a1000-r1-k3, x2b-rtx3080, x2b-a1000-k3-r1) : Jaccard de lignes 0.316, shingles 0.333, même commande 0.316",
+  "v3-packages-system-0078": "fuite v3-fp1 (rtx3080-r1-k3-r2c2, a1000-r1-k3, x2b-rtx3080, x2b-a1000-k3-r1) : Jaccard de lignes 0.3, shingles 0.316, même commande 0.3",
+  "v3-packages-system-0083": "fuite v3-fp1 (rtx3080-r1-k3-r2c2, a1000-r1-k3, x2b-rtx3080, x2b-a1000-k3-r1) : Jaccard de lignes 0.3, shingles 0.31, même commande 0.3",
+  "v3-packages-system-0086": "fuite v3-fp1 (rtx3080-r1-k3-r2c2, a1000-r1-k3, x2b-rtx3080, x2b-a1000-k3-r1) : Jaccard de lignes 0.3, shingles 0.32, même commande 0.3"
+ },
+ "splits": {
+  "dev": 429,
+  "test": 654
+ },
+ "evaluations": {
+  "all": 2166,
+  "dev": 858,
+  "test": 1308
+ },
+ "families": {
+  "vcs-git": {
+   "n": 48,
+   "target": 40,
+   "gap": 8,
+   "dev": 19,
+   "test": 29
+  },
+  "tests": {
+   "n": 121,
+   "target": 40,
+   "gap": 81,
+   "test": 73,
+   "dev": 48
+  },
+  "files": {
+   "n": 90,
+   "target": 40,
+   "gap": 50,
+   "dev": 34,
+   "test": 56
+  },
+  "build-native": {
+   "n": 102,
+   "target": 30,
+   "gap": 72,
+   "dev": 41,
+   "test": 61
+  },
+  "js-node": {
+   "n": 36,
+   "target": 30,
+   "gap": 6,
+   "test": 21,
+   "dev": 15
+  },
+  "python": {
+   "n": 51,
+   "target": 30,
+   "gap": 21,
+   "dev": 21,
+   "test": 30
+  },
+  "containers": {
+   "n": 27,
+   "target": 30,
+   "gap": -3,
+   "test": 17,
+   "dev": 10
+  },
+  "packages-system": {
+   "n": 80,
+   "target": 30,
+   "gap": 50,
+   "test": 48,
+   "dev": 32
+  },
+  "services-logs": {
+   "n": 31,
+   "target": 30,
+   "gap": 1,
+   "dev": 12,
+   "test": 19
+  },
+  "network": {
+   "n": 32,
+   "target": 30,
+   "gap": 2,
+   "dev": 12,
+   "test": 20
+  },
+  "disk-memory": {
+   "n": 37,
+   "target": 25,
+   "gap": 12,
+   "dev": 14,
+   "test": 23
+  },
+  "network-transfer": {
+   "n": 44,
+   "target": 25,
+   "gap": 19,
+   "dev": 17,
+   "test": 27
+  },
+  "rust-go": {
+   "n": 25,
+   "target": 20,
+   "gap": 5,
+   "test": 15,
+   "dev": 10
+  },
+  "lint-format": {
+   "n": 42,
+   "target": 20,
+   "gap": 22,
+   "dev": 17,
+   "test": 25
+  },
+  "processes": {
+   "n": 27,
+   "target": 20,
+   "gap": 7,
+   "dev": 11,
+   "test": 16
+  },
+  "data": {
+   "n": 26,
+   "target": 20,
+   "gap": 6,
+   "test": 15,
+   "dev": 11
+  },
+  "hardware-system": {
+   "n": 26,
+   "target": 15,
+   "gap": 11,
+   "dev": 10,
+   "test": 16
+  },
+  "shell-scripts": {
+   "n": 81,
+   "target": 15,
+   "gap": 66,
+   "dev": 32,
+   "test": 49
+  },
+  "permissions-users": {
+   "n": 28,
+   "target": 12,
+   "gap": 16,
+   "dev": 12,
+   "test": 16
+  },
+  "infra": {
+   "n": 14,
+   "target": 8,
+   "gap": 6,
+   "dev": 6,
+   "test": 8
+  },
+  "history-qa": {
+   "n": 115,
+   "target": 90,
+   "gap": 25,
+   "test": 70,
+   "dev": 45
+  }
+ },
+ "dev_share_by_family": {
+  "build-native": 0.4,
+  "containers": 0.37,
+  "data": 0.42,
+  "disk-memory": 0.38,
+  "files": 0.38,
+  "hardware-system": 0.38,
+  "history-qa": 0.39,
+  "infra": 0.43,
+  "js-node": 0.42,
+  "lint-format": 0.4,
+  "network": 0.38,
+  "network-transfer": 0.39,
+  "packages-system": 0.4,
+  "permissions-users": 0.43,
+  "processes": 0.41,
+  "python": 0.41,
+  "rust-go": 0.4,
+  "services-logs": 0.39,
+  "shell-scripts": 0.4,
+  "tests": 0.4,
+  "vcs-git": 0.4
+ },
+ "shares_summary": {
+  "os": {
+   "observed": {
+    "linux": {
+     "n": 672,
+     "share": 0.694
+    },
+    "macos": {
+     "n": 296,
+     "share": 0.306
+    }
+   },
+   "target": {
+    "linux": 0.6,
+    "macos": 0.4
+   }
+  },
+  "output_lang": {
+   "observed": {
+    "en": {
+     "n": 637,
+     "share": 0.658
+    },
+    "fr": {
+     "n": 247,
+     "share": 0.255
+    },
+    "mixed": {
+     "n": 42,
+     "share": 0.043
+    },
+    "none": {
+     "n": 42,
+     "share": 0.043
+    }
+   },
+   "target": {
+    "fr": 0.25,
+    "en": 0.65,
+    "none": 0.1
+   }
+  },
+  "status": {
+   "observed": {
+    "failure": {
+     "n": 526,
+     "share": 0.543
+    },
+    "interrupted": {
+     "n": 3,
+     "share": 0.003
+    },
+    "success": {
+     "n": 439,
+     "share": 0.454
+    }
+   },
+   "target": {
+    "failure": 0.5,
+    "success": 0.5
+   }
+  },
+  "length_class": {
+   "observed": {
+    "long": {
+     "n": 347,
+     "share": 0.358
+    },
+    "medium": {
+     "n": 264,
+     "share": 0.273
+    },
+    "short": {
+     "n": 357,
+     "share": 0.369
+    }
+   },
+   "target": {
+    "short": 0.3,
+    "medium": 0.35,
+    "long": 0.35
+   }
+  },
+  "difficulty": {
+   "observed": {
+    "easy": {
+     "n": 230,
+     "share": 0.238
+    },
+    "hard": {
+     "n": 258,
+     "share": 0.267
+    },
+    "medium": {
+     "n": 480,
+     "share": 0.496
+    }
+   },
+   "target": {
+    "easy": 0.25,
+    "medium": 0.45,
+    "hard": 0.3
+   }
+  },
+  "origin": {
+   "observed": {
+    "real": {
+     "n": 961,
+     "share": 0.993
+    },
+    "reconstructed": {
+     "n": 7,
+     "share": 0.007
+    }
+   },
+   "target": {
+    "real": 0.8,
+    "reconstructed": 0.2
+   }
+  }
+ },
+ "qa": {
+  "n": 115,
+  "answer_in_history": {
+   "True": 84,
+   "False": 31
+  },
+  "by_split": {
+   "test": 70,
+   "dev": 45
+  }
+ },
+ "os_all": {
+  "linux": {
+   "n": 727,
+   "share": 0.671
+  },
+  "macos": {
+   "n": 356,
+   "share": 0.329
+  }
+ },
+ "contested": [
+  "v3-history-qa-0049",
+  "v3-hardware-system-0025"
+ ],
+ "summary_reaches_model": {
+  "en_False": 399,
+  "en_True": 569,
+  "fr_False": 399,
+  "fr_True": 569
+ },
+ "second_reader": {
+  "true": 954,
+  "false": 129
+ }
+}

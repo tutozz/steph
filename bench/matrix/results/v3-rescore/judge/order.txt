@@ -1,0 +1,1 @@
+r1-v1.0:ft p17:ft k3-a-dpo:ft gemma4-e2b:gen granite-350m:gen qwen3.5-0.8b:gen qwen3.5-4b:gen c2-t7-dpo:ft dense-fold2:ft

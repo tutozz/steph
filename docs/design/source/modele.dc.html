@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>steph-speak, le petit modèle du terminal qui parle</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<style>
+html{background:#0b0b0b}
+body{margin:0;background:#0b0b0b;color:#f4f4f0;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration-thickness:2px;text-underline-offset:5px}
+a:hover{color:#e2ff3b;text-decoration-thickness:3px}
+:focus-visible{outline:3px solid #e2ff3b;outline-offset:4px}
+*{box-sizing:border-box}
+</style>
+</helmet>
+<div lang="fr" style="min-height:100vh;background:#0b0b0b;background-image:linear-gradient(#1a1a1a 1px,transparent 1px),linear-gradient(90deg,#1a1a1a 1px,transparent 1px);background-size:32px 32px;color:#f4f4f0;font-family:'Space Grotesk',sans-serif">
+  <a href="#contenu" style="position:absolute;left:16px;top:-80px;background:#e2ff3b;color:#000;font:700 20px 'Space Grotesk';padding:14px 18px;z-index:10" style-focus="top:16px">Aller au contenu</a>
+
+  <header style="max-width:1440px;margin:0 auto;padding:24px clamp(19px,4.5vw,64px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px">
+    <a href="steph Landing.dc.html" aria-label="steph, accueil" style="display:flex;align-items:center;gap:16px;text-decoration:none">
+      <span style="font:700 36px/1 'Space Grotesk';letter-spacing:-0.03em">steph</span>
+      <span aria-hidden="true" style="display:grid;grid-template-columns:repeat(3,8px);grid-auto-rows:8px"><span style="background:#e2ff3b"></span><span></span><span></span><span></span><span style="background:#e2ff3b"></span><span></span><span style="background:#e2ff3b"></span><span></span><span></span></span>
+      <span style="font:400 20px 'Space Grotesk';color:#cfcfca">Terminal qui parle</span>
+    </a>
+    <nav aria-label="Principale" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;font:500 20px 'Space Grotesk'">
+      <a href="#chiffres" style="padding:10px 0">Chiffres</a>
+      <a href="#utiliser" style="padding:10px 0">L'utiliser</a>
+      <a href="#banc" style="padding:10px 0">Le banc</a>
+      <a href="#licences" style="padding:10px 0">Licences</a>
+      <span style="display:flex;gap:6px;align-items:center"><span aria-current="true" style="font:700 20px 'Space Grotesk';color:#e2ff3b;padding:10px 4px">FR</span><span aria-hidden="true" style="color:#8a8a85">·</span><a href="#" lang="en" aria-label="Read in English" style="padding:10px 4px">EN</a></span>
+    </nav>
+  </header>
+
+  <main id="contenu">
+    <section aria-labelledby="h-hero" style="max-width:1440px;margin:0 auto;padding:clamp(40px,6vw,72px) clamp(19px,4.5vw,64px) clamp(64px,8vw,112px);display:flex;flex-wrap:wrap;gap:48px 64px;align-items:flex-end">
+      <div style="flex:7 1 560px;display:flex;flex-direction:column;gap:28px;min-width:0">
+        <div style="font:500 20px 'JetBrains Mono';color:#e2ff3b">Modèle ouvert <span aria-hidden="true">·</span> Apache 2.0</div>
+        <h1 id="h-hero" style="margin:0;font:500 clamp(54px,8vw,120px)/0.92 'Space Grotesk';letter-spacing:-0.05em;text-wrap:balance"><span style="font-family:'JetBrains Mono';font-weight:500;letter-spacing:-0.04em;color:#e2ff3b">steph-speak</span>, le modèle qui dit l'essentiel.</h1>
+        <p style="margin:0;font:400 clamp(21px,1.7vw,25px)/1.45 'Space Grotesk';color:#e6e6e1;max-width:760px;text-wrap:pretty">Une sortie de terminal, une phrase. Sur un portable, sans carte graphique.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <a href="#" style="font:700 21px 'Space Grotesk';background:#e2ff3b;color:#000;padding:18px 24px;text-decoration:none;clip-path:polygon(0 8px,8px 8px,8px 0,calc(100% - 8px) 0,calc(100% - 8px) 8px,100% 8px,100% calc(100% - 8px),calc(100% - 8px) calc(100% - 8px),calc(100% - 8px) 100%,8px 100%,8px calc(100% - 8px),0 calc(100% - 8px))">Télécharger sur Hugging Face</a>
+          <a href="#banc" style="font:700 21px 'Space Grotesk';color:#f4f4f0;border:3px solid #f4f4f0;padding:15px 22px;text-decoration:none">Voir le Steph Speak Bench</a>
+        </div>
+      </div>
+      <div style="flex:5 1 380px;min-width:0;display:flex;flex-direction:column">
+        <div aria-hidden="true" style="display:flex"><sc-for list="{{ fringeA }}" as="c" hint-placeholder-count="0"><sc-if value="{{ c.on }}"><span style="flex:1;aspect-ratio:1;max-height:32px;background:#262626"></span></sc-if><sc-if value="{{ c.off }}"><span style="flex:1;aspect-ratio:1;max-height:32px"></span></sc-if></sc-for></div>
+        <table style="background:#262626;border-collapse:collapse;width:100%">
+          <caption style="caption-side:top;text-align:left;background:#262626;padding:24px 28px 8px;font:500 20px 'JetBrains Mono';color:#e2ff3b">Fiche</caption>
+          <tbody><sc-for list="{{ fiche }}" as="f" hint-placeholder-count="5"><tr>
+            <th scope="row" style="text-align:left;vertical-align:top;font:500 19px 'JetBrains Mono';color:#cfcfca;padding:14px 16px 14px 28px;border-bottom:1px solid #3a3a37;white-space:nowrap">{{ f.k }}</th>
+            <td style="vertical-align:top;font:500 21px/1.4 'Space Grotesk';padding:14px 28px 14px 0;border-bottom:1px solid #3a3a37">
+              <sc-if value="{{ f.todo }}" hint-placeholder-val="{{ false }}"><span style="font:400 19px 'JetBrains Mono';border:2px dashed #8a8a85;padding:2px 8px">{{ f.v }}</span></sc-if>
+              <sc-if value="{{ f.ok }}" hint-placeholder-val="{{ true }}"><span>{{ f.v }}</span></sc-if>
+            </td>
+          </tr></sc-for></tbody>
+        </table>
+        <div aria-hidden="true" style="display:flex"><sc-for list="{{ fringeB }}" as="c" hint-placeholder-count="0"><sc-if value="{{ c.on }}"><span style="flex:1;aspect-ratio:1;max-height:32px;background:#262626"></span></sc-if><sc-if value="{{ c.off }}"><span style="flex:1;aspect-ratio:1;max-height:32px"></span></sc-if></sc-for></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="h-fait" style="border-top:2px solid #3a3a37">
+      <div style="max-width:1440px;margin:0 auto;padding:clamp(64px,8vw,112px) clamp(19px,4.5vw,64px);display:flex;flex-direction:column;gap:48px">
+        <div style="display:flex;flex-wrap:wrap;gap:24px 64px;align-items:flex-end">
+          <div style="flex:7 1 520px;display:flex;flex-direction:column;gap:20px;min-width:0"><div style="font:500 20px 'JetBrains Mono';color:#e2ff3b"><span aria-hidden="true">01 · </span>Ce qu'il fait</div><h2 id="h-fait" style="margin:0;font:500 clamp(40px,5.4vw,76px)/0.98 'Space Grotesk';letter-spacing:-0.04em;text-wrap:balance">Une sortie en entrée, une phrase en sortie.</h2></div>
+          <p style="flex:5 1 360px;margin:0;font:400 clamp(20px,1.6vw,23px)/1.5 'Space Grotesk';color:#e6e6e1;min-width:0">Le modèle reçoit la commande, son code de retour et sa sortie. Il répond par une seule ligne de quinze mots au plus : le résultat d'abord, puis un détail utile. Les noms et les nombres sont recopiés tels quels.</p>
+        </div>
+        <figure style="margin:0;display:flex;flex-wrap:wrap;gap:16px">
+          <div style="flex:7 1 520px;min-width:0;background:#161616;border:2px solid #3a3a37;display:flex;flex-direction:column">
+            <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding:18px 24px;border-bottom:2px solid #3a3a37;font:500 20px 'JetBrains Mono'"><span><span aria-hidden="true" style="color:#e2ff3b">$ </span>npm run build</span><span style="color:#cfcfca">code de retour 1</span></div>
+            <pre style="margin:0;padding:20px 24px;font:400 19px/1.55 'JetBrains Mono';color:#cfcfca;white-space:pre-wrap;overflow-wrap:anywhere">{{ buildOut }}</pre>
+          </div>
+          <div style="flex:5 1 380px;min-width:0;display:flex;flex-direction:column;gap:16px">
+            <div style="background:#e2ff3b;color:#000;padding:28px;display:flex;flex-direction:column;gap:12px;flex:1">
+              <span style="font:500 19px 'JetBrains Mono'">Réponse attendue par le banc</span>
+              <blockquote style="margin:0;font:500 clamp(26px,2.4vw,34px)/1.2 'Space Grotesk';letter-spacing:-0.02em">« Échec. Header.tsx ligne 42 : titel inexistant, utiliser title. »</blockquote>
+            </div>
+            <div style="background:#262626;padding:28px;display:flex;flex-direction:column;gap:12px">
+              <span style="font:500 19px 'JetBrains Mono';color:#cfcfca">Réponse du modèle</span>
+              <p style="margin:0;font:400 19px 'JetBrains Mono';border:2px dashed #8a8a85;padding:14px;background:repeating-linear-gradient(135deg,#303030 0 8px,#262626 8px 16px)">[à remplir : réponse du modèle final sur ce cas]</p>
+            </div>
+          </div>
+          <figcaption style="flex:1 1 100%;font:400 19px 'Space Grotesk';color:#cfcfca">Cas <code style="font-family:'JetBrains Mono'">build-npm-ts-property</code>, partie publique du Steph Speak Bench.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section aria-labelledby="h-petit" style="background:#e2ff3b;color:#000">
+      <div aria-hidden="true" style="display:flex;background:#0b0b0b"><sc-for list="{{ fringeE }}" as="c" hint-placeholder-count="0"><sc-if value="{{ c.on }}"><span style="flex:1;aspect-ratio:1;max-height:48px;background:#e2ff3b"></span></sc-if><sc-if value="{{ c.off }}"><span style="flex:1;aspect-ratio:1;max-height:48px"></span></sc-if></sc-for></div>
+      <div style="max-width:1440px;margin:0 auto;padding:clamp(48px,6vw,88px) clamp(19px,4.5vw,64px) clamp(56px,7vw,104px);display:flex;flex-wrap:wrap;gap:40px 64px">
+        <div style="flex:5 1 420px;display:flex;flex-direction:column;gap:20px;min-width:0"><div style="font:500 20px 'JetBrains Mono'"><span aria-hidden="true">02 · </span>Pourquoi petit</div><h2 id="h-petit" style="margin:0;font:500 clamp(44px,6vw,84px)/0.95 'Space Grotesk';letter-spacing:-0.045em;text-wrap:balance">Assez petit pour tourner à côté de votre travail.</h2></div>
+        <div style="flex:7 1 480px;display:flex;flex-direction:column;gap:20px;min-width:0;font:400 clamp(20px,1.6vw,23px)/1.5 'Space Grotesk'">
+          <p style="margin:0">Un assistant de terminal tourne pendant que vous travaillez, souvent sur le processeur d'un portable. Les petits modèles qui y tiennent paraphrasent, perdent les chiffres ou inventent. steph-speak est entraîné pour l'inverse : le résultat d'abord, les noms et les nombres exacts, rien d'inventé.</p>
+          <p style="margin:0;font-weight:500">Dans steph, il ne travaille pas seul. Des règles écrites en code résument déjà une grande partie des sorties. steph-speak reçoit le reste : les sorties longues, les erreurs, les questions sur la session.</p>
+        </div>
+      </div>
+      <div aria-hidden="true" style="display:flex;background:#0b0b0b"><sc-for list="{{ fringeF }}" as="c" hint-placeholder-count="0"><sc-if value="{{ c.on }}"><span style="flex:1;aspect-ratio:1;max-height:48px;background:#e2ff3b"></span></sc-if><sc-if value="{{ c.off }}"><span style="flex:1;aspect-ratio:1;max-height:48px"></span></sc-if></sc-for></div>
+    </section>
+    <p aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">{{ copyStatus }}</p>
+
+    <section id="chiffres" aria-labelledby="h-chiffres">
+      <div style="max-width:1440px;margin:0 auto;padding:clamp(64px,8vw,112px) clamp(19px,4.5vw,64px);display:flex;flex-direction:column;gap:48px">
+        <div style="display:flex;flex-direction:column;gap:20px"><div style="font:500 20px 'JetBrains Mono';color:#e2ff3b"><span aria-hidden="true">03 · </span>Chiffres</div><h2 id="h-chiffres" style="margin:0;font:500 clamp(44px,6vw,88px)/0.95 'Space Grotesk';letter-spacing:-0.045em">Mesuré, avec la méthode.</h2></div>
+        <dl style="margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px">
+          <sc-for list="{{ tiles }}" as="t" hint-placeholder-count="4">
+            <div style="background:#161616;border:2px solid #3a3a37;padding:28px;display:flex;flex-direction:column;gap:16px">
+              <dt style="font:500 20px 'JetBrains Mono';color:#cfcfca">{{ t.k }}</dt>
+              <dd style="margin:0;display:flex;flex-direction:column;gap:14px"><span style="min-height:96px;display:flex;align-items:center;border:3px dashed #8a8a85;background:repeating-linear-gradient(135deg,#262626 0 8px,#161616 8px 16px);padding:0 16px;font:500 21px 'JetBrains Mono'">{{ t.v }}</span><span style="font:400 20px/1.5 'Space Grotesk'">{{ t.d }}</span></dd>
+            </div>
+          </sc-for>
+        </dl>
+
+        <figure aria-labelledby="h-g3" style="margin:0;background:#161616;border:2px solid #3a3a37;padding:clamp(20px,3vw,40px);display:flex;flex-direction:column;gap:28px">
+          <div style="display:flex;flex-direction:column;gap:8px"><h3 id="h-g3" style="margin:0;font:500 clamp(28px,2.6vw,38px)/1.15 'Space Grotesk';letter-spacing:-0.02em">Score au Steph Speak Bench.</h3><p style="margin:0;font:400 20px/1.5 'Space Grotesk';color:#cfcfca">En pourcentage, de 0 à 100. Plus haut, c'est mieux. Partie test, protocole standard, Apple M3 Pro.</p></div>
+          <div aria-hidden="true" style="display:flex;flex-direction:column;gap:28px">
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;flex-wrap:wrap;gap:4px 16px;align-items:baseline"><span style="font:700 22px 'JetBrains Mono';color:#e2ff3b">steph-speak</span><span style="font:400 19px 'Space Grotesk';color:#cfcfca">modèle final</span></div>
+              <div style="display:grid;grid-template-columns:110px minmax(0,1fr);gap:8px 16px;align-items:center;font:400 19px 'Space Grotesk'">
+                <span>Français</span><span style="height:36px;width:50%;border:2px dashed #e2ff3b;background:repeating-linear-gradient(135deg,#3d4410 0 6px,#161616 6px 12px);display:flex;align-items:center;padding:0 10px;font:500 19px 'JetBrains Mono'">à remplir</span>
+                <span>Anglais</span><span style="height:36px;width:50%;border:2px dashed #e2ff3b;background:repeating-linear-gradient(135deg,#3d4410 0 6px,#161616 6px 12px);display:flex;align-items:center;padding:0 10px;font:500 19px 'JetBrains Mono'">à remplir</span>
+              </div>
+            </div>
+            <sc-for list="{{ g3 }}" as="b" hint-placeholder-count="4">
+              <div style="display:flex;flex-direction:column;gap:10px;border-top:1px solid #3a3a37;padding-top:20px">
+                <div style="display:flex;flex-wrap:wrap;gap:4px 16px;align-items:baseline"><span style="font:700 22px 'Space Grotesk'">{{ b.name }}</span><span style="font:400 19px 'Space Grotesk';color:#cfcfca">{{ b.forb }}</span></div>
+                <div style="display:grid;grid-template-columns:110px minmax(0,1fr);gap:8px 16px;align-items:center;font:400 19px 'Space Grotesk'">
+                  <span>Français</span><span style="display:flex;align-items:center;gap:12px"><span style="flex:1;min-width:0"><span style="display:block;height:36px;width:{{ b.wfr }};background:#8a8a85"></span></span><span style="font:600 20px 'JetBrains Mono';white-space:nowrap;min-width:88px">{{ b.fr }}</span></span>
+                  <span>Anglais</span><span style="display:flex;align-items:center;gap:12px"><span style="flex:1;min-width:0"><span style="display:block;height:36px;width:{{ b.wen }};background:#8a8a85"></span></span><span style="font:600 20px 'JetBrains Mono';white-space:nowrap;min-width:88px">{{ b.en }}</span></span>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+          <p style="margin:0;font:400 19px/1.5 'Space Grotesk';color:#cfcfca">Modèles bruts, sans affinage. La barre de steph-speak attend le réentraînement final ; aucune valeur de candidat n'est montrée.</p>
+          <details style="border-top:2px solid #3a3a37;padding-top:16px">
+            <summary style="font:700 20px 'Space Grotesk';cursor:pointer;min-height:44px;display:flex;align-items:center">Voir les valeurs</summary>
+            <table style="border-collapse:collapse;width:100%;margin-top:12px;font:400 19px 'Space Grotesk'">
+              <thead><tr><th scope="col" style="text-align:left;padding:10px 12px 10px 0;border-bottom:2px solid #77776f">Modèle</th><th scope="col" style="text-align:left;padding:10px 12px;border-bottom:2px solid #77776f">Français</th><th scope="col" style="text-align:left;padding:10px 12px;border-bottom:2px solid #77776f">Anglais</th></tr></thead>
+              <tbody>
+                <tr><th scope="row" style="text-align:left;font-weight:500;padding:10px 12px 10px 0;border-bottom:1px solid #3a3a37">steph-speak</th><td style="padding:10px 12px;border-bottom:1px solid #3a3a37;font-family:'JetBrains Mono'">[à remplir]</td><td style="padding:10px 12px;border-bottom:1px solid #3a3a37;font-family:'JetBrains Mono'">[à remplir]</td></tr>
+                <sc-for list="{{ g3 }}" as="b" hint-placeholder-count="4"><tr><th scope="row" style="text-align:left;font-weight:500;padding:10px 12px 10px 0;border-bottom:1px solid #3a3a37">{{ b.name }}</th><td style="padding:10px 12px;border-bottom:1px solid #3a3a37;font-family:'JetBrains Mono'">{{ b.fr }}</td><td style="padding:10px 12px;border-bottom:1px solid #3a3a37;font-family:'JetBrains Mono'">{{ b.en }}</td></tr></sc-for>
+              </tbody>
+            </table>
+          </details>
+          <a href="#" style="align-self:flex-start;font:700 20px 'Space Grotesk';color:#e2ff3b">Méthode et données <span aria-hidden="true">»</span></a>
+        </figure>
+        <div style="display:flex;flex-wrap:wrap;gap:16px">
+          <figure aria-labelledby="h-g4" style="flex:7 1 560px;min-width:0;margin:0;background:#161616;border:2px solid #3a3a37;padding:clamp(20px,3vw,40px);display:flex;flex-direction:column;gap:24px">
+            <div style="display:flex;flex-direction:column;gap:8px"><h3 id="h-g4" style="margin:0;font:500 clamp(26px,2.4vw,34px)/1.15 'Space Grotesk';letter-spacing:-0.02em">Le score, rapporté à la taille.</h3><p style="margin:0;font:400 20px/1.5 'Space Grotesk';color:#cfcfca">Taille du fichier en mégaoctets, de 0 à 3 500. Score en français, de 0 à 100 %.</p></div>
+            <div aria-hidden="true" style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 12px">
+              <div style="display:flex;flex-direction:column;justify-content:space-between;font:400 19px 'JetBrains Mono';color:#cfcfca;text-align:right;height:340px"><span>100</span><span>50</span><span>0</span></div>
+              <div style="position:relative;height:340px;border-left:2px solid #8a8a85;border-bottom:2px solid #8a8a85;background-image:linear-gradient(#2a2a28 1px,transparent 1px);background-size:100% 50%">
+                <sc-for list="{{ g4 }}" as="p" hint-placeholder-count="0">
+                  <div style="position:absolute;left:{{ p.x }};bottom:{{ p.y }};width:0;height:0">
+                    <span style="position:absolute;left:-9px;top:-9px;width:18px;height:18px;background:#f4f4f0"></span>
+                    <sc-if value="{{ p.right }}"><span style="position:absolute;left:16px;bottom:10px;white-space:nowrap;font:500 19px 'Space Grotesk';background:#161616;padding:2px 6px">{{ p.name }}</span></sc-if>
+                    <sc-if value="{{ p.left }}"><span style="position:absolute;right:16px;bottom:10px;white-space:nowrap;font:500 19px 'Space Grotesk';background:#161616;padding:2px 6px">{{ p.name }}</span></sc-if>
+                  </div>
+                </sc-for>
+              </div>
+              <span></span>
+              <div style="display:flex;justify-content:space-between;font:400 19px 'JetBrains Mono';color:#cfcfca"><span>0</span><span>1 750</span><span>3 500 Mo</span></div>
+            </div>
+            <p style="margin:0;font:400 19px/1.5 'Space Grotesk';color:#cfcfca">Absents tant qu'ils ne sont pas mesurés : steph-speak, après le modèle final, et LFM2.5 1.2B, taille à relever. Lecture : <span style="font-family:'JetBrains Mono';border:2px dashed #8a8a85;padding:0 6px;color:#f4f4f0">[à remplir après mesure]</span></p>
+            <details style="border-top:2px solid #3a3a37;padding-top:16px">
+              <summary style="font:700 20px 'Space Grotesk';cursor:pointer;min-height:44px;display:flex;align-items:center">Voir les valeurs</summary>
+              <table style="border-collapse:collapse;width:100%;margin-top:12px;font:400 19px 'Space Grotesk'">
+                <thead><tr><th scope="col" style="text-align:left;padding:10px 12px 10px 0;border-bottom:2px solid #77776f">Modèle</th><th scope="col" style="text-align:left;padding:10px 12px;border-bottom:2px solid #77776f">Taille</th><th scope="col" style="text-align:left;padding:10px 12px;border-bottom:2px solid #77776f">Score, français</th></tr></thead>
+                <tbody><sc-for list="{{ g4 }}" as="p" hint-placeholder-count="3"><tr><th scope="row" style="text-align:left;font-weight:500;padding:10px 12px 10px 0;border-bottom:1px solid #3a3a37">{{ p.name }}</th><td style="padding:10px 12px;border-bottom:1px solid #3a3a37;font-family:'JetBrains Mono'">{{ p.size }}</td><td style="padding:10px 12px;border-bottom:1px solid #3a3a37;font-family:'JetBrains Mono'">{{ p.score }}</td></tr></sc-for></tbody>
+              </table>
+            </details>
+          </figure>
+          <figure aria-labelledby="h-g5" style="flex:5 1 380px;min-width:0;margin:0;background:#161616;border:2px solid #3a3a37;padding:clamp(20px,3vw,40px);display:flex;flex-direction:column;gap:24px">
+            <div style="display:flex;flex-direction:column;gap:8px"><h3 id="h-g5" style="margin:0;font:500 clamp(26px,2.4vw,34px)/1.15 'Space Grotesk';letter-spacing:-0.02em">Premier mot sur un portable sans carte graphique.</h3><p style="margin:0;font:400 20px/1.5 'Space Grotesk';color:#cfcfca">En secondes, neuf fois sur dix. Plus court, c'est mieux. Intel Core i5-7200U.</p></div>
+            <div aria-hidden="true" style="display:flex;flex-direction:column;gap:18px">
+              <div style="display:flex;flex-direction:column;gap:6px"><span style="font:700 20px 'JetBrains Mono';color:#e2ff3b">steph-speak</span><span style="height:36px;width:45%;border:2px dashed #e2ff3b;background:repeating-linear-gradient(135deg,#3d4410 0 6px,#161616 6px 12px);display:flex;align-items:center;padding:0 10px;font:500 19px 'JetBrains Mono'">à remplir</span></div>
+              <div style="display:flex;flex-direction:column;gap:6px"><span style="font:500 20px 'Space Grotesk'">Modèles de comparaison</span><span style="height:36px;width:45%;border:2px dashed #cfcfca;background:repeating-linear-gradient(135deg,#3a3a37 0 6px,#161616 6px 12px);display:flex;align-items:center;padding:0 10px;font:500 19px 'JetBrains Mono'">à remplir</span></div>
+            </div>
+            <p style="margin:0;font:400 19px/1.5 'Space Grotesk';color:#cfcfca">Tous mesurés avec le même protocole, après le réentraînement final.</p>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <section aria-labelledby="h-train" style="border-top:2px solid #3a3a37">
+      <div style="max-width:1440px;margin:0 auto;padding:clamp(64px,8vw,112px) clamp(19px,4.5vw,64px);display:flex;flex-wrap:wrap;gap:40px 64px">
+        <div style="flex:4 1 360px;display:flex;flex-direction:column;gap:20px;min-width:0">
+          <div style="font:500 20px 'JetBrains Mono';color:#e2ff3b"><span aria-hidden="true">04 · </span>Entraînement</div>
+          <h2 id="h-train" style="margin:0;font:500 clamp(40px,5vw,72px)/0.98 'Space Grotesk';letter-spacing:-0.04em">Comment il a été entraîné.</h2>
+          <p style="margin:0;font:400 21px/1.5 'Space Grotesk';color:#e6e6e1">Le jeu d'entraînement est publié sous licence CC BY 4.0, les scripts sous licence MIT. Vous pouvez refaire le modèle.</p>
+          <div style="display:flex;flex-direction:column;gap:8px;font:700 20px 'Space Grotesk'"><a href="#" style="color:#e2ff3b">Jeu d'entraînement <span aria-hidden="true">»</span></a><a href="#" style="color:#e2ff3b">Scripts d'entraînement <span aria-hidden="true">»</span></a><a href="#" style="color:#e2ff3b">Carte du modèle <span aria-hidden="true">»</span></a></div>
+        </div>
+        <table style="flex:8 1 560px;min-width:0;border-collapse:collapse">
+          <thead><tr><th scope="col" style="text-align:left;font:500 19px 'JetBrains Mono';color:#cfcfca;padding:0 24px 12px 0;border-bottom:2px solid #77776f">Étape</th><th scope="col" style="text-align:left;font:500 19px 'JetBrains Mono';color:#cfcfca;padding:0 0 12px;border-bottom:2px solid #77776f">Ce qui a été fait</th></tr></thead>
+          <tbody><sc-for list="{{ training }}" as="t" hint-placeholder-count="7"><tr>
+            <th scope="row" style="text-align:left;vertical-align:top;font:700 21px 'Space Grotesk';padding:18px 24px 18px 0;border-bottom:1px solid #3a3a37;white-space:nowrap">{{ t.k }}</th>
+            <td style="vertical-align:top;padding:18px 0;border-bottom:1px solid #3a3a37;font:400 21px/1.45 'Space Grotesk'">
+              <sc-if value="{{ t.todo }}" hint-placeholder-val="{{ false }}"><span style="font:400 19px/1.6 'JetBrains Mono';border:2px dashed #8a8a85;padding:2px 8px">{{ t.v }}</span></sc-if>
+              <sc-if value="{{ t.ok }}" hint-placeholder-val="{{ true }}"><span>{{ t.v }}</span></sc-if>
+            </td>
+          </tr></sc-for></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="h-limites" style="border-top:2px solid #3a3a37">
+      <div style="max-width:1440px;margin:0 auto;padding:clamp(64px,8vw,112px) clamp(19px,4.5vw,64px);display:flex;flex-direction:column;gap:40px">
+        <div style="display:flex;flex-direction:column;gap:20px"><div style="font:500 20px 'JetBrains Mono';color:#e2ff3b"><span aria-hidden="true">05 · </span>Limites</div><h2 id="h-limites" style="margin:0;font:500 clamp(40px,5.4vw,76px)/0.98 'Space Grotesk';letter-spacing:-0.04em">Ce qu'il ne fait pas bien.</h2></div>
+        <ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px">
+          <sc-for list="{{ limits }}" as="l" hint-placeholder-count="5">
+            <li style="background:#262626;padding:28px;display:flex;flex-direction:column;gap:10px;clip-path:polygon(0 8px,8px 8px,8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) calc(100% - 8px),calc(100% - 8px) 100%,0 100%)"><strong style="font:700 24px/1.25 'Space Grotesk'">{{ l.t }}</strong><span style="font:400 20px/1.5 'Space Grotesk';color:#e6e6e1">{{ l.d }}</span></li>
+          </sc-for>
+        </ul>
+      </div>
+    </section>
+
+    <section id="utiliser" aria-labelledby="h-utiliser" style="background:#f4f4f0;color:#0b0b0b">
+      <div style="max-width:1440px;margin:0 auto;padding:clamp(64px,8vw,112px) clamp(19px,4.5vw,64px);display:flex;flex-direction:column;gap:40px">
+        <div style="display:flex;flex-wrap:wrap;gap:24px 64px;align-items:flex-end">
+          <div style="flex:7 1 520px;display:flex;flex-direction:column;gap:20px;min-width:0"><div style="font:500 20px 'JetBrains Mono'"><span aria-hidden="true">06 · </span>L'utiliser</div><h2 id="h-utiliser" style="margin:0;font:500 clamp(40px,5.4vw,76px)/0.98 'Space Grotesk';letter-spacing:-0.04em">Le lancer en une commande.</h2></div>
+          <p style="flex:5 1 360px;margin:0;font:500 22px/1.45 'Space Grotesk';min-width:0">Avec steph : rien à faire. steph l'installe et le choisit par défaut.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <h3 style="margin:0;font:700 22px 'Space Grotesk'">Avec llama.cpp</h3>
+          <div style="display:flex;flex-wrap:wrap;background:#0b0b0b;color:#f4f4f0">
+            <code style="flex:1 1 320px;min-width:0;font:500 clamp(19px,1.6vw,22px)/1.5 'JetBrains Mono';padding:20px 24px;overflow-wrap:anywhere"><span aria-hidden="true" style="color:#e2ff3b">$ </span>llama-server -hf <span style="border:2px dashed #8a8a85;padding:0 6px">[à remplir : nom du dépôt Hugging Face]</span> --jinja</code>
+            <button onClick="{{ copyRun }}" aria-label="Copier la commande llama.cpp" style="flex:0 0 auto;font:700 20px 'Space Grotesk';background:#e2ff3b;color:#000;border:0;padding:0 26px;min-height:60px;min-width:130px;cursor:pointer">{{ labRun }}</button>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <h3 style="margin:0;font:700 22px 'Space Grotesk'">Prompt système exact</h3>
+          <p style="margin:0;font:400 20px/1.5 'Space Grotesk';color:#2e2e2b">À copier tel quel. Le modèle a été entraîné avec lui.</p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px;margin-top:6px">
+            <div style="border:3px solid #0b0b0b;display:flex;flex-direction:column">
+              <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 10px 10px 20px;border-bottom:3px solid #0b0b0b"><span style="font:600 20px 'JetBrains Mono'">Français</span><button onClick="{{ copyFr }}" aria-label="Copier le prompt système français" style="font:700 19px 'Space Grotesk';background:#0b0b0b;color:#e2ff3b;border:0;padding:0 18px;min-height:48px;min-width:110px;cursor:pointer">{{ labFr }}</button></div>
+              <pre style="margin:0;padding:20px;font:400 19px/1.6 'JetBrains Mono';white-space:pre-wrap">{{ promptFr }}</pre>
+            </div>
+            <div lang="en" style="border:3px solid #0b0b0b;display:flex;flex-direction:column">
+              <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 10px 10px 20px;border-bottom:3px solid #0b0b0b"><span lang="fr" style="font:600 20px 'JetBrains Mono'">Anglais</span><button lang="fr" onClick="{{ copyEn }}" aria-label="Copier le prompt système anglais" style="font:700 19px 'Space Grotesk';background:#0b0b0b;color:#e2ff3b;border:0;padding:0 18px;min-height:48px;min-width:110px;cursor:pointer">{{ labEn }}</button></div>
+              <pre style="margin:0;padding:20px;font:400 19px/1.6 'JetBrains Mono';white-space:pre-wrap">{{ promptEn }}</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="banc" aria-labelledby="h-banc">
+      <div style="max-width:1440px;margin:0 auto;padding:clamp(64px,8vw,112px) clamp(19px,4.5vw,64px);display:flex;flex-direction:column;gap:48px">
+        <div style="display:flex;flex-wrap:wrap;gap:24px 64px;align-items:flex-end">
+          <div style="flex:7 1 520px;display:flex;flex-direction:column;gap:20px;min-width:0"><div style="font:500 20px 'JetBrains Mono';color:#e2ff3b"><span aria-hidden="true">07 · </span>Steph Speak Bench</div><h2 id="h-banc" style="margin:0;font:500 clamp(40px,5.4vw,76px)/0.98 'Space Grotesk';letter-spacing:-0.04em;text-wrap:balance">Un banc d'essai ouvert, pour tous les modèles.</h2></div>
+          <p style="flex:5 1 360px;margin:0;font:400 clamp(20px,1.6vw,23px)/1.5 'Space Grotesk';color:#e6e6e1;min-width:0">Il mesure ce qu'un modèle fait d'une sortie de terminal lue à voix haute : un résumé court, les faits exacts, rien d'inventé, et le premier mot vite. N'importe quel modèle local peut s'y mesurer.</p>
+        </div>
+        <dl style="margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
+          <div style="background:#e2ff3b;color:#000;padding:28px;display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:12px"><dt style="font:500 21px/1.4 'Space Grotesk'">cas par langue</dt><dd style="margin:0;font:500 clamp(88px,10vw,150px)/0.85 'Space Grotesk';letter-spacing:-0.06em">105</dd></div>
+          <div style="background:#262626;padding:28px;display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:12px"><dt style="font:500 21px/1.4 'Space Grotesk';color:#e6e6e1">langues : anglais, français, allemand, espagnol, portugais, russe</dt><dd style="margin:0;font:500 clamp(88px,10vw,150px)/0.85 'Space Grotesk';letter-spacing:-0.06em">6</dd></div>
+          <div style="background:#262626;padding:28px;display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:12px"><dt style="font:500 21px/1.4 'Space Grotesk';color:#e6e6e1">catégories, des échecs de compilation aux questions sur l'historique</dt><dd style="margin:0;font:500 clamp(88px,10vw,150px)/0.85 'Space Grotesk';letter-spacing:-0.06em">13</dd></div>
+          <div style="background:#262626;padding:28px;display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:12px"><dt style="font:500 21px/1.4 'Space Grotesk';color:#e6e6e1">modèle juge : le score est déterministe, le même sur toutes les machines</dt><dd style="margin:0;font:500 clamp(88px,10vw,150px)/0.85 'Space Grotesk';letter-spacing:-0.06em">0</dd></div>
+        </dl>
+        <p style="margin:0;font:500 21px/1.5 'Space Grotesk'">La partie test n'est jamais utilisée pour entraîner les modèles de steph.</p>
+
+        <figure aria-labelledby="h-g6" style="margin:0;background:#161616;border:2px solid #3a3a37;padding:clamp(20px,3vw,40px);display:flex;flex-direction:column;gap:28px">
+          <div style="display:flex;flex-direction:column;gap:8px"><h3 id="h-g6" style="margin:0;font:500 clamp(28px,2.6vw,38px)/1.15 'Space Grotesk';letter-spacing:-0.02em">Le banc en six langues.</h3><p style="margin:0;font:400 20px/1.5 'Space Grotesk';color:#cfcfca">Score en pourcentage, de 0 à 100. Modèles bruts, partie test, Apple M3 Pro. Le meilleur score de chaque langue en citron.</p></div>
+          <div aria-hidden="true" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px 40px">
+            <sc-for list="{{ g6 }}" as="L" hint-placeholder-count="6">
+              <div style="display:flex;flex-direction:column;gap:12px">
+                <span style="font:700 22px 'Space Grotesk';border-bottom:2px solid #3a3a37;padding-bottom:8px">{{ L.l }}</span>
+                <sc-for list="{{ L.bars }}" as="b" hint-placeholder-count="4">
+                  <div style="display:flex;flex-direction:column;gap:4px">
+                    <span style="font:400 19px 'Space Grotesk'">{{ b.name }}</span>
+                    <span style="display:flex;align-items:center;gap:10px"><span style="flex:1;min-width:0">
+                      <sc-if value="{{ b.top }}"><span style="display:block;height:24px;width:{{ b.w }};background:#e2ff3b"></span></sc-if>
+                      <sc-if value="{{ b.rest }}"><span style="display:block;height:24px;width:{{ b.w }};background:#8a8a85"></span></sc-if>
+                    </span><span style="font:600 19px 'JetBrains Mono';min-width:52px;text-align:right">{{ b.v }}</span></span>
+                  </div>
+                </sc-for>
+              </div>
+            </sc-for>
+          </div>
+          <p style="margin:0;font:400 19px/1.5 'Space Grotesk';color:#cfcfca">Aucun modèle de steph n'est mesuré dans ces six langues pour l'instant.</p>
+          <details style="border-top:2px solid #3a3a37;padding-top:16px">
+            <summary style="font:700 20px 'Space Grotesk';cursor:pointer;min-height:44px;display:flex;align-items:center">Voir les valeurs</summary>
+            <div style="overflow-x:auto" tabindex="0" role="region" aria-label="Tableau des scores par langue">
+              <table style="border-collapse:collapse;width:100%;margin-top:12px;font:400 19px 'Space Grotesk'">
+                <thead><tr><th scope="col" style="text-align:left;padding:10px 12px 10px 0;border-bottom:2px solid #77776f">Modèle</th><th scope="col" style="text-align:left;padding:10px;border-bottom:2px solid #77776f">en</th><th scope="col" style="text-align:left;padding:10px;border-bottom:2px solid #77776f">fr</th><th scope="col" style="text-align:left;padding:10px;border-bottom:2px solid #77776f">de</th><th scope="col" style="text-align:left;padding:10px;border-bottom:2px solid #77776f">es</th><th scope="col" style="text-align:left;padding:10px;border-bottom:2px solid #77776f">pt</th><th scope="col" style="text-align:left;padding:10px;border-bottom:2px solid #77776f">ru</th></tr></thead>
+                <tbody><sc-for list="{{ g6rows }}" as="r" hint-placeholder-count="4"><tr><th scope="row" style="text-align:left;font-weight:500;padding:10px 12px 10px 0;border-bottom:1px solid #3a3a37;white-space:nowrap">{{ r.name }}</th><sc-for list="{{ r.cells }}" as="v" hint-placeholder-count="6"><td style="padding:10px;border-bottom:1px solid #3a3a37;font-family:'JetBrains Mono'">{{ v }}</td></sc-for></tr></sc-for></tbody>
+              </table>
+            </div>
+          </details>
+        </figure>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <a href="#" style="font:700 21px 'Space Grotesk';background:#e2ff3b;color:#000;padding:16px 22px;text-decoration:none;clip-path:polygon(0 8px,8px 8px,8px 0,calc(100% - 8px) 0,calc(100% - 8px) 8px,100% 8px,100% calc(100% - 8px),calc(100% - 8px) calc(100% - 8px),calc(100% - 8px) 100%,8px 100%,8px calc(100% - 8px),0 calc(100% - 8px))">Lancer le banc</a>
+          <a href="#" style="font:700 21px 'Space Grotesk';border:3px solid #f4f4f0;padding:13px 20px;text-decoration:none">Soumettre un résultat</a>
+          <a href="#" style="font:700 21px 'Space Grotesk';border:3px solid #f4f4f0;padding:13px 20px;text-decoration:none">Le jeu de données</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="licences" aria-labelledby="h-licences" style="border-top:2px solid #3a3a37">
+      <div style="max-width:1440px;margin:0 auto;padding:clamp(64px,8vw,112px) clamp(19px,4.5vw,64px);display:flex;flex-wrap:wrap;gap:48px 64px">
+        <div style="flex:6 1 480px;display:flex;flex-direction:column;gap:24px;min-width:0">
+          <div style="font:500 20px 'JetBrains Mono';color:#e2ff3b"><span aria-hidden="true">08 · </span>Licences</div>
+          <h2 id="h-licences" style="margin:0;font:500 clamp(44px,6vw,88px)/0.95 'Space Grotesk';letter-spacing:-0.045em">Licences.</h2>
+          <table style="border-collapse:collapse;width:100%">
+            <thead><tr><th scope="col" style="text-align:left;font:500 19px 'JetBrains Mono';color:#cfcfca;padding:0 20px 12px 0;border-bottom:2px solid #77776f">Élément</th><th scope="col" style="text-align:left;font:500 19px 'JetBrains Mono';color:#cfcfca;padding:0 0 12px;border-bottom:2px solid #77776f">Licence</th></tr></thead>
+            <tbody><sc-for list="{{ licenses }}" as="l" hint-placeholder-count="6"><tr><th scope="row" style="text-align:left;vertical-align:top;font:500 21px/1.4 'Space Grotesk';padding:16px 20px 16px 0;border-bottom:1px solid #3a3a37">{{ l.k }}</th><td style="vertical-align:top;font:700 21px/1.4 'Space Grotesk';padding:16px 0;border-bottom:1px solid #3a3a37">{{ l.v }}</td></tr></sc-for></tbody>
+          </table>
+        </div>
+        <div style="flex:6 1 420px;display:flex;flex-direction:column;gap:28px;min-width:0">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <h3 style="margin:0;font:700 24px 'Space Grotesk'">Citer le banc</h3>
+            <div style="background:#262626;display:flex;flex-direction:column">
+              <pre lang="en" style="margin:0;padding:20px;font:400 19px/1.55 'JetBrains Mono';white-space:pre-wrap;overflow-wrap:anywhere;color:#e6e6e1">{{ bib }}</pre>
+              <button onClick="{{ copyBib }}" aria-label="Copier l'entrée BibTeX du banc" style="align-self:flex-end;font:700 19px 'Space Grotesk';background:#e2ff3b;color:#000;border:0;padding:0 22px;min-height:52px;min-width:120px;cursor:pointer">{{ labBib }}</button>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <h3 style="margin:0;font:700 24px 'Space Grotesk'">Citer le modèle</h3>
+            <p style="margin:0;font:400 19px 'JetBrains Mono';border:2px dashed #8a8a85;padding:14px">[à remplir : entrée BibTeX du modèle, à la publication]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="border-top:2px solid #3a3a37;background:#0b0b0b">
+    <div style="max-width:1440px;margin:0 auto;padding:56px clamp(19px,4.5vw,64px) 64px;display:flex;flex-direction:column;gap:40px">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px">
+        <div style="display:flex;align-items:center;gap:20px"><span style="font:700 clamp(64px,9vw,128px)/0.85 'Space Grotesk';letter-spacing:-0.05em">steph</span><span aria-hidden="true" style="display:grid;grid-template-columns:repeat(3,20px);grid-auto-rows:20px"><span style="background:#e2ff3b"></span><span></span><span></span><span></span><span style="background:#e2ff3b"></span><span></span><span style="background:#e2ff3b"></span><span></span><span></span></span></div>
+        <nav aria-label="Pied de page" style="display:flex;flex-wrap:wrap;gap:8px 28px;font:500 20px 'Space Grotesk'">
+          <a href="#" style="padding:8px 0">Licence</a><a href="steph Landing.dc.html#entreprises" style="padding:8px 0">Licence entreprise</a><a href="#" style="padding:8px 0">Code source</a><a href="#" style="padding:8px 0">Le modèle steph-speak</a><a href="#banc" style="padding:8px 0">Steph Speak Bench</a><a href="mailto:luis@lsmdx.com" style="padding:8px 0">Contact</a>
+        </nav>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 32px;border-top:2px solid #3a3a37;padding-top:24px;font:400 20px/1.5 'Space Grotesk';color:#cfcfca">
+        <span>steph parle français aujourd'hui. Voix anglaise : <span style="font:400 19px 'JetBrains Mono';border:2px dashed #8a8a85;padding:0 6px;color:#f4f4f0">[à remplir : date]</span></span>
+        <span>© LSMDX 2026</span>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { copied: null };
+  fringe(n, seed) {
+    let s = seed >>> 0;
+    const rnd = () => { s = (s + 0x6D2B79F5) >>> 0; let t = s; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+    return Array.from({ length: n }, (_, i) => { const on = i !== 0 && i !== n - 1 && rnd() < 0.62; return { on, off: !on }; });
+  }
+  copy = (key, text) => () => {
+    try { navigator.clipboard && navigator.clipboard.writeText(text); } catch (e) {}
+    this.setState({ copied: key });
+    clearTimeout(this._t); this._t = setTimeout(() => this.setState({ copied: null }), 2000);
+  };
+  renderVals() {
+    const fr = v => String(v).replace('.', ',');
+    const fiche = [
+      { k: 'Base', v: 'Granite 4.0 H 350M' },
+      { k: 'Taille', v: '[à remplir]', todo: true },
+      { k: 'Format', v: 'GGUF' },
+      { k: 'Licence', v: 'Apache 2.0' }
+    ].map(f => ({ ...f, todo: !!f.todo, ok: !f.todo }));
+    const buildOut = `> app@1.0.0 build
+> tsc && vite build
+
+src/components/Header.tsx:42:17 - error TS2339: Property 'titel' does not exist on type 'Props'. Did you mean 'title'?
+
+42     <h1>{props.titel}</h1>
+                   ~~~~~
+
+Found 1 error in src/components/Header.tsx:42`;
+    const raw = [
+      { name: 'Gemma 4 E2B', fr: 73.8, en: 75.1, bfr: 0.0, ben: 0.0, size: 3350 },
+      { name: 'Qwen3.5 2B', fr: 62.2, en: 69.1, bfr: 4.8, ben: 4.8, size: 1281 },
+      { name: 'Qwen3.5 0.8B', fr: 49.7, en: 49.5, bfr: 1.6, ben: 3.2, size: 533 },
+      { name: 'LFM2.5 1.2B', fr: 36.2, en: 30.6, bfr: 1.6, ben: 1.6, size: null }
+    ];
+    const g3 = raw.map((m, i) => ({
+      name: m.name, top: i === 0, rest: i !== 0,
+      fr: fr(m.fr.toFixed(1)) + ' %', en: fr(m.en.toFixed(1)) + ' %',
+      wfr: m.fr + '%', wen: m.en + '%',
+      forb: `contenu interdit : ${fr(m.bfr.toFixed(1))} % en français, ${fr(m.ben.toFixed(1))} % en anglais`
+    }));
+    const g4 = raw.filter(m => m.size).map(m => ({
+      name: m.name, x: (m.size / 3500 * 100) + '%', right: m.size / 3500 < 0.5, left: m.size / 3500 >= 0.5, y: (m.fr) + '%',
+      size: m.size.toLocaleString('fr-FR') + ' Mo', score: fr(m.fr.toFixed(1)) + ' %'
+    }));
+    const langs = [
+      { l: 'Anglais', v: [75.1, 69.1, 49.5, 30.6] }, { l: 'Français', v: [73.8, 62.2, 49.7, 36.2] },
+      { l: 'Allemand', v: [71.3, 65.9, 42.0, 25.7] }, { l: 'Espagnol', v: [70.3, 63.7, 49.9, 39.2] },
+      { l: 'Portugais', v: [68.3, 61.3, 44.0, 31.0] }, { l: 'Russe', v: [73.5, 66.7, 45.0, 33.3] }
+    ];
+    const names = raw.map(m => m.name);
+    const g6 = langs.map(L => ({ l: L.l, bars: L.v.map((v, i) => ({ name: names[i], w: v + '%', v: fr(v.toFixed(1)), top: i === 0, rest: i !== 0 })) }));
+    const g6rows = names.map((n, i) => ({ name: n, cells: langs.map(L => fr(L.v[i].toFixed(1))) }));
+    const tiles = [
+      { k: 'Steph Speak Bench', v: '[à remplir : score fr et en]', d: 'Partie test du banc, jamais vue à l\u2019entraînement. Protocole standard.' },
+      { k: 'Inventions', v: '[à remplir : sur 36]', d: 'Réponses contenant une information absente de la sortie, sur 36 sorties réelles, vérifiées par un juge automatique puis relues.' },
+      { k: 'Premier mot', v: '[à remplir : secondes]', d: 'Neuf fois sur dix, sur un portable Intel Core i5-7200U sans carte graphique.' },
+      { k: 'Mémoire', v: '[à remplir : Go]', d: 'Mémoire vive utilisée par le modèle chargé.' }
+    ];
+    const training = [
+      { k: 'Données', v: 'des sorties de commandes réelles, capturées sur des machines Linux et macOS, anonymisées puis auditées' },
+      { k: 'Étiquettes', v: 'une phrase de référence par sortie, écrite par un modèle enseignant plus grand, Qwen3.5 9B' },
+      { k: 'Affinage', v: 'adaptation LoRA supervisée de la base Granite 4.0 H 350M' },
+      { k: 'Anti-invention', v: 'entraînement par préférences (DPO) : le modèle apprend à préférer la phrase fidèle à la phrase inventée' },
+      { k: 'Stabilité', v: 'quatre entraînements avec des graines différentes, moyennés en un seul modèle' },
+      { k: 'Corpus', v: '[à remplir : nombre d\u2019exemples du corpus final]', todo: true },
+      { k: 'Contrôle', v: 'la partie test du Steph Speak Bench est vérifiée contre le corpus : [à remplir : résultat sur le corpus final]', todo: true }
+    ].map(t => ({ ...t, todo: !!t.todo, ok: !t.todo }));
+    const limits = [
+      { t: 'Il invente encore parfois.', d: 'Taux mesuré : [à remplir]. steph ajoute un garde-fou qui compare la phrase à la sortie. Il réduit le risque ; il ne l\u2019élimine pas.' },
+      { t: 'Deux langues.', d: '[à remplir : langues du modèle final]. Les autres langues ne sont pas entraînées.' },
+      { t: 'Linux et macOS.', d: 'Les shells Windows ne sont pas couverts.' },
+      { t: 'Les comptes longs.', d: 'Il lui arrive de mal compter une longue liste.' },
+      { t: 'Seul, il fait moins bien.', d: 'Il est conçu comme un composant de steph, avec ses règles en code, pas comme un assistant généraliste.' }
+    ];
+    const licenses = [
+      { k: 'Poids du modèle steph-speak', v: 'Apache 2.0' }, { k: 'Jeu d\u2019entraînement', v: 'CC BY 4.0' },
+      { k: 'Scripts d\u2019entraînement', v: 'MIT' }, { k: 'Steph Speak Bench, données', v: 'CC BY 4.0' },
+      { k: 'Steph Speak Bench, code', v: 'MIT' }, { k: 'steph, le terminal qui parle', v: 'PolyForm Noncommercial 1.0.0 ; licence commerciale pour les entreprises' }
+    ];
+    const promptFr = 'Tu lis la sortie d\u2019une commande de terminal et tu dis à voix haute l\u2019essentiel, en français. Réponds par une seule ligne courte, 15 mots au plus : d\u2019abord le résultat, puis un détail utile. Recopie les noms et les nombres exactement comme dans la sortie. Si une information n\u2019est pas écrite dans la sortie, ne la donne pas : n\u2019invente jamais.';
+    const promptEn = 'You read the output of a terminal command and say the essential aloud, in English. Answer with a single short line, 15 words at most: the result first, then one useful detail. Copy names and numbers exactly as they appear in the output. If a detail is not written in the output, do not give it: never invent.';
+    const bib = `@misc{parra2026stephspeakbench,
+  author  = {Parra, Luis},
+  title   = {Steph Speak Bench: a benchmark for spoken summaries of terminal output by local LLMs},
+  year    = {2026},
+  version = {1.0.0},
+  url     = {[à remplir : adresse publique du banc]}
+}`;
+    const c = this.state.copied;
+    const lab = k => c === k ? 'Copié' : 'Copier';
+    return {
+      fiche, buildOut, g3, g4, g6, g6rows, tiles, training, limits, licenses, promptFr, promptEn, bib,
+      fringeA: this.fringe(16, 9), fringeB: this.fringe(16, 31), fringeE: this.fringe(24, 17), fringeF: this.fringe(24, 58),
+      copyRun: this.copy('run', 'llama-server -hf [à remplir] --jinja'), copyFr: this.copy('fr', promptFr), copyEn: this.copy('en', promptEn), copyBib: this.copy('bib', bib),
+      labRun: lab('run'), labFr: lab('fr'), labEn: lab('en'), labBib: lab('bib'),
+      copyStatus: c ? 'Copié dans le presse-papiers.' : ''
+    };
+  }
+}
+</script>
+</body>
+</html>

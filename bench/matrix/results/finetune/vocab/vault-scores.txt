@@ -1,0 +1,21 @@
+SCORE full-Q8_0 {"tune": 87.3, "tune_sum": 87.3, "holdout": 64.0, "holdout_sum": 80.0, "total": 77.6, "par_graine": [85.7, 88.1, 88.1]}
+TS full-Q8_0 38.4 [39.3, 38.0, 37.8]
+SCORE v32768-Q8_0 {"tune": 88.9, "tune_sum": 88.9, "holdout": 66.8, "holdout_sum": 83.5, "total": 79.7, "par_graine": [88.1, 88.1, 90.5]}
+TS v32768-Q8_0 39.8 [40.7, 39.5, 39.3]
+SCORE v20000-Q8_0 {"tune": 88.9, "tune_sum": 88.9, "holdout": 70.1, "holdout_sum": 83.5, "total": 81.1, "par_graine": [88.1, 88.1, 90.5]}
+TS v20000-Q8_0 40.3 [41.4, 40.5, 39.1]
+SCORE full-Q4_K_M {"tune": 85.7, "tune_sum": 85.7, "holdout": 53.3, "holdout_sum": 58.3, "total": 72.2, "par_graine": [81.0, 90.5, 85.7]}
+TS full-Q4_K_M 29.9 [29.8, 30.8, 29.1]
+SCORE v32768-Q4_K_M {"tune": 83.3, "tune_sum": 83.3, "holdout": 55.0, "holdout_sum": 60.4, "total": 71.5, "par_graine": [78.6, 88.1, 83.3]}
+TS v32768-Q4_K_M 28.8 [28.5, 30.6, 27.3]
+SCORE v20000-Q4_K_M {"tune": 82.5, "tune_sum": 82.5, "holdout": 55.0, "holdout_sum": 60.4, "total": 71.1, "par_graine": [78.6, 88.1, 81.0]}
+TS v20000-Q4_K_M 29.7 [30.0, 31.4, 27.7]
+BENCH_ALL_DONE
+SCORE c32768-Q8_0 {"tune": 84.9, "tune_sum": 84.9, "holdout": 47.8, "holdout_sum": 55.6, "total": 69.4, "par_graine": [85.7, 81.0, 88.1]}
+TS c32768-Q8_0 34.0 [31.2, 36.4, 34.4]
+BENCH_C_DONE
+SCORE c65536-Q8_0 {"tune": 88.9, "tune_sum": 88.9, "holdout": 76.1, "holdout_sum": 86.8, "total": 83.6, "par_graine": [88.1, 85.7, 92.9]}
+TS c65536-Q8_0 37.9 [35.6, 39.0, 39.0]
+SCORE c131072-Q8_0 {"tune": 88.1, "tune_sum": 88.1, "holdout": 61.9, "holdout_sum": 77.4, "total": 77.2, "par_graine": [85.7, 90.5, 88.1]}
+TS c131072-Q8_0 35.0 [31.5, 34.8, 38.7]
+BENCH_C2_DONE

@@ -1,0 +1,6 @@
+[
+  {"label": "b400", "maxc": 400, "model": "/mnt/backup-hdd/stephbench-tmp/models/Qwen3.5-0.8B-Q4_K_M.gguf", "modeltag": "qwen", "profile": "p1", "opts": {}, "note": "budget 400, defaut sinon"},
+  {"label": "b600", "maxc": 600, "model": "/mnt/backup-hdd/stephbench-tmp/models/Qwen3.5-0.8B-Q4_K_M.gguf", "modeltag": "qwen", "profile": "p1", "opts": {}, "note": "budget 600, defaut sinon"},
+  {"label": "b800", "maxc": 800, "model": "/mnt/backup-hdd/stephbench-tmp/models/Qwen3.5-0.8B-Q4_K_M.gguf", "modeltag": "qwen", "profile": "p1", "opts": {}, "note": "budget 800, defaut sinon (repere connu)"},
+  {"label": "b1200", "maxc": 1200, "model": "/mnt/backup-hdd/stephbench-tmp/models/Qwen3.5-0.8B-Q4_K_M.gguf", "modeltag": "qwen", "profile": "p1", "opts": {}, "note": "budget 1200, defaut sinon"}
+]

@@ -1,0 +1,56 @@
+{
+ "label": "N4_piper_gilles-low",
+ "engine": "piper",
+ "model": "fr_FR-gilles-low.onnx",
+ "threads": 6,
+ "load_s": 0.82,
+ "first_audio_longest": 0.047,
+ "first_audio_median": 0.053,
+ "rtf_median": 0.020999999999999998,
+ "rtf_max": 0.026,
+ "ram_peak_mb": 260,
+ "rows": [
+  {
+   "text": "Erreur 1 : cat: /nope : aucun fichier ou dossier de ce nom.",
+   "first_audio": 0.153,
+   "synth": 0.153,
+   "audio_s": 6.5,
+   "rtf": 0.024
+  },
+  {
+   "text": "Erreur TypeScript : la propriété titel n'existe pas, utilisez title.",
+   "first_audio": 0.108,
+   "synth": 0.108,
+   "audio_s": 4.91,
+   "rtf": 0.022
+  },
+  {
+   "text": "En cours : mise à jour des paquets. 35 pour cent, décompression de vim-common. Terminé en 1 minute 24. 12 paquets mis à jour.",
+   "first_audio": 0.047,
+   "synth": 0.198,
+   "audio_s": 10.69,
+   "rtf": 0.019
+  },
+  {
+   "text": "Question : il est nécessaire de prendre 24 Mo. Souhaitez-vous continuer ? Oui ou non, oui par défaut.",
+   "first_audio": 0.059,
+   "synth": 0.137,
+   "audio_s": 7.36,
+   "rtf": 0.019
+  },
+  {
+   "text": "OK.",
+   "first_audio": 0.02,
+   "synth": 0.02,
+   "audio_s": 0.78,
+   "rtf": 0.026
+  },
+  {
+   "text": "Commande introuvable.",
+   "first_audio": 0.029,
+   "synth": 0.029,
+   "audio_s": 1.44,
+   "rtf": 0.02
+  }
+ ]
+}

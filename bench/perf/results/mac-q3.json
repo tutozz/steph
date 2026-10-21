@@ -1,0 +1,431 @@
+{
+  "host": [
+    "Darwin",
+    "mac.local",
+    "27.0.0",
+    "Darwin Kernel Version 27.0.0: Wed Aug  5 22:03:55 PDT 2026; root:xnu-13432.1.6.501.1~1/RELEASE_ARM64_T6030",
+    "arm64"
+  ],
+  "started_at": 1790568578.9006531,
+  "steph_cmd": [
+    "/Users/user/.local/bin/steph"
+  ],
+  "cold": {
+    "scenario": "froid",
+    "prewarm": false,
+    "commands": {
+      "courte": {
+        "cmd": "pwd",
+        "t_send": 1790568581.539592,
+        "t_cmd_end": 1790568581.5718641,
+        "t_first_sound": 1790568581.733855,
+        "t_speech_end": 1790568584.879828,
+        "latency_cmdend_to_sound_s": 0.16199088096618652,
+        "latency_sound_duration_s": 3.145972967147827
+      },
+      "longue": {
+        "cmd": "sleep 6 && echo fini",
+        "t_send": 1790568584.880575,
+        "t_cmd_end": 1790568590.955522,
+        "t_first_sound": 1790568590.986222,
+        "t_speech_end": 1790568592.373019,
+        "latency_cmdend_to_sound_s": 0.030699968338012695,
+        "latency_sound_duration_s": 1.3867969512939453
+      },
+      "erreur": {
+        "cmd": "ls /chemin/totalement/inexistant/xyz",
+        "t_send": 1790568592.373985,
+        "t_cmd_end": 1790568592.4089081,
+        "t_first_sound": 1790568592.431647,
+        "t_speech_end": 1790568594.0790458,
+        "latency_cmdend_to_sound_s": 0.022738933563232422,
+        "latency_sound_duration_s": 1.6473987102508545
+      },
+      "resolue_code": {
+        "cmd": "git status",
+        "t_send": 1790568594.079956,
+        "t_cmd_end": 1790568594.2292612,
+        "t_first_sound": 1790568594.3351748,
+        "t_speech_end": 1790568596.2045069,
+        "latency_cmdend_to_sound_s": 0.10591363906860352,
+        "latency_sound_duration_s": 1.8693320751190186
+      },
+      "modele": {
+        "cmd": "find /Applications -maxdepth 1 -type d | head -40",
+        "t_send": 1790568596.205358,
+        "t_cmd_end": 1790568596.2800589,
+        "t_first_sound": 1790568596.3703418,
+        "t_speech_end": 1790568598.534498,
+        "latency_cmdend_to_sound_s": 0.09028291702270508,
+        "latency_sound_duration_s": 2.164156198501587
+      }
+    },
+    "boot": {
+      "t_launch": 1790568578.902571,
+      "t_first_sound": 1790568580.180325,
+      "t_speech_end": 1790568581.538039,
+      "latency_launch_to_sound": 1.2777540683746338,
+      "latency_sound_duration": 1.3577139377593994,
+      "llm_healthy_after_s": 0.0008499622344970703
+    },
+    "weights_after_commands": {
+      "steph_cpu_pct": {
+        "peak": 0.1,
+        "avg": 0.025
+      },
+      "steph_rss_mb": {
+        "peak": 36.3125,
+        "avg": 36.3125
+      },
+      "llama_cpu_pct": {
+        "peak": 0.4,
+        "avg": 0.325
+      },
+      "llama_rss_mb": {
+        "peak": 446.203125,
+        "avg": 446.203125
+      }
+    },
+    "voice_service_exited_cleanly": true
+  },
+  "warm": {
+    "scenario": "chaud",
+    "prewarm": true,
+    "commands": {
+      "courte": {
+        "cmd": "pwd",
+        "t_send": 1790568605.858418,
+        "t_cmd_end": 1790568605.900079,
+        "t_first_sound": 1790568605.98953,
+        "t_speech_end": 1790568609.403771,
+        "latency_cmdend_to_sound_s": 0.08945107460021973,
+        "latency_sound_duration_s": 3.414240837097168
+      },
+      "longue": {
+        "cmd": "sleep 6 && echo fini",
+        "t_send": 1790568609.4044642,
+        "t_cmd_end": 1790568615.4498339,
+        "t_first_sound": 1790568615.4734561,
+        "t_speech_end": 1790568616.852633,
+        "latency_cmdend_to_sound_s": 0.02362227439880371,
+        "latency_sound_duration_s": 1.3791768550872803
+      },
+      "erreur": {
+        "cmd": "ls /chemin/totalement/inexistant/xyz",
+        "t_send": 1790568616.853546,
+        "t_cmd_end": 1790568616.8855941,
+        "t_first_sound": 1790568616.90861,
+        "t_speech_end": 1790568618.5380962,
+        "latency_cmdend_to_sound_s": 0.023015975952148438,
+        "latency_sound_duration_s": 1.629486083984375
+      },
+      "resolue_code": {
+        "cmd": "git status",
+        "t_send": 1790568618.539127,
+        "t_cmd_end": 1790568618.613329,
+        "t_first_sound": 1790568618.837567,
+        "t_speech_end": 1790568620.710488,
+        "latency_cmdend_to_sound_s": 0.22423815727233887,
+        "latency_sound_duration_s": 1.8729209899902344
+      },
+      "modele": {
+        "cmd": "find /Applications -maxdepth 1 -type d | head -40",
+        "t_send": 1790568620.7115252,
+        "t_cmd_end": 1790568620.7460659,
+        "t_first_sound": 1790568620.8425658,
+        "t_speech_end": 1790568622.9986129,
+        "latency_cmdend_to_sound_s": 0.09649991989135742,
+        "latency_sound_duration_s": 2.1560471057891846
+      }
+    },
+    "prewarm_wait_s": 0.716256856918335,
+    "boot": {
+      "t_launch": 1790568603.7034812,
+      "t_first_sound": 1790568604.410506,
+      "t_speech_end": 1790568605.857356,
+      "latency_launch_to_sound": 0.7070248126983643,
+      "latency_sound_duration": 1.446850061416626,
+      "llm_healthy_after_s": 0.0006620883941650391
+    },
+    "weights_after_commands": {
+      "steph_cpu_pct": {
+        "peak": 0.1,
+        "avg": 0.025
+      },
+      "steph_rss_mb": {
+        "peak": 33.328125,
+        "avg": 33.328125
+      },
+      "llama_cpu_pct": {
+        "peak": 0.0,
+        "avg": 0.0
+      },
+      "llama_rss_mb": {
+        "peak": 447.84375,
+        "avg": 447.84375
+      }
+    },
+    "voice_service_exited_cleanly": true
+  },
+  "idle": {
+    "minutes": 5.0,
+    "before": {
+      "steph_rss_mb": 33.25,
+      "llama_rss_mb": 515.703125
+    },
+    "during": {
+      "steph_cpu_pct": {
+        "peak": 0.1,
+        "avg": 0.016666666666666666
+      },
+      "steph_rss_mb": {
+        "peak": 33.25,
+        "avg": 24.985416666666666
+      },
+      "llama_cpu_pct": {
+        "peak": 0.7,
+        "avg": 0.3566666666666667
+      },
+      "llama_rss_mb": {
+        "peak": 515.703125,
+        "avg": 418.30572916666665
+      }
+    },
+    "after": {
+      "steph_rss_mb": 14.90625,
+      "llama_rss_mb": 334.640625,
+      "voice_rss_mb": 88.84375
+    }
+  },
+  "idle_unload": {
+    "with_anticipation": {
+      "idle_unload_minutes": 0.2,
+      "anticipate": true,
+      "error": "TypeError(\"wait_boot_sound() missing 1 required positional argument: 'runtime_dir'\")"
+    },
+    "without_anticipation": {
+      "idle_unload_minutes": 0.2,
+      "anticipate": false,
+      "error": "TypeError(\"wait_boot_sound() missing 1 required positional argument: 'runtime_dir'\")"
+    }
+  },
+  "multiwindow": {
+    "1": {
+      "n": 1,
+      "latency_cmdend_to_sound_s": [
+        0.17739176750183105
+      ],
+      "latency_by_window_s": [
+        0.17739176750183105
+      ],
+      "active_window_latency_s": 0.17739176750183105,
+      "windows_heard": 1,
+      "speech_span_s": 5.2313392162323,
+      "tick_s_avg": 0.08227618627770003,
+      "overlap_fraction": 0.0,
+      "overlap_of_speech_fraction": 0.0,
+      "cpu_total_pct": {
+        "peak": 340.1,
+        "avg": 29.290697674418606
+      },
+      "rss_total_mb_peak": 252.265625,
+      "weights": {
+        "steph_cpu_pct": {
+          "peak": 0.1,
+          "avg": 0.025
+        },
+        "steph_rss_mb": {
+          "peak": 33.3125,
+          "avg": 33.3125
+        },
+        "llama_cpu_pct": {
+          "peak": 0.5,
+          "avg": 0.42500000000000004
+        },
+        "llama_rss_mb": {
+          "peak": 539.234375,
+          "avg": 539.234375
+        }
+      },
+      "llama_rss_mb_total": 539.234375,
+      "steph_rss_mb_sum": 33.3125,
+      "voice_rss_mb": 218.953125,
+      "steph_plus_voice_rss_mb": 252.265625,
+      "voice_service_exited_cleanly": true
+    },
+    "2": {
+      "n": 2,
+      "latency_cmdend_to_sound_s": [
+        5.539963722229004,
+        0.08180403709411621
+      ],
+      "latency_by_window_s": [
+        5.539963722229004,
+        0.08180403709411621
+      ],
+      "active_window_latency_s": 0.08180403709411621,
+      "windows_heard": 2,
+      "speech_span_s": 11.613107919692993,
+      "tick_s_avg": 0.08259862882119638,
+      "overlap_fraction": 0.0,
+      "overlap_of_speech_fraction": 0.0,
+      "cpu_total_pct": {
+        "peak": 358.3,
+        "avg": 15.669753086419753
+      },
+      "rss_total_mb_peak": 287.671875,
+      "weights": {
+        "steph_cpu_pct": {
+          "peak": 0.1,
+          "avg": 0.025
+        },
+        "steph_rss_mb": {
+          "peak": 33.140625,
+          "avg": 33.140625
+        },
+        "llama_cpu_pct": {
+          "peak": 0.4,
+          "avg": 0.325
+        },
+        "llama_rss_mb": {
+          "peak": 540.15625,
+          "avg": 540.15625
+        }
+      },
+      "llama_rss_mb_total": 540.15625,
+      "steph_rss_mb_sum": 66.5625,
+      "voice_rss_mb": 221.109375,
+      "steph_plus_voice_rss_mb": 287.671875,
+      "voice_service_exited_cleanly": true
+    },
+    "4": {
+      "n": 4,
+      "latency_cmdend_to_sound_s": [
+        12.119939088821411,
+        5.493836164474487,
+        18.191375255584717,
+        0.08816409111022949
+      ],
+      "latency_by_window_s": [
+        12.119939088821411,
+        5.493836164474487,
+        18.191375255584717,
+        0.08816409111022949
+      ],
+      "active_window_latency_s": 0.08816409111022949,
+      "windows_heard": 4,
+      "speech_span_s": 25.057760000228882,
+      "tick_s_avg": 0.08298337201215904,
+      "overlap_fraction": 0.0,
+      "overlap_of_speech_fraction": 0.0,
+      "cpu_total_pct": {
+        "peak": 336.7,
+        "avg": 12.171826625386997
+      },
+      "rss_total_mb_peak": 355.6875,
+      "weights": {
+        "steph_cpu_pct": {
+          "peak": 0.1,
+          "avg": 0.025
+        },
+        "steph_rss_mb": {
+          "peak": 33.078125,
+          "avg": 33.078125
+        },
+        "llama_cpu_pct": {
+          "peak": 0.4,
+          "avg": 0.325
+        },
+        "llama_rss_mb": {
+          "peak": 520.171875,
+          "avg": 520.171875
+        }
+      },
+      "llama_rss_mb_total": 520.171875,
+      "steph_rss_mb_sum": 132.6875,
+      "voice_rss_mb": 223.0,
+      "steph_plus_voice_rss_mb": 355.6875,
+      "voice_service_exited_cleanly": true
+    },
+    "8": {
+      "n": 8,
+      "latency_cmdend_to_sound_s": [
+        47.34036827087402,
+        12.503345251083374,
+        33.75002908706665,
+        19.550586223602295,
+        5.498035907745361,
+        26.646297216415405,
+        40.78804612159729,
+        0.09514594078063965
+      ],
+      "latency_by_window_s": [
+        47.34036827087402,
+        12.503345251083374,
+        33.75002908706665,
+        19.550586223602295,
+        5.498035907745361,
+        26.646297216415405,
+        40.78804612159729,
+        0.09514594078063965
+      ],
+      "active_window_latency_s": 0.09514594078063965,
+      "windows_heard": 8,
+      "speech_span_s": 53.671656370162964,
+      "tick_s_avg": 0.08414430611050364,
+      "overlap_fraction": 0.0,
+      "overlap_of_speech_fraction": 0.0,
+      "cpu_total_pct": {
+        "peak": 354.9,
+        "avg": 9.626251896813354
+      },
+      "rss_total_mb_peak": 488.46875,
+      "weights": {
+        "steph_cpu_pct": {
+          "peak": 0.0,
+          "avg": 0.0
+        },
+        "steph_rss_mb": {
+          "peak": 33.03125,
+          "avg": 33.03125
+        },
+        "llama_cpu_pct": {
+          "peak": 0.4,
+          "avg": 0.325
+        },
+        "llama_rss_mb": {
+          "peak": 519.140625,
+          "avg": 518.7890625
+        }
+      },
+      "llama_rss_mb_total": 518.671875,
+      "steph_rss_mb_sum": 241.96875,
+      "voice_rss_mb": 201.828125,
+      "steph_plus_voice_rss_mb": 443.796875,
+      "voice_service_exited_cleanly": true
+    }
+  },
+  "disk": {
+    "install_uv_tool_mb": null,
+    "models_mb": 3194.34765625,
+    "voices_mb": 60.28515625,
+    "config_kb": 0,
+    "disk_free_gb": 14.696151733398438
+  },
+  "log_growth": {
+    "steph.log": {
+      "size_bytes": 65647,
+      "span_hours_observed": 60.61,
+      "avg_bytes_per_hour": 1083.1,
+      "note": "moyenne sur l'historique du fichier, pas une mesure controlee sur 1h"
+    },
+    "llama-server.log": {
+      "size_bytes": 108381,
+      "span_hours_observed": 57.8,
+      "avg_bytes_per_hour": 1875.0,
+      "note": "moyenne sur l'historique du fichier, pas une mesure controlee sur 1h"
+    }
+  },
+  "mem_free_mb_end": 255.33203125,
+  "finished_at": 1790569134.166527
+}

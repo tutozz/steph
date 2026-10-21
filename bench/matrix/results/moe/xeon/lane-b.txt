@@ -1,0 +1,1 @@
+r1-v1.0 /root/steph-ft/g6/in/x1judge/gguf/r1-v1.0-Q4_K_M.gguf ft

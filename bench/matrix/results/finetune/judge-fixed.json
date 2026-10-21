@@ -1,0 +1,449 @@
+{
+  "meta": {
+    "juge": "Qwen3.5-9B-Q4_K_M sur rtx3060 (RTX 3060, llama-server Vulkan, jinja, enable_thinking=false, temperature=0) - même serveur et même prompt que la passe 1",
+    "methode": "2 passes par cas (ordre et formulation du prompt différents) ; invention si les 2 passes s'accordent, douteux si une seule.",
+    "validation_juge": "6/6 cas de contrôle corrects sur les 2 passes, revérifié avant ce run (voir docs/judge-a7.md)",
+    "plancher": "au plus 1 cas sur 36 avec un fait inventé",
+    "contexte": "étiquettes d'entraînement corrigées par bench/matrix/finetune/fix_labels.py (retrait des numéros de ligne inventés par l'enseignant) ; comparaison avec le Qwen non corrigé sur le même serveur"
+  },
+  "par_modele": {
+    "rtx3060-qwen3.5-0.8b-fixed-ft.json": {
+      "label": "Qwen3.5 0.8B corrigé (Q4_K_M)",
+      "n_total": 36,
+      "n_hors_qa": 33,
+      "invention_sur_36": 3,
+      "invention_sur_33": 3,
+      "douteux_sur_36": 3,
+      "douteux_sur_33": 2,
+      "erreurs": 0,
+      "plancher_ok_36": false,
+      "categories_inventions": {
+        "ligne": 1,
+        "nombre": 0,
+        "statut": 1,
+        "nom": 1,
+        "autre": 0
+      },
+      "cas_inventions": [
+        {
+          "id": "fx06@1500",
+          "kind": "summary",
+          "phrase": "Échec. main ligne 21 : expected expression before ; token.",
+          "categorie": "ligne",
+          "note": "colonne 21 confondue avec un numéro de ligne (source : <stdin>:1:21, donc ligne 1)",
+          "pass_A": [
+            "main",
+            "ligne 21"
+          ],
+          "pass_B": [
+            "main",
+            "ligne 21"
+          ]
+        },
+        {
+          "id": "fx08@1500",
+          "kind": "summary",
+          "phrase": "18 éléments : pipewire.service, pipewire.socket, mod.raop-sink.",
+          "categorie": "nom",
+          "note": "« mod.raop-sink » absent de la liste réelle des unités pipewire",
+          "pass_A": [
+            "18 éléments : pipewire.socket"
+          ],
+          "pass_B": [
+            "18 éléments : pipewire.service, pipewire.socket, mod.raop-sink."
+          ]
+        },
+        {
+          "id": "fx29@1500",
+          "kind": "summary",
+          "phrase": "Échec. Sortie vide, aucun matériel détecté.",
+          "categorie": "statut",
+          "note": "« Échec, aucun matériel détecté » alors que lspci réussit et liste le matériel",
+          "pass_A": [
+            "Échec",
+            "Sortie vide",
+            "aucun matériel détecté"
+          ],
+          "pass_B": [
+            "Sortie vide",
+            "aucun matériel détecté"
+          ]
+        }
+      ],
+      "cas_douteux": [
+        {
+          "id": "fx22@1500",
+          "kind": "summary",
+          "phrase": "9 conteneurs : shopapp_api, shopapp_nginx_admin, shopapp_vault.",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        },
+        {
+          "id": "fx27@1500",
+          "kind": "summary",
+          "phrase": "Échec. Header.tsx ligne 42 : Property 'titel' does not exist on type 'Props'.",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        },
+        {
+          "id": "qa2",
+          "kind": "qa",
+          "phrase": "Échec. Header.tsx ligne 42 : Property 'titel' introuvable sur type Props.",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        }
+      ]
+    },
+    "opt-best-granite.json": {
+      "label": "Granite 350M G19 corrigé (Q8_0, seed s42)",
+      "n_total": 36,
+      "n_hors_qa": 33,
+      "invention_sur_36": 11,
+      "invention_sur_33": 9,
+      "douteux_sur_36": 5,
+      "douteux_sur_33": 4,
+      "erreurs": 0,
+      "plancher_ok_36": false,
+      "categories_inventions": {
+        "ligne": 1,
+        "nombre": 2,
+        "statut": 1,
+        "nom": 3,
+        "autre": 4
+      },
+      "cas_inventions": [
+        {
+          "id": "fx00@1500",
+          "kind": "summary",
+          "phrase": "37 éléments : abrt, adjtime, aliases. Anv. 2026 chromium. anv. 2025 chrony.conf.",
+          "categorie": "nom",
+          "note": "noms de fichiers et dates fabriqués, absents de la sortie ls -la /etc",
+          "pass_A": [
+            "anv. 2026 chromium",
+            "anv. 2025 chrony.conf"
+          ],
+          "pass_B": [
+            "anv. 2026 chromium",
+            "anv. 2025 chrony.conf"
+          ]
+        },
+        {
+          "id": "fx06@1500",
+          "kind": "summary",
+          "phrase": "Échec. main ligne inconnue : expect expression before ';' token.",
+          "categorie": "ligne",
+          "note": "« ligne inconnue » alors que la sortie donne <stdin>:1:21 (ligne 1)",
+          "pass_A": [
+            "main ligne inconnue"
+          ],
+          "pass_B": [
+            "main",
+            "ligne inconnue",
+            "expect expression before ';' token"
+          ]
+        },
+        {
+          "id": "fx08@1500",
+          "kind": "summary",
+          "phrase": "18 éléments : pipewire.service désactivé, pipewire.socket connexion réussie.",
+          "categorie": "statut",
+          "note": "« pipewire.service désactivé » alors que le service est chargé/actif dans la sortie",
+          "pass_A": [
+            "pipewire.socket connexion réussie"
+          ],
+          "pass_B": [
+            "pipewire.socket connexion réussie"
+          ]
+        },
+        {
+          "id": "fx07@1500",
+          "kind": "summary",
+          "phrase": "Mémoire 31G total, 6,6G disponibles. Swap 8G total, 72K disponibles.",
+          "categorie": "nombre",
+          "note": "confond la mémoire utilisée (6,6G / 72Ki) avec la mémoire disponible (24Gi / 8,0Gi)",
+          "pass_A": [
+            "6,6G disponibles (la sortie indique 24Gi disponibles)",
+            "72K disponibles (la sortie indique 8,0Gi disponibles)"
+          ],
+          "pass_B": [
+            "6,6G disponibles (la sortie indique 6,6Gi utilisés, pas disponibles)",
+            "72K disponibles (la sortie indique 72Ki utilisés, pas disponibles)"
+          ]
+        },
+        {
+          "id": "fx19@1500",
+          "kind": "summary",
+          "phrase": "10 éléments : OLD_SHOPAPP 12G, install-iso 7.9G, shopapp 2.4G.",
+          "categorie": "nom",
+          "note": "« install-iso » pour « installer-iso »",
+          "pass_A": [
+            "nom du fichier 'install-iso' au lieu de 'installer-iso'"
+          ],
+          "pass_B": [
+            "install-iso"
+          ]
+        },
+        {
+          "id": "fx25@1500",
+          "kind": "summary",
+          "phrase": "Échec. nginx : lock frontend inconnu, autres utilisateurs.",
+          "categorie": "autre",
+          "note": "cause fabriquée (« autres utilisateurs ») au lieu du PID réel du verrou",
+          "pass_A": [
+            "lock frontend inconnu",
+            "autres utilisateurs"
+          ],
+          "pass_B": [
+            "lock frontend inconnu",
+            "autres utilisateurs"
+          ]
+        },
+        {
+          "id": "fx27@1500",
+          "kind": "summary",
+          "phrase": "Échec. Header.tsx ligne 42 : titre inexistant, TypeScript.",
+          "categorie": "autre",
+          "note": "cause reformulée à côté du sens réel (« titre inexistant » au lieu de « propriété titel absente, utiliser title »)",
+          "pass_A": [
+            "Header.tsx",
+            "titre inexistant"
+          ],
+          "pass_B": [
+            "Header.tsx"
+          ]
+        },
+        {
+          "id": "fx28@1500",
+          "kind": "summary",
+          "phrase": "Échec. main -> main : rejeté, nécessite paquetage local.",
+          "categorie": "autre",
+          "note": "cause fabriquée (« nécessite paquetage local ») au lieu de « fetch first »",
+          "pass_A": [
+            "nécessite paquetage local"
+          ],
+          "pass_B": [
+            "nécessite paquetage local"
+          ]
+        },
+        {
+          "id": "fx24@1500",
+          "kind": "summary",
+          "phrase": "Succès. 84,2s, 19 lignes. curl libcurl4 openssl libre openssl linux-libc-dev tzdata vim vim-common xxd python3.11 debian bookworm main amd64 wget http deb archive apache nginx phpnginx mysql postgres redis git bash dev tools man-db libc-bin triggers Apache systemd",
+          "categorie": "nom",
+          "note": "liste de paquets et technologies entièrement fabriquée, sans rapport avec la sortie apt upgrade",
+          "pass_A": [
+            "libre openssl",
+            "debian bookworm main amd64 wget http deb archive apache nginx phpnginx mysql postgres redis git bash dev tools man-db libc-bin triggers Apache systemd"
+          ],
+          "pass_B": [
+            "libre",
+            "debian",
+            "wget",
+            "http",
+            "deb",
+            "archive",
+            "apache",
+            "nginx",
+            "phpnginx",
+            "mysql",
+            "postgres",
+            "redis",
+            "git",
+            "bash",
+            "dev",
+            "tools",
+            "Apache",
+            "systemd"
+          ]
+        },
+        {
+          "id": "qa1",
+          "kind": "qa",
+          "phrase": "Échec. src/components/Header.tsx ligne 42 : titel inexistant, type Prop.",
+          "categorie": "autre",
+          "note": "répond hors sujet : recopie l'erreur de build au lieu de répondre à la question sur l'espace disque",
+          "pass_A": [
+            "Échec"
+          ],
+          "pass_B": [
+            "titel inexistant"
+          ]
+        },
+        {
+          "id": "qa2",
+          "kind": "qa",
+          "phrase": "Python 3.11 installé.",
+          "categorie": "nombre",
+          "note": "version Python fabriquée, aucune commande Python dans l'historique",
+          "pass_A": [
+            "Python 3.11 installé"
+          ],
+          "pass_B": [
+            "Python 3.11"
+          ]
+        }
+      ],
+      "cas_douteux": [
+        {
+          "id": "fx05@1500",
+          "kind": "summary",
+          "phrase": "Ping 127.0.0.1 : 3 paquets envoyés, 3 reçus, 0 perte, temps moyen 0.024 ms.",
+          "pass_A": "ok",
+          "pass_B": "invention"
+        },
+        {
+          "id": "fx04@1500",
+          "kind": "summary",
+          "phrase": "Échec. Ligne 1 : KeyError key.",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        },
+        {
+          "id": "fx09@1500",
+          "kind": "summary",
+          "phrase": "8 éléments : def __init__(self, cfg: Config), def healthy(self) -> bool, def ensure_server(self).",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        },
+        {
+          "id": "fx22@1500",
+          "kind": "summary",
+          "phrase": "9 conteneurs : shopapp_api, shopapp_nginx_admin, shopapp_vault.",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        },
+        {
+          "id": "qa0",
+          "kind": "qa",
+          "phrase": "Échec. src/components/Header.tsx ligne 42 : titel inexistant, utiliser titre title.",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        }
+      ]
+    },
+    "rtx3060-qwen3.5-0.8b-full-ft.json": {
+      "label": "Qwen3.5 0.8B non corrigé (comparaison, sortie GPU)",
+      "n_total": 36,
+      "n_hors_qa": 33,
+      "invention_sur_36": 5,
+      "invention_sur_33": 5,
+      "douteux_sur_36": 5,
+      "douteux_sur_33": 3,
+      "erreurs": 0,
+      "plancher_ok_36": false,
+      "categories_inventions": {
+        "ligne": 5,
+        "nombre": 0,
+        "statut": 0,
+        "nom": 0,
+        "autre": 0
+      },
+      "cas_inventions": [
+        {
+          "id": "fx03@1500",
+          "kind": "summary",
+          "phrase": "Échec. cat ligne 1 : fichier inexistant.",
+          "categorie": "ligne",
+          "note": "aucun numéro de ligne dans la sortie cat",
+          "pass_A": [
+            "cat ligne 1"
+          ],
+          "pass_B": [
+            "ligne 1"
+          ]
+        },
+        {
+          "id": "fx06@1500",
+          "kind": "summary",
+          "phrase": "Échec. main ligne 21 : expected expression before ; token.",
+          "categorie": "ligne",
+          "note": "colonne 21 confondue avec un numéro de ligne",
+          "pass_A": [
+            "main",
+            "ligne 21"
+          ],
+          "pass_B": [
+            "main",
+            "ligne 21"
+          ]
+        },
+        {
+          "id": "fx17@1500",
+          "kind": "summary",
+          "phrase": "Échec. /etc/hostname ligne 1 : Permission non accordée.",
+          "categorie": "ligne",
+          "note": "aucun numéro de ligne dans la sortie rm",
+          "pass_A": [
+            "/etc/hostname ligne 1"
+          ],
+          "pass_B": [
+            "ligne 1"
+          ]
+        },
+        {
+          "id": "fx21@1500",
+          "kind": "summary",
+          "phrase": "Échec. /nonexistent ligne 1 : stat impossible.",
+          "categorie": "ligne",
+          "note": "aucun numéro de ligne dans la sortie tar",
+          "pass_A": [
+            "ligne 1"
+          ],
+          "pass_B": [
+            "/nonexistent ligne 1"
+          ]
+        },
+        {
+          "id": "fx25@1500",
+          "kind": "summary",
+          "phrase": "Échec. nginx ligne 1 : verrou /var/lib/dpkg/lock-frontend.",
+          "categorie": "ligne",
+          "note": "aucun numéro de ligne dans la sortie apt (PID de verrou, pas une ligne)",
+          "pass_A": [
+            "nginx ligne 1"
+          ],
+          "pass_B": [
+            "ligne 1"
+          ]
+        }
+      ],
+      "cas_douteux": [
+        {
+          "id": "fx10@1500",
+          "kind": "summary",
+          "phrase": "Échec. curl ligne 1 : résolution hôte impossible.",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        },
+        {
+          "id": "fx22@1500",
+          "kind": "summary",
+          "phrase": "9 conteneurs : shopapp_api, shopapp_nginx_admin, shopapp_vault.",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        },
+        {
+          "id": "fx27@1500",
+          "kind": "summary",
+          "phrase": "Échec. Header.tsx ligne 42 : Property 'titel' inconnue sur type Props.",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        },
+        {
+          "id": "qa1",
+          "kind": "qa",
+          "phrase": "Échec. Header.tsx ligne 42 : propriété 'titel' manquante.",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        },
+        {
+          "id": "qa2",
+          "kind": "qa",
+          "phrase": "Échec. Header.tsx ligne 42 : propriété 'titel' introuvable sur type Props.",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        }
+      ]
+    }
+  }
+}

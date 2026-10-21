@@ -1,0 +1,232 @@
+{
+ "meta": {
+  "juge": "Qwen3.5-9B-Q4_K_M, llama.cpp CUDA sur la RTX 3080 de l'hôte d'entraînement, judge_lib.py identique (md5) à celui des passes A7 à A12, validé 6/6 en passes A et B avant chaque run ; 2 passes, invention si les 2 passes s'accordent",
+  "methode": "DPO + terme SFT sur la réponse choisie (RPO, poids 1), LoRA r16 a32 all-linear neuve sur la soupe uniforme SFT, référence = soupe, 3 époques, lot 16, 4 graines (42, 7, 123, 2024) moyennées en soupe uniforme, GGUF Q4_K_M",
+  "paires": {
+   "verdicts": {
+    "ok": 1159,
+    "invention": 318,
+    "douteux": 115
+   },
+   "train": {
+    "pairs": 305,
+    "prompts": 212,
+    "prompts_total": 1771
+   },
+   "val": {
+    "pairs": 13,
+    "prompts": 9,
+    "prompts_total": 102
+   }
+  },
+  "banc": "36 cas, graines de banc 42, 7, 123, qualité facts.v2.json via rescore.quality ; TermSpeak dev FR, prompt court, 3 graines",
+  "sorties_de_banc": "non commitées : l'audit d'anonymisation relève les valeurs de fixtures (adresses 100.64.x, nom d'hôte) ; elles restent sur l'hôte d'entraînement sous pref/bench/"
+ },
+ "variantes": {
+  "soupe uniforme Q4 (référence)": {
+   "total_v2": 81.9,
+   "total_v2_par_graine": [
+    83.5,
+    77.9,
+    84.2
+   ],
+   "controle_v2": 84.2,
+   "controle_v2_par_graine": [
+    83.7,
+    83.7,
+    85.3
+   ],
+   "inventions_b42": 7,
+   "inventions_moyenne_3_graines": 7.7,
+   "cas_inventes": {
+    "42": [
+     "df_proxmox@1500",
+     "fx02@1500",
+     "fx06@1500",
+     "fx08@1500",
+     "fx24@1500",
+     "fx25@1500",
+     "qa2"
+    ],
+    "7": [
+     "fx02@1500",
+     "fx04@1500",
+     "fx06@1500",
+     "fx13@1500",
+     "fx16@1500",
+     "fx19@1500",
+     "fx22@1500",
+     "fx27@1500",
+     "qa2"
+    ],
+    "123": [
+     "fx02@1500",
+     "fx06@1500",
+     "fx08@1500",
+     "fx19@1500",
+     "fx24@1500",
+     "fx29@1500",
+     "qa2"
+    ]
+   },
+   "douteux": {
+    "42": 6,
+    "7": 3,
+    "123": 3
+   },
+   "termspeak_dev_fr": 39.6,
+   "termspeak_par_graine": [
+    39.1,
+    40.1,
+    39.5
+   ]
+  },
+  "DPO beta 0.1 lr 5e-5": {
+   "total_v2": 83.1,
+   "total_v2_par_graine": [
+    80.3,
+    85.9,
+    83.1
+   ],
+   "controle_v2": 72.8,
+   "controle_v2_par_graine": [
+    72.8,
+    72.8,
+    72.8
+   ],
+   "inventions_b42": 6,
+   "inventions_moyenne_3_graines": 6.0,
+   "cas_inventes": {
+    "42": [
+     "fx06@1500",
+     "fx08@1500",
+     "fx24@1500",
+     "fx27@1500",
+     "fx28@1500",
+     "qa2"
+    ],
+    "7": [
+     "fx06@1500",
+     "fx08@1500",
+     "fx24@1500",
+     "fx27@1500",
+     "fx28@1500",
+     "qa2"
+    ],
+    "123": [
+     "fx06@1500",
+     "fx08@1500",
+     "fx24@1500",
+     "fx27@1500",
+     "fx28@1500",
+     "qa2"
+    ]
+   },
+   "douteux": {
+    "42": 1,
+    "7": 2,
+    "123": 2
+   },
+   "termspeak_dev_fr": 49.3,
+   "termspeak_par_graine": [
+    46.4,
+    51.5,
+    50.1
+   ]
+  },
+  "DPO beta 0.1 lr 1e-5": {
+   "total_v2": 85.9,
+   "total_v2_par_graine": [
+    85.4,
+    86.1,
+    86.1
+   ],
+   "controle_v2": 79.4,
+   "controle_v2_par_graine": [
+    78.3,
+    80.0,
+    80.0
+   ],
+   "inventions_b42": 6,
+   "inventions_moyenne_3_graines": 5.0,
+   "cas_inventes": {
+    "42": [
+     "fx02@1500",
+     "fx06@1500",
+     "fx19@1500",
+     "fx25@1500",
+     "fx29@1500",
+     "qa2"
+    ],
+    "7": [
+     "fx02@1500",
+     "fx06@1500",
+     "fx08@1500",
+     "fx19@1500",
+     "qa2"
+    ],
+    "123": [
+     "fx02@1500",
+     "fx06@1500",
+     "fx19@1500",
+     "qa2"
+    ]
+   },
+   "douteux": {
+    "42": 4,
+    "7": 5,
+    "123": 4
+   },
+   "termspeak_dev_fr": 42.2,
+   "termspeak_par_graine": [
+    43.4,
+    41.5,
+    41.8
+   ]
+  },
+  "DPO beta 0.1 lr 2e-5": {
+   "total_v2": 86.3,
+   "total_v2_par_graine": [
+    85.4,
+    88.2,
+    85.4
+   ],
+   "controle_v2": 85.0,
+   "controle_v2_par_graine": [
+    85.0,
+    85.0,
+    85.0
+   ],
+   "inventions_b42": 3,
+   "inventions_moyenne_3_graines": 3.0,
+   "cas_inventes": {
+    "42": [
+     "fx02@1500",
+     "fx19@1500",
+     "qa2"
+    ],
+    "7": [
+     "fx02@1500",
+     "fx19@1500",
+     "qa2"
+    ],
+    "123": [
+     "fx02@1500",
+     "fx19@1500",
+     "qa2"
+    ]
+   },
+   "douteux": {
+    "42": 6,
+    "7": 3,
+    "123": 4
+   },
+   "termspeak_dev_fr": 41.9,
+   "termspeak_par_graine": [
+    41.4,
+    43.7,
+    40.6
+   ]
+  }
+ }
+}

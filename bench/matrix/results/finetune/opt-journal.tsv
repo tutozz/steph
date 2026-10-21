@@ -1,0 +1,36 @@
+n	modèle	réglage	perte val	tune	tune résumé	durée	note
+1	gemma270m	lora r16 a32 lr2e-4 ep3 Q8_0	0.3229	90.5	90.5	≈370 s	référence
+1-F16	gemma270m	run 1 en F16	0.3229	85.7	85.7	6 s	levier quantification
+1-Q4_K_M	gemma270m	run 1 en Q4_K_M	0.3229	88.1	88.1	7 s	levier quantification
+1-t0	gemma270m	run 1 Q8_0 température 0	0.3229	85.7	85.7	5 s	levier décodage
+1-s7	gemma270m	run 1 Q8_0 graine banc 7	0.3229	88.1	88.1	5 s	bruit du banc
+1-3g	gemma270m	run 1 Q8_0, moyenne 3 graines	0.3229	88.1	88.1	16 s	référence moyennée
+1-F16-3g	gemma270m	run 1 en F16, 3 graines	0.3229	87.3	87.3	16 s	levier quantification
+1-Q4_K_M-3g	gemma270m	run 1 en Q4_K_M, 3 graines	0.3229	86.5	86.5	15 s	levier quantification
+1-t0-3g	gemma270m	run 1 Q8_0 température 0 (déterministe)	0.3229	85.7	85.7	5 s	levier décodage
+1-rp	gemma270m	run 1 Q8_0 repeat_penalty 1.1, 3 graines	0.3229	91.3	91.3	23 s	levier décodage
+2	gemma270m	full (emb gelés) lr5e-5 ep3 Q8_0	0.3246	90.5	90.5	262 s	affinage complet
+3	gemma270m	full lr1e-4 ep4	0.3582	90.2	90.2	351 s	lr plus haut
+4	gemma270m	lora r64 a128 lr2e-4 ep4	?	-	-	-	interrompue, bascule Granite
+5	gemma270m	full lr1e-4 ep4 données nettoyées	?	-	-	-	interrompue, bascule Granite
+G1	granite350m	réf a1000 (lora r16 a32 lr2e-4 ep3, HF Trainer) Q8_0 rp1.1, 3 graines	0.3165	87.3	87.3	≈60 s (banc)	référence ; levier quantification+décodage ; TermSpeak dev FR 42,0 ; signal 64,7 ; ligne inventée 13,0 % interne / 11,6 % TermSpeak
+G1-rp1.0	granite350m	réf a1000 Q8_0 sans repeat_penalty, 3 graines	0.3165	85.7	85.7	≈50 s (banc)	rp 1.1 : +1,6, gardé comme réglage de banc
+G2	granite350m	lora r16 a32 lr2e-4 ep3 all-linear (train.py : poids fp32, meilleur état) Q8_0 rp1.1	0.2924	92.9	92.9	≈560 s	référence rejouée ; nouvelle référence (+5,6 sur G1) ; TermSpeak dev FR 46,6 ; signal 69,8 ; ligne inventée 17,6 % / 16,3 %
+G3	granite350m	lora r16 a32 lr1e-4 ep3 all-linear (a1000)	0.3018	92.9	92.9	≈1100 s + banc	levier lr : égal, perte val moins bonne ; TermSpeak dev FR 40,0 ; signal 66,5
+G4	granite350m	lora r16 a32 lr3e-4 ep3 all-linear	0.2877	97.6	97.6	≈570 s	levier lr : +4,7, nouvelle meilleure ; TermSpeak dev FR 49,7 ; signal 73,7 ; ligne inventée 19,4 % / 20,2 %
+G6	granite350m	lora r16 a32 lr3e-4 ep3, données fixline (564 « ligne N » inventés retirés, 7 étiquettes >20 mots retirées)	0.3852	92.1	92.1	≈560 s	levier données : perte val biaisée (val garde les « ligne N ») ; TermSpeak dev FR 41,5 ; signal 66,8, pas de gain ; ligne inventée 0 % / 0,8 %
+G5	granite350m	lora r16 a32 lr5e-4 ep3 all-linear (a1000)	0.2870	97.6	97.6	≈1050 s + banc	levier lr : TermSpeak dev FR 45,0 ; signal 71,3, pas de gain sur G4
+G7	granite350m	lora r32 a64 lr3e-4 ep3 all-linear	0.2967	97.6	97.6	≈540 s	levier rang : TermSpeak dev FR 45,0 ; signal 71,3, pas de gain
+G9	granite350m	G4 rejouée, graine d entraînement 7	0.2830	97.6	97.6	≈560 s	bruit d entraînement : TermSpeak dev FR 37,0 contre 49,7 pour G4 (même réglage) ; signal 67,3 ; ligne inventée 16,7 % / 16,3 %
+G8	granite350m	lora r16 a32 lr3e-4 ep3 attention+MLP seules, sans in_proj/out_proj Mamba (a1000)	0.3023	92.5	92.5	≈860 s + banc	levier cibles : TermSpeak dev FR 43,3 ; signal 67,9, pas de gain ; ligne inventée 17,6 %
+G10	granite350m	full lr5e-5 ep3 (emb gelés)	?	-	-	-	coupée à l époque 1,75 (val 0,37) : priorité aux données corrigées
+G11	granite350m	G4 rejouée, graine 123 (a1000)	?	-	-	-	coupée : priorité aux données corrigées
+G12	granite350m	lora r16 a32 lr2e-4 ep3 all-linear, mix-fixed (fix_labels : 917 corrigées, 64 écartées ; train 2014 / val 119)	0.2746	90.5	90.5	≈520 s	données corrigées : TermSpeak dev FR 43,0 ; signal 66,8 ; ligne inventée 0 % / 0 % (contre 17,6 % / 16,3 % pour G2) ; perte val sur la val corrigée, non comparable
+G12-Q4	granite350m	G12 en Q4_K_M (222 Mo contre 366 Mo en Q8_0)	0.2746	85.4	85.4	≈120 s (banc)	quantification : TermSpeak dev FR 45,1 ; signal 65,3 ; ligne inventée 0 % / 0 % ; Q8_0 gardé
+G14	granite350m	G12 rejouée graine 7 (mix-fixed lr2e-4)	0.2838	95.2	95.2	≈560 s	bruit d entraînement, données corrigées : TermSpeak dev FR 49,2 ; signal 72,2 ; ligne inventée 0 % / 3,9 %
+G13	granite350m	lora r16 a32 lr3e-4 ep3 all-linear, mix-fixed (a1000)	0.2704	95.2	95.2	≈1040 s + banc	données corrigées + lr : TermSpeak dev FR 42,0 ; signal 68,6 ; ligne inventée 0 % / 1,6 %
+G16	granite350m	mix-fixed lr2e-4 ep3 NEFTune 5	0.2786	95.7	95.7	≈540 s	levier NEFTune : TermSpeak dev FR 44,6 ; signal 70,2 ; ligne inventée 0 % / 0,8 % ; pas de gain
+G15	granite350m	G13 rejouée graine 7 (mix-fixed lr3e-4, a1000)	0.2751	88.1	88.1	≈1020 s + banc	bruit : TermSpeak dev FR 41,3 ; signal 64,7 ; ligne inventée 0 % / 0 % ; lr3e-4 moyenne 2 graines 66,7 contre 69,5 pour lr2e-4
+G17	granite350m	lora r16 a32 lr2e-4 ep3, mix-fixed plafond 250 (train 2207, val mix-fixed)	0.2710	91.3	91.3	≈640 s	levier données plafond : TermSpeak dev FR 42,5 ; signal 66,9 ; ligne inventée 0,9 % / 2,3 % ; pas de gain
+G19	granite350m	G12 rejouée graine 123 (mix-fixed lr2e-4)	0.2822	92.1	92.1	≈540 s	bruit, données corrigées : TermSpeak dev FR 48,8 ; signal 70,5 ; ligne inventée 0 % / 3,1 % ; recette mix-fixed lr2e-4 sur 3 graines : signal 69,8 ; retenue (holdout résumé 75,4)
+G18	granite350m	lora r32 a64 lr2e-4 ep3 all-linear, mix-fixed (a1000)	0.2786	93.7	93.7	≈1040 s + banc	levier rang, données corrigées : TermSpeak dev FR 41,0 ; signal 67,4 ; ligne inventée 0 % / 2,3 % ; 6e itération sans gain : arrêt

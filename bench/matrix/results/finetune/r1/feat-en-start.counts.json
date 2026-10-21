@@ -1,0 +1,13 @@
+{
+  "machine": "start-en",
+  "judged": 191,
+  "verdicts": {
+    "ok": 174,
+    "douteux": 11,
+    "invention": 6
+  },
+  "rejected": 6,
+  "categories": {
+    "cause": 6
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "machine": "rtx3060-en",
+  "judged": 526,
+  "verdicts": {
+    "ok": 487,
+    "invention": 25,
+    "douteux": 14
+  },
+  "rejected": 25,
+  "categories": {
+    "ligne": 11,
+    "nombre": 10,
+    "statut": 3,
+    "cause": 2,
+    "nom": 2
+  }
+}

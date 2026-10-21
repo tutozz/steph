@@ -1,0 +1,10 @@
+{
+  "machine": "h3a-progress",
+  "judged": 140,
+  "verdicts": {
+    "ok": 135,
+    "douteux": 5
+  },
+  "rejected": 0,
+  "categories": {}
+}

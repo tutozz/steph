@@ -1,0 +1,271 @@
+{
+  "version": 1,
+  "measured_on": "serveur CPU AMD Ryzen 5 5600 (Zen 3, AVX2, sans AVX-512 ni VNNI), CPU seul, niveaux simulés par cgroup, 2026-09-26",
+  "criteria": {
+    "llm_comfortable_ttft_s": 2.5,
+    "llm_usable_ttft_s": 6.5,
+    "tts_usable_rtf": 1.0,
+    "note": "TTFT médian sur 8 fixtures réelles, llama.cpp b11200, max_tokens 80. Au-delà du seuil utilisable, l'option est hors de portée du niveau."
+  },
+  "tiers": [
+    {"id": "N1", "label": "vieux portable", "cpu_physical_cores_min": 1, "ram_gb_min": 4, "simulated_as": "1 cœur physique et son frère SMT, CPUQuota 100 %, 4 Go"},
+    {"id": "N2", "label": "entrée de gamme", "cpu_physical_cores_min": 2, "ram_gb_min": 4, "simulated_as": "2 cœurs physiques, 4 Go"},
+    {"id": "N3", "label": "bureau courant", "cpu_physical_cores_min": 4, "ram_gb_min": 8, "simulated_as": "4 cœurs physiques, 8 Go"},
+    {"id": "N4", "label": "PC récent", "cpu_physical_cores_min": 6, "ram_gb_min": 8, "simulated_as": "6 cœurs physiques, 7 Go"},
+    {"id": "GPU", "label": "GPU dédié ou intégré reconnu par llama.cpp", "vram_gb_min": 4, "simulated_as": "non mesuré ici ; chiffres du README (NVIDIA T600 4 Go)"}
+  ],
+  "recommended": {
+    "N1": {"llm": "llm/qwen3.5-0.8b", "tts": "tts/piper-siwis-medium", "llm_settings": {"summary_chars": 1500}, "warning": "réponse en 6 s environ ; les règles déterministes restent instantanées"},
+    "N2": {"llm": "llm/qwen3.5-0.8b", "tts": "tts/piper-siwis-medium", "llm_settings": {"summary_chars": 1500}},
+    "N3": {"llm": "llm/gemma-4-e2b", "tts": "tts/piper-siwis-medium", "llm_settings": {"summary_chars": 1500}, "faster_alternative": "llm/qwen3.5-2b"},
+    "N4": {"llm": "llm/gemma-4-e2b", "tts": "tts/piper-siwis-medium", "llm_settings": {"summary_chars": 1500}},
+    "GPU": {"llm": "llm/gemma-4-e2b", "tts": "tts/piper-siwis-medium"}
+  },
+  "options": [
+    {
+      "id": "llm/qwen3.5-0.8b",
+      "kind": "llm",
+      "label": "Qwen3.5 0.8B, le plus rapide",
+      "source": "unsloth/Qwen3.5-0.8B-GGUF",
+      "file": "Qwen3.5-0.8B-Q4_K_M.gguf",
+      "size_mb": 533,
+      "quality": 1,
+      "quality_note": "phrases correctes mais invente parfois un détail (docker ps : « système opérationnel »), comptes faux",
+      "requires": {"cpu_physical_cores_min": 1, "ram_gb_min": 4, "vram_gb_min": 1},
+      "min_tier": "N1",
+      "comfortable_tier": "N2",
+      "measured": {
+        "N1": {"summary_chars": 1500, "ttft_median_s": 6.15, "ttft_max_s": 14.53, "gen_tok_s": 11.1, "ram_mb": 1365},
+        "N2": {"summary_chars": 1500, "ttft_median_s": 1.91, "ttft_max_s": 4.49, "gen_tok_s": 23.7, "ram_mb": 1364},
+        "N3": {"summary_chars": 6000, "ttft_median_s": 1.11, "ttft_max_s": 4.82, "gen_tok_s": 24.0, "ram_mb": 1377},
+        "N4": {"summary_chars": 6000, "ttft_median_s": 0.87, "ttft_max_s": 3.74, "gen_tok_s": 23.5, "ram_mb": 1378}
+      }
+    },
+    {
+      "id": "llm/qwen3.5-2b",
+      "kind": "llm",
+      "label": "Qwen3.5 2B, équilibré",
+      "source": "unsloth/Qwen3.5-2B-GGUF",
+      "file": "Qwen3.5-2B-Q4_K_M.gguf",
+      "size_mb": 1281,
+      "quality": 2,
+      "quality_note": "précis sur les erreurs (fichier et ligne), comptes parfois faux",
+      "requires": {"cpu_physical_cores_min": 2, "ram_gb_min": 4, "vram_gb_min": 2},
+      "min_tier": "N2",
+      "comfortable_tier": "N3",
+      "measured": {
+        "N1": {"summary_chars": 1500, "out_of_scope": true, "ttft_median_s": 28.41},
+        "N2": {"summary_chars": 1500, "ttft_median_s": 4.30, "ttft_max_s": 10.10, "gen_tok_s": 11.6, "ram_mb": 2435},
+        "N3": {"summary_chars": 6000, "ttft_median_s": 2.41, "ttft_max_s": 10.48, "gen_tok_s": 11.5, "ram_mb": 2445, "full_29_fixtures_ttft_median_s": 1.21},
+        "N4": {"summary_chars": 6000, "ttft_median_s": 1.84, "ttft_max_s": 7.79, "gen_tok_s": 12.7, "ram_mb": 2449}
+      }
+    },
+    {
+      "id": "llm/gemma-4-e2b",
+      "kind": "llm",
+      "label": "Gemma 4 E2B, le plus juste (défaut actuel)",
+      "source": "modèle installé par scripts/install.sh",
+      "file": "gemma-4-E2B_q4_0-it.gguf",
+      "size_mb": 3300,
+      "quality": 3,
+      "quality_note": "français le plus naturel, reprend la phrase de référence mot pour mot sur npm run build ; meilleur en questions-réponses selon le README",
+      "requires": {"cpu_physical_cores_min": 2, "ram_gb_min": 6, "vram_gb_min": 4},
+      "min_tier": "N2",
+      "comfortable_tier": "N3",
+      "measured": {
+        "N1": {"summary_chars": 1500, "out_of_scope": true, "ttft_median_s": 43.54},
+        "N2": {"summary_chars": 1500, "ttft_median_s": 6.24, "ttft_max_s": 14.84, "gen_tok_s": 10.5, "ram_mb": 4596},
+        "N3": {"summary_chars": 6000, "ttft_median_s": 3.42, "ttft_max_s": 15.27, "gen_tok_s": 10.5, "ram_mb": 4606, "full_29_fixtures_ttft_median_s": 1.78},
+        "N4": {"summary_chars": 6000, "ttft_median_s": 2.77, "ttft_max_s": 11.75, "gen_tok_s": 10.0, "ram_mb": 4603}
+      }
+    },
+    {
+      "id": "llm/qwen3.5-4b",
+      "kind": "llm",
+      "label": "Qwen3.5 4B, le plus détaillé, lent",
+      "source": "unsloth/Qwen3.5-4B-GGUF",
+      "file": "Qwen3.5-4B-Q4_K_M.gguf",
+      "size_mb": 2741,
+      "quality": 3,
+      "quality_note": "le plus détaillé (fichier, cause probable), mais comptes faux (« dix-huit paquets » pour 12)",
+      "requires": {"cpu_physical_cores_min": 6, "ram_gb_min": 8, "vram_gb_min": 4},
+      "min_tier": "N4",
+      "comfortable_tier": "GPU",
+      "measured": {
+        "N1": {"summary_chars": 1500, "out_of_scope": true, "ttft_median_s": 73.51},
+        "N2": {"summary_chars": 1500, "out_of_scope": true, "ttft_median_s": 21.47},
+        "N3": {"summary_chars": 6000, "out_of_scope": true, "ttft_median_s": 18.07, "note": "coupé après 2 fixtures, les plus lourdes ; médiane réelle probablement plus basse, à remesurer"},
+        "N4": {"summary_chars": 6000, "ttft_median_s": 4.65, "ttft_max_s": 20.22, "gen_tok_s": 5.4, "ram_mb": 5563}
+      }
+    },
+    {
+      "id": "llm/none",
+      "kind": "llm",
+      "label": "Sans modèle : règles déterministes seules",
+      "quality": 0,
+      "quality_note": "instantané ; erreurs et pourcentages connus seulement, pas de résumé ni de questions",
+      "requires": {"cpu_physical_cores_min": 1, "ram_gb_min": 1},
+      "min_tier": "N1",
+      "comfortable_tier": "N1",
+      "measured": {}
+    },
+    {
+      "id": "tts/piper-siwis-medium",
+      "kind": "tts",
+      "label": "Piper siwis medium (défaut actuel)",
+      "source": "rhasspy/piper-voices fr/fr_FR/siwis/medium",
+      "size_mb": 63,
+      "requires": {"cpu_physical_cores_min": 1, "ram_gb_min": 1},
+      "min_tier": "N1",
+      "measured": {
+        "N1": {"first_audio_long_s": 0.64, "rtf_median": 0.40, "rtf_max": 0.48, "ram_mb": 243},
+        "N2": {"first_audio_long_s": 0.25, "rtf_median": 0.10, "rtf_max": 0.16, "ram_mb": 238},
+        "N3": {"first_audio_long_s": 0.07, "rtf_median": 0.03, "rtf_max": 0.04, "ram_mb": 236},
+        "N4": {"first_audio_long_s": 0.08, "rtf_median": 0.04, "rtf_max": 0.05, "ram_mb": 246}
+      },
+      "sample": "samples/piper_siwis-medium.mp3"
+    },
+    {
+      "id": "tts/piper-siwis-low",
+      "kind": "tts",
+      "label": "Piper siwis low, la plus légère",
+      "source": "rhasspy/piper-voices fr/fr_FR/siwis/low",
+      "size_mb": 28,
+      "requires": {"cpu_physical_cores_min": 1, "ram_gb_min": 1},
+      "min_tier": "N1",
+      "measured": {
+        "N1": {"first_audio_long_s": 0.59, "rtf_median": 0.26, "rtf_max": 0.31, "ram_mb": 186},
+        "N2": {"first_audio_long_s": 0.13, "rtf_median": 0.05, "rtf_max": 0.06, "ram_mb": 184},
+        "N3": {"first_audio_long_s": 0.05, "rtf_median": 0.02, "rtf_max": 0.03, "ram_mb": 186},
+        "N4": {"first_audio_long_s": 0.04, "rtf_median": 0.02, "rtf_max": 0.02, "ram_mb": 211}
+      },
+      "sample": "samples/piper_siwis-low.mp3"
+    },
+    {
+      "id": "tts/piper-upmc-medium",
+      "kind": "tts",
+      "label": "Piper upmc medium",
+      "source": "rhasspy/piper-voices fr/fr_FR/upmc/medium",
+      "size_mb": 77,
+      "requires": {"cpu_physical_cores_min": 1, "ram_gb_min": 1},
+      "min_tier": "N1",
+      "measured": {
+        "N1": {"first_audio_long_s": 0.83, "rtf_median": 0.43, "rtf_max": 0.72, "ram_mb": 268},
+        "N2": {"first_audio_long_s": 0.22, "rtf_median": 0.09, "rtf_max": 0.15, "ram_mb": 244},
+        "N3": {"first_audio_long_s": 0.07, "rtf_median": 0.04, "rtf_max": 0.05, "ram_mb": 271},
+        "N4": {"first_audio_long_s": 0.07, "rtf_median": 0.04, "rtf_max": 0.06, "ram_mb": 272}
+      },
+      "sample": "samples/piper_upmc-medium.mp3"
+    },
+    {
+      "id": "tts/piper-mls-medium",
+      "kind": "tts",
+      "label": "Piper mls medium",
+      "source": "rhasspy/piper-voices fr/fr_FR/mls/medium",
+      "size_mb": 77,
+      "requires": {"cpu_physical_cores_min": 1, "ram_gb_min": 1},
+      "min_tier": "N1",
+      "measured": {
+        "N1": {"first_audio_long_s": 1.27, "rtf_median": 0.38, "rtf_max": 0.41, "ram_mb": 299},
+        "N2": {"first_audio_long_s": 0.27, "rtf_median": 0.09, "rtf_max": 0.11, "ram_mb": 256},
+        "N3": {"first_audio_long_s": 0.09, "rtf_median": 0.04, "rtf_max": 0.04, "ram_mb": 264},
+        "N4": {"first_audio_long_s": 0.08, "rtf_median": 0.03, "rtf_max": 0.03, "ram_mb": 308}
+      },
+      "sample": "samples/piper_mls-medium.mp3"
+    },
+    {
+      "id": "tts/piper-gilles-low",
+      "kind": "tts",
+      "label": "Piper gilles low",
+      "source": "rhasspy/piper-voices fr/fr_FR/gilles/low",
+      "size_mb": 63,
+      "requires": {"cpu_physical_cores_min": 1, "ram_gb_min": 1},
+      "min_tier": "N1",
+      "measured": {
+        "N1": {"first_audio_long_s": 0.79, "rtf_median": 0.33, "rtf_max": 0.39, "ram_mb": 227},
+        "N2": {"first_audio_long_s": 0.14, "rtf_median": 0.07, "rtf_max": 0.07, "ram_mb": 238},
+        "N3": {"first_audio_long_s": 0.06, "rtf_median": 0.03, "rtf_max": 0.03, "ram_mb": 239},
+        "N4": {"first_audio_long_s": 0.05, "rtf_median": 0.02, "rtf_max": 0.03, "ram_mb": 260}
+      },
+      "sample": "samples/piper_gilles-low.mp3"
+    },
+    {
+      "id": "tts/piper-mls_1840-low",
+      "kind": "tts",
+      "label": "Piper mls_1840 low",
+      "source": "rhasspy/piper-voices fr/fr_FR/mls_1840/low",
+      "size_mb": 63,
+      "requires": {"cpu_physical_cores_min": 1, "ram_gb_min": 1},
+      "min_tier": "N1",
+      "measured": {
+        "N1": {"first_audio_long_s": 1.41, "rtf_median": 0.23, "rtf_max": 0.26, "ram_mb": 354},
+        "N2": {"first_audio_long_s": 0.35, "rtf_median": 0.06, "rtf_max": 0.08, "ram_mb": 333},
+        "N3": {"first_audio_long_s": 0.11, "rtf_median": 0.03, "rtf_max": 0.03, "ram_mb": 343},
+        "N4": {"first_audio_long_s": 0.16, "rtf_median": 0.02, "rtf_max": 0.02, "ram_mb": 375}
+      },
+      "sample": "samples/piper_mls_1840-low.mp3"
+    },
+    {
+      "id": "tts/piper-tom-medium",
+      "kind": "tts",
+      "label": "Piper tom medium",
+      "source": "rhasspy/piper-voices fr/fr_FR/tom/medium",
+      "size_mb": 64,
+      "requires": {"cpu_physical_cores_min": 2, "ram_gb_min": 1},
+      "min_tier": "N2",
+      "measured": {
+        "N1": {"first_audio_long_s": 1.78, "rtf_median": 0.70, "rtf_max": 0.93, "ram_mb": 396, "note": "limite : premier son vers 2 s, marge faible avant le bégaiement"},
+        "N2": {"first_audio_long_s": 0.41, "rtf_median": 0.16, "rtf_max": 0.20, "ram_mb": 393},
+        "N3": {"first_audio_long_s": 0.17, "rtf_median": 0.07, "rtf_max": 0.08, "ram_mb": 395},
+        "N4": {"first_audio_long_s": 0.13, "rtf_median": 0.06, "rtf_max": 0.06, "ram_mb": 399}
+      },
+      "sample": "samples/piper_tom-medium.mp3"
+    },
+    {
+      "id": "tts/kokoro-82m-fp32",
+      "kind": "tts",
+      "label": "Kokoro-82M, voix ff_siwis",
+      "source": "thewh1teagle/kokoro-onnx model-files-v1.0 kokoro-v1.0.onnx + voices-v1.0.bin",
+      "size_mb": 354,
+      "requires": {"cpu_physical_cores_min": 2, "ram_gb_min": 2},
+      "min_tier": "N2",
+      "quality_note": "synthèse de la phrase entière, sans flux : le premier son arrive après toute la phrase",
+      "measured": {
+        "N1": {"out_of_scope": true, "first_audio_long_s": 9.98, "rtf_median": 1.29, "rtf_max": 2.0, "ram_mb": 629},
+        "N2": {"first_audio_long_s": 3.23, "rtf_median": 0.40, "rtf_max": 0.58, "ram_mb": 614},
+        "N3": {"first_audio_long_s": 2.28, "rtf_median": 0.27, "rtf_max": 0.38, "ram_mb": 627},
+        "N4": {"first_audio_long_s": 1.98, "rtf_median": 0.24, "rtf_max": 0.31, "ram_mb": 659}
+      },
+      "sample": "samples/kokoro_fp32.mp3"
+    },
+    {
+      "id": "tts/kokoro-82m-int8",
+      "kind": "tts",
+      "label": "Kokoro-82M int8",
+      "source": "thewh1teagle/kokoro-onnx model-files-v1.0 kokoro-v1.0.int8.onnx",
+      "size_mb": 120,
+      "requires": {"cpu_physical_cores_min": 99, "cpu_flags_any": ["avx512_vnni", "avx_vnni"]},
+      "min_tier": null,
+      "quality_note": "plus lent que fp32 sur un CPU sans VNNI ; hors de portée à tous les niveaux mesurés",
+      "measured": {
+        "N1": {"out_of_scope": true, "rtf_median": 2.56},
+        "N2": {"out_of_scope": true, "rtf_median": 1.15},
+        "N3": {"out_of_scope": true, "rtf_median": 1.16},
+        "N4": {"out_of_scope": true, "rtf_median": 1.03}
+      },
+      "sample": "samples/kokoro_int8.mp3"
+    }
+  ],
+  "engines": {
+    "llama.cpp": "retenu",
+    "openvino": {
+      "verdict": "écarté sur CPU AMD AVX2 : 13 à 15 % plus lent que llama.cpp, qualité équivalente",
+      "measured": {
+        "N2": {"llama.cpp": {"ttft_median_s": 4.08, "gen_tok_s": 13.2}, "openvino": {"ttft_median_s": 4.72, "gen_tok_s": 11.6}},
+        "N3": {"llama.cpp": {"ttft_median_s": 2.25, "gen_tok_s": 13.8}, "openvino": {"ttft_median_s": 2.58, "gen_tok_s": 12.3}}
+      },
+      "pair": "Qwen3-1.7B : Q4_K_M GGUF contre OpenVINO/Qwen3-1.7B-int4-ov",
+      "to_measure": "CPU Intel avec VNNI ou AMX, iGPU Arc et NPU, où OpenVINO est optimisé"
+    }
+  }
+}

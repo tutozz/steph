@@ -1,0 +1,1 @@
+{"r1-i1-dpo-b7.json": {"invention": 3, "douteux": 2, "erreur": 0, "vide": 0, "invention_ids": ["fx04", "fx08", "fx25"]}, "r1-i1-dpo-b42.json": {"invention": 3, "douteux": 2, "erreur": 0, "vide": 0, "invention_ids": ["fx04", "fx22", "fx25"]}, "r1-i1-dpo-b123.json": {"invention": 4, "douteux": 1, "erreur": 0, "vide": 0, "invention_ids": ["fx04", "fx08", "fx22", "fx25"]}}

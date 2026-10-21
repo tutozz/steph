@@ -1,0 +1,1543 @@
+{
+ "regime": "cold",
+ "delay": 5.0,
+ "budget": 0,
+ "profile": "generic",
+ "qa_tools": true,
+ "seed": 123,
+ "rows": [
+  {
+   "out": "Deux tests échouaient au premier lancement de pytest.",
+   "ttft": 4.643,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Deux tests échouaient au premier lancement de pytest.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 4.641
+   },
+   "prompt_chars": 3087,
+   "id": "v3-history-qa-0004@fr"
+  },
+  {
+   "out": "Two tests failed on the first pytest run.",
+   "ttft": 4.547,
+   "first_speech": 0.0,
+   "said": "Checking the history. Two tests failed on the first pytest run.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 4.546
+   },
+   "prompt_chars": 3038,
+   "id": "v3-history-qa-0004@en"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 3.342,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "search_history"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.341
+   },
+   "prompt_chars": 3087,
+   "id": "v3-history-qa-0005@fr"
+  },
+  {
+   "out": "Not in the history.",
+   "ttft": 3.193,
+   "first_speech": 0.0,
+   "said": "Checking the history. Not in the history.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "search_history"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.193
+   },
+   "prompt_chars": 3038,
+   "id": "v3-history-qa-0005@en"
+  },
+  {
+   "out": "Erreur de syntaxe jq dans config.json. Vérifier la structure JSON.",
+   "ttft": 3.764,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Erreur de syntaxe jq dans config.json. Vérifier la structure JSON.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.763
+   },
+   "prompt_chars": 946,
+   "id": "v3-history-qa-0010@fr"
+  },
+  {
+   "out": "jq parse error line 4 column 22 config.json. Not in the history.",
+   "ttft": 3.751,
+   "first_speech": 0.0,
+   "said": "Checking the history. jq parse error line 4 column 22 config.json. Not in the history.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.75
+   },
+   "prompt_chars": 897,
+   "id": "v3-history-qa-0010@en"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 3.176,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "command_info"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.175
+   },
+   "prompt_chars": 1679,
+   "id": "v3-history-qa-0016@fr"
+  },
+  {
+   "out": "Source file beta.c did not compile. Error: return with a value, expected semicolon.",
+   "ttft": 5.134,
+   "first_speech": 0.0,
+   "said": "Checking the history. Source file beta.c did not compile. Error: return with a value, expected semicolon.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 5.133
+   },
+   "prompt_chars": 1630,
+   "id": "v3-history-qa-0016@en"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 3.35,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "search_history"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.349
+   },
+   "prompt_chars": 1679,
+   "id": "v3-history-qa-0017@fr"
+  },
+  {
+   "out": "gcc version not explicitly stated. compilation used gcc.",
+   "ttft": 4.234,
+   "first_speech": 0.001,
+   "said": "Checking the history. gcc version not explicitly stated. compilation used gcc.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 4.233
+   },
+   "prompt_chars": 1630,
+   "id": "v3-history-qa-0017@en"
+  },
+  {
+   "out": "Erreur rmdir dossier non vide. Le dossier tmp contenait des fichiers.",
+   "ttft": 3.883,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Erreur rmdir dossier non vide. Le dossier tmp contenait des fichiers.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.882
+   },
+   "prompt_chars": 1304,
+   "id": "v3-history-qa-0019@fr"
+  },
+  {
+   "out": "rmdir failed directory not empty error.",
+   "ttft": 3.43,
+   "first_speech": 0.0,
+   "said": "Checking the history. rmdir failed directory not empty error.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.429
+   },
+   "prompt_chars": 1255,
+   "id": "v3-history-qa-0019@en"
+  },
+  {
+   "out": "desk shelf.",
+   "ttft": 3.499,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. desk shelf.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.498
+   },
+   "prompt_chars": 1123,
+   "id": "v3-history-qa-0020@fr"
+  },
+  {
+   "out": "desk shelf out of stock.",
+   "ttft": 3.506,
+   "first_speech": 0.0,
+   "said": "Checking the history. desk shelf out of stock.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.505
+   },
+   "prompt_chars": 1074,
+   "id": "v3-history-qa-0020@en"
+  },
+  {
+   "out": "Les formats acceptés sont csv et json.",
+   "ttft": 5.882,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Les formats acceptés sont csv et json.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "search_history",
+     "search_history",
+     "search_history"
+    ],
+    "fallback": false,
+    "calls": 3,
+    "tools_s": 5.882
+   },
+   "prompt_chars": 1145,
+   "id": "v3-history-qa-0023@fr"
+  },
+  {
+   "out": "convert accepts csv, json formats.",
+   "ttft": 3.519,
+   "first_speech": 0.0,
+   "said": "Checking the history. convert accepts csv, json formats.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "search_history"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.519
+   },
+   "prompt_chars": 1096,
+   "id": "v3-history-qa-0023@en"
+  },
+  {
+   "out": "SyntaxError ligne 4 calc.py. Attente de deux points.",
+   "ttft": 4.122,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. SyntaxError ligne 4 calc.py. Attente de deux points.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 4.122
+   },
+   "prompt_chars": 1031,
+   "id": "v3-history-qa-0024@fr"
+  },
+  {
+   "out": "SyntaxError line 4 calc.py expected colon.",
+   "ttft": 3.595,
+   "first_speech": 0.0,
+   "said": "Checking the history. SyntaxError line 4 calc.py expected colon.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.595
+   },
+   "prompt_chars": 982,
+   "id": "v3-history-qa-0024@en"
+  },
+  {
+   "out": "nginx est inactif.",
+   "ttft": 3.382,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. nginx est inactif.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.381
+   },
+   "prompt_chars": 942,
+   "id": "v3-history-qa-0028@fr"
+  },
+  {
+   "out": "nginx inactive.",
+   "ttft": 2.814,
+   "first_speech": 0.0,
+   "said": "Checking the history. nginx inactive.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 2.814
+   },
+   "prompt_chars": 893,
+   "id": "v3-history-qa-0028@en"
+  },
+  {
+   "out": "10 fichiers objets construits avant l'erreur.",
+   "ttft": 4.556,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. 10 fichiers objets construits avant l'erreur.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 4.555
+   },
+   "prompt_chars": 1528,
+   "id": "v3-history-qa-0029@fr"
+  },
+  {
+   "out": "18 object files built before error.",
+   "ttft": 4.689,
+   "first_speech": 0.0,
+   "said": "Checking the history. 18 object files built before error.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 4.688
+   },
+   "prompt_chars": 1479,
+   "id": "v3-history-qa-0029@en"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 3.079,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.078
+   },
+   "prompt_chars": 910,
+   "id": "v3-history-qa-0030@fr"
+  },
+  {
+   "out": "Not in the history.",
+   "ttft": 3.37,
+   "first_speech": 0.0,
+   "said": "Checking the history. Not in the history.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.369
+   },
+   "prompt_chars": 861,
+   "id": "v3-history-qa-0030@en"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 3.519,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "search_history"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.518
+   },
+   "prompt_chars": 1140,
+   "id": "v3-history-qa-0031@fr"
+  },
+  {
+   "out": "Not in the history.",
+   "ttft": 3.151,
+   "first_speech": 0.0,
+   "said": "Checking the history. Not in the history.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "search_history"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.151
+   },
+   "prompt_chars": 1091,
+   "id": "v3-history-qa-0031@en"
+  },
+  {
+   "out": "Quatre fichiers .tmp dépassent 10 Ko.",
+   "ttft": 3.856,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Quatre fichiers .tmp dépassent 10 Ko.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "count_matches"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.856
+   },
+   "prompt_chars": 985,
+   "id": "v3-history-qa-0034@fr"
+  },
+  {
+   "out": "4 tmp files over 10k bytes.",
+   "ttft": 3.667,
+   "first_speech": 0.0,
+   "said": "Checking the history. 4 tmp files over 10k bytes.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "count_matches"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.666
+   },
+   "prompt_chars": 936,
+   "id": "v3-history-qa-0034@en"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 5.631,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 5.63
+   },
+   "prompt_chars": 1113,
+   "id": "v3-history-qa-0041@fr"
+  },
+  {
+   "out": "Not in the history.",
+   "ttft": 5.829,
+   "first_speech": 0.0,
+   "said": "Checking the history. Not in the history.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 5.828
+   },
+   "prompt_chars": 1064,
+   "id": "v3-history-qa-0041@en"
+  },
+  {
+   "out": "ZeroDivisionError division by zero.",
+   "ttft": 3.947,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. ZeroDivisionError division by zero.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.946
+   },
+   "prompt_chars": 1524,
+   "id": "v3-history-qa-0042@fr"
+  },
+  {
+   "out": "ZeroDivisionError division by zero.",
+   "ttft": 4.137,
+   "first_speech": 0.0,
+   "said": "Checking the history. ZeroDivisionError division by zero.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 4.136
+   },
+   "prompt_chars": 1475,
+   "id": "v3-history-qa-0042@en"
+  },
+  {
+   "out": "Taille de libg.a : 9.1K.",
+   "ttft": 3.764,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Taille de libg.a : 9.1K.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.764
+   },
+   "prompt_chars": 1509,
+   "id": "v3-history-qa-0044@fr"
+  },
+  {
+   "out": "libg.a size 9.1K.",
+   "ttft": 3.526,
+   "first_speech": 0.0,
+   "said": "Checking the history. libg.a size 9.1K.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.526
+   },
+   "prompt_chars": 1460,
+   "id": "v3-history-qa-0044@en"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 3.222,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "search_history"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.221
+   },
+   "prompt_chars": 1045,
+   "id": "v3-history-qa-0049@fr"
+  },
+  {
+   "out": "Not in the history.",
+   "ttft": 3.123,
+   "first_speech": 0.0,
+   "said": "Checking the history. Not in the history.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "search_history"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.123
+   },
+   "prompt_chars": 996,
+   "id": "v3-history-qa-0049@en"
+  },
+  {
+   "out": "420 lignes.",
+   "ttft": 4.428,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. 420 lignes.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 4.427
+   },
+   "prompt_chars": 9579,
+   "id": "v3-history-qa-0052@fr"
+  },
+  {
+   "out": "420 lines.",
+   "ttft": 4.05,
+   "first_speech": 0.0,
+   "said": "Checking the history. 420 lines.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 4.049
+   },
+   "prompt_chars": 9530,
+   "id": "v3-history-qa-0052@en"
+  },
+  {
+   "out": "Le service avec le plus d'erreurs est celui avec 22 erreurs.",
+   "ttft": 5.157,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Le service avec le plus d'erreurs est celui avec 22 erreurs.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 5.156
+   },
+   "prompt_chars": 9579,
+   "id": "v3-history-qa-0053@fr"
+  },
+  {
+   "out": "Not in the history.",
+   "ttft": 4.537,
+   "first_speech": 0.001,
+   "said": "Checking the history. Not in the history.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 4.536
+   },
+   "prompt_chars": 9530,
+   "id": "v3-history-qa-0053@en"
+  },
+  {
+   "out": "Aucun avertissement trouvé.",
+   "ttft": 4.209,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Aucun avertissement trouvé.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "count_matches"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 4.208
+   },
+   "prompt_chars": 5206,
+   "id": "v3-history-qa-0054@fr"
+  },
+  {
+   "out": "No warnings produced.",
+   "ttft": 3.672,
+   "first_speech": 0.001,
+   "said": "Checking the history. No warnings produced.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "count_matches"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.671
+   },
+   "prompt_chars": 5157,
+   "id": "v3-history-qa-0054@en"
+  },
+  {
+   "out": "Les tests échouent : test_km_3, test_km_7, test_kg_4..",
+   "ttft": 4.694,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Les tests échouent : test_km_3, test_km_7, test_kg_4..",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "search_history"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 4.693
+   },
+   "prompt_chars": 4515,
+   "id": "v3-history-qa-0055@fr"
+  },
+  {
+   "out": "test_km_3, test_km_7, test_kg_4 failed. assert 1.864 == 1.865, assert 4.35 == 4.351, assert 8.82 == 8.83..",
+   "ttft": 8.119,
+   "first_speech": 0.001,
+   "said": "Checking the history. test_km_3, test_km_7, test_kg_4 failed. assert 1.864 == 1.865, assert 4.35 == 4.351, assert 8.82 == 8.83..",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 8.117
+   },
+   "prompt_chars": 4466,
+   "id": "v3-history-qa-0055@en"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 3.708,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "count_matches"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.708
+   },
+   "prompt_chars": 4515,
+   "id": "v3-history-qa-0056@fr"
+  },
+  {
+   "out": "Not in the history.",
+   "ttft": 3.361,
+   "first_speech": 0.001,
+   "said": "Checking the history. Not in the history.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "count_matches"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.361
+   },
+   "prompt_chars": 4466,
+   "id": "v3-history-qa-0056@en"
+  },
+  {
+   "out": "Fichier en conflit : server.conf.",
+   "ttft": 3.369,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Fichier en conflit : server.conf.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.368
+   },
+   "prompt_chars": 1276,
+   "id": "v3-history-qa-0058@fr"
+  },
+  {
+   "out": "server.conf.",
+   "ttft": 3.102,
+   "first_speech": 0.0,
+   "said": "Checking the history. server.conf.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.102
+   },
+   "prompt_chars": 1227,
+   "id": "v3-history-qa-0058@en"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 3.508,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "search_history"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.507
+   },
+   "prompt_chars": 1276,
+   "id": "v3-history-qa-0059@fr"
+  },
+  {
+   "out": "Not in the history.",
+   "ttft": 3.231,
+   "first_speech": 0.0,
+   "said": "Checking the history. Not in the history.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "search_history"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.231
+   },
+   "prompt_chars": 1227,
+   "id": "v3-history-qa-0059@en"
+  },
+  {
+   "out": "Il y avait deux stashes.",
+   "ttft": 3.262,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Il y avait deux stashes.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.262
+   },
+   "prompt_chars": 1333,
+   "id": "v3-history-qa-0062@fr"
+  },
+  {
+   "out": "There were 2 stashes.",
+   "ttft": 3.306,
+   "first_speech": 0.0,
+   "said": "Checking the history. There were 2 stashes.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.305
+   },
+   "prompt_chars": 1284,
+   "id": "v3-history-qa-0062@en"
+  },
+  {
+   "out": "Erreur ENOENT. Fichier config.json introuvable. npm start échoue car le fichier config.json est manquant.",
+   "ttft": 4.652,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Erreur ENOENT. Fichier config.json introuvable. npm start échoue car le fichier config.json est manquant.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 4.651
+   },
+   "prompt_chars": 1775,
+   "id": "v3-history-qa-0067@fr"
+  },
+  {
+   "out": "npm start failed. Error ENOENT no such file or directory config.json. File missing.",
+   "ttft": 4.326,
+   "first_speech": 0.0,
+   "said": "Checking the history. npm start failed. Error ENOENT no such file or directory config.json. File missing.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 4.325
+   },
+   "prompt_chars": 1726,
+   "id": "v3-history-qa-0067@en"
+  },
+  {
+   "out": "Erreur TypeError: Cannot read properties of undefined (reading 'name'). Problème dans la fonction greet.",
+   "ttft": 4.937,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Erreur TypeError: Cannot read properties of undefined (reading 'name'). Problème dans la fonction greet.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 4.935
+   },
+   "prompt_chars": 2390,
+   "id": "v3-history-qa-0069@fr"
+  },
+  {
+   "out": "TypeError Cannot read properties undefined reading name at line 6 in server.js.",
+   "ttft": 4.462,
+   "first_speech": 0.0,
+   "said": "Checking the history. TypeError Cannot read properties undefined reading name at line 6 in server.js.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 4.461
+   },
+   "prompt_chars": 2341,
+   "id": "v3-history-qa-0069@en"
+  },
+  {
+   "out": "Dune Hyperion.",
+   "ttft": 3.642,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Dune Hyperion.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.641
+   },
+   "prompt_chars": 1309,
+   "id": "v3-history-qa-0079@fr"
+  },
+  {
+   "out": "Dune Hyperion.",
+   "ttft": 3.26,
+   "first_speech": 0.0,
+   "said": "Checking the history. Dune Hyperion.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.26
+   },
+   "prompt_chars": 1260,
+   "id": "v3-history-qa-0079@en"
+  },
+  {
+   "out": "Espace libre sur / : 24Gi.",
+   "ttft": 3.379,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Espace libre sur / : 24Gi.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.379
+   },
+   "prompt_chars": 933,
+   "id": "v3-history-qa-0080@fr"
+  },
+  {
+   "out": "Free disk space left: 24Gi.",
+   "ttft": 3.367,
+   "first_speech": 0.0,
+   "said": "Checking the history. Free disk space left: 24Gi.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.366
+   },
+   "prompt_chars": 884,
+   "id": "v3-history-qa-0080@en"
+  },
+  {
+   "out": "354 formules brew sont installées.",
+   "ttft": 3.493,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. 354 formules brew sont installées.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.492
+   },
+   "prompt_chars": 1117,
+   "id": "v3-history-qa-0082@fr"
+  },
+  {
+   "out": "1 installed brew formulae.",
+   "ttft": 3.039,
+   "first_speech": 0.0,
+   "said": "Checking the history. 1 installed brew formulae.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.039
+   },
+   "prompt_chars": 1068,
+   "id": "v3-history-qa-0082@en"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 3.393,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.392
+   },
+   "prompt_chars": 1040,
+   "id": "v3-history-qa-0083@fr"
+  },
+  {
+   "out": "Not in the history.",
+   "ttft": 3.148,
+   "first_speech": 0.0,
+   "said": "Checking the history. Not in the history.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.147
+   },
+   "prompt_chars": 991,
+   "id": "v3-history-qa-0083@en"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 3.109,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.109
+   },
+   "prompt_chars": 985,
+   "id": "v3-history-qa-0084@fr"
+  },
+  {
+   "out": "Not in the history.",
+   "ttft": 3.044,
+   "first_speech": 0.0,
+   "said": "Checking the history. Not in the history.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.044
+   },
+   "prompt_chars": 936,
+   "id": "v3-history-qa-0084@en"
+  },
+  {
+   "out": "14.",
+   "ttft": 4.478,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. 14.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 4.477
+   },
+   "prompt_chars": 1795,
+   "id": "v3-history-qa-0086@fr"
+  },
+  {
+   "out": "perimeter 14.",
+   "ttft": 4.213,
+   "first_speech": 0.0,
+   "said": "Checking the history. perimeter 14.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 4.212
+   },
+   "prompt_chars": 1746,
+   "id": "v3-history-qa-0086@en"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 4.622,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "search_history"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 4.622
+   },
+   "prompt_chars": 1795,
+   "id": "v3-history-qa-0087@fr"
+  },
+  {
+   "out": "Not in the history.",
+   "ttft": 3.94,
+   "first_speech": 0.001,
+   "said": "Checking the history. Not in the history.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "search_history"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.939
+   },
+   "prompt_chars": 1746,
+   "id": "v3-history-qa-0087@en"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 3.161,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "search_history"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.161
+   },
+   "prompt_chars": 934,
+   "id": "v3-history-qa-0088@fr"
+  },
+  {
+   "out": "Not in the history.",
+   "ttft": 2.99,
+   "first_speech": 0.0,
+   "said": "Checking the history. Not in the history.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 2.989
+   },
+   "prompt_chars": 885,
+   "id": "v3-history-qa-0088@en"
+  },
+  {
+   "out": "Erreurs : 2. queue.c ligne 12 (conversion pointeur int) et ligne 13 (fonction queue_pop non déclarée).",
+   "ttft": 4.628,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Erreurs : 2. queue.c ligne 12 (conversion pointeur int) et ligne 13 (fonction queue_pop non déclarée).",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 4.627
+   },
+   "prompt_chars": 1301,
+   "id": "v3-history-qa-0089@fr"
+  },
+  {
+   "out": "The compilation generated 2 errors. Errors are: incompatible pointer to integer conversion and call to undeclared function queue_pop.",
+   "ttft": 5.199,
+   "first_speech": 0.0,
+   "said": "Checking the history. The compilation generated 2 errors. Errors are: incompatible pointer to integer conversion and call to undeclared function queue_pop.",
+   "tools": {
+    "rounds": 3,
+    "names": [
+     "get_output",
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 2,
+    "tools_s": 5.198
+   },
+   "prompt_chars": 1252,
+   "id": "v3-history-qa-0089@en"
+  },
+  {
+   "out": "Fichier dépassant 100 Ko : proj/build/bundle.js.",
+   "ttft": 3.792,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Fichier dépassant 100 Ko : proj/build/bundle.js.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.791
+   },
+   "prompt_chars": 982,
+   "id": "v3-history-qa-0093@fr"
+  },
+  {
+   "out": "proj/build/bundle.js.",
+   "ttft": 3.097,
+   "first_speech": 0.0,
+   "said": "Checking the history. proj/build/bundle.js.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.097
+   },
+   "prompt_chars": 933,
+   "id": "v3-history-qa-0093@en"
+  },
+  {
+   "out": "Les différences sont : port=5432 devient port=5433 et timeout=30 devient timeout=60..",
+   "ttft": 3.969,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Les différences sont : port=5432 devient port=5433 et timeout=30 devient timeout=60..",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.969
+   },
+   "prompt_chars": 983,
+   "id": "v3-history-qa-0095@fr"
+  },
+  {
+   "out": "The difference is port and timeout settings. port changed from 5432 to 5433. timeout changed from 30 to 60..",
+   "ttft": 4.307,
+   "first_speech": 0.0,
+   "said": "Checking the history. The difference is port and timeout settings. port changed from 5432 to 5433. timeout changed from 30 to 60..",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 4.307
+   },
+   "prompt_chars": 934,
+   "id": "v3-history-qa-0095@en"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 3.296,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "search_history"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.296
+   },
+   "prompt_chars": 1185,
+   "id": "v3-history-qa-0096@fr"
+  },
+  {
+   "out": "requests not installed. module not found.",
+   "ttft": 3.371,
+   "first_speech": 0.0,
+   "said": "Checking the history. requests not installed. module not found.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "search_history"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.371
+   },
+   "prompt_chars": 1136,
+   "id": "v3-history-qa-0096@en"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 3.724,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.723
+   },
+   "prompt_chars": 1100,
+   "id": "v3-history-qa-0100@fr"
+  },
+  {
+   "out": "Not in the history.",
+   "ttft": 3.396,
+   "first_speech": 0.0,
+   "said": "Checking the history. Not in the history.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.395
+   },
+   "prompt_chars": 1051,
+   "id": "v3-history-qa-0100@en"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 3.117,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.116
+   },
+   "prompt_chars": 1411,
+   "id": "v3-history-qa-0101@fr"
+  },
+  {
+   "out": "Not in the history.",
+   "ttft": 3.033,
+   "first_speech": 0.0,
+   "said": "Checking the history. Not in the history.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.033
+   },
+   "prompt_chars": 1362,
+   "id": "v3-history-qa-0101@en"
+  },
+  {
+   "out": "0 fois.",
+   "ttft": 3.217,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. 0 fois.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "count_matches"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.216
+   },
+   "prompt_chars": 993,
+   "id": "v3-history-qa-0103@fr"
+  },
+  {
+   "out": "Not in the history.",
+   "ttft": 2.966,
+   "first_speech": 0.001,
+   "said": "Checking the history. Not in the history.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "count_matches"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 2.965
+   },
+   "prompt_chars": 944,
+   "id": "v3-history-qa-0103@en"
+  },
+  {
+   "out": "Module introuvable : example.com/fetcher.",
+   "ttft": 3.272,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Module introuvable : example.com/fetcher.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.271
+   },
+   "prompt_chars": 1205,
+   "id": "v3-history-qa-0105@fr"
+  },
+  {
+   "out": "module example.com/fetcher not found.",
+   "ttft": 3.61,
+   "first_speech": 0.0,
+   "said": "Checking the history. module example.com/fetcher not found.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.609
+   },
+   "prompt_chars": 1156,
+   "id": "v3-history-qa-0105@en"
+  },
+  {
+   "out": "mail2.eml a été déplacé dans archive.",
+   "ttft": 3.879,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. mail2.eml a été déplacé dans archive.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "search_history"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.879
+   },
+   "prompt_chars": 1221,
+   "id": "v3-history-qa-0110@fr"
+  },
+  {
+   "out": "mail2.eml moved to archive.",
+   "ttft": 3.709,
+   "first_speech": 0.0,
+   "said": "Checking the history. mail2.eml moved to archive.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "search_history"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 3.709
+   },
+   "prompt_chars": 1172,
+   "id": "v3-history-qa-0110@en"
+  }
+ ]
+}

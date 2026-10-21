@@ -1,0 +1,1 @@
+{"p17-b7.json": {"invention": 4, "douteux": 2, "erreur": 0, "vide": 1, "invention_ids": ["fx04", "fx07", "fx22", "fx24"]}, "p17-b42.json": {"invention": 4, "douteux": 2, "erreur": 0, "vide": 0, "invention_ids": ["fx04", "fx07", "fx22", "fx24"]}, "p17-b123.json": {"invention": 5, "douteux": 1, "erreur": 0, "vide": 1, "invention_ids": ["fx04", "fx07", "fx22", "fx24", "fx25"]}}

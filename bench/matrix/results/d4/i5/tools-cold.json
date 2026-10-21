@@ -1,0 +1,350 @@
+{
+ "regime": "cold",
+ "delay": 5.0,
+ "budget": 0,
+ "profile": "generic",
+ "qa_tools": true,
+ "seed": 7,
+ "rows": [
+  {
+   "out": "Deux tests ont échoué au premier lancement de pytest.",
+   "ttft": 34.186,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Deux tests ont échoué au premier lancement de pytest.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 34.178
+   },
+   "prompt_chars": 3087,
+   "id": "v3-history-qa-0004@fr"
+  },
+  {
+   "out": "Erreur jq. config.json est mal formaté. Erreur de syntaxe à la ligne 4..",
+   "ttft": 25.3,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Erreur jq. config.json est mal formaté. Erreur de syntaxe à la ligne 4..",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 25.3
+   },
+   "prompt_chars": 946,
+   "id": "v3-history-qa-0010@fr"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 35.259,
+   "first_speech": 0.005,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 35.258
+   },
+   "prompt_chars": 1679,
+   "id": "v3-history-qa-0017@fr"
+  },
+  {
+   "out": "desk shelf.",
+   "ttft": 23.843,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. desk shelf.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 23.843
+   },
+   "prompt_chars": 1123,
+   "id": "v3-history-qa-0020@fr"
+  },
+  {
+   "out": "SyntaxError sur la ligne 4 de calc.py. La définition de la fonction mul est incorrecte.",
+   "ttft": 26.715,
+   "first_speech": 0.006,
+   "said": "Je regarde l'historique. SyntaxError sur la ligne 4 de calc.py. La définition de la fonction mul est incorrecte.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 26.714
+   },
+   "prompt_chars": 1031,
+   "id": "v3-history-qa-0024@fr"
+  },
+  {
+   "out": "10 fichiers objets construits avant l'erreur.",
+   "ttft": 36.927,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. 10 fichiers objets construits avant l'erreur.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 36.926
+   },
+   "prompt_chars": 1528,
+   "id": "v3-history-qa-0029@fr"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 23.555,
+   "first_speech": 0.006,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "search_history"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 23.554
+   },
+   "prompt_chars": 1140,
+   "id": "v3-history-qa-0031@fr"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 32.84,
+   "first_speech": 0.003,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 32.836
+   },
+   "prompt_chars": 1113,
+   "id": "v3-history-qa-0041@fr"
+  },
+  {
+   "out": "Taille de libg.a : 9.1K.",
+   "ttft": 26.66,
+   "first_speech": 0.005,
+   "said": "Je regarde l'historique. Taille de libg.a : 9.1K.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 26.659
+   },
+   "prompt_chars": 1509,
+   "id": "v3-history-qa-0044@fr"
+  },
+  {
+   "out": "420 lignes.",
+   "ttft": 35.279,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. 420 lignes.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 35.277
+   },
+   "prompt_chars": 9579,
+   "id": "v3-history-qa-0052@fr"
+  },
+  {
+   "out": "Aucun avertissement trouvé dans la compilation.",
+   "ttft": 32.679,
+   "first_speech": 0.003,
+   "said": "Je regarde l'historique. Aucun avertissement trouvé dans la compilation.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "count_matches"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 32.676
+   },
+   "prompt_chars": 5206,
+   "id": "v3-history-qa-0054@fr"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 28.832,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "count_matches"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 28.832
+   },
+   "prompt_chars": 4515,
+   "id": "v3-history-qa-0056@fr"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 26.212,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "search_history"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 26.211
+   },
+   "prompt_chars": 1276,
+   "id": "v3-history-qa-0059@fr"
+  },
+  {
+   "out": "Erreur ENOENT : fichier config.json introuvable. npm start échoue car le fichier config.json est manquant.",
+   "ttft": 35.63,
+   "first_speech": 0.0,
+   "said": "Je regarde l'historique. Erreur ENOENT : fichier config.json introuvable. npm start échoue car le fichier config.json est manquant.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 35.629
+   },
+   "prompt_chars": 1775,
+   "id": "v3-history-qa-0067@fr"
+  },
+  {
+   "out": "Dune Hyperion.",
+   "ttft": 26.324,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Dune Hyperion.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 26.324
+   },
+   "prompt_chars": 1309,
+   "id": "v3-history-qa-0079@fr"
+  },
+  {
+   "out": "354 formules brew sont installées.",
+   "ttft": 25.403,
+   "first_speech": 0.006,
+   "said": "Je regarde l'historique. 354 formules brew sont installées.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 25.4
+   },
+   "prompt_chars": 1117,
+   "id": "v3-history-qa-0082@fr"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 24.163,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 24.163
+   },
+   "prompt_chars": 985,
+   "id": "v3-history-qa-0084@fr"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 33.488,
+   "first_speech": 0.004,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "search_history"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 33.487
+   },
+   "prompt_chars": 1795,
+   "id": "v3-history-qa-0087@fr"
+  },
+  {
+   "out": "Erreurs : 2. queue.c ligne 12 (incompatible pointer to integer conversion). queue.c ligne 13 (call to undeclared function 'queue_pop').",
+   "ttft": 32.78,
+   "first_speech": 0.005,
+   "said": "Je regarde l'historique. Erreurs : 2. queue.c ligne 12 (incompatible pointer to integer conversion). queue.c ligne 13 (call to undeclared function 'queue_pop').",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 32.779
+   },
+   "prompt_chars": 1301,
+   "id": "v3-history-qa-0089@fr"
+  },
+  {
+   "out": "Les différences sont : port de 5432 à 5433, et timeout de 30 à 60..",
+   "ttft": 27.345,
+   "first_speech": 0.005,
+   "said": "Je regarde l'historique. Les différences sont : port de 5432 à 5433, et timeout de 30 à 60..",
+   "tools": {
+    "rounds": 2,
+    "names": [
+     "get_output"
+    ],
+    "fallback": false,
+    "calls": 1,
+    "tools_s": 27.344
+   },
+   "prompt_chars": 983,
+   "id": "v3-history-qa-0095@fr"
+  }
+ ]
+}

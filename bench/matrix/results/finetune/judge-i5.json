@@ -1,0 +1,943 @@
+{
+  "meta": {
+    "juge": "Qwen3.5-9B-Q4_K_M sur rtx3060 (RTX 3060, llama-server Vulkan, jinja, enable_thinking=false, temperature=0)",
+    "methode": "2 passes par cas (ordre et formulation du prompt différents entre passe A et passe B) ; invention si les 2 passes s'accordent, douteux si une seule.",
+    "validation_juge": "6/6 cas de contrôle corrects sur les 2 passes (voir docs/judge-a7.md)",
+    "plancher": "au plus 1 cas sur 36 avec un fait inventé"
+  },
+  "par_modele": {
+    "i5-gemma3-270m-ft500-Q8_0.json": {
+      "label": "Gemma 270M Q8 (ft500)",
+      "n_total": 36,
+      "n_hors_qa": 33,
+      "invention_sur_36": 17,
+      "invention_sur_33": 14,
+      "douteux_sur_36": 3,
+      "douteux_sur_33": 3,
+      "erreurs": 0,
+      "plancher_ok_36": false,
+      "exemples_inventions": [
+        {
+          "id": "fx03@1500",
+          "phrase": "Échec. /nonexistent/file.txt ligne 1 : Aucun fichier ou dossier de ce nom.",
+          "inventions_pass_A": [
+            "ligne 1"
+          ],
+          "inventions_pass_B": [
+            "ligne 1"
+          ]
+        },
+        {
+          "id": "fx00@1500",
+          "phrase": "37 éléments, 1516 lignes.",
+          "inventions_pass_A": [
+            "1516 lignes"
+          ],
+          "inventions_pass_B": [
+            "1516 lignes"
+          ]
+        },
+        {
+          "id": "fx04@1500",
+          "phrase": "Échec. KeyError ligne 1 : key non introuvable.",
+          "inventions_pass_A": [
+            "ligne 1"
+          ],
+          "inventions_pass_B": [
+            "ligne 1"
+          ]
+        }
+      ],
+      "cas_inventions": [
+        {
+          "id": "fx03@1500",
+          "kind": "summary",
+          "phrase": "Échec. /nonexistent/file.txt ligne 1 : Aucun fichier ou dossier de ce nom."
+        },
+        {
+          "id": "fx00@1500",
+          "kind": "summary",
+          "phrase": "37 éléments, 1516 lignes."
+        },
+        {
+          "id": "fx04@1500",
+          "kind": "summary",
+          "phrase": "Échec. KeyError ligne 1 : key non introuvable."
+        },
+        {
+          "id": "fx10@1500",
+          "kind": "summary",
+          "phrase": "Échec. curl ligne 6 : host inconnu."
+        },
+        {
+          "id": "fx17@1500",
+          "kind": "summary",
+          "phrase": "Échec. /etc/hostname ligne 1 : Permission non accordée."
+        },
+        {
+          "id": "fx16@1500",
+          "kind": "summary",
+          "phrase": "Succès. Host key verification réussie."
+        },
+        {
+          "id": "fx09@1500",
+          "kind": "summary",
+          "phrase": "8 éléments : def __init__, healthy, ensure_server, _pid_alive, stop_server, _payload, stream."
+        },
+        {
+          "id": "fx15@1500",
+          "kind": "summary",
+          "phrase": "20 éléments : python-systemd, python3-argcomplete, python3-attrs, python3-augeas, python3-beaker, python3-beautifulsoup4, python3-blivet, python3-boto3, python3-botocore, python3-cairo, python3-cffi, python3-charset-normalizer, python"
+        },
+        {
+          "id": "fx21@1500",
+          "kind": "summary",
+          "phrase": "Échec. /nonexistent ligne 1 : fichier inexistant."
+        },
+        {
+          "id": "fx20@1500",
+          "kind": "summary",
+          "phrase": "29 éléments : xen-licenses.x86_64, xfsprogs.x86_64, xorg-x11-drv-nvidia.x86_64, xorg-x11-drv-nvidia-cuda.x86_64, yubikey-manager.noarch, zsh, obsoleting"
+        },
+        {
+          "id": "fx25@1500",
+          "kind": "summary",
+          "phrase": "Échec. nginx ligne 100 : verrou /var/lib/dpkg/lock-frontend."
+        },
+        {
+          "id": "fx27@1500",
+          "kind": "summary",
+          "phrase": "Échec. src/components/Header.tsx ligne 42 : Titel non trouvé."
+        },
+        {
+          "id": "fx19@1500",
+          "kind": "summary",
+          "phrase": "10 éléments : OLD_SHOPAPP, fitness-app, notes-backup, ansible-deploy, score-board, install-iso, old_shopapp."
+        },
+        {
+          "id": "fx28@1500",
+          "kind": "summary",
+          "phrase": "Échec. git push ligne 1 : fetch first."
+        },
+        {
+          "id": "qa1",
+          "kind": "qa",
+          "phrase": "Échec. df ligne 1 : 8.9G libres sur 94G, 91 %."
+        },
+        {
+          "id": "qa0",
+          "kind": "qa",
+          "phrase": "Échec. build ligne 1 : Titel inexistant."
+        },
+        {
+          "id": "qa2",
+          "kind": "qa",
+          "phrase": "Échec. build ligne 1 : Titel non trouvé."
+        }
+      ],
+      "cas_douteux": [
+        {
+          "id": "fx06@1500",
+          "kind": "summary",
+          "phrase": "Échec. gcc -x c - -o /dev/null ligne 1 : expected expression avant ; token.",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        },
+        {
+          "id": "fx22@1500",
+          "kind": "summary",
+          "phrase": "9 conteneurs : shopapp_api, shopapp_nginx_admin, shopapp_vault.",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        },
+        {
+          "id": "fx26@1500",
+          "kind": "summary",
+          "phrase": "certifi-2024.8.30, charset-normalizer, idna, urllib3, certifi.",
+          "pass_A": "ok",
+          "pass_B": "invention"
+        }
+      ]
+    },
+    "i5-gemma3-270m-ftfull-Q8_0.json": {
+      "label": "Gemma 270M Q8 (ftfull)",
+      "n_total": 36,
+      "n_hors_qa": 33,
+      "invention_sur_36": 13,
+      "invention_sur_33": 10,
+      "douteux_sur_36": 3,
+      "douteux_sur_33": 3,
+      "erreurs": 0,
+      "plancher_ok_36": false,
+      "exemples_inventions": [
+        {
+          "id": "fx03@1500",
+          "phrase": "Échec. /nonexistent/file.txt ligne 1 : Aucun fichier ou dossier de ce nom.",
+          "inventions_pass_A": [
+            "ligne 1"
+          ],
+          "inventions_pass_B": [
+            "ligne 1"
+          ]
+        },
+        {
+          "id": "fx04@1500",
+          "phrase": "Échec. KeyError ligne 1 : clé non trouvée.",
+          "inventions_pass_A": [
+            "ligne 1"
+          ],
+          "inventions_pass_B": [
+            "ligne 1"
+          ]
+        },
+        {
+          "id": "fx08@1500",
+          "phrase": "Succès. Pipewire Multimedia Service actif, PID 7126, mémoire 6.7M, temps de réponse 7,981859.",
+          "inventions_pass_A": [
+            "temps de réponse 7,981859"
+          ],
+          "inventions_pass_B": [
+            "temps de réponse 7,981859"
+          ]
+        }
+      ],
+      "cas_inventions": [
+        {
+          "id": "fx03@1500",
+          "kind": "summary",
+          "phrase": "Échec. /nonexistent/file.txt ligne 1 : Aucun fichier ou dossier de ce nom."
+        },
+        {
+          "id": "fx04@1500",
+          "kind": "summary",
+          "phrase": "Échec. KeyError ligne 1 : clé non trouvée."
+        },
+        {
+          "id": "fx08@1500",
+          "kind": "summary",
+          "phrase": "Succès. Pipewire Multimedia Service actif, PID 7126, mémoire 6.7M, temps de réponse 7,981859."
+        },
+        {
+          "id": "fx17@1500",
+          "kind": "summary",
+          "phrase": "Échec. /etc/hostname ligne 1 : Permission non accordée."
+        },
+        {
+          "id": "fx21@1500",
+          "kind": "summary",
+          "phrase": "Échec. /nonexistent ligne 1 : Aucun fichier ou dossier de ce nom."
+        },
+        {
+          "id": "fx24@1500",
+          "kind": "summary",
+          "phrase": "Succès. 12 paquets mis à jour, 0 manquants. 24,3 Mo réceptionnées en 6s."
+        },
+        {
+          "id": "fx25@1500",
+          "kind": "summary",
+          "phrase": "Échec. nginx ligne 1 : verrou fichier dpkg."
+        },
+        {
+          "id": "fx28@1500",
+          "kind": "summary",
+          "phrase": "Échec. App.git ligne 1 : travail manquant."
+        },
+        {
+          "id": "fx27@1500",
+          "kind": "summary",
+          "phrase": "Échec. Header.tsx ligne 17 : Título non trouvé."
+        },
+        {
+          "id": "qa0",
+          "kind": "qa",
+          "phrase": "Échec. Build ligne 1 : Property 'titel' does not exist sur type 'Props'."
+        },
+        {
+          "id": "qa1",
+          "kind": "qa",
+          "phrase": "Échec. Build ligne 1 : Property 'titel' does not exist on type 'Props'."
+        },
+        {
+          "id": "qa2",
+          "kind": "qa",
+          "phrase": "Échec. Build ligne 1 : Property 'titel' does not exist on type 'Props'."
+        },
+        {
+          "id": "fx19@1500",
+          "kind": "summary",
+          "phrase": "10 éléments : OLD_SHOPAPP, fitness-app, notes-backup, ansible-deploy, shopapp."
+        }
+      ],
+      "cas_douteux": [
+        {
+          "id": "fx10@1500",
+          "kind": "summary",
+          "phrase": "Échec. curl ligne 1 : host inexistant.",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        },
+        {
+          "id": "fx07@1500",
+          "kind": "summary",
+          "phrase": "Mémoire 31G total, 865Mi disponibles. Swap 8G total, 72Ki disponibles.",
+          "pass_A": "ok",
+          "pass_B": "invention"
+        },
+        {
+          "id": "fx22@1500",
+          "kind": "summary",
+          "phrase": "9 conteneurs : shopapp_api, shopapp_nginx_admin, shopapp_vault.",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        }
+      ]
+    },
+    "i5-luth-0.6b-ft-r16-Q4_K_M.json": {
+      "label": "Luth 0.6B Q4",
+      "n_total": 36,
+      "n_hors_qa": 33,
+      "invention_sur_36": 9,
+      "invention_sur_33": 7,
+      "douteux_sur_36": 4,
+      "douteux_sur_33": 3,
+      "erreurs": 0,
+      "plancher_ok_36": false,
+      "exemples_inventions": [
+        {
+          "id": "fx03@1500",
+          "phrase": "Échec. /nonexistent/file.txt ligne 1 : Aucun fichier ou dossier de ce nom.",
+          "inventions_pass_A": [
+            "ligne 1"
+          ],
+          "inventions_pass_B": [
+            "ligne 1"
+          ]
+        },
+        {
+          "id": "fx04@1500",
+          "phrase": "Échec. Ligne 1 : KeyError.",
+          "inventions_pass_A": [
+            "Ligne 1"
+          ],
+          "inventions_pass_B": [
+            "Ligne 1"
+          ]
+        },
+        {
+          "id": "fx10@1500",
+          "phrase": "Échec. curl ligne 1 : résolveur inexistant.",
+          "inventions_pass_A": [
+            "ligne 1"
+          ],
+          "inventions_pass_B": [
+            "ligne 1"
+          ]
+        }
+      ],
+      "cas_inventions": [
+        {
+          "id": "fx03@1500",
+          "kind": "summary",
+          "phrase": "Échec. /nonexistent/file.txt ligne 1 : Aucun fichier ou dossier de ce nom."
+        },
+        {
+          "id": "fx04@1500",
+          "kind": "summary",
+          "phrase": "Échec. Ligne 1 : KeyError."
+        },
+        {
+          "id": "fx10@1500",
+          "kind": "summary",
+          "phrase": "Échec. curl ligne 1 : résolveur inexistant."
+        },
+        {
+          "id": "fx17@1500",
+          "kind": "summary",
+          "phrase": "Échec. rm ligne 1 : Permission non accordée."
+        },
+        {
+          "id": "fx21@1500",
+          "kind": "summary",
+          "phrase": "Échec. /nonexistent ligne 2 : Aucun fichier ou dossier de ce nom."
+        },
+        {
+          "id": "fx25@1500",
+          "kind": "summary",
+          "phrase": "Échec. /var/lib/dpkg/lock-frontend ligne 1 : verrou utilisateur."
+        },
+        {
+          "id": "fx28@1500",
+          "kind": "summary",
+          "phrase": "Échec. main -> main ref ref prouvé."
+        },
+        {
+          "id": "qa0",
+          "kind": "qa",
+          "phrase": "Échec. Build ligne 42 : propriété titre inexistant sur type Props."
+        },
+        {
+          "id": "qa2",
+          "kind": "qa",
+          "phrase": "Échec. Build : code 1, erreur ligne 42 : propriété titre non existante."
+        }
+      ],
+      "cas_douteux": [
+        {
+          "id": "fx06@1500",
+          "kind": "summary",
+          "phrase": "Échec. gcc ligne 1 : expected expression before ; token.",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        },
+        {
+          "id": "fx19@1500",
+          "kind": "summary",
+          "phrase": "10 éléments : OLD_SHOPAPP, installer-iso, shopapp.",
+          "pass_A": "ok",
+          "pass_B": "invention"
+        },
+        {
+          "id": "fx22@1500",
+          "kind": "summary",
+          "phrase": "9 conteneurs : shopapp_api, shopapp_nginx_admin, shopapp_vault.",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        },
+        {
+          "id": "qa1",
+          "kind": "qa",
+          "phrase": "Échec. df -h : disque libres 8.9G sur 94G, 91 %.",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        }
+      ]
+    },
+    "i5-a1000-granite4.0-h-350m-ft-Q4_K_M.json": {
+      "label": "Granite 350M Q4",
+      "n_total": 36,
+      "n_hors_qa": 33,
+      "invention_sur_36": 12,
+      "invention_sur_33": 11,
+      "douteux_sur_36": 3,
+      "douteux_sur_33": 3,
+      "erreurs": 0,
+      "plancher_ok_36": false,
+      "exemples_inventions": [
+        {
+          "id": "fx03@1500",
+          "phrase": "Échec. /nonexistent/file.txt ligne 1 : Aucun fichier ou dossier de ce nom.",
+          "inventions_pass_A": [
+            "ligne 1"
+          ],
+          "inventions_pass_B": [
+            "ligne 1"
+          ]
+        },
+        {
+          "id": "fx05@1500",
+          "phrase": "Ping 127.0.0.1 : 3 paquets, 0 perte, temps 0.036 ms.",
+          "inventions_pass_A": [
+            "temps 0.036 ms"
+          ],
+          "inventions_pass_B": [
+            "temps 0.036 ms"
+          ]
+        },
+        {
+          "id": "fx08@1500",
+          "phrase": "18 éléments : pipewire.service, pipewire.socket, mod.raop-sink.",
+          "inventions_pass_A": [
+            "18 éléments : pipewire.socket"
+          ],
+          "inventions_pass_B": [
+            "18 éléments : pipewire.service, pipewire.socket, mod.raop-sink."
+          ]
+        }
+      ],
+      "cas_inventions": [
+        {
+          "id": "fx03@1500",
+          "kind": "summary",
+          "phrase": "Échec. /nonexistent/file.txt ligne 1 : Aucun fichier ou dossier de ce nom."
+        },
+        {
+          "id": "fx05@1500",
+          "kind": "summary",
+          "phrase": "Ping 127.0.0.1 : 3 paquets, 0 perte, temps 0.036 ms."
+        },
+        {
+          "id": "fx08@1500",
+          "kind": "summary",
+          "phrase": "18 éléments : pipewire.service, pipewire.socket, mod.raop-sink."
+        },
+        {
+          "id": "fx10@1500",
+          "kind": "summary",
+          "phrase": "Échec. curl ligne 6 : host inexistant."
+        },
+        {
+          "id": "fx17@1500",
+          "kind": "summary",
+          "phrase": "Échec. /etc/hostname ligne 1 : Permission non accordée."
+        },
+        {
+          "id": "fx19@1500",
+          "kind": "summary",
+          "phrase": "10 éléments : OLD_SHOPAPP 12G, install-iso 7,9G, shopapp 2,4G."
+        },
+        {
+          "id": "fx21@1500",
+          "kind": "summary",
+          "phrase": "Échec. /nonexistent ligne 2 : Aucun fichier ou dossier de ce nom."
+        },
+        {
+          "id": "fx24@1500",
+          "kind": "summary",
+          "phrase": "Succès. Curl 7.88.1-10+deb12u8, libcurl4 7.88.1-10+deb12u8, libssl3 3.0.15-1."
+        },
+        {
+          "id": "fx25@1500",
+          "kind": "summary",
+          "phrase": "Échec. /var/lib/dpkg/lock-frontend ligne 4321 : unattendu-upgr"
+        },
+        {
+          "id": "fx27@1500",
+          "kind": "summary",
+          "phrase": "Échec. Header.tsx ligne 42 : propriété non utilisée."
+        },
+        {
+          "id": "fx29@1500",
+          "kind": "summary",
+          "phrase": "GPU GeForce RTX 3060 Lite, Ethernet RTL8111/8168/8411, HDMI PCI Express, GPU PSPCPP, USB 3.0 Host."
+        },
+        {
+          "id": "qa2",
+          "kind": "qa",
+          "phrase": "Python 3.9.5 installé."
+        }
+      ],
+      "cas_douteux": [
+        {
+          "id": "fx06@1500",
+          "kind": "summary",
+          "phrase": "Échec. main fonction ligne 1 : expected expression before token.",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        },
+        {
+          "id": "fx22@1500",
+          "kind": "summary",
+          "phrase": "9 conteneurs : shopapp_api, shopapp_nginx_admin, shopapp_vault.",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        },
+        {
+          "id": "fx28@1500",
+          "kind": "summary",
+          "phrase": "Échec. main -> main, repositifs refusé.",
+          "pass_A": "ok",
+          "pass_B": "invention"
+        }
+      ]
+    },
+    "i5-a1000-granite4.0-h-350m-ft-Q8_0.json": {
+      "label": "Granite 350M Q8",
+      "n_total": 36,
+      "n_hors_qa": 33,
+      "invention_sur_36": 14,
+      "invention_sur_33": 11,
+      "douteux_sur_36": 1,
+      "douteux_sur_33": 1,
+      "erreurs": 0,
+      "plancher_ok_36": false,
+      "exemples_inventions": [
+        {
+          "id": "fx02@1500",
+          "phrase": "master, aucune commit, non fichiers suivus, python-version, README.md, bench, pyproject.toml, src, uv.lock, vendor.",
+          "inventions_pass_A": [
+            "non fichiers suivus"
+          ],
+          "inventions_pass_B": [
+            "non fichiers suivus"
+          ]
+        },
+        {
+          "id": "fx03@1500",
+          "phrase": "Échec. /nonexistent/file.txt ligne 1 : Aucun fichier ou dossier de ce nom.",
+          "inventions_pass_A": [
+            "ligne 1"
+          ],
+          "inventions_pass_B": [
+            "ligne 1"
+          ]
+        },
+        {
+          "id": "fx06@1500",
+          "phrase": "Échec. main fonction ligne 21 : expected expression before ; token.",
+          "inventions_pass_A": [
+            "main fonction ligne 21"
+          ],
+          "inventions_pass_B": [
+            "ligne 21"
+          ]
+        }
+      ],
+      "cas_inventions": [
+        {
+          "id": "fx02@1500",
+          "kind": "summary",
+          "phrase": "master, aucune commit, non fichiers suivus, python-version, README.md, bench, pyproject.toml, src, uv.lock, vendor."
+        },
+        {
+          "id": "fx03@1500",
+          "kind": "summary",
+          "phrase": "Échec. /nonexistent/file.txt ligne 1 : Aucun fichier ou dossier de ce nom."
+        },
+        {
+          "id": "fx06@1500",
+          "kind": "summary",
+          "phrase": "Échec. main fonction ligne 21 : expected expression before ; token."
+        },
+        {
+          "id": "fx10@1500",
+          "kind": "summary",
+          "phrase": "Échec. curl ligne 1 : nonexistent.invalid."
+        },
+        {
+          "id": "fx08@1500",
+          "kind": "summary",
+          "phrase": "18 éléments : pipewire.service, pipewire.service.d, pipewire.service.d."
+        },
+        {
+          "id": "fx17@1500",
+          "kind": "summary",
+          "phrase": "Échec. /etc/hostname ligne 1 : Permission non accordée."
+        },
+        {
+          "id": "fx19@1500",
+          "kind": "summary",
+          "phrase": "10 éléments : OLD_SHOPAPP 12G, install-iso 7,9G, shopapp 2,4G."
+        },
+        {
+          "id": "fx21@1500",
+          "kind": "summary",
+          "phrase": "Échec. /nonexistent ligne 1 : Aucun fichier ou dossier de ce nom."
+        },
+        {
+          "id": "fx25@1500",
+          "kind": "summary",
+          "phrase": "Échec. apt install nginx ligne 1 : lock frontend vide."
+        },
+        {
+          "id": "fx27@1500",
+          "kind": "summary",
+          "phrase": "Échec. Header.tsx ligne 42 : Titre introuvable."
+        },
+        {
+          "id": "fx28@1500",
+          "kind": "summary",
+          "phrase": "Échec. main ligne 1 : travail en arbre refusé."
+        },
+        {
+          "id": "qa0",
+          "kind": "qa",
+          "phrase": "Échec. Header.tsx ligne 42 : Titre introuvable."
+        },
+        {
+          "id": "qa2",
+          "kind": "qa",
+          "phrase": "Échec. Header.tsx ligne 42 : Titre introuvable."
+        },
+        {
+          "id": "qa1",
+          "kind": "qa",
+          "phrase": "Échec. Header.tsx ligne 42 : Titre introuvable."
+        }
+      ],
+      "cas_douteux": [
+        {
+          "id": "fx22@1500",
+          "kind": "summary",
+          "phrase": "9 conteneurs : shopapp_api, shopapp_nginx_admin, shopapp_vault.",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        }
+      ]
+    },
+    "i5-qwen3.5-0.8b-full-Q4_K_M.json": {
+      "label": "Qwen3.5 0.8B Q4",
+      "n_total": 36,
+      "n_hors_qa": 33,
+      "invention_sur_36": 7,
+      "invention_sur_33": 5,
+      "douteux_sur_36": 5,
+      "douteux_sur_33": 5,
+      "erreurs": 0,
+      "plancher_ok_36": false,
+      "exemples_inventions": [
+        {
+          "id": "fx03@1500",
+          "phrase": "Échec. cat ligne 1 : fichier inexistant.",
+          "inventions_pass_A": [
+            "cat ligne 1"
+          ],
+          "inventions_pass_B": [
+            "ligne 1"
+          ]
+        },
+        {
+          "id": "fx17@1500",
+          "phrase": "Échec. /etc/hostname ligne 1 : Permission non accordée.",
+          "inventions_pass_A": [
+            "/etc/hostname ligne 1"
+          ],
+          "inventions_pass_B": [
+            "ligne 1"
+          ]
+        },
+        {
+          "id": "fx21@1500",
+          "phrase": "Échec. /nonexistent ligne 1 : stat impossible.",
+          "inventions_pass_A": [
+            "ligne 1"
+          ],
+          "inventions_pass_B": [
+            "/nonexistent ligne 1"
+          ]
+        }
+      ],
+      "cas_inventions": [
+        {
+          "id": "fx03@1500",
+          "kind": "summary",
+          "phrase": "Échec. cat ligne 1 : fichier inexistant."
+        },
+        {
+          "id": "fx17@1500",
+          "kind": "summary",
+          "phrase": "Échec. /etc/hostname ligne 1 : Permission non accordée."
+        },
+        {
+          "id": "fx21@1500",
+          "kind": "summary",
+          "phrase": "Échec. /nonexistent ligne 1 : stat impossible."
+        },
+        {
+          "id": "fx24@1500",
+          "kind": "summary",
+          "phrase": "Succès. 12 paquets mis à jour, 24,3 Mo archives, 112 Mo disque."
+        },
+        {
+          "id": "fx25@1500",
+          "kind": "summary",
+          "phrase": "Échec. nginx ligne 1 : verrou /var/lib/dpkg/lock-frontend."
+        },
+        {
+          "id": "qa1",
+          "kind": "qa",
+          "phrase": "Échec. Header.tsx ligne 42 : propriété titel inconnue."
+        },
+        {
+          "id": "qa2",
+          "kind": "qa",
+          "phrase": "Python 3.11.2"
+        }
+      ],
+      "cas_douteux": [
+        {
+          "id": "fx06@1500",
+          "kind": "summary",
+          "phrase": "Échec. main ligne 1 : expected expression before ; token.",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        },
+        {
+          "id": "fx07@1500",
+          "kind": "summary",
+          "phrase": "Mémoire 31G total, 24G disponibles. Swap 8G total, 8G disponibles.",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        },
+        {
+          "id": "fx10@1500",
+          "kind": "summary",
+          "phrase": "Échec. curl ligne 1 : résolution hôte impossible.",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        },
+        {
+          "id": "fx22@1500",
+          "kind": "summary",
+          "phrase": "9 conteneurs : shopapp_api, shopapp_nginx_admin, shopapp_vault, shopapp-frontend, postgres, shopapp-client-webapp.",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        },
+        {
+          "id": "fx27@1500",
+          "kind": "summary",
+          "phrase": "Échec. Header.tsx ligne 42 : Property 'titel' inconnue sur type Props.",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        }
+      ]
+    },
+    "i5-qwen3.5-0.8b-full-Q8_0.json": {
+      "label": "Qwen3.5 0.8B Q8",
+      "n_total": 36,
+      "n_hors_qa": 33,
+      "invention_sur_36": 9,
+      "invention_sur_33": 8,
+      "douteux_sur_36": 3,
+      "douteux_sur_33": 2,
+      "erreurs": 0,
+      "plancher_ok_36": false,
+      "exemples_inventions": [
+        {
+          "id": "fx03@1500",
+          "phrase": "Échec. cat ligne 1 : fichier inexistant.",
+          "inventions_pass_A": [
+            "cat ligne 1"
+          ],
+          "inventions_pass_B": [
+            "ligne 1"
+          ]
+        },
+        {
+          "id": "fx02@1500",
+          "phrase": "master, aucun commit, 4 fichiers non suivis : python-version, README.md, bench, pyproject.toml.",
+          "inventions_pass_A": [
+            "4 fichiers non suivis"
+          ],
+          "inventions_pass_B": [
+            "4 fichiers non suivis"
+          ]
+        },
+        {
+          "id": "fx06@1500",
+          "phrase": "Échec. main ligne 21 : expected expression before ; token.",
+          "inventions_pass_A": [
+            "main",
+            "ligne 21"
+          ],
+          "inventions_pass_B": [
+            "main",
+            "ligne 21"
+          ]
+        }
+      ],
+      "cas_inventions": [
+        {
+          "id": "fx03@1500",
+          "kind": "summary",
+          "phrase": "Échec. cat ligne 1 : fichier inexistant."
+        },
+        {
+          "id": "fx02@1500",
+          "kind": "summary",
+          "phrase": "master, aucun commit, 4 fichiers non suivis : python-version, README.md, bench, pyproject.toml."
+        },
+        {
+          "id": "fx06@1500",
+          "kind": "summary",
+          "phrase": "Échec. main ligne 21 : expected expression before ; token."
+        },
+        {
+          "id": "fx10@1500",
+          "kind": "summary",
+          "phrase": "Échec. curl ligne 1 : non-hôte inexistant."
+        },
+        {
+          "id": "fx17@1500",
+          "kind": "summary",
+          "phrase": "Échec. /etc/hostname ligne 1 : Permission non accordée."
+        },
+        {
+          "id": "fx21@1500",
+          "kind": "summary",
+          "phrase": "Échec. /nonexistent ligne 2 : stat impossible."
+        },
+        {
+          "id": "fx25@1500",
+          "kind": "summary",
+          "phrase": "Échec. nginx ligne 1 : verrou /var/lib/dpkg/lock-frontend."
+        },
+        {
+          "id": "fx28@1500",
+          "kind": "summary",
+          "phrase": "Échec. main ligne 1 : ref non partagé."
+        },
+        {
+          "id": "qa1",
+          "kind": "qa",
+          "phrase": "Échec. src/components/Header.tsx ligne 42 : Property 'titel' inconnue sur type Props."
+        }
+      ],
+      "cas_douteux": [
+        {
+          "id": "fx22@1500",
+          "kind": "summary",
+          "phrase": "9 conteneurs : shopapp_api, shopapp_nginx_admin, shopapp_vault.",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        },
+        {
+          "id": "fx27@1500",
+          "kind": "summary",
+          "phrase": "Échec. Header.tsx ligne 42 : Property 'titel' inconnue sur type Props.",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        },
+        {
+          "id": "qa0",
+          "kind": "qa",
+          "phrase": "Échec. Header.tsx ligne 42 : Property 'titel' inconnue sur type Props.",
+          "pass_A": "invention",
+          "pass_B": "ok"
+        }
+      ]
+    }
+  },
+  "validation_juge": {
+    "description": "6 cas de contrôle écrits à la main (3 phrases fidèles, 3 avec une invention nette), tirés de fx01/fx07/fx27 du banc.",
+    "passe_A_score": "6/6",
+    "passe_B_score": "6/6 (après ajustement du prompt : vérification chiffre par chiffre, méthode insensible à l'ordre contexte/phrase)",
+    "cas": [
+      {
+        "id": "C1-fidele-disque",
+        "attendu": "ok",
+        "obtenu_A": "ok",
+        "obtenu_B": "ok"
+      },
+      {
+        "id": "C2-fidele-memoire",
+        "attendu": "ok",
+        "obtenu_A": "ok",
+        "obtenu_B": "ok"
+      },
+      {
+        "id": "C3-fidele-erreur-ligne",
+        "attendu": "ok",
+        "obtenu_A": "ok",
+        "obtenu_B": "ok"
+      },
+      {
+        "id": "C4-invention-statut",
+        "attendu": "invention",
+        "obtenu_A": "invention",
+        "obtenu_B": "invention"
+      },
+      {
+        "id": "C5-invention-chiffre",
+        "attendu": "invention",
+        "obtenu_A": "invention",
+        "obtenu_B": "invention"
+      },
+      {
+        "id": "C6-invention-ligne",
+        "attendu": "invention",
+        "obtenu_A": "invention",
+        "obtenu_B": "invention"
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;600&display=block">
+<link rel="stylesheet" href="../readme-brand.css">
+<style>body { background: rgb(255, 0, 254); }</style><style>
+.chev { display: inline-grid; }
+.chev i { display: block; }
+.who .sq { width: 14px; height: 14px; background: var(--black); flex: none; }
+.arrow { color: var(--neutral); }
+</style>
+</head><body><div class="card">
+<span class="tag">Questions</span>
+<h1>Just ask.<br><em>It heard it all.</em></h1>
+<p class="sub">Questions cover the whole session history: commands, exit codes, output. On an i5 laptop with no graphics card, answered in 2.2 s (median).</p>
+<div class="qas"><div class="qa"><div class="term qq"><div class="cmd">q quelle version de requests a été installée ?</div><span class="qg">which version of requests was installed?</span></div><div class="say a"><div class="q" style="font-size:20px">“requests-2.32.3.”</div><div class="gl">requests-2.32.3.</div></div><div class="nt">Read from the pip install output.</div></div><div class="qa"><div class="term qq"><div class="cmd">q quelle version de Python est installée ?</div><span class="qg">which Python version is installed?</span></div><div class="say a"><div class="q" style="font-size:20px">“Pas dans l&#x27;historique.”</div><div class="gl">Not in the history.</div></div><div class="nt">Not in the session: it does not make it up.</div></div></div>
+<p class="foot">Bench session: git push (failed), docker ps, pip install requests, then df -h. Answers of the small steph-speak model after the grounding guard.</p>
+<style>
+.qas { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 26px; align-items: start; }
+.qq { padding: 12px 16px; }
+.qg { display: block; margin-top: 2px; color: var(--muted); }
+.a { margin-top: 10px; padding: 12px 18px 14px; }
+.nt { margin-top: 10px; font-size: 20px; font-weight: 700; line-height: 1.35; color: var(--lemon); }
+</style></div></body></html>

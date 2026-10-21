@@ -1,0 +1,4 @@
+r1 SFT présente: abst 17/204 score 52.6 | absente: abst 27/66 score 45.5
+R2 SFT présente: abst 12/204 score 58.1 | absente: abst 28/66 score 42.4
+v1.0 présente: abst 20/204 score 49.4 | absente: abst 36/66 score 54.5
+R2 présente: abst 33/204 score 45.1 | absente: abst 42/66 score 66.7

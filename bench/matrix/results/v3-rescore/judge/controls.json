@@ -1,0 +1,92 @@
+[
+ {
+  "id": "C1-fidele-disque",
+  "lang": "fr",
+  "context": "Commande : df -h\nStatut : succès (code 0)\nDurée : 0.0 s ; 14 lignes affichées\nSortie :\nracine : 685G libres sur 953G, 29 %\nboot : 284M libres sur 974M, 69 %",
+  "phrase": "Racine 685G libres sur 953G, 29 %. Boot 69 %.",
+  "expected": "ok"
+ },
+ {
+  "id": "C2-fidele-memoire",
+  "lang": "fr",
+  "context": "Commande : free -h\nStatut : succès (code 0)\nDurée : 0.0 s ; 3 lignes affichées\nSortie :\n               total        used        free      shared  buff/cache   available\nMem:            31Gi       6,6Gi       865Mi       354Mi        25Gi        24Gi\nSwap:          8,0Gi        72Ki       8,0Gi",
+  "phrase": "31 Gi au total, 24 Gi disponibles.",
+  "expected": "ok"
+ },
+ {
+  "id": "C3-fidele-erreur-ligne",
+  "lang": "fr",
+  "context": "Commande : npm run build\nStatut : échec (code 1)\nDurée : 12.5 s ; 9 lignes affichées\nSortie :\n> app@1.0.0 build\n> tsc && vite build\nsrc/components/Header.tsx:42:17 - error TS2339: Property 'titel' does not exist on type 'Props'. Did you mean 'title'?\n42     <h1>{props.titel}</h1>\n                   ~~~~~\nFound 1 error in src/components/Header.tsx:42",
+  "phrase": "Échec. Header.tsx ligne 42 : titel inconnu, utiliser title.",
+  "expected": "ok"
+ },
+ {
+  "id": "C4-invention-statut",
+  "lang": "fr",
+  "context": "Commande : df -h\nStatut : succès (code 0)\nDurée : 0.0 s ; 14 lignes affichées\nSortie :\nracine : 685G libres sur 953G, 29 %\nboot : 284M libres sur 974M, 69 %",
+  "phrase": "Échec. Racine pleine à 91 %, seulement 8,9G libres.",
+  "expected": "invention"
+ },
+ {
+  "id": "C5-invention-chiffre",
+  "lang": "fr",
+  "context": "Commande : free -h\nStatut : succès (code 0)\nDurée : 0.0 s ; 3 lignes affichées\nSortie :\n               total        used        free      shared  buff/cache   available\nMem:            31Gi       6,6Gi       865Mi       354Mi        25Gi        24Gi\nSwap:          8,0Gi        72Ki       8,0Gi",
+  "phrase": "31 Gi au total, 16 Gi disponibles.",
+  "expected": "invention"
+ },
+ {
+  "id": "C6-invention-ligne",
+  "lang": "fr",
+  "context": "Commande : npm run build\nStatut : échec (code 1)\nDurée : 12.5 s ; 9 lignes affichées\nSortie :\n> app@1.0.0 build\n> tsc && vite build\nsrc/components/Header.tsx:42:17 - error TS2339: Property 'titel' does not exist on type 'Props'. Did you mean 'title'?\n42     <h1>{props.titel}</h1>\n                   ~~~~~\nFound 1 error in src/components/Header.tsx:42",
+  "phrase": "Échec. Header.tsx ligne 58 : property titel manquante.",
+  "expected": "invention"
+ },
+ {
+  "id": "V3E1-faithful-memory",
+  "lang": "en",
+  "source": "v3-disk-memory-0023",
+  "context": "Command: free -w -h\nStatus: success (code 0)\nDuration: 0.0 s; 3 lines displayed\nOutput:\n               total        used        free      shared     buffers       cache   available\nMem:            15Gi       2.0Gi       5.1Gi       308Mi       288Mi       8.4Gi        13Gi\nSwap:          6.1Gi          0B       6.1Gi",
+  "phrase": "13Gi available of 15Gi, 2.0Gi used, swap empty.",
+  "expected": "ok"
+ },
+ {
+  "id": "V3E2-faithful-error-line",
+  "lang": "en",
+  "source": "v3-build-native-0032",
+  "context": "Command: make\nStatus: failed (code 2)\nDuration: 0.1 s; 7 lines displayed\nOutput:\nclang -O2 -Wall -c src/main.c -o build/main.o\nclang -O2 -Wall -c src/tls.c -o build/tls.o\nsrc/tls.c:1:10: fatal error: 'openssl/ssl.h' file not found\n    1 | #include <openssl/ssl.h>\n      |          ^~~~~~~~~~~~~~~\n1 error generated.\nmake: *** [build/tls.o] Error 1",
+  "phrase": "Failed. src/tls.c line 1: header openssl/ssl.h not found.",
+  "expected": "ok"
+ },
+ {
+  "id": "V3E3-faithful-tests",
+  "lang": "en",
+  "source": "v3-tests-0025",
+  "context": "Command: npx jest\nStatus: success (code 0)\nDuration: 3.0 s; 8 lines displayed\nOutput:\nPASS src/store.test.js\nPASS src/filter.test.js\nTest Suites: 2 passed, 2 total\nTests:       7 passed, 7 total\nSnapshots:   0 total\nTime:        1.201 s\nRan all test suites.",
+  "phrase": "All 7 tests passed in 2 suites.",
+  "expected": "ok"
+ },
+ {
+  "id": "V3E4-invented-figure",
+  "lang": "en",
+  "source": "v3-disk-memory-0023",
+  "context": "Command: free -w -h\nStatus: success (code 0)\nDuration: 0.0 s; 3 lines displayed\nOutput:\n               total        used        free      shared     buffers       cache   available\nMem:            15Gi       2.0Gi       5.1Gi       308Mi       288Mi       8.4Gi        13Gi\nSwap:          6.1Gi          0B       6.1Gi",
+  "phrase": "15Gi total, only 9Gi available.",
+  "expected": "invention"
+ },
+ {
+  "id": "V3E5-invented-line",
+  "lang": "en",
+  "source": "v3-build-native-0032",
+  "context": "Command: make\nStatus: failed (code 2)\nDuration: 0.1 s; 7 lines displayed\nOutput:\nclang -O2 -Wall -c src/main.c -o build/main.o\nclang -O2 -Wall -c src/tls.c -o build/tls.o\nsrc/tls.c:1:10: fatal error: 'openssl/ssl.h' file not found\n    1 | #include <openssl/ssl.h>\n      |          ^~~~~~~~~~~~~~~\n1 error generated.\nmake: *** [build/tls.o] Error 1",
+  "phrase": "Failed. src/tls.c line 12: header openssl/ssl.h not found.",
+  "expected": "invention"
+ },
+ {
+  "id": "V3E6-invented-status",
+  "lang": "en",
+  "source": "v3-tests-0025",
+  "context": "Command: npx jest\nStatus: success (code 0)\nDuration: 3.0 s; 8 lines displayed\nOutput:\nPASS src/store.test.js\nPASS src/filter.test.js\nTest Suites: 2 passed, 2 total\nTests:       7 passed, 7 total\nSnapshots:   0 total\nTime:        1.201 s\nRan all test suites.",
+  "phrase": "Failed. 2 of 7 tests failed in store.test.js.",
+  "expected": "invention"
+ }
+]

@@ -1,0 +1,212 @@
+=== $ mkdir -pv out/2024/janvier out/2024/fevrier
+mkdir: created directory 'out'
+mkdir: created directory 'out/2024'
+mkdir: created directory 'out/2024/janvier'
+mkdir: created directory 'out/2024/fevrier'
+=== exit 0
+=== $ mkdir -v out/2024/janvier
+mkdir: cannot create directory 'out/2024/janvier': File exists
+=== exit 1
+=== $ rm -v f1 f2
+removed 'f1'
+removed 'f2'
+=== exit 0
+=== $ rm -rv d1
+removed directory 'd1'
+=== exit 0
+=== $ split -n 3 -d --verbose lines.txt part_
+creating file 'part_00'
+creating file 'part_01'
+creating file 'part_02'
+=== exit 0
+=== $ chmod -v 640 part_00 part_01
+mode of 'part_00' changed from 0644 (rw-r--r--) to 0640 (rw-r-----)
+mode of 'part_01' changed from 0644 (rw-r--r--) to 0640 (rw-r-----)
+=== exit 0
+=== $ chmod -c 640 part_00 part_02
+mode of 'part_02' changed from 0644 (rw-r--r--) to 0640 (rw-r-----)
+=== exit 0
+=== $ chmod -Rv 750 out
+mode of 'out' changed from 0755 (rwxr-xr-x) to 0750 (rwxr-x---)
+mode of 'out/2024' changed from 0755 (rwxr-xr-x) to 0750 (rwxr-x---)
+mode of 'out/2024/fevrier' changed from 0755 (rwxr-xr-x) to 0750 (rwxr-x---)
+mode of 'out/2024/janvier' changed from 0755 (rwxr-xr-x) to 0750 (rwxr-x---)
+=== exit 0
+=== $ chown -v nobody:nogroup part_00 part_01
+changed ownership of 'part_00' from root:root to nobody:nogroup
+changed ownership of 'part_01' from root:root to nobody:nogroup
+=== exit 0
+=== $ chown -c nobody:nogroup part_00 part_02
+changed ownership of 'part_02' from root:root to nobody:nogroup
+=== exit 0
+=== $ chgrp -v nogroup part_02
+group of 'part_02' retained as nogroup
+=== exit 0
+=== $ shred -v -n 2 s1
+shred: s1: pass 1/2 (random)...
+shred: s1: pass 2/2 (random)...
+=== exit 0
+=== $ shred -vzu -n 1 s2
+shred: s2: pass 1/2 (random)...
+shred: s2: pass 2/2 (000000)...
+shred: s2: removing
+shred: s2: renamed to 00
+shred: 00: renamed to 0
+shred: s2: removed
+=== exit 0
+=== $ sha256sum -c sums
+c1: OK
+c2: FAILED
+sha256sum: c3: No such file or directory
+c3: FAILED open or read
+sha256sum: WARNING: 1 listed file could not be read
+sha256sum: WARNING: 1 computed checksum did NOT match
+=== exit 1
+=== $ sha256sum -c ok.sums
+c1: OK
+=== exit 0
+=== $ md5sum -c sums
+md5sum: sums: no properly formatted checksum lines found
+=== exit 1
+=== $ diff -rq r1 r2
+Only in r2: new
+Only in r1: only
+Files r1/src/s and r2/src/s differ
+Files r1/x and r2/x differ
+=== exit 1
+=== $ diff -q r1/x r2/x
+Files r1/x and r2/x differ
+=== exit 1
+=== $ wc -l lines.txt src/a.py src/c.py
+100 lines.txt
+  3 src/a.py
+  1 src/c.py
+104 total
+=== exit 0
+=== $ wc -w lines.txt src/a.py
+100 lines.txt
+  6 src/a.py
+106 total
+=== exit 0
+=== $ grep -rn TODO src
+src/a.py:1:a TODO x
+src/a.py:3:TODO y
+src/sub/b.py:1:TODO z
+=== exit 0
+=== $ grep -r TODO src
+src/a.py:a TODO x
+src/a.py:TODO y
+src/sub/b.py:TODO z
+=== exit 0
+=== $ grep -rc TODO src
+src/c.py:0
+src/a.py:2
+src/sub/b.py:1
+=== exit 0
+=== $ grep -rl TODO src
+src/a.py
+src/sub/b.py
+=== exit 0
+=== $ grep -n TODO src/a.py
+1:a TODO x
+3:TODO y
+=== exit 0
+=== $ tar -czvf ../d6b-t.tgz src
+src/
+src/c.py
+src/a.py
+src/sub/
+src/sub/b.py
+=== exit 0
+=== $ tar -xzvf ../d6b-t.tgz -C out
+src/
+src/c.py
+src/a.py
+src/sub/
+src/sub/b.py
+=== exit 0
+=== $ tar -xzvf trunc.tgz -C out
+src/
+src/c.py
+src/a.py
+src/sub/
+src/sub/b.py
+=== exit 0
+=== $ tar -xvf missing.tar
+tar: missing.tar: Cannot open: No such file or directory
+tar: Error is not recoverable: exiting now
+=== exit 2
+=== $ cp -v part_00 part_01 out/
+'part_00' -> 'out/part_00'
+'part_01' -> 'out/part_01'
+=== exit 0
+=== $ cp -rv src out/copie
+'src' -> 'out/copie'
+'src/sub' -> 'out/copie/sub'
+'src/sub/b.py' -> 'out/copie/sub/b.py'
+'src/a.py' -> 'out/copie/a.py'
+'src/c.py' -> 'out/copie/c.py'
+=== exit 0
+=== $ ln -sv ../part_00 ../part_01 out/
+ln: failed to create symbolic link 'out/part_00': File exists
+ln: failed to create symbolic link 'out/part_01': File exists
+=== exit 1
+=== $ mv -v part_02 out/
+renamed 'part_02' -> 'out/part_02'
+=== exit 0
+=== $ cp missing.csv out/
+cp: cannot stat 'missing.csv': No such file or directory
+=== exit 1
+=== $ sort missing.txt
+sort: cannot read: missing.txt: No such file or directory
+=== exit 2
+=== $ mkdir out
+mkdir: cannot create directory 'out': File exists
+=== exit 1
+=== $ bash unbound.sh
+start
+unbound.sh: line 4: UNDEF_VAR: unbound variable
+=== exit 1
+=== $ bash errs.sh
+start
+errs.sh: line 3: cd: /nonexistent/dir: No such file or directory
+cp: cannot stat 'nope.csv': No such file or directory
+=== exit 3
+=== $ bash div.sh
+div.sh: line 2: 1 / 0: division by 0 (error token is "0")
+=== exit 1
+=== $ bash unary.sh
+unary.sh: line 2: [: 3: unary operator expected
+=== exit 2
+=== $ bash syn.sh
+syn.sh: line 4: syntax error: unexpected end of file
+=== exit 2
+=== $ rsync -av src/ mirror/
+sending incremental file list
+a.py
+c.py
+sub/
+sub/b.py
+
+sent 306 bytes  received 85 bytes  782.00 bytes/sec
+total size is 30  speedup is 0.08
+=== exit 0
+=== $ rsync -a --stats src/ mirror2/
+
+Number of files: 5 (reg: 3, dir: 2)
+Number of created files: 5 (reg: 3, dir: 2)
+Number of deleted files: 0
+Number of regular files transferred: 3
+Total file size: 30 bytes
+Total transferred file size: 30 bytes
+Literal data: 30 bytes
+Matched data: 0 bytes
+File list size: 0
+File list generation time: 0.001 seconds
+File list transfer time: 0.000 seconds
+Total bytes sent: 309
+Total bytes received: 88
+
+sent 309 bytes  received 88 bytes  794.00 bytes/sec
+total size is 30  speedup is 0.08
+=== exit 0

@@ -1,0 +1,625 @@
+{
+ "models": {
+  "a-sft": {
+   "seeds": 3,
+   "missing": 0,
+   "quality": 53.7,
+   "fr": 50.1,
+   "en": 57.3,
+   "summary": 53.1,
+   "qa": 58.8,
+   "quality_by_seed": [
+    53.4,
+    54.2,
+    53.5
+   ],
+   "reaches_model": 49.6,
+   "qa_present": 58.7,
+   "qa_absent": 59.1,
+   "abst_present": [
+    3,
+    7,
+    5
+   ],
+   "abst_absent": [
+    12,
+    14,
+    13
+   ],
+   "wrong_lang_pct": {
+    "@fr": 7.87,
+    "@en": 4.31
+   },
+   "wrong_lang_en_fr_output_pct": 16.67,
+   "wrong_lang_en_fr_output_n": 62,
+   "production": {
+    "quality": 78.3,
+    "by_seed": [
+     78.2,
+     78.6,
+     78.2
+    ],
+    "code_share": 72.4,
+    "fallback": [
+     2,
+     1,
+     1
+    ],
+    "fr": 78.0,
+    "en": 78.6
+   },
+   "inventions": {
+    "seeds": [
+     7,
+     42,
+     123
+    ],
+    "n": 1613,
+    "pct": 29.9,
+    "douteux_pct": 7.4
+   }
+  },
+  "g5c": {
+   "seeds": 3,
+   "missing": 0,
+   "quality": 53.0,
+   "fr": 53.3,
+   "en": 52.8,
+   "summary": 52.6,
+   "qa": 56.8,
+   "quality_by_seed": [
+    53.2,
+    53.0,
+    52.9
+   ],
+   "reaches_model": 48.0,
+   "qa_present": 60.5,
+   "qa_absent": 45.5,
+   "abst_present": [
+    6,
+    7,
+    7
+   ],
+   "abst_absent": [
+    11,
+    8,
+    11
+   ],
+   "wrong_lang_pct": {
+    "@fr": 4.18,
+    "@en": 5.29
+   },
+   "wrong_lang_en_fr_output_pct": 22.58,
+   "wrong_lang_en_fr_output_n": 62,
+   "production": {
+    "quality": 78.1,
+    "by_seed": [
+     78.2,
+     78.3,
+     77.8
+    ],
+    "code_share": 72.4,
+    "fallback": [
+     2,
+     2,
+     2
+    ],
+    "fr": 78.0,
+    "en": 78.2
+   },
+   "inventions": {
+    "seeds": [
+     7,
+     42,
+     123
+    ],
+    "n": 1614,
+    "pct": 22.6,
+    "douteux_pct": 7.2
+   }
+  },
+  "g5e": {
+   "seeds": 3,
+   "missing": 0,
+   "quality": 52.7,
+   "fr": 52.6,
+   "en": 52.8,
+   "summary": 51.9,
+   "qa": 60.0,
+   "quality_by_seed": [
+    53.4,
+    52.6,
+    52.2
+   ],
+   "reaches_model": 47.5,
+   "qa_present": 61.8,
+   "qa_absent": 54.5,
+   "abst_present": [
+    6,
+    6,
+    8
+   ],
+   "abst_absent": [
+    11,
+    12,
+    12
+   ],
+   "wrong_lang_pct": {
+    "@fr": 4.31,
+    "@en": 3.81
+   },
+   "wrong_lang_en_fr_output_pct": 13.98,
+   "wrong_lang_en_fr_output_n": 62,
+   "production": {
+    "quality": 78.3,
+    "by_seed": [
+     78.6,
+     78.2,
+     78.2
+    ],
+    "code_share": 72.4,
+    "fallback": [
+     2,
+     2,
+     1
+    ],
+    "fr": 78.2,
+    "en": 78.4
+   },
+   "inventions": {
+    "seeds": [
+     7,
+     42,
+     123
+    ],
+    "n": 1614,
+    "pct": 23.8,
+    "douteux_pct": 8.0
+   }
+  }
+ },
+ "pairs": {
+  "a-sft - g5c": {
+   "quality": {
+    "n_cases": 429,
+    "a": 53.68,
+    "b": 53.02,
+    "diff": 0.66,
+    "ci95": [
+     -1.6,
+     2.98
+    ],
+    "sign_test_p": 0.5894
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 49.65,
+    "b": 48.01,
+    "diff": 1.64,
+    "ci95": [
+     -1.25,
+     4.59
+    ],
+    "sign_test_p": 0.7095
+   },
+   "summary": {
+    "n_cases": 384,
+    "a": 53.08,
+    "b": 52.57,
+    "diff": 0.51,
+    "ci95": [
+     -1.84,
+     2.89
+    ],
+    "sign_test_p": 0.6178
+   },
+   "qa": {
+    "n_cases": 45,
+    "a": 58.77,
+    "b": 56.85,
+    "diff": 1.91,
+    "ci95": [
+     -5.0,
+     9.26
+    ],
+    "sign_test_p": 1.0
+   },
+   "qa_present": {
+    "n_cases": 34,
+    "a": 58.66,
+    "b": 60.54,
+    "diff": -1.88,
+    "ci95": [
+     -8.99,
+     5.47
+    ],
+    "sign_test_p": 0.4545
+   },
+   "qa_absent": {
+    "n_cases": 11,
+    "a": 59.09,
+    "b": 45.45,
+    "diff": 13.64,
+    "ci95": [
+     0.0,
+     31.82
+    ],
+    "sign_test_p": 0.375
+   },
+   "fr": {
+    "n_cases": 429,
+    "a": 50.03,
+    "b": 53.28,
+    "diff": -3.25,
+    "ci95": [
+     -6.3,
+     -0.12
+    ],
+    "sign_test_p": 0.0065
+   },
+   "en": {
+    "n_cases": 429,
+    "a": 57.32,
+    "b": 52.75,
+    "diff": 4.57,
+    "ci95": [
+     1.7,
+     7.46
+    ],
+    "sign_test_p": 0.0436
+   },
+   "wrong_lang_fr": {
+    "n": 271,
+    "a": 7.87,
+    "b": 4.18,
+    "diff": 3.69,
+    "ci95": [
+     0.37,
+     7.01
+    ]
+   },
+   "wrong_lang_en": {
+    "n": 271,
+    "a": 4.31,
+    "b": 5.29,
+    "diff": -0.98,
+    "ci95": [
+     -3.81,
+     1.85
+    ]
+   },
+   "wrong_lang_en_fr_output": {
+    "n": 62,
+    "a": 16.67,
+    "b": 22.58,
+    "diff": -5.91,
+    "ci95": [
+     -17.74,
+     6.45
+    ]
+   },
+   "production": {
+    "n_cases": 429,
+    "a": 78.32,
+    "b": 78.07,
+    "diff": 0.26,
+    "ci95": [
+     -1.0,
+     1.54
+    ],
+    "sign_test_p": 0.4767
+   },
+   "inventions": {
+    "seeds": [
+     7,
+     42,
+     123
+    ],
+    "n_cases": 269,
+    "a": 29.89,
+    "b": 22.61,
+    "diff": 7.28,
+    "ci95": [
+     3.13,
+     11.18
+    ],
+    "sign_test_p": 0.0004
+   }
+  },
+  "a-sft - g5e": {
+   "quality": {
+    "n_cases": 429,
+    "a": 53.68,
+    "b": 52.72,
+    "diff": 0.96,
+    "ci95": [
+     -1.55,
+     3.44
+    ],
+    "sign_test_p": 0.726
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 49.65,
+    "b": 47.49,
+    "diff": 2.16,
+    "ci95": [
+     -1.13,
+     5.63
+    ],
+    "sign_test_p": 1.0
+   },
+   "summary": {
+    "n_cases": 384,
+    "a": 53.08,
+    "b": 51.87,
+    "diff": 1.21,
+    "ci95": [
+     -1.44,
+     3.88
+    ],
+    "sign_test_p": 0.8074
+   },
+   "qa": {
+    "n_cases": 45,
+    "a": 58.77,
+    "b": 60.0,
+    "diff": -1.23,
+    "ci95": [
+     -8.83,
+     6.36
+    ],
+    "sign_test_p": 0.8388
+   },
+   "qa_present": {
+    "n_cases": 34,
+    "a": 58.66,
+    "b": 61.76,
+    "diff": -3.1,
+    "ci95": [
+     -11.44,
+     4.58
+    ],
+    "sign_test_p": 0.8238
+   },
+   "qa_absent": {
+    "n_cases": 11,
+    "a": 59.09,
+    "b": 54.55,
+    "diff": 4.55,
+    "ci95": [
+     -12.12,
+     24.24
+    ],
+    "sign_test_p": 1.0
+   },
+   "fr": {
+    "n_cases": 429,
+    "a": 50.03,
+    "b": 52.59,
+    "diff": -2.56,
+    "ci95": [
+     -5.7,
+     0.59
+    ],
+    "sign_test_p": 0.0153
+   },
+   "en": {
+    "n_cases": 429,
+    "a": 57.32,
+    "b": 52.85,
+    "diff": 4.47,
+    "ci95": [
+     1.3,
+     7.64
+    ],
+    "sign_test_p": 0.0035
+   },
+   "wrong_lang_fr": {
+    "n": 271,
+    "a": 7.87,
+    "b": 4.31,
+    "diff": 3.57,
+    "ci95": [
+     0.12,
+     7.13
+    ]
+   },
+   "wrong_lang_en": {
+    "n": 271,
+    "a": 4.31,
+    "b": 3.81,
+    "diff": 0.49,
+    "ci95": [
+     -1.72,
+     2.71
+    ]
+   },
+   "wrong_lang_en_fr_output": {
+    "n": 62,
+    "a": 16.67,
+    "b": 13.98,
+    "diff": 2.69,
+    "ci95": [
+     -5.91,
+     11.83
+    ]
+   },
+   "production": {
+    "n_cases": 429,
+    "a": 78.32,
+    "b": 78.31,
+    "diff": 0.02,
+    "ci95": [
+     -1.3,
+     1.37
+    ],
+    "sign_test_p": 0.6353
+   },
+   "inventions": {
+    "seeds": [
+     7,
+     42,
+     123
+    ],
+    "n_cases": 269,
+    "a": 29.89,
+    "b": 23.79,
+    "diff": 6.1,
+    "ci95": [
+     1.8,
+     10.29
+    ],
+    "sign_test_p": 0.0011
+   }
+  },
+  "g5c - g5e": {
+   "quality": {
+    "n_cases": 429,
+    "a": 53.02,
+    "b": 52.72,
+    "diff": 0.3,
+    "ci95": [
+     -1.53,
+     2.15
+    ],
+    "sign_test_p": 0.9492
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 48.01,
+    "b": 47.49,
+    "diff": 0.52,
+    "ci95": [
+     -1.83,
+     2.88
+    ],
+    "sign_test_p": 0.8748
+   },
+   "summary": {
+    "n_cases": 384,
+    "a": 52.57,
+    "b": 51.87,
+    "diff": 0.7,
+    "ci95": [
+     -1.22,
+     2.66
+    ],
+    "sign_test_p": 1.0
+   },
+   "qa": {
+    "n_cases": 45,
+    "a": 56.85,
+    "b": 60.0,
+    "diff": -3.15,
+    "ci95": [
+     -9.07,
+     2.41
+    ],
+    "sign_test_p": 0.8238
+   },
+   "qa_present": {
+    "n_cases": 34,
+    "a": 60.54,
+    "b": 61.76,
+    "diff": -1.23,
+    "ci95": [
+     -7.85,
+     4.9
+    ],
+    "sign_test_p": 1.0
+   },
+   "qa_absent": {
+    "n_cases": 11,
+    "a": 45.45,
+    "b": 54.55,
+    "diff": -9.09,
+    "ci95": [
+     -22.73,
+     1.52
+    ],
+    "sign_test_p": 0.625
+   },
+   "fr": {
+    "n_cases": 429,
+    "a": 53.28,
+    "b": 52.59,
+    "diff": 0.69,
+    "ci95": [
+     -1.97,
+     3.33
+    ],
+    "sign_test_p": 0.9419
+   },
+   "en": {
+    "n_cases": 429,
+    "a": 52.75,
+    "b": 52.85,
+    "diff": -0.1,
+    "ci95": [
+     -2.6,
+     2.37
+    ],
+    "sign_test_p": 0.6385
+   },
+   "wrong_lang_fr": {
+    "n": 271,
+    "a": 4.18,
+    "b": 4.31,
+    "diff": -0.12,
+    "ci95": [
+     -2.58,
+     2.34
+    ]
+   },
+   "wrong_lang_en": {
+    "n": 271,
+    "a": 5.29,
+    "b": 3.81,
+    "diff": 1.48,
+    "ci95": [
+     -0.74,
+     3.81
+    ]
+   },
+   "wrong_lang_en_fr_output": {
+    "n": 62,
+    "a": 22.58,
+    "b": 13.98,
+    "diff": 8.6,
+    "ci95": [
+     -0.0,
+     17.74
+    ]
+   },
+   "production": {
+    "n_cases": 429,
+    "a": 78.07,
+    "b": 78.31,
+    "diff": -0.24,
+    "ci95": [
+     -1.13,
+     0.61
+    ],
+    "sign_test_p": 0.7948
+   },
+   "inventions": {
+    "seeds": [
+     7,
+     42,
+     123
+    ],
+    "n_cases": 269,
+    "a": 22.61,
+    "b": 23.79,
+    "diff": -1.18,
+    "ci95": [
+     -4.65,
+     2.42
+    ],
+    "sign_test_p": 0.6612
+   }
+  }
+ },
+ "style": {}
+}

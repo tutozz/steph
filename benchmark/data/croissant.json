@@ -1,0 +1,472 @@
+{
+ "@context": {
+  "@language": "en",
+  "@vocab": "https://schema.org/",
+  "sc": "https://schema.org/",
+  "cr": "http://mlcommons.org/croissant/",
+  "rai": "http://mlcommons.org/croissant/RAI/",
+  "dct": "http://purl.org/dc/terms/",
+  "citeAs": "cr:citeAs",
+  "column": "cr:column",
+  "conformsTo": "dct:conformsTo",
+  "data": {
+   "@id": "cr:data",
+   "@type": "@json"
+  },
+  "dataType": {
+   "@id": "cr:dataType",
+   "@type": "@vocab"
+  },
+  "examples": {
+   "@id": "cr:examples",
+   "@type": "@json"
+  },
+  "extract": "cr:extract",
+  "field": "cr:field",
+  "fileProperty": "cr:fileProperty",
+  "fileObject": "cr:fileObject",
+  "fileSet": "cr:fileSet",
+  "format": "cr:format",
+  "includes": "cr:includes",
+  "isLiveDataset": "cr:isLiveDataset",
+  "jsonPath": "cr:jsonPath",
+  "key": "cr:key",
+  "md5": "cr:md5",
+  "parentField": "cr:parentField",
+  "path": "cr:path",
+  "recordSet": "cr:recordSet",
+  "references": "cr:references",
+  "regex": "cr:regex",
+  "repeated": "cr:repeated",
+  "replace": "cr:replace",
+  "separator": "cr:separator",
+  "source": "cr:source",
+  "subField": "cr:subField",
+  "transform": "cr:transform"
+ },
+ "@type": "sc:Dataset",
+ "conformsTo": [
+  "http://mlcommons.org/croissant/1.0",
+  "http://mlcommons.org/croissant/RAI/1.0"
+ ],
+ "name": "Steph Speak Bench",
+ "description": "Multilingual (English, French, German, Spanish, Portuguese, Russian) benchmark of spoken summaries of terminal command outputs by local LLMs, for blind and visually impaired users: short answer, exact facts, nothing invented, time to first token.",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "url": "https://github.com/tutozz/steph/tree/master/benchmark",
+ "version": "1.0.0",
+ "datePublished": "2026-09-27",
+ "creator": {
+  "@type": "sc:Person",
+  "name": "Luis Parra"
+ },
+ "inLanguage": [
+  "en",
+  "fr",
+  "de",
+  "es",
+  "pt",
+  "ru"
+ ],
+ "keywords": [
+  "benchmark",
+  "accessibility",
+  "screen reader",
+  "terminal",
+  "summarization",
+  "hallucination",
+  "small language models",
+  "latency"
+ ],
+ "citeAs": "Parra, L. (2026). Steph Speak Bench: spoken summaries of terminal output by local LLMs (v1.0.0). https://github.com/tutozz/steph/tree/master/benchmark",
+ "isLiveDataset": false,
+ "distribution": [
+  {
+   "@type": "cr:FileObject",
+   "@id": "v1/de/dev.jsonl",
+   "name": "de-dev",
+   "contentUrl": "https://raw.githubusercontent.com/tutozz/steph/master/benchmark/data/v1/de/dev.jsonl",
+   "encodingFormat": "application/jsonlines",
+   "sha256": "15ffa299e32b944586b26ee6f50a851040c6979437f5cff937e850e92e073c52"
+  },
+  {
+   "@type": "cr:FileObject",
+   "@id": "v1/de/test.jsonl",
+   "name": "de-test",
+   "contentUrl": "https://raw.githubusercontent.com/tutozz/steph/master/benchmark/data/v1/de/test.jsonl",
+   "encodingFormat": "application/jsonlines",
+   "sha256": "cbf5112d11766ecf6469c257aebafa97ec7469727e78296436431e7dd00e2017"
+  },
+  {
+   "@type": "cr:FileObject",
+   "@id": "v1/en/dev.jsonl",
+   "name": "en-dev",
+   "contentUrl": "https://raw.githubusercontent.com/tutozz/steph/master/benchmark/data/v1/en/dev.jsonl",
+   "encodingFormat": "application/jsonlines",
+   "sha256": "2fb680e0bfc607fe3855eb8aab25345a0c687030e4d8c7c85ede308379eb37c8"
+  },
+  {
+   "@type": "cr:FileObject",
+   "@id": "v1/en/test.jsonl",
+   "name": "en-test",
+   "contentUrl": "https://raw.githubusercontent.com/tutozz/steph/master/benchmark/data/v1/en/test.jsonl",
+   "encodingFormat": "application/jsonlines",
+   "sha256": "aed170668ec2d0272878a1bfc64f6ed99d92e1ee24caffab1130f3cf9fec66d9"
+  },
+  {
+   "@type": "cr:FileObject",
+   "@id": "v1/es/dev.jsonl",
+   "name": "es-dev",
+   "contentUrl": "https://raw.githubusercontent.com/tutozz/steph/master/benchmark/data/v1/es/dev.jsonl",
+   "encodingFormat": "application/jsonlines",
+   "sha256": "2daaa8650815995df0dd2920eeefd620b419f56bf49f18a52b002090028d7a63"
+  },
+  {
+   "@type": "cr:FileObject",
+   "@id": "v1/es/test.jsonl",
+   "name": "es-test",
+   "contentUrl": "https://raw.githubusercontent.com/tutozz/steph/master/benchmark/data/v1/es/test.jsonl",
+   "encodingFormat": "application/jsonlines",
+   "sha256": "d401980745a68b0215fde8e59ea904c8c32facd3e181371a6750efbe76ad4b65"
+  },
+  {
+   "@type": "cr:FileObject",
+   "@id": "v1/fr/dev.jsonl",
+   "name": "fr-dev",
+   "contentUrl": "https://raw.githubusercontent.com/tutozz/steph/master/benchmark/data/v1/fr/dev.jsonl",
+   "encodingFormat": "application/jsonlines",
+   "sha256": "cb9906a1e6490039ed6896ade815a6edb8c845c4176fd6061d742b6a2f134f12"
+  },
+  {
+   "@type": "cr:FileObject",
+   "@id": "v1/fr/test.jsonl",
+   "name": "fr-test",
+   "contentUrl": "https://raw.githubusercontent.com/tutozz/steph/master/benchmark/data/v1/fr/test.jsonl",
+   "encodingFormat": "application/jsonlines",
+   "sha256": "1c1cb44f8aff8789d9d8c8d3a9ae44adaa66485ef124f499677e47e5dfda768e"
+  },
+  {
+   "@type": "cr:FileObject",
+   "@id": "v1/pt/dev.jsonl",
+   "name": "pt-dev",
+   "contentUrl": "https://raw.githubusercontent.com/tutozz/steph/master/benchmark/data/v1/pt/dev.jsonl",
+   "encodingFormat": "application/jsonlines",
+   "sha256": "8b6f3ae7af3af50e86edbac1112cc10083126e048352b2bdecbb4df34eca1c70"
+  },
+  {
+   "@type": "cr:FileObject",
+   "@id": "v1/pt/test.jsonl",
+   "name": "pt-test",
+   "contentUrl": "https://raw.githubusercontent.com/tutozz/steph/master/benchmark/data/v1/pt/test.jsonl",
+   "encodingFormat": "application/jsonlines",
+   "sha256": "d3b5586bf1497ddd0dab97717e1cc8c84842942268154e0e3a7e46777e8e2852"
+  },
+  {
+   "@type": "cr:FileObject",
+   "@id": "v1/ru/dev.jsonl",
+   "name": "ru-dev",
+   "contentUrl": "https://raw.githubusercontent.com/tutozz/steph/master/benchmark/data/v1/ru/dev.jsonl",
+   "encodingFormat": "application/jsonlines",
+   "sha256": "712cd8434e4755e396ddc681955694d1b2ef15ae59b7fa5ef3d135c8735b5f35"
+  },
+  {
+   "@type": "cr:FileObject",
+   "@id": "v1/ru/test.jsonl",
+   "name": "ru-test",
+   "contentUrl": "https://raw.githubusercontent.com/tutozz/steph/master/benchmark/data/v1/ru/test.jsonl",
+   "encodingFormat": "application/jsonlines",
+   "sha256": "745436274f11cd71379578d65f1ff225d41f0de9a0d9e762895d0c544efe3693"
+  },
+  {
+   "@type": "cr:FileSet",
+   "@id": "cases",
+   "name": "cases",
+   "encodingFormat": "application/jsonlines",
+   "includes": "v1/*/*.jsonl",
+   "containedIn": [
+    {
+     "@id": "v1/de/dev.jsonl"
+    },
+    {
+     "@id": "v1/de/test.jsonl"
+    },
+    {
+     "@id": "v1/en/dev.jsonl"
+    },
+    {
+     "@id": "v1/en/test.jsonl"
+    },
+    {
+     "@id": "v1/es/dev.jsonl"
+    },
+    {
+     "@id": "v1/es/test.jsonl"
+    },
+    {
+     "@id": "v1/fr/dev.jsonl"
+    },
+    {
+     "@id": "v1/fr/test.jsonl"
+    },
+    {
+     "@id": "v1/pt/dev.jsonl"
+    },
+    {
+     "@id": "v1/pt/test.jsonl"
+    },
+    {
+     "@id": "v1/ru/dev.jsonl"
+    },
+    {
+     "@id": "v1/ru/test.jsonl"
+    }
+   ]
+  }
+ ],
+ "recordSet": [
+  {
+   "@type": "cr:RecordSet",
+   "@id": "cases",
+   "name": "cases",
+   "key": {
+    "@id": "cases/id"
+   },
+   "field": [
+    {
+     "@type": "cr:Field",
+     "@id": "cases/id",
+     "name": "id",
+     "description": "Stable case identifier, identical across languages.",
+     "dataType": "sc:Text",
+     "source": {
+      "fileSet": {
+       "@id": "cases"
+      },
+      "extract": {
+       "column": "id"
+      }
+     }
+    },
+    {
+     "@type": "cr:Field",
+     "@id": "cases/lang",
+     "name": "lang",
+     "description": "en, fr, de, es, pt or ru.",
+     "dataType": "sc:Text",
+     "source": {
+      "fileSet": {
+       "@id": "cases"
+      },
+      "extract": {
+       "column": "lang"
+      }
+     }
+    },
+    {
+     "@type": "cr:Field",
+     "@id": "cases/split",
+     "name": "split",
+     "description": "dev or test.",
+     "dataType": "sc:Text",
+     "source": {
+      "fileSet": {
+       "@id": "cases"
+      },
+      "extract": {
+       "column": "split"
+      }
+     }
+    },
+    {
+     "@type": "cr:Field",
+     "@id": "cases/category",
+     "name": "category",
+     "description": "One of 13 categories.",
+     "dataType": "sc:Text",
+     "source": {
+      "fileSet": {
+       "@id": "cases"
+      },
+      "extract": {
+       "column": "category"
+      }
+     }
+    },
+    {
+     "@type": "cr:Field",
+     "@id": "cases/origin",
+     "name": "origin",
+     "description": "real-anonymized or synthetic.",
+     "dataType": "sc:Text",
+     "source": {
+      "fileSet": {
+       "@id": "cases"
+      },
+      "extract": {
+       "column": "origin"
+      }
+     }
+    },
+    {
+     "@type": "cr:Field",
+     "@id": "cases/task",
+     "name": "task",
+     "description": "summary (one output) or qa (history plus question).",
+     "dataType": "sc:Text",
+     "source": {
+      "fileSet": {
+       "@id": "cases"
+      },
+      "extract": {
+       "column": "task"
+      }
+     }
+    },
+    {
+     "@type": "cr:Field",
+     "@id": "cases/cmd",
+     "name": "cmd",
+     "description": "Command line (summary).",
+     "dataType": "sc:Text",
+     "source": {
+      "fileSet": {
+       "@id": "cases"
+      },
+      "extract": {
+       "column": "cmd"
+      }
+     }
+    },
+    {
+     "@type": "cr:Field",
+     "@id": "cases/exit",
+     "name": "exit",
+     "description": "Exit code (summary).",
+     "dataType": "sc:Integer",
+     "source": {
+      "fileSet": {
+       "@id": "cases"
+      },
+      "extract": {
+       "column": "exit"
+      }
+     }
+    },
+    {
+     "@type": "cr:Field",
+     "@id": "cases/output",
+     "name": "output",
+     "description": "Raw terminal output, 5 to 400 lines (summary).",
+     "dataType": "sc:Text",
+     "source": {
+      "fileSet": {
+       "@id": "cases"
+      },
+      "extract": {
+       "column": "output"
+      }
+     }
+    },
+    {
+     "@type": "cr:Field",
+     "@id": "cases/question",
+     "name": "question",
+     "description": "Question about the session history (qa).",
+     "dataType": "sc:Text",
+     "source": {
+      "fileSet": {
+       "@id": "cases"
+      },
+      "extract": {
+       "column": "question"
+      }
+     }
+    },
+    {
+     "@type": "cr:Field",
+     "@id": "cases/expected",
+     "name": "expected",
+     "description": "Regexes the spoken answer must match (repeated).",
+     "dataType": "sc:Text",
+     "repeated": true,
+     "source": {
+      "fileSet": {
+       "@id": "cases"
+      },
+      "extract": {
+       "column": "expected"
+      }
+     }
+    },
+    {
+     "@type": "cr:Field",
+     "@id": "cases/forbidden",
+     "name": "forbidden",
+     "description": "Regexes the spoken answer must not match (repeated).",
+     "dataType": "sc:Text",
+     "repeated": true,
+     "source": {
+      "fileSet": {
+       "@id": "cases"
+      },
+      "extract": {
+       "column": "forbidden"
+      }
+     }
+    },
+    {
+     "@type": "cr:Field",
+     "@id": "cases/reference",
+     "name": "reference",
+     "description": "Reference spoken answer.",
+     "dataType": "sc:Text",
+     "source": {
+      "fileSet": {
+       "@id": "cases"
+      },
+      "extract": {
+       "column": "reference"
+      }
+     }
+    },
+    {
+     "@type": "cr:Field",
+     "@id": "cases/max_words",
+     "name": "max_words",
+     "description": "Word budget before the length penalty.",
+     "dataType": "sc:Integer",
+     "source": {
+      "fileSet": {
+       "@id": "cases"
+      },
+      "extract": {
+       "column": "max_words"
+      }
+     }
+    }
+   ]
+  }
+ ],
+ "rai:dataCollection": "Real cases: outputs captured on the author's own Linux and macOS machines while developing a talking terminal, then anonymized by hand. Synthetic cases: written for the benchmark to look like the real tools, generated deterministically.",
+ "rai:dataCollectionType": [
+  "Manual Human Curation",
+  "Software Collection",
+  "Synthetic Data"
+ ],
+ "rai:dataCollectionTimeframe": [
+  "2026-09-01",
+  "2026-09-27"
+ ],
+ "rai:dataCollectionRawData": "Terminal outputs of standard command-line tools (compilers, git, package managers, network and disk tools, container tools, test runners).",
+ "rai:dataPreprocessingProtocol": "Anonymization: user, host and project names replaced; LAN, VPN and public addresses remapped to private or documentation ranges; MAC addresses, UUIDs, serial numbers and IPv6 interface identifiers removed. Every case passes an automated PII scanner with zero findings.",
+ "rai:dataAnnotationProtocol": "Each case carries expected facts (regular expressions), forbidden content and a reference answer, written by the author and checked automatically: the reference scores 100 %, every number it states appears in the model input, patterns are accent-free.",
+ "rai:dataAnnotationPlatform": "Plain text editor and the benchmark's own build checks.",
+ "rai:annotationsPerItem": "1",
+ "rai:dataUseCases": [
+  "Evaluation of LLMs and prompts for spoken terminal assistance. The test split is for evaluation only; the dev split may be used for tuning."
+ ],
+ "rai:dataLimitations": "105 cases per language; regex scoring rewards stated facts and can miss a correct paraphrase or a subtle hallucination; outputs cover common Linux and macOS tools, not Windows; references reflect one author's notion of a useful summary.",
+ "rai:dataBiases": "Tool mix follows a developer and home-server workflow; six languages (en, fr, de, es, pt, ru), most other languages absent; synthetic outputs may be cleaner than real ones; for de/es/pt/ru most tool outputs stay English/French (untranslated by the tool itself, see docs/research-terminal-languages.md), only the expected facts and reference answer are translated, plus a handful of genuine new-language tool captures (apt, git, df, du, ls).",
+ "rai:personalSensitiveInformation": "None. Real outputs were anonymized and scanned.",
+ "rai:dataSocialImpact": "Aims to improve accessibility of command-line work for blind and visually impaired people by making local, private assistants measurable.",
+ "rai:dataReleaseMaintenancePlan": "Versioned directories (data/v1, v2...). A released version is never edited in place; fixes ship as a new version with a changelog."
+}

@@ -1,0 +1,15 @@
+services:
+  app:
+    build: .
+    container_name: steph
+    restart: unless-stopped
+    networks: [caddy_net]
+    expose: ["80"]
+    labels:
+      caddy: steph.lsmdx.com
+      caddy.reverse_proxy: "{{upstreams 80}}"
+
+networks:
+  caddy_net:
+    name: caddy_net
+    external: true

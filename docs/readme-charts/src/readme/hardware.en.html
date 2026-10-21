@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;600&display=block">
+<link rel="stylesheet" href="../readme-brand.css">
+<style>body { background: rgb(255, 0, 254); }</style><style>
+.chev { display: inline-grid; }
+.chev i { display: block; }
+.who .sq { width: 14px; height: 14px; background: var(--black); flex: none; }
+.arrow { color: var(--neutral); }
+</style>
+</head><body><div class="card">
+<span class="tag">Hardware</span>
+<h1>4 GB of video memory<br><em>is enough.</em></h1>
+<div class="lanes">
+  <div class="lane"><div class="os">Linux</div><div class="ch"><div class="hw say"><b>NVIDIA</b><span>4 GB is enough</span></div><span class="or">else</span><div class="hw panel"><b>Vulkan</b><span>other GPUs</span></div><span class="or">else</span><div class="hw panel"><b>CPU</b><span>no GPU</span></div></div></div>
+  <div class="lane"><div class="os">macOS</div><div class="ch"><div class="hw say"><b>Metal</b><span>Apple Silicon, Intel</span></div></div></div>
+</div>
+<div class="prof"><div class="term pc"><div class="cmd">steph profile</div></div>
+  <span>shows the detected hardware and the llama&#8209;server command it will launch. Settings adapt to the GPU, automatically.</span></div>
+<div class="stats"><div class="st"><div class="num">2.33 s</div><div class="cap">i5-7200U, CPU only, first word p90, small steph-speak model (~0.56 GB RAM)</div></div><div class="st"><div class="num">0.68 s</div><div class="cap">Mac M3 Pro, Metal, first word p90, raw Gemma 4 E2B (RAM 3.4 to 3.7 GB)</div></div><div class="st"><div class="num">1.5 s</div><div class="cap">NVIDIA T600, 4 GB, mean summary, raw Gemma 4 E2B</div></div></div>
+<p class="foot">i5-7200U: small steph-speak model. Mac and NVIDIA T600: raw Gemma 4 E2B, measured before fine-tuning.</p>
+<style>
+.lanes { display: grid; gap: 14px; margin-top: 28px; }
+.lane { display: grid; grid-template-columns: 76px 1fr; align-items: center; gap: 12px; }
+.os { font-family: var(--mono); font-size: 19px; font-weight: 600; color: var(--muted); }
+.ch { display: flex; align-items: center; gap: 10px; }
+.hw { padding: 10px 14px 12px; }
+.hw b { display: block; font-size: 22px; font-weight: 700; line-height: 1.2; }
+.hw span { display: block; margin-top: 2px; font-size: 19px; line-height: 1.3; white-space: nowrap; }
+.hw.panel span { color: var(--soft); }
+.or { font-family: var(--mono); font-size: 19px; font-weight: 500; color: var(--muted); }
+.prof { display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: center; margin-top: 28px; }
+.pc { padding: 12px 16px; }
+.prof span { font-size: 19px; line-height: 1.4; color: var(--soft); }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 20px; }
+.st { padding: 18px 20px; background: var(--block); }
+.st .num { font-family: var(--mono); font-size: 38px; font-weight: 600; line-height: 1; letter-spacing: -0.03em; color: var(--lemon); }
+.st .cap { margin-top: 10px; font-size: 19px; line-height: 1.3; color: var(--soft); }
+.foot { margin-top: 18px; }
+</style></div></body></html>

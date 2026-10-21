@@ -1,0 +1,3090 @@
+[
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx03@1500",
+    "kind": "summary",
+    "phrase": "Échec. cat inexistant, répertoire non existant.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx01@1500",
+    "kind": "summary",
+    "phrase": "Racine 685G libres sur 953G, 29 %. Boot 284M libres sur 974M, 69 %.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx00@1500",
+    "kind": "summary",
+    "phrase": "Abrt, adjtime, aliases, chromium, cifs-utils, cni, cockpit, containerd, containers, crutchwords, credstore, cron.d",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "crutchwords"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "crutchwords"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx05@1500",
+    "kind": "summary",
+    "phrase": "Ping 127.0.0.1 : 3 paquets reçus, 0 % perte, temps moyen 2059ms.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx02@1500",
+    "kind": "summary",
+    "phrase": "Sous master, fichier README.md, pyproject.toml, src/uv.lock, vendor/sonde_pyproject.toml, aucune modification ajoutée.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "fichier src/uv.lock",
+        "fichier vendor/sonde_pyproject.toml"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "src/uv.lock",
+        "vendor/sonde_pyproject.toml"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx04@1500",
+    "kind": "summary",
+    "phrase": "Échec. KeyNotFoundError variable non-valide.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "KeyNotFoundError variable non-valide"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "KeyNotFoundError",
+        "variable non-valide"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx06@1500",
+    "kind": "summary",
+    "phrase": "Échec. gcc compilé ligne 1 : expected expression avant ; token.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "gcc compilé ligne 1"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "gcc compilé"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx09@1500",
+    "kind": "summary",
+    "phrase": "8 éléments : def __init__, healthy(), ensure_server, _pid_alive, stop_server, _payload, streams.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "streams"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "streams"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx10@1500",
+    "kind": "summary",
+    "phrase": "Échec. Curl : hôte inconnu.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx08@1500",
+    "kind": "summary",
+    "phrase": "Succès. PipeWire Multimedia Service actif, PID 7126 active, mémoire 6.7M, temps de réponse moyen 25 ms.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "temps de réponse moyen 25 ms"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "temps de réponse moyen 25 ms"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx11@1500",
+    "kind": "summary",
+    "phrase": "wlp0s20f3 192.168.1.20, tailscale0 100.64.0.10, tun0 10.9.0.2, réseaux virtuels 8.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx12@1500",
+    "kind": "summary",
+    "phrase": "Succès. 6 éléments : bench, pyproject.toml, README.md.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx13@1500",
+    "kind": "summary",
+    "phrase": "Devbox 7.0.9-202.fc44.x86_64 Linux",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx14@1500",
+    "kind": "summary",
+    "phrase": "pip version 26.0.1 vers python 3.14",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx15@1500",
+    "kind": "summary",
+    "phrase": "20 éléments : python-systemd, python3-argcomplete, python3-attrs.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx16@1500",
+    "kind": "summary",
+    "phrase": "Échec. Host key verification failed.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx17@1500",
+    "kind": "summary",
+    "phrase": "Échec. /etc/hostname : Permission non accordée.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx18@1500",
+    "kind": "summary",
+    "phrase": "30 éléments : abrt, adm, akmods.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx20@1500",
+    "kind": "summary",
+    "phrase": "29 éléments : xen-licenses, xfsprogs, xorg-x11-drv-nvidia.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx21@1500",
+    "kind": "summary",
+    "phrase": "Échec. /nonexistent : stat impossible, aucun fichier ou dossier.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx19@1500",
+    "kind": "summary",
+    "phrase": "10 éléments : OLD_SHOPAPP 12G, fitness-app 2G, notes-backup 2G.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "fitness-app 2G",
+        "notes-backup 2G"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "fitness-app 2G",
+        "notes-backup 2G"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx23@1500",
+    "kind": "summary",
+    "phrase": "Alice",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx22@1500",
+    "kind": "summary",
+    "phrase": "9 conteneurs : shopapp_api, shopapp_nginx_admin, shopapp_vault.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "shopapp_api",
+        "shopapp_nginx_admin",
+        "shopapp_vault"
+      ]
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "douteux"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx24@1500",
+    "kind": "summary",
+    "phrase": "Succès. 12 paquets mis à jour, 0 inconnus installés, 0 à enlever.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "0 inconnus installés"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "0 inconnus installés"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx25@1500",
+    "kind": "summary",
+    "phrase": "Échec. nginx : verrou /var/lib/dpkg/lock-frontend, fichier dpkg non ouvert.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "fichier dpkg non ouvert"
+      ]
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "douteux"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx26@1500",
+    "kind": "summary",
+    "phrase": "requests 2.32.3 installé, charset normalisateur 3.4.0, idna 3.10, urllib3 2.2.3.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx27@1500",
+    "kind": "summary",
+    "phrase": "Échec. Header.tsx ligne 42 : tinsel non trouvé sur Props.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "Header.tsx",
+        "tinsel",
+        "non trouvé sur Props"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "tinsel",
+        "Header.tsx"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx29@1500",
+    "kind": "summary",
+    "phrase": "Starship/Matisse Root Complex, PCIe Dummy Host Bridge, GPU RTX 3060 Lite Hash Rate, Ethernet RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx28@1500",
+    "kind": "summary",
+    "phrase": "Échec. push : refs travail source, réstring.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "refs travail source",
+        "réstring"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "refs travail source",
+        "réstring"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "df_proxmox@1500",
+    "kind": "summary",
+    "phrase": "Racine 8.9G libres sur 94G, 91 %. Backup-HDD 134G libres sur 442G, 70 %.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "ip_a_proxmox@1500",
+    "kind": "summary",
+    "phrase": "tailscale0 100.64.0.12, vmbr0 192.168.1.200, pan0 10.8.9.1, réseaux virtuels 3.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "qa0",
+    "kind": "qa",
+    "phrase": "Échec. src/components/Header.tsx ligne TS2339 propitel inexistant.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "src/components/Header.tsx ligne TS2339",
+        "propitel inexistant"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "ligne TS2339",
+        "propitel"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "qa2",
+    "kind": "qa",
+    "phrase": "Échec. src/components/Header.tsx ligne 42 : titel non trouvé.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "titel non trouvé"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "titel non trouvé"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx00@1500",
+    "kind": "summary",
+    "phrase": "Abrt, adjtime, aliases, chromium, cifs-utils, cni, cockpit, containerd, containers, crutchwords, credstore, cron.d",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "crutchwords"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "crutchwords"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx30@1500",
+    "kind": "summary",
+    "phrase": "En0 192.168.1.62, en0 192.168.1.62, en0 192.168.1.62.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "Mention de 'en0 192.168.1.62' répété trois fois alors que la sortie originale ne contient que deux lignes ('en0 192.168.1.62' et 'utun4 100.64.0.11')",
+        "Omission de la ligne 'utun4 100.64.0.11' présente dans la sortie originale"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "répétition de l'entrée 'en0 192.168.1.62' trois fois au lieu d'une seule occurrence",
+        "absence de l'interface 'utun4' et de son adresse IP '100.64.0.11'"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "qa1",
+    "kind": "qa",
+    "phrase": "Échec. src/components/Header.tsx ligne TS2339 propitel inexistant.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "Échec (la commande npm run build a échoué, ce qui est correct, mais la phrase semble décrire un échec de l'assistant ou une confusion avec la commande précédente, cependant le fait principal inventé est la description de l'erreur)",
+        "src/components/Header.tsx ligne TS2339 (le contexte indique l'erreur à la ligne 42, pas une ligne nommée 'TS2339')",
+        "propitel inexistant (l'erreur du contexte mentionne 'titel' inexistant, pas 'propitel')"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "ligne TS2339",
+        "propitel"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx01@1500",
+    "kind": "summary",
+    "phrase": "Racine 685G libres sur 953G, 29 %. Boot 284M libres sur 974M, 69 %.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx03@1500",
+    "kind": "summary",
+    "phrase": "Échec. cat inexistant, répertoire non existant.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx02@1500",
+    "kind": "summary",
+    "phrase": "Succès. Master actif, fichiers non suivis, version Python manquante, fichier vendor manquant.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "version Python manquante",
+        "fichier vendor manquant"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "version Python manquante",
+        "fichier vendor manquant"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx04@1500",
+    "kind": "summary",
+    "phrase": "Échec. KeyNotFoundError variable non-valide.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "KeyNotFoundError variable non-valide"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "KeyNotFoundError",
+        "variable non-valide"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx05@1500",
+    "kind": "summary",
+    "phrase": "Ping 127.0.0.1 : 3 paquets reçus, 0 % perte, temps moyen 2059ms.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx06@1500",
+    "kind": "summary",
+    "phrase": "Échec. gcc compilé ligne 1 : expected expression avant ; token.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "gcc compilé ligne 1"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "gcc compilé"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx08@1500",
+    "kind": "summary",
+    "phrase": "Succès. PipeWire Multimedia Service actif, PID 7126 active, mémoire 6.7M, temps de réponse moyen 25 ms.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "temps de réponse moyen 25 ms"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "temps de réponse moyen 25 ms"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx10@1500",
+    "kind": "summary",
+    "phrase": "Échec. Curl : hôte inconnu.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx11@1500",
+    "kind": "summary",
+    "phrase": "wlp0s20f3 192.168.1.20, tailscale0 100.64.0.10, tun0 10.9.0.2, réseaux virtuels 8.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx12@1500",
+    "kind": "summary",
+    "phrase": "Succès. 6 éléments : bench, pyproject.toml, README.md.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx13@1500",
+    "kind": "summary",
+    "phrase": "Devbox 7.0.9-202.fc44.x86_64 Linux",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx09@1500",
+    "kind": "summary",
+    "phrase": "8 éléments : def __init_, healthy, ensure_server, _pid_alive, stop_server, _payload, stream.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "Le modèle a omis la fonction `complete` dans la liste des éléments trouvés, alors que le contexte indique qu'elle existe (ligne 111).",
+        "Le modèle a tronqué les noms des fonctions en retirant les types et les parenthèses (ex: `def __init_` au lieu de `def __init__(self, cfg: Config):`), ce qui constitue une altération des faits exacts du contexte."
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "8 éléments : def __init_, healthy, ensure_server, _pid_alive, stop_server, _payload, stream."
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx14@1500",
+    "kind": "summary",
+    "phrase": "pip version 26.0.1 vers python 3.14",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx15@1500",
+    "kind": "summary",
+    "phrase": "20 éléments : python-systemd, python3-argcomplete, python3-attrs.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx16@1500",
+    "kind": "summary",
+    "phrase": "Échec. Host key verification failed.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx07@1500",
+    "kind": "summary",
+    "phrase": "Mémoire 31G total, 25G disponibles. Swap 8G total, 72Ki disponibles.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "25G disponibles (la sortie indique 24Gi disponibles)",
+        "72Ki disponibles (la sortie indique 72Ki libres, mais le terme 'disponibles' pour le swap est ambigu car la colonne 'available' n'est pas affichée pour le swap, seule la colonne 'free' l'est, bien que la valeur soit correcte, la formulation peut être considérée comme une légère inexactitude sémantique par rapport à la colonne 'free' affichée, mais strictement parlant, la valeur 72Ki correspond à 'free' pas 'available' qui n'est pas affichée pour swap. Cependant, la règle dit 'un autre nombre...'. Ici le nombre est bon. La seule invention potentielle est sur la mémoire disponible : 24Gi vs 25G. C'est une invention car 24 != 25."
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "25G disponibles (la sortie indique 24Gi disponibles)",
+        "72Ki disponibles (la sortie indique 72Ki utilisés, pas disponibles)"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx17@1500",
+    "kind": "summary",
+    "phrase": "Échec. /etc/hostname : Permission non accordée.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx18@1500",
+    "kind": "summary",
+    "phrase": "30 éléments : abrt, adm, akmods.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx20@1500",
+    "kind": "summary",
+    "phrase": "29 éléments : xen-licenses, xfsprogs, xorg-x11-drv-nvidia.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx21@1500",
+    "kind": "summary",
+    "phrase": "Échec. /nonexistent : stat impossible, aucun fichier ou dossier.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx19@1500",
+    "kind": "summary",
+    "phrase": "10 éléments : OLD_SHOPAPP 12G, fitness-app 2G, notes-backup 2G.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "fitness-app 2G",
+        "notes-backup 2G"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "fitness-app 2G",
+        "notes-backup 2G"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx22@1500",
+    "kind": "summary",
+    "phrase": "9 conteneurs : shopapp_api, shopapp_nginx_admin, shopapp_vault.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "shopapp_api",
+        "shopapp_nginx_admin",
+        "shopapp_vault"
+      ]
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "douteux"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx23@1500",
+    "kind": "summary",
+    "phrase": "alice",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx24@1500",
+    "kind": "summary",
+    "phrase": "Succès. 12 paquets mis à jour, 0 inconnus installés, 0 à enlever.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "0 inconnus installés"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "0 inconnus installés"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx26@1500",
+    "kind": "summary",
+    "phrase": "requests 2.32.3 installé, charset normalisateur 3.4.0, idna 3.10, urllib3 2.2.3.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx25@1500",
+    "kind": "summary",
+    "phrase": "Échec. nginx : verrou /var/lib/dpkg/lock-frontend, fichier dpkg non ouvert.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "fichier dpkg non ouvert"
+      ]
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "douteux"
+  },
+  {
+    "model_file": "bench-full-Q8_0-s42.json",
+    "id": "fx07@1500",
+    "kind": "summary",
+    "phrase": "Mémoire 31G total, 25G disponibles. Swap 8G total, 72Ki disponibles.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "25G disponibles (la sortie indique 24Gi disponibles)",
+        "72Ki disponibles (la sortie indique 72Ki disponibles, mais le contexte ne précise pas l'état 'disponibles' pour le swap, seulement les colonnes total/used/free, et l'assistant affirme une disponibilité spécifique qui n'est pas explicitement confirmée par le texte brut fourni, bien que la valeur soit proche, la formulation 'disponibles' pour le swap est une interprétation non vérifiable strictement dans le contexte qui ne donne que 'free' pour swap. Cependant, la règle principale ici est la vérification chiffre par chiffre. Le contexte dit '8,0Gi' total et '8,0Gi' free pour swap. L'assistant dit '8G total' (arrondi ok) et '72Ki disponibles'. Le contexte ne donne pas de colonne 'available' pour Swap, seulement 'free'. Dire 'disponibles' pour le swap est une invention de catégorie de donnée non présente dans le contexte pour cette ligne spécifique, ou du moins une affirmation non vérifiable. Mais regardons la mémoire : '24Gi' vs '25G'. C'est une invention de valeur. Pour le swap : le contexte dit 'free: 8,0Gi'. L'assistant dit '72Ki disponibles'. C'est une contradiction totale de valeur (8Gi vs 72Ki) si on considère que 'disponibles' correspond à 'free' ou 'available'. Si 'disponibles' correspond à 'available', il n'y a pas de colonne available pour swap. Si 'disponibles' correspond à 'free', alors 8Gi != 72Ki. Donc c'est une invention. Fait 1 : '25G disponibles' (contre 24Gi). Fait 2 : '72Ki disponibles' (contre 8,0Gi free ou inexistant available)."
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "25G disponibles (la sortie indique 24Gi disponibles)",
+        "72Ki disponibles (la sortie indique 72Ki utilisés, pas disponibles)"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx27@1500",
+    "kind": "summary",
+    "phrase": "Échec. Header.tsx ligne 42 : titel non trouvé sur props.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx29@1500",
+    "kind": "summary",
+    "phrase": "Starship/Matisse Root Complex, PCIe Dummy Host Bridge, GPU RTX 3060 Lite Hash Rate, Ethernet RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx28@1500",
+    "kind": "summary",
+    "phrase": "Échec. push : refs travail source, réstring.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "refs travail source",
+        "réstring"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "refs travail source",
+        "réstring"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "df_proxmox@1500",
+    "kind": "summary",
+    "phrase": "Racine 8.9G libres sur 94G, 91 %. Backups 134G libres sur 442G, 70 %.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "ip_a_proxmox@1500",
+    "kind": "summary",
+    "phrase": "tailscale0 100.64.0.12, vmbr0 192.168.1.200, pan0 10.8.9.1, réseaux virtuels 3.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "qa0",
+    "kind": "qa",
+    "phrase": "Échec. src/components/Header.tsx ligne TS2339 propitel inexistant.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "src/components/Header.tsx ligne TS2339",
+        "propitel inexistant"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "ligne TS2339",
+        "propitel"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "qa2",
+    "kind": "qa",
+    "phrase": "Échec. src/components/Header.tsx ligne 42 : titel non trouvé.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "titel non trouvé"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "titel non trouvé"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx01@1500",
+    "kind": "summary",
+    "phrase": "Racine 685G libres sur 953G, 29 %. Boot 284M libres sur 974M, 69 %.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx00@1500",
+    "kind": "summary",
+    "phrase": "Abrt, adjtime, aliases, chromium, cifs-utils, cni, cockpit, containerd, containers, crutchwords, credstore, cron.d",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "crutchwords"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "crutchwords"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx03@1500",
+    "kind": "summary",
+    "phrase": "Échec. cat inexistant, répertoire non existant.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx02@1500",
+    "kind": "summary",
+    "phrase": "Succès. Master actif, fichiers non suivis, version Python manquante, fichier .pyproject.toml déjà ajouté.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "version Python manquante",
+        "fichier .pyproject.toml déjà ajouté"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "version Python manquante",
+        "fichier .pyproject.toml déjà ajouté"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "fx30@1500",
+    "kind": "summary",
+    "phrase": "En0 192.168.1.62, en0 192.168.1.62, en0 192.168.1.62.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "Mention de 'en0 192.168.1.62' répété trois fois alors que la sortie originale ne contient que deux lignes ('en0 192.168.1.62' et 'utun4 100.64.0.11')",
+        "Omission de la ligne 'utun4 100.64.0.11' présente dans la sortie originale"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "répétition de l'entrée 'en0 192.168.1.62' trois fois au lieu d'une seule occurrence",
+        "absence de l'interface 'utun4' et de son adresse IP '100.64.0.11'"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-v32768-Q8_0-s42.json",
+    "id": "qa1",
+    "kind": "qa",
+    "phrase": "Échec. src/components/Header.tsx ligne TS2339 propitel inexistant.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "Échec (la commande npm run build a échoué, ce qui est correct, mais la phrase semble décrire un échec de l'assistant ou une confusion avec la commande précédente sans contexte clair, cependant le fait principal inventé est la description de l'erreur)",
+        "src/components/Header.tsx ligne TS2339 (le contexte indique l'erreur à la ligne 42, pas une ligne nommée 'TS2339')",
+        "propitel inexistant (le contexte indique que la propriété 'titel' n'existe pas, pas 'propitel')"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "ligne TS2339",
+        "propitel"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx04@1500",
+    "kind": "summary",
+    "phrase": "Échec. KeyNotFoundError variable non-valide.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "KeyNotFoundError variable non-valide"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "KeyNotFoundError",
+        "variable non-valide"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx05@1500",
+    "kind": "summary",
+    "phrase": "Ping 127.0.0.1 : 3 paquets reçus, 0 % perte, temps moyen 2059ms.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx06@1500",
+    "kind": "summary",
+    "phrase": "Échec. gcc compilé ligne 1 : expected expression before ; token.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "gcc compilé ligne 1"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "gcc compilé"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx08@1500",
+    "kind": "summary",
+    "phrase": "Succès. PipeWire Multimedia Service actif, PID 7126 active, mémoire 6.7M, temps de réponse moyen 25 ms.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "temps de réponse moyen 25 ms"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "temps de réponse moyen 25 ms"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx10@1500",
+    "kind": "summary",
+    "phrase": "Échec. Curl : hôte inconnu.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx11@1500",
+    "kind": "summary",
+    "phrase": "wlp0s20f3 192.168.1.20, tailscale0 100.64.0.10, tun0 10.9.0.2, réseaux virtuels 8.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx12@1500",
+    "kind": "summary",
+    "phrase": "Succès. 6 éléments : bench, pyproject.toml, README.md.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx13@1500",
+    "kind": "summary",
+    "phrase": "Devbox 7.0.9-202.fc44.x86_64 Linux",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx14@1500",
+    "kind": "summary",
+    "phrase": "pip version 26.0.1 vers python 3.14",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx15@1500",
+    "kind": "summary",
+    "phrase": "20 éléments : python-systemd, python3-argcomplete, python3-attrs.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx16@1500",
+    "kind": "summary",
+    "phrase": "Échec. Host key verification failed.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx17@1500",
+    "kind": "summary",
+    "phrase": "Échec. /etc/hostname : Permission non accordée.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx18@1500",
+    "kind": "summary",
+    "phrase": "30 éléments : abrt, adm, akmods.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx20@1500",
+    "kind": "summary",
+    "phrase": "29 éléments : xen-licenses, xfsprogs, xorg-x11-drv-nvidia.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx19@1500",
+    "kind": "summary",
+    "phrase": "10 éléments : OLD_SHOPAPP 12G, fitness-app 2G, notes-backup 2G.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "fitness-app 2G",
+        "notes-backup 2G"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "fitness-app 2G",
+        "notes-backup 2G"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx21@1500",
+    "kind": "summary",
+    "phrase": "Échec. /nonexistent : stat impossible, aucun fichier ou dossier.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx09@1500",
+    "kind": "summary",
+    "phrase": "8 éléments : def __init(), healthy(), ensure_server(), _pid_alive(), stop_server(), _payload, messages, max_tokens.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "Le modèle a inventé la liste des éléments affichés : il a omis les définitions `def healthy`, `def ensure_server`, `def _pid_alive`, `def stop_server`, `def _payload`, `def stream`, `def complete` et a ajouté des éléments inexacts (`messages`, `max_tokens` qui sont des arguments, pas des définitions de fonction affichées comme telles dans la liste des 8 éléments)",
+        "Le modèle a inventé la liste des éléments affichés : il a omis les définitions `def healthy`, `def ensure_server`, `def _pid_alive`, `def stop_server`, `def _payload`, `def stream`, `def complete` et a ajouté des éléments inexacts (`messages`, `max_tokens` qui sont des arguments, pas des définitions de fonction affichées comme telles dans la liste des 8 éléments)"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "healthy() -> bool",
+        "ensure_server() -> bool",
+        "_pid_alive()",
+        "stop_server()",
+        "_payload",
+        "messages",
+        "max_tokens"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx23@1500",
+    "kind": "summary",
+    "phrase": "alice",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx07@1500",
+    "kind": "summary",
+    "phrase": "Mémoire 31G total, 25G disponibles. Swap 8G total, 72Ki disponibles.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "25G disponibles (la sortie indique 24Gi disponibles)",
+        "72Ki disponibles (la sortie indique 72Ki disponibles, mais le contexte ne précise pas l'état 'disponibles' pour le swap, seulement les colonnes total/used/free, et l'assistant affirme une disponibilité spécifique qui n'est pas explicitement confirmée par le terme 'disponible' dans la ligne Swap du contexte qui montre 8,0Gi free. Cependant, la conversion 8,0Gi -> 8G est acceptable. Le problème principal est l'affirmation '72Ki disponibles' : la ligne Swap montre 72Ki used et 8,0Gi free. Dire que 72Ki sont 'disponibles' est factuellement faux car ce sont les 72Ki qui sont utilisés. L'assistant a inversé ou mal interprété la colonne used comme disponible, ou simplement inventé le statut 'disponible' pour cette valeur spécifique qui correspond à 'used' dans le contexte."
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "25G disponibles (la sortie indique 24Gi disponibles)",
+        "72Ki disponibles (la sortie indique 72Ki utilisés, pas disponibles)"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx22@1500",
+    "kind": "summary",
+    "phrase": "9 conteneurs : shopapp_api, shopapp_nginx_admin, shopapp_vault.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "shopapp_api",
+        "shopapp_nginx_admin",
+        "shopapp_vault"
+      ]
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "douteux"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx24@1500",
+    "kind": "summary",
+    "phrase": "Succès. 12 paquets mis à jour, 0 inconnus installés, 0 à enlever.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "0 inconnus installés"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "0 inconnus installés"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx26@1500",
+    "kind": "summary",
+    "phrase": "requests 2.32.3 installé, charset normalisateur 3.4.0, idna 3.10, urllib3 2.2.3.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx25@1500",
+    "kind": "summary",
+    "phrase": "Échec. nginx : verrou /var/lib/dpkg/lock-frontend, fichier dpkg non ouvert.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "fichier dpkg non ouvert"
+      ]
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "douteux"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx27@1500",
+    "kind": "summary",
+    "phrase": "Échec. Header.tsx ligne 42 : titel non trouvé sur les types prop.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx29@1500",
+    "kind": "summary",
+    "phrase": "Starship/Matisse Root Complex, PCIe Dummy Host Bridge, GPU RTX 3060 Lite Hash Rate, Ethernet RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "df_proxmox@1500",
+    "kind": "summary",
+    "phrase": "Racine 8.9G libres sur 94G, 91 %. Backups 134G libres sur 442G, 70 %.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx28@1500",
+    "kind": "summary",
+    "phrase": "Échec. push : refs travail source, réstring.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "refs travail source",
+        "réstring"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "refs travail source",
+        "réstring"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "ip_a_proxmox@1500",
+    "kind": "summary",
+    "phrase": "tailscale0 100.64.0.12, vmbr0 192.168.1.200, pan0 10.8.9.1, réseaux virtuels 3.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "qa0",
+    "kind": "qa",
+    "phrase": "Échec. src/components/Header.tsx ligne TS2339 point d'erreur prop 'titel', typeProps non trouvé.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "src/components/Header.tsx ligne TS2339 point d'erreur prop 'titel', typeProps non trouvé"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "ligne TS2339"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "qa2",
+    "kind": "qa",
+    "phrase": "Échec. src/components/Header.tsx ligne 42 : titel non trouvé.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "titel non trouvé"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "titel non trouvé"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx00@1500",
+    "kind": "summary",
+    "phrase": "37 éléments : abrt, adjtime, aliases",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx01@1500",
+    "kind": "summary",
+    "phrase": "Racine 685G libres sur 953G, 29 %. Boot 284M libres sur 974M, 69 %.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx03@1500",
+    "kind": "summary",
+    "phrase": "Échec. cat inexistant, répertoire non existant.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx02@1500",
+    "kind": "summary",
+    "phrase": "Succès. Master actif, fichiers non suivis, version Python manquante, fichier vendor manquant.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "version Python manquante",
+        "fichier vendor manquant"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "version Python manquante",
+        "fichier vendor manquant"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "qa1",
+    "kind": "qa",
+    "phrase": "Échec. src/components/Header.tsx ligne TS2339 propitel inexistant.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "Échec (la commande npm run build a échoué, ce qui est correct, mais la phrase semble décrire un échec de l'assistant ou une confusion avec la commande précédente, cependant le fait principal inventé est la description de l'erreur)",
+        "src/components/Header.tsx ligne TS2339 (le contexte indique l'erreur à la ligne 42, pas une ligne nommée 'TS2339')",
+        "propitel inexistant (l'erreur du contexte mentionne 'titel' inexistant, pas 'propitel')"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "ligne TS2339",
+        "propitel"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-v20000-Q8_0-s42.json",
+    "id": "fx30@1500",
+    "kind": "summary",
+    "phrase": "En0 192.168.1.62, en0 192.168.1.62, en0 192.168.1.62.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "Mention de 'en0 192.168.1.62' répété trois fois alors que la sortie originale ne contient que deux lignes ('en0 192.168.1.62' et 'utun4 100.64.0.11')",
+        "Omission de la ligne 'utun4 100.64.0.11' présente dans la sortie originale"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "répétition de l'entrée 'en0 192.168.1.62' trois fois au lieu d'une seule occurrence",
+        "absence de l'interface 'utun4' et de son adresse IP '100.64.0.11'"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx04@1500",
+    "kind": "summary",
+    "phrase": "Échec. KeyNotFoundError variable non-valide.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "KeyNotFoundError variable non-valide"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "KeyNotFoundError",
+        "variable non-valide"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx05@1500",
+    "kind": "summary",
+    "phrase": "Ping 127.0.0.1 : 3 paquets reçus, 0 % perte, temps moyen 2059ms.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx08@1500",
+    "kind": "summary",
+    "phrase": "Succès. PipeWire Service actif, PID 7126 active, mémoire 6.7M disponible.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx06@1500",
+    "kind": "summary",
+    "phrase": "Échec. gcc compilé ligne 1 : expected expression before ; token.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "gcc compilé ligne 1"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "gcc compilé"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx09@1500",
+    "kind": "summary",
+    "phrase": "8 éléments : def __init__, healthy(), ensure_server, _pid_alive, stop_server, _payload, streams.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "streams"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "streams"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx11@1500",
+    "kind": "summary",
+    "phrase": "wlp0s20f3 192.168.1.20, tailscale0 100.64.0.10, tun0 10.9.0.2, réseaux virtuels 8.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx10@1500",
+    "kind": "summary",
+    "phrase": "Échec. curl : serveur inexistant.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx12@1500",
+    "kind": "summary",
+    "phrase": "Succès. 6 éléments : bench, pyproject.toml, README.md.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx14@1500",
+    "kind": "summary",
+    "phrase": "pip version 26.0.1 vers python 3.14",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx13@1500",
+    "kind": "summary",
+    "phrase": "Devbox 7.0.9-202.fc44.x86_64",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx15@1500",
+    "kind": "summary",
+    "phrase": "20 éléments : python-systemd, python3-argcomplete, python3-attrs.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx16@1500",
+    "kind": "summary",
+    "phrase": "Échec. Host key verification failed.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx17@1500",
+    "kind": "summary",
+    "phrase": "Échec. /etc/hostname : Permission non accordée.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx18@1500",
+    "kind": "summary",
+    "phrase": "30 éléments : abrt, adm, akmods.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx19@1500",
+    "kind": "summary",
+    "phrase": "10 éléments : OLD_SHOPAPP 12G, installer-iso 7.9G, shopapp 2.4G.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx20@1500",
+    "kind": "summary",
+    "phrase": "29 éléments : xen-licenses, xfsprogs, xorg-x11-drv-nvidia, yubikey-manager.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx21@1500",
+    "kind": "summary",
+    "phrase": "Échec. /nonexistent : stat impossible, aucun fichier ou dossier de ce nom.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx23@1500",
+    "kind": "summary",
+    "phrase": "alice",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx22@1500",
+    "kind": "summary",
+    "phrase": "9 conteneurs : shopapp_api, shopapp_nginx_admin, shopapp_vault.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "shopapp_api",
+        "shopapp_nginx_admin",
+        "shopapp_vault"
+      ]
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "douteux"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx24@1500",
+    "kind": "summary",
+    "phrase": "Succès. 12 paquets mis à jour, 0 inconnus, 0 à enlever.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "0 inconnus"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "0 inconnus"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx26@1500",
+    "kind": "summary",
+    "phrase": "requests 2.32.3 installé, charset normalisateur 3.4.0, idna 3.10, urllib3 2.2.3.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx27@1500",
+    "kind": "summary",
+    "phrase": "Échec. Header.tsx ligne 42 : titel non trouvé sur props.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx25@1500",
+    "kind": "summary",
+    "phrase": "Échec. nginx : accès refusé, fichier dérobée.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "nginx : accès refusé",
+        "fichier dérobée"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "nginx : accès refusé",
+        "fichier dérobée"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx28@1500",
+    "kind": "summary",
+    "phrase": "Échec. push : refs incompatibles, travail source refusé.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx29@1500",
+    "kind": "summary",
+    "phrase": "Starship/Matisse IOMMU, PCI bridge GPP, Ethernet controller RRT8111, GPU RTX 3060 Lite Hash Rate, USB Host Controller HD Audio.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "Ethernet controller RRT8111"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "RRT8111"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "df_proxmox@1500",
+    "kind": "summary",
+    "phrase": "Racine 8.9G libres sur 94G, backup-hdd 134G libres sur 442G, données de 91 %.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "données de 91 %"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "données de 91 %"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "ip_a_proxmox@1500",
+    "kind": "summary",
+    "phrase": "tailscale0 100.64.0.12, vrambr0 192.168.1.200, réseaux virtuels 3.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "vrambr0"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "vrambr0"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "qa0",
+    "kind": "qa",
+    "phrase": "Échec. src/components/Header.tsx ligne TS2339 prop titel inexistant.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "ligne TS2339"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "ligne TS2339"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "qa1",
+    "kind": "qa",
+    "phrase": "Échec. df : racine 8.9G libres sur 94G, backup-hdd 134G libres sur 442G, ce dernier est trop faible.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "Échec"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "ce dernier est trop faible"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx00@1500",
+    "kind": "summary",
+    "phrase": "37 éléments : abrt, adjtime, aliases",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx30@1500",
+    "kind": "summary",
+    "phrase": "En0 192.168.1.62, en0 192.168.1.62, en0 192.168.1.62.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "Mention de 'en0 192.168.1.62' répété trois fois alors que la sortie originale ne contient cette ligne qu'une seule fois",
+        "Absence de mention de 'utun4 100.64.0.11' présent dans la sortie originale"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "répétition de l'entrée 'en0 192.168.1.62' trois fois au lieu d'une seule occurrence",
+        "absence de l'interface 'utun4' et de son adresse IP '100.64.0.11'"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "qa2",
+    "kind": "qa",
+    "phrase": "Échec. df : titel non trouvé propage.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "df : titel non trouvé propage"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "Échec de df",
+        "titel non trouvé",
+        "propage"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx01@1500",
+    "kind": "summary",
+    "phrase": "Racine 685G libres sur 953G, 29 %. Boot 284M libres sur 974M, 69 %.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx03@1500",
+    "kind": "summary",
+    "phrase": "Échec. cat inexistant, répertoire non existant.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx02@1500",
+    "kind": "summary",
+    "phrase": "Succès. Master actif, fichiers non suivis, version Python manquante, fichier vendor manquant.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "version Python manquante",
+        "fichier vendor manquant"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "version Python manquante",
+        "fichier vendor manquant"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx05@1500",
+    "kind": "summary",
+    "phrase": "Ping 127.0.0.1 : 3 paquets reçus, 0 % perte, temps moyen 2059ms.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx04@1500",
+    "kind": "summary",
+    "phrase": "Échec. KeyNotFoundError variable non-valide.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "KeyNotFoundError variable non-valide"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "KeyNotFoundError",
+        "variable non-valide"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-c65536-Q8_0-s42.json",
+    "id": "fx07@1500",
+    "kind": "summary",
+    "phrase": "Mémoire 31G total, 25G disponibles. Swap 8G total, 72Ki disponibles.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "25G disponibles (la sortie indique 24Gi disponibles)",
+        "72Ki disponibles (la sortie indique 72Ki disponibles, mais le contexte ne précise pas l'état 'disponibles' pour le swap, seulement les colonnes total/used/free, et l'assistant affirme une disponibilité spécifique qui n'est pas explicitement confirmée par le texte brut fourni, bien que la valeur soit proche, la formulation 'disponibles' pour le swap est une interprétation non vérifiable strictement dans le contexte qui ne donne que 'free' pour swap. Cependant, la règle principale ici est la vérification chiffre par chiffre. Le contexte dit '8,0Gi' total et '8,0Gi' free pour swap. L'assistant dit '8G total' (arrondi ok) et '72Ki disponibles'. Le contexte ne donne pas de colonne 'available' pour Swap, seulement 'free'. Dire 'disponibles' pour le swap est une invention de catégorie de donnée non présente dans le contexte pour cette ligne spécifique, ou du moins une affirmation non vérifiable. Mais regardons la mémoire : '24Gi' vs '25G'. C'est une invention de valeur. Pour le swap : le contexte dit 'free: 8,0Gi'. L'assistant dit '72Ki disponibles'. C'est une contradiction totale de valeur (8Gi vs 72Ki) si on considère que 'disponibles' correspond à 'free' ou 'available'. Si 'disponibles' correspond à 'available', il n'y a pas de colonne available pour swap. Si 'disponibles' correspond à 'free', alors 8Gi != 72Ki. Donc c'est une invention. Fait 1 : '25G disponibles' (vrai : 24Gi). Fait 2 : '72Ki disponibles' (vrai : le contexte montre 72Ki used et 8,0Gi free. L'assistant dit 72Ki disponibles. C'est une inversion ou une invention de statut/valeur. Le contexte ne dit pas que 72Ki sont disponibles, il dit que 72Ki sont utilisés. Donc c'est une invention de fait)."
+      ]
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "douteux"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx06@1500",
+    "kind": "summary",
+    "phrase": "Échec. gcc compilé ligne 1 : expected expression before ; token.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "gcc compilé ligne 1"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "gcc compilé"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx08@1500",
+    "kind": "summary",
+    "phrase": "pipewire Service actif, PID 7126 active, mémoire 6.7M, temps latents 250 ms.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx10@1500",
+    "kind": "summary",
+    "phrase": "Échec. curl : serveur inexistant.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx11@1500",
+    "kind": "summary",
+    "phrase": "wlp0s20f3 192.168.1.20, tailscale0 100.64.0.10, tun0 10.9.0.2, réseaux virtuels 8.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx09@1500",
+    "kind": "summary",
+    "phrase": "8 éléments : def __init_, healthy, ensure_server.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "8 éléments : def __init_, healthy, ensure_server."
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "8 éléments : def __init_, healthy, ensure_server."
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx12@1500",
+    "kind": "summary",
+    "phrase": "Succès. 6 éléments : bench, pyproject.toml, README.md.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx13@1500",
+    "kind": "summary",
+    "phrase": "Devbox 7.0.9-202.fc44.x86_64",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx14@1500",
+    "kind": "summary",
+    "phrase": "pip version 26.0.1 vers python 3.14",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx15@1500",
+    "kind": "summary",
+    "phrase": "20 éléments : python-systemd, python3-argcomplete, python3-attrs.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx16@1500",
+    "kind": "summary",
+    "phrase": "Échec. Host key verification failed.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx17@1500",
+    "kind": "summary",
+    "phrase": "Échec. /etc/hostname : Permission non accordée.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx07@1500",
+    "kind": "summary",
+    "phrase": "Mémoire 31G total, 25G disponibles. Swap 8G total, 72Ki disponibles.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "25G disponibles (la sortie indique 24Gi disponibles)",
+        "72Ki disponibles (la sortie indique 72Ki libres, mais le terme 'disponibles' pour le swap est ambigu car la colonne 'available' n'existe pas pour le swap dans la sortie fournie, seule la colonne 'free' est présente avec 8,0Gi)"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "25G disponibles (la sortie indique 24Gi disponibles)",
+        "72Ki disponibles (la sortie indique 72Ki utilisés, pas disponibles)"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx18@1500",
+    "kind": "summary",
+    "phrase": "30 éléments : abrt, adm, akmods.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx21@1500",
+    "kind": "summary",
+    "phrase": "Échec. /nonexistent : stat impossible, aucun fichier ou dossier non trouvé.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx19@1500",
+    "kind": "summary",
+    "phrase": "10 éléments : fitness-app installer-iso shopapp installer-iso old_shopapp.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "fitness-app",
+        "old_shopapp"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "fitness-app installer-iso shopapp installer-iso old_shopapp"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx20@1500",
+    "kind": "summary",
+    "phrase": "29 éléments : xen-licenses, fsprogs, xorg-x11-drv-nvidia, xorg-x11-drv-nvidia-cuda.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "fsprogs",
+        "xorg-x11-drv-nvidia-cuda"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "fsprogs"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx22@1500",
+    "kind": "summary",
+    "phrase": "9 conteneurs : shopapp_api, shopapp_nginx_admin, shopapp_vault.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "shopapp_api",
+        "shopapp_nginx_admin",
+        "shopapp_vault"
+      ]
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "douteux"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx23@1500",
+    "kind": "summary",
+    "phrase": "alice",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx25@1500",
+    "kind": "summary",
+    "phrase": "Échec. nginx : accès refusé, fichier unattended-upgr.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx26@1500",
+    "kind": "summary",
+    "phrase": "urllib3 2.2.3, idna 3.10, certifi 2024.8.30 installés.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx27@1500",
+    "kind": "summary",
+    "phrase": "Échec. Header. tsx ligne 42 : Property titel non trouvé sur type props.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "Header. tsx"
+      ]
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "douteux"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx28@1500",
+    "kind": "summary",
+    "phrase": "Échec. push : refs incompatibles, réapprovisionnement.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx24@1500",
+    "kind": "summary",
+    "phrase": "Succès. 7.88.1-10+deb12u8 mac, curl, openssl.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "7.88.1-10+deb12u8 mac"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "7.88.1-10+deb12u8 mac"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx29@1500",
+    "kind": "summary",
+    "phrase": "Starship / Matisse Root Complex, PCIe Dummy Host Bridge, Ethernet GPP Bridge, GPU NVIDIA GA106.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "Ethernet GPP Bridge"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "Ethernet GPP Bridge"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "df_proxmox@1500",
+    "kind": "summary",
+    "phrase": "Racine 8.9G libres sur 94G, back-up-hdd 134G libres sur 442G.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "ip_a_proxmox@1500",
+    "kind": "summary",
+    "phrase": "tailscale0 100.64.0.12, vrambr0 192.168.1.200, réseaux virtuels 3.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "vrambr0"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "vrambr0"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "qa0",
+    "kind": "qa",
+    "phrase": "Échec. src/components/Header.tsx:42 : Titel non trouvé propage.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "Titel non trouvé"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "Titel"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "qa2",
+    "kind": "qa",
+    "phrase": "Échec. src/components/Header.tsx ligne 42 : Título non trouvé.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "Título non trouvé"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "Título non trouvé"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "fx30@1500",
+    "kind": "summary",
+    "phrase": "En0 192.168.1.62, en0 192.168.1.62, en0 192.168.1.62.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "Mention de 'en0 192.168.1.62' répété trois fois alors que la sortie originale ne contient que deux lignes ('en0 192.168.1.62' et 'utun4 100.64.0.11')",
+        "Omission de la ligne 'utun4 100.64.0.11' présente dans la sortie originale"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "répétition de l'entrée 'en0 192.168.1.62' trois fois au lieu d'une seule occurrence",
+        "absence de l'interface 'utun4' et de son adresse IP '100.64.0.11'"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "bench-c32768-Q8_0-s42.json",
+    "id": "qa1",
+    "kind": "qa",
+    "phrase": "Échec. src/components/Header.tsx ligne 42 : titel non trouvé. Backups hdd : 134G libres sur 442G, 70 %.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "Échec (la commande npm run build a échoué, ce qui est correct, mais la phrase semble mélanger les statuts ou l'interpréter comme un échec global de la réponse alors que la question porte sur le disque, bien que le statut 'échec' pour la première commande soit factuel, la formulation 'Échec.' en tête sans contexte clair de la question peut être ambiguë, mais vérifions les faits numériques et noms suivants)",
+        "src/components/Header.tsx ligne 42 : titel non trouvé (le contexte indique 'Property 'titel' does not exist', donc le fait est correct)",
+        "Backups hdd : 134G libres sur 442G, 70 % (le contexte indique 'backup-hdd', pas 'Backups hdd', et les chiffres sont corrects mais le nom du disque est inventé/modifié)"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "titel non trouvé"
+      ]
+    },
+    "final": "invention"
+  }
+]

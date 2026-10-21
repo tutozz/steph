@@ -1,0 +1,16 @@
+essai	modele	variante	tune	holdout	note
+1	qwen3.5-0.8b	reference axe A : cases_p1, maxc800, aucun payload (temp 0.2 top_p 0.9 par defaut)	73.3	63.7	reference reutilisee, fichier results/prompt/mac-pq-qwen3.5-0.8b-p1.json, non rejouee ici
+2	qwen3.5-0.8b	grammaire ligne140+echec, qa exclus	57.6	51.7	lever grammaire seul
+3	qwen3.5-0.8b	grammaire ligne140 aussi sur qa	62.4	46.7	verifier casse qa
+4	qwen3.5-0.8b	stop sur retour ligne	61.0	60.3	lever stop seul
+5	qwen3.5-0.8b	temperature 0	52.9	61.7	reference temperature 0.2
+6	qwen3.5-0.8b	temperature 0.5	50.5	51.7	reference temperature 0.2
+7	qwen3.5-0.8b	repeat_penalty 1.0	61.0	55.0	lever repeat_penalty
+8	qwen3.5-0.8b	repeat_penalty 1.1	56.2	33.3	lever repeat_penalty
+9	qwen3.5-0.8b	top_k 1	52.9	61.7	lever top_k
+#	#	CORRECTIF METHODE : essais 2-9 a temperature 0.2 par defaut, sans seed fixe -> bruit de tirage confondu avec l'effet du levier (repeat_penalty 1.0 = defaut serveur, ecart de 12 pts avec la reference = bruit pur). A partir d'ici : leviers structurels testes au glouton (temperature 0, deterministe, 1 passage suffit) ; leviers stochastiques moyennes sur 3 passages.	-	-	-
+11	qwen3.5-0.8b	reference temp 0.2 par defaut, 3 passages (plancher de bruit)	53.7±1.1	57.9±7.6	seed non fixe, comme en usage reel ; passages=[52.9, 52.9, 55.2]
+12	qwen3.5-0.8b	temperature 0.5, 3 passages	56.8±1.1	42.8±1.6	comparer au plancher de bruit temp 0.2 ; passages=[57.6, 55.2, 57.6]
+13	qwen3.5-0.8b	grammaire ligne140+echec au glouton, qa exclus	55.2	48.3	deterministe, 1 passage suffit ; reference glouton = 52.9/61.7
+14	qwen3.5-0.8b	grammaire ligne140 aussi sur qa, au glouton	55.2	48.3	verifier casse qa sans bruit
+15	qwen3.5-0.8b	stop sur retour ligne, au glouton	53.8	55.0	lever stop seul, sans bruit

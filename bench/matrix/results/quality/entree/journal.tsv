@@ -1,0 +1,12 @@
+essai	modele	variante	tune	holdout	note
+1	qwen	b400 (budget 400, defaut sinon)	62.4	48.3	budget 400, defaut sinon
+2	qwen	b600 (budget 600, defaut sinon)	67.1	48.3	budget 600, defaut sinon
+3	qwen	b800 (budget 800, defaut sinon (repere connu))	60.5	48.3	budget 800, defaut sinon (repere connu)
+4	qwen	b1200 (budget 1200, defaut sinon)	65.7	48.3	budget 1200, defaut sinon
+5	qwen	imp-first-600 (lignes importantes en tete, budget 600)	60.0	68.3	lignes importantes en tete, budget 600
+6	qwen	imp-only-600 (lignes importantes seules, budget 600)	62.4	58.3	lignes importantes seules, budget 600
+7	qwen	noise-on-600 (doublons/numeros de ligne retires, budget 600)	62.4	51.7	doublons/numeros de ligne retires, budget 600
+8	qwen	status-removed-600 (duree retiree, budget 600)	65.7	53.7	duree retiree, budget 600
+9	qwen	status-clear-600 (statut+duree en clair en tete, budget 600)	49.0	29.0	statut+duree en clair en tete, budget 600
+10	qwen	extract-tail-600 (fin de sortie seulement, budget 600)	56.2	55.0	fin de sortie seulement, budget 600
+11	qwen	extract-head-600 (debut de sortie seulement, budget 600)	55.2	48.3	debut de sortie seulement, budget 600

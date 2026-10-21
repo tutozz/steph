@@ -1,0 +1,235 @@
+{
+ "results": [
+  {
+   "id": "fx00",
+   "t_clean_s": 3.2148,
+   "t_final_s": 3.3767,
+   "ground_cost_s": 0.1619,
+   "output_text": "37 éléments affichés : abrt, adjtime, aliases."
+  },
+  {
+   "id": "fx01",
+   "t_clean_s": 0.4165,
+   "t_final_s": 0.6296,
+   "ground_cost_s": 0.2131,
+   "output_text": "Racine 685G libres sur 953G, 29 %. Boot 284M libres sur 974M, 69 %."
+  },
+  {
+   "id": "fx02",
+   "t_clean_s": 0.732,
+   "t_final_s": null,
+   "ground_cost_s": null,
+   "output_text": ""
+  },
+  {
+   "id": "fx03",
+   "t_clean_s": 0.3673,
+   "t_final_s": 0.5247,
+   "ground_cost_s": 0.1574,
+   "output_text": "cat : fichier inexistant."
+  },
+  {
+   "id": "fx04",
+   "t_clean_s": 0.5153,
+   "t_final_s": 0.7137,
+   "ground_cost_s": 0.1985,
+   "output_text": "<string> ligne 1 : KeyError."
+  },
+  {
+   "id": "fx05",
+   "t_clean_s": 1.1332,
+   "t_final_s": 1.3852,
+   "ground_cost_s": 0.252,
+   "output_text": "Ping 127.0.0.1 : 3 envoyés, 3 reçus, 0 perte, temps moyen 0.024 ms."
+  },
+  {
+   "id": "fx06",
+   "t_clean_s": 0.51,
+   "t_final_s": 0.7352,
+   "ground_cost_s": 0.2252,
+   "output_text": "main ligne 21 : expected expression before ';' token."
+  },
+  {
+   "id": "fx07",
+   "t_clean_s": 0.5466,
+   "t_final_s": 0.6823,
+   "ground_cost_s": 0.1357,
+   "output_text": "Mémoire 31G total, 24G disponibles. 72K disponibles."
+  },
+  {
+   "id": "fx08",
+   "t_clean_s": 1.7482,
+   "t_final_s": 1.8445,
+   "ground_cost_s": 0.0963,
+   "output_text": "Système actif, pipewire.service en cours, mémoire 6.7M, PID 7126.."
+  },
+  {
+   "id": "fx09",
+   "t_clean_s": 1.0638,
+   "t_final_s": 1.2193,
+   "ground_cost_s": 0.1556,
+   "output_text": "8 éléments : def __init__(self, cfg: Config), def healthy(self), def ensure_server."
+  },
+  {
+   "id": "fx10",
+   "t_clean_s": 0.3753,
+   "t_final_s": 0.5071,
+   "ground_cost_s": 0.1317,
+   "output_text": "Curl : nonexistent.invalid."
+  },
+  {
+   "id": "fx11",
+   "t_clean_s": 0.4625,
+   "t_final_s": 0.7099,
+   "ground_cost_s": 0.2474,
+   "output_text": "wlp0s20f3 192.168.1.20, tailscale0 100.64.0.10, tun0 10.9.0.2, 8 réseaux virtuels."
+  },
+  {
+   "id": "fx12",
+   "t_clean_s": 0.4356,
+   "t_final_s": 0.5287,
+   "ground_cost_s": 0.0931,
+   "output_text": "6 éléments : bench, pyproject.toml, README.md, src, uv.lock, vendor."
+  },
+  {
+   "id": "fx13",
+   "t_clean_s": 0.4363,
+   "t_final_s": 0.7981,
+   "ground_cost_s": 0.3619,
+   "output_text": "Linux devbox 7.0.9-202.fc44.x86_64 x86_64 GNU/Linux."
+  },
+  {
+   "id": "fx14",
+   "t_clean_s": 0.3843,
+   "t_final_s": 0.4926,
+   "ground_cost_s": 0.1083,
+   "output_text": "pip 26.0.1."
+  },
+  {
+   "id": "fx15",
+   "t_clean_s": 1.1732,
+   "t_final_s": 1.3477,
+   "ground_cost_s": 0.1745,
+   "output_text": "20 éléments affichés : python-systemd, python3-argcomplete, python3-attrs."
+  },
+  {
+   "id": "fx16",
+   "t_clean_s": 0.3883,
+   "t_final_s": 0.5197,
+   "ground_cost_s": 0.1314,
+   "output_text": "Host key verification failed."
+  },
+  {
+   "id": "fx17",
+   "t_clean_s": 0.3417,
+   "t_final_s": 0.559,
+   "ground_cost_s": 0.2173,
+   "output_text": "/etc/hostname : Permission non accordée."
+  },
+  {
+   "id": "fx18",
+   "t_clean_s": 0.814,
+   "t_final_s": 0.9727,
+   "ground_cost_s": 0.1587,
+   "output_text": "30 éléments affichés : abrt, adm, akmods, apache, _apt, avahi, bin, chrony, clevis, colord, daemon, dbus, dnsmasq, flatpak, ftp, games, gdm, gnome-initial-setup, gnome-remote-desktop, halt, lp, alice, mail, malcontent-timerd, malcontent-webd, nm-openconnect, nm-openvpn."
+  },
+  {
+   "id": "fx19",
+   "t_clean_s": 1.0952,
+   "t_final_s": 1.3323,
+   "ground_cost_s": 0.2371,
+   "output_text": "10 éléments affichés : OLD_SHOPAPP 12G, installer-iso 7,9G, shopapp 2,4G."
+  },
+  {
+   "id": "fx20",
+   "t_clean_s": 3.4352,
+   "t_final_s": 3.5667,
+   "ground_cost_s": 0.1315,
+   "output_text": "29 éléments : xen-licenses, xfsprogs, xorg-x11-drv-nvidia."
+  },
+  {
+   "id": "fx21",
+   "t_clean_s": 0.558,
+   "t_final_s": 0.7724,
+   "ground_cost_s": 0.2144,
+   "output_text": "/tmp/x.tgz : stat impossible, Aucun fichier ou dossier de ce nom."
+  },
+  {
+   "id": "fx22",
+   "t_clean_s": 2.1432,
+   "t_final_s": 2.2853,
+   "ground_cost_s": 0.1421,
+   "output_text": "9 conteneurs : shopapp_api, nginx, vault, hashicorp, iso-builder."
+  },
+  {
+   "id": "fx23",
+   "t_clean_s": 0.2787,
+   "t_final_s": 0.2952,
+   "ground_cost_s": 0.0165,
+   "output_text": "alice."
+  },
+  {
+   "id": "fx24",
+   "t_clean_s": 2.1937,
+   "t_final_s": 2.4978,
+   "ground_cost_s": 0.3041,
+   "output_text": "24,3 Mo réceptionnés en 6s."
+  },
+  {
+   "id": "fx25",
+   "t_clean_s": 0.8782,
+   "t_final_s": 1.1399,
+   "ground_cost_s": 0.2616,
+   "output_text": "Système 4321 : verrou non utilisé."
+  },
+  {
+   "id": "fx26",
+   "t_clean_s": 1.4653,
+   "t_final_s": 1.5921,
+   "ground_cost_s": 0.1268,
+   "output_text": "Requests 2.32.3, charset_normalizer 3.4.0, urllib3 2.2.3, certifi 2024.8.30 installés."
+  },
+  {
+   "id": "fx27",
+   "t_clean_s": 0.6183,
+   "t_final_s": 0.8658,
+   "ground_cost_s": 0.2474,
+   "output_text": "Header.tsx ligne 42 : titel inexistant, type props."
+  },
+  {
+   "id": "fx28",
+   "t_clean_s": 0.7271,
+   "t_final_s": 0.9457,
+   "ground_cost_s": 0.2186,
+   "output_text": "main vers gitlab.com : travail non local."
+  },
+  {
+   "id": "fx29",
+   "t_clean_s": 0.6064,
+   "t_final_s": 0.686,
+   "ground_cost_s": 0.0796,
+   "output_text": "GPU NVIDIA GA106, réseau Realtek RTL8111/8168/8411, chipset AMD Starship/Matisse, 14 périphériques."
+  },
+  {
+   "id": "fx30",
+   "t_clean_s": 0.3984,
+   "t_final_s": 0.5771,
+   "ground_cost_s": 0.1788,
+   "output_text": "En0 192.168.1.62, utun4 203.0.113.2.."
+  },
+  {
+   "id": "df_proxmox",
+   "t_clean_s": 0.4509,
+   "t_final_s": 0.7164,
+   "ground_cost_s": 0.2655,
+   "output_text": "Racine 8.9G libres sur 94G, 91 %. Backup-hdd 134G libres sur 442G, 70 %."
+  },
+  {
+   "id": "ip_a_proxmox",
+   "t_clean_s": 0.4905,
+   "t_final_s": 0.6837,
+   "ground_cost_s": 0.1933,
+   "output_text": "tailscale0 100.96.222.123, vmbr0 192.168.1.200, pan0 192.168.44.1, 3 réseaux virtuels."
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+CONTAINER ID   IMAGE                         COMMAND                  CREATED        STATUS                          PORTS                             NAMES
+9300195b93b5   shop-api:dev                  "sh -c 'uvicorn app.…"   4 months ago   Up 2 days                       0.0.0.0:8888->8000/tcp            shop_api
+754bd4aa1438   nginx:alpine                  "/docker-entrypoint.…"   4 months ago   Up 2 days                       80/tcp, 127.0.0.1:8444->443/tcp   shop_nginx_admin
+a0afae940d21   hashicorp/vault:1.17          "docker-entrypoint.s…"   4 months ago   Restarting (1) 57 seconds ago                                     shop_vault
+89f0e252b5d6   shop-frontend:dev             "docker-entrypoint.s…"   4 months ago   Up 2 days                       127.0.0.1:3000->3000/tcp          shop_admin
+f8b9212d0f60   postgres:15                   "docker-entrypoint.s…"   4 months ago   Up 2 days                       5432/tcp                          shop_db
+c4b0e16e9e8c   shop-client-webapp:dev        "python client_web.py"   4 months ago   Up 2 days                       127.0.0.1:8081->8080/tcp          shop_client_webapp
+33197f7d94e8   nginx:alpine                  "/docker-entrypoint.…"   5 months ago   Up 2 days                       80/tcp, 127.0.0.1:8443->443/tcp   shop_nginx_client
+b2373f5d78b9   nginx:alpine                  "/docker-entrypoint.…"   5 months ago   Up 2 days                       127.0.0.1:8080->80/tcp            shop_nginx_enroll
+a7aeb340bbbf   iso-builder                   "python3 /opt/iso-bu…"   6 months ago   Up 2 days                                                         tools-iso-builder-1

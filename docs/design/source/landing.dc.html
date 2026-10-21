@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>steph, le terminal qui parle</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<style>
+html{background:#0b0b0b}
+body{margin:0;background:#0b0b0b;color:#f4f4f0;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration-thickness:2px;text-underline-offset:5px}
+a:hover{color:#e2ff3b;text-decoration-thickness:3px}
+:focus-visible{outline:3px solid #e2ff3b;outline-offset:4px}
+*{box-sizing:border-box}
+</style>
+</helmet>
+<div lang="fr" style="min-height:100vh;background:#0b0b0b;background-image:linear-gradient(#1a1a1a 1px,transparent 1px),linear-gradient(90deg,#1a1a1a 1px,transparent 1px);background-size:32px 32px;color:#f4f4f0;font-family:'Space Grotesk',sans-serif">
+
+  <a href="#contenu" style="position:absolute;left:16px;top:-80px;background:#e2ff3b;color:#000;font:700 20px 'Space Grotesk';padding:14px 18px;z-index:10" style-focus="top:16px">Aller au contenu</a>
+
+  <header style="max-width:1440px;margin:0 auto;padding:24px clamp(19px,4.5vw,64px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px">
+    <a href="#" aria-label="steph, accueil" style="display:flex;align-items:center;gap:16px;text-decoration:none">
+      <span style="font:700 36px/1 'Space Grotesk';letter-spacing:-0.03em">steph</span>
+      <span aria-hidden="true" style="display:grid;grid-template-columns:repeat(3,8px);grid-auto-rows:8px"><span style="background:#e2ff3b"></span><span></span><span></span><span></span><span style="background:#e2ff3b"></span><span></span><span style="background:#e2ff3b"></span><span></span><span></span></span>
+      <span style="font:400 20px 'Space Grotesk';color:#cfcfca">Terminal qui parle</span>
+    </a>
+    <nav aria-label="Principale" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;font:500 20px 'Space Grotesk'">
+      <a href="#installer" style="padding:10px 0">Installer</a>
+      <a href="#entreprises" style="padding:10px 0">Entreprises</a>
+      <a href="#" style="padding:10px 0">Code source</a>
+      <span style="display:flex;gap:6px;align-items:center"><span aria-current="true" style="font:700 20px 'Space Grotesk';color:#e2ff3b;padding:10px 4px">FR</span><span aria-hidden="true" style="color:#8a8a85">·</span><a href="#" lang="en" aria-label="Read in English" style="padding:10px 4px">EN</a></span>
+    </nav>
+  </header>
+
+  <main id="contenu">
+    <section aria-labelledby="h-hero" style="max-width:1440px;margin:0 auto;padding:clamp(40px,6vw,72px) clamp(19px,4.5vw,64px) clamp(64px,8vw,112px);display:flex;flex-direction:column;gap:clamp(40px,5vw,64px)">
+      <div style="display:flex;flex-wrap:wrap;gap:40px 64px;align-items:flex-end">
+        <div style="flex:7 1 560px;display:flex;flex-direction:column;gap:24px;min-width:0">
+          <div style="font:500 20px 'JetBrains Mono';color:#e2ff3b">Terminal qui parle</div>
+          <h1 id="h-hero" style="margin:0;font:500 clamp(60px,9vw,136px)/0.92 'Space Grotesk';letter-spacing:-0.05em;text-wrap:balance">Le terminal, à voix haute.</h1>
+        </div>
+        <div style="flex:5 1 380px;display:flex;flex-direction:column;gap:18px;min-width:0">
+          <p style="margin:0;font:400 clamp(21px,1.7vw,25px)/1.45 'Space Grotesk';color:#e6e6e1;text-wrap:pretty">L'essentiel de chaque commande, en une phrase. En plus de votre lecteur d'écran.</p>
+          <div style="display:flex;flex-wrap:wrap;background:#1f1f1f;border:2px solid #77776f">
+            <code style="flex:1 1 260px;font:400 19px/1.45 'JetBrains Mono';padding:14px 16px;overflow-wrap:anywhere;min-width:0"><span aria-hidden="true" style="color:#e2ff3b">$ </span>curl -fsSL https://steph.lsmdx.com/install | sh</code>
+            <button onClick="{{ copyInstall }}" aria-label="Copier la commande d'installation" style="flex:0 0 auto;font:700 20px 'Space Grotesk';background:#f4f4f0;color:#000;border:0;padding:0 22px;min-height:52px;min-width:120px;cursor:pointer">{{ copyLabel }}</button>
+          </div>
+          <p style="margin:0;font:400 20px/1.5 'Space Grotesk';color:#cfcfca">Linux et macOS.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px 24px;font:500 21px 'Space Grotesk'"><span>Gratuit pour les particuliers</span><a href="#entreprises" style="color:#e2ff3b">Licence entreprise <span aria-hidden="true">»</span></a></div>
+        </div>
+      </div>
+
+      <figure style="margin:0;display:flex;flex-wrap:wrap;gap:48px 56px;align-items:flex-start">
+        <div style="flex:1 1 440px;min-width:0;display:flex;flex-direction:column">
+          <div aria-hidden="true" style="display:flex"><sc-for list="{{ fringeA }}" as="c" hint-placeholder-count="0"><sc-if value="{{ c.on }}"><span style="flex:1;aspect-ratio:1;max-height:32px;background:#262626"></span></sc-if><sc-if value="{{ c.off }}"><span style="flex:1;aspect-ratio:1;max-height:32px"></span></sc-if></sc-for></div>
+          <div style="background:#262626;padding:clamp(20px,3vw,40px);display:flex;flex-direction:column;gap:14px">
+            <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px"><span style="font:500 clamp(30px,3vw,44px)/1 'Space Grotesk';letter-spacing:-0.03em">À l'écran</span><span style="font:500 20px 'JetBrains Mono';color:#cfcfca">$ lspci · 35 lignes</span></div>
+            <div tabindex="0" role="region" aria-label="Sortie de lspci, 35 lignes" style="font:400 19px/1.5 'JetBrains Mono';color:#cfcfca;height:clamp(230px,24vw,344px);overflow:hidden">
+              <sc-for list="{{ lines }}" as="l" hint-placeholder-count="12"><div style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ l.t }}</div></sc-for>
+            </div>
+            <button style="align-self:flex-start;font:700 19px 'Space Grotesk';color:#e2ff3b;background:transparent;border:2px solid #77776f;padding:10px 14px;min-height:48px;cursor:pointer">Afficher les 35 lignes</button>
+          </div>
+          <div aria-hidden="true" style="display:flex"><sc-for list="{{ fringeB }}" as="c" hint-placeholder-count="0"><sc-if value="{{ c.on }}"><span style="flex:1;aspect-ratio:1;max-height:32px;background:#262626"></span></sc-if><sc-if value="{{ c.off }}"><span style="flex:1;aspect-ratio:1;max-height:32px"></span></sc-if></sc-for></div>
+        </div>
+        <div style="flex:1 1 440px;min-width:0;display:flex;flex-direction:column;margin-top:clamp(0px,6vw,96px)">
+          <div aria-hidden="true" style="display:flex"><sc-for list="{{ fringeC }}" as="c" hint-placeholder-count="0"><sc-if value="{{ c.on }}"><span style="flex:1;aspect-ratio:1;max-height:32px;background:#e2ff3b"></span></sc-if><sc-if value="{{ c.off }}"><span style="flex:1;aspect-ratio:1;max-height:32px"></span></sc-if></sc-for></div>
+          <div style="background:#e2ff3b;color:#000;padding:clamp(20px,3vw,40px);display:flex;flex-direction:column;gap:20px">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><span style="font:500 clamp(30px,3vw,44px)/1 'Space Grotesk';letter-spacing:-0.03em">À l'oreille</span><span style="font:500 20px 'JetBrains Mono'">7,3 s</span></div>
+            <blockquote style="margin:0;font:500 clamp(24px,2.5vw,36px)/1.2 'Space Grotesk';letter-spacing:-0.02em;text-wrap:pretty">« Le système affiche 35 lignes d'informations PCI, incluant un contrôleur Ethernet Realtek, un contrôleur graphique NVIDIA et plusieurs contrôleurs AMD. »</blockquote>
+            <div style="border-top:2px solid #000;padding-top:18px;display:flex;flex-direction:column;gap:8px">
+              <span style="font:500 19px/1.4 'JetBrains Mono'">Vous demandez : « est-ce que j'ai de l'USB 3 ? »</span>
+              <blockquote style="margin:0;font:500 clamp(21px,1.8vw,26px)/1.3 'Space Grotesk'">« Oui, vous avez un contrôleur USB 3.1 XHCI. Il y a aussi un contrôleur USB 3.0 Host Controller. »</blockquote>
+            </div>
+          </div>
+          <div aria-hidden="true" style="display:flex"><sc-for list="{{ fringeD }}" as="c" hint-placeholder-count="0"><sc-if value="{{ c.on }}"><span style="flex:1;aspect-ratio:1;max-height:32px;background:#e2ff3b"></span></sc-if><sc-if value="{{ c.off }}"><span style="flex:1;aspect-ratio:1;max-height:32px"></span></sc-if></sc-for></div>
+        </div>
+        <figcaption style="flex:1 1 100%;font:700 clamp(24px,2.4vw,32px)/1.2 'Space Grotesk';letter-spacing:-0.02em">35 lignes à l'écran. <span style="color:#e2ff3b">Une phrase à l'oreille.</span></figcaption>
+      </figure>
+    </section>
+    <p aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">{{ copyStatus }}</p>
+
+    <section aria-labelledby="h-idee" style="border-top:2px solid #3a3a37">
+      <div style="max-width:1440px;margin:0 auto;padding:clamp(64px,8vw,112px) clamp(19px,4.5vw,64px);display:flex;flex-direction:column;gap:48px">
+        <div style="display:flex;flex-wrap:wrap;gap:24px 64px;align-items:flex-end">
+          <div style="flex:7 1 520px;display:flex;flex-direction:column;gap:20px;min-width:0"><div style="font:500 20px 'JetBrains Mono';color:#e2ff3b"><span aria-hidden="true">01 · </span>L'idée</div><h2 id="h-idee" style="margin:0;font:500 clamp(40px,5.4vw,76px)/0.98 'Space Grotesk';letter-spacing:-0.04em;text-wrap:balance">Un lecteur d'écran lit tout. <span style="color:#e2ff3b">steph dit ce qui compte.</span></h2></div>
+          <p style="flex:5 1 340px;margin:0;font:400 clamp(20px,1.6vw,23px)/1.5 'Space Grotesk';color:#e6e6e1;min-width:0">Votre lecteur d'écran reste indispensable : il lit tout, ligne après ligne. Dans un terminal, c'est souvent trop. steph s'ajoute à lui et résume chaque commande en une phrase.</p>
+        </div>
+        <table style="border-collapse:separate;border-spacing:0;width:100%">
+          <caption style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Quatre situations, sans steph et avec steph</caption>
+          <thead style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"><tr><th scope="col">Sans steph</th><th scope="col">Avec steph</th></tr></thead>
+          <tbody style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px">
+            <sc-for list="{{ pairs }}" as="p" hint-placeholder-count="4">
+              <tr style="display:flex;flex-direction:column">
+                <td style="background:#262626;padding:24px;display:flex;flex-direction:column;gap:10px;flex:0 0 auto;min-height:170px;clip-path:polygon(0 8px,8px 8px,8px 0,100% 0,100% 100%,0 100%)"><span aria-hidden="true" style="font:500 19px 'JetBrains Mono';color:#cfcfca">Sans steph</span><span style="font:400 21px/1.45 'Space Grotesk'">{{ p.sans }}</span></td>
+                <td style="background:#e2ff3b;color:#000;padding:24px;display:flex;flex-direction:column;gap:10px;flex:1;clip-path:polygon(0 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) calc(100% - 8px),calc(100% - 8px) 100%,0 100%)"><span aria-hidden="true" style="font:500 19px 'JetBrains Mono'">Avec steph</span><span style="font:500 clamp(21px,1.7vw,24px)/1.3 'Space Grotesk'">{{ p.avec }}</span></td>
+              </tr>
+            </sc-for>
+          </tbody>
+        </table>
+        <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px 28px;font:400 20px/1.5 'Space Grotesk';color:#cfcfca"><span>Exemples tirés de sorties réelles, anonymisées. La durée « 1 minute 24 » est un exemple.</span><span style="display:flex;flex-wrap:wrap;gap:12px 28px"><span style="color:#f4f4f0">Linux et macOS. Windows n'est pas pris en charge.</span></span></div>
+      </div>
+    </section>
+
+    <section id="chiffres" aria-labelledby="h-chiffres" style="border-top:2px solid #3a3a37">
+      <div style="max-width:1440px;margin:0 auto;padding:clamp(64px,8vw,112px) clamp(19px,4.5vw,64px);display:flex;flex-direction:column;gap:48px">
+        <div style="display:flex;flex-direction:column;gap:20px"><div style="font:500 20px 'JetBrains Mono';color:#e2ff3b"><span aria-hidden="true">02 · </span>Mesuré</div><h2 id="h-chiffres" style="margin:0;font:500 clamp(40px,5.4vw,76px)/1.05 'Space Grotesk';letter-spacing:-0.04em">Le premier son arrive en <span style="font:500 0.62em 'JetBrains Mono';letter-spacing:0;border:3px dashed #8a8a85;padding:0 12px;vertical-align:0.12em;white-space:nowrap">[à remplir]</span> seconde.</h2></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px">
+          <div style="background:#161616;border:2px solid #3a3a37;padding:28px;display:flex;flex-direction:column;gap:16px">
+            <h3 style="margin:0;font:500 20px 'JetBrains Mono';color:#cfcfca">Premier son</h3>
+            <div style="height:112px;display:flex;align-items:center;border:3px dashed #8a8a85;background:repeating-linear-gradient(135deg,#262626 0 8px,#161616 8px 16px);padding:0 20px;font:500 22px 'JetBrains Mono'">[à remplir : seconde]</div>
+            <p style="margin:0;font:400 20px/1.5 'Space Grotesk'">Neuf fois sur dix, steph commence à parler en moins de ce temps après la fin d'une commande. Portable Intel Core i5-7200U, sans carte graphique, 33 sorties réelles rejouées.</p>
+          </div>
+          <div style="background:#161616;border:2px solid #3a3a37;padding:28px;display:flex;flex-direction:column;gap:16px">
+            <h3 style="margin:0;font:500 20px 'JetBrains Mono';color:#cfcfca">Installation</h3>
+            <div style="height:112px;display:flex;align-items:center;border:3px dashed #8a8a85;background:repeating-linear-gradient(135deg,#262626 0 8px,#161616 8px 16px);padding:0 20px;font:500 22px 'JetBrains Mono'">[à remplir : taille]</div>
+            <p style="margin:0;font:400 20px/1.5 'Space Grotesk'">Environ <span style="font:400 19px 'JetBrains Mono';border:2px dashed #8a8a85;padding:0 6px">[à remplir : minutes]</span> avec une connexion à 50 Mbit/s. steph parle avant la fin du téléchargement.</p>
+          </div>
+          <div style="background:#e2ff3b;color:#000;padding:28px;display:flex;flex-direction:column;gap:16px">
+            <h3 style="margin:0;font:500 20px 'JetBrains Mono'">Local</h3>
+            <div style="height:112px;display:flex;align-items:center;font:500 120px/1 'Space Grotesk';letter-spacing:-0.05em">100 %</div>
+            <p style="margin:0;font:400 20px/1.5 'Space Grotesk'">Le modèle de langue et la voix tournent sur votre machine.</p>
+          </div>
+        </div>
+        <figure aria-labelledby="h-g1" style="margin:0;background:#161616;border:2px solid #3a3a37;padding:clamp(20px,3vw,40px);display:flex;flex-direction:column;gap:28px">
+          <div style="display:flex;flex-direction:column;gap:8px"><h3 id="h-g1" style="margin:0;font:500 clamp(26px,2.4vw,34px)/1.15 'Space Grotesk';letter-spacing:-0.02em">Même sortie, deux durées d'écoute.</h3><p style="margin:0;font:400 20px 'Space Grotesk';color:#cfcfca">En secondes. Plus court, c'est mieux.</p></div>
+          <div aria-hidden="true" style="display:flex;flex-direction:column;gap:28px">
+            <sc-for list="{{ g1 }}" as="g" hint-placeholder-count="3">
+              <div style="display:flex;flex-direction:column;gap:10px">
+                <div style="display:flex;flex-wrap:wrap;gap:4px 16px;align-items:baseline"><code style="font:600 20px 'JetBrains Mono'">{{ g.cmd }}</code><span style="font:400 19px 'Space Grotesk';color:#cfcfca">{{ g.sub }}</span></div>
+                <div style="display:grid;grid-template-columns:minmax(0,180px) minmax(0,1fr);gap:8px 16px;align-items:center;font:400 19px 'Space Grotesk'">
+                  <span>Ligne à ligne</span><span style="height:32px;width:60%;border:2px dashed #cfcfca;background:repeating-linear-gradient(135deg,#3a3a37 0 6px,#161616 6px 12px);display:flex;align-items:center;padding:0 10px;font:500 19px 'JetBrains Mono'">à remplir</span>
+                  <span>Phrase de steph</span><span style="height:32px;width:60%;border:2px dashed #e2ff3b;background:repeating-linear-gradient(135deg,#3d4410 0 6px,#161616 6px 12px);display:flex;align-items:center;padding:0 10px;font:500 19px 'JetBrains Mono'">à remplir</span>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+          <p style="margin:0;font:400 19px/1.5 'Space Grotesk';color:#cfcfca">Même voix, même débit. Durée des fichiers audio générés. Barres hachurées de longueur neutre : mesure prévue avant la mise en ligne.</p>
+          <details style="border-top:2px solid #3a3a37;padding-top:16px">
+            <summary style="font:700 20px 'Space Grotesk';cursor:pointer;min-height:44px;display:flex;align-items:center">Voir les valeurs</summary>
+            <table style="border-collapse:collapse;width:100%;margin-top:12px;font:400 19px 'Space Grotesk'">
+              <thead><tr><th scope="col" style="text-align:left;padding:10px 12px 10px 0;border-bottom:2px solid #77776f">Commande</th><th scope="col" style="text-align:left;padding:10px 12px;border-bottom:2px solid #77776f">Ligne à ligne (s)</th><th scope="col" style="text-align:left;padding:10px 12px;border-bottom:2px solid #77776f">Phrase de steph (s)</th></tr></thead>
+              <tbody><sc-for list="{{ g1 }}" as="g" hint-placeholder-count="3"><tr><th scope="row" style="text-align:left;font-weight:500;padding:10px 12px 10px 0;border-bottom:1px solid #3a3a37">{{ g.cmd }}</th><td style="padding:10px 12px;border-bottom:1px solid #3a3a37;font-family:'JetBrains Mono'">[à remplir]</td><td style="padding:10px 12px;border-bottom:1px solid #3a3a37;font-family:'JetBrains Mono'">[à remplir]</td></tr></sc-for></tbody>
+            </table>
+          </details>
+        </figure>
+        <a href="#" style="align-self:flex-start;font:700 21px 'Space Grotesk';color:#e2ff3b">Méthode et données complètes <span aria-hidden="true">»</span></a>
+      </div>
+    </section>
+    <section aria-labelledby="h-local" style="background:#e2ff3b;color:#000">
+      <div aria-hidden="true" style="display:flex;background:#0b0b0b"><sc-for list="{{ fringeE }}" as="c" hint-placeholder-count="0"><sc-if value="{{ c.on }}"><span style="flex:1;aspect-ratio:1;max-height:48px;background:#e2ff3b"></span></sc-if><sc-if value="{{ c.off }}"><span style="flex:1;aspect-ratio:1;max-height:48px"></span></sc-if></sc-for></div>
+      <div style="max-width:1440px;margin:0 auto;padding:clamp(48px,6vw,88px) clamp(19px,4.5vw,64px) clamp(56px,7vw,104px);display:flex;flex-wrap:wrap;gap:40px 64px">
+        <div style="flex:5 1 400px;display:flex;flex-direction:column;gap:20px;min-width:0"><div style="font:500 20px 'JetBrains Mono'"><span aria-hidden="true">03 · </span>Local</div><h2 id="h-local" style="margin:0;font:500 clamp(44px,6vw,88px)/0.95 'Space Grotesk';letter-spacing:-0.045em;text-wrap:balance">Rien ne quitte votre machine.</h2></div>
+        <div style="flex:7 1 480px;display:flex;flex-direction:column;gap:24px;min-width:0">
+          <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
+            <li style="display:flex;gap:18px;align-items:baseline;padding:16px 0;border-bottom:2px solid #000;font:500 clamp(21px,1.8vw,26px)/1.35 'Space Grotesk'"><span aria-hidden="true" style="flex:0 0 14px;height:14px;background:#000"></span>Le modèle de langue tourne sur votre ordinateur.</li>
+            <li style="display:flex;gap:18px;align-items:baseline;padding:16px 0;border-bottom:2px solid #000;font:500 clamp(21px,1.8vw,26px)/1.35 'Space Grotesk'"><span aria-hidden="true" style="flex:0 0 14px;height:14px;background:#000"></span>La voix est générée sur place.</li>
+            <li style="display:flex;gap:18px;align-items:baseline;padding:16px 0;border-bottom:2px solid #000;font:500 clamp(21px,1.8vw,26px)/1.35 'Space Grotesk'"><span aria-hidden="true" style="flex:0 0 14px;height:14px;background:#000"></span>Aucune télémétrie. Aucun compte. Aucune clé d'API.</li>
+            <li style="display:flex;gap:18px;align-items:baseline;padding:16px 0;border-bottom:2px solid #000;font:500 clamp(21px,1.8vw,26px)/1.35 'Space Grotesk'"><span aria-hidden="true" style="flex:0 0 14px;height:14px;background:#000"></span>Après l'installation, steph fonctionne hors ligne.</li>
+            <li style="display:flex;gap:18px;align-items:baseline;padding:16px 0;border-bottom:2px solid #000;font:500 clamp(21px,1.8vw,26px)/1.35 'Space Grotesk'"><span aria-hidden="true" style="flex:0 0 14px;height:14px;background:#000"></span>Si le modèle s'arrête, steph le relance et résume sans lui en attendant.</li>
+          </ul>
+          <p style="margin:0;font:700 22px/1.4 'Space Grotesk'">Le code est public : vous pouvez le vérifier. <a href="#" style="color:#000">Voir le code source</a></p>
+        </div>
+      </div>
+      <div aria-hidden="true" style="display:flex;background:#0b0b0b"><sc-for list="{{ fringeF }}" as="c" hint-placeholder-count="0"><sc-if value="{{ c.on }}"><span style="flex:1;aspect-ratio:1;max-height:48px;background:#e2ff3b"></span></sc-if><sc-if value="{{ c.off }}"><span style="flex:1;aspect-ratio:1;max-height:48px"></span></sc-if></sc-for></div>
+    </section>
+
+    <section aria-labelledby="h-modele" style="border-top:2px solid #3a3a37">
+      <div style="max-width:1440px;margin:0 auto;padding:clamp(64px,8vw,112px) clamp(19px,4.5vw,64px);display:flex;flex-direction:column;gap:56px">
+        <div style="display:flex;flex-wrap:wrap;gap:32px 64px;align-items:flex-end">
+          <div style="flex:6 1 480px;display:flex;flex-direction:column;gap:20px;min-width:0"><div style="font:500 20px 'JetBrains Mono';color:#e2ff3b"><span aria-hidden="true">04 · </span>Le modèle</div><h2 id="h-modele" style="margin:0;font:500 clamp(40px,5.4vw,76px)/0.98 'Space Grotesk';letter-spacing:-0.04em;text-wrap:balance">Un petit modèle, entraîné pour ça.</h2></div>
+          <p style="flex:6 1 420px;margin:0;font:400 clamp(20px,1.6vw,23px)/1.5 'Space Grotesk';color:#e6e6e1;min-width:0">Des règles écrites en code résument une grande partie des sorties. Pour le reste, <code style="font:500 0.95em 'JetBrains Mono';color:#f4f4f0">steph-speak</code>, un petit modèle de langue, dit l'essentiel. Il tourne sur un portable sans carte graphique. Poids, données et banc d'essai sont ouverts.</p>
+        </div>
+        <dl style="margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px">
+          <div style="background:#e2ff3b;color:#000;padding:28px;display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:12px;min-height:280px"><dt style="font:500 21px/1.4 'Space Grotesk'">Mo : taille du fichier du modèle. Assez petit pour un portable.</dt><dd style="margin:0;font:500 clamp(40px,4vw,56px)/1 'JetBrains Mono';border:3px dashed #000;padding:18px 14px;align-self:flex-start">[à remplir]</dd></div>
+          <div style="background:#262626;padding:28px;display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:12px;min-height:280px"><dt style="font:500 21px/1.4 'Space Grotesk';color:#e6e6e1">cas par langue dans le Steph Speak Bench, le banc d'essai ouvert.</dt><dd style="margin:0;font:500 clamp(96px,11vw,168px)/0.85 'Space Grotesk';letter-spacing:-0.06em">105</dd></div>
+          <div style="background:#262626;padding:28px;display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:12px;min-height:280px"><dt style="font:500 21px/1.4 'Space Grotesk';color:#e6e6e1">langues mesurées : anglais, français, allemand, espagnol, portugais, russe.</dt><dd style="margin:0;font:500 clamp(96px,11vw,168px)/0.85 'Space Grotesk';letter-spacing:-0.06em">6</dd></div>
+          <div style="background:#262626;padding:28px;display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:12px;min-height:280px"><dt style="font:500 21px/1.4 'Space Grotesk';color:#e6e6e1">catégories de sorties : compilation, tests, git, paquets, réseau, matériel…</dt><dd style="margin:0;font:500 clamp(96px,11vw,168px)/0.85 'Space Grotesk';letter-spacing:-0.06em">13</dd></div>
+        </dl>
+        <div style="display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between">
+          <p style="margin:0;font:400 20px/1.5 'Space Grotesk';color:#cfcfca">Poids sous licence Apache 2.0. Données du banc sous licence CC BY 4.0.</p>
+          <a href="steph Modele.dc.html" style="font:700 20px 'Space Grotesk';background:#f4f4f0;color:#000;padding:14px 20px;text-decoration:none;clip-path:polygon(0 6px,6px 6px,6px 0,calc(100% - 6px) 0,calc(100% - 6px) 6px,100% 6px,100% calc(100% - 6px),calc(100% - 6px) calc(100% - 6px),calc(100% - 6px) 100%,6px 100%,6px calc(100% - 6px),0 calc(100% - 6px))">Découvrir le modèle <span aria-hidden="true">»</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="h-concu" style="border-top:2px solid #3a3a37">
+      <div style="max-width:1440px;margin:0 auto;padding:clamp(64px,8vw,112px) clamp(19px,4.5vw,64px);display:flex;flex-wrap:wrap;gap:40px 64px">
+        <div style="flex:6 1 480px;display:flex;flex-direction:column;gap:24px;min-width:0">
+          <div style="font:500 20px 'JetBrains Mono';color:#e2ff3b"><span aria-hidden="true">05 · </span>Conçu avec</div>
+          <h2 id="h-concu" style="margin:0;font:500 clamp(36px,4.4vw,64px)/1 'Space Grotesk';letter-spacing:-0.04em;text-wrap:balance">Conçu et testé avec des personnes aveugles et malvoyantes.</h2>
+          <p style="margin:0;font:500 20px/1.5 'JetBrains Mono';border:3px dashed #8a8a85;background:repeating-linear-gradient(135deg,#1d1d1d 0 8px,#0b0b0b 8px 16px);padding:20px">[à remplir : nombre de personnes, nombre de séances, période, et ce qui a changé grâce à elles]</p>
+          <p style="margin:0;font:400 21px/1.5 'Space Grotesk'">Une remarque, un bug, une idée ? Écrivez à <a href="mailto:luis@lsmdx.com" style="color:#e2ff3b;font-weight:700">luis@lsmdx.com</a>. Pas besoin de compte GitHub.</p>
+        </div>
+        <div style="flex:6 1 420px;display:flex;flex-direction:column;gap:16px;min-width:0">
+          <h3 style="margin:0;font:500 20px 'JetBrains Mono';color:#cfcfca">Engagements de cette page</h3>
+          <ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px">
+            <li style="background:#262626;padding:18px 20px;font:500 21px/1.35 'Space Grotesk'">texte contrasté à 7 pour 1 au moins</li>
+            <li style="background:#262626;padding:18px 20px;font:500 21px/1.35 'Space Grotesk'">aucun texte sous 19 pixels</li>
+            <li style="background:#262626;padding:18px 20px;font:500 21px/1.35 'Space Grotesk'">lisible à 400 % de zoom</li>
+            <li style="background:#262626;padding:18px 20px;font:500 21px/1.35 'Space Grotesk'">tout se fait au clavier</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="entreprises" aria-labelledby="h-ent" style="background:#f4f4f0;color:#0b0b0b">
+      <div style="max-width:1440px;margin:0 auto;padding:clamp(64px,8vw,112px) clamp(19px,4.5vw,64px);display:flex;flex-direction:column;gap:48px">
+        <div style="display:flex;flex-wrap:wrap;gap:24px 64px;align-items:flex-end">
+          <div style="flex:7 1 520px;display:flex;flex-direction:column;gap:20px;min-width:0"><div style="font:500 20px 'JetBrains Mono'"><span aria-hidden="true">06 · </span>Entreprises</div><h2 id="h-ent" style="margin:0;font:500 clamp(40px,5.4vw,76px)/0.98 'Space Grotesk';letter-spacing:-0.04em;text-wrap:balance">Équiper le poste d'un développeur aveugle ou malvoyant.</h2></div>
+          <p style="flex:5 1 360px;margin:0;font:400 clamp(20px,1.6vw,23px)/1.5 'Space Grotesk';color:#2e2e2b;min-width:0">steph aide l'employeur à aménager le poste. Il s'installe à côté du lecteur d'écran, sans cloud. Une licence est nécessaire dès qu'une entreprise l'utilise, le déploie chez un client ou l'intègre à un produit.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px">
+          <div style="border:3px solid #0b0b0b;padding:28px;display:flex;flex-direction:column;gap:12px"><h3 style="margin:0;font:700 26px 'Space Grotesk'">Licence individuelle pro</h3><p style="margin:0;font:400 20px/1.45 'Space Grotesk'">Un salarié qui utilise steph seul, sur son poste.</p><p style="margin:auto 0 0;font:400 19px 'JetBrains Mono';border:2px dashed #77776f;padding:6px 10px;align-self:flex-start">[à remplir : prix et durée]</p></div>
+          <div style="background:#0b0b0b;color:#f4f4f0;padding:28px;display:flex;flex-direction:column;gap:12px"><h3 style="margin:0;font:700 26px 'Space Grotesk';color:#e2ff3b">Licence entreprise</h3><p style="margin:0;font:400 20px/1.45 'Space Grotesk'">Une équipe, un parc de postes, un prestataire, une intégration.</p><p style="margin:auto 0 0;font:700 24px 'Space Grotesk'">Sur devis</p></div>
+          <div style="border:3px solid #0b0b0b;padding:28px;display:flex;flex-direction:column;gap:12px"><h3 style="margin:0;font:700 26px 'Space Grotesk'">Sécurité et financement</h3><p style="margin:0;font:400 20px/1.45 'Space Grotesk'">Rien ne sort du poste. En France, l'aménagement peut être cofinancé par l'Agefiph : voyez votre référent handicap.</p></div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center">
+          <a href="mailto:luis@lsmdx.com?subject=Licence%20steph" style="font:700 22px 'Space Grotesk';background:#0b0b0b;color:#e2ff3b;padding:18px 26px;text-decoration:none;clip-path:polygon(0 8px,8px 8px,8px 0,calc(100% - 8px) 0,calc(100% - 8px) 8px,100% 8px,100% calc(100% - 8px),calc(100% - 8px) calc(100% - 8px),calc(100% - 8px) 100%,8px 100%,8px calc(100% - 8px),0 calc(100% - 8px))">Demander un devis</a>
+          <p style="margin:0;font:400 20px 'Space Grotesk';color:#2e2e2b">luis@lsmdx.com · réponse sous <span style="font:400 19px 'JetBrains Mono';border:2px dashed #77776f;padding:0 6px">[à remplir : délai]</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="h-licence">
+      <div style="max-width:1440px;margin:0 auto;padding:clamp(64px,8vw,112px) clamp(19px,4.5vw,64px);display:flex;flex-wrap:wrap;gap:32px 64px;align-items:flex-end">
+        <div style="flex:7 1 520px;display:flex;flex-direction:column;gap:20px;min-width:0"><div style="font:500 20px 'JetBrains Mono';color:#e2ff3b"><span aria-hidden="true">07 · </span>Licence</div><h2 id="h-licence" style="margin:0;font:500 clamp(44px,6vw,88px)/0.95 'Space Grotesk';letter-spacing:-0.045em;text-wrap:balance">Gratuit pour vous, <span style="color:#e2ff3b">pour toujours.</span></h2></div>
+        <div style="flex:5 1 380px;display:flex;flex-direction:column;gap:16px;min-width:0">
+          <p style="margin:0;font:400 clamp(20px,1.6vw,23px)/1.5 'Space Grotesk';color:#e6e6e1">Particuliers, études, associations, écoles, recherche publique, administrations : gratuit, sous licence PolyForm Noncommercial 1.0.0. Le code est public ; les licences entreprise financent le travail.</p>
+          <a href="#" style="align-self:flex-start;font:700 21px 'Space Grotesk';color:#e2ff3b">Lire la licence <span aria-hidden="true">»</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="installer" aria-labelledby="h-install" style="border-top:2px solid #3a3a37">
+      <div style="max-width:1440px;margin:0 auto;padding:clamp(64px,8vw,112px) clamp(19px,4.5vw,64px);display:flex;flex-direction:column;gap:32px">
+        <div style="display:flex;flex-direction:column;gap:20px"><div style="font:500 20px 'JetBrains Mono';color:#e2ff3b"><span aria-hidden="true">08 · </span>Installer</div><h2 id="h-install" style="margin:0;font:500 clamp(44px,6vw,88px)/0.95 'Space Grotesk';letter-spacing:-0.045em">Installer en une commande.</h2></div>
+        <div style="display:flex;flex-wrap:wrap;background:#e2ff3b;color:#000">
+          <pre style="flex:1 1 320px;margin:0;font:500 clamp(19px,1.8vw,26px)/1.6 'JetBrains Mono';padding:clamp(20px,3vw,36px);white-space:pre-wrap;overflow-wrap:anywhere;min-width:0"><code><span aria-hidden="true">$ </span>curl -fsSL https://steph.lsmdx.com/install | sh
+<span aria-hidden="true">$ </span>steph</code></pre>
+          <button onClick="{{ copyInstall2 }}" aria-label="Copier les commandes d'installation" style="flex:0 0 auto;font:700 22px 'Space Grotesk';background:#0b0b0b;color:#e2ff3b;border:0;padding:0 32px;min-height:64px;min-width:150px;cursor:pointer">{{ copyLabel2 }}</button>
+        </div>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:12px 40px;font:400 20px/1.5 'Space Grotesk';color:#e6e6e1">
+          <li>Sans droits administrateur. <span style="font:400 19px 'JetBrains Mono';border:2px dashed #8a8a85;padding:0 6px;color:#f4f4f0">[à remplir : taille]</span></li>
+          <li>Prérequis : <code style="font:400 19px 'JetBrains Mono';color:#f4f4f0">curl</code>, <code style="font:400 19px 'JetBrains Mono';color:#f4f4f0">git</code>, <code style="font:400 19px 'JetBrains Mono';color:#f4f4f0">tar</code>.</li>
+          <li>Désinstaller : <code style="font:500 19px 'JetBrains Mono';color:#e2ff3b">steph uninstall</code></li>
+          <li>vim, htop et less sont annoncés, pas lus.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer style="border-top:2px solid #3a3a37;background:#0b0b0b">
+    <div style="max-width:1440px;margin:0 auto;padding:56px clamp(19px,4.5vw,64px) 64px;display:flex;flex-direction:column;gap:40px">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px">
+        <div style="display:flex;align-items:center;gap:20px"><span style="font:700 clamp(64px,9vw,128px)/0.85 'Space Grotesk';letter-spacing:-0.05em">steph</span><span aria-hidden="true" style="display:grid;grid-template-columns:repeat(3,20px);grid-auto-rows:20px"><span style="background:#e2ff3b"></span><span></span><span></span><span></span><span style="background:#e2ff3b"></span><span></span><span style="background:#e2ff3b"></span><span></span><span></span></span></div>
+        <nav aria-label="Pied de page" style="display:flex;flex-wrap:wrap;gap:8px 28px;font:500 20px 'Space Grotesk'">
+          <a href="#" style="padding:8px 0">Licence</a><a href="#entreprises" style="padding:8px 0">Licence entreprise</a><a href="#" style="padding:8px 0">Code source</a><a href="#" style="padding:8px 0">Le modèle steph-speak</a><a href="#" style="padding:8px 0">Steph Speak Bench</a><a href="mailto:luis@lsmdx.com" style="padding:8px 0">Contact</a>
+        </nav>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 32px;border-top:2px solid #3a3a37;padding-top:24px;font:400 20px/1.5 'Space Grotesk';color:#cfcfca">
+        <span>steph parle français aujourd'hui. Voix anglaise : <span style="font:400 19px 'JetBrains Mono';border:2px dashed #8a8a85;padding:0 6px;color:#f4f4f0">[à remplir : date]</span></span>
+        <span>© LSMDX 2026</span>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { copied: null };
+  fringe(n, seed) {
+    let s = seed >>> 0;
+    const rnd = () => { s = (s + 0x6D2B79F5) >>> 0; let t = s; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+    return Array.from({ length: n }, (_, i) => { const edge = i === 0 || i === n - 1; const on = !edge && rnd() < 0.62; return { on, off: !on }; });
+  }
+  copy = (key, text) => () => {
+    try { navigator.clipboard && navigator.clipboard.writeText(text); } catch (e) {}
+    this.setState({ copied: key });
+    clearTimeout(this._t); this._t = setTimeout(() => this.setState({ copied: null }), 2000);
+  };
+  renderVals() {
+    const raw = `00:00.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Root Complex
+00:00.2 IOMMU: Advanced Micro Devices, Inc. [AMD] Starship/Matisse IOMMU
+00:01.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:01.2 PCI bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse GPP Bridge
+00:02.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:03.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:03.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse GPP Bridge
+00:04.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:05.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:07.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:07.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Internal PCIe GPP Bridge 0 to bus[E:B]
+00:08.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:08.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Internal PCIe GPP Bridge 0 to bus[E:B]
+00:14.0 SMBus: Advanced Micro Devices, Inc. [AMD] FCH SMBus Controller (rev 61)
+00:14.3 ISA bridge: Advanced Micro Devices, Inc. [AMD] FCH LPC Bridge (rev 51)
+00:18.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 0
+00:18.1 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 1
+00:18.2 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 2
+00:18.3 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 3
+00:18.4 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 4
+00:18.5 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 5
+00:18.6 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 6
+00:18.7 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 7
+02:00.0 USB controller: Advanced Micro Devices, Inc. [AMD] 500 Series Chipset USB 3.1 XHCI Controller
+02:00.1 SATA controller: Advanced Micro Devices, Inc. [AMD] 500 Series Chipset SATA Controller
+02:00.2 PCI bridge: Advanced Micro Devices, Inc. [AMD] 500 Series Chipset Switch Upstream Port
+03:09.0 PCI bridge: Advanced Micro Devices, Inc. [AMD] Device 43ea
+2a:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller (rev 15)
+2b:00.0 VGA compatible controller: NVIDIA Corporation GA106 [GeForce RTX 3060 Lite Hash Rate] (rev a1)
+2b:00.1 Audio device: NVIDIA Corporation GA106 High Definition Audio Controller (rev a1)
+2c:00.0 Non-Essential Instrumentation [1300]: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Function
+2d:00.0 Non-Essential Instrumentation [1300]: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Reserved SPP
+2d:00.1 Encryption controller: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Cryptographic Coprocessor PSPCPP
+2d:00.3 USB controller: Advanced Micro Devices, Inc. [AMD] Matisse USB 3.0 Host Controller
+2d:00.4 Audio device: Advanced Micro Devices, Inc. [AMD] Starship/Matisse HD Audio Controller`;
+    const lines = raw.split('\n').map((t, i) => ({ t, n: String(i + 1).padStart(2, '0') }));
+    const pairs = [
+      { sans: 'Une compilation qui échoue, lue ligne après ligne, trace comprise.', avec: '« Erreur TypeScript : la propriété titel n\u2019existe pas, utilisez title. »' },
+      { sans: 'Une mise à jour : une ligne par étape et par paquet.', avec: 'Un pourcentage pendant l\u2019attente, puis : « Terminé en 1 minute 24. 12 paquets mis à jour. »' },
+      { sans: 'Une question [O/n] perdue dans le flot.', avec: '« Question : souhaitez-vous continuer ? Oui ou non, oui par défaut. »' },
+      { sans: 'Comprendre une erreur oblige à tout relire.', avec: 'Vous posez la question. steph connaît l\u2019historique de la session.' }
+    ];
+    const clips = [
+      { n: '01', title: 'Une erreur', cmd: 'cat /nope', dur: '4 secondes', say: '« Erreur 1 : cat: /nope : aucun fichier ou dossier de ce nom. »' },
+      { n: '02', title: 'Une compilation', cmd: 'npm run build', dur: '5 secondes', say: '« Erreur TypeScript : la propriété titel n\u2019existe pas, utilisez title. »' },
+      { n: '03', title: 'Une longue commande', cmd: 'sudo apt upgrade', dur: '9 secondes', say: '« En cours : mise à jour des paquets. 35 pour cent, décompression de vim-common. Terminé en 1 minute 24. 12 paquets mis à jour. »' },
+      { n: '04', title: 'Une question du programme', cmd: 'question oui ou non', dur: '6 secondes', say: '« Question : il est nécessaire de prendre 24 Mo. Souhaitez-vous continuer ? Oui ou non, oui par défaut. »' }
+    ].map(c => ({ ...c, aria: `Écouter : ${c.cmd}, ${c.dur}` }));
+    const keys = [
+      { k: 'F6', e: 'Ouvre le menu parlé : réglages, actions, aide des touches.' },
+      { k: 'F7', e: 'Ouvre la fenêtre de questions.' },
+      { k: 'F8', e: 'Silence immédiat.' },
+      { k: 'F9', e: 'Répète la dernière annonce.' },
+      { k: 'F10', e: 'Explique en détail la dernière commande.' },
+      { k: 'Maj+F5 à Maj+F8', e: 'Relecture de la dernière sortie : première, précédente, suivante, dernière ligne.' }
+    ];
+    const cmds = [
+      { c: 'q pourquoi ça a planté ?', e: 'Question rapide, sans quitter le shell.' },
+      { c: 'q puis Entrée', e: 'Invite de question : apostrophes et guillemets acceptés.' },
+      { c: 'steph ask', e: 'Fenêtre de questions, dans n\u2019importe quel terminal.' },
+      { c: 'steph say "texte"', e: 'Tester la voix.' }
+    ];
+    const g1 = [
+      { cmd: 'lspci', sub: '35 lignes' },
+      { cmd: 'npm run build en échec', sub: '9 lignes' },
+      { cmd: 'apt upgrade', sub: '19 lignes' }
+    ];
+    const c = this.state.copied;
+    return {
+      lines, pairs, clips, keys, cmds, g1,
+      fringeA: this.fringe(20, 11), fringeB: this.fringe(20, 29), fringeC: this.fringe(20, 5), fringeD: this.fringe(20, 44),
+      fringeE: this.fringe(24, 61), fringeF: this.fringe(24, 73),
+      copyInstall: this.copy('hero', 'curl -fsSL https://steph.lsmdx.com/install | sh'),
+      copyInstall2: this.copy('install', 'curl -fsSL https://steph.lsmdx.com/install | sh\nsteph'),
+      copyLabel: c === 'hero' ? 'Copié' : 'Copier',
+      copyLabel2: c === 'install' ? 'Copié' : 'Copier',
+      copyStatus: c ? 'Commande copiée.' : ''
+    };
+  }
+}
+</script>
+</body>
+</html>

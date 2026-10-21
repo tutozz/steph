@@ -1,0 +1,56 @@
+{
+ "v1.0/qa/fr": {
+  "judged": 186,
+  "ok": 170,
+  "invention": 13,
+  "manque": 3,
+  "abstention": 0,
+  "erreur": 0,
+  "pairs": 16
+ },
+ "v1.0/summary/fr": {
+  "judged": 2461,
+  "ok": 1988,
+  "invention": 265,
+  "manque": 207,
+  "abstention": 0,
+  "erreur": 1,
+  "pairs": 472
+ },
+ "v1.0/summary/en": {
+  "judged": 533,
+  "ok": 446,
+  "invention": 26,
+  "manque": 61,
+  "abstention": 0,
+  "erreur": 0,
+  "pairs": 87
+ },
+ "g3b/qa/fr": {
+  "judged": 186,
+  "ok": 160,
+  "invention": 9,
+  "manque": 14,
+  "abstention": 3,
+  "erreur": 0,
+  "pairs": 25
+ },
+ "g3b/summary/fr": {
+  "judged": 2461,
+  "ok": 2252,
+  "invention": 171,
+  "manque": 35,
+  "abstention": 0,
+  "erreur": 3,
+  "pairs": 205
+ },
+ "g3b/summary/en": {
+  "judged": 533,
+  "ok": 476,
+  "invention": 50,
+  "manque": 7,
+  "abstention": 0,
+  "erreur": 0,
+  "pairs": 57
+ }
+}

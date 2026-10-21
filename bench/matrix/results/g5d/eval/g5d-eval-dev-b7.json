@@ -1,0 +1,535 @@
+{
+ "models": {
+  "a-sft": {
+   "seeds": 1,
+   "missing": 0,
+   "quality": 53.4,
+   "fr": 50.1,
+   "en": 56.7,
+   "summary": 53.1,
+   "qa": 55.9,
+   "quality_by_seed": [
+    53.4
+   ],
+   "reaches_model": 48.9,
+   "qa_present": 56.4,
+   "qa_absent": 54.5,
+   "abst_present": [
+    3
+   ],
+   "abst_absent": [
+    12
+   ],
+   "wrong_lang_pct": {
+    "@fr": 7.75,
+    "@en": 3.69
+   },
+   "wrong_lang_en_fr_output_pct": 16.13,
+   "wrong_lang_en_fr_output_n": 62,
+   "production": {
+    "quality": 78.2,
+    "by_seed": [
+     78.2
+    ],
+    "code_share": 72.4,
+    "fallback": [
+     2
+    ],
+    "fr": 77.8,
+    "en": 78.5
+   },
+   "inventions": {
+    "seeds": [],
+    "n": 0,
+    "pct": null,
+    "douteux_pct": null
+   }
+  },
+  "g5c": {
+   "seeds": 1,
+   "missing": 0,
+   "quality": 53.2,
+   "fr": 53.3,
+   "en": 53.0,
+   "summary": 52.6,
+   "qa": 58.1,
+   "quality_by_seed": [
+    53.2
+   ],
+   "reaches_model": 48.7,
+   "qa_present": 60.8,
+   "qa_absent": 50.0,
+   "abst_present": [
+    6
+   ],
+   "abst_absent": [
+    11
+   ],
+   "wrong_lang_pct": {
+    "@fr": 4.43,
+    "@en": 5.9
+   },
+   "wrong_lang_en_fr_output_pct": 25.81,
+   "wrong_lang_en_fr_output_n": 62,
+   "production": {
+    "quality": 78.2,
+    "by_seed": [
+     78.2
+    ],
+    "code_share": 72.4,
+    "fallback": [
+     2
+    ],
+    "fr": 78.2,
+    "en": 78.2
+   },
+   "inventions": {
+    "seeds": [],
+    "n": 0,
+    "pct": null,
+    "douteux_pct": null
+   }
+  },
+  "g5d": {
+   "seeds": 1,
+   "missing": 0,
+   "quality": 53.4,
+   "fr": 52.5,
+   "en": 54.2,
+   "summary": 52.9,
+   "qa": 57.4,
+   "quality_by_seed": [
+    53.4
+   ],
+   "reaches_model": 47.8,
+   "qa_present": 62.7,
+   "qa_absent": 40.9,
+   "abst_present": [
+    3
+   ],
+   "abst_absent": [
+    9
+   ],
+   "wrong_lang_pct": {
+    "@fr": 5.17,
+    "@en": 5.54
+   },
+   "wrong_lang_en_fr_output_pct": 19.35,
+   "wrong_lang_en_fr_output_n": 62,
+   "production": {
+    "quality": 78.0,
+    "by_seed": [
+     78.0
+    ],
+    "code_share": 72.4,
+    "fallback": [
+     2
+    ],
+    "fr": 78.1,
+    "en": 78.0
+   },
+   "inventions": {
+    "seeds": [],
+    "n": 0,
+    "pct": null,
+    "douteux_pct": null
+   }
+  }
+ },
+ "pairs": {
+  "a-sft - g5c": {
+   "quality": {
+    "n_cases": 429,
+    "a": 53.37,
+    "b": 53.16,
+    "diff": 0.21,
+    "ci95": [
+     -2.29,
+     2.77
+    ],
+    "sign_test_p": 0.3528
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 48.87,
+    "b": 48.71,
+    "diff": 0.16,
+    "ci95": [
+     -3.01,
+     3.47
+    ],
+    "sign_test_p": 0.2205
+   },
+   "summary": {
+    "n_cases": 384,
+    "a": 53.07,
+    "b": 52.58,
+    "diff": 0.49,
+    "ci95": [
+     -2.11,
+     3.13
+    ],
+    "sign_test_p": 0.4479
+   },
+   "qa": {
+    "n_cases": 45,
+    "a": 55.93,
+    "b": 58.15,
+    "diff": -2.22,
+    "ci95": [
+     -10.56,
+     6.3
+    ],
+    "sign_test_p": 0.6291
+   },
+   "qa_present": {
+    "n_cases": 34,
+    "a": 56.37,
+    "b": 60.78,
+    "diff": -4.41,
+    "ci95": [
+     -13.97,
+     5.88
+    ],
+    "sign_test_p": 0.424
+   },
+   "qa_absent": {
+    "n_cases": 11,
+    "a": 54.55,
+    "b": 50.0,
+    "diff": 4.55,
+    "ci95": [
+     -9.09,
+     18.18
+    ],
+    "sign_test_p": 1.0
+   },
+   "fr": {
+    "n_cases": 429,
+    "a": 50.05,
+    "b": 53.34,
+    "diff": -3.29,
+    "ci95": [
+     -6.57,
+     0.01
+    ],
+    "sign_test_p": 0.0068
+   },
+   "en": {
+    "n_cases": 429,
+    "a": 56.69,
+    "b": 52.98,
+    "diff": 3.71,
+    "ci95": [
+     0.43,
+     7.06
+    ],
+    "sign_test_p": 0.1004
+   },
+   "wrong_lang_fr": {
+    "n": 271,
+    "a": 7.75,
+    "b": 4.43,
+    "diff": 3.32,
+    "ci95": [
+     -0.37,
+     7.01
+    ]
+   },
+   "wrong_lang_en": {
+    "n": 271,
+    "a": 3.69,
+    "b": 5.9,
+    "diff": -2.21,
+    "ci95": [
+     -5.17,
+     0.74
+    ]
+   },
+   "wrong_lang_en_fr_output": {
+    "n": 62,
+    "a": 16.13,
+    "b": 25.81,
+    "diff": -9.68,
+    "ci95": [
+     -22.58,
+     3.23
+    ]
+   },
+   "production": {
+    "n_cases": 429,
+    "a": 78.16,
+    "b": 78.18,
+    "diff": -0.02,
+    "ci95": [
+     -1.47,
+     1.42
+    ],
+    "sign_test_p": 0.7948
+   }
+  },
+  "a-sft - g5d": {
+   "quality": {
+    "n_cases": 429,
+    "a": 53.37,
+    "b": 53.35,
+    "diff": 0.02,
+    "ci95": [
+     -2.64,
+     2.61
+    ],
+    "sign_test_p": 0.2021
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 48.87,
+    "b": 47.85,
+    "diff": 1.02,
+    "ci95": [
+     -2.39,
+     4.5
+    ],
+    "sign_test_p": 0.5571
+   },
+   "summary": {
+    "n_cases": 384,
+    "a": 53.07,
+    "b": 52.88,
+    "diff": 0.19,
+    "ci95": [
+     -2.58,
+     3.03
+    ],
+    "sign_test_p": 0.1897
+   },
+   "qa": {
+    "n_cases": 45,
+    "a": 55.93,
+    "b": 57.41,
+    "diff": -1.48,
+    "ci95": [
+     -9.44,
+     5.74
+    ],
+    "sign_test_p": 1.0
+   },
+   "qa_present": {
+    "n_cases": 34,
+    "a": 56.37,
+    "b": 62.75,
+    "diff": -6.37,
+    "ci95": [
+     -15.69,
+     1.72
+    ],
+    "sign_test_p": 0.5078
+   },
+   "qa_absent": {
+    "n_cases": 11,
+    "a": 54.55,
+    "b": 40.91,
+    "diff": 13.64,
+    "ci95": [
+     0.0,
+     27.27
+    ],
+    "sign_test_p": 0.25
+   },
+   "fr": {
+    "n_cases": 429,
+    "a": 50.05,
+    "b": 52.51,
+    "diff": -2.46,
+    "ci95": [
+     -5.85,
+     1.05
+    ],
+    "sign_test_p": 0.0504
+   },
+   "en": {
+    "n_cases": 429,
+    "a": 56.69,
+    "b": 54.2,
+    "diff": 2.49,
+    "ci95": [
+     -0.74,
+     5.9
+    ],
+    "sign_test_p": 0.2607
+   },
+   "wrong_lang_fr": {
+    "n": 271,
+    "a": 7.75,
+    "b": 5.17,
+    "diff": 2.58,
+    "ci95": [
+     -1.11,
+     6.27
+    ]
+   },
+   "wrong_lang_en": {
+    "n": 271,
+    "a": 3.69,
+    "b": 5.54,
+    "diff": -1.85,
+    "ci95": [
+     -5.17,
+     1.48
+    ]
+   },
+   "wrong_lang_en_fr_output": {
+    "n": 62,
+    "a": 16.13,
+    "b": 19.35,
+    "diff": -3.23,
+    "ci95": [
+     -16.13,
+     9.68
+    ]
+   },
+   "production": {
+    "n_cases": 429,
+    "a": 78.16,
+    "b": 78.02,
+    "diff": 0.14,
+    "ci95": [
+     -1.26,
+     1.55
+    ],
+    "sign_test_p": 0.7754
+   }
+  },
+  "g5c - g5d": {
+   "quality": {
+    "n_cases": 429,
+    "a": 53.16,
+    "b": 53.35,
+    "diff": -0.19,
+    "ci95": [
+     -2.34,
+     1.9
+    ],
+    "sign_test_p": 1.0
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 48.71,
+    "b": 47.85,
+    "diff": 0.86,
+    "ci95": [
+     -1.72,
+     3.54
+    ],
+    "sign_test_p": 0.4437
+   },
+   "summary": {
+    "n_cases": 384,
+    "a": 52.58,
+    "b": 52.88,
+    "diff": -0.3,
+    "ci95": [
+     -2.55,
+     1.93
+    ],
+    "sign_test_p": 0.9378
+   },
+   "qa": {
+    "n_cases": 45,
+    "a": 58.15,
+    "b": 57.41,
+    "diff": 0.74,
+    "ci95": [
+     -7.22,
+     7.96
+    ],
+    "sign_test_p": 0.7744
+   },
+   "qa_present": {
+    "n_cases": 34,
+    "a": 60.78,
+    "b": 62.75,
+    "diff": -1.96,
+    "ci95": [
+     -11.03,
+     6.13
+    ],
+    "sign_test_p": 1.0
+   },
+   "qa_absent": {
+    "n_cases": 11,
+    "a": 50.0,
+    "b": 40.91,
+    "diff": 9.09,
+    "ci95": [
+     0.0,
+     22.73
+    ],
+    "sign_test_p": 0.5
+   },
+   "fr": {
+    "n_cases": 429,
+    "a": 53.34,
+    "b": 52.51,
+    "diff": 0.83,
+    "ci95": [
+     -2.15,
+     3.84
+    ],
+    "sign_test_p": 0.6612
+   },
+   "en": {
+    "n_cases": 429,
+    "a": 52.98,
+    "b": 54.2,
+    "diff": -1.22,
+    "ci95": [
+     -4.04,
+     1.64
+    ],
+    "sign_test_p": 0.8522
+   },
+   "wrong_lang_fr": {
+    "n": 271,
+    "a": 4.43,
+    "b": 5.17,
+    "diff": -0.74,
+    "ci95": [
+     -3.69,
+     2.21
+    ]
+   },
+   "wrong_lang_en": {
+    "n": 271,
+    "a": 5.9,
+    "b": 5.54,
+    "diff": 0.37,
+    "ci95": [
+     -2.95,
+     3.69
+    ]
+   },
+   "wrong_lang_en_fr_output": {
+    "n": 62,
+    "a": 25.81,
+    "b": 19.35,
+    "diff": 6.45,
+    "ci95": [
+     -6.45,
+     19.35
+    ]
+   },
+   "production": {
+    "n_cases": 429,
+    "a": 78.18,
+    "b": 78.02,
+    "diff": 0.16,
+    "ci95": [
+     -0.92,
+     1.23
+    ],
+    "sign_test_p": 1.0
+   }
+  }
+ },
+ "style": {}
+}

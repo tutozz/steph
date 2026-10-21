@@ -1,0 +1,86 @@
+_checksum          6 évaluations gemma +0.31 (4+/0-) v10 +0.33 (4+/2-)
+_diff_brief        2 évaluations gemma +0.12 (2+/0-) v10 +0.10 (2+/0-)
+_grep_count        4 évaluations gemma +0.19 (4+/0-) v10 +0.23 (4+/0-)
+_rsync_summary     2 évaluations gemma +0.17 (2+/0-) v10 +0.17 (2+/0-)
+_script_error     43 évaluations gemma +1.91 (32+/1-) v10 +2.73 (36+/0-)
+_verbose_count    18 évaluations gemma +1.48 (18+/0-) v10 +1.59 (18+/0-)
+_wc_total          2 évaluations gemma +0.06 (1+/0-) v10 +0.06 (1+/0-)
+gemma avant [68.9, 68.8, 68.9] après [73.2, 73.1, 73.0] part en code 40.8 -> 49.8
+v10 avant [58.5, 58.1, 57.7] après [63.8, 63.4, 62.9] part en code 40.8 -> 49.8
+_checksum      v3-files-0056@en                   gemma+1.00 v10+1.00 note=1.00 | Failed. 1 checksum did not match: rapports/rapport_2024_11.txt, 2 files could not be read, including archives/archive_2025_04.txt, 93 files OK.
+_checksum      v3-files-0056@fr                   gemma+1.00 v10+0.87 note=1.00 | Échec. 1 somme de contrôle ne correspond pas : rapports/rapport_2024_11.txt, 2 fichiers illisibles, dont archives/archive_2025_04.txt, 93 fichiers conformes.
+_checksum      v3-files-0089@en                   gemma+0.33 v10+1.00 note=1.00 | 1 checksum did not match: site_web/index.html.
+_checksum      v3-files-0089@fr                   gemma+0.33 v10+1.00 note=1.00 | 1 somme de contrôle ne correspond pas : site_web/index.html.
+_checksum      v3-files-0106@en                   gemma+0.00 v10-0.50 note=0.00 | Failed. 2 checksums did not match, including mesures/mesure_017.dat, 1 file could not be read: mesures/mesure_060.dat, 63 files OK.
+_checksum      v3-files-0106@fr                   gemma+0.00 v10-0.50 note=0.00 | Échec. 2 sommes de contrôle ne correspondent pas, dont mesures/mesure_017.dat, 1 fichier illisible : mesures/mesure_060.dat, 63 fichiers conformes.
+_diff_brief    v3-files-0020@en                   gemma+0.50 v10+0.33 note=1.00 | 3 files differ, including firmware.bin. Only in release-1.3: CHANGELOG.md. Only in release-1.4: migrations.
+_diff_brief    v3-files-0020@fr                   gemma+0.50 v10+0.50 note=1.00 | 3 fichiers diffèrent, dont firmware.bin. Seulement dans release-1.3 : CHANGELOG.md. Seulement dans release-1.4 : migrations.
+_grep_count    v3-files-0003@en                   gemma+0.17 v10+0.50 note=1.00 | 21 lines match TODO, in 7 files, 7 in src/models.py.
+_grep_count    v3-files-0003@fr                   gemma+0.50 v10+0.50 note=1.00 | 21 lignes contiennent TODO, dans 7 fichiers, dont 7 dans src/models.py.
+_grep_count    v3-files-0027@en                   gemma+0.50 v10+0.50 note=1.00 | 15 lines match FIXME, in 7 files, 4 in src/auth.py.
+_grep_count    v3-files-0027@fr                   gemma+0.50 v10+0.50 note=1.00 | 15 lignes contiennent FIXME, dans 7 fichiers, dont 4 dans src/auth.py.
+_rsync_summary v3-files-0046@en                   gemma+1.00 v10+0.50 note=1.00 | Sync finished, 77 files in the transfer, total size 23380 bytes.
+_rsync_summary v3-files-0046@fr                   gemma+0.50 v10+1.00 note=1.00 | Synchronisation terminée, 77 fichiers dans le transfert, taille totale 23380 octets.
+_script_error  v3-files-0058@en                   gemma+1.00 v10+0.50 note=1.00 | Failed, 4 ls errors, not found, including devi_2026_17.txt.
+_script_error  v3-files-0058@fr                   gemma+1.00 v10+0.07 note=1.00 | Échec, 4 erreurs de ls, introuvables, dont devi_2026_17.txt.
+_script_error  v3-files-0062@en                   gemma+1.00 v10+1.00 note=1.00 | Failed. tar, truncated archive, unrecoverable error.
+_script_error  v3-files-0062@fr                   gemma+0.00 v10+0.50 note=1.00 | Échec. tar, archive tronquée, erreur non récupérable.
+_script_error  v3-files-0069@en                   gemma+0.00 v10+0.00 note=0.00 | Failed, 2 ln errors: courrier_07.txt and courrier_33.txt, already exist.
+_script_error  v3-files-0069@fr                   gemma+0.00 v10+0.00 note=0.00 | Échec, 2 erreurs de ln : courrier_07.txt et courrier_33.txt, existent déjà.
+_script_error  v3-files-0084@en                   gemma+0.50 v10+0.50 note=1.00 | Failed. mkdir, projet_client/src/module_07: already exists.
+_script_error  v3-files-0084@fr                   gemma+0.00 v10+0.00 note=1.00 | Échec. mkdir, projet_client/src/module_07 : existe déjà.
+_script_error  v3-shell-scripts-0005@en           gemma+0.67 v10+1.00 note=1.00 | Failed, 2 cp errors: data/export-04.csv and data/export-09.csv, not found. Last message: done: 8 copied, 2 failed.
+_script_error  v3-shell-scripts-0005@fr           gemma+0.50 v10+1.00 note=1.00 | Échec, 2 erreurs de cp : data/export-04.csv et data/export-09.csv, introuvables. Dernier message : done: 8 copied, 2 failed.
+_script_error  v3-shell-scripts-0013@en           gemma+1.00 v10+1.00 note=1.00 | Failed. tar, backups/factures-2026-09.tar.gz: not found, unrecoverable error.
+_script_error  v3-shell-scripts-0013@fr           gemma+1.00 v10+0.00 note=1.00 | Échec. tar, backups/factures-2026-09.tar.gz : introuvable, erreur non récupérable.
+_script_error  v3-shell-scripts-0021@en           gemma+0.50 v10+1.00 note=1.00 | Finished, but one error: sauvegarde.sh line 10: command rsync_securise not found.
+_script_error  v3-shell-scripts-0021@fr           gemma+0.50 v10+0.83 note=1.00 | Terminé, mais une erreur : sauvegarde.sh ligne 10 : commande rsync_securise introuvable.
+_script_error  v3-shell-scripts-0022@en           gemma+0.50 v10+0.50 note=0.50 | Failed. rotation.sh line 7: unbound variable DUREE_RETENTION.
+_script_error  v3-shell-scripts-0022@fr           gemma+0.50 v10+1.00 note=1.00 | Échec. rotation.sh ligne 7 : variable DUREE_RETENTION non définie. Dernier message : journal 40 archivé dans archives/journal_40.gz.
+_script_error  v3-shell-scripts-0023@en           gemma+0.00 v10+0.50 note=0.50 | Failed. cat, factures/recapitulatif_annuel.txt: not found.
+_script_error  v3-shell-scripts-0023@fr           gemma+0.17 v10+0.00 note=0.50 | Échec. cat, factures/recapitulatif_annuel.txt : introuvable.
+_script_error  v3-shell-scripts-0024@en           gemma+0.00 v10+0.50 note=0.50 | Failed. mkdir, cannot create /proc/boutique_release, no such file or directory.
+_script_error  v3-shell-scripts-0024@fr           gemma-0.10 v10+0.07 note=0.40 | Échec. mkdir, création de /proc/boutique_release impossible, aucun fichier ou dossier de ce nom. Dernier message : empaquetage : tâche 12 terminée.
+_script_error  v3-shell-scripts-0036@en           gemma+0.00 v10+0.00 note=0.50 | Failed. paie.sh line 11: unbound variable REPERTOIRE_VIREMENTS.
+_script_error  v3-shell-scripts-0036@fr           gemma+0.50 v10+0.50 note=1.00 | Échec. paie.sh ligne 11 : variable REPERTOIRE_VIREMENTS non définie. Dernier message : 45 salariés traités, total 2114.
+_script_error  v3-shell-scripts-0052@en           gemma+0.50 v10+0.50 note=1.00 | Failed. cp, /nonexistent/reports: not found. Last message: 82 items synced.
+_script_error  v3-shell-scripts-0052@fr           gemma+0.50 v10+1.00 note=1.00 | Échec. cp, /nonexistent/reports : introuvable. Dernier message : 82 items synced.
+_script_error  v3-shell-scripts-0053@en           gemma+0.33 v10+0.33 note=1.00 | Failed. sync.sh line 8: unbound variable REPORT_BUCKET. Last message: 73 items synced.
+_script_error  v3-shell-scripts-0053@fr           gemma+0.33 v10+0.33 note=1.00 | Échec. sync.sh ligne 8 : variable REPORT_BUCKET non définie. Dernier message : 73 items synced.
+_script_error  v3-shell-scripts-0055@en           gemma+0.33 v10+0.33 note=1.00 | Failed. sync.sh line 8: unbound variable REPORT_BUCKET. Last message: 77 items synced.
+_script_error  v3-shell-scripts-0055@fr           gemma+0.33 v10+0.33 note=1.00 | Échec. sync.sh ligne 8 : variable REPORT_BUCKET non définie. Dernier message : 77 items synced.
+_script_error  v3-shell-scripts-0057@en           gemma+0.33 v10+1.00 note=1.00 | Failed. abonnements.sh line 11: unbound variable MONTANT_TOTAL.
+_script_error  v3-shell-scripts-0057@fr           gemma+0.00 v10+0.00 note=1.00 | Échec. abonnements.sh ligne 11 : variable MONTANT_TOTAL non définie. Dernier message : Bilan : 72 lignes traitées, total 3453.
+_script_error  v3-shell-scripts-0062@en           gemma+0.33 v10+0.67 note=1.00 | Failed. mv, export_pointage.csv: not found.
+_script_error  v3-shell-scripts-0062@fr           gemma+0.33 v10+0.33 note=1.00 | Échec. mv, export_pointage.csv : introuvable. Dernier message : Bilan : 75 lignes traitées, total 3460.
+_script_error  v3-shell-scripts-0063@en           gemma+0.33 v10+1.00 note=1.00 | Failed. ventes.sh line 11: division by zero.
+_script_error  v3-shell-scripts-0063@fr           gemma+0.00 v10+1.00 note=1.00 | Échec. ventes.sh ligne 11 : division par zéro. Dernier message : Bilan : 69 lignes traitées, total 3306.
+_script_error  v3-shell-scripts-0064@en           gemma+0.33 v10+0.67 note=1.00 | Failed. devis.sh line 10: relance.txt: not found.
+_script_error  v3-shell-scripts-0064@fr           gemma+0.00 v10+1.00 note=1.00 | Échec. devis.sh ligne 10 : relance.txt : introuvable. Dernier message : Bilan : 75 lignes traitées, total 3480.
+_script_error  v3-shell-scripts-0067@en           gemma+0.33 v10+1.00 note=1.00 | Failed. sort, suivi_transporteur.txt: not found.
+_script_error  v3-shell-scripts-0067@fr           gemma+0.67 v10+0.33 note=1.00 | Échec. sort, suivi_transporteur.txt : introuvable. Dernier message : Bilan : 69 lignes traitées, total 3306.
+_script_error  v3-shell-scripts-0072@en           gemma+0.50 v10+0.83 note=1.00 | Failed. sync.sh line 8: unbound variable REPORT_BUCKET. Last message: 70 items synced.
+_script_error  v3-shell-scripts-0072@fr           gemma+0.50 v10+0.50 note=1.00 | Échec. sync.sh ligne 8 : variable REPORT_BUCKET non définie. Dernier message : 70 items synced.
+_script_error  v3-shell-scripts-0078@en           gemma+0.33 v10+1.00 note=1.00 | Failed. cp, commande_fournisseur.csv: not found.
+_script_error  v3-shell-scripts-0078@fr           gemma+0.67 v10+0.33 note=1.00 | Échec. cp, commande_fournisseur.csv : introuvable. Dernier message : Bilan : 82 lignes traitées, total 4136.
+_script_error  v3-shell-scripts-0079@fr           gemma+0.13 v10+0.47 note=0.80 | Terminé, mais une erreur : planning_bus.sh ligne 11 : [: 3 : opérateur unaire attendu. Dernier message : Bilan : 77 lignes traitées, total 3675.
+_verbose_count v3-files-0045@en                   gemma+1.00 v10+1.00 note=1.00 | 77 items archived in tree.tgz.
+_verbose_count v3-files-0045@fr                   gemma+0.50 v10+1.00 note=1.00 | 77 éléments archivés dans tree.tgz.
+_verbose_count v3-files-0050@en                   gemma+0.50 v10+1.00 note=1.00 | 39 directories created, including 2024, 2025 and 2026.
+_verbose_count v3-files-0050@fr                   gemma+1.00 v10+0.50 note=1.00 | 39 dossiers créés, dont 2024, 2025 et 2026.
+_verbose_count v3-files-0057@en                   gemma+1.00 v10+0.50 note=1.00 | 13 files overwritten, including cache_1.tmp, 2 passes each.
+_verbose_count v3-files-0057@fr                   gemma+0.33 v10+0.50 note=1.00 | 13 fichiers écrasés, dont cache_1.tmp, 2 passes chacun.
+_verbose_count v3-files-0082@en                   gemma+0.17 v10+0.50 note=1.00 | 70 items removed in cache_navigateur.
+_verbose_count v3-files-0082@fr                   gemma+0.17 v10+0.50 note=1.00 | 70 éléments supprimés dans cache_navigateur.
+_verbose_count v3-files-0086@en                   gemma+1.00 v10+1.00 note=1.00 | 14 files shredded and removed, including confidentiel/bulletin_01.txt, 2 passes each.
+_verbose_count v3-files-0086@fr                   gemma+1.00 v10+1.00 note=1.00 | 14 fichiers écrasés puis supprimés, dont confidentiel/bulletin_01.txt, 2 passes chacun.
+_verbose_count v3-files-0087@en                   gemma+1.00 v10+1.00 note=1.00 | 40 files created, partie_00 to partie_39.
+_verbose_count v3-files-0087@fr                   gemma+1.00 v10+1.00 note=1.00 | 40 fichiers créés, de partie_00 à partie_39.
+_verbose_count v3-permissions-users-0015@en       gemma+1.00 v10+0.50 note=1.00 | Mode changed on 39 items, now 640.
+_verbose_count v3-permissions-users-0015@fr       gemma+0.67 v10+1.00 note=1.00 | Droits modifiés sur 39 éléments, mode 640.
+_verbose_count v3-permissions-users-0016@en       gemma+0.50 v10+0.33 note=0.50 | Mode changed on 105 items.
+_verbose_count v3-permissions-users-0016@fr       gemma+0.50 v10+0.50 note=0.50 | Droits modifiés sur 105 éléments.
+_verbose_count v3-permissions-users-0017@en       gemma+0.33 v10+0.83 note=1.00 | Owner changed on 27 items, now nobody:nogroup.
+_verbose_count v3-permissions-users-0017@fr       gemma+1.00 v10+1.00 note=1.00 | Propriétaire changé sur 27 éléments, désormais nobody:nogroup.
+_wc_total      v3-files-0005@en                   gemma+0.00 v10+0.00 note=1.00 | 1707 lines in 3 files, 1289 in stock.csv.
+_wc_total      v3-files-0005@fr                   gemma+0.50 v10+0.50 note=1.00 | 1707 lignes au total dans 3 fichiers, dont 1289 dans stock.csv.

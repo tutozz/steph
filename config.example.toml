@@ -1,0 +1,47 @@
+# Copier dans ~/.config/steph/config.toml (toutes les clés sont optionnelles).
+# Chaque clé peut aussi être passée en variable d'environnement : STEPH_<CLÉ>=…
+
+# Modèle : géré par steph setup, catalogue de deux options (README). Par défaut
+# aujourd'hui, Gemma 4 E2B ; steph setup proposera steph-speak dès sa publication.
+# model = "~/.local/share/steph/models/gemma-4-E2B_q4_0-it.gguf"
+# llm_gpu_layers = 0          # 0 = tout sur CPU (pas de carte graphique)
+
+# Mémoire
+llm_idle_unload_minutes = 10  # décharge llama-server après N min sans requête ; 0 = jamais
+
+# Voix
+# voice = "~/.local/share/steph/voices/fr_FR-tom-medium.onnx"   # voix masculine
+speech_rate = 1.25            # 1.0 = normal, 1.5 = rapide
+
+# Bavardage
+verbosity = 1                 # 0 = erreurs seulement, 1 = bref, 2 = détaillé
+first_update_after = 4.0      # s avant d'annoncer « en cours »
+update_interval = 12.0        # s entre deux points d'étape
+read_verbatim_max_words = 20  # en dessous, la sortie est lue telle quelle
+announce_cd = true
+
+# Touches (séquences brutes du terminal)
+# key_menu = "\u001b[17~"     # F6 : menu parlé (réglages, actions, aide des touches)
+# key_ask = "\u001b[18~"      # F7
+# key_stop = "\u001b[19~"     # F8
+# key_repeat = "\u001b[20~"   # F9
+# key_details = "\u001b[21~"  # F10
+# key_line_first = "\u001b[15;2~"  # Maj+F5 : relecture, première ligne
+# key_line_prev = "\u001b[17;2~"   # Maj+F6 : ligne précédente
+# key_line_next = "\u001b[18;2~"   # Maj+F7 : ligne suivante
+# key_line_last = "\u001b[19;2~"   # Maj+F8 : dernière ligne
+# (Terminal.app envoie d'autres séquences pour Maj+F5 à F8 : les relever avec `cat -v`)
+# terminal_cmd = "gnome-terminal --"   # pour la fenêtre de questions
+
+# Règles par commande (clé = premier mot de la commande, après sudo/env…).
+# Cette table doit rester en fin de fichier : en TOML, tout ce qui suit [rules] lui appartient.
+#   mute      rien n'est dit, sauf en cas d'erreur (code de sortie non nul, hors Ctrl+C)
+#   mute-all  rien n'est dit, même en cas d'erreur
+#   verbatim  la sortie est lue en entier, quelle que soit sa longueur
+#   summary   toujours un résumé par le LLM, même pour une sortie courte
+# Valeur inconnue : ignorée, avec un avertissement dans le journal.
+# [rules]
+# watch = "mute"
+# top = "mute"
+# cat = "verbatim"
+# make = "summary"

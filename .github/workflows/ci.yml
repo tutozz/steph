@@ -1,0 +1,33 @@
+name: ci
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        shell: [/bin/zsh, /bin/bash]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - if: runner.os == 'Linux'
+        run: |
+          sudo apt-get install -y zsh
+          # l'image CI a des dossiers zsh inscriptibles : compinit poserait une question
+          zsh -c 'autoload -U compaudit; compaudit' | xargs -r sudo chmod g-w,o-w || true
+      - run: uv sync
+      - run: uv run pytest -q tests
+      - name: bout en bout (voix coupée, sans LLM → repli déterministe)
+        env:
+          SHELL: ${{ matrix.shell }}
+          E2E_CHECK: "1"
+          STEPH_LLAMA_SERVER: /nonexistent
+        run: |
+          uv tool install -e .
+          uv run python tests/e2e.py ci

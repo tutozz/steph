@@ -1,0 +1,451 @@
+[
+  {
+    "model_file": "resolve",
+    "id": "fx00",
+    "kind": "summary",
+    "phrase": "37 éléments : abrt, adjtime, aliases.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "resolve",
+    "id": "fx01",
+    "kind": "summary",
+    "phrase": "racine : 685G libres sur 953G, 29 %. boot : 284M libres sur 974M, 69 %.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "resolve",
+    "id": "fx02",
+    "kind": "summary",
+    "phrase": "Branche master, aucun commit, 7 fichiers non suivis.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "resolve",
+    "id": "fx03",
+    "kind": "summary",
+    "phrase": "Échec. file.txt : fichier introuvable.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "resolve",
+    "id": "fx04",
+    "kind": "summary",
+    "phrase": "Échec. string ligne 1 : KeyError key.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "string",
+        "ligne 1"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "string",
+        "ligne 1"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "resolve",
+    "id": "fx05",
+    "kind": "summary",
+    "phrase": "3 reçus sur 3, 0 % de perte, moyenne 0.024 ms.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "resolve",
+    "id": "fx06",
+    "kind": "summary",
+    "phrase": "Échec. stdin ligne 1 : expected expression before ; token.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "resolve",
+    "id": "fx07",
+    "kind": "summary",
+    "phrase": "Mémoire : 24 Go disponibles sur 31 Go.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "resolve",
+    "id": "fx08",
+    "kind": "summary",
+    "phrase": "pipewire actif depuis 2 jours.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "pipewire actif depuis 2 jours"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "pipewire actif depuis 2 jours"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "resolve",
+    "id": "fx10",
+    "kind": "summary",
+    "phrase": "Échec. Hôte nonexistent.invalid introuvable.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "resolve",
+    "id": "fx11",
+    "kind": "summary",
+    "phrase": "wlp0s20f3 192.168.1.20, tailscale0 100.64.0.10, tun0 10.9.0.2. Plus 8 réseaux virtuels.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "resolve",
+    "id": "fx12",
+    "kind": "summary",
+    "phrase": "6 éléments : bench, pyproject.toml, README.md.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "resolve",
+    "id": "fx15",
+    "kind": "summary",
+    "phrase": "20 éléments : python-systemd, python3-argcomplete, python3-attrs.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "resolve",
+    "id": "fx16",
+    "kind": "summary",
+    "phrase": "Échec. Clé d'hôte SSH non vérifiée.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "resolve",
+    "id": "fx17",
+    "kind": "summary",
+    "phrase": "Échec. hostname : permission refusée.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "resolve",
+    "id": "fx18",
+    "kind": "summary",
+    "phrase": "30 éléments : abrt, adm, akmods.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "resolve",
+    "id": "fx19",
+    "kind": "summary",
+    "phrase": "10 éléments, les plus gros : OLD_SHOPAPP 12G, installer-iso 7,9G, shopapp 2,4G.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "resolve",
+    "id": "fx20",
+    "kind": "summary",
+    "phrase": "29 éléments : xen-licenses, xfsprogs, xorg-x11-drv-nvidia.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "resolve",
+    "id": "fx21",
+    "kind": "summary",
+    "phrase": "Échec. nonexistent : fichier introuvable.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "resolve",
+    "id": "fx22",
+    "kind": "summary",
+    "phrase": "9 conteneurs : shopapp_api, shopapp_nginx_admin, shopapp_vault.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "shopapp_nginx_admin",
+        "shopapp_vault"
+      ]
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "douteux"
+  },
+  {
+    "model_file": "resolve",
+    "id": "fx24",
+    "kind": "summary",
+    "phrase": "12 paquets mis à jour.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "12 paquets mis à jour"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "12 paquets mis à jour"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "resolve",
+    "id": "fx25",
+    "kind": "summary",
+    "phrase": "Échec. Verrou dpkg tenu par unattended-upgr, processus 4321.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "resolve",
+    "id": "fx26",
+    "kind": "summary",
+    "phrase": "requests 2.32.3 installé, avec 4 dépendances.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "4 dépendances"
+      ]
+    },
+    "final": "douteux"
+  },
+  {
+    "model_file": "resolve",
+    "id": "fx27",
+    "kind": "summary",
+    "phrase": "Échec. Header.tsx ligne 42 : Property titel does not exist on type Props. Did you mean title?",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "resolve",
+    "id": "fx28",
+    "kind": "summary",
+    "phrase": "Échec. Push de main refusé : le distant a des commits absents en local, faire git pull.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "resolve",
+    "id": "fx30",
+    "kind": "summary",
+    "phrase": "en0 192.168.1.62, utun4 203.0.113.2.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "utun4 203.0.113.2"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "utun4 203.0.113.2"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "resolve",
+    "id": "df_proxmox",
+    "kind": "summary",
+    "phrase": "racine : 8.9G libres sur 94G, 91 %. backup-hdd : 134G libres sur 442G, 70 %.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "resolve",
+    "id": "ip_a_proxmox",
+    "kind": "summary",
+    "phrase": "tailscale0 100.96.222.123, vmbr0 192.168.1.200, pan0 192.168.44.1. Plus 3 réseaux virtuels.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "l'adresse IP 100.96.222.123 pour l'interface tailscale0 (le contexte indique 100.64.0.12)",
+        "l'adresse IP 192.168.44.1 pour l'interface pan0 (le contexte indique 10.8.9.1)"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "100.96.222.123 (la sortie indique 100.64.0.12)",
+        "192.168.44.1 (la sortie indique 10.8.9.1)"
+      ]
+    },
+    "final": "invention"
+  }
+]

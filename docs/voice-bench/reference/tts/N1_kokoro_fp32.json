@@ -1,0 +1,56 @@
+{
+ "label": "N1_kokoro_fp32",
+ "engine": "kokoro",
+ "model": "kokoro-v1.0.onnx",
+ "threads": 2,
+ "load_s": 0.88,
+ "first_audio_longest": 9.98,
+ "first_audio_median": 5.014,
+ "rtf_median": 1.291,
+ "rtf_max": 1.999,
+ "ram_peak_mb": 629,
+ "rows": [
+  {
+   "text": "Erreur 1 : cat: /nope : aucun fichier ou dossier de ce nom.",
+   "first_audio": 3.914,
+   "synth": 3.914,
+   "audio_s": 2.97,
+   "rtf": 1.32
+  },
+  {
+   "text": "Erreur TypeScript : la propriété titel n'existe pas, utilisez title.",
+   "first_audio": 6.114,
+   "synth": 6.114,
+   "audio_s": 4.84,
+   "rtf": 1.262
+  },
+  {
+   "text": "En cours : mise à jour des paquets. 35 pour cent, décompression de vim-common. Terminé en 1 minute 24. 12 paquets mis à jour.",
+   "first_audio": 9.98,
+   "synth": 9.98,
+   "audio_s": 8.04,
+   "rtf": 1.241
+  },
+  {
+   "text": "Question : il est nécessaire de prendre 24 Mo. Souhaitez-vous continuer ? Oui ou non, oui par défaut.",
+   "first_audio": 6.801,
+   "synth": 6.801,
+   "audio_s": 5.44,
+   "rtf": 1.25
+  },
+  {
+   "text": "OK.",
+   "first_audio": 1.279,
+   "synth": 1.279,
+   "audio_s": 0.64,
+   "rtf": 1.999
+  },
+  {
+   "text": "Commande introuvable.",
+   "first_audio": 2.042,
+   "synth": 2.042,
+   "audio_s": 1.28,
+   "rtf": 1.595
+  }
+ ]
+}

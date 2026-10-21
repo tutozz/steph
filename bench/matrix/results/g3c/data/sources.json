@@ -1,0 +1,451 @@
+[
+ {
+  "source": "python-attrs/attrs",
+  "kind": "python",
+  "commit": "8f767776326faaed11e6c2974798787f6e19b343",
+  "spdx": "MIT",
+  "license_files": [
+   "LICENSE"
+  ],
+  "kept": true,
+  "tar_sha256": "1b25cc332ba408041ea6e98dc996d74ea9af27cc3b6fb0dd165d99db484d1727",
+  "dir": "python/attrs"
+ },
+ {
+  "source": "pytoolz/toolz",
+  "kind": "python",
+  "commit": "451af60dec590a6010e2babdbf391ea8f815122f",
+  "spdx": "BSD-3-Clause",
+  "license_files": [
+   "LICENSE.txt"
+  ],
+  "kept": true,
+  "tar_sha256": "f90949c7b70aaa070fb7ded48581cc4bdbcdbb358680d5dd6c3f7a93b053977c",
+  "dir": "python/toolz"
+ },
+ {
+  "source": "astanin/python-tabulate",
+  "kind": "python",
+  "commit": "268615a5c27dc40e5c22454c07b44d5c50410da0",
+  "spdx": "MIT",
+  "license_files": [
+   "LICENSE"
+  ],
+  "kept": true,
+  "tar_sha256": "06723616e5f95aa905873c1ccd184e9b6ab1eb712aabb0f3b6fce40549fcf5f6",
+  "dir": "python/python-tabulate"
+ },
+ {
+  "source": "kjd/idna",
+  "kind": "python",
+  "commit": "c79316ffefd06e7fcd05d33a57e3f0a4fd1c2f5d",
+  "spdx": "BSD-3-Clause",
+  "license_files": [
+   "LICENSE.md"
+  ],
+  "kept": true,
+  "tar_sha256": "30947cc4b6033867f5890c8818872d92e39b4dfb96eecb8cf049c41f8a469229",
+  "dir": "python/idna"
+ },
+ {
+  "source": "tkem/cachetools",
+  "kind": "python",
+  "commit": "3c082c654c2804b9354e4b62dbd2994f1aac464d",
+  "spdx": "MIT",
+  "license_files": [
+   "LICENSE"
+  ],
+  "kept": true,
+  "tar_sha256": "ebd1bdb762b33e47876be295093806eef2084e47f173f9fefb9800229b111a98",
+  "dir": "python/cachetools"
+ },
+ {
+  "source": "pyparsing/pyparsing",
+  "kind": "python",
+  "commit": "f803ae834288032a700331977639fc49c62fcd7f",
+  "spdx": "MIT",
+  "license_files": [
+   "LICENSE"
+  ],
+  "kept": true,
+  "tar_sha256": "1412435bda6873112a01458838dd379c296b5e74a37a0fd8d3da8e469b54a5f5",
+  "dir": "python/pyparsing"
+ },
+ {
+  "source": "grantjenks/python-sortedcontainers",
+  "kind": "python",
+  "commit": "3ac358631f58c1347f1d6d2d92784117db0f38ed",
+  "spdx": "Apache-2.0",
+  "license_files": [
+   "LICENSE"
+  ],
+  "kept": true,
+  "tar_sha256": "ff7545038a44b3bb31295f258d53ab1fd7c16fa1f627755d6d7d4a9b0293452e",
+  "dir": "python/python-sortedcontainers"
+ },
+ {
+  "source": "jquast/wcwidth",
+  "kind": "python",
+  "commit": "5f185b35123486e646a6865d008ad2fd22afcb71",
+  "spdx": "MIT",
+  "license_files": [
+   "LICENSE"
+  ],
+  "kept": true,
+  "tar_sha256": "02c53ec7fc10e41f6d2d2e0e892dd769474049c8f00e458ed77c1ce0d3600a74",
+  "dir": "python/wcwidth"
+ },
+ {
+  "source": "pytest-dev/iniconfig",
+  "kind": "python",
+  "commit": "00e7d87c7353b1ffecc4cd55f19acfffedd5233e",
+  "spdx": "MIT",
+  "license_files": [
+   "LICENSE"
+  ],
+  "kept": true,
+  "tar_sha256": "e7c90755e9677f617c0ef88c97ce6ad7421b14d8e1960abc8081ad2286015a5e",
+  "dir": "python/iniconfig"
+ },
+ {
+  "source": "marshmallow-code/marshmallow",
+  "kind": "python",
+  "commit": "7f0792bd7a06f72e393ec866ac1e89e1502ccfe1",
+  "spdx": "MIT",
+  "license_files": [
+   "LICENSE"
+  ],
+  "kept": true,
+  "tar_sha256": "41e3da79262f3a15ff800f512c5bed6ba4a729ea4af69ec9d5c4d2b0f0c1c9b6",
+  "dir": "python/marshmallow"
+ },
+ {
+  "source": "visionmedia/bytes.js",
+  "kind": "js",
+  "commit": "9ddc13b6c66e0cb293616fba246e05db4b6cef4d",
+  "spdx": "MIT",
+  "license_files": [
+   "LICENSE"
+  ],
+  "kept": true,
+  "tar_sha256": "043b96e1e5673bccaa2a1b2fb4333b3ea37455d1d954a4a9c9d155540158217e",
+  "dir": "js/bytes.js"
+ },
+ {
+  "source": "jshttp/content-type",
+  "kind": "js",
+  "commit": "d005d8bfd9846bb9eb73a9aad0944536e1a5cf39",
+  "spdx": "MIT",
+  "license_files": [
+   "LICENSE"
+  ],
+  "kept": true,
+  "tar_sha256": "29fe6840abfbde3805e6e10fa2328152b552c2f31eb79c61b90cc8c08036ebae",
+  "dir": "js/content-type"
+ },
+ {
+  "source": "jshttp/statuses",
+  "kind": "js",
+  "commit": "770a97d931c1bb40ebbfefdbb77f0419601890b5",
+  "spdx": "MIT",
+  "license_files": [
+   "LICENSE"
+  ],
+  "kept": true,
+  "tar_sha256": "a75a3db00f8cf9b31affeb9c681a8cd2bc6c1d69ea40f159819adf4666dcb3e5",
+  "dir": "js/statuses"
+ },
+ {
+  "source": "jshttp/http-errors",
+  "kind": "js",
+  "commit": "814207e1f69eab337d82794c8f4e552805d02047",
+  "spdx": "MIT",
+  "license_files": [
+   "LICENSE"
+  ],
+  "kept": true,
+  "tar_sha256": "67abd1ef3749a8facb8ab8bd3b6ad308bc7d7eda663c0559b3543230f7fe101f",
+  "dir": "js/http-errors"
+ },
+ {
+  "source": "jshttp/negotiator",
+  "kind": "js",
+  "commit": "14b0a7b88e7e7bb1cae38681195951bff29ca2fd",
+  "spdx": "MIT",
+  "license_files": [
+   "LICENSE"
+  ],
+  "kept": true,
+  "tar_sha256": "a50cc973c5cda77eeea8cf940d0d23a74e59cf72a1e8e1b5248fbdf4cf758515",
+  "dir": "js/negotiator"
+ },
+ {
+  "source": "jshttp/vary",
+  "kind": "js",
+  "commit": "1220b9c487f9538a6dd509ef11b6a5042d85bd05",
+  "spdx": "MIT",
+  "license_files": [
+   "LICENSE"
+  ],
+  "kept": true,
+  "tar_sha256": "155782440670a5f4822fc93e51330374c19def644007f2a274aad0ba7805585a",
+  "dir": "js/vary"
+ },
+ {
+  "source": "gorilla/mux",
+  "kind": "go",
+  "commit": "db9d1d0073d27a0a2d9a8c1bc52aa0af4374d265",
+  "spdx": "BSD-3-Clause",
+  "license_files": [
+   "LICENSE"
+  ],
+  "kept": true,
+  "tar_sha256": "a4341ef88e319a15a1304e16e9ffa2e808e56b3c00071c63e886cde92f8508c9",
+  "dir": "go/mux"
+ },
+ {
+  "source": "julienschmidt/httprouter",
+  "kind": "go",
+  "commit": "484018016424d215c0b87c42f4c9b57d980fbd00",
+  "spdx": "BSD-3-Clause",
+  "license_files": [
+   "LICENSE"
+  ],
+  "kept": true,
+  "tar_sha256": "8a4fdfba0634427b1c1f780792373701d0feaba85d31bb633385ee6749271772",
+  "dir": "go/httprouter"
+ },
+ {
+  "source": "BurntSushi/toml",
+  "kind": "go",
+  "commit": "d733fc535e4a9f3c454e421a87b90ade5d49bf31",
+  "spdx": "MIT",
+  "license_files": [
+   "COPYING"
+  ],
+  "kept": true,
+  "tar_sha256": "14eaa3236480b538f9d673b20d821a3f8626e48d96d8f713286b095d78de8cf5",
+  "dir": "go/toml"
+ },
+ {
+  "source": "pkg/errors",
+  "kind": "go",
+  "commit": "87f8819acf6dc28bf5d3c14b334268236d686f48",
+  "spdx": "BSD-2-Clause",
+  "license_files": [
+   "LICENSE"
+  ],
+  "kept": true,
+  "tar_sha256": "50cc8e0e10e5945cbe594ed6459c2fe9dbf7348b38dacdb8c6a09c69df554b3e",
+  "dir": "go/errors"
+ },
+ {
+  "source": "google/btree",
+  "kind": "go",
+  "commit": "aeba20f7a1e1315badec4eca4fdc9f754f5f880a",
+  "spdx": "Apache-2.0",
+  "license_files": [
+   "LICENSE"
+  ],
+  "kept": true,
+  "tar_sha256": "f86461cefd02e0fdac01e6f749315e31f36feb51bc1037a91474f7f7bd658d28",
+  "dir": "go/btree"
+ },
+ {
+  "source": "BurntSushi/walkdir",
+  "kind": "rust",
+  "commit": "6fd031c82ba5a4204b4ce6eae73dacb00dc072ec",
+  "spdx": "MIT AND Unlicense",
+  "license_files": [
+   "COPYING",
+   "LICENSE-MIT",
+   "UNLICENSE"
+  ],
+  "kept": true,
+  "tar_sha256": "2cc30fc436b91997cf18b0e733be26d6f40c99c66d0114dd6ec51edbfaafe585",
+  "dir": "rust/walkdir"
+ },
+ {
+  "source": "rust-lang/glob",
+  "kind": "rust",
+  "commit": "cfa2a58f2e44373573f657ec25b3621e44714dee",
+  "spdx": "Apache-2.0 AND MIT",
+  "license_files": [
+   "LICENSE-MIT",
+   "LICENSE-APACHE"
+  ],
+  "kept": true,
+  "tar_sha256": "0b0420579d2d745daac5edab3d897b36c39dead62c56501163261cadfa25d7ef",
+  "dir": "rust/glob"
+ },
+ {
+  "source": "rayon-rs/either",
+  "kind": "rust",
+  "commit": "ce6f07fc3d56d6a56ecfc32256d2c33bd0b4ad09",
+  "spdx": "Apache-2.0 AND MIT",
+  "license_files": [
+   "LICENSE-MIT",
+   "LICENSE-APACHE"
+  ],
+  "kept": true,
+  "tar_sha256": "d35107b19687d95fe7833afadd465f034aa0a7a7715bdad46bf1e585e686b95e",
+  "dir": "rust/either"
+ },
+ {
+  "source": "servo/rust-fnv",
+  "kind": "rust",
+  "commit": "4e55052a343a4372c191141f29a17ab829cf1dbc",
+  "spdx": "Apache-2.0 AND MIT",
+  "license_files": [
+   "LICENSE-MIT",
+   "LICENSE-APACHE"
+  ],
+  "kept": true,
+  "tar_sha256": "077d53c89e1b115529cc76ceea471fd328b78c38a497c129f68f896782879a11",
+  "dir": "rust/rust-fnv"
+ },
+ {
+  "source": "yaml/libyaml",
+  "kind": "c",
+  "commit": "90a56d4500aa1a1798514c5cb55c3ad4cb095f94",
+  "spdx": "MIT",
+  "license_files": [
+   "License"
+  ],
+  "kept": true,
+  "tar_sha256": "c21a47315ba99ca4c3af038922eb5b262300658d612fc4f6d7a3c0be91663702",
+  "dir": "c/libyaml"
+ },
+ {
+  "source": "akheron/jansson",
+  "kind": "c",
+  "commit": "851a2145e3256f2e67e5dfe24b0e456bf198b741",
+  "spdx": "MIT",
+  "license_files": [
+   "LICENSE"
+  ],
+  "kept": true,
+  "tar_sha256": "76f95cb83e9ac2f15cb6df8e24601a851a7e6d07601dac3493fdea48722dc5a6",
+  "dir": "c/jansson"
+ },
+ {
+  "source": "libexpat/libexpat",
+  "kind": "c",
+  "commit": "084c14ca28273cac3cb7be50bcff3e0dbbe36d3c",
+  "spdx": "MIT",
+  "license_files": [
+   "COPYING"
+  ],
+  "kept": true,
+  "tar_sha256": "4b34448fe4bc5face14a1799e7012ed6b8e2ea0c3faa2cd917e8c3e07963c030",
+  "dir": "c/libexpat"
+ },
+ {
+  "source": "madler/zlib",
+  "kind": "c",
+  "commit": "767c4c947852e143f582c85f14cf573411df1b35",
+  "spdx": "Zlib",
+  "license_files": [
+   "LICENSE"
+  ],
+  "kept": true,
+  "tar_sha256": "a18d387f36c518c4518d66f3a7d7a62b77699b85889db2c0dc751257bfea5413",
+  "dir": "c/zlib"
+ },
+ {
+  "source": "libuv/libuv",
+  "kind": "c",
+  "commit": "7a02ab5f400e6f0fdbf63253cc640df19c60f484",
+  "spdx": "MIT",
+  "license_files": [
+   "LICENSE"
+  ],
+  "kept": true,
+  "tar_sha256": "f42585dfd6a6052f3c0eaf9b0cbb226888c01b49c01411f1b98c35e8c2d2f05f",
+  "dir": "c/libuv"
+ },
+ {
+  "source": "alexanderepstein/Bash-Snippets",
+  "kind": "shell",
+  "commit": "581a6b4ea681005e3f8add37dbed74aaec65479f",
+  "spdx": "MIT",
+  "license_files": [
+   "LICENSE"
+  ],
+  "kept": true,
+  "tar_sha256": "c5ce4b49b86c4e65261dab9943346f8e16d50e993aaadee89eb16350336d8f4d",
+  "dir": "shell/Bash-Snippets"
+ },
+ {
+  "source": "nvie/gitflow",
+  "kind": "shell",
+  "commit": "d2eee63886e23c27a0c0418603c8264276a86340",
+  "spdx": "BSD-2-Clause",
+  "license_files": [
+   "LICENSE"
+  ],
+  "kept": true,
+  "tar_sha256": "1f4faf7b81abc2cb1a366176c6fce7732261d7fa8ff771fb9f62dcd2c26f81e4",
+  "dir": "shell/gitflow"
+ },
+ {
+  "source": "dylanaraps/pure-bash-bible",
+  "kind": "shell",
+  "commit": "8c19d0b482b04d8d50fb72b4c5148b41ce605c6d",
+  "spdx": "MIT",
+  "license_files": [
+   "LICENSE.md"
+  ],
+  "kept": true,
+  "tar_sha256": "11d2c8c5fcd07ec74414a5fcb36f5dca7441a28a36436438dba0bf416539c3fd",
+  "dir": "shell/pure-bash-bible"
+ },
+ {
+  "source": "junegunn/fzf",
+  "kind": "shell",
+  "commit": "b1be3a8be1b833ce5b92fbbac11637643d60a046",
+  "spdx": "MIT",
+  "license_files": [
+   "LICENSE"
+  ],
+  "kept": true,
+  "tar_sha256": "58c7fe0e960d4ff1b2d92c0dc07997d70cf61581951c36d341d9a2cda4356200",
+  "dir": "shell/fzf"
+ },
+ {
+  "source": "lerocha/chinook-database",
+  "kind": "db",
+  "commit": "7f67772503d71ba90f19283c38e93923addb43fa",
+  "spdx": "MIT",
+  "license_files": [
+   "LICENSE.md"
+  ],
+  "kept": true,
+  "tar_sha256": "f2dd24a51355034d42b940b53d25d7dd6f4853c59c660a1327a1068174495a6a",
+  "dir": "db/chinook-database"
+ },
+ {
+  "source": "devrimgunduz/pagila",
+  "kind": "db",
+  "commit": "9baf49c4149e43229f6021e6218d6b2ac8ef4f34",
+  "spdx": "MIT",
+  "license_files": [
+   "LICENSE.txt"
+  ],
+  "kept": true,
+  "tar_sha256": "ce9335838ffe94d97bb6374e2796c5a0e089d6a4219f854075e0fb92bc175bbd",
+  "dir": "db/pagila"
+ },
+ {
+  "source": "docker/awesome-compose",
+  "kind": "compose",
+  "commit": "30f4b7f6a6c3b0c0ecf4d4efb0de203c48d11562",
+  "spdx": "CC0-1.0",
+  "license_files": [
+   "LICENSE"
+  ],
+  "kept": true,
+  "tar_sha256": "cceb08412afcdeaa99826a5996057fe230b8f6146b16a5e034f27dc7f58a69c2",
+  "dir": "compose/awesome-compose"
+ }
+]

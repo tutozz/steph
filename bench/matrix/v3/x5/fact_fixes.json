@@ -1,0 +1,1218 @@
+{
+ "v3-history-qa-0019": {
+  "need": {
+   "reason": {
+    "fr": [
+     "contient (des |encore )?(fichiers|elements|entrees)"
+    ],
+    "en": [
+     "(contain|contains|contained|holds?|held) (files|items|entries|subdirectories)"
+    ]
+   }
+  }
+ },
+ "v3-data-0016": {
+  "need": {
+   "refused": {
+    "fr": [
+     "n.ecoute pas|aucun serveur"
+    ],
+    "en": [
+     "not listening|no (postgresql )?server"
+    ]
+   }
+  }
+ },
+ "v3-data-0013": {
+  "need": {
+   "email": {
+    "fr": [
+     "@|adresse|e-mail|courriel"
+    ],
+    "en": [
+     "@|address|e-mail"
+    ]
+   }
+  }
+ },
+ "v3-data-0010": {
+  "need": {
+   "missing": {
+    "fr": [
+     "n.est pas une table"
+    ],
+    "en": [
+     "not a table"
+    ]
+   }
+  },
+  "add_never": [
+   {
+    "id": "wrong_db",
+    "desc": "autre base",
+    "fr": [
+     "data\\.db"
+    ],
+    "en": [
+     "data\\.db"
+    ]
+   }
+  ]
+ },
+ "v3-disk-memory-0020": {
+  "need": {
+   "option": {
+    "fr": [
+     "\\bx\\b[^.]{0,25}\\boption|\\boption\\b[^.]{0,10}\\bx\\b"
+    ],
+    "en": [
+     "\\bx\\b[^.]{0,25}\\boption|\\boption\\b[^.]{0,10}\\bx\\b"
+    ]
+   }
+  }
+ },
+ "v3-disk-memory-0023": {
+  "need": {
+   "available": {
+    "fr": [
+     "(?<![\\d.,])13(?![\\d.,%])[^.,;]{0,20}(disponible|libre|restant)|(disponible|libre|restant)s?[^.,;]{0,10}(?<![\\d.,])13(?![\\d.,%])"
+    ],
+    "en": [
+     "(?<![\\d.,])13(?![\\d.,%])[^.,;]{0,20}(available|free|left)|(available|free)[^.,;]{0,10}(?<![\\d.,])13(?![\\d.,%])"
+    ]
+   },
+   "used": {
+    "fr": [
+     "(?<![\\d.,])2(?:[.,]0)?(?![\\d.,%])[^.,;]{0,20}(utilise|consomme|occupe)|(utilise|consomme|occupe)s?[^.,;]{0,10}(?<![\\d.,])2(?:[.,]0)?(?![\\d.,%])"
+    ],
+    "en": [
+     "(?<![\\d.,])2(?:[.,]0)?(?![\\d.,%])[^.,;]{0,20}(used|in use)|used[^.,;]{0,10}(?<![\\d.,])2(?:[.,]0)?(?![\\d.,%])"
+    ]
+   }
+  }
+ },
+ "v3-js-node-0017": {
+  "need": {
+   "wrong_pkg": {
+    "fr": [
+     "errone|pas le bon outil|pas le tsc|deprecie|obsolete"
+    ],
+    "en": [
+     "wrong package|not the right (tool|package)|deprecated|obsolete"
+    ]
+   }
+  }
+ },
+ "v3-js-node-0011": {
+  "need": {
+   "vulns": {
+    "fr": [
+     "\\b11\\b(?! (elevee|haute|critique))"
+    ],
+    "en": [
+     "\\b11\\b(?! (high|critical))"
+    ]
+   }
+  },
+  "add_never": [
+   {
+    "id": "other_high",
+    "desc": "autre nombre de hautes",
+    "fr": [
+     "\\b(?!7\\b)\\d+ (elevee|haute|high)"
+    ],
+    "en": [
+     "\\b(?!7\\b)\\d+ high"
+    ]
+   }
+  ]
+ },
+ "v3-js-node-0031": {
+  "need": {
+   "arguments": {
+    "fr": [
+     "nombre d.arguments|mauvais nombre"
+    ],
+    "en": [
+     "argument count|wrong (number of )?arguments?"
+    ]
+   }
+  },
+  "add_never": [
+   {
+    "id": "other_count",
+    "desc": "autre nombre d'erreurs",
+    "fr": [
+     "\\b(?!3\\b)\\d+ erreurs"
+    ],
+    "en": [
+     "\\b(?!3\\b)\\d+ errors"
+    ]
+   }
+  ]
+ },
+ "v3-lint-format-0040": {
+  "need": {
+   "fixable": {
+    "fr": [
+     "(?<![\\d.,])\\b(5|cinq)\\b(?![.,]?\\d).{0,30}(corrig|repar)",
+     "(?<![\\d.,])\\b(5|cinq)\\b(?![.,]?\\d).{0,45}(corrig|repar)"
+    ],
+    "en": [
+     "(?<![\\d.,])\\b(5|five)\\b(?![.,]?\\d).{0,30}fix",
+     "(?<![\\d.,])\\b(5|five)\\b(?![.,]?\\d).{0,45}fix"
+    ]
+   }
+  }
+ },
+ "v3-network-0034": {
+  "need": {
+   "packet_count": {
+    "fr": [
+     "\\b62\\b[^0-9]{0,15}(envoye|transmis)|(parmi|sur) les 62"
+    ],
+    "en": [
+     "\\b62\\b[^0-9]{0,15}(sent|transmitted)"
+    ]
+   },
+   "no_loss": {
+    "fr": [
+     "aucun\\w* pourcentage de perte"
+    ]
+   }
+  }
+ },
+ "v3-network-transfer-0022": {
+  "need": {
+   "ok": {
+    "fr": [
+     "fonctionne|operationnel|repond"
+    ],
+    "en": [
+     "working|operational|responds|up and running"
+    ]
+   }
+  }
+ },
+ "v3-network-transfer-0013": {
+  "need": {
+   "tls13": {
+    "fr": [
+     "tls (version )?1\\.3"
+    ],
+    "en": [
+     "tls (version )?1\\.3"
+    ]
+   }
+  }
+ },
+ "v3-network-transfer-0032": {
+  "need": {
+   "refused": {
+    "fr": [
+     "rejet"
+    ],
+    "en": [
+     "reject"
+    ]
+   }
+  }
+ },
+ "v3-network-transfer-0040": {
+  "need": {
+   "count": {
+    "fr": [
+     "(\\b4|\\bquatre) (fichiers )?point sig"
+    ],
+    "en": [
+     "(\\b4|\\bfour) dot sig"
+    ]
+   }
+  }
+ },
+ "v3-hardware-system-0007": {
+  "need": {
+   "unknown": {
+    "fr": [
+     "(pas|non) reconnue?"
+    ],
+    "en": [
+     "not recogni[sz]ed"
+    ]
+   }
+  }
+ },
+ "v3-hardware-system-0005": {
+  "need": {
+   "invalid": {
+    "fr": [
+     "ne (la |le )?conna[iî]t pas|pas valide"
+    ],
+    "en": [
+     "(does not|doesn.t) know|not (a )?valid"
+    ]
+   }
+  }
+ },
+ "v3-hardware-system-0015": {
+  "need": {
+   "fan": {
+    "fr": [
+     "ventilateur (est |tourne )?a 0|ventilateur[^.]{0,10}\\b0\\b"
+    ],
+    "en": [
+     "fan[^.]{0,10}\\b0\\b"
+    ]
+   }
+  },
+  "add_never": [
+   {
+    "id": "swapped",
+    "desc": "températures interverties",
+    "fr": [
+     "cpu[^.,;]{0,10}\\b32\\b",
+     "ambiant\\w*[^.,;]{0,10}\\b38\\b"
+    ],
+    "en": [
+     "cpu[^.,;]{0,10}\\b32\\b",
+     "ambient[^.,;]{0,10}\\b38\\b"
+    ]
+   }
+  ]
+ },
+ "v3-infra-0004": {
+  "need": {
+   "replace": {
+    "fr": [
+     "destruction|\\b1 ajout"
+    ],
+    "en": [
+     "destruct|\\b1 addition"
+    ]
+   }
+  }
+ },
+ "v3-js-node-0006": {
+  "set": {
+   "need": {
+    "outdir": {
+     "fr": [
+      "\\bdist\\b"
+     ],
+     "en": [
+      "\\bdist\\b"
+     ]
+    }
+   }
+  }
+ },
+ "v3-lint-format-0012": {
+  "add_never": [
+   {
+    "id": "wrong_line",
+    "desc": "ligne changée",
+    "fr": [
+     "retention[^.;]{0,25}ligne (?!5\\b)\\d+",
+     "\\bcd\\b[^.;]{0,40}ligne (?!7\\b)\\d+"
+    ],
+    "en": [
+     "retention[^.;]{0,25}line (?!5\\b)\\d+",
+     "\\bcd\\b[^.;]{0,40}line (?!7\\b)\\d+"
+    ]
+   }
+  ]
+ },
+ "v3-lint-format-0010": {
+  "add_never": [
+   {
+    "id": "wrong_line",
+    "desc": "ligne changée",
+    "fr": [
+     "ligne (?!1\\b)\\d+"
+    ],
+    "en": [
+     "line (?!1\\b)\\d+"
+    ]
+   }
+  ]
+ },
+ "v3-hardware-system-0014": {
+  "add_never": [
+   {
+    "id": "swapped",
+    "desc": "températures interverties",
+    "fr": [
+     "package (a |at )?98[.,]6",
+     "(core|coeur) 1 (a |at )?105[.,]8"
+    ],
+    "en": [
+     "package (at )?98[.,]6",
+     "core 1 (at )?105[.,]8"
+    ]
+   }
+  ],
+  "set": {
+   "never": {
+    "swapped": {
+     "fr": [
+      "package (a |at )?98[.,]6",
+      "(core|coeur) 1 (a |at )?105[.,]8"
+     ],
+     "en": [
+      "package (at )?98[.,]6",
+      "core 1 (at )?105[.,]8"
+     ]
+    }
+   }
+  }
+ },
+ "v3-hardware-system-0013": {
+  "add_never": [
+   {
+    "id": "swapped",
+    "desc": "compteurs intervertis",
+    "fr": [
+     "i915[^.;]{0,25}\\b0 fois",
+     "autres[^.;]{0,15}\\b55\\b"
+    ],
+    "en": [
+     "i915[^.;]{0,25}\\b0 times",
+     "others[^.;]{0,15}\\b55\\b"
+    ]
+   }
+  ]
+ },
+ "v3-hardware-system-0026": {
+  "add_never": [
+   {
+    "id": "wifi_driver",
+    "desc": "autre pilote wifi",
+    "fr": [
+     "wi-?fi (via|par|avec|utilise) (?!iwlwifi|intel)\\w+"
+    ],
+    "en": [
+     "wi-?fi (via|by|with|uses?) (?!iwlwifi|intel)\\w+"
+    ]
+   }
+  ]
+ },
+ "v3-network-0010": {
+  "add_never": [
+   {
+    "id": "other_error",
+    "desc": "autre erreur DNS",
+    "fr": [
+     "servfail|refus|delai"
+    ],
+    "en": [
+     "servfail|refused|timed? ?out"
+    ]
+   }
+  ]
+ },
+ "v3-network-transfer-0039": {
+  "add_never": [
+   {
+    "id": "other_code",
+    "desc": "autre code HTTP",
+    "fr": [
+     "\\b403\\b"
+    ],
+    "en": [
+     "\\b403\\b"
+    ]
+   }
+  ]
+ },
+ "v3-packages-system-0056": {
+  "add_never": [
+   {
+    "id": "other_action",
+    "desc": "autre action simulée",
+    "fr": [
+     "serai(en)?t (supprime|mis a jour|desinstalle|retire)"
+    ],
+    "en": [
+     "would be (removed|updated|upgraded|purged|uninstalled)"
+    ]
+   }
+  ]
+ },
+ "v3-packages-system-0076": {
+  "add_never": [
+   {
+    "id": "other_action",
+    "desc": "autre action simulée",
+    "fr": [
+     "serai(en)?t (supprime|mis a jour|desinstalle|retire)"
+    ],
+    "en": [
+     "would be (removed|updated|upgraded|purged|uninstalled)"
+    ]
+   }
+  ]
+ },
+ "v3-infra-0002": {
+  "add_never": [
+   {
+    "id": "bucket_suffix",
+    "desc": "nom de bucket modifié",
+    "fr": [
+     "staging-elegant-boar-\\w"
+    ],
+    "en": [
+     "staging-elegant-boar-\\w"
+    ]
+   }
+  ]
+ },
+ "v3-build-native-0010": {
+  "add_never": [
+   {
+    "id": "wrong_line",
+    "desc": "ligne changée",
+    "fr": [
+     "discount\\.c (ligne |:)(?!5\\b)\\d+",
+     "report\\.c (ligne |:)(?!3\\b)\\d+"
+    ],
+    "en": [
+     "discount\\.c (line |:)(?!5\\b)\\d+",
+     "report\\.c (line |:)(?!3\\b)\\d+"
+    ]
+   }
+  ]
+ },
+ "v3-containers-0015": {
+  "add_never": [
+   {
+    "id": "wrong_endpoint",
+    "desc": "autre adresse ou port",
+    "fr": [
+     "192\\.0\\.2\\.(?!10\\b)\\d+",
+     ":(?!6443\\b)\\d{2,5}\\b|port (?!6443\\b)\\d+"
+    ],
+    "en": [
+     "192\\.0\\.2\\.(?!10\\b)\\d+",
+     ":(?!6443\\b)\\d{2,5}\\b|port (?!6443\\b)\\d+"
+    ]
+   }
+  ]
+ },
+ "v3-containers-0010": {
+  "add_never": [
+   {
+    "id": "wrong_line",
+    "desc": "ligne changée",
+    "fr": [
+     "ligne (?!2\\b)\\d+"
+    ],
+    "en": [
+     "line (?!2\\b)\\d+"
+    ]
+   }
+  ]
+ },
+ "v3-data-0019": {
+  "add_never": [
+   {
+    "id": "wrong_fk",
+    "desc": "autre table de référence",
+    "fr": [
+     "cle etrangere (vers|sur) (?!customers)\\w+"
+    ],
+    "en": [
+     "foreign key (to|on) (?!customers)\\w+"
+    ]
+   }
+  ]
+ },
+ "v3-data-0009": {
+  "add_never": [
+   {
+    "id": "wrong_count",
+    "desc": "autre nombre de tables",
+    "fr": [
+     "\\b(?!4\\b)\\d+ tables"
+    ],
+    "en": [
+     "\\b(?!4\\b)\\d+ tables"
+    ]
+   },
+   {
+    "id": "wrong_table",
+    "desc": "autre table",
+    "fr": [
+     "\\bshops\\b"
+    ],
+    "en": [
+     "\\bshops\\b"
+    ]
+   }
+  ]
+ },
+ "v3-data-0020": {
+  "add_never": [
+   {
+    "id": "swapped",
+    "desc": "valeurs interverties",
+    "fr": [
+     "(expedie|shipped)\\w* (en tete )?(avec |with )?1 ?374\\b",
+     "(paye|paid)\\w* :? ?(1 ?437|703)\\b"
+    ],
+    "en": [
+     "shipped (leads )?(with )?1 ?374\\b",
+     "paid:? (1 ?437|703)\\b"
+    ]
+   }
+  ],
+  "set": {
+   "never": {
+    "swapped": {
+     "fr": [
+      "(expedie|shipped)\\w* (en tete )?(avec |with )?1 ?374\\b",
+      "(paye|paid)\\w* :? ?(1 ?437|703)\\b"
+     ],
+     "en": [
+      "shipped (leads )?(with )?1 ?374\\b",
+      "paid:? (1 ?437|703)\\b"
+     ]
+    }
+   }
+  }
+ },
+ "v3-files-0005": {
+  "add_never": [
+   {
+    "id": "swapped",
+    "desc": "valeurs interverties",
+    "fr": [
+     "total[^,;]{0,15}\\b1 ?289\\b",
+     "stock\\.csv (a |contient |: )?\\b(413|1 ?707)\\b",
+     "\\b(413|1 ?707) (lignes )?dans stock"
+    ],
+    "en": [
+     "total[^,;]{0,15}\\b1 ?289\\b",
+     "stock\\.csv (has |with |: )?\\b(413|1 ?707)\\b",
+     "\\b(413|1 ?707) (lines )?in stock"
+    ]
+   }
+  ]
+ },
+ "v3-disk-memory-0021": {
+  "add_never": [
+   {
+    "id": "swapped",
+    "desc": "libre pris pour utilisé",
+    "fr": [
+     "88375 ?m\\w* utilis"
+    ],
+    "en": [
+     "88375 ?m\\w* used|used[^,;]{0,5}88375"
+    ]
+   }
+  ]
+ },
+ "v3-disk-memory-0013": {
+  "add_never": [
+   {
+    "id": "swapped",
+    "desc": "utilisé et total intervertis",
+    "fr": [
+     "3072(?:[.,]00)? ?m\\w* utilis|sur 2490"
+    ],
+    "en": [
+     "3072(?:[.,]00)? ?m\\w* used|of 2490"
+    ]
+   }
+  ]
+ },
+ "v3-history-qa-0024": {
+  "add_never": [
+   {
+    "id": "wrong_type",
+    "desc": "autre type d'erreur",
+    "fr": [
+     "nameerror|typeerror|indentationerror"
+    ],
+    "en": [
+     "nameerror|typeerror|indentationerror"
+    ]
+   }
+  ]
+ },
+ "v3-history-qa-0042": {
+  "add_never": [
+   {
+    "id": "wrong_line",
+    "desc": "ligne changée",
+    "fr": [
+     "core\\.py (ligne |:)(?!2\\b)\\d+|ligne (?!2\\b)\\d+ (de |dans )(app/)?core"
+    ],
+    "en": [
+     "core\\.py (line |:)(?!2\\b)\\d+|line (?!2\\b)\\d+ (of|in) (app/)?core"
+    ]
+   }
+  ]
+ },
+ "v3-packages-system-0090": {
+  "need": {
+   "reason": {
+    "fr": [
+     "(aucune|pas d.) ?alternatives?"
+    ],
+    "en": [
+     "(missing|no) (java )?alternatives?"
+    ]
+   }
+  }
+ },
+ "v3-packages-system-0022": {
+  "need": {
+   "outdated": {
+    "fr": [
+     "mises? a jour|non a jour"
+    ],
+    "en": [
+     "outdated|updates?"
+    ]
+   }
+  }
+ },
+ "v3-permissions-users-0002": {
+  "need": {
+   "denied": {
+    "fr": [
+     "non accorde"
+    ],
+    "en": [
+     "not granted"
+    ]
+   }
+  }
+ },
+ "v3-permissions-users-0016": {
+  "need": {
+   "no_other_access": {
+    "fr": [
+     "droits des autres (sont )?(supprime|retire)|priv\\w* (desormais )?les autres"
+    ]
+   }
+  }
+ },
+ "v3-permissions-users-0025": {
+  "need": {
+   "action": {
+    "fr": [
+     "creation (de |des )?(dossiers|repertoires)"
+    ],
+    "en": [
+     "(director|folder)\\w* creation"
+    ]
+   },
+   "cause": {
+    "fr": [
+     "manque de permission|sans permission|permission (non|pas) accordee"
+    ],
+    "en": [
+     "lack of permission|without permission|permission (was )?not granted"
+    ]
+   }
+  }
+ },
+ "v3-processes-0001": {
+  "need": {
+   "in_use": {
+    "fr": [
+     "est pris\\b|deja pris"
+    ],
+    "en": [
+     "taken"
+    ]
+   }
+  }
+ },
+ "v3-processes-0011": {
+  "need": {
+   "nothing": {
+    "fr": [
+     "vide|aucune sortie|rien"
+    ],
+    "en": [
+     "empty|no output"
+    ]
+   }
+  }
+ },
+ "v3-processes-0005": {
+  "need": {
+   "users": {
+    "fr": [
+     "\\b(3|trois) personnes"
+    ],
+    "en": [
+     "\\b(3|three) (people|persons)"
+    ]
+   }
+  }
+ },
+ "v3-processes-0023": {
+  "need": {
+   "invalid": {
+    "fr": [
+     "pas (valable|valide)"
+    ],
+    "en": [
+     "not (valid|a valid)"
+    ]
+   }
+  }
+ },
+ "v3-processes-0008": {
+  "need": {
+   "none": {
+    "fr": [
+     "\\b0 processus|aucun processus"
+    ],
+    "en": [
+     "\\b0 \\w+ process|zero \\w+ process"
+    ]
+   }
+  }
+ },
+ "v3-services-logs-0016": {
+  "need": {
+   "none": {
+    "fr": [
+     "aucun|\\b0 core ?dumps?"
+    ],
+    "en": [
+     "(did not|didn.t) find any|\\b0 core ?dumps?"
+    ]
+   }
+  }
+ },
+ "v3-python-0052": {
+  "need": {
+   "aborted": {
+    "fr": [
+     "(rapport|job|traitement)\\w*.{0,40}(echou|arret)|arret\\w* (du |le )?(rapport|job)"
+    ],
+    "en": [
+     "(report|job)\\w*.{0,40}(fail|stop|halt)"
+    ]
+   }
+  }
+ },
+ "v3-rust-go-0027": {
+  "need": {
+   "count_11": {
+    "fr": [
+     "\\b11\\b[^.;,]{0,25}echec"
+    ],
+    "en": [
+     "\\b11\\b[^.;,]{0,25}fail"
+    ]
+   }
+  }
+ },
+ "v3-rust-go-0011": {
+  "need": {
+   "cause": {
+    "fr": [
+     "pas de fichier|aucun fichier|introuvable"
+    ],
+    "en": [
+     "no file"
+    ]
+   }
+  }
+ },
+ "v3-rust-go-0006": {
+  "need": {
+   "errors": {
+    "fr": [
+     "erreur e0282|e0282"
+    ],
+    "en": [
+     "error e0282|e0282 error"
+    ]
+   }
+  }
+ },
+ "v3-permissions-users-0011": {
+  "add_never": [
+   {
+    "id": "wrong_cause",
+    "desc": "autre chemin ou autre cause",
+    "fr": [
+     "public/notes|non trouve|introuvable|n.existe pas"
+    ],
+    "en": [
+     "public/notes|not found|does not exist|no such file"
+    ]
+   }
+  ]
+ },
+ "v3-python-0014": {
+  "add_never": [
+   {
+    "id": "wrong_version",
+    "desc": "autres versions",
+    "fr": [
+     "urllib3 (version )?(?!1\\.20)\\d+\\.\\d+",
+     "requests (version )?(?!2\\.32\\.3)\\d+\\.\\d+(\\.\\d+)?"
+    ],
+    "en": [
+     "urllib3 (version )?(?!1\\.20)\\d+\\.\\d+",
+     "requests (version )?(?!2\\.32\\.3)\\d+\\.\\d+(\\.\\d+)?"
+    ]
+   }
+  ]
+ },
+ "v3-python-0023": {
+  "add_never": [
+   {
+    "id": "wrong_count",
+    "desc": "autre nombre de paquets",
+    "fr": [
+     "\\b(?!4\\b)\\d+ paquets installes"
+    ],
+    "en": [
+     "\\b(?!4\\b)\\d+ packages installed"
+    ]
+   }
+  ]
+ },
+ "v3-rust-go-0018": {
+  "add_never": [
+   {
+    "id": "wrong_file",
+    "desc": "autre fichier",
+    "fr": [
+     "\\b(?!main\\b)\\w+\\.go\\b"
+    ],
+    "en": [
+     "\\b(?!main\\b)\\w+\\.go\\b"
+    ]
+   }
+  ]
+ },
+ "v3-rust-go-0002": {
+  "add_never": [
+   {
+    "id": "swapped",
+    "desc": "types intervertis",
+    "fr": [
+     "attend (une )?string|recoit (un )?f64"
+    ],
+    "en": [
+     "expects? (a )?string|(receives?|got|found) (an? )?f64"
+    ]
+   }
+  ]
+ },
+ "v3-shell-scripts-0031": {
+  "need": {
+   "last_ok": {
+    "fr": [
+     "(neuf|9) (premiers )?mois|mois (un|1) a (neuf|9)"
+    ],
+    "en": [
+     "(first )?nine months|months? (one|1) to (nine|9)"
+    ]
+   },
+   "failed_month": {
+    "fr": [
+     "echou\\w* pour (le )?(dix|10)\\b"
+    ],
+    "en": [
+     "fail\\w* for (ten|10)\\b"
+    ]
+   }
+  }
+ },
+ "v3-shell-scripts-0021": {
+  "need": {
+   "apparent_success": {
+    "fr": [
+     "a fini|se terminer|la fin du script"
+    ],
+    "en": [
+     "finished|completed|ended"
+    ]
+   },
+   "cause": {
+    "fr": [
+     "(?=.*rsync_securise)(?=.*(echec|erreur))"
+    ],
+    "en": [
+     "(?=.*rsync_securise)(?=.*(fail|error))"
+    ]
+   }
+  }
+ },
+ "v3-shell-scripts-0071": {
+  "need": {
+   "pdf_missing": {
+    "fr": [
+     "sans (fichier )?pdf|faute de pdf"
+    ],
+    "en": [
+     "without (a )?pdf|no pdf"
+    ]
+   }
+  }
+ },
+ "v3-shell-scripts-0025": {
+  "need": {
+   "example_missing": {
+    "fr": [
+     "cache (deux|2) tmp"
+    ],
+    "en": [
+     "cache (two|2) tmp"
+    ]
+   },
+   "final_message": {
+    "fr": [
+     "liber|nettoyage (fini|acheve)"
+    ],
+    "en": [
+     "freeing|cleanup (ended|completed)"
+    ]
+   }
+  }
+ },
+ "v3-services-logs-0026": {
+  "need": {
+   "gone": {
+    "fr": [
+     "absent|ne figure pas"
+    ],
+    "en": [
+     "absent|not (in the )?list"
+    ]
+   }
+  }
+ },
+ "v3-tests-0061": {
+  "need": {
+   "failing_case": {
+    "fr": [
+     "(numero )?(33|08|21)\\b"
+    ],
+    "en": [
+     "(number )?(33|08|21)\\b"
+    ]
+   }
+  }
+ },
+ "v3-vcs-git-0031": {
+  "need": {
+   "gone": {
+    "fr": [
+     "disparu"
+    ],
+    "en": [
+     "vanished|disappeared"
+    ]
+   }
+  },
+  "add_never": [
+   {
+    "id": "swapped",
+    "desc": "branches interverties",
+    "fr": [
+     "search[^,;.]{0,20}(gone|supprim|disparu)",
+     "old.ui[^,;.]{0,20}(ahead|avance)"
+    ],
+    "en": [
+     "search[^,;.]{0,20}(gone|deleted|vanished)",
+     "old.ui[^,;.]{0,20}ahead"
+    ]
+   }
+  ]
+ },
+ "v3-vcs-git-0041": {
+  "need": {
+   "exists": {
+    "fr": [
+     "deja presente|deja existante"
+    ],
+    "en": [
+     "already (present|there)"
+    ]
+   }
+  }
+ },
+ "v3-vcs-git-0021": {
+  "need": {
+   "exists": {
+    "fr": [
+     "contient deja"
+    ],
+    "en": [
+     "already contains"
+    ]
+   }
+  },
+  "add_never": [
+   {
+    "id": "contradiction",
+    "desc": "dossier dit vide",
+    "fr": [
+     "(?<!pas )(?<!non )\\best vide"
+    ],
+    "en": [
+     "(?<!not )\\bis empty"
+    ]
+   }
+  ]
+ },
+ "v3-services-logs-0004": {
+  "add_never": [
+   {
+    "id": "wrong_detail",
+    "desc": "autre disque ou autre valeur",
+    "fr": [
+     "sd[b-z]\\b",
+     "(vers|a) (?!28\\b)\\d+\\b"
+    ],
+    "en": [
+     "sd[b-z]\\b",
+     "to (?!28\\b)\\d+\\b"
+    ]
+   }
+  ]
+ },
+ "v3-tests-0035": {
+  "add_never": [
+   {
+    "id": "wrong_suite",
+    "desc": "autre suite",
+    "fr": [
+     "queue-\\w+"
+    ],
+    "en": [
+     "queue-\\w+"
+    ]
+   }
+  ]
+ },
+ "v3-tests-0055": {
+  "add_never": [
+   {
+    "id": "wrong_cov",
+    "desc": "autre couverture pour kvctl",
+    "fr": [
+     "kvctl[^,;.]{0,10}\\b(?!0\\b)\\d+ ?(%|pour ?cent)"
+    ],
+    "en": [
+     "kvctl[^,;.]{0,10}\\b(?!0\\b)\\d+ ?(%|percent)"
+    ]
+   }
+  ]
+ },
+ "v3-tests-0063": {
+  "add_never": [
+   {
+    "id": "passed",
+    "desc": "tests déclarés réussis",
+    "fr": [
+     "(reussi|passe)\\w*"
+    ],
+    "en": [
+     "\\bpass(ed|es)?\\b"
+    ]
+   }
+  ]
+ },
+ "v3-tests-0116": {
+  "add_never": [
+   {
+    "id": "wrong_expected",
+    "desc": "autre valeur attendue ou autre assertion",
+    "fr": [
+     "\\[47, ?(?![12]\\])\\d+\\]",
+     "(?<!deep)strictequal"
+    ],
+    "en": [
+     "\\[47, ?(?![12]\\])\\d+\\]",
+     "(?<!deep)strictequal"
+    ]
+   }
+  ]
+ },
+ "v3-rust-go-0025": {
+  "add_never": [
+   {
+    "id": "wrong_sub",
+    "desc": "autre sous-test",
+    "fr": [
+     "account_s(?!0\\b)\\d"
+    ],
+    "en": [
+     "account_s(?!0\\b)\\d"
+    ]
+   }
+  ]
+ },
+ "v3-vcs-git-0024": {
+  "add_never": [
+   {
+    "id": "wrong_commit",
+    "desc": "autre commit",
+    "fr": [
+     "8fa15(?!ac)\\w+",
+     "uninstall|desinstall"
+    ],
+    "en": [
+     "8fa15(?!ac)\\w+",
+     "uninstall"
+    ]
+   }
+  ]
+ },
+ "v3-vcs-git-0022": {
+  "add_never": [
+   {
+    "id": "wrong_upstream",
+    "desc": "autre branche suivie",
+    "fr": [
+     "origin/(?!feature/export)[\\w/-]+"
+    ],
+    "en": [
+     "origin/(?!feature/export)[\\w/-]+"
+    ]
+   }
+  ]
+ },
+ "v3-vcs-git-0029": {
+  "add_never": [
+   {
+    "id": "wrong_count",
+    "desc": "autre nombre de branches locales",
+    "fr": [
+     "\\b(?!4\\b)\\d+ branches locales"
+    ],
+    "en": [
+     "\\b(?!4\\b)\\d+ local branches"
+    ]
+   }
+  ]
+ },
+ "v3-containers-0024": {
+  "add_never": [
+   {
+    "id": "swapped",
+    "desc": "noms intervertis",
+    "fr": [
+     "chart shop|release storefront"
+    ],
+    "en": [
+     "chart shop|release storefront"
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,12 @@
+18:07:46 harnais 8d90a662aac4cf24 ; 27B 84b5f7f112156d63
+18:07:50 27B PRÊT
+18:23:53 CONTRÔLES rc=0 }
+18:24:52 ARRÊT : contrôles 4/60 avec --parallel 2, relance en un slot
+18:25:03 harnais 8d90a662aac4cf24 ; 27B 84b5f7f112156d63
+18:25:07 27B PRÊT
+18:42:13 CONTRÔLES rc=0 }
+22:50:14 PAIRES g3b contre gemma-raw {"differ": 1069, "picked": 240, "fr": 105, "en": 135}
+23:53:37 STYLE g3b contre gemma-raw rc=0
+23:53:37 PAIRES g3b contre sft-s42 {"differ": 874, "picked": 240, "fr": 105, "en": 135}
+00:56:53 STYLE g3b contre sft-s42 rc=0
+00:56:53 FIN

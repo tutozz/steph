@@ -1,0 +1,157 @@
+{
+ "method": "Paired by case: each model's score per evaluation (case x prompt language) is averaged over its bench seeds, then over the two languages of a case, so the unit is the case (FR and EN answers on one output are not independent). Paired bootstrap (10 000 draws, seed 20260928) on the mean difference; MDE = (z0.975 + z0.80) x sd(case diff) / sqrt(n), for the dev, test and full sizes. Inventions: judge A7 final verdict \"invention\" (douteux counted apart), same pairing. Also reported: the seed-only noise (same model, bench seeds against each other), and the same figures on the answers steph really sends to the model (reaches_model).",
+ "sizes_cases": {
+  "dev": 429,
+  "test": 654,
+  "all": 1083,
+  "v2_equivalent_36": 36
+ },
+ "files_a": [
+  "r2-test-b42.json"
+ ],
+ "files_b": [
+  "v10-test-b42.json"
+ ],
+ "quality_pts": {
+  "n_cases": 654,
+  "a": 48.08,
+  "b": 50.11,
+  "diff": -2.03,
+  "ci95": [
+   -3.98,
+   -0.09
+  ],
+  "sd_case_diff": 25.68,
+  "discordant_cases": 309,
+  "sign_test_p": 0.111,
+  "mde": {
+   "dev": 3.47,
+   "test": 2.81,
+   "all": 2.19,
+   "v2_equivalent_36": 11.99
+  }
+ },
+ "quality_pts_reaches_model": {
+  "n_cases": 413,
+  "a": 42.98,
+  "b": 45.92,
+  "diff": -2.94,
+  "ci95": [
+   -5.58,
+   -0.3
+  ],
+  "sd_case_diff": 27.61,
+  "discordant_cases": 205,
+  "sign_test_p": 0.2086,
+  "mde": {
+   "dev": 4.7,
+   "test": 3.81,
+   "all": 2.96,
+   "v2_equivalent_36": 16.13
+  }
+ },
+ "quality_by_lang": {
+  "@fr": {
+   "n_cases": 654,
+   "a": 48.26,
+   "b": 49.04,
+   "diff": -0.79,
+   "ci95": [
+    -3.53,
+    1.91
+   ],
+   "sd_case_diff": 35.67,
+   "discordant_cases": 208,
+   "sign_test_p": 0.8353,
+   "mde": {
+    "dev": 4.82,
+    "test": 3.91,
+    "all": 3.04,
+    "v2_equivalent_36": 16.66
+   }
+  },
+  "@en": {
+   "n_cases": 654,
+   "a": 47.91,
+   "b": 51.19,
+   "diff": -3.28,
+   "ci95": [
+    -5.73,
+    -0.89
+   ],
+   "sd_case_diff": 31.57,
+   "discordant_cases": 200,
+   "sign_test_p": 0.04,
+   "mde": {
+    "dev": 4.27,
+    "test": 3.46,
+    "all": 2.69,
+    "v2_equivalent_36": 14.74
+   }
+  }
+ },
+ "quality_seed_noise_a": {
+  "sd_case_diff_one_seed": NaN,
+  "mde_three_seed_means": {
+   "dev": NaN,
+   "test": NaN,
+   "all": NaN,
+   "v2_equivalent_36": NaN
+  }
+ },
+ "quality_seed_noise_b": {
+  "sd_case_diff_one_seed": NaN,
+  "mde_three_seed_means": {
+   "dev": NaN,
+   "test": NaN,
+   "all": NaN,
+   "v2_equivalent_36": NaN
+  }
+ },
+ "inventions_pct_of_answers": {
+  "n_cases": 413,
+  "a": 28.09,
+  "b": 31.36,
+  "diff": -3.27,
+  "ci95": [
+   -7.38,
+   0.97
+  ],
+  "sd_case_diff": 42.61,
+  "discordant_cases": 205,
+  "sign_test_p": 0.2086,
+  "mde": {
+   "dev": 5.76,
+   "test": 4.67,
+   "all": 3.63,
+   "v2_equivalent_36": 19.9
+  }
+ },
+ "inventions_pct_reaches_model": {
+  "n_cases": 413,
+  "a": 28.09,
+  "b": 31.36,
+  "diff": -3.27,
+  "ci95": [
+   -7.26,
+   0.85
+  ],
+  "sd_case_diff": 42.61,
+  "discordant_cases": 205,
+  "sign_test_p": 0.2086,
+  "mde": {
+   "dev": 7.25,
+   "test": 5.87,
+   "all": 4.56,
+   "v2_equivalent_36": 24.89
+  }
+ },
+ "inventions_seeds": {
+  "a": 1,
+  "b": 1
+ },
+ "douteux_pct_of_answers": {
+  "a": 7.51,
+  "b": 9.69
+ }
+}

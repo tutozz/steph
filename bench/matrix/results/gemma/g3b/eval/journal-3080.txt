@@ -1,0 +1,25 @@
+22:54:31 juge 03b74727a860a563
+22:54:44 VALIDATION avant rc=0 {"fr": {"A": "6/6", "B": "6/6"}, "en": {"A": "6/6", "B": "6/6"}}
+23:06:12 JUGE g3b-test-b7 rc=0 {"invention": 147, "douteux": 41, "erreur": 1, "vide": 0, "ok": 637}
+23:11:24 JUGE g3b-test-b42 rc=0 {"invention": 145, "douteux": 55, "erreur": 0, "vide": 0, "ok": 626}
+23:14:57 JUGE g3b-test-b123 rc=0 {"invention": 145, "douteux": 48, "erreur": 1, "vide": 0, "ok": 632}
+23:24:40 JUGE v10-test-b7 rc=0 {"invention": 247, "douteux": 78, "erreur": 0, "vide": 0, "ok": 501}
+23:28:40 JUGE v10-test-b42 rc=0 {"invention": 241, "douteux": 88, "erreur": 0, "vide": 0, "ok": 497}
+23:33:01 JUGE v10-test-b123 rc=0 {"invention": 242, "douteux": 84, "erreur": 1, "vide": 0, "ok": 499}
+23:33:14 VALIDATION après rc=0 {"fr": {"A": "6/6", "B": "6/6"}, "en": {"A": "6/6", "B": "6/6"}}
+23:33:14 ollama relancé, FIN
+17:53:45 gemma-raw b7 rc=0
+18:02:46 sft-s42 b7 rc=0
+18:10:02 v10 b7 rc=0
+18:25:56 gemma-raw b42 rc=0
+18:38:15 sft-s42 b42 rc=0
+18:44:52 v10 b42 rc=0
+19:01:37 gemma-raw b123 rc=0
+19:04:15 sft-s42 b123 rc=0
+19:12:50 v10 b123 rc=0
+22:39:24 ollama arrêté par G3b
+22:48:34 g3b b42 rc=0
+22:49:11 g3b b7 rc=0
+22:49:11 LANE 8984 FIN
+22:54:15 g3b b123 rc=0
+22:54:15 LANE 8985 FIN

@@ -1,0 +1,9 @@
+[
+  {"label": "imp-first-600", "maxc": 600, "model": "/mnt/backup-hdd/stephbench-tmp/models/Qwen3.5-0.8B-Q4_K_M.gguf", "modeltag": "qwen", "profile": "p1", "opts": {"important": "first"}, "note": "lignes importantes en tete, budget 600"},
+  {"label": "imp-only-600", "maxc": 600, "model": "/mnt/backup-hdd/stephbench-tmp/models/Qwen3.5-0.8B-Q4_K_M.gguf", "modeltag": "qwen", "profile": "p1", "opts": {"important": "only"}, "note": "lignes importantes seules, budget 600"},
+  {"label": "noise-on-600", "maxc": 600, "model": "/mnt/backup-hdd/stephbench-tmp/models/Qwen3.5-0.8B-Q4_K_M.gguf", "modeltag": "qwen", "profile": "p1", "opts": {"noise": "on"}, "note": "doublons/numeros de ligne retires, budget 600"},
+  {"label": "status-removed-600", "maxc": 600, "model": "/mnt/backup-hdd/stephbench-tmp/models/Qwen3.5-0.8B-Q4_K_M.gguf", "modeltag": "qwen", "profile": "p1", "opts": {"status": "removed"}, "note": "duree retiree, budget 600"},
+  {"label": "status-clear-600", "maxc": 600, "model": "/mnt/backup-hdd/stephbench-tmp/models/Qwen3.5-0.8B-Q4_K_M.gguf", "modeltag": "qwen", "profile": "p1", "opts": {"status": "clear"}, "note": "statut+duree en clair en tete, budget 600"},
+  {"label": "extract-tail-600", "maxc": 600, "model": "/mnt/backup-hdd/stephbench-tmp/models/Qwen3.5-0.8B-Q4_K_M.gguf", "modeltag": "qwen", "profile": "p1", "opts": {"extract": "tail"}, "note": "fin de sortie seulement, budget 600"},
+  {"label": "extract-head-600", "maxc": 600, "model": "/mnt/backup-hdd/stephbench-tmp/models/Qwen3.5-0.8B-Q4_K_M.gguf", "modeltag": "qwen", "profile": "p1", "opts": {"extract": "head"}, "note": "debut de sortie seulement, budget 600"}
+]

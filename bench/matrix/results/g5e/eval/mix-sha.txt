@@ -1,0 +1,8 @@
+f7b1707bfc2622f90da8f5283908abdd88520939cda6a57b9eb39ccb8960721f  /root/steph-ft/data/mix-g5e/train.jsonl
+22fbc2638b77564215e1c5deebda104fc52156802362e4e4a4f102e7a515c6f3  /root/steph-ft/data/mix-g5e/val.jsonl
+f7b1707bfc2622f90da8f5283908abdd88520939cda6a57b9eb39ccb8960721f  /root/steph-ft/g5e/raw/train.jsonl
+22fbc2638b77564215e1c5deebda104fc52156802362e4e4a4f102e7a515c6f3  /root/steph-ft/g5e/raw/val.jsonl
+/root/steph-ft/data/mix-g5e/train.jsonl : 0 trouvaille(s)
+/root/steph-ft/data/mix-g5e/val.jsonl : 0 trouvaille(s)
+TOTAL : 0
+{"examples": 5838, "canary_lines": 0, "rejected": [], "max_line": 0.455, "max_shingle": 0.583, "top_line": [["v3-build-native-0029", 0.455, 0.327, 0.0], ["v3-build-native-0029", 0.455, 0.327, 0.0], ["v3-shell-scripts-0013", 0.444, 0.235, 0.0], ["v3-shell-scripts-0013", 0.444, 0.235, 0.0], ["v3-build-native-0031", 0.429, 0.474, 0.0]]}

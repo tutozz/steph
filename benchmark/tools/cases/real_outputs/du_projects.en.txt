@@ -1,0 +1,10 @@
+225M	/home/user/projects/webshop
+246M	/home/user/projects/scans-archive
+261M	/home/user/projects/ansible-deploy
+411M	/home/user/projects/league-app
+673M	/home/user/projects/debian-build
+1.2G	/home/user/projects/voice-cli
+1.4G	/home/user/projects/awx
+2.4G	/home/user/projects/inventory
+7.9G	/home/user/projects/kickstart-iso
+12G	/home/user/projects/OLD_INVENTORY

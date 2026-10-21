@@ -1,0 +1,9 @@
+> app@1.0.0 build
+> tsc && vite build
+
+src/components/Header.tsx:42:17 - error TS2339: Property 'titel' does not exist on type 'Props'. Did you mean 'title'?
+
+42     <h1>{props.titel}</h1>
+                   ~~~~~
+
+Found 1 error in src/components/Header.tsx:42

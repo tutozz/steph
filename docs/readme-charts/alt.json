@@ -1,0 +1,44 @@
+{
+ "charts": {
+  "quality.fr": {
+   "alt": "Qualité au banc v3, sur 654 cas de test : steph-speak (base) 63,7, Gemma 4 E2B (brut) 60,6, steph-speak (petit) 53,0. Réponses avec une invention, en pourcentage : steph-speak (base) 19,1 %, Gemma 4 E2B (brut) 18,2 %, steph-speak (petit) 26,0 %.",
+   "table": "| Modèle | Qualité | Inventions |\n|---|---|---|\n| steph-speak (base) | 63,7 | 19,1 % |\n| Gemma 4 E2B (brut) | 60,6 | 18,2 % |\n| steph-speak (petit) | 53,0 | 26,0 % |"
+  },
+  "quality.en": {
+   "alt": "Bench v3 quality, over 654 test cases: steph-speak (base) 63.7, Gemma 4 E2B (raw) 60.6, steph-speak (small) 53.0. Answers with an invention, in percent: steph-speak (base) 19.1%, Gemma 4 E2B (raw) 18.2%, steph-speak (small) 26.0%.",
+   "table": "| Model | Quality | Inventions |\n|---|---|---|\n| steph-speak (base) | 63.7 | 19.1% |\n| Gemma 4 E2B (raw) | 60.6 | 18.2% |\n| steph-speak (small) | 53.0 | 26.0% |"
+  },
+  "hero.fr": {
+   "alt": "Les deux modèles steph-speak face à Gemma 4 E2B brut. Qualité au banc : steph-speak (petit) 53,0, steph-speak (base) 63,7, Gemma 4 E2B (brut) 60,6. Taille sur disque : steph-speak (petit) 223 Mo, steph-speak (base) 2 432 Mo, Gemma 4 E2B (brut) 3 350 Mo.",
+   "table": "| Modèle | Qualité au banc | Taille sur disque |\n|---|---|---|\n| steph-speak (petit) | 53,0 | 223 Mo |\n| steph-speak (base) | 63,7 | 2 432 Mo |\n| Gemma 4 E2B (brut) | 60,6 | 3 350 Mo |"
+  },
+  "hero.en": {
+   "alt": "The two steph-speak models against raw Gemma 4 E2B. Bench quality: steph-speak (small) 53.0, steph-speak (base) 63.7, Gemma 4 E2B (raw) 60.6. Size on disk: steph-speak (small) 223 MB, steph-speak (base) 2,432 MB, Gemma 4 E2B (raw) 3,350 MB.",
+   "table": "| Model | Bench quality | Size on disk |\n|---|---|---|\n| steph-speak (small) | 53.0 | 223 MB |\n| steph-speak (base) | 63.7 | 2,432 MB |\n| Gemma 4 E2B (raw) | 60.6 | 3,350 MB |"
+  },
+  "speed.fr": {
+   "alt": "Premier mot, 90e centile, en secondes, sur un portable Intel Core i5-7200U à 2 cœurs, sans GPU : steph-speak (petit) 2,3 s, Qwen3.5 0.8B (brut) 5,7 s, Qwen3.5 2B 13,3 s, SmolLM3 3B 22,4 s, Ministral 3 3B 27,0 s, steph-speak (base) 27,2 s. Sur Mac M3 Pro avec Metal : Gemma 4 E2B 0,68 s, Qwen3.5 9B 2,26 s.",
+   "table": "| Modèle | i5-7200U | Mac M3 Pro |\n|---|---|---|\n| steph-speak (petit) | 2,3 s |  |\n| Qwen3.5 0.8B (brut) | 5,7 s |  |\n| Qwen3.5 2B | 13,3 s |  |\n| SmolLM3 3B | 22,4 s |  |\n| Ministral 3 3B | 27,0 s |  |\n| steph-speak (base) | 27,2 s |  |\n| Gemma 4 E2B (brut) |  | 0,68 s |\n| Qwen3.5 9B (enseignant) |  | 2,26 s |"
+  },
+  "speed.en": {
+   "alt": "First word, 90th percentile, in seconds, on a Intel Core i5-7200U laptop with 2 cores, no GPU: steph-speak (small) 2.3 s, Qwen3.5 0.8B (raw) 5.7 s, Qwen3.5 2B 13.3 s, SmolLM3 3B 22.4 s, Ministral 3 3B 27.0 s, steph-speak (base) 27.2 s. On a Mac M3 Pro with Metal: Gemma 4 E2B 0.68 s, Qwen3.5 9B 2.26 s.",
+   "table": "| Model | i5-7200U | Mac M3 Pro |\n|---|---|---|\n| steph-speak (small) | 2.3 s |  |\n| Qwen3.5 0.8B (raw) | 5.7 s |  |\n| Qwen3.5 2B | 13.3 s |  |\n| SmolLM3 3B | 22.4 s |  |\n| Ministral 3 3B | 27.0 s |  |\n| steph-speak (base) | 27.2 s |  |\n| Gemma 4 E2B (raw) |  | 0.68 s |\n| Qwen3.5 9B (teacher) |  | 2.26 s |"
+  },
+  "size.fr": {
+   "alt": "Taille du fichier GGUF sur disque : steph-speak (petit) 223 Mo, steph-speak (base) 2 432 Mo, Gemma 4 E2B (brut) 3 350 Mo, Qwen3.5 9B (enseignant) 5 681 Mo. Mémoire au pic : steph-speak (petit) 564 Mo, steph-speak (base) 3 894 Mo, Gemma 4 E2B (brut) 4 772 Mo, Qwen3.5 9B (enseignant) 6 506 Mo.",
+   "table": "| Modèle | Taille sur disque | Mémoire au pic |\n|---|---|---|\n| steph-speak (petit) | 223 Mo | 564 Mo |\n| steph-speak (base) | 2 432 Mo | 3 894 Mo |\n| Gemma 4 E2B (brut) | 3 350 Mo | 4 772 Mo |\n| Qwen3.5 9B (enseignant) | 5 681 Mo | 6 506 Mo |"
+  },
+  "size.en": {
+   "alt": "GGUF file size on disk: steph-speak (small) 223 MB, steph-speak (base) 2,432 MB, Gemma 4 E2B (raw) 3,350 MB, Qwen3.5 9B (teacher) 5,681 MB. Peak memory: steph-speak (small) 564 MB, steph-speak (base) 3,894 MB, Gemma 4 E2B (raw) 4,772 MB, Qwen3.5 9B (teacher) 6,506 MB.",
+   "table": "| Model | Size on disk | Peak memory |\n|---|---|---|\n| steph-speak (small) | 223 MB | 564 MB |\n| steph-speak (base) | 2,432 MB | 3,894 MB |\n| Gemma 4 E2B (raw) | 3,350 MB | 4,772 MB |\n| Qwen3.5 9B (teacher) | 5,681 MB | 6,506 MB |"
+  },
+  "example.fr": {
+   "alt": "La commande rm /etc/hostname échoue : rm: impossible de supprimer '/etc/hostname': Permission non accordée. Qwen3.5 0.8B brut parle de Header.tsx, un fichier absent de la sortie : « Échec. Header.tsx ligne 42 : titel inconnu, utiliser title. » steph, par une règle écrite en code, dit : « Échec. hostname : permission refusée. »",
+   "table": "| Modèle | Phrase dite |\n|---|---|\n| Qwen3.5 0.8B, brut | Échec. Header.tsx ligne 42 : titel inconnu, utiliser title. |\n| steph, règle en code | Échec. hostname : permission refusée. |"
+  },
+  "example.en": {
+   "alt": "The command rm /etc/hostname fails: rm: cannot remove '/etc/hostname': Permission denied. Raw Qwen3.5 0.8B talks about Header.tsx, a file that is not in the output: “Failed. Header.tsx line 42: unknown titel, use title.” steph, by a rule written in code, says: “Failed. hostname: permission denied.”",
+   "table": "| Model | Spoken sentence |\n|---|---|\n| Qwen3.5 0.8B, raw | Échec. Header.tsx ligne 42 : titel inconnu, utiliser title. |\n| steph, rule in code | Échec. hostname : permission refusée. |"
+  }
+ }
+}

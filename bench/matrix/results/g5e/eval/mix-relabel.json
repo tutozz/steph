@@ -1,0 +1,71 @@
+{
+    "train": {
+        "rows_in": 5347,
+        "rows_out": 5623,
+        "relabeled": 94,
+        "added_en_corrections": 276,
+        "other_rows": 5253,
+        "other_sha_in": "081ae1f122473db896df08af9984f22274fd31a25e4955fbe136dc655c36cf6e",
+        "other_sha_out": "081ae1f122473db896df08af9984f22274fd31a25e4955fbe136dc655c36cf6e",
+        "en_prompt_pct_in": 33.46,
+        "en_prompt_pct_out": 36.72,
+        "wrong_lang_labels_in": {
+            "prompt_fr_label_en": 201,
+            "prompt_en_label_fr": 22
+        },
+        "wrong_lang_labels_out": {
+            "prompt_fr_label_en": 107,
+            "prompt_en_label_fr": 22
+        }
+    },
+    "val": {
+        "rows_in": 215,
+        "rows_out": 215,
+        "relabeled": 10,
+        "added_en_corrections": 0,
+        "other_rows": 205,
+        "other_sha_in": "d7b364a0394df1b53b568d84ad41cf0a262c62d1dbb3b1ee2497f4d64438adea",
+        "other_sha_out": "d7b364a0394df1b53b568d84ad41cf0a262c62d1dbb3b1ee2497f4d64438adea",
+        "en_prompt_pct_in": 24.19,
+        "en_prompt_pct_out": 24.19,
+        "wrong_lang_labels_in": {
+            "prompt_fr_label_en": 22
+        },
+        "wrong_lang_labels_out": {
+            "prompt_fr_label_en": 12
+        }
+    },
+    "detail": {
+        "train_wrong_no_x4": {
+            "fr_summary": 9,
+            "en_summary": 2,
+            "qa": 4,
+            "t9-corr-v1.0": 2,
+            "t9-corr-g3b": 3
+        },
+        "train_wrong_x4_also_wrong": {
+            "fr_summary": 2,
+            "en_summary": 10,
+            "detail": 80,
+            "t9-corr-v1.0": 2,
+            "t9-corr-g3b": 3
+        },
+        "train_x4_ambiguous_first_taken": {},
+        "train_replaced": {
+            "fr_summary:fr": 78,
+            "detail:fr": 10,
+            "t9-corr-v1.0:fr": 3,
+            "t9-corr-g3b:fr": 3
+        },
+        "val_wrong_no_x4": {},
+        "val_wrong_x4_also_wrong": {
+            "detail": 12
+        },
+        "val_x4_ambiguous_first_taken": {},
+        "val_replaced": {
+            "fr_summary:fr": 6,
+            "detail:fr": 4
+        }
+    },
+    "en_corrections_copies": 3
+}

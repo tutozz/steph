@@ -1,0 +1,1308 @@
+{
+ "model": "/root/stephbench-ft/models/granite-soup-Q4_K_M.gguf",
+ "voice": "/root/stephbench-ft/voices/fr_FR-siwis-medium.onnx",
+ "llm_ctx": 4096,
+ "llm_threads": 4,
+ "summary": {
+  "warmup_llm_s": 2.819,
+  "warmup_tts_first_audio_s": 2.976,
+  "n_cases": 33,
+  "n_code": 32,
+  "n_model": 1,
+  "premier_son": {
+   "code": {
+    "n": 32,
+    "median": 0.0907,
+    "p90": 0.1372,
+    "max": 0.1802
+   },
+   "model": {
+    "n": 1,
+    "median": 0.0035,
+    "p90": 0.0035,
+    "max": 0.0035
+   },
+   "all": {
+    "n": 33,
+    "median": 0.0872,
+    "p90": 0.1364,
+    "max": 0.1802
+   }
+  },
+  "premier_fait_utile": {
+   "code": {
+    "n": 32,
+    "median": 0.0907,
+    "p90": 0.176,
+    "max": 0.6537
+   },
+   "model": {
+    "n": 1,
+    "median": 1.9853,
+    "p90": 1.9853,
+    "max": 1.9853
+   },
+   "all": {
+    "n": 33,
+    "median": 0.0943,
+    "p90": 0.22,
+    "max": 1.9853
+   }
+  },
+  "premier_son_audible": {
+   "code": {
+    "n": 32,
+    "median": 0.1457,
+    "p90": 0.2013,
+    "max": 0.2375
+   },
+   "model": {
+    "n": 1,
+    "median": 0.0686,
+    "p90": 0.0686,
+    "max": 0.0686
+   },
+   "all": {
+    "n": 33,
+    "median": 0.1436,
+    "p90": 0.2005,
+    "max": 0.2375
+   }
+  },
+  "premier_fait_utile_audible": {
+   "code": {
+    "n": 32,
+    "median": 0.1457,
+    "p90": 0.2344,
+    "max": 1.8431
+   },
+   "model": {
+    "n": 1,
+    "median": 2.0503,
+    "p90": 2.0503,
+    "max": 2.0503
+   },
+   "all": {
+    "n": 33,
+    "median": 0.1477,
+    "p90": 1.2543,
+    "max": 2.0503
+   }
+  },
+  "coupure": {
+   "n": 33,
+   "median": 0.0,
+   "p90": 0.0,
+   "max": 0.6978
+  },
+  "lecteur_latence": {
+   "n": 33,
+   "median": 0.0383,
+   "p90": 0.045,
+   "max": 0.0492
+  },
+  "pipelined": true
+ },
+ "results": [
+  {
+   "id": "fx00",
+   "cmd": "ls -la /etc | head -40",
+   "exit": 0,
+   "duration_fixture_s": 0.02,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "37 éléments affichés : abrt, adjtime, aliases.",
+   "n_prefix_segments": 0,
+   "prefix_used": "",
+   "n_segments": 2,
+   "n_journal": 2,
+   "timed_out": false,
+   "premier_son_s": 0.1067,
+   "premier_fait_utile_s": 0.1067,
+   "premier_son_audible_s": 0.1477,
+   "premier_fait_utile_audible_s": 0.1477,
+   "lecteur_latence_s": 0.0409,
+   "tete_silence_s": [
+    0.0,
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "37 éléments affichés : abrt, adjtime, aliases.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0013,
+     "text": "37 éléments affichés :"
+    },
+    {
+     "t_rel": 0.1053,
+     "text": "abrt, adjtime, aliases."
+    }
+   ]
+  },
+  {
+   "id": "fx01",
+   "cmd": "df -h",
+   "exit": 0,
+   "duration_fixture_s": 0.01,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "racine : 685G libres sur 953G, 29 %. boot : 284M libres sur 974M, 69 %.",
+   "n_prefix_segments": 0,
+   "prefix_used": "",
+   "n_segments": 3,
+   "n_journal": 3,
+   "timed_out": false,
+   "premier_son_s": 0.0688,
+   "premier_fait_utile_s": 0.0688,
+   "premier_son_audible_s": 0.1281,
+   "premier_fait_utile_audible_s": 0.1281,
+   "lecteur_latence_s": 0.0394,
+   "tete_silence_s": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "racine : 685G libres sur 953G, 29 %. boot : 284M libres sur 974M, 69 %.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0005,
+     "text": "racine :"
+    },
+    {
+     "t_rel": 0.0685,
+     "text": "685G libres sur 953G, 29 %."
+    },
+    {
+     "t_rel": 0.3745,
+     "text": "boot : 284M libres sur 974M, 69 %."
+    }
+   ]
+  },
+  {
+   "id": "fx02",
+   "cmd": "git -C /home/alice/Projects/steph status",
+   "exit": 0,
+   "duration_fixture_s": 0.0,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "Branche master, aucun commit, rien à valider.",
+   "n_prefix_segments": 0,
+   "prefix_used": "",
+   "n_segments": 2,
+   "n_journal": 2,
+   "timed_out": false,
+   "premier_son_s": 0.0943,
+   "premier_fait_utile_s": 0.0943,
+   "premier_son_audible_s": 0.2021,
+   "premier_fait_utile_audible_s": 0.2021,
+   "lecteur_latence_s": 0.0379,
+   "tete_silence_s": [
+    0.07,
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "Branche master, aucun commit, rien à valider.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0009,
+     "text": "Branche master,"
+    },
+    {
+     "t_rel": 0.0939,
+     "text": "aucun commit, rien à valider."
+    }
+   ]
+  },
+  {
+   "id": "fx03",
+   "cmd": "cat /nonexistent/file.txt",
+   "exit": 1,
+   "duration_fixture_s": 0.0,
+   "bucket": "verbatim",
+   "long_cmd": false,
+   "resolve_said": null,
+   "n_prefix_segments": 0,
+   "prefix_used": "",
+   "n_segments": 2,
+   "n_journal": 2,
+   "timed_out": false,
+   "premier_son_s": 0.003,
+   "premier_fait_utile_s": 0.003,
+   "premier_son_audible_s": 0.0596,
+   "premier_fait_utile_audible_s": 0.0596,
+   "lecteur_latence_s": 0.0367,
+   "tete_silence_s": [
+    0.02,
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "Erreur 1 : cat: /nonexistent/file.txt: Aucun fichier ou dossier de ce nom",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0003,
+     "text": "Erreur 1 :"
+    },
+    {
+     "t_rel": 0.0013,
+     "text": "cat: /nonexistent/file.txt: Aucun fichier ou dossier de ce nom"
+    }
+   ]
+  },
+  {
+   "id": "fx04",
+   "cmd": "python3 -c 'import json; d={}; print(d[\"key\"])'",
+   "exit": 1,
+   "duration_fixture_s": 0.05,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "Échec. string ligne 1 : KeyError key.",
+   "n_prefix_segments": 0,
+   "prefix_used": "",
+   "n_segments": 2,
+   "n_journal": 2,
+   "timed_out": false,
+   "premier_son_s": 0.003,
+   "premier_fait_utile_s": 0.003,
+   "premier_son_audible_s": 0.0623,
+   "premier_fait_utile_audible_s": 0.0623,
+   "lecteur_latence_s": 0.0393,
+   "tete_silence_s": [
+    0.02,
+    0.0
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "Échec. string ligne 1 : KeyError key.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0006,
+     "text": "Échec."
+    },
+    {
+     "t_rel": 0.0006,
+     "text": "string ligne 1 : KeyError key."
+    }
+   ]
+  },
+  {
+   "id": "fx05",
+   "cmd": "ping -c 3 127.0.0.1",
+   "exit": 0,
+   "duration_fixture_s": 2.06,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "3 reçus sur 3, 0 % de perte, moyenne 0.024 ms.",
+   "n_prefix_segments": 0,
+   "prefix_used": "",
+   "n_segments": 2,
+   "n_journal": 2,
+   "timed_out": false,
+   "premier_son_s": 0.113,
+   "premier_fait_utile_s": 0.113,
+   "premier_son_audible_s": 0.1697,
+   "premier_fait_utile_audible_s": 0.1697,
+   "lecteur_latence_s": 0.0368,
+   "tete_silence_s": [
+    0.02,
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "3 reçus sur 3, 0 % de perte, moyenne 0.024 ms.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0008,
+     "text": "3 reçus sur 3,"
+    },
+    {
+     "t_rel": 0.1118,
+     "text": "0 % de perte, moyenne 0.024 ms."
+    }
+   ]
+  },
+  {
+   "id": "fx06",
+   "cmd": "gcc -x c - -o /dev/null <<< 'int main(){ int x = ; return 0; }'",
+   "exit": 1,
+   "duration_fixture_s": 0.15,
+   "bucket": "verbatim",
+   "long_cmd": false,
+   "resolve_said": null,
+   "n_prefix_segments": 0,
+   "prefix_used": "",
+   "n_segments": 3,
+   "n_journal": 3,
+   "timed_out": false,
+   "premier_son_s": 0.0023,
+   "premier_fait_utile_s": 0.0023,
+   "premier_son_audible_s": 0.0604,
+   "premier_fait_utile_audible_s": 0.0604,
+   "lecteur_latence_s": 0.0381,
+   "tete_silence_s": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "Erreur 1 : <stdin>: Dans la fonction « main »:. <stdin>:1:21: error: expected expression before « ; » token",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0004,
+     "text": "Erreur 1 :"
+    },
+    {
+     "t_rel": 0.0004,
+     "text": "<stdin>: Dans la fonction « main »:."
+    },
+    {
+     "t_rel": 0.1384,
+     "text": "<stdin>:1:21: error: expected expression before « ; » token"
+    }
+   ]
+  },
+  {
+   "id": "fx07",
+   "cmd": "free -h",
+   "exit": 0,
+   "duration_fixture_s": 0.01,
+   "bucket": "verbatim",
+   "long_cmd": false,
+   "resolve_said": null,
+   "n_prefix_segments": 0,
+   "prefix_used": "",
+   "n_segments": 4,
+   "n_journal": 4,
+   "timed_out": false,
+   "premier_son_s": 0.1087,
+   "premier_fait_utile_s": 0.1087,
+   "premier_son_audible_s": 0.1644,
+   "premier_fait_utile_audible_s": 0.1644,
+   "lecteur_latence_s": 0.0358,
+   "tete_silence_s": [
+    0.02,
+    0.0,
+    0.02,
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "total        used        free shared  buff/cache   available. Mem:            31Gi       6,6Gi       865Mi       354Mi        25Gi        24Gi. Swap:          8,0Gi        72Ki       8,0Gi",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0007,
+     "text": "total        used        free"
+    },
+    {
+     "t_rel": 0.1057,
+     "text": "shared  buff/cache   available."
+    },
+    {
+     "t_rel": 0.2427,
+     "text": "Mem:            31Gi       6,6Gi       865Mi       354Mi        25Gi        24Gi."
+    },
+    {
+     "t_rel": 0.6597,
+     "text": "Swap:          8,0Gi        72Ki       8,0Gi"
+    }
+   ]
+  },
+  {
+   "id": "fx08",
+   "cmd": "systemctl --user status pipewire --no-pager | head -20",
+   "exit": 0,
+   "duration_fixture_s": 0.03,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "pipewire actif depuis 2 jours.",
+   "n_prefix_segments": 0,
+   "prefix_used": "",
+   "n_segments": 1,
+   "n_journal": 1,
+   "timed_out": false,
+   "premier_son_s": 0.1263,
+   "premier_fait_utile_s": 0.1263,
+   "premier_son_audible_s": 0.1791,
+   "premier_fait_utile_audible_s": 0.1791,
+   "lecteur_latence_s": 0.0328,
+   "tete_silence_s": [
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "pipewire actif depuis 2 jours.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0011,
+     "text": "pipewire actif depuis 2 jours."
+    }
+   ]
+  },
+  {
+   "id": "fx09",
+   "cmd": "grep -rn 'def ' /home/alice/Projects/steph/src/steph/llm.py",
+   "exit": 0,
+   "duration_fixture_s": 0.0,
+   "bucket": "llm",
+   "long_cmd": false,
+   "resolve_said": null,
+   "n_prefix_segments": 2,
+   "prefix_used": "Succès. 8 lignes. ",
+   "n_segments": 3,
+   "n_journal": 3,
+   "timed_out": false,
+   "premier_son_s": 0.0035,
+   "premier_fait_utile_s": 1.9853,
+   "premier_son_audible_s": 0.0686,
+   "premier_fait_utile_audible_s": 2.0503,
+   "lecteur_latence_s": 0.0451,
+   "tete_silence_s": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "coupure_s": 0.6978,
+   "spoken_text": "Succès. 8 lignes. 8 éléments : def __init__(self, cfg: Config), def healthy(self), def ensure_server.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0026,
+     "text": "Succès."
+    },
+    {
+     "t_rel": 0.0026,
+     "text": "8 lignes."
+    },
+    {
+     "t_rel": 1.5986,
+     "text": "8 éléments : def __init__(self, cfg: Config), def healthy(self), def ensure_server."
+    }
+   ]
+  },
+  {
+   "id": "fx10",
+   "cmd": "curl -qsS https://nonexistent.invalid/",
+   "exit": 6,
+   "duration_fixture_s": 0.02,
+   "bucket": "verbatim",
+   "long_cmd": false,
+   "resolve_said": null,
+   "n_prefix_segments": 0,
+   "prefix_used": "",
+   "n_segments": 2,
+   "n_journal": 2,
+   "timed_out": false,
+   "premier_son_s": 0.1031,
+   "premier_fait_utile_s": 0.1031,
+   "premier_son_audible_s": 0.1619,
+   "premier_fait_utile_audible_s": 0.1619,
+   "lecteur_latence_s": 0.0388,
+   "tete_silence_s": [
+    0.02,
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "Erreur 6 : curl: (6) Could not resolve host: nonexistent.invalid",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0008,
+     "text": "Erreur 6 :"
+    },
+    {
+     "t_rel": 0.0968,
+     "text": "curl: (6) Could not resolve host: nonexistent.invalid"
+    }
+   ]
+  },
+  {
+   "id": "fx11",
+   "cmd": "ip -br addr",
+   "exit": 0,
+   "duration_fixture_s": 0.01,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "wlp0s20f3 192.168.1.20, tailscale0 100.64.0.10, tun0 10.9.0.2. Plus 8 réseaux virtuels.",
+   "n_prefix_segments": 0,
+   "prefix_used": "",
+   "n_segments": 3,
+   "n_journal": 3,
+   "timed_out": false,
+   "premier_son_s": 0.138,
+   "premier_fait_utile_s": 0.138,
+   "premier_son_audible_s": 0.2064,
+   "premier_fait_utile_audible_s": 0.2064,
+   "lecteur_latence_s": 0.0484,
+   "tete_silence_s": [
+    0.02,
+    0.0,
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "wlp0s20f3 192.168.1.20, tailscale0 100.64.0.10, tun0 10.9.0.2. Plus 8 réseaux virtuels.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0006,
+     "text": "wlp0s20f3"
+    },
+    {
+     "t_rel": 0.1366,
+     "text": "192.168.1.20, tailscale0 100.64.0.10, tun0 10.9.0.2."
+    },
+    {
+     "t_rel": 0.6756,
+     "text": "Plus 8 réseaux virtuels."
+    }
+   ]
+  },
+  {
+   "id": "fx12",
+   "cmd": "ls /home/alice/Projects/steph",
+   "exit": 0,
+   "duration_fixture_s": 0.0,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "6 éléments : bench, pyproject.toml, README.md.",
+   "n_prefix_segments": 0,
+   "prefix_used": "",
+   "n_segments": 2,
+   "n_journal": 2,
+   "timed_out": false,
+   "premier_son_s": 0.0653,
+   "premier_fait_utile_s": 0.0653,
+   "premier_son_audible_s": 0.1304,
+   "premier_fait_utile_audible_s": 0.1304,
+   "lecteur_latence_s": 0.0451,
+   "tete_silence_s": [
+    0.02,
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "6 éléments : bench, pyproject.toml, README.md.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0007,
+     "text": "6 éléments :"
+    },
+    {
+     "t_rel": 0.0637,
+     "text": "bench, pyproject.toml, README.md."
+    }
+   ]
+  },
+  {
+   "id": "fx13",
+   "cmd": "uname -a",
+   "exit": 0,
+   "duration_fixture_s": 0.0,
+   "bucket": "verbatim",
+   "long_cmd": false,
+   "resolve_said": null,
+   "n_prefix_segments": 0,
+   "prefix_used": "",
+   "n_segments": 2,
+   "n_journal": 2,
+   "timed_out": false,
+   "premier_son_s": 0.0866,
+   "premier_fait_utile_s": 0.0866,
+   "premier_son_audible_s": 0.1436,
+   "premier_fait_utile_audible_s": 0.1436,
+   "lecteur_latence_s": 0.037,
+   "tete_silence_s": [
+    0.02,
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "Linux devbox 7.0.9-202.fc44.x86_64 #1 SMP PREEMPT_DYNAMIC Mon May 18 22:33:24 UTC 2026 x86_64 GNU/Linux",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0009,
+     "text": "Linux devbox"
+    },
+    {
+     "t_rel": 0.0829,
+     "text": "7.0.9-202.fc44.x86_64 #1 SMP PREEMPT_DYNAMIC Mon May 18 22:33:24 UTC 2026 x86_64 GNU/Linux"
+    }
+   ]
+  },
+  {
+   "id": "fx14",
+   "cmd": "python3 -m pip --version",
+   "exit": 0,
+   "duration_fixture_s": 0.17,
+   "bucket": "verbatim",
+   "long_cmd": false,
+   "resolve_said": null,
+   "n_prefix_segments": 0,
+   "prefix_used": "",
+   "n_segments": 2,
+   "n_journal": 2,
+   "timed_out": false,
+   "premier_son_s": 0.1386,
+   "premier_fait_utile_s": 0.1386,
+   "premier_son_audible_s": 0.1942,
+   "premier_fait_utile_audible_s": 0.1942,
+   "lecteur_latence_s": 0.0356,
+   "tete_silence_s": [
+    0.02,
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "pip 26.0.1 from /usr/lib/python3.14/site-packages/pip (python 3.14)",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0008,
+     "text": "pip 26.0.1 from"
+    },
+    {
+     "t_rel": 0.1338,
+     "text": "/usr/lib/python3.14/site-packages/pip (python 3.14)"
+    }
+   ]
+  },
+  {
+   "id": "fx15",
+   "cmd": "find /usr/share/doc -maxdepth 1 -name 'py*' | head -20",
+   "exit": 0,
+   "duration_fixture_s": 0.01,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "20 éléments affichés : python-systemd, python3-argcomplete, python3-attrs.",
+   "n_prefix_segments": 0,
+   "prefix_used": "",
+   "n_segments": 2,
+   "n_journal": 2,
+   "timed_out": false,
+   "premier_son_s": 0.0952,
+   "premier_fait_utile_s": 0.0952,
+   "premier_son_audible_s": 0.1588,
+   "premier_fait_utile_audible_s": 0.1588,
+   "lecteur_latence_s": 0.0437,
+   "tete_silence_s": [
+    0.02,
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "20 éléments affichés : python-systemd, python3-argcomplete, python3-attrs.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0009,
+     "text": "20 éléments affichés :"
+    },
+    {
+     "t_rel": 0.0929,
+     "text": "python-systemd, python3-argcomplete, python3-attrs."
+    }
+   ]
+  },
+  {
+   "id": "fx16",
+   "cmd": "ssh -o BatchMode=yes -o ConnectTimeout=3 nobody@127.0.0.1 true",
+   "exit": 255,
+   "duration_fixture_s": 0.02,
+   "bucket": "verbatim",
+   "long_cmd": false,
+   "resolve_said": null,
+   "n_prefix_segments": 0,
+   "prefix_used": "",
+   "n_segments": 2,
+   "n_journal": 2,
+   "timed_out": false,
+   "premier_son_s": 0.1299,
+   "premier_fait_utile_s": 0.1299,
+   "premier_son_audible_s": 0.1859,
+   "premier_fait_utile_audible_s": 0.1859,
+   "lecteur_latence_s": 0.036,
+   "tete_silence_s": [
+    0.02,
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "Erreur 255 : Host key verification failed.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.001,
+     "text": "Erreur 255 :"
+    },
+    {
+     "t_rel": 0.127,
+     "text": "Host key verification failed."
+    }
+   ]
+  },
+  {
+   "id": "fx17",
+   "cmd": "rm /etc/hostname",
+   "exit": 1,
+   "duration_fixture_s": 0.0,
+   "bucket": "verbatim",
+   "long_cmd": false,
+   "resolve_said": null,
+   "n_prefix_segments": 0,
+   "prefix_used": "",
+   "n_segments": 2,
+   "n_journal": 2,
+   "timed_out": false,
+   "premier_son_s": 0.003,
+   "premier_fait_utile_s": 0.003,
+   "premier_son_audible_s": 0.0677,
+   "premier_fait_utile_audible_s": 0.0677,
+   "lecteur_latence_s": 0.0447,
+   "tete_silence_s": [
+    0.02,
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "Erreur 1 : rm: impossible de supprimer '/etc/hostname': Permission non accordée",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0008,
+     "text": "Erreur 1 :"
+    },
+    {
+     "t_rel": 0.0008,
+     "text": "rm: impossible de supprimer '/etc/hostname': Permission non accordée"
+    }
+   ]
+  },
+  {
+   "id": "fx18",
+   "cmd": "sort /etc/passwd | cut -d: -f1 | head -30",
+   "exit": 0,
+   "duration_fixture_s": 0.01,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "30 éléments affichés : abrt, adm, akmods.",
+   "n_prefix_segments": 0,
+   "prefix_used": "",
+   "n_segments": 2,
+   "n_journal": 2,
+   "timed_out": false,
+   "premier_son_s": 0.0872,
+   "premier_fait_utile_s": 0.0872,
+   "premier_son_audible_s": 0.1223,
+   "premier_fait_utile_audible_s": 0.1223,
+   "lecteur_latence_s": 0.0352,
+   "tete_silence_s": [
+    0.0,
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "30 éléments affichés : abrt, adm, akmods.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0004,
+     "text": "30 éléments affichés :"
+    },
+    {
+     "t_rel": 0.0854,
+     "text": "abrt, adm, akmods."
+    }
+   ]
+  },
+  {
+   "id": "fx19",
+   "cmd": "du -sh /home/alice/Projects/* 2>/dev/null | sort -h | tail",
+   "exit": 0,
+   "duration_fixture_s": 1.03,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "10 éléments affichés, les plus gros : OLD_SHOPAPP 12G, installer-iso 7,9G, shopapp 2,4G.",
+   "n_prefix_segments": 0,
+   "prefix_used": "",
+   "n_segments": 2,
+   "n_journal": 2,
+   "timed_out": false,
+   "premier_son_s": 0.0995,
+   "premier_fait_utile_s": 0.0995,
+   "premier_son_audible_s": 0.1555,
+   "premier_fait_utile_audible_s": 0.1555,
+   "lecteur_latence_s": 0.0361,
+   "tete_silence_s": [
+    0.02,
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "10 éléments affichés, les plus gros : OLD_SHOPAPP 12G, installer-iso 7,9G, shopapp 2,4G.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0003,
+     "text": "10 éléments affichés,"
+    },
+    {
+     "t_rel": 0.0973,
+     "text": "les plus gros : OLD_SHOPAPP 12G, installer-iso 7,9G, shopapp 2,4G."
+    }
+   ]
+  },
+  {
+   "id": "fx20",
+   "cmd": "dnf check-update --cacheonly 2>&1 | tail -30",
+   "exit": 0,
+   "duration_fixture_s": 2.28,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "29 éléments affichés : xen-licenses, xfsprogs, xorg-x11-drv-nvidia.",
+   "n_prefix_segments": 0,
+   "prefix_used": "",
+   "n_segments": 2,
+   "n_journal": 2,
+   "timed_out": false,
+   "premier_son_s": 0.1802,
+   "premier_fait_utile_s": 0.1802,
+   "premier_son_audible_s": 0.2375,
+   "premier_fait_utile_audible_s": 0.2375,
+   "lecteur_latence_s": 0.0373,
+   "tete_silence_s": [
+    0.02,
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "29 éléments affichés : xen-licenses, xfsprogs, xorg-x11-drv-nvidia.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0006,
+     "text": "29 éléments affichés :"
+    },
+    {
+     "t_rel": 0.1776,
+     "text": "xen-licenses, xfsprogs, xorg-x11-drv-nvidia."
+    }
+   ]
+  },
+  {
+   "id": "fx21",
+   "cmd": "tar czf /tmp/x.tgz /nonexistent",
+   "exit": 2,
+   "duration_fixture_s": 0.01,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "Échec. nonexistent : fichier introuvable.",
+   "n_prefix_segments": 0,
+   "prefix_used": "",
+   "n_segments": 2,
+   "n_journal": 2,
+   "timed_out": false,
+   "premier_son_s": 0.0024,
+   "premier_fait_utile_s": 0.0024,
+   "premier_son_audible_s": 0.0639,
+   "premier_fait_utile_audible_s": 0.0639,
+   "lecteur_latence_s": 0.0416,
+   "tete_silence_s": [
+    0.02,
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "Échec. nonexistent : fichier introuvable.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0004,
+     "text": "Échec."
+    },
+    {
+     "t_rel": 0.0004,
+     "text": "nonexistent : fichier introuvable."
+    }
+   ]
+  },
+  {
+   "id": "fx22",
+   "cmd": "docker ps",
+   "exit": 0,
+   "duration_fixture_s": 0.07,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "9 conteneurs, 8 actifs ; shopapp_vault redémarre en boucle.",
+   "n_prefix_segments": 0,
+   "prefix_used": "",
+   "n_segments": 2,
+   "n_journal": 2,
+   "timed_out": false,
+   "premier_son_s": 0.0759,
+   "premier_fait_utile_s": 0.0759,
+   "premier_son_audible_s": 0.1353,
+   "premier_fait_utile_audible_s": 0.1353,
+   "lecteur_latence_s": 0.0395,
+   "tete_silence_s": [
+    0.02,
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "9 conteneurs, 8 actifs ; shopapp_vault redémarre en boucle.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0012,
+     "text": "9 conteneurs,"
+    },
+    {
+     "t_rel": 0.0742,
+     "text": "8 actifs ; shopapp_vault redémarre en boucle."
+    }
+   ]
+  },
+  {
+   "id": "fx23",
+   "cmd": "whoami",
+   "exit": 0,
+   "duration_fixture_s": 0.0,
+   "bucket": "verbatim",
+   "long_cmd": false,
+   "resolve_said": null,
+   "n_prefix_segments": 0,
+   "prefix_used": "",
+   "n_segments": 1,
+   "n_journal": 1,
+   "timed_out": false,
+   "premier_son_s": 0.064,
+   "premier_fait_utile_s": 0.064,
+   "premier_son_audible_s": 0.1222,
+   "premier_fait_utile_audible_s": 0.1222,
+   "lecteur_latence_s": 0.0383,
+   "tete_silence_s": [
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "alice",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0008,
+     "text": "alice"
+    }
+   ]
+  },
+  {
+   "id": "fx24",
+   "cmd": "sudo apt upgrade -y",
+   "exit": 0,
+   "duration_fixture_s": 84.2,
+   "bucket": "resolve",
+   "long_cmd": true,
+   "resolve_said": "12 paquets mis à jour.",
+   "n_prefix_segments": 1,
+   "prefix_used": "Terminé en 1 minute 24. ",
+   "n_segments": 2,
+   "n_journal": 2,
+   "timed_out": false,
+   "premier_son_s": 0.1228,
+   "premier_fait_utile_s": 0.23,
+   "premier_son_audible_s": 0.192,
+   "premier_fait_utile_audible_s": 1.8431,
+   "lecteur_latence_s": 0.0492,
+   "tete_silence_s": [
+    0.02,
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "Terminé en 1 minute 24. 12 paquets mis à jour.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0008,
+     "text": "Terminé en 1 minute 24."
+    },
+    {
+     "t_rel": 0.1218,
+     "text": "12 paquets mis à jour."
+    }
+   ]
+  },
+  {
+   "id": "fx25",
+   "cmd": "sudo apt install nginx",
+   "exit": 100,
+   "duration_fixture_s": 1.3,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "Échec. Verrou dpkg tenu par unattended-upgr, processus 4321.",
+   "n_prefix_segments": 0,
+   "prefix_used": "",
+   "n_segments": 2,
+   "n_journal": 2,
+   "timed_out": false,
+   "premier_son_s": 0.0022,
+   "premier_fait_utile_s": 0.0022,
+   "premier_son_audible_s": 0.0541,
+   "premier_fait_utile_audible_s": 0.0541,
+   "lecteur_latence_s": 0.032,
+   "tete_silence_s": [
+    0.02,
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "Échec. Verrou dpkg tenu par unattended-upgr, processus 4321.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0009,
+     "text": "Échec."
+    },
+    {
+     "t_rel": 0.0009,
+     "text": "Verrou dpkg tenu par unattended-upgr, processus 4321."
+    }
+   ]
+  },
+  {
+   "id": "fx26",
+   "cmd": "pip install requests",
+   "exit": 0,
+   "duration_fixture_s": 4.1,
+   "bucket": "resolve",
+   "long_cmd": true,
+   "resolve_said": "requests 2.32.3 installé, avec 4 dépendances.",
+   "n_prefix_segments": 1,
+   "prefix_used": "Terminé en 4 secondes. ",
+   "n_segments": 2,
+   "n_journal": 2,
+   "timed_out": false,
+   "premier_son_s": 0.1029,
+   "premier_fait_utile_s": 0.3784,
+   "premier_son_audible_s": 0.1603,
+   "premier_fait_utile_audible_s": 1.5085,
+   "lecteur_latence_s": 0.0375,
+   "tete_silence_s": [
+    0.02,
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "Terminé en 4 secondes. requests 2.32.3 installé, avec 4 dépendances.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0005,
+     "text": "Terminé en 4 secondes."
+    },
+    {
+     "t_rel": 0.1015,
+     "text": "requests 2.32.3 installé, avec 4 dépendances."
+    }
+   ]
+  },
+  {
+   "id": "fx27",
+   "cmd": "npm run build",
+   "exit": 1,
+   "duration_fixture_s": 12.5,
+   "bucket": "resolve",
+   "long_cmd": true,
+   "resolve_said": "Échec. Header.tsx ligne 42 : Property titel does not exist on type Props. Did you mean title?",
+   "n_prefix_segments": 1,
+   "prefix_used": "Échec après 13 secondes. ",
+   "n_segments": 3,
+   "n_journal": 3,
+   "timed_out": false,
+   "premier_son_s": 0.1738,
+   "premier_fait_utile_s": 0.6537,
+   "premier_son_audible_s": 0.2368,
+   "premier_fait_utile_audible_s": 1.5548,
+   "lecteur_latence_s": 0.043,
+   "tete_silence_s": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "Échec après 13 secondes. Header.tsx ligne 42 : Property titel does not exist on type Props. Did you mean title?",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0002,
+     "text": "Échec après 13 secondes."
+    },
+    {
+     "t_rel": 0.1692,
+     "text": "Header.tsx ligne 42 : Property titel does not exist on type Props."
+    },
+    {
+     "t_rel": 0.6542,
+     "text": "Did you mean title?"
+    }
+   ]
+  },
+  {
+   "id": "fx28",
+   "cmd": "git push",
+   "exit": 1,
+   "duration_fixture_s": 2.2,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "Échec. Push de main refusé : le distant a des commits absents en local, faire git pull.",
+   "n_prefix_segments": 0,
+   "prefix_used": "",
+   "n_segments": 2,
+   "n_journal": 2,
+   "timed_out": false,
+   "premier_son_s": 0.0025,
+   "premier_fait_utile_s": 0.0025,
+   "premier_son_audible_s": 0.06,
+   "premier_fait_utile_audible_s": 0.06,
+   "lecteur_latence_s": 0.0376,
+   "tete_silence_s": [
+    0.02,
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "Échec. Push de main refusé : le distant a des commits absents en local, faire git pull.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0011,
+     "text": "Échec."
+    },
+    {
+     "t_rel": 0.0011,
+     "text": "Push de main refusé : le distant a des commits absents en local, faire git pull."
+    }
+   ]
+  },
+  {
+   "id": "fx29",
+   "cmd": "lspci",
+   "exit": 0,
+   "duration_fixture_s": 0.1,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "GPU : NVIDIA Corporation GA106 [GeForce RTX 3060 Lite Hash Rate], réseau : Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, chipset : Advanced Micro Devices, Inc. [AMD] Starship/Matisse Root Complex, USB : 2, autres périphériques : 14.",
+   "n_prefix_segments": 0,
+   "prefix_used": "",
+   "n_segments": 4,
+   "n_journal": 4,
+   "timed_out": false,
+   "premier_son_s": 0.1076,
+   "premier_fait_utile_s": 0.1076,
+   "premier_son_audible_s": 0.1697,
+   "premier_fait_utile_audible_s": 0.1697,
+   "lecteur_latence_s": 0.0422,
+   "tete_silence_s": [
+    0.02,
+    0.02,
+    0.02,
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "GPU : NVIDIA Corporation GA106 [GeForce RTX 3060 Lite Hash Rate], réseau : Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, chipset : Advanced Micro Devices, Inc. [AMD] Starship/Matisse Root Complex, USB : 2, autres périphériques : 14.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0006,
+     "text": "GPU :"
+    },
+    {
+     "t_rel": 0.1036,
+     "text": "NVIDIA Corporation GA106 [GeForce RTX 3060 Lite Hash Rate], réseau : Realtek Semiconductor Co., Ltd."
+    },
+    {
+     "t_rel": 0.6346,
+     "text": "RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, chipset : Advanced Micro Devices, Inc."
+    },
+    {
+     "t_rel": 1.3196,
+     "text": "[AMD] Starship/Matisse Root Complex, USB : 2, autres périphériques : 14."
+    }
+   ]
+  },
+  {
+   "id": "fx30",
+   "cmd": "ifconfig",
+   "exit": 0,
+   "duration_fixture_s": 0.1,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "en0 192.168.1.62, utun4 203.0.113.2.",
+   "n_prefix_segments": 0,
+   "prefix_used": "",
+   "n_segments": 2,
+   "n_journal": 2,
+   "timed_out": false,
+   "premier_son_s": 0.0513,
+   "premier_fait_utile_s": 0.0513,
+   "premier_son_audible_s": 0.1123,
+   "premier_fait_utile_audible_s": 0.1123,
+   "lecteur_latence_s": 0.041,
+   "tete_silence_s": [
+    0.02,
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "en0 192.168.1.62, utun4 203.0.113.2.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0009,
+     "text": "en0"
+    },
+    {
+     "t_rel": 0.0509,
+     "text": "192.168.1.62, utun4 203.0.113.2."
+    }
+   ]
+  },
+  {
+   "id": "df_proxmox",
+   "cmd": "df -h",
+   "exit": 0,
+   "duration_fixture_s": 0.1,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "racine : 8.9G libres sur 94G, 91 %. backup-hdd : 134G libres sur 442G, 70 %.",
+   "n_prefix_segments": 0,
+   "prefix_used": "",
+   "n_segments": 3,
+   "n_journal": 3,
+   "timed_out": false,
+   "premier_son_s": 0.0018,
+   "premier_fait_utile_s": 0.0018,
+   "premier_son_audible_s": 0.0598,
+   "premier_fait_utile_audible_s": 0.0598,
+   "lecteur_latence_s": 0.038,
+   "tete_silence_s": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "racine : 8.9G libres sur 94G, 91 %. backup-hdd : 134G libres sur 442G, 70 %.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0007,
+     "text": "racine :"
+    },
+    {
+     "t_rel": 0.0007,
+     "text": "8.9G libres sur 94G, 91 %."
+    },
+    {
+     "t_rel": 0.2887,
+     "text": "backup-hdd : 134G libres sur 442G, 70 %."
+    }
+   ]
+  },
+  {
+   "id": "ip_a_proxmox",
+   "cmd": "ip a",
+   "exit": 0,
+   "duration_fixture_s": 0.1,
+   "bucket": "resolve",
+   "long_cmd": false,
+   "resolve_said": "tailscale0 100.96.222.123, vmbr0 192.168.1.200, pan0 192.168.44.1. Plus 3 réseaux virtuels.",
+   "n_prefix_segments": 0,
+   "prefix_used": "",
+   "n_segments": 3,
+   "n_journal": 3,
+   "timed_out": false,
+   "premier_son_s": 0.0762,
+   "premier_fait_utile_s": 0.0762,
+   "premier_son_audible_s": 0.1387,
+   "premier_fait_utile_audible_s": 0.1387,
+   "lecteur_latence_s": 0.0426,
+   "tete_silence_s": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "coupure_s": 0.0,
+   "spoken_text": "tailscale0 100.96.222.123, vmbr0 192.168.1.200, pan0 192.168.44.1. Plus 3 réseaux virtuels.",
+   "spoken_sentences": [
+    {
+     "t_rel": 0.0007,
+     "text": "tailscale0"
+    },
+    {
+     "t_rel": 0.0747,
+     "text": "100.96.222.123, vmbr0 192.168.1.200, pan0 192.168.44.1."
+    },
+    {
+     "t_rel": 0.7887,
+     "text": "Plus 3 réseaux virtuels."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,548 @@
+{
+ "regime": "cold",
+ "delay": 5.0,
+ "budget": 0,
+ "profile": "generic",
+ "rows": [
+  {
+   "ttft": 33.197,
+   "first_speech": 0.003,
+   "prompt_chars": 3087,
+   "id": "v3-history-qa-0004@fr"
+  },
+  {
+   "ttft": 32.097,
+   "first_speech": 0.003,
+   "prompt_chars": 3038,
+   "id": "v3-history-qa-0004@en"
+  },
+  {
+   "ttft": 34.199,
+   "first_speech": 0.005,
+   "prompt_chars": 3087,
+   "id": "v3-history-qa-0005@fr"
+  },
+  {
+   "ttft": 32.253,
+   "first_speech": 0.003,
+   "prompt_chars": 3038,
+   "id": "v3-history-qa-0005@en"
+  },
+  {
+   "ttft": 13.826,
+   "first_speech": 0.004,
+   "prompt_chars": 946,
+   "id": "v3-history-qa-0010@fr"
+  },
+  {
+   "ttft": 11.385,
+   "first_speech": 0.004,
+   "prompt_chars": 897,
+   "id": "v3-history-qa-0010@en"
+  },
+  {
+   "ttft": 21.979,
+   "first_speech": 0.002,
+   "prompt_chars": 1679,
+   "id": "v3-history-qa-0016@fr"
+  },
+  {
+   "ttft": 20.264,
+   "first_speech": 0.002,
+   "prompt_chars": 1630,
+   "id": "v3-history-qa-0016@en"
+  },
+  {
+   "ttft": 22.066,
+   "first_speech": 0.001,
+   "prompt_chars": 1679,
+   "id": "v3-history-qa-0017@fr"
+  },
+  {
+   "ttft": 20.254,
+   "first_speech": 0.006,
+   "prompt_chars": 1630,
+   "id": "v3-history-qa-0017@en"
+  },
+  {
+   "ttft": 17.923,
+   "first_speech": 0.001,
+   "prompt_chars": 1304,
+   "id": "v3-history-qa-0019@fr"
+  },
+  {
+   "ttft": 16.179,
+   "first_speech": 0.006,
+   "prompt_chars": 1255,
+   "id": "v3-history-qa-0019@en"
+  },
+  {
+   "ttft": 14.521,
+   "first_speech": 0.001,
+   "prompt_chars": 1123,
+   "id": "v3-history-qa-0020@fr"
+  },
+  {
+   "ttft": 12.997,
+   "first_speech": 0.001,
+   "prompt_chars": 1074,
+   "id": "v3-history-qa-0020@en"
+  },
+  {
+   "ttft": 13.692,
+   "first_speech": 0.002,
+   "prompt_chars": 1145,
+   "id": "v3-history-qa-0023@fr"
+  },
+  {
+   "ttft": 11.933,
+   "first_speech": 0.001,
+   "prompt_chars": 1096,
+   "id": "v3-history-qa-0023@en"
+  },
+  {
+   "ttft": 13.964,
+   "first_speech": 0.001,
+   "prompt_chars": 1031,
+   "id": "v3-history-qa-0024@fr"
+  },
+  {
+   "ttft": 12.23,
+   "first_speech": 0.001,
+   "prompt_chars": 982,
+   "id": "v3-history-qa-0024@en"
+  },
+  {
+   "ttft": 12.284,
+   "first_speech": 0.003,
+   "prompt_chars": 942,
+   "id": "v3-history-qa-0028@fr"
+  },
+  {
+   "ttft": 10.345,
+   "first_speech": 0.001,
+   "prompt_chars": 893,
+   "id": "v3-history-qa-0028@en"
+  },
+  {
+   "ttft": 23.417,
+   "first_speech": 0.003,
+   "prompt_chars": 1528,
+   "id": "v3-history-qa-0029@fr"
+  },
+  {
+   "ttft": 21.761,
+   "first_speech": 0.002,
+   "prompt_chars": 1479,
+   "id": "v3-history-qa-0029@en"
+  },
+  {
+   "ttft": 12.38,
+   "first_speech": 0.001,
+   "prompt_chars": 910,
+   "id": "v3-history-qa-0030@fr"
+  },
+  {
+   "ttft": 10.34,
+   "first_speech": 0.002,
+   "prompt_chars": 861,
+   "id": "v3-history-qa-0030@en"
+  },
+  {
+   "ttft": 15.648,
+   "first_speech": 0.004,
+   "prompt_chars": 1140,
+   "id": "v3-history-qa-0031@fr"
+  },
+  {
+   "ttft": 13.691,
+   "first_speech": 0.006,
+   "prompt_chars": 1091,
+   "id": "v3-history-qa-0031@en"
+  },
+  {
+   "ttft": 15.189,
+   "first_speech": 0.001,
+   "prompt_chars": 985,
+   "id": "v3-history-qa-0034@fr"
+  },
+  {
+   "ttft": 12.927,
+   "first_speech": 0.001,
+   "prompt_chars": 936,
+   "id": "v3-history-qa-0034@en"
+  },
+  {
+   "ttft": 21.875,
+   "first_speech": 0.001,
+   "prompt_chars": 1113,
+   "id": "v3-history-qa-0041@fr"
+  },
+  {
+   "ttft": 20.216,
+   "first_speech": 0.003,
+   "prompt_chars": 1064,
+   "id": "v3-history-qa-0041@en"
+  },
+  {
+   "ttft": 20.626,
+   "first_speech": 0.002,
+   "prompt_chars": 1524,
+   "id": "v3-history-qa-0042@fr"
+  },
+  {
+   "ttft": 19.003,
+   "first_speech": 0.004,
+   "prompt_chars": 1475,
+   "id": "v3-history-qa-0042@en"
+  },
+  {
+   "ttft": 26.696,
+   "first_speech": 0.003,
+   "prompt_chars": 1509,
+   "id": "v3-history-qa-0044@fr"
+  },
+  {
+   "ttft": 24.932,
+   "first_speech": 0.001,
+   "prompt_chars": 1460,
+   "id": "v3-history-qa-0044@en"
+  },
+  {
+   "ttft": 15.85,
+   "first_speech": 0.006,
+   "prompt_chars": 1045,
+   "id": "v3-history-qa-0049@fr"
+  },
+  {
+   "ttft": 13.734,
+   "first_speech": 0.001,
+   "prompt_chars": 996,
+   "id": "v3-history-qa-0049@en"
+  },
+  {
+   "ttft": 216.365,
+   "first_speech": 0.006,
+   "prompt_chars": 9579,
+   "id": "v3-history-qa-0052@fr"
+  },
+  {
+   "ttft": 213.576,
+   "first_speech": 0.005,
+   "prompt_chars": 9530,
+   "id": "v3-history-qa-0052@en"
+  },
+  {
+   "ttft": 214.665,
+   "first_speech": 0.006,
+   "prompt_chars": 9579,
+   "id": "v3-history-qa-0053@fr"
+  },
+  {
+   "ttft": 213.221,
+   "first_speech": 0.006,
+   "prompt_chars": 9530,
+   "id": "v3-history-qa-0053@en"
+  },
+  {
+   "ttft": 88.668,
+   "first_speech": 0.005,
+   "prompt_chars": 5206,
+   "id": "v3-history-qa-0054@fr"
+  },
+  {
+   "ttft": 85.787,
+   "first_speech": 0.004,
+   "prompt_chars": 5157,
+   "id": "v3-history-qa-0054@en"
+  },
+  {
+   "ttft": 59.086,
+   "first_speech": 0.005,
+   "prompt_chars": 4515,
+   "id": "v3-history-qa-0055@fr"
+  },
+  {
+   "ttft": 58.462,
+   "first_speech": 0.004,
+   "prompt_chars": 4466,
+   "id": "v3-history-qa-0055@en"
+  },
+  {
+   "ttft": 59.544,
+   "first_speech": 0.004,
+   "prompt_chars": 4515,
+   "id": "v3-history-qa-0056@fr"
+  },
+  {
+   "ttft": 57.23,
+   "first_speech": 0.004,
+   "prompt_chars": 4466,
+   "id": "v3-history-qa-0056@en"
+  },
+  {
+   "ttft": 16.285,
+   "first_speech": 0.001,
+   "prompt_chars": 1276,
+   "id": "v3-history-qa-0058@fr"
+  },
+  {
+   "ttft": 14.802,
+   "first_speech": 0.001,
+   "prompt_chars": 1227,
+   "id": "v3-history-qa-0058@en"
+  },
+  {
+   "ttft": 16.916,
+   "first_speech": 0.001,
+   "prompt_chars": 1276,
+   "id": "v3-history-qa-0059@fr"
+  },
+  {
+   "ttft": 15.028,
+   "first_speech": 0.004,
+   "prompt_chars": 1227,
+   "id": "v3-history-qa-0059@en"
+  },
+  {
+   "ttft": 17.78,
+   "first_speech": 0.001,
+   "prompt_chars": 1333,
+   "id": "v3-history-qa-0062@fr"
+  },
+  {
+   "ttft": 16.213,
+   "first_speech": 0.001,
+   "prompt_chars": 1284,
+   "id": "v3-history-qa-0062@en"
+  },
+  {
+   "ttft": 24.188,
+   "first_speech": 0.002,
+   "prompt_chars": 1775,
+   "id": "v3-history-qa-0067@fr"
+  },
+  {
+   "ttft": 22.622,
+   "first_speech": 0.002,
+   "prompt_chars": 1726,
+   "id": "v3-history-qa-0067@en"
+  },
+  {
+   "ttft": 31.059,
+   "first_speech": 0.006,
+   "prompt_chars": 2390,
+   "id": "v3-history-qa-0069@fr"
+  },
+  {
+   "ttft": 29.71,
+   "first_speech": 0.002,
+   "prompt_chars": 2341,
+   "id": "v3-history-qa-0069@en"
+  },
+  {
+   "ttft": 16.4,
+   "first_speech": 0.001,
+   "prompt_chars": 1309,
+   "id": "v3-history-qa-0079@fr"
+  },
+  {
+   "ttft": 14.879,
+   "first_speech": 0.001,
+   "prompt_chars": 1260,
+   "id": "v3-history-qa-0079@en"
+  },
+  {
+   "ttft": 14.436,
+   "first_speech": 0.001,
+   "prompt_chars": 933,
+   "id": "v3-history-qa-0080@fr"
+  },
+  {
+   "ttft": 12.715,
+   "first_speech": 0.003,
+   "prompt_chars": 884,
+   "id": "v3-history-qa-0080@en"
+  },
+  {
+   "ttft": 14.9,
+   "first_speech": 0.001,
+   "prompt_chars": 1117,
+   "id": "v3-history-qa-0082@fr"
+  },
+  {
+   "ttft": 13.484,
+   "first_speech": 0.001,
+   "prompt_chars": 1068,
+   "id": "v3-history-qa-0082@en"
+  },
+  {
+   "ttft": 13.103,
+   "first_speech": 0.001,
+   "prompt_chars": 1040,
+   "id": "v3-history-qa-0083@fr"
+  },
+  {
+   "ttft": 11.996,
+   "first_speech": 0.002,
+   "prompt_chars": 991,
+   "id": "v3-history-qa-0083@en"
+  },
+  {
+   "ttft": 14.299,
+   "first_speech": 0.004,
+   "prompt_chars": 985,
+   "id": "v3-history-qa-0084@fr"
+  },
+  {
+   "ttft": 13.419,
+   "first_speech": 0.001,
+   "prompt_chars": 936,
+   "id": "v3-history-qa-0084@en"
+  },
+  {
+   "ttft": 25.274,
+   "first_speech": 0.002,
+   "prompt_chars": 1795,
+   "id": "v3-history-qa-0086@fr"
+  },
+  {
+   "ttft": 23.604,
+   "first_speech": 0.002,
+   "prompt_chars": 1746,
+   "id": "v3-history-qa-0086@en"
+  },
+  {
+   "ttft": 25.453,
+   "first_speech": 0.005,
+   "prompt_chars": 1795,
+   "id": "v3-history-qa-0087@fr"
+  },
+  {
+   "ttft": 23.739,
+   "first_speech": 0.002,
+   "prompt_chars": 1746,
+   "id": "v3-history-qa-0087@en"
+  },
+  {
+   "ttft": 13.687,
+   "first_speech": 0.001,
+   "prompt_chars": 934,
+   "id": "v3-history-qa-0088@fr"
+  },
+  {
+   "ttft": 11.892,
+   "first_speech": 0.001,
+   "prompt_chars": 885,
+   "id": "v3-history-qa-0088@en"
+  },
+  {
+   "ttft": 16.385,
+   "first_speech": 0.001,
+   "prompt_chars": 1301,
+   "id": "v3-history-qa-0089@fr"
+  },
+  {
+   "ttft": 14.833,
+   "first_speech": 0.004,
+   "prompt_chars": 1252,
+   "id": "v3-history-qa-0089@en"
+  },
+  {
+   "ttft": 13.699,
+   "first_speech": 0.005,
+   "prompt_chars": 982,
+   "id": "v3-history-qa-0093@fr"
+  },
+  {
+   "ttft": 12.218,
+   "first_speech": 0.004,
+   "prompt_chars": 933,
+   "id": "v3-history-qa-0093@en"
+  },
+  {
+   "ttft": 15.001,
+   "first_speech": 0.003,
+   "prompt_chars": 983,
+   "id": "v3-history-qa-0095@fr"
+  },
+  {
+   "ttft": 13.228,
+   "first_speech": 0.001,
+   "prompt_chars": 934,
+   "id": "v3-history-qa-0095@en"
+  },
+  {
+   "ttft": 15.88,
+   "first_speech": 0.005,
+   "prompt_chars": 1185,
+   "id": "v3-history-qa-0096@fr"
+  },
+  {
+   "ttft": 14.633,
+   "first_speech": 0.001,
+   "prompt_chars": 1136,
+   "id": "v3-history-qa-0096@en"
+  },
+  {
+   "ttft": 15.358,
+   "first_speech": 0.001,
+   "prompt_chars": 1100,
+   "id": "v3-history-qa-0100@fr"
+  },
+  {
+   "ttft": 13.563,
+   "first_speech": 0.001,
+   "prompt_chars": 1051,
+   "id": "v3-history-qa-0100@en"
+  },
+  {
+   "ttft": 19.658,
+   "first_speech": 0.001,
+   "prompt_chars": 1411,
+   "id": "v3-history-qa-0101@fr"
+  },
+  {
+   "ttft": 17.476,
+   "first_speech": 0.001,
+   "prompt_chars": 1362,
+   "id": "v3-history-qa-0101@en"
+  },
+  {
+   "ttft": 13.567,
+   "first_speech": 0.001,
+   "prompt_chars": 993,
+   "id": "v3-history-qa-0103@fr"
+  },
+  {
+   "ttft": 12.159,
+   "first_speech": 0.003,
+   "prompt_chars": 944,
+   "id": "v3-history-qa-0103@en"
+  },
+  {
+   "ttft": 15.049,
+   "first_speech": 0.005,
+   "prompt_chars": 1205,
+   "id": "v3-history-qa-0105@fr"
+  },
+  {
+   "ttft": 13.963,
+   "first_speech": 0.001,
+   "prompt_chars": 1156,
+   "id": "v3-history-qa-0105@en"
+  },
+  {
+   "ttft": 17.236,
+   "first_speech": 0.003,
+   "prompt_chars": 1221,
+   "id": "v3-history-qa-0110@fr"
+  },
+  {
+   "ttft": 15.994,
+   "first_speech": 0.001,
+   "prompt_chars": 1172,
+   "id": "v3-history-qa-0110@en"
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+[project]
+name = "steph"
+version = "0.1.0"
+description = "Terminal parlant pour personnes malvoyantes (proxy shell + LLM local + Piper)"
+readme = "README.md"
+license = "LicenseRef-PolyForm-Noncommercial-1.0.0"
+license-files = ["LICENSE.md", "COMMERCIAL.md"]
+authors = [
+    { name = "Luis Parra", email = "luis@lsmdx.com" }
+]
+maintainers = [
+    { name = "Luis Parra", email = "luis@lsmdx.com" }
+]
+requires-python = ">=3.13"
+keywords = ["accessibility", "screen-reader", "terminal", "tts", "llm", "blind", "visually-impaired", "llama.cpp", "piper"]
+# pas de classifier « License :: » : PEP 639, la licence est portée par `license`
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: Developers",
+    "Natural Language :: French",
+    "Operating System :: MacOS",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Adaptive Technologies",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+    "Topic :: System :: Shells",
+    "Topic :: Terminals",
+]
+dependencies = [
+    "piper-tts>=1.8.0",
+]
+
+[project.urls]
+Homepage = "https://steph.lsmdx.com"
+Source = "https://github.com/tutozz/steph"
+Issues = "https://github.com/tutozz/steph/issues"
+"Commercial license" = "https://github.com/tutozz/steph/blob/master/COMMERCIAL.md"
+
+[build-system]
+requires = ["uv_build>=0.8.22,<0.9.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pyte>=0.8.2",
+    "pytest>=9.1.1",
+]
+
+[project.scripts]
+steph = "steph.cli:main"

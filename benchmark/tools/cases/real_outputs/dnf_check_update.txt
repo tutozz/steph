@@ -1,0 +1,30 @@
+xen-licenses.x86_64                              4.21.2-1.fc44                   updates
+xfsprogs.x86_64                                  7.1.1-1.fc44                    updates
+xorg-x11-drv-nvidia.x86_64                       3:610.57.04-1.fc44              rpmfusion-nonfree-updates
+xorg-x11-drv-nvidia.x86_64                       3:610.57.04-1.fc44              rpmfusion-nonfree-nvidia-driver
+xorg-x11-drv-nvidia-cuda.x86_64                  3:610.57.04-1.fc44              rpmfusion-nonfree-updates
+xorg-x11-drv-nvidia-cuda.x86_64                  3:610.57.04-1.fc44              rpmfusion-nonfree-nvidia-driver
+xorg-x11-drv-nvidia-cuda-libs.x86_64             3:610.57.04-1.fc44              rpmfusion-nonfree-updates
+xorg-x11-drv-nvidia-cuda-libs.x86_64             3:610.57.04-1.fc44              rpmfusion-nonfree-nvidia-driver
+xorg-x11-drv-nvidia-kmodsrc.x86_64               3:610.57.04-1.fc44              rpmfusion-nonfree-updates
+xorg-x11-drv-nvidia-kmodsrc.x86_64               3:610.57.04-1.fc44              rpmfusion-nonfree-nvidia-driver
+xorg-x11-drv-nvidia-libs.x86_64                  3:610.57.04-1.fc44              rpmfusion-nonfree-updates
+xorg-x11-drv-nvidia-libs.x86_64                  3:610.57.04-1.fc44              rpmfusion-nonfree-nvidia-driver
+xorg-x11-drv-nvidia-power.x86_64                 3:610.57.04-1.fc44              rpmfusion-nonfree-updates
+xorg-x11-drv-nvidia-power.x86_64                 3:610.57.04-1.fc44              rpmfusion-nonfree-nvidia-driver
+xorg-x11-server-Xwayland.x86_64                  24.1.13-1.fc44                  updates
+xorriso.x86_64                                   1.5.8-2.fc44                    updates
+xwayland-satellite.x86_64                        0.8.2-1.fc44                    updates
+xxd.x86_64                                       2:9.2.967-1.fc44                updates
+yelp.x86_64                                      2:49.2-1.fc44                   updates
+yelp-libs.x86_64                                 2:49.2-1.fc44                   updates
+yubikey-manager.noarch                           5.9.2-1.20260630git60ab055.fc44 updates
+zchunk-libs.x86_64                               1.5.4-1.fc44                    updates
+zsh.x86_64                                       5.9-21.fc44                     updates
+
+Obsoleting packages
+fwupd.x86_64                                     2.1.7-1.fc44                    updates
+    fwupd.x86_64                                 2.1.3-1.fc44                    updates
+    fwupd-plugin-flashrom.x86_64                 2.1.3-1.fc44                    updates
+kernel-headers.x86_64                            7.1.3-200.fc44                  updates
+    kernel-headers.x86_64                        7.0.6-200.fc44                  updates

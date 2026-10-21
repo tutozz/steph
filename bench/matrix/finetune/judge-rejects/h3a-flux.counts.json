@@ -1,0 +1,10 @@
+{
+  "machine": "h3a-flux",
+  "judged": 12,
+  "verdicts": {
+    "ok": 11,
+    "douteux": 1
+  },
+  "rejected": 0,
+  "categories": {}
+}

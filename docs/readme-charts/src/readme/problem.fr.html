@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;600&display=block">
+<link rel="stylesheet" href="../readme-brand.css">
+<style>body { background: rgb(255, 0, 254); }</style><style>
+.chev { display: inline-grid; }
+.chev i { display: block; }
+.who .sq { width: 14px; height: 14px; background: var(--black); flex: none; }
+.arrow { color: var(--neutral); }
+</style>
+</head><body><div class="card">
+<span class="tag">Le problème</span>
+<h1>Un lecteur d'écran lit 35 lignes.<br><em>steph dit une phrase.</em></h1>
+<div class="pb">
+  <div>
+    <div class="label">Lecteur d'écran · 35 lignes</div>
+    <div class="term wall"><div class="cmd">lspci</div><div class="rows35"><i style="width:50%"></i><i style="width:53%"></i><i style="width:85%"></i><i style="width:56%"></i><i style="width:56%"></i><i style="width:85%"></i><i style="width:53%"></i><i style="width:50%"></i><i style="width:76%"></i><i style="width:86%"></i><i style="width:80%"></i><i style="width:58%"></i><i style="width:65%"></i><i style="width:56%"></i><i style="width:76%"></i><i style="width:80%"></i><i style="width:68%"></i><i style="width:85%"></i><i style="width:86%"></i><i style="width:71%"></i><i style="width:85%"></i><i style="width:83%"></i><i style="width:65%"></i><i style="width:76%"></i><i style="width:71%"></i><i style="width:50%"></i><i style="width:58%"></i><i style="width:50%"></i><i style="width:71%"></i><i style="width:76%"></i><i style="width:65%"></i><i style="width:83%"></i><i style="width:85%"></i><i style="width:71%"></i><i style="width:86%"></i></div></div>
+  </div>
+  <svg class="ico arrow" width="28" height="28" viewBox="0 0 24 24"><path d="M3 12h16"/><path d="M13 6l6 6-6 6"/></svg>
+  <div>
+    <div class="label">steph · une phrase</div>
+    <div class="say one"><div class="who"><span class="sq"></span>steph dit</div><div class="q" style="font-size:23px">« GPU : NVIDIA Corporation GA106 [GeForce RTX 3060 Lite Hash Rate], réseau : Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, chipset : Advanced Micro Devices, Inc. [AMD] Starship/Matisse Root Complex, USB : 2, autres périphériques : 14. »</div></div>
+  </div>
+</div>
+<style>
+.pb { display: grid; grid-template-columns: 312px 28px 1fr; gap: 18px; align-items: center; margin-top: 28px; }
+.pb .label { margin-bottom: 10px; }
+.wall { padding: 14px 18px 16px; }
+.rows35 { display: grid; gap: 3px; margin-top: 10px; }
+.rows35 i { display: block; height: 3px; background: var(--neutral); }
+.one { padding: 22px 24px 24px; }
+.one .q { margin-top: 12px; }
+</style></div></body></html>

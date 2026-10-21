@@ -1,0 +1,35 @@
+{
+ "model": "judged-gemma-270m-s42-Q8_0",
+ "quant": "Q8_0",
+ "train_seed": 42,
+ "data": "mix-judged (train 1771, val 102)",
+ "train": {
+  "best_val": 0.22258155887777156,
+  "best_epoch": 3.0,
+  "train_s": 258.0,
+  "vram_peak_mb": 2633,
+  "args": {
+   "mode": "lora",
+   "rank": 16,
+   "alpha": 32,
+   "lr": 0.0002,
+   "epochs": 3.0,
+   "targets": "attn-mlp",
+   "seed": 42,
+   "gc": true
+  }
+ },
+ "bench": "cases_ft.json (prompt système court, qa inchangés), parallel 1, repeat_penalty 1.1, graines 42 7 123",
+ "summary": {
+  "total": 76.7,
+  "tune": 88.1,
+  "holdout": 60.7,
+  "resume": 83.6,
+  "par_graine_total": [
+   77.8,
+   77.9,
+   74.3
+  ],
+  "ligne_non_ancree": "0/108"
+ }
+}

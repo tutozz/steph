@@ -1,0 +1,21 @@
+essai	modele	variante	tune	holdout	note
+0	qwen3-0.6b-q8	p0	47.6	20.0	test initial manuel --maxc 800
+1	qwen3.5-0.8b-q8	p0	51.4	40.0	grille auto --maxc 800
+2	qwen3.5-0.8b-q8	p1	69.5	48.3	grille auto --maxc 800
+3	qwen3.5-0.8b-q8	p2	59.5	46.7	grille auto --maxc 800
+4	granite4h-350m-q4km	p0	18.1	13.7	grille auto --maxc 800
+5	granite4h-350m-q4km	p1	21.4	6.7	grille auto --maxc 800
+6	granite4h-350m-q4km	p2	52.9	36.7	grille auto --maxc 800
+7	smollm2-360m-q8	p0	21.0	14.7	grille auto --maxc 800
+8	smollm2-360m-q8	p1	54.8	45.3	grille auto --maxc 800
+9	smollm2-360m-q8	p2	54.8	42.7	grille auto --maxc 800
+10	luth-lfm2-700m-q8	p0	60.5	54.0	grille auto --maxc 800
+11	luth-lfm2-700m-q8	p1	71.9	52.7	grille auto --maxc 800
+12	luth-lfm2-700m-q8	p2	71.9	53.7	grille auto --maxc 800
+13	falcon-h1-0.5b-q4km	p0	46.7	31.3	grille auto --maxc 800
+14	falcon-h1-0.5b-q4km	p1	26.2	32.0	grille auto --maxc 800
+15	falcon-h1-0.5b-q4km	p2	82.4	50.7	grille auto --maxc 800
+16	qwen3.5-0.8b-q6k	p0	45.2	33.3	grille auto --maxc 800
+17	qwen3.5-0.8b-q6k	p1	66.2	51.7	grille auto --maxc 800
+18	qwen3.5-0.8b-q6k	p2	64.3	56.7	grille auto --maxc 800
+19	qwen3.5-0.8b-q4_0	p0	52.4	35.3	grille auto --maxc 800 (ligne manquante, run complet 36/36, ajoutee apres coup)

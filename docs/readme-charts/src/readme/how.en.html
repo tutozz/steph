@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;600&display=block">
+<link rel="stylesheet" href="../readme-brand.css">
+<style>body { background: rgb(255, 0, 254); }</style><style>
+.chev { display: inline-grid; }
+.chev i { display: block; }
+.who .sq { width: 14px; height: 14px; background: var(--black); flex: none; }
+.arrow { color: var(--neutral); }
+</style>
+</head><body><div class="card">
+<span class="tag">How it works</span>
+<h1>Rules first.<br><em>The model only when needed.</em></h1>
+<div class="flow">
+  <div class="nd panel"><b>Your shell</b><span>zsh, bash</span></div>
+  <svg class="link" viewBox="0 0 24 100" preserveAspectRatio="none"><path d="M0 50H24" vector-effect="non-scaling-stroke"/></svg>
+  <div class="nd panel"><b>Cleaner</b><span>ANSI, progress bars</span></div>
+  <svg class="link" viewBox="0 0 24 100" preserveAspectRatio="none"><path d="M0 50H8V25H24M8 50V75H24" vector-effect="non-scaling-stroke"/></svg>
+  <div class="mid">
+    <div class="nd rules"><b>Rules · instant</b>
+      <span>empty → “OK”<br>code 127 → “Command not found”</span></div>
+    <div class="nd panel"><b>Local LLM</b><span>long output, errors, questions</span></div>
+  </div>
+  <svg class="link" viewBox="0 0 24 100" preserveAspectRatio="none"><path d="M0 25H16V75H0M16 50H24" vector-effect="non-scaling-stroke"/></svg>
+  <div class="nd say voice"><b>Piper</b><span>the voice, sentence by sentence</span></div>
+</div>
+<style>
+.flow { display: grid; grid-template-columns: 132px 16px 140px 24px 1fr 24px 150px; align-items: center; margin-top: 30px; }
+.link { align-self: stretch; width: 100%; height: 100%; fill: none; stroke: var(--neutral); stroke-width: 2; }
+.mid { display: grid; gap: 16px; }
+.nd { padding: 12px 12px 14px; }
+.nd b { display: block; font-size: 20px; font-weight: 700; line-height: 1.2; }
+.nd span { display: block; margin-top: 6px; font-size: 19px; line-height: 1.3; color: var(--soft); }
+.rules { background: var(--surface); border: 2px solid var(--offwhite); }
+.voice span { color: var(--black); }
+</style></div></body></html>

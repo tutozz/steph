@@ -1,0 +1,15 @@
+Sur la branche master
+
+Aucun commit
+
+Fichiers non suivis:
+  (utilisez "git add <fichier>..." pour inclure dans ce qui sera validé)
+	.python-version
+	README.md
+	bench/
+	pyproject.toml
+	src/
+	uv.lock
+	vendor/
+
+aucune modification ajoutée à la validation mais des fichiers non suivis sont présents (utilisez "git add" pour les suivre)

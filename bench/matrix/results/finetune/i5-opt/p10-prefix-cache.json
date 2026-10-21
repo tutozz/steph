@@ -1,0 +1,100 @@
+{
+ "granite": {
+  "label": "granite-soup-Q4_K_M",
+  "user_full_chars": 1830,
+  "user_partial_chars": 920,
+  "cold_full": {
+   "wall_s": 3.241,
+   "timings": {
+    "cache_n": 0,
+    "prompt_n": 612,
+    "prompt_ms": 2840.9,
+    "prompt_per_token_ms": 4.6419934640522875,
+    "prompt_per_second": 215.42468935900595,
+    "predicted_n": 24,
+    "predicted_ms": 366.809,
+    "predicted_per_token_ms": 15.948217391304349,
+    "predicted_per_second": 62.70293258889503
+   },
+   "text": "29 éléments : xen-licenses.x86_64, xfsprogs.x86_64, xorg-x"
+  },
+  "primed_partial": {
+   "wall_s": 1.868,
+   "timings": {
+    "cache_n": 0,
+    "prompt_n": 390,
+    "prompt_ms": 1828.213,
+    "prompt_per_token_ms": 4.687725641025641,
+    "prompt_per_second": 213.32306465384505,
+    "predicted_n": 1,
+    "predicted_ms": 0.001,
+    "predicted_per_token_ms": 0.0,
+    "predicted_per_second": 0.0
+   }
+  },
+  "primed_full": {
+   "wall_s": 2.759,
+   "timings": {
+    "cache_n": 99,
+    "prompt_n": 513,
+    "prompt_ms": 2381.095,
+    "prompt_per_token_ms": 4.641510721247563,
+    "prompt_per_second": 215.44709471902635,
+    "predicted_n": 24,
+    "predicted_ms": 365.662,
+    "predicted_per_token_ms": 15.898347826086956,
+    "predicted_per_second": 62.89961767971515
+   },
+   "text": "29 éléments : xen-licenses.x86_64, xfsprogs.x86_64, xorg-x"
+  }
+ },
+ "gemma": {
+  "label": "gemma-s42-Q4_K_M",
+  "user_full_chars": 1830,
+  "user_partial_chars": 920,
+  "cold_full": {
+   "wall_s": 2.334,
+   "timings": {
+    "cache_n": 0,
+    "prompt_n": 735,
+    "prompt_ms": 1970.556,
+    "prompt_per_token_ms": 2.6810285714285715,
+    "prompt_per_second": 372.9911760944627,
+    "predicted_n": 24,
+    "predicted_ms": 346.784,
+    "predicted_per_token_ms": 15.077565217391305,
+    "predicted_per_second": 66.32370582264464
+   },
+   "text": "29 éléments : xen-licenses.x86_64, xorg-x11-drv-"
+  },
+  "primed_partial": {
+   "wall_s": 1.189,
+   "timings": {
+    "cache_n": 0,
+    "prompt_n": 449,
+    "prompt_ms": 1168.181,
+    "prompt_per_token_ms": 2.601739420935412,
+    "prompt_per_second": 384.3582458540243,
+    "predicted_n": 1,
+    "predicted_ms": 0.001,
+    "predicted_per_token_ms": 0.0,
+    "predicted_per_second": 0.0
+   }
+  },
+  "primed_full": {
+   "wall_s": 1.336,
+   "timings": {
+    "cache_n": 444,
+    "prompt_n": 291,
+    "prompt_ms": 976.847,
+    "prompt_per_token_ms": 3.3568625429553265,
+    "prompt_per_second": 297.8972142003814,
+    "predicted_n": 24,
+    "predicted_ms": 349.917,
+    "predicted_per_token_ms": 15.21378260869565,
+    "predicted_per_second": 65.72987308418854
+   },
+   "text": "29 éléments : xen-licenses.x86_64, xorg-x11-drv-"
+  }
+ }
+}

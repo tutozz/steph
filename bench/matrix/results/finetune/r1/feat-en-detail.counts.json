@@ -1,0 +1,18 @@
+{
+  "machine": "detail-en",
+  "judged": 307,
+  "verdicts": {
+    "ok": 246,
+    "invention": 30,
+    "douteux": 30,
+    "erreur": 1
+  },
+  "rejected": 30,
+  "categories": {
+    "ligne": 7,
+    "statut": 4,
+    "nombre": 15,
+    "cause": 8,
+    "nom": 5
+  }
+}

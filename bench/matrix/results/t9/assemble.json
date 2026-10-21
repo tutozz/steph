@@ -1,0 +1,37 @@
+{
+ "detail": {
+  "rows": 786,
+  "t9": 784,
+  "kept_x4": 2,
+  "rejected": 2,
+  "unlabeled": 0
+ },
+ "progress": {
+  "rows": 151,
+  "t9": 135,
+  "kept_x4": 16,
+  "rejected": 16,
+  "unlabeled": 0
+ },
+ "fr_summary": {
+  "rows": 3538,
+  "t9": 3538,
+  "kept_x4": 0,
+  "rejected": 0,
+  "unlabeled": 0
+ },
+ "en_summary": {
+  "rows": 559,
+  "t9": 559,
+  "kept_x4": 0,
+  "rejected": 0,
+  "unlabeled": 0
+ },
+ "qa": {
+  "rows": 186,
+  "t9": 107,
+  "kept_x4": 79,
+  "rejected": 6,
+  "unlabeled": 0
+ }
+}

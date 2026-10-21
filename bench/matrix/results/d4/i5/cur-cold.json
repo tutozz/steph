@@ -1,0 +1,170 @@
+{
+ "regime": "cold",
+ "delay": 5.0,
+ "budget": 0,
+ "profile": "generic",
+ "qa_tools": false,
+ "seed": 7,
+ "rows": [
+  {
+   "out": "Deux tests échoués.",
+   "ttft": 30.497,
+   "first_speech": 0.004,
+   "said": "Je regarde l'historique. Deux tests échoués.",
+   "prompt_chars": 3087,
+   "id": "v3-history-qa-0004@fr"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 12.886,
+   "first_speech": 0.005,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "prompt_chars": 946,
+   "id": "v3-history-qa-0010@fr"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 21.482,
+   "first_speech": 0.006,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "prompt_chars": 1679,
+   "id": "v3-history-qa-0017@fr"
+  },
+  {
+   "out": "select name from products where stock = 0.",
+   "ttft": 14.465,
+   "first_speech": 0.003,
+   "said": "Je regarde l'historique. select name from products where stock = 0.",
+   "prompt_chars": 1123,
+   "id": "v3-history-qa-0020@fr"
+  },
+  {
+   "out": "SyntaxError ligne 4, expected ':'.",
+   "ttft": 13.618,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. SyntaxError ligne 4, expected ':'.",
+   "prompt_chars": 1031,
+   "id": "v3-history-qa-0024@fr"
+  },
+  {
+   "out": "Huit fichiers objets construits.",
+   "ttft": 23.237,
+   "first_speech": 0.004,
+   "said": "Je regarde l'historique. Huit fichiers objets construits.",
+   "prompt_chars": 1528,
+   "id": "v3-history-qa-0029@fr"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 15.461,
+   "first_speech": 0.003,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "prompt_chars": 1140,
+   "id": "v3-history-qa-0031@fr"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 21.614,
+   "first_speech": 0.005,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "prompt_chars": 1113,
+   "id": "v3-history-qa-0041@fr"
+  },
+  {
+   "out": "Taille libg.a : 9.1K.",
+   "ttft": 26.273,
+   "first_speech": 0.005,
+   "said": "Je regarde l'historique. Taille libg.a : 9.1K.",
+   "prompt_chars": 1509,
+   "id": "v3-history-qa-0044@fr"
+  },
+  {
+   "out": "420 lignes.",
+   "ttft": 208.304,
+   "first_speech": 0.005,
+   "said": "Je regarde l'historique. 420 lignes.",
+   "prompt_chars": 9579,
+   "id": "v3-history-qa-0052@fr"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 85.226,
+   "first_speech": 0.005,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "prompt_chars": 5206,
+   "id": "v3-history-qa-0054@fr"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 57.407,
+   "first_speech": 0.004,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "prompt_chars": 4515,
+   "id": "v3-history-qa-0056@fr"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 16.54,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "prompt_chars": 1276,
+   "id": "v3-history-qa-0059@fr"
+  },
+  {
+   "out": "Erreur ENOENT config.json. Fichier manquant.",
+   "ttft": 23.657,
+   "first_speech": 0.002,
+   "said": "Je regarde l'historique. Erreur ENOENT config.json. Fichier manquant.",
+   "prompt_chars": 1775,
+   "id": "v3-history-qa-0067@fr"
+  },
+  {
+   "out": "Dune Hyperion.",
+   "ttft": 15.985,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Dune Hyperion.",
+   "prompt_chars": 1309,
+   "id": "v3-history-qa-0079@fr"
+  },
+  {
+   "out": "354 formules installées.",
+   "ttft": 14.714,
+   "first_speech": 0.006,
+   "said": "Je regarde l'historique. 354 formules installées.",
+   "prompt_chars": 1117,
+   "id": "v3-history-qa-0082@fr"
+  },
+  {
+   "out": "B-220, C-310, E-512.",
+   "ttft": 14.036,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. B-220, C-310, E-512.",
+   "prompt_chars": 985,
+   "id": "v3-history-qa-0084@fr"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 24.641,
+   "first_speech": 0.002,
+   "said": "Je regarde l'historique. Pas dans l'historique.",
+   "prompt_chars": 1795,
+   "id": "v3-history-qa-0087@fr"
+  },
+  {
+   "out": "Deux erreurs. Ligne 12: conversion pointeur entier. Ligne 13: fonction queue_pop non déclarée.",
+   "ttft": 16.025,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. Deux erreurs. Ligne 12: conversion pointeur entier. Ligne 13: fonction queue_pop non déclarée.",
+   "prompt_chars": 1301,
+   "id": "v3-history-qa-0089@fr"
+  },
+  {
+   "out": "port 5432 vs 5433. timeout 30 vs 60..",
+   "ttft": 14.684,
+   "first_speech": 0.001,
+   "said": "Je regarde l'historique. port 5432 vs 5433. timeout 30 vs 60..",
+   "prompt_chars": 983,
+   "id": "v3-history-qa-0095@fr"
+  }
+ ]
+}

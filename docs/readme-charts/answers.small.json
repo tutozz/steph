@@ -1,0 +1,183 @@
+{
+ "model": "steph-speak-granite-4.0-h-350M-sft-v2.0-Q4_K_M.gguf",
+ "sha256": "0a4b8f42884a6cc87ac8958528f7c1f95bc702f08b3cb0ee7ea32063e1717199",
+ "settings": "phrase brute du modèle (champ out) et après garde-fou d'ancrage (champ grounded) ; chemin de production sans la résolution en code : condensé 587 caractères, bloc de faits ; température 0, graine 42, llama-server --cache-ram 0 ; champ said : ce que steph dit en production, steph.digest.resolve() pour les résumés (ces quatre sorties sont résolues en code, sans appel au modèle), sortie du garde-fou d'ancrage pour les questions. Questions (qa_pip, qa_py) : flux de production de steph.server._ask (Narrator.qa_messages profil finetuned, dossier actuel en tête de question, température 0,3, 400 jetons, clean_llm_text, ground_stream), graine 42 ajoutée pour rejouer, llama-server --cache-ram 0, script docs/readme-charts/ask_demo.py, session du banc bench/fixtures.json : git push, docker ps, pip install requests, df -h",
+ "rows": [
+  {
+   "fixture": "fx27",
+   "out": "Header.tsx ligne 42 : titel inexistant.",
+   "grounded": "Header.tsx ligne 42 : titel inexistant.",
+   "said": "Échec. Header.tsx ligne 42 : Property titel does not exist on type Props. Did you mean title?"
+  },
+  {
+   "fixture": "fx24",
+   "out": "Le système a mis à jour 12 paquets.",
+   "grounded": "Le système a mis à jour 12 paquets.",
+   "said": "12 paquets mis à jour."
+  },
+  {
+   "fixture": "fx25",
+   "out": "dpkg.lock-frontend : processus 4321, autre processus.",
+   "grounded": "autre processus.",
+   "said": "Échec. Verrou dpkg tenu par unattended-upgr, processus 4321."
+  },
+  {
+   "fixture": "fx29",
+   "out": "GPU NVIDIA GA106, réseau Realtek RTL8111, chipset AMD Starship, USB 1.",
+   "grounded": "GPU NVIDIA GA106, réseau Realtek RTL8111, chipset AMD Starship, USB 1.",
+   "said": "GPU : NVIDIA Corporation GA106 [GeForce RTX 3060 Lite Hash Rate], réseau : Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, chipset : Advanced Micro Devices, Inc. [AMD] Starship/Matisse Root Complex, USB : 2, autres périphériques : 14."
+  },
+  {
+   "fixture": "qa_pip",
+   "session": [
+    "git push",
+    "docker ps",
+    "pip install requests",
+    "df -h"
+   ],
+   "question": "Quelle version de requests a été installée ?",
+   "out": "requests-2.32.3",
+   "grounded": "requests-2.32.3.",
+   "said": "requests-2.32.3."
+  },
+  {
+   "fixture": "qa_py",
+   "session": [
+    "git push",
+    "docker ps",
+    "pip install requests",
+    "df -h"
+   ],
+   "question": "Quelle version de Python est installée ?",
+   "out": "Pas dans l'historique.",
+   "grounded": "Pas dans l'historique.",
+   "said": "Pas dans l'historique."
+  },
+  {
+   "fixture": "qa_pip_en",
+   "session": [
+    "git push",
+    "docker ps",
+    "pip install requests",
+    "df -h"
+   ],
+   "question": "Which version of requests was installed?",
+   "out": "requests-2.32.3",
+   "grounded": "requests-2.32.3.",
+   "said": "requests-2.32.3.",
+   "language": "en"
+  },
+  {
+   "fixture": "fx29_en",
+   "out": null,
+   "grounded": null,
+   "said": "GPU: NVIDIA Corporation GA106 [GeForce RTX 3060 Lite Hash Rate], network: Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, chipset: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Root Complex, USB: 2, other devices: 14.",
+   "language": "en"
+  },
+  {
+   "fixture": "fx29_fr_current",
+   "out": null,
+   "grounded": null,
+   "said": "GPU : NVIDIA Corporation GA106 [GeForce RTX 3060 Lite Hash Rate], réseau : Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, chipset : Advanced Micro Devices, Inc. [AMD] Starship/Matisse Root Complex, USB : 2, autres périphériques : 14.",
+   "language": "fr"
+  }
+ ],
+ "questions_tried": [
+  {
+   "session": "A",
+   "commands": [
+    "npm run build",
+    "sudo apt upgrade -y",
+    "sudo apt install nginx",
+    "df -h"
+   ],
+   "question": "Pourquoi le build a échoué ?",
+   "out": "Componente Header.tsx ligne 42 : propriétaire title inexistant.",
+   "grounded": "Componente Header.tsx ligne 42 : propriétaire title inexistant."
+  },
+  {
+   "session": "A",
+   "commands": [
+    "npm run build",
+    "sudo apt upgrade -y",
+    "sudo apt install nginx",
+    "df -h"
+   ],
+   "question": "Combien de paquets ont été mis à jour ?",
+   "out": "12 paquets mis à jour.",
+   "grounded": "12 paquets mis à jour."
+  },
+  {
+   "session": "A",
+   "commands": [
+    "npm run build",
+    "sudo apt upgrade -y",
+    "sudo apt install nginx",
+    "df -h"
+   ],
+   "question": "Pourquoi l'installation de nginx a échoué ?",
+   "out": "Fichier non trouvé. Commande : apt install nginx",
+   "grounded": "Fichier non trouvé. Commande : apt install nginx."
+  },
+  {
+   "session": "A",
+   "commands": [
+    "npm run build",
+    "sudo apt upgrade -y",
+    "sudo apt install nginx",
+    "df -h"
+   ],
+   "question": "Il reste combien de place sur le disque ?",
+   "out": "/tmp 16G libre.",
+   "grounded": "/tmp 16G libre."
+  },
+  {
+   "session": "B",
+   "commands": [
+    "git push",
+    "docker ps",
+    "pip install requests",
+    "df -h"
+   ],
+   "question": "Pourquoi git push a échoué ?",
+   "out": "Fichier : rejected.",
+   "grounded": "Fichier : rejected."
+  },
+  {
+   "session": "B",
+   "commands": [
+    "git push",
+    "docker ps",
+    "pip install requests",
+    "df -h"
+   ],
+   "question": "Combien de conteneurs tournent ?",
+   "out": "0 conteneurs.",
+   "grounded": "0 conteneurs."
+  },
+  {
+   "session": "B",
+   "commands": [
+    "git push",
+    "docker ps",
+    "pip install requests",
+    "df -h"
+   ],
+   "question": "Quelle version de requests a été installée ?",
+   "out": "requests-2.32.3",
+   "grounded": "requests-2.32.3."
+  },
+  {
+   "session": "B",
+   "commands": [
+    "git push",
+    "docker ps",
+    "pip install requests",
+    "df -h"
+   ],
+   "question": "Quelle version de Python est installée ?",
+   "out": "Pas dans l'historique.",
+   "grounded": "Pas dans l'historique."
+  }
+ ]
+}

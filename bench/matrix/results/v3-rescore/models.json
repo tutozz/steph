@@ -1,0 +1,282 @@
+[
+ {
+  "name": "r1-v1.0",
+  "label": "R1 steph-speak v1.0",
+  "kind": "affiné",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "45414bd2",
+  "i5_p90": 2.26,
+  "i5_src": "mesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)"
+ },
+ {
+  "name": "p17",
+  "label": "P17 DPO",
+  "kind": "affiné",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "d548f3fc",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)"
+ },
+ {
+  "name": "k3-a-dpo",
+  "label": "K3-a DPO",
+  "kind": "affiné",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "c0fd7afd",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)"
+ },
+ {
+  "name": "k3-a-sft",
+  "label": "K3-a SFT",
+  "kind": "affiné",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "b0f5b7b1",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)"
+ },
+ {
+  "name": "k3-b-dpo",
+  "label": "K3-b DPO",
+  "kind": "affiné",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "151f356a",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)"
+ },
+ {
+  "name": "k3-b-sft",
+  "label": "K3-b SFT",
+  "kind": "affiné",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "25e6b97d",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)"
+ },
+ {
+  "name": "a1000",
+  "label": "P16 DPO",
+  "kind": "affiné",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "200aeda8",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)"
+ },
+ {
+  "name": "p15",
+  "label": "P15 soupe",
+  "kind": "affiné",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "7bafc32a",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)"
+ },
+ {
+  "name": "a12",
+  "label": "A12 soupe uniforme",
+  "kind": "affiné",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "bd552f46",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)"
+ },
+ {
+  "name": "a05",
+  "label": "R2-T2 soupe R1×P17 α 0,5",
+  "kind": "X1 tour 2",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "66329cf8",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)"
+ },
+ {
+  "name": "c2-t7-dpo",
+  "label": "R2-C2 c2-t7-dpo",
+  "kind": "X1 tour 2",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "18673f0d",
+  "i5_p90": 2.33,
+  "i5_src": "mesuré à -ub 64 : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)"
+ },
+ {
+  "name": "r2c1-e1",
+  "label": "R2-C1 DPO inventions injectées",
+  "kind": "X1 tour 2",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "a31920ee",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)"
+ },
+ {
+  "name": "dense-cpu",
+  "label": "R2-T1 Granite 4.0 350M dense (CPU)",
+  "kind": "X1 tour 2",
+  "profile": "ft",
+  "size_mb": 237.0,
+  "sha256": "e83560fd",
+  "i5_p90": 2.1,
+  "i5_src": "mesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)"
+ },
+ {
+  "name": "dense-fold2",
+  "label": "R3-T1 Granite 350M dense replié (fold2)",
+  "kind": "X1 tour 3",
+  "profile": "ft",
+  "size_mb": 237.0,
+  "sha256": "424e6eef",
+  "i5_p90": 2.1,
+  "i5_src": "même poids que R2-T1 dense (repli exact), non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)"
+ },
+ {
+  "name": "t2-cut4",
+  "label": "T2 élagué -4 couches",
+  "kind": "X1 tour 1",
+  "profile": "ft",
+  "size_mb": 202.5,
+  "sha256": "431d6871",
+  "i5_p90": 1.97,
+  "i5_src": "prédiction : p90 i5 de R1 (2,26 s) x rapport du proxy CPU T4 (0.87), non mesuré"
+ },
+ {
+  "name": "t2-cut7",
+  "label": "T2 élagué -7 couches",
+  "kind": "X1 tour 1",
+  "profile": "ft",
+  "size_mb": 187.7,
+  "sha256": "4197947f",
+  "i5_p90": 1.75,
+  "i5_src": "prédiction : p90 i5 de R1 (2,26 s) x rapport du proxy CPU T4 (0.78), non mesuré"
+ },
+ {
+  "name": "t2-cut9",
+  "label": "T2 élagué -9 couches",
+  "kind": "X1 tour 1",
+  "profile": "ft",
+  "size_mb": 177.2,
+  "sha256": "ec961f2c",
+  "i5_p90": 1.61,
+  "i5_src": "prédiction : p90 i5 de R1 (2,26 s) x rapport du proxy CPU T4 (0.71), non mesuré"
+ },
+ {
+  "name": "t3-p17-iq4xs",
+  "label": "T3 P17 IQ4_XS imatrix",
+  "kind": "X1 tour 1",
+  "profile": "ft",
+  "size_mb": 207.9,
+  "sha256": "f5e62521",
+  "i5_p90": 2.51,
+  "i5_src": "prédiction : p90 i5 de R1 (2,26 s) x rapport du proxy CPU T4 (1.11), non mesuré"
+ },
+ {
+  "name": "t1-smollm2-135m",
+  "label": "T1 SmolLM2 135M affiné",
+  "kind": "X1 tour 1",
+  "profile": "ft",
+  "size_mb": 105.5,
+  "sha256": "84f10407",
+  "i5_p90": null,
+  "i5_src": "non mesuré sur l'i5 (T1 : filtre qualité non passé)"
+ },
+ {
+  "name": "granite-350m",
+  "label": "Granite 4.0 H 350M",
+  "kind": "brut",
+  "profile": "gen",
+  "size_mb": 222.7,
+  "sha256": "0a8d6a73",
+  "i5_p90": 2.56,
+  "i5_src": "bench/matrix/results/i5-7200u-cpu-granite4h-350m-t4-crible.json (prompt générique)"
+ },
+ {
+  "name": "granite-1b",
+  "label": "Granite 4.0 H 1B",
+  "kind": "brut",
+  "profile": "gen",
+  "size_mb": 901.2,
+  "sha256": "da3d7371",
+  "i5_p90": null,
+  "i5_src": "non mesuré"
+ },
+ {
+  "name": "lfm2-350m",
+  "label": "LFM2 350M",
+  "kind": "brut",
+  "profile": "gen",
+  "size_mb": 229.3,
+  "sha256": "a4d000c7",
+  "i5_p90": null,
+  "i5_src": "non mesuré (LFM2.5 350M : 2,69 s)"
+ },
+ {
+  "name": "smollm2-360m",
+  "label": "SmolLM2 360M Q8_0",
+  "kind": "brut",
+  "profile": "gen",
+  "size_mb": 386.4,
+  "sha256": "48ab3034",
+  "i5_p90": null,
+  "i5_src": "non mesuré"
+ },
+ {
+  "name": "qwen3.5-0.8b",
+  "label": "Qwen3.5 0.8B",
+  "kind": "brut",
+  "profile": "gen",
+  "size_mb": 532.5,
+  "sha256": "bd258782",
+  "i5_p90": 5.68,
+  "i5_src": "bench/matrix/results/i5-7200u-cpu-qwen3.5-0.8b.json"
+ },
+ {
+  "name": "qwen3.5-2b",
+  "label": "Qwen3.5 2B",
+  "kind": "brut",
+  "profile": "gen",
+  "size_mb": 1280.8,
+  "sha256": "aaf42c8b",
+  "i5_p90": 13.3,
+  "i5_src": "bench/matrix/results/i5-7200u-cpu-qwen3.5-2b.json"
+ },
+ {
+  "name": "gemma4-e2b",
+  "label": "Gemma 4 E2B QAT q4_0",
+  "kind": "brut",
+  "profile": "gen",
+  "size_mb": 3349.5,
+  "sha256": "fa401b55",
+  "i5_p90": 27.3,
+  "i5_src": "mesuré par G2 : résumés dev v3 au prompt générique, bench/matrix/results/gemma/g2/"
+ },
+ {
+  "name": "qwen3.5-4b",
+  "label": "Qwen3.5 4B",
+  "kind": "brut",
+  "profile": "gen",
+  "size_mb": 2740.9,
+  "sha256": "00fe7986",
+  "i5_p90": null,
+  "i5_src": "non mesuré"
+ },
+ {
+  "name": "qwen3.5-9b",
+  "label": "Qwen3.5 9B (enseignant)",
+  "kind": "brut",
+  "profile": "gen",
+  "size_mb": 5680.5,
+  "sha256": "03b74727",
+  "i5_p90": null,
+  "i5_src": "non mesuré"
+ }
+]

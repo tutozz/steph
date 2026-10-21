@@ -1,0 +1,10 @@
+{
+  "machine": "h3a-summary_residual",
+  "judged": 5,
+  "verdicts": {
+    "ok": 3,
+    "douteux": 2
+  },
+  "rejected": 0,
+  "categories": {}
+}

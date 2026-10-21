@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>steph, le terminal qui parle</title>
+<meta name="description" content="steph dit à voix haute l'essentiel de chaque commande, en une phrase. Pour les personnes aveugles et malvoyantes qui travaillent dans un terminal. Linux et macOS, 100 % local.">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="alternate" hreflang="fr" href="https://steph.lsmdx.com/">
+<link rel="alternate" hreflang="en" href="https://steph.lsmdx.com/en/">
+<meta property="og:title" content="steph, le terminal qui parle">
+<meta property="og:description" content="35 lignes à l'écran, une phrase à l'oreille. Le modèle et la voix tournent sur votre machine.">
+<meta property="og:image" content="https://steph.lsmdx.com/og.png">
+<meta property="og:image:alt" content="steph. Le terminal, à voix haute. steph écoute le shell et dit l'essentiel de chaque commande, en une phrase. Linux et macOS, 100 % local.">
+<meta property="og:url" content="https://steph.lsmdx.com/">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+
+<header class="wrap top">
+  <a class="brand" href="/">
+    <span class="brand-name">steph</span>
+    <span class="chevron" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
+    <span class="brand-tag"><span class="sr-only">, </span>Terminal qui parle</span>
+  </a>
+  <nav class="nav" aria-label="Principale">
+    <a href="#installer">Installer</a>
+    <a href="#entreprises">Entreprises</a>
+    <a href="https://github.com/tutozz/steph">Code source</a>
+    <span class="langs">
+      <span aria-current="page">FR</span>
+      <span class="sep" aria-hidden="true">·</span>
+      <a href="/en/" hreflang="en" lang="en">EN<span class="sr-only"> Read in English</span></a>
+    </span>
+  </nav>
+</header>
+
+<main id="contenu">
+
+<section class="wrap hero" aria-labelledby="h-hero">
+  <div class="hero-head">
+    <div class="hero-title">
+      <p class="eyebrow">Terminal qui parle</p>
+      <h1 id="h-hero" class="h1">Le terminal, à voix haute.</h1>
+    </div>
+    <div class="hero-side">
+      <p class="lede">L'essentiel de chaque commande, en une phrase. En plus de votre lecteur d'écran.</p>
+      <div class="cmd">
+        <pre><span class="prompt" aria-hidden="true">$ </span>curl -fsSL https://steph.lsmdx.com/install | sh</pre>
+        <button class="copy" type="button" data-copy="hero"><span class="lbl">Copier</span><span class="sr-only"> la commande d'installation</span></button>
+      </div>
+      <p class="note">Linux et macOS. Windows n'est pas pris en charge.</p>
+      <p class="doors"><span>Gratuit pour les particuliers</span><a href="#entreprises">Licence entreprise <span aria-hidden="true">»</span></a></p>
+    </div>
+  </div>
+
+  <figure class="duel" aria-labelledby="duel-caption">
+    <div class="duel-col">
+      <div class="fringe" data-fringe="20,11" aria-hidden="true"></div>
+      <div class="duel-box screen-box">
+        <div class="duel-head"><span class="duel-title">À l'écran</span><span class="duel-meta"><span aria-hidden="true">$ </span>lspci · 35 lignes</span></div>
+        <pre class="output" id="lspci-output" tabindex="0" role="region" aria-label="Sortie de lspci, 35 lignes">00:00.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Root Complex
+00:00.2 IOMMU: Advanced Micro Devices, Inc. [AMD] Starship/Matisse IOMMU
+00:01.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:01.2 PCI bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse GPP Bridge
+00:02.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:03.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:03.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse GPP Bridge
+00:04.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:05.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:07.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:07.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Internal PCIe GPP Bridge 0 to bus[E:B]
+00:08.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:08.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Internal PCIe GPP Bridge 0 to bus[E:B]
+00:14.0 SMBus: Advanced Micro Devices, Inc. [AMD] FCH SMBus Controller (rev 61)
+00:14.3 ISA bridge: Advanced Micro Devices, Inc. [AMD] FCH LPC Bridge (rev 51)
+00:18.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 0
+00:18.1 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 1
+00:18.2 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 2
+00:18.3 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 3
+00:18.4 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 4
+00:18.5 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 5
+00:18.6 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 6
+00:18.7 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 7
+02:00.0 USB controller: Advanced Micro Devices, Inc. [AMD] 500 Series Chipset USB 3.1 XHCI Controller
+02:00.1 SATA controller: Advanced Micro Devices, Inc. [AMD] 500 Series Chipset SATA Controller
+02:00.2 PCI bridge: Advanced Micro Devices, Inc. [AMD] 500 Series Chipset Switch Upstream Port
+03:09.0 PCI bridge: Advanced Micro Devices, Inc. [AMD] Device 43ea
+2a:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller (rev 15)
+2b:00.0 VGA compatible controller: NVIDIA Corporation GA106 [GeForce RTX 3060 Lite Hash Rate] (rev a1)
+2b:00.1 Audio device: NVIDIA Corporation GA106 High Definition Audio Controller (rev a1)
+2c:00.0 Non-Essential Instrumentation [1300]: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Function
+2d:00.0 Non-Essential Instrumentation [1300]: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Reserved SPP
+2d:00.1 Encryption controller: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Cryptographic Coprocessor PSPCPP
+2d:00.3 USB controller: Advanced Micro Devices, Inc. [AMD] Matisse USB 3.0 Host Controller
+2d:00.4 Audio device: Advanced Micro Devices, Inc. [AMD] Starship/Matisse HD Audio Controller</pre>
+        <button class="btn-outline" type="button" data-expand="lspci-output" aria-expanded="false">Afficher les 35 lignes</button>
+      </div>
+      <div class="fringe" data-fringe="20,29" aria-hidden="true"></div>
+    </div>
+    <div class="duel-col ear">
+      <div class="fringe fringe-lemon" data-fringe="20,5" aria-hidden="true"></div>
+      <div class="duel-box ear-box">
+        <div class="duel-head"><span class="duel-title">À l'oreille</span><span class="duel-meta">24,8 s</span></div>
+        <blockquote class="said-quote">« GPU : NVIDIA Corporation GA106 [GeForce RTX 3060 Lite Hash Rate], réseau : Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, chipset : Advanced Micro Devices, Inc. [AMD] Starship/Matisse Root Complex, USB : 2, autres périphériques : 14. »</blockquote>
+      </div>
+      <div class="fringe fringe-lemon" data-fringe="20,44" aria-hidden="true"></div>
+    </div>
+    <figcaption id="duel-caption" class="duel-caption">35 lignes à l'écran. <span class="accent">Une phrase à l'oreille.</span></figcaption>
+  </figure>
+</section>
+
+<section class="ruled" aria-labelledby="h-idee">
+  <div class="wrap section">
+    <div class="head">
+      <div class="head-title">
+        <p class="eyebrow"><span aria-hidden="true">01 · </span>L'idée</p>
+        <h2 id="h-idee" class="h2">Un lecteur d'écran lit tout. <span class="accent">steph dit ce qui compte.</span></h2>
+      </div>
+      <p class="head-text">Votre lecteur d'écran reste indispensable. steph s'ajoute à lui et résume chaque commande en une phrase.</p>
+    </div>
+    <table class="pairs">
+      <caption class="sr-only">Trois situations, sans steph et avec steph</caption>
+      <thead class="sr-only"><tr><th scope="col">Sans steph</th><th scope="col">Avec steph</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="without"><span class="pair-label" aria-hidden="true">Sans steph</span><span class="pair-text">Une compilation qui échoue, lue ligne après ligne, trace comprise.</span></td>
+          <td class="with"><span class="pair-label" aria-hidden="true">Avec steph</span><span class="pair-text">« Échec. Header.tsx ligne 42 : Property titel does not exist on type Props. Did you mean title? »</span></td>
+        </tr>
+        <tr>
+          <td class="without"><span class="pair-label" aria-hidden="true">Sans steph</span><span class="pair-text">Une mise à jour : une ligne par étape et par paquet.</span></td>
+          <td class="with"><span class="pair-label" aria-hidden="true">Avec steph</span><span class="pair-text">Un pourcentage pendant l'attente, puis : « Terminé en 1 minute 24. 12 paquets mis à jour. »</span></td>
+        </tr>
+        <tr>
+          <td class="without"><span class="pair-label" aria-hidden="true">Sans steph</span><span class="pair-text">Une question <code>[O/n]</code> perdue dans le flot.</span></td>
+          <td class="with"><span class="pair-label" aria-hidden="true">Avec steph</span><span class="pair-text">« Question : souhaitez-vous continuer ? Oui ou non, oui par défaut. »</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="foot-line">Exemples tirés de sorties réelles, anonymisées. La durée « 1 minute 24 » est un exemple.</p>
+  </div>
+</section>
+
+<section class="ruled" id="chiffres" aria-labelledby="h-chiffres">
+  <div class="wrap section">
+    <div class="stack">
+      <p class="eyebrow"><span aria-hidden="true">02 · </span>Mesuré</p>
+      <h2 id="h-chiffres" class="h2">Le premier son arrive en <span class="accent">0,19</span> seconde.</h2>
+    </div>
+    <div class="tiles">
+      <div class="tile">
+        <h3 class="h3-mono">Premier son</h3>
+        <p class="tile-figure" style="font-size:clamp(60px,6vw,88px)">0,19 s</p>
+        <p>La commande se termine, steph parle presque aussitôt.</p>
+      </div>
+      <div class="tile">
+        <h3 class="h3-mono">Installation</h3>
+        <p class="tile-figure" style="font-size:clamp(60px,6vw,88px)">≈ 300 Mo</p>
+        <p>Calcul, sans carte graphique : petit modèle, voix et llama.cpp. steph parle avant la fin.</p>
+      </div>
+      <div class="tile lemon">
+        <h3 class="h3-mono">Local</h3>
+        <p class="tile-figure">100 %</p>
+        <p>Le modèle de langue et la voix tournent sur votre machine.</p>
+      </div>
+    </div>
+    <details class="values">
+      <summary>Comment ces chiffres sont mesurés</summary>
+      <ul class="detail-list">
+        <li><strong>Premier son :</strong> neuf fois sur dix, steph commence à parler moins de 0,19 seconde après la fin d'une commande. Portable Intel Core i5-7200U, sans carte graphique, 33 sorties réelles rejouées. Mesuré avec une version antérieure de steph-speak et non remesuré : 32 de ces 33 phrases viennent des règles écrites en code, sans le modèle.</li>
+        <li><strong>Installation :</strong> le petit modèle pèse 223 Mo, le modèle base 2,43 Go, auxquels s'ajoutent la voix (63 Mo) et llama.cpp. Avec le petit modèle et sans carte graphique, comptez environ 300 Mo (calcul, pas une mesure).</li>
+      </ul>
+    </details>
+
+    <figure class="chart" aria-labelledby="h-g1">
+      <div class="stack" style="gap:8px">
+        <h3 id="h-g1" class="h3">Même sortie, deux durées d'écoute.</h3>
+        <p class="chart-sub">En secondes. Plus court, c'est mieux.</p>
+      </div>
+      <div class="chart-body" aria-hidden="true">
+        <div class="chart-group">
+          <div class="chart-cat"><code>lspci</code><span>35 lignes</span></div>
+          <div class="chart-rows"><span>Ligne à ligne</span><span class="bar-val"><span class="bar-fill" style="width:71.4%"></span><span class="bar-num">139,2 s</span></span><span>Phrase de steph</span><span class="bar-val win"><span class="bar-fill" style="width:12.7%"></span><span class="bar-num">24,8 s</span></span></div>
+        </div>
+        <div class="chart-group">
+          <div class="chart-cat"><code>npm run build en échec</code><span>9 lignes</span></div>
+          <div class="chart-rows"><span>Ligne à ligne</span><span class="bar-val"><span class="bar-fill" style="width:10.8%"></span><span class="bar-num">21,0 s</span></span><span>Phrase de steph</span><span class="bar-val win"><span class="bar-fill" style="width:3.4%"></span><span class="bar-num">6,6 s</span></span></div>
+        </div>
+        <div class="chart-group">
+          <div class="chart-cat"><code>apt upgrade</code><span>19 lignes</span></div>
+          <div class="chart-rows"><span>Ligne à ligne</span><span class="bar-val"><span class="bar-fill" style="width:51.1%"></span><span class="bar-num">99,6 s</span></span><span>Phrase de steph</span><span class="bar-val win"><span class="bar-fill" style="width:0.8%"></span><span class="bar-num">1,6 s</span></span></div>
+        </div>
+      </div>
+      <p class="chart-note">Même voix, même débit. Durée de l'audio généré par la voix Piper française, médiane de 3 synthèses. Ligne à ligne : chaque ligne de la sortie donnée au modèle (1 500 caractères au plus), la lecture complète dure donc au moins cela. Phrase de steph : ce que steph dit en production ; ces trois sorties sont résumées par des règles écrites en code, sans le modèle.</p>
+      <details class="values">
+        <summary>Voir les valeurs</summary>
+        <div class="table-wrap" tabindex="0" role="region" aria-label="Valeurs du graphique, durées d'écoute">
+          <table class="data">
+            <thead><tr><th scope="col">Commande</th><th scope="col">Ligne à ligne (s)</th><th scope="col">Phrase de steph (s)</th></tr></thead>
+            <tbody>
+              <tr><th scope="row"><code>lspci</code></th><td class="num">139,2</td><td class="num">24,8</td></tr>
+              <tr><th scope="row"><code>npm run build en échec</code></th><td class="num">21,0</td><td class="num">6,6</td></tr>
+              <tr><th scope="row"><code>apt upgrade</code></th><td class="num">99,6</td><td class="num">1,6</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+      <p class="chart-note">Méthode et données complètes : <a href="https://github.com/tutozz/steph/tree/master/docs/readme-charts">docs/readme-charts</a></p>
+    </figure>
+  </div>
+</section>
+
+<section class="on-lemon" aria-labelledby="h-local">
+  <div class="fringe fringe-lemon" data-fringe="24,61" aria-hidden="true"></div>
+  <div class="wrap local-inner">
+    <div>
+      <p class="eyebrow"><span aria-hidden="true">03 · </span>Local</p>
+      <h2 id="h-local" class="h2-strong">Rien ne quitte votre machine.</h2>
+    </div>
+    <div>
+      <ul class="squares">
+        <li>Le modèle de langue tourne sur votre ordinateur.</li>
+        <li>La voix est générée sur place.</li>
+        <li>Aucune télémétrie. Aucun compte. Aucune clé d'API.</li>
+        <li>Après l'installation, steph fonctionne hors ligne.</li>
+        <li>Si le modèle s'arrête, steph le relance et résume sans lui en attendant.</li>
+      </ul>
+      <p class="local-close">Aucune télémétrie : ni dans le code de steph, ni dans les dépendances qu'il configure (celle d'onnxruntime, utilisée par la voix, est désactivée). Le seul réseau utilisé est celui que vous demandez : installer ou mettre à jour. Le code est public : vous pouvez le vérifier. <a href="https://github.com/tutozz/steph">Voir le code source</a></p>
+    </div>
+  </div>
+  <div class="fringe fringe-lemon" data-fringe="24,73" aria-hidden="true"></div>
+</section>
+
+<section class="ruled" aria-labelledby="h-modele">
+  <div class="wrap section">
+    <div class="head">
+      <div class="head-title">
+        <p class="eyebrow"><span aria-hidden="true">04 · </span>Le modèle</p>
+        <h2 id="h-modele" class="h2">Deux modèles, entraînés pour ça.</h2>
+      </div>
+      <p class="head-text">Des règles écrites en code résument une grande partie des sorties. Pour le reste, <code>steph-speak</code>, un petit modèle de langue, dit l'essentiel. Le petit modèle tourne sur un portable sans carte graphique ; le modèle base (2,43 Go) vise les machines plus rapides. Poids, données et banc d'essai sont ouverts.</p>
+    </div>
+    <dl class="facts">
+      <div class="fact hot">
+        <dt>Le poids du petit modèle. Un portable sans carte graphique suffit.</dt>
+        <dd>223<span class="unit"> Mo</span></dd>
+      </div>
+      <div class="fact">
+        <dt>Langues prises en charge : français et anglais. Les autres langues ne sont pas encore fiables.</dt>
+        <dd>2<span class="unit"> langues</span></dd>
+      </div>
+      <div class="fact">
+        <dt>Vraies sorties de terminal par langue, pour vérifier qu'il dit juste : compilation, tests, git, réseau… Le banc d'essai est ouvert.</dt>
+        <dd>105<span class="unit"> cas</span></dd>
+      </div>
+    </dl>
+    <div class="model-foot">
+      <p class="muted">Poids sous licence Apache 2.0. Données du banc sous licence CC BY 4.0. Les deux modèles sont téléchargeables sur Hugging Face.</p>
+      <a class="btn btn-secondary" href="https://huggingface.co/tutozz">Télécharger les modèles <span aria-hidden="true">»</span></a>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="h-concu">
+  <div class="wrap section">
+    <div class="head">
+      <div class="head-title">
+        <p class="eyebrow"><span aria-hidden="true">05 · </span>Conçu avec</p>
+        <h2 id="h-concu" class="h2">Conçu et testé avec des personnes aveugles et malvoyantes.</h2>
+      </div>
+      <div class="head-text">
+        <p>Une remarque, un bug, une idée ? Écrivez à <a href="mailto:luis@lsmdx.com" class="accent strong-inline">luis@lsmdx.com</a>. Pas besoin de compte GitHub.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="licence" aria-labelledby="h-licence">
+  <div class="wrap section">
+    <div class="stack">
+      <p class="eyebrow"><span aria-hidden="true">06 · </span>Licence</p>
+      <h2 id="h-licence" class="h2-strong">Gratuit, <span class="accent">sauf pour les entreprises.</span></h2>
+    </div>
+    <ul class="cases">
+      <li class="case free">
+        <h3 class="h3-mono">Pour vous, pour apprendre, pour une cause</h3>
+        <p class="case-answer">Gratuit</p>
+        <p>Particuliers, études, associations, écoles, recherche publique, administrations. Rien à demander, pour toujours.</p>
+      </li>
+      <li class="case">
+        <h3 class="h3-mono">Seul au travail</h3>
+        <p class="case-answer">Licence individuelle pro</p>
+        <p>Vous êtes salarié et vous utilisez steph seul, sur votre poste.</p>
+        <p>Sur devis, à <a href="mailto:luis@lsmdx.com" class="accent strong-inline">luis@lsmdx.com</a>.</p>
+      </li>
+      <li class="case">
+        <h3 class="h3-mono">Une entreprise</h3>
+        <p class="case-answer">Licence entreprise</p>
+        <p>Plusieurs postes, une équipe, un prestataire chez un client, ou steph intégré à un produit. Sur devis.</p>
+      </li>
+    </ul>
+    <div class="licence-foot">
+      <p>Pour une licence, écrivez à <a href="mailto:luis@lsmdx.com?subject=Licence%20steph" class="accent strong-inline">luis@lsmdx.com</a>. Le code reste public ; les licences financent le travail.</p>
+      <a class="strong-link" href="https://github.com/tutozz/steph/blob/master/LICENSE.md">Lire la licence complète <span aria-hidden="true">»</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="light" id="entreprises" aria-labelledby="h-ent">
+  <div class="wrap section">
+    <div class="head">
+      <div class="head-title">
+        <p class="eyebrow"><span aria-hidden="true">07 · </span>Entreprises</p>
+        <h2 id="h-ent" class="h2">Équiper le poste d'un développeur aveugle ou malvoyant.</h2>
+      </div>
+      <p class="head-text">Votre salarié installe steph à côté de son lecteur d'écran. Votre entreprise prend la licence.</p>
+    </div>
+
+    <div class="offers">
+      <div class="offer">
+        <h3 class="offer-name">Ce que couvre la licence</h3>
+        <p>steph sur vos postes, sur ceux de vos clients, ou dans vos produits.</p>
+      </div>
+      <div class="offer dark">
+        <h3 class="offer-name">Rien ne sort du poste</h3>
+        <p>Tout tourne sur la machine. Aucun compte, aucune télémétrie, aucun cloud.</p>
+      </div>
+      <div class="offer">
+        <h3 class="offer-name">Financement</h3>
+        <p>En France, l'aménagement du poste peut être cofinancé par l'Agefiph : voyez votre référent handicap.</p>
+      </div>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn btn-dark" href="mailto:luis@lsmdx.com?subject=Licence%20entreprise%20steph"><span>Demander un devis</span></a>
+      <p class="soft">luis@lsmdx.com · indiquez votre structure et le nombre de postes</p>
+    </div>
+  </div>
+</section>
+
+<section class="ruled" id="soutenir" aria-labelledby="h-soutenir">
+  <div class="wrap section">
+    <div class="head">
+      <div class="head-title">
+        <p class="eyebrow"><span aria-hidden="true">08 · </span>Soutenir</p>
+        <h2 id="h-soutenir" class="h2">Offrir un café à steph.</h2>
+      </div>
+      <p class="head-text">Un café aide à payer les machines qui entraînent le petit modèle steph-speak, les tests avec de vraies personnes aveugles et malvoyantes, et le temps passé sur le projet. Rien ne change pour vous : steph reste gratuit pour un usage personnel.</p>
+    </div>
+    <div class="cta-row">
+      <a class="btn" href="https://buymeacoffee.com/lsmdx" target="_blank" rel="noopener">
+        <span>Offrir un café<span class="sr-only">, nouvel onglet</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="ruled" id="installer" aria-labelledby="h-install">
+  <div class="wrap section" style="gap:32px">
+    <div class="stack">
+      <p class="eyebrow"><span aria-hidden="true">09 · </span>Installer</p>
+      <h2 id="h-install" class="h2-strong">Installer en une commande.</h2>
+    </div>
+    <div class="install-block">
+      <pre><span class="prompt" aria-hidden="true">$ </span>curl -fsSL https://steph.lsmdx.com/install | sh
+<span class="prompt" aria-hidden="true">$ </span>steph</pre>
+      <button class="copy" type="button" data-copy="install"><span class="lbl">Copier</span><span class="sr-only"> les commandes d'installation</span></button>
+    </div>
+    <ul class="inline-list">
+      <li>Sans droits administrateur. Le petit modèle pèse 223 Mo ; environ 300 Mo en tout sans carte graphique.</li>
+      <li>Prérequis : <code>curl</code>, <code>git</code>, <code>tar</code>.</li>
+      <li>Désinstaller : <code class="accent">steph uninstall</code></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <div class="foot-top">
+      <p class="foot-logo"><span class="brand-name">steph</span><span class="chevron" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></p>
+      <nav class="foot-nav" aria-label="Pied de page">
+        <a href="#licence">Licence</a>
+        <a href="#entreprises">Licence entreprise</a>
+        <a href="https://github.com/tutozz/steph">Code source</a>
+        <a href="https://huggingface.co/tutozz">Le modèle steph-speak</a>
+        <a href="https://huggingface.co/tutozz/steph-speak-bench">Steph Speak Bench</a>
+        <a href="https://buymeacoffee.com/lsmdx" target="_blank" rel="noopener">Offrir un café<span class="sr-only">, nouvel onglet</span></a>
+        <a href="mailto:luis@lsmdx.com">Contact</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <p>© LSMDX 2026</p>
+    </div>
+  </div>
+</footer>
+
+<p id="live" class="sr-only" aria-live="polite"></p>
+<script>
+window.STEPH_L10N = {
+  copy: "Copier", copied: "Copié",
+  copiedMsg: "Commande copiée.",
+  copyFail: "Copie impossible, sélectionnez le texte.",
+  expand: "Afficher les 35 lignes", expanded: "Réduire la sortie"
+};
+</script>
+<script src="/main.js" defer></script>
+</body>
+</html>

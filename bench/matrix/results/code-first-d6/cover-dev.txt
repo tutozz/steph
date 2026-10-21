@@ -1,0 +1,56 @@
+N 858 models ['v10', 'gemmaL5']
+A compile | cargo Finished / generated N warnings | 10 | v10: moy 0.36 g78 +0.49 g60 +0.28 gemmaL5: moy 0.48 g78 +0.35 g60 +0.14
+A compile | gcc/clang réussite avec avertissements (1er fichier:ligne) | 6 | v10: moy 0.53 g78 +0.18 g60 +0.05 gemmaL5: moy 0.67 g78 +0.08 g60 -0.05
+A compile | panic Go / deadlock | 4 | v10: moy 0.46 g78 +0.15 g60 +0.07 gemmaL5: moy 0.83 g78 -0.02 g60 -0.11
+A compile | édition de liens clang Undefined symbols | 2 | v10: moy 0.25 g78 +0.12 g60 +0.08 gemmaL5: moy 0.42 g78 +0.08 g60 +0.04
+A lint-type | pylint rated at | 2 | v10: moy 0.07 g78 +0.17 g60 +0.12 gemmaL5: moy 0.25 g78 +0.12 g60 +0.08
+A lint-type | ruff Found N errors / All checks passed | 10 | v10: moy 0.28 g78 +0.59 g60 +0.38 gemmaL5: moy 0.64 g78 +0.16 g60 -0.05
+A lint-type | ruff/eslint erreur de configuration | 4 | v10: moy 0.50 g78 +0.13 g60 +0.05 gemmaL5: moy 0.58 g78 +0.09 g60 +0.01
+A lint-type | shellcheck In f line N / SC | 2 | v10: moy 0.67 g78 +0.03 g60 -0.02 gemmaL5: moy 0.65 g78 +0.03 g60 -0.01
+A lint-type | tsc/mypy Found N errors in M files / Success | 2 | v10: moy 0.50 g78 +0.07 g60 +0.02 gemmaL5: moy 0.75 g78 +0.01 g60 -0.03
+A lint-type | yamllint N:N error|warning | 2 | v10: moy 0.50 g78 +0.07 g60 +0.02 gemmaL5: moy 0.67 g78 +0.03 g60 -0.02
+A tests | TAP node --test / spec ℹ tests | 10 | v10: moy 0.48 g78 +0.35 g60 +0.14 gemmaL5: moy 0.72 g78 +0.07 g60 -0.14
+A tests | deno test ok|FAILED | N passed | 2 | v10: moy 0.83 g78 -0.01 g60 -0.05 gemmaL5: moy 1.00 g78 -0.05 g60 -0.09
+A tests | go test lignes de paquet ok/FAIL/? | 6 | v10: moy 0.22 g78 +0.39 g60 +0.26 gemmaL5: moy 0.47 g78 +0.22 g60 +0.09
+A tests | jest No tests found | 2 | v10: moy 0.50 g78 +0.07 g60 +0.02 gemmaL5: moy 0.67 g78 +0.03 g60 -0.02
+A tests | unittest Ran/OK/FAILED | 12 | v10: moy 0.22 g78 +0.78 g60 +0.53 gemmaL5: moy 0.26 g78 +0.73 g60 +0.48
+B files | diff -q/-rq : differ / Only in | 2 | v10: moy 0.58 g78 +0.05 g60 +0.00 gemmaL5: moy 0.50 g78 +0.07 g60 +0.02
+B files | grep -r compte de lignes et fichiers (sans tube) | 6 | v10: moy 0.58 g78 +0.14 g60 +0.02 gemmaL5: moy 0.58 g78 +0.14 g60 +0.01
+B files | rsync -v/--stats bilan sent/received | 2 | v10: moy 0.25 g78 +0.12 g60 +0.08 gemmaL5: moy 0.25 g78 +0.12 g60 +0.08
+B files | verbeux compté (rm -v, mkdir -v, chmod -v/-c, chown -v, cp -v, ln -sv, split --verbose, tar -v, shred -v) | 18 | v10: moy 0.19 g78 +1.25 g60 +0.87 gemmaL5: moy 0.24 g78 +1.13 g60 +0.75
+B files | wc plusieurs fichiers ligne total | 2 | v10: moy 0.75 g78 +0.01 g60 -0.03 gemmaL5: moy 0.75 g78 +0.01 g60 -0.03
+B scripts | bash/sh f: line N: msg (dernière ou première) | 26 | v10: moy 0.35 g78 +1.30 g60 +0.75 gemmaL5: moy 0.67 g78 +0.32 g60 -0.22
+B scripts | erreur d'outil GNU dans un script (cp:/mv:/sort: ...) | 30 | v10: moy 0.28 g78 +1.76 g60 +1.13 gemmaL5: moy 0.49 g78 +1.02 g60 +0.39
+C containers | helm lint N chart(s) linted / [ERROR] | 2 | v10: moy 0.75 g78 +0.01 g60 -0.03 gemmaL5: moy 0.75 g78 +0.01 g60 -0.03
+C containers | kubectl Unable to connect / error: | 2 | v10: moy 0.00 g78 +0.18 g60 +0.14 gemmaL5: moy 0.50 g78 +0.07 g60 +0.02
+C git | gh not authenticated / gh auth | 2 | v10: moy 0.50 g78 +0.07 g60 +0.02 gemmaL5: moy 0.83 g78 -0.01 g60 -0.05
+C git | git HEAD is now at / rebase in progress | 4 | v10: moy 0.21 g78 +0.27 g60 +0.18 gemmaL5: moy 0.69 g78 +0.04 g60 -0.04
+C git | git branch liste, branche courante * | 4 | v10: moy 0.46 g78 +0.15 g60 +0.07 gemmaL5: moy 0.89 g78 -0.05 g60 -0.13
+C git | git fatal:/error: dernière ligne (échec) | 4 | v10: moy 0.53 g78 +0.12 g60 +0.03 gemmaL5: moy 0.56 g78 +0.10 g60 +0.02
+C git | git log --stat : dernier commit, N files changed | 2 | v10: moy 0.17 g78 +0.14 g60 +0.10 gemmaL5: moy 0.00 g78 +0.18 g60 +0.14
+C infra | terraform Apply complete / Plan: / No changes / initialized | 6 | v10: moy 0.42 g78 +0.25 g60 +0.13 gemmaL5: moy 0.76 g78 +0.01 g60 -0.11
+C infra | terraform state list compté | 2 | v10: moy 0.50 g78 +0.07 g60 +0.02 gemmaL5: moy 0.75 g78 +0.01 g60 -0.03
+C packages | apt list --upgradable compté | 2 | v10: moy 0.33 g78 +0.10 g60 +0.06 gemmaL5: moy 0.33 g78 +0.10 g60 +0.06
+C packages | apt-cache policy Installed/Candidate par paquet | 2 | v10: moy 0.00 g78 +0.18 g60 +0.14 gemmaL5: moy 0.00 g78 +0.18 g60 +0.14
+C packages | apt-cache search / brew outdated|list|uses|deps / pip list compté | 10 | v10: moy 0.49 g78 +0.33 g60 +0.12 gemmaL5: moy 0.53 g78 +0.29 g60 +0.08
+C packages | brew doctor Warning: comptés | 2 | v10: moy 0.50 g78 +0.07 g60 +0.02 gemmaL5: moy 1.00 g78 -0.05 g60 -0.09
+C packages | dpkg -l lignes ii comptées | 4 | v10: moy 0.12 g78 +0.31 g60 +0.22 gemmaL5: moy 0.75 g78 +0.01 g60 -0.07
+C packages | npm/pnpm added N packages, vulnerabilities, npm error code | 16 | v10: moy 0.54 g78 +0.44 g60 +0.11 gemmaL5: moy 0.70 g78 +0.15 g60 -0.19
+C packages | uv Resolved/Installed N packages ; pip ERROR ; poetry | 16 | v10: moy 0.72 g78 +0.11 g60 -0.22 gemmaL5: moy 0.71 g78 +0.13 g60 -0.21
+D db | psql: error connection / FATAL database does not exist / (N rows) | 6 | v10: moy 0.67 g78 +0.08 g60 -0.05 gemmaL5: moy 0.72 g78 +0.04 g60 -0.09
+D db | sqlite Parse error / Error: near | 2 | v10: moy 1.00 g78 -0.05 g60 -0.09 gemmaL5: moy 0.75 g78 +0.01 g60 -0.03
+D network | curl -O barre de progression % Total | 2 | v10: moy 0.50 g78 +0.07 g60 +0.02 gemmaL5: moy 1.00 g78 -0.05 g60 -0.09
+D network | curl -i/-v/-I ligne de statut HTTP | 4 | v10: moy 0.38 g78 +0.19 g60 +0.10 gemmaL5: moy 0.38 g78 +0.19 g60 +0.10
+D network | ss -l ports à l'écoute / ip route default / nmcli device | 8 | v10: moy 0.52 g78 +0.24 g60 +0.08 gemmaL5: moy 0.75 g78 +0.03 g60 -0.14
+D network | wget Downloaded: / ERROR NNN / saved / unable to resolve | 12 | v10: moy 0.40 g78 +0.53 g60 +0.28 gemmaL5: moy 0.64 g78 +0.20 g60 -0.05
+D resources | diskutil info : Media Name / Disk Size / SMART | 2 | v10: moy 0.47 g78 +0.07 g60 +0.03 gemmaL5: moy 0.50 g78 +0.07 g60 +0.02
+D resources | lsof fichier/port : COMMAND PID | 2 | v10: moy 0.25 g78 +0.12 g60 +0.08 gemmaL5: moy 1.00 g78 -0.05 g60 -0.09
+D resources | memory_pressure / vmstat -s / du -c total | 4 | v10: moy 0.23 g78 +0.25 g60 +0.17 gemmaL5: moy 0.79 g78 -0.01 g60 -0.09
+D resources | smartctl -H overall-health PASSED | 2 | v10: moy 0.25 g78 +0.12 g60 +0.08 gemmaL5: moy 0.50 g78 +0.07 g60 +0.02
+D resources | top -b en-tête Tasks/up/load | 2 | v10: moy 0.00 g78 +0.18 g60 +0.14 gemmaL5: moy 0.00 g78 +0.18 g60 +0.14
+D services | systemctl list-timers N timers listed / is-enabled / brew services | 6 | v10: moy 0.37 g78 +0.29 g60 +0.16 gemmaL5: moy 0.81 g78 -0.02 g60 -0.15
+LOT A 76 ['compile', 'lint-type', 'other', 'runtime', 'tests'] v10: g78 +3.55 g60 +1.96 gemmaL5: g78 +1.92 g60 +0.33
+LOT B 86 ['files', 'git', 'make-autotools', 'scripts'] v10: g78 +4.62 g60 +2.81 gemmaL5: g78 +2.81 g60 +1.00
+LOT C 80 ['containers', 'git', 'infra', 'packages'] v10: g78 +2.80 g60 +1.12 gemmaL5: g78 +1.17 g60 -0.51
+LOT D 52 ['db', 'network', 'other', 'resources', 'services'] v10: g78 +2.10 g60 +1.01 gemmaL5: g78 +0.64 g60 -0.45
+code share 40.8 -> 75.1 covered rows 294

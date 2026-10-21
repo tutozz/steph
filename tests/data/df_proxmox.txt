@@ -1,0 +1,11 @@
+Filesystem                  Size  Used Avail Use% Mounted on
+udev                         20G     0   20G   0% /dev
+tmpfs                       4.0G  5.1M  4.0G   1% /run
+/dev/mapper/pve-root         94G   81G  8.9G  91% /
+tmpfs                        20G   37M   20G   1% /dev/shm
+tmpfs                       5.0M   12K  5.0M   1% /run/lock
+efivarfs                    128K   48K   76K  39% /sys/firmware/efi/efivars
+/dev/sde2                  1022M   12M 1011M   2% /boot/efi
+/dev/mapper/vm--hdd-backup  442G  308G  134G  70% /mnt/backup-hdd
+/dev/fuse                   128M  116K  128M   1% /etc/pve
+tmpfs                       4.0G     0  4.0G   0% /run/user/0

@@ -1,0 +1,67 @@
+{
+ "n": 1307,
+ "models": {
+  "g5c": {
+   "useful": 56.2,
+   "inventions_pct": 24.4,
+   "fr": 54.5,
+   "en": 57.9
+  },
+  "a-sft": {
+   "useful": 52.0,
+   "inventions_pct": 28.2,
+   "fr": 50.6,
+   "en": 53.5
+  },
+  "v10": {
+   "useful": 46.9,
+   "inventions_pct": 30.2,
+   "fr": 45.9,
+   "en": 47.8
+  }
+ },
+ "pairs": {
+  "g5c - a-sft note": {
+   "diff": 4.13,
+   "ci95": [
+    1.99,
+    6.35
+   ]
+  },
+  "g5c - a-sft invention": {
+   "diff": -3.83,
+   "ci95": [
+    -6.43,
+    -1.07
+   ]
+  },
+  "g5c - v10 note": {
+   "diff": 9.3,
+   "ci95": [
+    7.02,
+    11.55
+   ]
+  },
+  "g5c - v10 invention": {
+   "diff": -5.81,
+   "ci95": [
+    -8.65,
+    -2.83
+   ]
+  },
+  "a-sft - v10 note": {
+   "diff": 5.16,
+   "ci95": [
+    2.89,
+    7.31
+   ]
+  },
+  "a-sft - v10 invention": {
+   "diff": -1.99,
+   "ci95": [
+    -4.67,
+    0.92
+   ]
+  }
+ }
+}

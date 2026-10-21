@@ -1,0 +1,511 @@
+{
+ "judge": "deepseek/deepseek-v4-flash",
+ "cases": 64,
+ "diagnostics": {
+  "ok": 43,
+  "trop_strict": 52,
+  "trop_laxiste": 1,
+  "reference_fausse": 1,
+  "erreur": 3
+ },
+ "proposals": 71,
+ "proposals_checked_ok": 67,
+ "newly_full_answers": 109,
+ "per_case": {
+  "v3-files-0098": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "files"
+  },
+  "v3-packages-system-0026": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "packages-system"
+  },
+  "v3-permissions-users-0013": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "permissions-users"
+  },
+  "v3-python-0014": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "python"
+  },
+  "v3-tests-0059": {
+   "diagnostic": "trop_strict",
+   "proposals": 2,
+   "family": "tests"
+  },
+  "v3-files-0018": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "files"
+  },
+  "v3-rust-go-0025": {
+   "diagnostic": "trop_laxiste",
+   "proposals": 1,
+   "family": "tests"
+  },
+  "v3-tests-0048": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "tests"
+  },
+  "v3-files-0066": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "files"
+  },
+  "v3-data-0025": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "data"
+  },
+  "v3-shell-scripts-0039": {
+   "diagnostic": "reference_fausse",
+   "proposals": 2,
+   "family": "shell-scripts"
+  },
+  "v3-python-0039": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "python"
+  },
+  "v3-files-0042": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "files"
+  },
+  "v3-tests-0083": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "tests"
+  },
+  "v3-tests-0068": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "tests"
+  },
+  "v3-vcs-git-0046": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "vcs-git"
+  },
+  "v3-network-0020": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "network"
+  },
+  "v3-build-native-0109": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "build-native"
+  },
+  "v3-rust-go-0013": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "rust-go"
+  },
+  "v3-build-native-0009": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "build-native"
+  },
+  "v3-history-qa-0042": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "history-qa"
+  },
+  "v3-js-node-0019": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "js-node"
+  },
+  "v3-containers-0022": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "containers"
+  },
+  "v3-containers-0023": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "containers"
+  },
+  "v3-disk-memory-0023": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "disk-memory"
+  },
+  "v3-processes-0001": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "processes"
+  },
+  "v3-network-transfer-0041": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "network-transfer"
+  },
+  "v3-rust-go-0022": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "rust-go"
+  },
+  "v3-shell-scripts-0021": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "shell-scripts"
+  },
+  "v3-python-0016": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "python"
+  },
+  "v3-network-transfer-0008": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "network-transfer"
+  },
+  "v3-vcs-git-0040": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "vcs-git"
+  },
+  "v3-network-0024": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "network"
+  },
+  "v3-data-0017": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "data"
+  },
+  "v3-history-qa-0049": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "history-qa"
+  },
+  "v3-disk-memory-0034": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "disk-memory"
+  },
+  "v3-files-0075": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "files"
+  },
+  "v3-history-qa-0052": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "history-qa"
+  },
+  "v3-files-0056": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "files"
+  },
+  "v3-build-native-0082": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "build-native"
+  },
+  "v3-packages-system-0056": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "packages-system"
+  },
+  "v3-packages-system-0047": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "packages-system"
+  },
+  "v3-files-0106": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "files"
+  },
+  "v3-packages-system-0065": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "packages-system"
+  },
+  "v3-packages-system-0066": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "packages-system"
+  },
+  "v3-files-0069": {
+   "diagnostic": "trop_strict",
+   "proposals": 5,
+   "family": "files"
+  },
+  "v3-packages-system-0079": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "packages-system"
+  },
+  "v3-build-native-0027": {
+   "diagnostic": "trop_strict",
+   "proposals": 2,
+   "family": "build-native"
+  },
+  "v3-shell-scripts-0035": {
+   "diagnostic": "erreur"
+  },
+  "v3-processes-0029": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "processes"
+  },
+  "v3-shell-scripts-0025": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "shell-scripts"
+  },
+  "v3-packages-system-0076": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "packages-system"
+  },
+  "v3-permissions-users-0022": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "permissions-users"
+  },
+  "v3-packages-system-0059": {
+   "diagnostic": "trop_strict",
+   "proposals": 2,
+   "family": "packages-system"
+  },
+  "v3-python-0034": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "python"
+  },
+  "v3-history-qa-0110": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "history-qa"
+  },
+  "v3-build-native-0022": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "build-native"
+  },
+  "v3-network-transfer-0040": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "network-transfer"
+  },
+  "v3-js-node-0004": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "js-node"
+  },
+  "v3-tests-0033": {
+   "diagnostic": "trop_strict",
+   "proposals": 2,
+   "family": "tests"
+  },
+  "v3-js-node-0006": {
+   "diagnostic": "trop_strict",
+   "proposals": 2,
+   "family": "js-node"
+  },
+  "v3-rust-go-0006": {
+   "diagnostic": "erreur"
+  },
+  "v3-permissions-users-0016": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "permissions-users"
+  },
+  "v3-permissions-users-0018": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "permissions-users"
+  },
+  "v3-containers-0024": {
+   "diagnostic": "trop_strict",
+   "proposals": 2,
+   "family": "containers"
+  },
+  "v3-tests-0092": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "tests"
+  },
+  "v3-disk-memory-0035": {
+   "diagnostic": "trop_strict",
+   "proposals": 2,
+   "family": "disk-memory"
+  },
+  "v3-tests-0063": {
+   "diagnostic": "trop_strict",
+   "proposals": 2,
+   "family": "tests"
+  },
+  "v3-build-native-0105": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "build-native"
+  },
+  "v3-shell-scripts-0022": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "shell-scripts"
+  },
+  "v3-build-native-0104": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "build-native"
+  },
+  "v3-lint-format-0026": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "lint-format"
+  },
+  "v3-network-transfer-0039": {
+   "diagnostic": "erreur"
+  },
+  "v3-lint-format-0033": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "lint-format"
+  },
+  "v3-network-transfer-0017": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "network-transfer"
+  },
+  "v3-disk-memory-0032": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "disk-memory"
+  },
+  "v3-build-native-0062": {
+   "diagnostic": "trop_strict",
+   "proposals": 2,
+   "family": "build-native"
+  },
+  "v3-python-0043": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "python"
+  },
+  "v3-hardware-system-0013": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "hardware-system"
+  },
+  "v3-network-transfer-0016": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "network-transfer"
+  },
+  "v3-rust-go-0027": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "rust-go"
+  },
+  "v3-processes-0011": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "processes"
+  },
+  "v3-network-transfer-0019": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "network-transfer"
+  },
+  "v3-services-logs-0020": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "services-logs"
+  },
+  "v3-permissions-users-0025": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "permissions-users"
+  },
+  "v3-shell-scripts-0018": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "shell-scripts"
+  },
+  "v3-shell-scripts-0024": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "shell-scripts"
+  },
+  "v3-shell-scripts-0023": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "shell-scripts"
+  },
+  "v3-history-qa-0024": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "history-qa"
+  },
+  "v3-history-qa-0069": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "history-qa"
+  },
+  "v3-network-0013": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "network"
+  },
+  "v3-python-0003": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "python"
+  },
+  "v3-lint-format-0036": {
+   "diagnostic": "trop_strict",
+   "proposals": 2,
+   "family": "lint-format"
+  },
+  "v3-python-0052": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "python"
+  },
+  "v3-disk-memory-0001": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "disk-memory"
+  },
+  "v3-lint-format-0012": {
+   "diagnostic": "ok",
+   "proposals": 0,
+   "family": "lint-format"
+  },
+  "v3-python-0046": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "python"
+  },
+  "v3-containers-0028": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "containers"
+  },
+  "v3-disk-memory-0008": {
+   "diagnostic": "trop_strict",
+   "proposals": 1,
+   "family": "disk-memory"
+  },
+  "v3-js-node-0031": {
+   "diagnostic": "trop_strict",
+   "proposals": 3,
+   "family": "js-node"
+  }
+ },
+ "phase_spent_usd": 0.467184
+}

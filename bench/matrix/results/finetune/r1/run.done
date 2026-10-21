@@ -1,0 +1,38 @@
+01:37 JUGE VALIDE 7
+01:50 SCREEN k3s42 80.9 68.9 {'qa0': [0, 0, 0], 'qa1': [100, 100, 100], 'qa2': [100, 100, 100]}
+01:51 QA fr {"ok": 170, "rejet_teacher": 4, "rejet_juge": 66, "deja_fait": 0}
+01:54 QA en {"ok": 255, "rejet_teacher": 0, "rejet_juge": 75, "deja_fait": 0}
+02:01 QA-DONE
+02:12 FEAT EN detail {"mode": "detail", "traites": 320, "elapsed_s": 193.2, "par_min": 99.4, "ok": 317, "think": 0, "vide": 0, "trop long": 3, "erreur": 0} {"machine": "detail-en", "judged": 307, "verdicts": {"ok": 246, "invention": 30, "douteux": 30, "erreur": 1}, "rejected": 30, "categories": {"ligne": 7, "statut": 4, "nombre": 15, "cause": 8, "nom": 5
+02:14 FEAT EN start {"mode": "start", "traites": 220, "elapsed_s": 51.7, "par_min": 255.2, "ok": 218, "think": 0, "vide": 0, "trop long": 2, "erreur": 0} {"machine": "start-en", "judged": 191, "verdicts": {"ok": 174, "douteux": 11, "invention": 6}, "rejected": 6, "categories": {"cause": 6}}
+02:14 FEAT EN progress {"mode": "progress", "traites": 12, "elapsed_s": 4.0, "par_min": 179.7, "ok": 12, "think": 0, "vide": 0, "trop long": 0, "erreur": 0} {"machine": "progress-en", "judged": 12, "verdicts": {"ok": 12}, "rejected": 0, "categories": {}}
+02:14 FEAT-EN-DONE
+03:07 SCREEN lr1e4 81.4 65.6 {'qa0': [0, 0, 0], 'qa1': [100, 100, 100], 'qa2': [100, 100, 100]}
+03:07 SCREEN halfdetail 82.0 73.6 {'qa0': [0, 0, 0], 'qa1': [100, 100, 100], 'qa2': [100, 100, 100]}
+03:08 MIX i1 {"extra_train": 720, "extra_val": 36, "dropped_by_keep": 293, "train_by_source": {"detail": 282, "detail_en": 228, "en_summary": 884, "flux": 12, "fr_summary": 1576, "progress": 119, "progress_en": 12, "qa": 282, "qa_en": 211, "start": 270, "start_en": 133, "summary_residual": 3}, "val_by_source": {"detail": 31, "detail_en": 10, "en_summary": 26, "fr_summary": 94, "progress": 8, "qa": 12, "qa_en": 7, "start": 14, "start_en": 14}, "train": 4012, "val": 216}
+03:41 SFT i1 s42
+03:41 SFT i1 s7
+04:13 SFT i1 s123
+04:13 SFT i1 s2024
+04:14 SOUPE i1
+04:55 PAIRES i1 {"verdicts":{"ok":1862,"douteux":155,"invention":165},"train":{"pairs":152,"prompts":122,"prompts_total":4012},"val":{"pairs":20,"prompts":17,"prompts_total":216}}
+04:55 DPO i1 : 223 paires, 14 pas par époque, 4.29 époques
+05:14 GGUF i1
+EVAL r1-i1-sft
+EVAL r1-i1-dpo
+EVAL p17
+EVAL k3-a-dpo
+05:22 JUGE r1-i1-dpo
+05:25 JUGE r1-i1-sft
+05:27 JUGE p17
+05:30 JUGE k3-a-dpo
+05:30 CHAIN i1
+EVAL r1-i1-l05
+EVAL r1-i1-l07
+05:41 JUGE r1-i1-l05
+05:43 JUGE r1-i1-l07
+05:43 INTERP i1 r1-i1-l05 r1-i1-l07
+05:51 VALCHECK l07
+05:53 VALCHECK p17
+05:56 VALCHECK k3a
+06:00 SCREEN lr5e5 79.2 68.4 {'qa0': [0, 0, 0], 'qa1': [100, 100, 100], 'qa2': [100, 100, 100]}

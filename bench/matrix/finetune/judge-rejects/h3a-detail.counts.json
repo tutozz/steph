@@ -1,0 +1,17 @@
+{
+  "machine": "h3a-detail",
+  "judged": 759,
+  "verdicts": {
+    "ok": 449,
+    "invention": 195,
+    "douteux": 115
+  },
+  "rejected": 195,
+  "categories": {
+    "nombre": 67,
+    "cause": 122,
+    "ligne": 40,
+    "nom": 36,
+    "statut": 12
+  }
+}

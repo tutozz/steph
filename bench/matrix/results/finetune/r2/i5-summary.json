@@ -1,0 +1,66 @@
+{
+ "machine": "i5-7200U, llama-server b11205, -c 8192 --parallel 2 -t 4 --cache-ram 0 -ub 512 -b 512 (cpu.toml)",
+ "gguf_sha256": {
+  "v10": "45414bd2af2daf5fb9fbcb1ade078e6a2bb3cb3f341c8d0eb5fa8c3abb92ec5b",
+  "r2": "af0f42d31f50aa3c02b5acde0b47f717743552d43d004da0205005e858a65871"
+ },
+ "note": "36 cas : cases_ft36 --maxc 1500, granite_ram.py ; questions : 90 questions dev v3 a52223c, format et échantillonnage de production, à froid",
+ "runs": {
+  "r2-36-p1": {
+   "ttft_median": 0.582,
+   "ttft_p90": 2.269,
+   "ram_peak_mb": 564,
+   "load_s": 0.92,
+   "gen_tok_s_median": 60.5
+  },
+  "r2-36-p2": {
+   "ttft_median": 0.609,
+   "ttft_p90": 2.285,
+   "ram_peak_mb": 564,
+   "load_s": 0.92,
+   "gen_tok_s_median": 59.8
+  },
+  "r2-qa-p1": {
+   "ttft_median": 2.168,
+   "ttft_p90": 6.926,
+   "ram_peak_mb": 588,
+   "load_s": 1.02,
+   "gen_tok_s_median": 57.4
+  },
+  "r2-qa-p2": {
+   "ttft_median": 2.166,
+   "ttft_p90": 7.009,
+   "ram_peak_mb": 587,
+   "load_s": 1.02,
+   "gen_tok_s_median": 57.5
+  },
+  "v10-36-p1": {
+   "ttft_median": 0.596,
+   "ttft_p90": 2.261,
+   "ram_peak_mb": 563,
+   "load_s": 0.92,
+   "gen_tok_s_median": 59.8
+  },
+  "v10-36-p2": {
+   "ttft_median": 0.587,
+   "ttft_p90": 2.266,
+   "ram_peak_mb": 565,
+   "load_s": 0.92,
+   "gen_tok_s_median": 59.9
+  },
+  "v10-qa-p1": {
+   "ttft_median": 2.163,
+   "ttft_p90": 6.909,
+   "ram_peak_mb": 591,
+   "load_s": 1.03,
+   "gen_tok_s_median": 57.9
+  },
+  "v10-qa-p2": {
+   "ttft_median": 2.165,
+   "ttft_p90": 6.918,
+   "ram_peak_mb": 587,
+   "load_s": 1.03,
+   "gen_tok_s_median": 58.2
+  }
+ }
+}

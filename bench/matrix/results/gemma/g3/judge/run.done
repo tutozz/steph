@@ -1,0 +1,10 @@
+12:46 VALIDATION avant rc=0 {"fr": {"A": "6/6", "B": "6/6"}, "en": {"A": "6/6", "B": "6/6"}}
+13:00 JUGE gemma-raw-dev-b42 rc=0 {"invention": 99, "douteux": 47, "erreur": 4, "vide": 0, "ok": 392}
+13:12 JUGE sft-s42-dev-b42 rc=0 {"invention": 65, "douteux": 37, "erreur": 4, "vide": 0, "ok": 436}
+13:18 JUGE dpo-s42-dev-b42 rc=0 {"invention": 59, "douteux": 46, "erreur": 4, "vide": 0, "ok": 433}
+13:18 VALIDATION après rc=0 {"fr": {"A": "6/6", "B": "6/6"}, "en": {"A": "6/6", "B": "6/6"}}
+13:20 VALIDATION avant rc=0 {"fr": {"A": "6/6", "B": "6/6"}, "en": {"A": "6/6", "B": "6/6"}}
+13:27 JUGE gemma-raw-dev-b7 rc=0 {"invention": 101, "douteux": 42, "erreur": 5, "vide": 0, "ok": 394}
+13:31 JUGE sft-s42-dev-b7 rc=0 {"invention": 70, "douteux": 38, "erreur": 4, "vide": 0, "ok": 430}
+13:34 JUGE dpo-s42-dev-b7 rc=0 {"invention": 62, "douteux": 46, "erreur": 4, "vide": 0, "ok": 430}
+13:34 VALIDATION après rc=0 {"fr": {"A": "6/6", "B": "6/6"}, "en": {"A": "6/6", "B": "6/6"}}

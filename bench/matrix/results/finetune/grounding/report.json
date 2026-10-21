@@ -1,0 +1,945 @@
+{
+ "inventions": {
+  "total_confirmees": 169,
+  "retirees": 112,
+  "non_retirees": 57,
+  "skipped": 0,
+  "par_categorie": {
+   "ligne": {
+    "total": 12,
+    "retirees": 4
+   },
+   "statut": {
+    "total": 3,
+    "retirees": 1
+   },
+   "nombre": {
+    "total": 28,
+    "retirees": 26
+   },
+   "nom": {
+    "total": 35,
+    "retirees": 24
+   },
+   "autre": {
+    "total": 30,
+    "retirees": 12
+   },
+   "sans_categorie": {
+    "total": 61,
+    "retirees": 45
+   }
+  },
+  "detail_non_retirees": [
+   {
+    "judge_file": "judge-fixed.json",
+    "model": "rtx3060-qwen3.5-0.8b-fixed-ft.json",
+    "id": "fx06@1500",
+    "categorie": "ligne",
+    "note": "colonne 21 confondue avec un numéro de ligne (source : <stdin>:1:21, donc ligne 1)",
+    "phrase": "Échec. main ligne 21 : expected expression before ; token.",
+    "filtered": "Échec. main ligne 21 : expected expression before ; token.",
+    "removed": false,
+    "method": "heuristique (pas de guillemets dans la note)"
+   },
+   {
+    "judge_file": "judge-fixed.json",
+    "model": "opt-best-granite.json",
+    "id": "fx08@1500",
+    "categorie": "statut",
+    "note": "« pipewire.service désactivé » alors que le service est chargé/actif dans la sortie",
+    "phrase": "18 éléments : pipewire.service désactivé, pipewire.socket connexion réussie.",
+    "filtered": "18 éléments : pipewire.service désactivé, pipewire.socket connexion réussie.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-fixed.json",
+    "model": "opt-best-granite.json",
+    "id": "fx25@1500",
+    "categorie": "autre",
+    "note": "cause fabriquée (« autres utilisateurs ») au lieu du PID réel du verrou",
+    "phrase": "Échec. nginx : lock frontend inconnu, autres utilisateurs.",
+    "filtered": "Échec. nginx : lock frontend inconnu, autres utilisateurs.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-fixed.json",
+    "model": "opt-best-granite.json",
+    "id": "fx27@1500",
+    "categorie": "autre",
+    "note": "cause reformulée à côté du sens réel (« titre inexistant » au lieu de « propriété titel absente, utiliser title »)",
+    "phrase": "Échec. Header.tsx ligne 42 : titre inexistant, TypeScript.",
+    "filtered": "Échec. Header.tsx ligne 42 : titre inexistant, TypeScript.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-fixed.json",
+    "model": "opt-best-granite.json",
+    "id": "fx28@1500",
+    "categorie": "autre",
+    "note": "cause fabriquée (« nécessite paquetage local ») au lieu de « fetch first »",
+    "phrase": "Échec. main -> main : rejeté, nécessite paquetage local.",
+    "filtered": "Échec. main -> main : rejeté, nécessite paquetage local.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-fixed.json",
+    "model": "rtx3060-qwen3.5-0.8b-full-ft.json",
+    "id": "fx06@1500",
+    "categorie": "ligne",
+    "note": "colonne 21 confondue avec un numéro de ligne",
+    "phrase": "Échec. main ligne 21 : expected expression before ; token.",
+    "filtered": "Échec. main ligne 21 : expected expression before ; token.",
+    "removed": false,
+    "method": "heuristique (pas de guillemets dans la note)"
+   },
+   {
+    "judge_file": "judge-fixed.json",
+    "model": "rtx3060-qwen3.5-0.8b-full-ft.json",
+    "id": "fx25@1500",
+    "categorie": "ligne",
+    "note": "aucun numéro de ligne dans la sortie apt (PID de verrou, pas une ligne)",
+    "phrase": "Échec. nginx ligne 1 : verrou /var/lib/dpkg/lock-frontend.",
+    "filtered": "Échec. nginx ligne 1 : verrou /var/lib/dpkg/lock-frontend.",
+    "removed": false,
+    "method": "heuristique (pas de guillemets dans la note)"
+   },
+   {
+    "judge_file": "judge-i5.json",
+    "model": "i5-gemma3-270m-ft500-Q8_0.json",
+    "id": "fx00@1500",
+    "categorie": null,
+    "note": null,
+    "phrase": "37 éléments, 1516 lignes.",
+    "filtered": "37 éléments, 1516 lignes.",
+    "removed": false,
+    "method": "heuristique (pas de guillemets dans la note)"
+   },
+   {
+    "judge_file": "judge-i5.json",
+    "model": "i5-gemma3-270m-ft500-Q8_0.json",
+    "id": "fx10@1500",
+    "categorie": null,
+    "note": null,
+    "phrase": "Échec. curl ligne 6 : host inconnu.",
+    "filtered": "Échec. curl ligne 6 : host inconnu.",
+    "removed": false,
+    "method": "heuristique (pas de guillemets dans la note)"
+   },
+   {
+    "judge_file": "judge-i5.json",
+    "model": "i5-gemma3-270m-ft500-Q8_0.json",
+    "id": "fx16@1500",
+    "categorie": null,
+    "note": null,
+    "phrase": "Succès. Host key verification réussie.",
+    "filtered": "Succès. Host key verification réussie.",
+    "removed": false,
+    "method": "heuristique (pas de guillemets dans la note)"
+   },
+   {
+    "judge_file": "judge-i5.json",
+    "model": "i5-gemma3-270m-ftfull-Q8_0.json",
+    "id": "fx25@1500",
+    "categorie": null,
+    "note": null,
+    "phrase": "Échec. nginx ligne 1 : verrou fichier dpkg.",
+    "filtered": "Échec. nginx ligne 1 : verrou fichier dpkg.",
+    "removed": false,
+    "method": "heuristique (pas de guillemets dans la note)"
+   },
+   {
+    "judge_file": "judge-i5.json",
+    "model": "i5-luth-0.6b-ft-r16-Q4_K_M.json",
+    "id": "fx25@1500",
+    "categorie": null,
+    "note": null,
+    "phrase": "Échec. /var/lib/dpkg/lock-frontend ligne 1 : verrou utilisateur.",
+    "filtered": "Échec. /var/lib/dpkg/lock-frontend ligne 1 : verrou utilisateur.",
+    "removed": false,
+    "method": "heuristique (pas de guillemets dans la note)"
+   },
+   {
+    "judge_file": "judge-i5.json",
+    "model": "i5-luth-0.6b-ft-r16-Q4_K_M.json",
+    "id": "fx28@1500",
+    "categorie": null,
+    "note": null,
+    "phrase": "Échec. main -> main ref ref prouvé.",
+    "filtered": "Échec. main -> main ref ref prouvé.",
+    "removed": false,
+    "method": "heuristique (pas de guillemets dans la note)"
+   },
+   {
+    "judge_file": "judge-i5.json",
+    "model": "i5-luth-0.6b-ft-r16-Q4_K_M.json",
+    "id": "qa0",
+    "categorie": null,
+    "note": null,
+    "phrase": "Échec. Build ligne 42 : propriété titre inexistant sur type Props.",
+    "filtered": "Échec. Build ligne 42 : propriété titre inexistant sur type Props.",
+    "removed": false,
+    "method": "heuristique (pas de guillemets dans la note)"
+   },
+   {
+    "judge_file": "judge-i5.json",
+    "model": "i5-a1000-granite4.0-h-350m-ft-Q4_K_M.json",
+    "id": "fx10@1500",
+    "categorie": null,
+    "note": null,
+    "phrase": "Échec. curl ligne 6 : host inexistant.",
+    "filtered": "Échec. curl ligne 6 : host inexistant.",
+    "removed": false,
+    "method": "heuristique (pas de guillemets dans la note)"
+   },
+   {
+    "judge_file": "judge-i5.json",
+    "model": "i5-a1000-granite4.0-h-350m-ft-Q4_K_M.json",
+    "id": "fx27@1500",
+    "categorie": null,
+    "note": null,
+    "phrase": "Échec. Header.tsx ligne 42 : propriété non utilisée.",
+    "filtered": "Échec. Header.tsx ligne 42 : propriété non utilisée.",
+    "removed": false,
+    "method": "heuristique (pas de guillemets dans la note)"
+   },
+   {
+    "judge_file": "judge-i5.json",
+    "model": "i5-a1000-granite4.0-h-350m-ft-Q4_K_M.json",
+    "id": "fx29@1500",
+    "categorie": null,
+    "note": null,
+    "phrase": "GPU GeForce RTX 3060 Lite, Ethernet RTL8111/8168/8411, HDMI PCI Express, GPU PSPCPP, USB 3.0 Host.",
+    "filtered": "GPU GeForce RTX 3060 Lite, Ethernet RTL8111/8168/8411, HDMI PCI Express, GPU PSPCPP, USB 3.0 Host.",
+    "removed": false,
+    "method": "heuristique (pas de guillemets dans la note)"
+   },
+   {
+    "judge_file": "judge-i5.json",
+    "model": "i5-a1000-granite4.0-h-350m-ft-Q8_0.json",
+    "id": "fx06@1500",
+    "categorie": null,
+    "note": null,
+    "phrase": "Échec. main fonction ligne 21 : expected expression before ; token.",
+    "filtered": "Échec. main fonction ligne 21 : expected expression before ; token.",
+    "removed": false,
+    "method": "heuristique (pas de guillemets dans la note)"
+   },
+   {
+    "judge_file": "judge-i5.json",
+    "model": "i5-a1000-granite4.0-h-350m-ft-Q8_0.json",
+    "id": "fx25@1500",
+    "categorie": null,
+    "note": null,
+    "phrase": "Échec. apt install nginx ligne 1 : lock frontend vide.",
+    "filtered": "Échec. apt install nginx ligne 1 : lock frontend vide.",
+    "removed": false,
+    "method": "heuristique (pas de guillemets dans la note)"
+   },
+   {
+    "judge_file": "judge-i5.json",
+    "model": "i5-qwen3.5-0.8b-full-Q4_K_M.json",
+    "id": "fx24@1500",
+    "categorie": null,
+    "note": null,
+    "phrase": "Succès. 12 paquets mis à jour, 24,3 Mo archives, 112 Mo disque.",
+    "filtered": "Succès. 12 paquets mis à jour, 24,3 Mo archives, 112 Mo disque.",
+    "removed": false,
+    "method": "heuristique (pas de guillemets dans la note)"
+   },
+   {
+    "judge_file": "judge-i5.json",
+    "model": "i5-qwen3.5-0.8b-full-Q4_K_M.json",
+    "id": "fx25@1500",
+    "categorie": null,
+    "note": null,
+    "phrase": "Échec. nginx ligne 1 : verrou /var/lib/dpkg/lock-frontend.",
+    "filtered": "Échec. nginx ligne 1 : verrou /var/lib/dpkg/lock-frontend.",
+    "removed": false,
+    "method": "heuristique (pas de guillemets dans la note)"
+   },
+   {
+    "judge_file": "judge-i5.json",
+    "model": "i5-qwen3.5-0.8b-full-Q8_0.json",
+    "id": "fx06@1500",
+    "categorie": null,
+    "note": null,
+    "phrase": "Échec. main ligne 21 : expected expression before ; token.",
+    "filtered": "Échec. main ligne 21 : expected expression before ; token.",
+    "removed": false,
+    "method": "heuristique (pas de guillemets dans la note)"
+   },
+   {
+    "judge_file": "judge-i5.json",
+    "model": "i5-qwen3.5-0.8b-full-Q8_0.json",
+    "id": "fx25@1500",
+    "categorie": null,
+    "note": null,
+    "phrase": "Échec. nginx ligne 1 : verrou /var/lib/dpkg/lock-frontend.",
+    "filtered": "Échec. nginx ligne 1 : verrou /var/lib/dpkg/lock-frontend.",
+    "removed": false,
+    "method": "heuristique (pas de guillemets dans la note)"
+   },
+   {
+    "judge_file": "judge-judged.json",
+    "model": "judged-qwen3.5-0.8b-s42.json",
+    "id": "fx06@1500",
+    "categorie": "ligne",
+    "note": "colonne 21 prise pour la ligne (<stdin>:1:21)",
+    "phrase": "Échec. main ligne 21 : expected expression before ; token.",
+    "filtered": "Échec. main ligne 21 : expected expression before ; token.",
+    "removed": false,
+    "method": "heuristique (pas de guillemets dans la note)"
+   },
+   {
+    "judge_file": "judge-judged.json",
+    "model": "judged-granite-350m-s42-Q8_0-b42.json",
+    "id": "fx27@1500",
+    "categorie": "autre",
+    "note": "« titre inexistant » pour « propriété titel absente, utiliser title »",
+    "phrase": "Échec. Header.tsx ligne 42 : titre inexistant, TypeScript.",
+    "filtered": "Échec. Header.tsx ligne 42 : titre inexistant, TypeScript.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-judged.json",
+    "model": "judged-granite-350m-s42-Q4_K_M-b42.json",
+    "id": "fx06@1500",
+    "categorie": "ligne",
+    "note": "colonne 21 prise pour la ligne",
+    "phrase": "Échec. main ligne 21 : expecteur avant ; token.",
+    "filtered": "Échec. main ligne 21 : expecteur avant ; token.",
+    "removed": false,
+    "method": "heuristique (pas de guillemets dans la note)"
+   },
+   {
+    "judge_file": "judge-judged.json",
+    "model": "judged-granite-350m-s42-Q4_K_M-b42.json",
+    "id": "fx25@1500",
+    "categorie": "autre",
+    "note": "cause reformulée à côté (« lock frontend vide, autres utilisateurs »)",
+    "phrase": "Échec. apt install nginx : lock frontend vide, autres utilisateurs.",
+    "filtered": "Échec. apt install nginx : lock frontend vide, autres utilisateurs.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-judged.json",
+    "model": "judged-granite-350m-s7-Q8_0-b42.json",
+    "id": "fx06@1500",
+    "categorie": "ligne",
+    "note": "colonne 21 prise pour la ligne",
+    "phrase": "Échec. main ligne 21 : expect expression before semicolon.",
+    "filtered": "Échec. main ligne 21 : expect expression before semicolon.",
+    "removed": false,
+    "method": "heuristique (pas de guillemets dans la note)"
+   },
+   {
+    "judge_file": "judge-judged.json",
+    "model": "judged-granite-350m-s7-Q8_0-b42.json",
+    "id": "fx13@1500",
+    "categorie": "nom",
+    "note": "« Debian 7.0 » et « CPU m5a-t75d » inventés",
+    "phrase": "Debian 7.0, X86_64, CPU m5a-t75d.",
+    "filtered": "Debian 7.0, X86_64.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-judged.json",
+    "model": "judged-granite-350m-s7-Q8_0-b42.json",
+    "id": "fx27@1500",
+    "categorie": "autre",
+    "note": "phrase en espagnol, « titlo » inventé",
+    "phrase": "Échec. Header.tsx ligne 42 : Propiedad \"titel\" no definida, debe ser titlo.",
+    "filtered": "Échec. debe ser titlo.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-judged.json",
+    "model": "judged-gemma-270m-s42-Q8_0-b42.json",
+    "id": "fx00@1500",
+    "categorie": "nom",
+    "note": "« crutchwords » absent de /etc",
+    "phrase": "Abrt, adjtime, aliases, chromium, cifs-utils, cni, cockpit, containerd, containers, crutchwords, credstore, cron.d",
+    "filtered": "Abrt, adjtime, aliases, chromium, cifs-utils, cni, cockpit, containerd, containers, crutchwords, credstore, cron.d.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-judged.json",
+    "model": "judged-gemma-270m-s42-Q8_0-b42.json",
+    "id": "fx09@1500",
+    "categorie": "nom",
+    "note": "« streams » absent de la liste",
+    "phrase": "8 éléments : def __init__, healthy, ensure_server, _pid_alive, stop_server, _payload, streams.",
+    "filtered": "8 éléments : def __init__, healthy, ensure_server, _pid_alive, stop_server, _payload, streams.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-judged.json",
+    "model": "judged-gemma-270m-s42-Q8_0-b42.json",
+    "id": "fx19@1500",
+    "categorie": "nom",
+    "note": "« fitness-app », « notes-backup » inventés",
+    "phrase": "10 éléments : OLD_SHOPAPP 12G, fitness-app 2G, notes-backup 2G.",
+    "filtered": "10 éléments : OLD_SHOPAPP 12G, fitness-app 2G, notes-backup 2G.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-judged.json",
+    "model": "judged-gemma-270m-s42-Q8_0-b42.json",
+    "id": "fx27@1500",
+    "categorie": "nom",
+    "note": "« tinsel » pour « titel »",
+    "phrase": "Échec. Header.tsx ligne 42 : tinsel non trouvé sur Props.",
+    "filtered": "Échec. Header.tsx ligne 42 : tinsel non trouvé sur Props.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-judged.json",
+    "model": "judged-gemma-270m-s42-Q8_0-b42.json",
+    "id": "fx28@1500",
+    "categorie": "autre",
+    "note": "cause du rejet git fabriquée (« refs travail source, réstring »)",
+    "phrase": "Échec. push : refs travail source, réstring.",
+    "filtered": "Échec. push : refs travail source, réstring.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-judged.json",
+    "model": "judged-gemma-270m-s42-Q8_0-b42.json",
+    "id": "qa0",
+    "categorie": "ligne",
+    "note": "« ligne TS2339 » : code d'erreur pris pour un numéro de ligne",
+    "phrase": "Échec. src/components/Header.tsx ligne TS2339 propitel inexistant.",
+    "filtered": "Échec. src/components/Header.tsx ligne TS2339 propitel inexistant.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-judged.json",
+    "model": "judged-granite-350m-s7-Q4_K_M-b42.json",
+    "id": "fx10@1500",
+    "categorie": "autre",
+    "note": "« fichier inexistant » pour un hôte introuvable",
+    "phrase": "Échec. Curl : fichier inexistant.",
+    "filtered": "Échec. Curl : fichier inexistant.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-judged.json",
+    "model": "judged-granite-350m-s7-Q4_K_M-b42.json",
+    "id": "fx13@1500",
+    "categorie": "autre",
+    "note": "« serveur actif » absent de la sortie uname",
+    "phrase": "Un Linux devbox 7.0.9, serveur actif.",
+    "filtered": "Un Linux devbox 7.0.9, serveur actif.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-judged.json",
+    "model": "judged-granite-350m-s7-Q4_K_M-b42.json",
+    "id": "fx16@1500",
+    "categorie": "statut",
+    "note": "« Succès » alors que ssh sort en code 255",
+    "phrase": "Succès. Host key verification faible.",
+    "filtered": "Succès. Host key verification faible.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-judged.json",
+    "model": "judged-granite-350m-s7-Q4_K_M-b42.json",
+    "id": "fx24@1500",
+    "categorie": "nombre",
+    "note": "« 112 paquets » : 112 est la taille en ko",
+    "phrase": "Succès. 112 paquets mis à jour, 24,3 Mo réceptionnés en 6s.",
+    "filtered": "Succès. 112 paquets mis à jour, 24,3 Mo réceptionnés en 6s.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-judged.json",
+    "model": "judged-granite-350m-s7-Q4_K_M-b42.json",
+    "id": "fx25@1500",
+    "categorie": "autre",
+    "note": "cause déformée (« un vide, autres processus »)",
+    "phrase": "Échec. apt install nginx : impossible obtenir lock-frontend un vide, autres processus utilisés.",
+    "filtered": "Échec. apt install nginx : impossible obtenir lock-frontend un vide, autres processus utilisés.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-judged.json",
+    "model": "judged-granite-350m-s7-Q4_K_M-b42.json",
+    "id": "fx27@1500",
+    "categorie": "autre",
+    "note": "« prop title manquant, devrà être titre » : sens inversé",
+    "phrase": "Échec. Header.tsx ligne 42 : prop title manquant, devrà être titre.",
+    "filtered": "Échec. Header.tsx ligne 42 : prop title manquant, devrà être titre.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-judged.json",
+    "model": "judged-granite-350m-s7-Q4_K_M-b42.json",
+    "id": "fx26@1500",
+    "categorie": "nombre",
+    "note": "version urllib3 1.21.1 absente de la sortie",
+    "phrase": "Requests 2.32.3, Charset_normalizer 3.4.0, Idna 3.10, urllib3 1.21.1, Certifi 2024.8.30 installés.",
+    "filtered": "Requests 2.32.3, Charset_normalizer 3.4.0, Idna 3.10, urllib3 1.21.1, Certifi 2024.8.30 installés.",
+    "removed": false,
+    "method": "heuristique (pas de guillemets dans la note)"
+   },
+   {
+    "judge_file": "judge-judged.json",
+    "model": "judged-granite-350m-s7-Q4_K_M-b42.json",
+    "id": "df_proxmox@1500",
+    "categorie": "nom",
+    "note": "« Backup hôte » pour « backup-hdd »",
+    "phrase": "Racine 8.9G libres sur 94G, Backup hôte 134G libres sur 442G, Backup hôte 70 %.",
+    "filtered": "Racine 8.9G libres sur 94G, Backup hôte 134G libres sur 442G, Backup hôte 70 %.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-soup.json",
+    "model": "soup-granite-uniform-Q4_K_M-b42.json",
+    "id": "fx06@1500",
+    "categorie": "ligne",
+    "note": "colonne 21 prise pour la ligne",
+    "phrase": "Échec. main ligne 21 : expected expression before ';' token.",
+    "filtered": "Échec. main ligne 21 : expected expression before ';' token.",
+    "removed": false,
+    "method": "heuristique (pas de guillemets dans la note)"
+   },
+   {
+    "judge_file": "judge-soup.json",
+    "model": "soup-granite-uniform-Q4_K_M-b42.json",
+    "id": "fx25@1500",
+    "categorie": "autre",
+    "note": "cause déformée (« lockz vide, autres utilisateurs »)",
+    "phrase": "Échec. /var/lib/dpkg/lock-frontend : lockz vide, autres utilisateurs.",
+    "filtered": "Échec. /var/lib/dpkg/lock-frontend : lockz vide, autres utilisateurs.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-soup.json",
+    "model": "soup-granite-uniform-Q4_K_M-b42.json",
+    "id": "fx24@1500",
+    "categorie": "autre",
+    "note": "« curl sur libcurl4, openssl sur libssl3 » : relation inventée entre paquets",
+    "phrase": "Succès. 112 ko d'espace disque supplémentaires utilisés. Curl sur libcurl4, openssl sur libssl3.",
+    "filtered": "Succès. 112 ko d'espace disque supplémentaires utilisés. Curl sur libcurl4, openssl sur libssl3..",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-soup.json",
+    "model": "soup-granite-uniform-Q8_0-b42.json",
+    "id": "df_proxmox@1500",
+    "categorie": "nom",
+    "note": "« Backup hôte » pour « backup-hdd »",
+    "phrase": "Racine 8.9G libres sur 94G, Backup hôte 134G libres sur 442G, Backup hôte 70 %.",
+    "filtered": "Racine 8.9G libres sur 94G, Backup hôte 134G libres sur 442G, Backup hôte 70 %.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-soup.json",
+    "model": "soup-granite-greedy-Q4_K_M-b42.json",
+    "id": "fx13@1500",
+    "categorie": "autre",
+    "note": "« Uninstallé », « système actif » absents de la sortie uname",
+    "phrase": "Uninstallé Linux devbox 7.0.9-202.fc44.x86_64, CPU x86_64, système actif.",
+    "filtered": "Uninstallé Linux devbox 7.0.9-202.fc44.x86_64, CPU x86_64, système actif.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-soup.json",
+    "model": "soup-granite-greedy-Q4_K_M-b42.json",
+    "id": "df_proxmox@1500",
+    "categorie": "nom",
+    "note": "« Backup hôte » pour « backup-hdd »",
+    "phrase": "Racine 8.9G libres sur 94G, Backup hôte 134G libres sur 442G, Backup hôte 70 %.",
+    "filtered": "Racine 8.9G libres sur 94G, Backup hôte 134G libres sur 442G, Backup hôte 70 %.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-soup.json",
+    "model": "soup-granite-greedy-Q8_0-b42.json",
+    "id": "fx25@1500",
+    "categorie": "autre",
+    "note": "cause déformée (« lock frontend vide »)",
+    "phrase": "Échec. apt install nginx : lock frontend vide, autre processus utilisé.",
+    "filtered": "Échec. apt install nginx : lock frontend vide, autre processus utilisé.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-soup.json",
+    "model": "soup-granite-seed42-Q4_K_M-b42.json",
+    "id": "fx17@1500",
+    "categorie": "nom",
+    "note": "« chmod » pour la commande rm",
+    "phrase": "Échec. chmod : permission non accordée.",
+    "filtered": "Échec. chmod : permission non accordée.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-soup.json",
+    "model": "soup-granite-seed42-Q4_K_M-b42.json",
+    "id": "fx22@1500",
+    "categorie": "nom",
+    "note": "« nginx » pour « shopapp_nginx_admin » ; le juge reproche aussi shopapp_vault, présent dans la sortie, discutable",
+    "phrase": "9 conteneurs : shopapp_api, shopapp_vault, nginx.",
+    "filtered": "9 conteneurs : shopapp_api, shopapp_vault, nginx.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-soup.json",
+    "model": "soup-granite-seed42-Q4_K_M-b42.json",
+    "id": "fx24@1500",
+    "categorie": "autre",
+    "note": "paquets mis à jour dits « installés » (0 nouvellement installés), liste fidèle sinon, discutable",
+    "phrase": "Succès. 24,3 Mo réceptionnés en 6s. Curl libcurl4 openssl libssl3 linux-libc-dev tzdata vim vim-runtime xxd python3.11 installés.",
+    "filtered": "Succès. 24,3 Mo réceptionnés en 6s. Curl libcurl4 openssl libssl3 linux-libc-dev tzdata vim vim-runtime xxd python3.11 installés.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-soup.json",
+    "model": "soup-granite-seed42-Q4_K_M-b42.json",
+    "id": "fx27@1500",
+    "categorie": "autre",
+    "note": "« titre inexistant, correcteur de signature » : cause déformée",
+    "phrase": "Échec. Header.tsx ligne 42 : titre inexistant, correcteur de signature.",
+    "filtered": "Échec. Header.tsx ligne 42 : titre inexistant, correcteur de signature.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-soup.json",
+    "model": "soup-granite-seed42-Q4_K_M-b42.json",
+    "id": "fx29@1500",
+    "categorie": "nom",
+    "note": "« Audio Device » pour « Audio Controller » : écart mineur, discutable",
+    "phrase": "GPU RTX 3060 Lite Hash Rate GPU, Ethernet Realtek Semiconductor Co., Ltd. et HDMI NVIDIA Corporation GA106 High Definition Audio Device.",
+    "filtered": "GPU RTX 3060 Lite Hash Rate GPU, Ethernet Realtek Semiconductor Co., Ltd. et HDMI NVIDIA Corporation GA106 High Definition Audio Device.",
+    "removed": false,
+    "method": "guillemets"
+   },
+   {
+    "judge_file": "judge-soup.json",
+    "model": "soup-granite-seed42-Q8_0-b42.json",
+    "id": "fx27@1500",
+    "categorie": "autre",
+    "note": "« titre inexistant » pour « propriété titel absente, utiliser title »",
+    "phrase": "Échec. Header.tsx ligne 42 : titre inexistant, TypeScript.",
+    "filtered": "Échec. Header.tsx ligne 42 : titre inexistant, TypeScript.",
+    "removed": false,
+    "method": "guillemets"
+   }
+  ]
+ },
+ "faits_vrais": {
+  "fichier_reference": {
+   "file": "i5-soup-granite-uniform-Q4_K_M.json",
+   "n": 36,
+   "v2_before": 80.4,
+   "v2_after": 83.2,
+   "v2_before_tune": 80.0,
+   "v2_after_tune": 80.0,
+   "v2_before_holdout": 81.0,
+   "v2_after_holdout": 87.7,
+   "faits_vrais_coupes": 0,
+   "gains": 1,
+   "detail_faux_positifs": []
+  },
+  "tous_les_i5": [
+   {
+    "file": "i5-flan-t5-small-s42-Q8_0.json",
+    "n": 36,
+    "v2_before": 72.4,
+    "v2_after": 65.4,
+    "v2_before_tune": 91.9,
+    "v2_after_tune": 80.0,
+    "v2_before_holdout": 45.0,
+    "v2_after_holdout": 45.0,
+    "faits_vrais_coupes": 3,
+    "gains": 0,
+    "detail_faux_positifs": [
+     {
+      "id": "fx02@1500",
+      "before": "branche master Aucun commit Fichiers non suivis : .python-version README.md bench/ pyproject.toml uv.lock vendor/aucune modification ajoutée à validation.",
+      "cleaned": "branche master Aucun commit Fichiers non suivis : .python-version README.md bench/ pyproject.toml uv.lock vendor/aucune modification ajoutée à validation.",
+      "filtered": "",
+      "score_before": 1.0,
+      "score_after": 0.0
+     },
+     {
+      "id": "fx03@1500",
+      "before": "Échec. Fichier /nonexistant/file.txt : Aucun fichier ou dossier de ce nom.",
+      "cleaned": "Échec. Fichier /nonexistant/file.txt : Aucun fichier ou dossier de ce nom.",
+      "filtered": "Échec.",
+      "score_before": 1.0,
+      "score_after": 0.5
+     },
+     {
+      "id": "fx14@1500",
+      "before": "pip 26.0.1 disponible sur /usr/lib/python3.14/site-package/pip 3.14.",
+      "cleaned": "pip 26.0.1 disponible sur /usr/lib/python3.14/site-package/pip 3.14.",
+      "filtered": "",
+      "score_before": 1.0,
+      "score_after": 0.0
+     }
+    ]
+   },
+   {
+    "file": "i5-flan-t5-small-s42-f16.json",
+    "n": 36,
+    "v2_before": 73.8,
+    "v2_after": 66.8,
+    "v2_before_tune": 91.9,
+    "v2_after_tune": 80.0,
+    "v2_before_holdout": 48.3,
+    "v2_after_holdout": 48.3,
+    "faits_vrais_coupes": 3,
+    "gains": 0,
+    "detail_faux_positifs": [
+     {
+      "id": "fx02@1500",
+      "before": "branche master Aucun commit Fichiers non suivis : .python-version README.md bench/ pyproject.toml uv.lock vendor/aucune modification ajoutée à validation.",
+      "cleaned": "branche master Aucun commit Fichiers non suivis : .python-version README.md bench/ pyproject.toml uv.lock vendor/aucune modification ajoutée à validation.",
+      "filtered": "",
+      "score_before": 1.0,
+      "score_after": 0.0
+     },
+     {
+      "id": "fx03@1500",
+      "before": "Échec. Fichier /nonexistant/file.txt : Aucun fichier ou dossier de ce nom.",
+      "cleaned": "Échec. Fichier /nonexistant/file.txt : Aucun fichier ou dossier de ce nom.",
+      "filtered": "Échec.",
+      "score_before": 1.0,
+      "score_after": 0.5
+     },
+     {
+      "id": "fx14@1500",
+      "before": "pip 26.0.1 disponible sur /usr/lib/python3.14/site-package/pip 3.14.",
+      "cleaned": "pip 26.0.1 disponible sur /usr/lib/python3.14/site-package/pip 3.14.",
+      "filtered": "",
+      "score_before": 1.0,
+      "score_after": 0.0
+     }
+    ]
+   },
+   {
+    "file": "i5-gemma3-270m-ft500-Q8_0.json",
+    "n": 36,
+    "v2_before": 54.9,
+    "v2_after": 56.2,
+    "v2_before_tune": 69.0,
+    "v2_after_tune": 71.4,
+    "v2_before_holdout": 35.0,
+    "v2_after_holdout": 35.0,
+    "faits_vrais_coupes": 0,
+    "gains": 1,
+    "detail_faux_positifs": []
+   },
+   {
+    "file": "i5-gemma3-270m-ftfull-Q8_0.json",
+    "n": 36,
+    "v2_before": 67.5,
+    "v2_after": 68.9,
+    "v2_before_tune": 78.6,
+    "v2_after_tune": 81.0,
+    "v2_before_holdout": 52.0,
+    "v2_after_holdout": 52.0,
+    "faits_vrais_coupes": 0,
+    "gains": 1,
+    "detail_faux_positifs": []
+   },
+   {
+    "file": "i5-judged-gemma-270m-s42-Q8_0.json",
+    "n": 36,
+    "v2_before": 82.6,
+    "v2_after": 82.6,
+    "v2_before_tune": 95.2,
+    "v2_after_tune": 95.2,
+    "v2_before_holdout": 65.0,
+    "v2_after_holdout": 65.0,
+    "faits_vrais_coupes": 0,
+    "gains": 0,
+    "detail_faux_positifs": []
+   },
+   {
+    "file": "i5-judged-granite-350m-s42-Q4_K_M.json",
+    "n": 36,
+    "v2_before": 82.8,
+    "v2_after": 85.6,
+    "v2_before_tune": 80.0,
+    "v2_after_tune": 80.0,
+    "v2_before_holdout": 86.7,
+    "v2_after_holdout": 93.3,
+    "faits_vrais_coupes": 0,
+    "gains": 1,
+    "detail_faux_positifs": []
+   },
+   {
+    "file": "i5-judged-granite-350m-s7-Q4_K_M.json",
+    "n": 36,
+    "v2_before": 83.3,
+    "v2_after": 88.9,
+    "v2_before_tune": 95.2,
+    "v2_after_tune": 95.2,
+    "v2_before_holdout": 66.7,
+    "v2_after_holdout": 80.0,
+    "faits_vrais_coupes": 0,
+    "gains": 2,
+    "detail_faux_positifs": []
+   },
+   {
+    "file": "i5-luth-0.6b-ft-r16-Q4_K_M.json",
+    "n": 36,
+    "v2_before": 72.9,
+    "v2_after": 74.3,
+    "v2_before_tune": 83.3,
+    "v2_after_tune": 85.7,
+    "v2_before_holdout": 58.3,
+    "v2_after_holdout": 58.3,
+    "faits_vrais_coupes": 0,
+    "gains": 1,
+    "detail_faux_positifs": []
+   },
+   {
+    "file": "i5-a1000-granite4.0-h-350m-ft-Q4_K_M.json",
+    "n": 36,
+    "v2_before": 75.0,
+    "v2_after": 79.2,
+    "v2_before_tune": 78.6,
+    "v2_after_tune": 81.0,
+    "v2_before_holdout": 70.0,
+    "v2_after_holdout": 76.7,
+    "faits_vrais_coupes": 0,
+    "gains": 2,
+    "detail_faux_positifs": []
+   },
+   {
+    "file": "i5-a1000-granite4.0-h-350m-ft-Q8_0.json",
+    "n": 36,
+    "v2_before": 66.7,
+    "v2_after": 66.7,
+    "v2_before_tune": 73.8,
+    "v2_after_tune": 76.2,
+    "v2_before_holdout": 56.7,
+    "v2_after_holdout": 53.3,
+    "faits_vrais_coupes": 1,
+    "gains": 1,
+    "detail_faux_positifs": [
+     {
+      "id": "fx27@1500",
+      "before": "Échec. Header.tsx ligne 42 : Titre introuvable.",
+      "cleaned": "Échec. Header.tsx ligne 42 : Titre introuvable.",
+      "filtered": "Échec.",
+      "score_before": 0.5,
+      "score_after": 0.0
+     }
+    ]
+   },
+   {
+    "file": "i5-qwen3.5-0.8b-full-Q4_K_M.json",
+    "n": 36,
+    "v2_before": 77.1,
+    "v2_after": 81.2,
+    "v2_before_tune": 85.7,
+    "v2_after_tune": 88.1,
+    "v2_before_holdout": 65.0,
+    "v2_after_holdout": 71.7,
+    "faits_vrais_coupes": 0,
+    "gains": 2,
+    "detail_faux_positifs": []
+   },
+   {
+    "file": "i5-qwen3.5-0.8b-full-Q8_0.json",
+    "n": 36,
+    "v2_before": 71.5,
+    "v2_after": 74.3,
+    "v2_before_tune": 76.2,
+    "v2_after_tune": 81.0,
+    "v2_before_holdout": 65.0,
+    "v2_after_holdout": 65.0,
+    "faits_vrais_coupes": 0,
+    "gains": 2,
+    "detail_faux_positifs": []
+   },
+   {
+    "file": "i5-soup-granite-greedy-Q4_K_M.json",
+    "n": 36,
+    "v2_before": 86.9,
+    "v2_after": 88.3,
+    "v2_before_tune": 89.5,
+    "v2_after_tune": 89.5,
+    "v2_before_holdout": 83.3,
+    "v2_after_holdout": 86.7,
+    "faits_vrais_coupes": 1,
+    "gains": 1,
+    "detail_faux_positifs": [
+     {
+      "id": "fx27@1500",
+      "before": "Échec. Header.tsx ligne 42 : Titre inexistant.",
+      "cleaned": "Échec. Header.tsx ligne 42 : Titre inexistant.",
+      "filtered": "Échec.",
+      "score_before": 0.5,
+      "score_after": 0.0
+     }
+    ]
+   },
+   {
+    "file": "i5-soup-granite-seed42-Q4_K_M.json",
+    "n": 36,
+    "v2_before": 77.2,
+    "v2_after": 80.0,
+    "v2_before_tune": 80.0,
+    "v2_after_tune": 80.0,
+    "v2_before_holdout": 73.3,
+    "v2_after_holdout": 80.0,
+    "faits_vrais_coupes": 0,
+    "gains": 1,
+    "detail_faux_positifs": []
+   },
+   {
+    "file": "i5-soup-granite-uniform-Q4_K_M.json",
+    "n": 36,
+    "v2_before": 80.4,
+    "v2_after": 83.2,
+    "v2_before_tune": 80.0,
+    "v2_after_tune": 80.0,
+    "v2_before_holdout": 81.0,
+    "v2_after_holdout": 87.7,
+    "faits_vrais_coupes": 0,
+    "gains": 1,
+    "detail_faux_positifs": []
+   }
+  ],
+  "total_cas": 540,
+  "total_faits_vrais_coupes": 8
+ }
+}

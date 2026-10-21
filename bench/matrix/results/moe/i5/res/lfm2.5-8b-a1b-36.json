@@ -1,0 +1,399 @@
+{
+ "label": "lfm2.5-8b-a1b-36",
+ "cmdline": [
+  "/root/stephbench-g2/bin/llama-b11205/llama-server",
+  "-m",
+  "/root/g6/models/LFM2.5-8B-A1B-Q4_K_M.gguf",
+  "--host",
+  "127.0.0.1",
+  "--port",
+  "8899",
+  "-c",
+  "32768",
+  "-ngl",
+  "0",
+  "--no-webui",
+  "--jinja",
+  "--reasoning-budget",
+  "0",
+  "-b",
+  "512",
+  "-ub",
+  "512",
+  "--parallel",
+  "2",
+  "-t",
+  "4",
+  "--cache-ram",
+  "0"
+ ],
+ "rows": [
+  {
+   "id": "fx00@1500",
+   "fixture": "fx00",
+   "kind": "summary",
+   "ttft": 0.269,
+   "total": 2.413,
+   "prompt_n": 4,
+   "gen_n": 42,
+   "gen_tok_s": 18.21909663497729
+  },
+  {
+   "id": "fx01@1500",
+   "fixture": "fx01",
+   "kind": "summary",
+   "ttft": 4.862,
+   "total": 6.665,
+   "prompt_n": 165,
+   "gen_n": 37,
+   "gen_tok_s": 18.85631228148284
+  },
+  {
+   "id": "fx02@1500",
+   "fixture": "fx02",
+   "kind": "summary",
+   "ttft": 7.031,
+   "total": 9.505,
+   "prompt_n": 244,
+   "gen_n": 49,
+   "gen_tok_s": 18.656208825164118
+  },
+  {
+   "id": "fx03@1500",
+   "fixture": "fx03",
+   "kind": "summary",
+   "ttft": 4.704,
+   "total": 5.912,
+   "prompt_n": 160,
+   "gen_n": 25,
+   "gen_tok_s": 18.33247781770184
+  },
+  {
+   "id": "fx04@1500",
+   "fixture": "fx04",
+   "kind": "summary",
+   "ttft": 6.243,
+   "total": 8.851,
+   "prompt_n": 195,
+   "gen_n": 48,
+   "gen_tok_s": 17.31984596392313
+  },
+  {
+   "id": "fx05@1500",
+   "fixture": "fx05",
+   "kind": "summary",
+   "ttft": 10.386,
+   "total": 12.594,
+   "prompt_n": 336,
+   "gen_n": 40,
+   "gen_tok_s": 16.74260223827127
+  },
+  {
+   "id": "fx06@1500",
+   "fixture": "fx06",
+   "kind": "summary",
+   "ttft": 6.125,
+   "total": 9.758,
+   "prompt_n": 190,
+   "gen_n": 67,
+   "gen_tok_s": 17.628897288435205
+  },
+  {
+   "id": "fx07@1500",
+   "fixture": "fx07",
+   "kind": "summary",
+   "ttft": 6.291,
+   "total": 9.958,
+   "prompt_n": 199,
+   "gen_n": 67,
+   "gen_tok_s": 17.454780877705723
+  },
+  {
+   "id": "fx08@1500",
+   "fixture": "fx08",
+   "kind": "summary",
+   "ttft": 17.6,
+   "total": 22.305,
+   "prompt_n": 568,
+   "gen_n": 80,
+   "gen_tok_s": 16.199572167248487
+  },
+  {
+   "id": "fx09@1500",
+   "fixture": "fx09",
+   "kind": "summary",
+   "ttft": 8.246,
+   "total": 8.466,
+   "prompt_n": 266,
+   "gen_n": 7,
+   "gen_tok_s": 18.19483024223384
+  },
+  {
+   "id": "fx10@1500",
+   "fixture": "fx10",
+   "kind": "summary",
+   "ttft": 3.503,
+   "total": 4.62,
+   "prompt_n": 104,
+   "gen_n": 22,
+   "gen_tok_s": 17.023277305134137
+  },
+  {
+   "id": "fx11@1500",
+   "fixture": "fx11",
+   "kind": "summary",
+   "ttft": 4.153,
+   "total": 6.793,
+   "prompt_n": 128,
+   "gen_n": 49,
+   "gen_tok_s": 17.399007821578977
+  },
+  {
+   "id": "fx12@1500",
+   "fixture": "fx12",
+   "kind": "summary",
+   "ttft": 3.968,
+   "total": 8.337,
+   "prompt_n": 120,
+   "gen_n": 80,
+   "gen_tok_s": 17.653327529336366
+  },
+  {
+   "id": "fx13@1500",
+   "fixture": "fx13",
+   "kind": "summary",
+   "ttft": 4.275,
+   "total": 7.283,
+   "prompt_n": 132,
+   "gen_n": 55,
+   "gen_tok_s": 17.29227336394279
+  },
+  {
+   "id": "fx14@1500",
+   "fixture": "fx14",
+   "kind": "summary",
+   "ttft": 3.635,
+   "total": 5.541,
+   "prompt_n": 110,
+   "gen_n": 33,
+   "gen_tok_s": 15.931129726193666
+  },
+  {
+   "id": "fx15@1500",
+   "fixture": "fx15",
+   "kind": "summary",
+   "ttft": 10.225,
+   "total": 14.749,
+   "prompt_n": 332,
+   "gen_n": 80,
+   "gen_tok_s": 17.052845256438097
+  },
+  {
+   "id": "fx16@1500",
+   "fixture": "fx16",
+   "kind": "summary",
+   "ttft": 3.631,
+   "total": 4.301,
+   "prompt_n": 110,
+   "gen_n": 12,
+   "gen_tok_s": 14.029305944727087
+  },
+  {
+   "id": "fx17@1500",
+   "fixture": "fx17",
+   "kind": "summary",
+   "ttft": 3.328,
+   "total": 4.564,
+   "prompt_n": 101,
+   "gen_n": 24,
+   "gen_tok_s": 17.099761495500534
+  },
+  {
+   "id": "fx18@1500",
+   "fixture": "fx18",
+   "kind": "summary",
+   "ttft": 6.85,
+   "total": 11.418,
+   "prompt_n": 217,
+   "gen_n": 80,
+   "gen_tok_s": 16.891064819140524
+  },
+  {
+   "id": "fx19@1500",
+   "fixture": "fx19",
+   "kind": "summary",
+   "ttft": 8.579,
+   "total": 10.708,
+   "prompt_n": 277,
+   "gen_n": 39,
+   "gen_tok_s": 16.91054189831513
+  },
+  {
+   "id": "fx20@1500",
+   "fixture": "fx20",
+   "kind": "summary",
+   "ttft": 18.154,
+   "total": 22.769,
+   "prompt_n": 589,
+   "gen_n": 80,
+   "gen_tok_s": 16.69156668101296
+  },
+  {
+   "id": "fx21@1500",
+   "fixture": "fx21",
+   "kind": "summary",
+   "ttft": 4.6,
+   "total": 7.427,
+   "prompt_n": 139,
+   "gen_n": 52,
+   "gen_tok_s": 17.37064320426378
+  },
+  {
+   "id": "fx22@1500",
+   "fixture": "fx22",
+   "kind": "summary",
+   "ttft": 17.4,
+   "total": 22.026,
+   "prompt_n": 563,
+   "gen_n": 80,
+   "gen_tok_s": 16.67940846794566
+  },
+  {
+   "id": "fx23@1500",
+   "fixture": "fx23",
+   "kind": "summary",
+   "ttft": 2.776,
+   "total": 3.38,
+   "prompt_n": 81,
+   "gen_n": 14,
+   "gen_tok_s": 16.62000281261586
+  },
+  {
+   "id": "fx24@1500",
+   "fixture": "fx24",
+   "kind": "summary",
+   "ttft": 15.968,
+   "total": 20.649,
+   "prompt_n": 520,
+   "gen_n": 80,
+   "gen_tok_s": 16.494318438059032
+  },
+  {
+   "id": "fx25@1500",
+   "fixture": "fx25",
+   "kind": "summary",
+   "ttft": 6.323,
+   "total": 10.797,
+   "prompt_n": 201,
+   "gen_n": 80,
+   "gen_tok_s": 17.20919563566085
+  },
+  {
+   "id": "fx26@1500",
+   "fixture": "fx26",
+   "kind": "summary",
+   "ttft": 10.218,
+   "total": 12.223,
+   "prompt_n": 329,
+   "gen_n": 36,
+   "gen_tok_s": 16.49324413158593
+  },
+  {
+   "id": "fx27@1500",
+   "fixture": "fx27",
+   "kind": "summary",
+   "ttft": 4.945,
+   "total": 9.509,
+   "prompt_n": 154,
+   "gen_n": 80,
+   "gen_tok_s": 16.864767195764937
+  },
+  {
+   "id": "fx28@1500",
+   "fixture": "fx28",
+   "kind": "summary",
+   "ttft": 5.708,
+   "total": 10.181,
+   "prompt_n": 180,
+   "gen_n": 80,
+   "gen_tok_s": 17.238580204349187
+  },
+  {
+   "id": "fx29@1500",
+   "fixture": "fx29",
+   "kind": "summary",
+   "ttft": 16.836,
+   "total": 21.418,
+   "prompt_n": 545,
+   "gen_n": 80,
+   "gen_tok_s": 16.80484932644462
+  },
+  {
+   "id": "fx30@1500",
+   "fixture": "fx30",
+   "kind": "summary",
+   "ttft": 2.101,
+   "total": 3.579,
+   "prompt_n": 60,
+   "gen_n": 28,
+   "gen_tok_s": 16.976914540098527
+  },
+  {
+   "id": "df_proxmox@1500",
+   "fixture": "df_proxmox",
+   "kind": "summary",
+   "ttft": 2.551,
+   "total": 4.853,
+   "prompt_n": 73,
+   "gen_n": 44,
+   "gen_tok_s": 17.81190299057709
+  },
+  {
+   "id": "ip_a_proxmox@1500",
+   "fixture": "ip_a_proxmox",
+   "kind": "summary",
+   "ttft": 2.714,
+   "total": 5.19,
+   "prompt_n": 80,
+   "gen_n": 47,
+   "gen_tok_s": 17.81359084040649
+  },
+  {
+   "id": "qa0",
+   "fixture": "qa0",
+   "kind": "qa",
+   "ttft": 8.877,
+   "total": 15.264,
+   "prompt_n": 283,
+   "gen_n": 111,
+   "gen_tok_s": 16.93739814464661
+  },
+  {
+   "id": "qa1",
+   "fixture": "qa1",
+   "kind": "qa",
+   "ttft": 8.97,
+   "total": 15.092,
+   "prompt_n": 286,
+   "gen_n": 108,
+   "gen_tok_s": 17.145726820179142
+  },
+  {
+   "id": "qa2",
+   "fixture": "qa2",
+   "kind": "qa",
+   "ttft": 8.797,
+   "total": 10.206,
+   "prompt_n": 283,
+   "gen_n": 27,
+   "gen_tok_s": 17.025556670220208
+  }
+ ],
+ "load_s": 6.05,
+ "ram_repos_avant_mb": 9126,
+ "ram_repos_apres_mb": 9190,
+ "ttft_median": 6.184,
+ "ttft_p90": 16.836,
+ "gen_tok_s_median": 17.1,
+ "ram_peak_mb": 9190
+}

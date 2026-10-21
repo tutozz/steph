@@ -1,0 +1,137 @@
+{
+ "rows": 1779,
+ "by_lang": {
+  "fr": 883,
+  "en": 896
+ },
+ "by_family": {
+  "files": {
+   "fr": 153,
+   "en": 161,
+   "total": 314
+  },
+  "tests": {
+   "fr": 151,
+   "en": 151,
+   "total": 302
+  },
+  "lint-format": {
+   "fr": 137,
+   "en": 137,
+   "total": 274
+  },
+  "bases": {
+   "fr": 78,
+   "en": 77,
+   "total": 155
+  },
+  "packages-system": {
+   "fr": 70,
+   "en": 74,
+   "total": 144
+  },
+  "build-native": {
+   "fr": 68,
+   "en": 71,
+   "total": 139
+  },
+  "docker": {
+   "fr": 43,
+   "en": 43,
+   "total": 86
+  },
+  "vcs-git": {
+   "fr": 39,
+   "en": 38,
+   "total": 77
+  },
+  "typage": {
+   "fr": 32,
+   "en": 32,
+   "total": 64
+  },
+  "services-logs": {
+   "fr": 30,
+   "en": 30,
+   "total": 60
+  },
+  "network-transfer": {
+   "fr": 23,
+   "en": 23,
+   "total": 46
+  },
+  "shell-scripts": {
+   "fr": 18,
+   "en": 18,
+   "total": 36
+  },
+  "python": {
+   "fr": 16,
+   "en": 16,
+   "total": 32
+  },
+  "network": {
+   "fr": 15,
+   "en": 15,
+   "total": 30
+  },
+  "rust-go": {
+   "fr": 6,
+   "en": 6,
+   "total": 12
+  },
+  "js-node": {
+   "fr": 3,
+   "en": 3,
+   "total": 6
+  },
+  "processes": {
+   "fr": 1,
+   "en": 1,
+   "total": 2
+  }
+ },
+ "by_source": {
+  "synthétique": 628,
+  "python-attrs/attrs": 89,
+  "docker/awesome-compose": 72,
+  "gorilla/mux": 69,
+  "libuv/libuv": 68,
+  "jshttp/vary": 56,
+  "libexpat/libexpat": 52,
+  "pytoolz/toolz": 48,
+  "astanin/python-tabulate": 46,
+  "tkem/cachetools": 44,
+  "kjd/idna": 42,
+  "grantjenks/python-sortedcontainers": 42,
+  "BurntSushi/walkdir": 39,
+  "marshmallow-code/marshmallow": 38,
+  "yaml/libyaml": 35,
+  "pytest-dev/iniconfig": 32,
+  "lerocha/chinook-database": 32,
+  "jshttp/statuses": 28,
+  "visionmedia/bytes.js": 26,
+  "jshttp/http-errors": 26,
+  "jshttp/negotiator": 26,
+  "alexanderepstein/Bash-Snippets": 26,
+  "pyparsing/pyparsing": 24,
+  "jquast/wcwidth": 24,
+  "julienschmidt/httprouter": 22,
+  "akheron/jansson": 21,
+  "google/btree": 16,
+  "BurntSushi/toml": 14,
+  "madler/zlib": 14,
+  "devrimgunduz/pagila": 14,
+  "pkg/errors": 12,
+  "rust-lang/glob": 12,
+  "rayon-rs/either": 12,
+  "nvie/gitflow": 12,
+  "jshttp/content-type": 8,
+  "junegunn/fzf": 6,
+  "servo/rust-fnv": 4
+ },
+ "distinct_cmds": 579,
+ "exit_nonzero": 696,
+ "with_fault": 793,
+ "empty_output": 32
+}

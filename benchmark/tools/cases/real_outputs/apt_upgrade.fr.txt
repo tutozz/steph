@@ -1,0 +1,19 @@
+Lecture des listes de paquets... Fait
+Construction de l'arbre des dépendances... Fait
+Lecture des informations d'état... Fait
+Calcul de la mise à jour... Fait
+Les paquets suivants seront mis à jour :
+  curl libcurl4 openssl libssl3 linux-libc-dev tzdata vim vim-common vim-runtime xxd python3.11 libpython3.11
+12 mis à jour, 0 nouvellement installés, 0 à enlever et 0 non mis à jour.
+Il est nécessaire de prendre 24,3 Mo dans les archives.
+Après cette opération, 112 ko d'espace disque supplémentaires seront utilisés.
+Réception de :1 http://deb.debian.org/debian bookworm/main amd64 curl amd64 7.88.1-10+deb12u8 [315 kB]
+Réception de :2 http://deb.debian.org/debian bookworm/main amd64 libcurl4 amd64 7.88.1-10+deb12u8 [390 kB]
+24,3 Mo réceptionnés en 6s (4 012 ko/s)
+(Lecture de la base de données... 187432 fichiers et répertoires déjà installés.)
+Préparation du dépaquetage de .../curl_7.88.1-10+deb12u8_amd64.deb ...
+Dépaquetage de curl (7.88.1-10+deb12u8) sur (7.88.1-10+deb12u7) ...
+Paramétrage de curl (7.88.1-10+deb12u8) ...
+Paramétrage de openssl (3.0.15-1~deb12u1) ...
+Traitement des actions différées (« triggers ») pour man-db (2.11.2-2) ...
+Traitement des actions différées (« triggers ») pour libc-bin (2.36-9+deb12u9) ...

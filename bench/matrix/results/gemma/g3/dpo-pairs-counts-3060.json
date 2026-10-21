@@ -1,0 +1,22 @@
+{
+ "entries": 876,
+ "entries_sampled": 876,
+ "outputs_by_final": {
+  "ok": 2920,
+  "invention": 463,
+  "douteux": 114,
+  "non_juge": 7
+ },
+ "pairs": 374,
+ "train": 338,
+ "val": 36,
+ "by_kind": {
+  "summary/invention": 231,
+  "qa/abstention": 113,
+  "qa/invention": 30
+ },
+ "by_lang": {
+  "fr": 340,
+  "en": 34
+ }
+}

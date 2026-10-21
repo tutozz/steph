@@ -1,0 +1,189 @@
+{
+ "judge": "qwen/qwen3-235b-a22b-2507",
+ "reasoning": "off",
+ "report": {
+  "n": 15,
+  "exact": 11,
+  "adjacent": 14,
+  "errors": 0,
+  "by_rung": {
+   "100": [
+    100,
+    100,
+    100
+   ],
+   "75": [
+    75,
+    100,
+    100
+   ],
+   "50": [
+    50,
+    50,
+    50
+   ],
+   "25": [
+    25,
+    25,
+    50
+   ],
+   "0": [
+    50,
+    0,
+    0
+   ]
+  }
+ },
+ "rows": [
+  {
+   "case": "v3-containers-0011",
+   "lang": "fr",
+   "rung": 100,
+   "answer": "Échec. Dockerfile ligne 3 : instruction inconnue COPPY, Docker propose COPY.",
+   "note": 100,
+   "invention": false,
+   "raison": "erreur et cause exactes données",
+   "cost": 5.7575e-05
+  },
+  {
+   "case": "v3-shell-scripts-0005",
+   "lang": "fr",
+   "rung": 100,
+   "answer": "Échec. 8 fichiers copiés, 2 introuvables : export-04.csv et export-09.csv.",
+   "note": 100,
+   "invention": false,
+   "raison": "réponse exacte et concise",
+   "cost": 5.4775e-05
+  },
+  {
+   "case": "v3-network-0024",
+   "lang": "en",
+   "rung": 100,
+   "answer": "example.com replies, 4 of 4 packets, average 7 ms.",
+   "note": 100,
+   "invention": false,
+   "raison": "fait clé complet et concis",
+   "cost": 5.6175e-05
+  },
+  {
+   "case": "v3-shell-scripts-0005",
+   "lang": "fr",
+   "rung": 75,
+   "answer": "Échec. 8 copiés, 2 en échec.",
+   "note": 75,
+   "invention": false,
+   "raison": "réponse correcte mais omet les noms des fichiers manquants",
+   "cost": 6.63775e-05
+  },
+  {
+   "case": "v3-network-0024",
+   "lang": "fr",
+   "rung": 75,
+   "answer": "Succès. example.com : 4 paquets reçus sur 4, aucune perte, minimum 5.775 ms, moyenne 7.045 ms, maximum 9.381 ms, écart type 1.383 ms.",
+   "note": 100,
+   "invention": false,
+   "raison": "réponse exacte et complète en français, donne les résultats clés pour agir",
+   "cost": 6.265e-05
+  },
+  {
+   "case": "v3-js-node-0017",
+   "lang": "en",
+   "rung": 75,
+   "answer": "Failed. Wrong package tsc@2.0.4 ran, not the TypeScript compiler.",
+   "note": 100,
+   "invention": false,
+   "raison": "exacte et concise, donne la cause de l'échec",
+   "cost": 5.95e-05
+  },
+  {
+   "case": "v3-containers-0011",
+   "lang": "en",
+   "rung": 50,
+   "answer": "Failed. Docker build error.",
+   "note": 50,
+   "invention": false,
+   "raison": "mentionne l'échec mais pas la cause clé (COPPY au lieu de COPY)",
+   "cost": 5.88875e-05
+  },
+  {
+   "case": "v3-network-transfer-0032",
+   "lang": "en",
+   "rung": 50,
+   "answer": "Failed. rsync error, unexpected end of file.",
+   "note": 50,
+   "invention": false,
+   "raison": "mentionne l'échec et un message d'erreur, mais omet la cause principale : connexion refusée sur le port 2222",
+   "cost": 6.0025e-05
+  },
+  {
+   "case": "v3-lint-format-0002",
+   "lang": "fr",
+   "rung": 50,
+   "answer": "Échec. ESLint 9.39.5, quelque chose a mal tourné.",
+   "note": 50,
+   "invention": false,
+   "raison": "mentionne l'échec mais pas la cause clé : fichier de config manquant",
+   "cost": 6.09875e-05
+  },
+  {
+   "case": "v3-network-0024",
+   "lang": "en",
+   "rung": 25,
+   "answer": "64 bytes from 203.0.113.25: icmp_seq=0 ttl=60 time=5.775 ms, 64 bytes from 203.0.113.25: icmp_seq=1 ttl=60 time=6.430 ms, 64 bytes from 203.0.113.25: icmp_seq=2 ttl=60 time=9.381 ms.",
+   "note": 25,
+   "invention": false,
+   "raison": "trop longue et répétitive pour l'oral",
+   "cost": 6.01125e-05
+  },
+  {
+   "case": "v3-shell-scripts-0005",
+   "lang": "fr",
+   "rung": 25,
+   "answer": "Le script collect.sh a affiché plusieurs lignes.",
+   "note": 25,
+   "invention": false,
+   "raison": "trop vague, pas de fait clé sur l'erreur",
+   "cost": 6.489e-05
+  },
+  {
+   "case": "v3-lint-format-0002",
+   "lang": "en",
+   "rung": 25,
+   "answer": "Échec. ESLint n'a pas trouvé son fichier de configuration eslint.config.js.",
+   "note": 50,
+   "invention": false,
+   "raison": "mentionne l'échec et le fichier manquant, mais omet la cause principale : migration requise depuis v9.0.0",
+   "cost": 6.50125e-05
+  },
+  {
+   "case": "v3-containers-0011",
+   "lang": "fr",
+   "rung": 0,
+   "answer": "Échec. Dockerfile ligne 4 : instruction inconnue COPPY.",
+   "note": 50,
+   "invention": false,
+   "raison": "erreur de ligne",
+   "cost": 5.53875e-05
+  },
+  {
+   "case": "v3-network-0024",
+   "lang": "fr",
+   "rung": 0,
+   "answer": "Succès. example.com : 4 paquets reçus, 25 % de perte.",
+   "note": 0,
+   "invention": true,
+   "raison": "erreur de pourcentage de perte",
+   "cost": 5.62625e-05
+  },
+  {
+   "case": "v3-network-transfer-0032",
+   "lang": "fr",
+   "rung": 0,
+   "answer": "Succès. proj synchronisé vers /srv/www.",
+   "note": 0,
+   "invention": true,
+   "raison": "faux succès",
+   "cost": 5.1625e-05
+  }
+ ]
+}

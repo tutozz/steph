@@ -1,0 +1,7 @@
+00:00:48 ATTENTE fin du 27B de G3b
+00:57:53 27B PRÊT
+01:15:31 CONTRÔLES avant rc=0
+01:15:31 PAIRES off-ple3 contre officiel {"differ": 626, "picked": 240, "fr": 115, "en": 125}
+02:18:46 STYLE rc=0
+02:34:55 CONTRÔLES après rc=0
+02:34:55 FIN

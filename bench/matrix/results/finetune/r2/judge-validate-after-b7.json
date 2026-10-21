@@ -1,0 +1,251 @@
+{
+ "summary": {
+  "fr": {
+   "A": "6/6",
+   "B": "6/6"
+  },
+  "en": {
+   "A": "6/6",
+   "B": "6/6"
+  }
+ },
+ "rows": [
+  {
+   "id": "C1-fidele-disque",
+   "lang": "fr",
+   "expected": "ok",
+   "phrase": "Racine 685G libres sur 953G, 29 %. Boot 69 %.",
+   "passes": {
+    "A": {
+     "verdict": "ok",
+     "inventions": []
+    },
+    "B": {
+     "verdict": "ok",
+     "inventions": []
+    }
+   },
+   "correct": true
+  },
+  {
+   "id": "C2-fidele-memoire",
+   "lang": "fr",
+   "expected": "ok",
+   "phrase": "31 Gi au total, 24 Gi disponibles.",
+   "passes": {
+    "A": {
+     "verdict": "ok",
+     "inventions": []
+    },
+    "B": {
+     "verdict": "ok",
+     "inventions": []
+    }
+   },
+   "correct": true
+  },
+  {
+   "id": "C3-fidele-erreur-ligne",
+   "lang": "fr",
+   "expected": "ok",
+   "phrase": "Échec. Header.tsx ligne 42 : titel inconnu, utiliser title.",
+   "passes": {
+    "A": {
+     "verdict": "ok",
+     "inventions": []
+    },
+    "B": {
+     "verdict": "ok",
+     "inventions": []
+    }
+   },
+   "correct": true
+  },
+  {
+   "id": "C4-invention-statut",
+   "lang": "fr",
+   "expected": "invention",
+   "phrase": "Échec. Racine pleine à 91 %, seulement 8,9G libres.",
+   "passes": {
+    "A": {
+     "verdict": "invention",
+     "inventions": [
+      "Échec",
+      "Racine pleine à 91 %",
+      "seulement 8,9G libres"
+     ]
+    },
+    "B": {
+     "verdict": "invention",
+     "inventions": [
+      "Statut : Échec (le contexte indique succès/code 0)",
+      "Racine pleine à 91 % (le contexte indique 29 %)",
+      "8,9G libres (le contexte indique 685G libres)"
+     ]
+    }
+   },
+   "correct": true
+  },
+  {
+   "id": "C5-invention-chiffre",
+   "lang": "fr",
+   "expected": "invention",
+   "phrase": "31 Gi au total, 16 Gi disponibles.",
+   "passes": {
+    "A": {
+     "verdict": "invention",
+     "inventions": [
+      "16 Gi disponibles"
+     ]
+    },
+    "B": {
+     "verdict": "invention",
+     "inventions": [
+      "16 Gi disponibles"
+     ]
+    }
+   },
+   "correct": true
+  },
+  {
+   "id": "C6-invention-ligne",
+   "lang": "fr",
+   "expected": "invention",
+   "phrase": "Échec. Header.tsx ligne 58 : property titel manquante.",
+   "passes": {
+    "A": {
+     "verdict": "invention",
+     "inventions": [
+      "Header.tsx ligne 58"
+     ]
+    },
+    "B": {
+     "verdict": "invention",
+     "inventions": [
+      "Header.tsx",
+      "ligne 58"
+     ]
+    }
+   },
+   "correct": true
+  },
+  {
+   "id": "V3E1-faithful-memory",
+   "lang": "en",
+   "expected": "ok",
+   "phrase": "13Gi available of 15Gi, 2.0Gi used, swap empty.",
+   "passes": {
+    "A": {
+     "verdict": "ok",
+     "inventions": []
+    },
+    "B": {
+     "verdict": "ok",
+     "inventions": []
+    }
+   },
+   "correct": true
+  },
+  {
+   "id": "V3E2-faithful-error-line",
+   "lang": "en",
+   "expected": "ok",
+   "phrase": "Failed. src/tls.c line 1: header openssl/ssl.h not found.",
+   "passes": {
+    "A": {
+     "verdict": "ok",
+     "inventions": []
+    },
+    "B": {
+     "verdict": "ok",
+     "inventions": []
+    }
+   },
+   "correct": true
+  },
+  {
+   "id": "V3E3-faithful-tests",
+   "lang": "en",
+   "expected": "ok",
+   "phrase": "All 7 tests passed in 2 suites.",
+   "passes": {
+    "A": {
+     "verdict": "ok",
+     "inventions": []
+    },
+    "B": {
+     "verdict": "ok",
+     "inventions": []
+    }
+   },
+   "correct": true
+  },
+  {
+   "id": "V3E4-invented-figure",
+   "lang": "en",
+   "expected": "invention",
+   "phrase": "15Gi total, only 9Gi available.",
+   "passes": {
+    "A": {
+     "verdict": "invention",
+     "inventions": [
+      "only 9Gi available"
+     ]
+    },
+    "B": {
+     "verdict": "invention",
+     "inventions": [
+      "only 9Gi available"
+     ]
+    }
+   },
+   "correct": true
+  },
+  {
+   "id": "V3E5-invented-line",
+   "lang": "en",
+   "expected": "invention",
+   "phrase": "Failed. src/tls.c line 12: header openssl/ssl.h not found.",
+   "passes": {
+    "A": {
+     "verdict": "invention",
+     "inventions": [
+      "src/tls.c line 12"
+     ]
+    },
+    "B": {
+     "verdict": "invention",
+     "inventions": [
+      "src/tls.c line 12"
+     ]
+    }
+   },
+   "correct": true
+  },
+  {
+   "id": "V3E6-invented-status",
+   "lang": "en",
+   "expected": "invention",
+   "phrase": "Failed. 2 of 7 tests failed in store.test.js.",
+   "passes": {
+    "A": {
+     "verdict": "invention",
+     "inventions": [
+      "Failed",
+      "2 of 7 tests failed",
+      "store.test.js"
+     ]
+    },
+    "B": {
+     "verdict": "invention",
+     "inventions": [
+      "Failed",
+      "2 of 7 tests failed",
+      "store.test.js"
+     ]
+    }
+   },
+   "correct": true
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use Steph Speak Bench, please cite it as below."
+type: dataset
+title: "Steph Speak Bench: a benchmark for spoken summaries of terminal output by local LLMs"
+abstract: >-
+  Bilingual (English, French) benchmark of what a local language model does with a
+  terminal command output when the answer is read aloud to a blind or visually impaired
+  person: short summary, exact facts, nothing invented, time to first token. Deterministic
+  regex scoring, optional LLM judge, standard-library runner for any OpenAI-compatible server.
+authors:
+  - family-names: Parra
+    given-names: Luis
+version: 1.0.0
+date-released: 2026-09-27
+license:
+  - CC-BY-4.0
+  - MIT
+repository-code: "https://github.com/tutozz/steph"
+url: "https://github.com/tutozz/steph/tree/master/benchmark"
+keywords:
+  - benchmark
+  - accessibility
+  - screen reader
+  - terminal
+  - summarization
+  - hallucination
+  - small language models
+  - latency

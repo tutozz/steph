@@ -1,0 +1,56 @@
+{
+ "controls_pre": {
+  "planted_ok": 57,
+  "planted": 60,
+  "ties_ok": 20,
+  "ties": 20,
+  "errors": 0,
+  "position_a_pct": 48.7
+ },
+ "controls_post": {
+  "planted_ok": 57,
+  "planted": 60,
+  "ties_ok": 20,
+  "ties": 20,
+  "errors": 0,
+  "position_a_pct": 49.2
+ },
+ "off-ple3-vs-official": {
+  "n": 240,
+  "errors": 0,
+  "unstable": 91,
+  "all": {
+   "n": 240,
+   "x": 49,
+   "y": 53,
+   "=": 138,
+   "net_x": -1.7,
+   "ci95": [
+    -10.0,
+    6.7
+   ]
+  },
+  "fr": {
+   "n": 115,
+   "x": 18,
+   "y": 23,
+   "=": 74,
+   "net_x": -4.3,
+   "ci95": [
+    -15.7,
+    7.0
+   ]
+  },
+  "en": {
+   "n": 125,
+   "x": 31,
+   "y": 30,
+   "=": 64,
+   "net_x": 0.8,
+   "ci95": [
+    -11.2,
+    12.8
+   ]
+  }
+ }
+}

@@ -1,0 +1,28 @@
+# Brouillon (tâche I2, the internal mission log (not published)) : dépôt Hugging Face pas encore créé,
+# rien de public. version/date-released/url à compléter à R1/O3 (publication réelle).
+cff-version: 1.2.0
+message: "If you use steph-speak-train, please cite it as below."
+type: dataset
+title: "steph-speak-train: fine-tuning data for spoken summaries of terminal output"
+abstract: >-
+  Fine-tuning corpus (SFT and DPO configurations) for steph-speak, a small language model
+  that turns a terminal command's output into a short spoken summary for a blind or
+  visually impaired person. Real, anonymized command captures in French and English,
+  labeled by Qwen3.5-9B and filtered by a two-pass judge of the same model. Companion
+  dataset to the Steph Speak Bench evaluation benchmark.
+authors:
+  - family-names: Parra
+    given-names: Luis
+version: 0.0.0-draft
+date-released: 2026-09-27
+license: CC-BY-4.0
+repository-code: "https://github.com/tutozz/steph"
+url: "https://huggingface.co/datasets/lsmdx/steph-speak-train"
+keywords:
+  - dataset
+  - accessibility
+  - screen reader
+  - terminal
+  - fine-tuning
+  - small language models
+  - steph

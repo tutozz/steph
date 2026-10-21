@@ -1,0 +1,71 @@
+{
+ "_doc": "Relecture humaine des inventions confirmées par le juge IA (judge-*.json). Seuls les verdicts révisés figurent ici ; tout autre cas reste « confirmee ». v2 : faux_positif (aucun fait inventé) ou discutable (fait présent dans l'entrée mais mal attribué, ou tournure sans fait). Détail et preuves : docs/audit-bench.md.",
+ "judge-i5.json": {
+  "i5-gemma3-270m-ft500-Q8_0.json": {
+   "fx04@1500": {"v2": "faux_positif", "raison": "« ligne 1 » est dans la trace : File \"<string>\", line 1"},
+   "fx09@1500": {"v2": "faux_positif", "raison": "7 noms réels sur 8 : omission, rien d'inventé"},
+   "fx15@1500": {"v2": "faux_positif", "raison": "tous les noms sont dans la sortie ; liste trop longue, pas inventée"},
+   "fx20@1500": {"v2": "faux_positif", "raison": "tous les noms sont dans la sortie, « obsoleting » compris"},
+   "fx27@1500": {"v2": "faux_positif", "raison": "« Titel non trouvé » est fidèle à TS2339"}
+  },
+  "i5-gemma3-270m-ftfull-Q8_0.json": {
+   "fx04@1500": {"v2": "faux_positif", "raison": "« ligne 1 » est dans la trace Python"},
+   "fx19@1500": {"v2": "faux_positif", "raison": "5 noms réels ; ordre des plus gros non respecté, rien d'inventé"},
+   "fx08@1500": {"v2": "discutable", "raison": "7,981859 est rtp.ptime dans la sortie, rebaptisé « temps de réponse »"},
+   "fx24@1500": {"v2": "discutable", "raison": "« 0 manquants » paraphrase « 0 non mis à jour »"}
+  },
+  "i5-luth-0.6b-ft-r16-Q4_K_M.json": {
+   "fx04@1500": {"v2": "faux_positif", "raison": "« ligne 1 » est dans la trace Python"},
+   "fx21@1500": {"v2": "discutable", "raison": "« ligne 2 » est la ligne de la sortie tar, pas une ligne de source"}
+  },
+  "i5-a1000-granite4.0-h-350m-ft-Q4_K_M.json": {
+   "fx08@1500": {"v2": "faux_positif", "raison": "18 éléments, pipewire.service, pipewire.socket, mod.raop-sink : tout est dans l'entrée"},
+   "fx05@1500": {"v2": "discutable", "raison": "0.036 ms est le rtt max de la sortie, donné comme « temps »"},
+   "fx21@1500": {"v2": "discutable", "raison": "« ligne 2 » est la ligne de la sortie tar"},
+   "fx24@1500": {"v2": "discutable", "raison": "version d'openssl 3.0.15-1 reportée sur libssl3"}
+  },
+  "i5-a1000-granite4.0-h-350m-ft-Q8_0.json": {
+   "fx08@1500": {"v2": "faux_positif", "raison": "compte et noms tous dans l'entrée (doublon seulement)"},
+   "fx02@1500": {"v2": "discutable", "raison": "« non fichiers suivus » : tournure fautive, aucun fait ajouté"}
+  },
+  "i5-qwen3.5-0.8b-full-Q4_K_M.json": {
+   "qa1": {"v2": "faux_positif", "raison": "réponse hors sujet mais fidèle à l'historique ; défaut de pertinence, pas d'invention"}
+  },
+  "i5-qwen3.5-0.8b-full-Q8_0.json": {
+   "qa1": {"v2": "faux_positif", "raison": "réponse hors sujet mais fidèle à l'historique"},
+   "fx21@1500": {"v2": "discutable", "raison": "« ligne 2 » est la ligne de la sortie tar"}
+  }
+ },
+ "judge-judged.json": {
+  "judged-granite-350m-s42-Q8_0-b42.json": {
+   "fx24@1500": {"v2": "faux_positif", "raison": "« curl u8 installé sur u7 » est fidèle au dépaquetage ; le juge l'annotait déjà faux positif probable"}
+  },
+  "judged-granite-350m-s42-Q4_K_M-b42.json": {
+   "fx27@1500": {"v2": "discutable", "raison": "« titl » tronqué, TS2339 présent : déformation sans fait nouveau"}
+  },
+  "judged-gemma-270m-s42-Q8_0-b42.json": {
+   "fx04@1500": {"v2": "faux_positif", "raison": "ligne 1 correcte ; le juge l'annotait déjà discutable"},
+   "fx06@1500": {"v2": "faux_positif", "raison": "ligne 1 correcte, seule la tournure « gcc compilé » est reprochée"},
+   "qa1": {"v2": "faux_positif", "raison": "hors sujet mais fidèle à l'historique"},
+   "qa2": {"v2": "faux_positif", "raison": "hors sujet mais fidèle à l'historique"},
+   "fx08@1500": {"v2": "discutable", "raison": "250 est sess.latency.msec dans la sortie, rebaptisé « temps de réponse »"},
+   "fx21@1500": {"v2": "discutable", "raison": "fragment « zéro » sans fait"},
+   "fx24@1500": {"v2": "discutable", "raison": "« 0 extras en supprimant » paraphrase « 0 à enlever »"},
+   "fx30@1500": {"v2": "discutable", "raison": "en0 répété, utun4 omis : omission plutôt qu'invention"}
+  },
+  "judged-granite-350m-s7-Q4_K_M-b42.json": {
+   "fx08@1500": {"v2": "discutable", "raison": "7,981859 est rtp.ptime dans la sortie, mal attribué"},
+   "fx21@1500": {"v2": "discutable", "raison": "« tarzondé » : mot déformé sans fait"}
+  }
+ },
+ "judge-fixed.json": {
+  "rtx3060-qwen3.5-0.8b-fixed-ft.json": {
+   "fx08@1500": {"v2": "faux_positif", "raison": "mod.raop-sink est dans la sortie (journal), le compte 18 est dans l'entrée"}
+  },
+  "opt-best-granite.json": {
+   "fx00@1500": {"v2": "faux_positif", "raison": "chromium, chrony.conf et les dates sont dans l'entrée tronquée"},
+   "fx06@1500": {"v2": "discutable", "raison": "« ligne inconnue » : omission de la ligne 1, pas de fait ajouté"},
+   "qa1": {"v2": "faux_positif", "raison": "hors sujet mais fidèle à l'historique"}
+  }
+ }
+}

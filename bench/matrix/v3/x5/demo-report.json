@@ -1,0 +1,84 @@
+{
+ "n": 240,
+ "errors": 0,
+ "identical": 0,
+ "unstable_global": 67,
+ "position_bias": {
+  "clarte": {
+   "decided": 190,
+   "first_wins": 179,
+   "first_share": 94.2
+  },
+  "ordre": {
+   "decided": 343,
+   "first_wins": 175,
+   "first_share": 51.0
+  },
+  "concision": {
+   "decided": 398,
+   "first_wins": 211,
+   "first_share": 53.0
+  },
+  "naturel": {
+   "decided": 410,
+   "first_wins": 219,
+   "first_share": 53.4
+  },
+  "global": {
+   "decided": 427,
+   "first_wins": 229,
+   "first_share": 53.6
+  }
+ },
+ "tally": {
+  "clarte": {
+   "x": 6,
+   "y": 3,
+   "=": 231,
+   "n": 240,
+   "net_x": 1.2
+  },
+  "ordre": {
+   "x": 70,
+   "y": 36,
+   "=": 134,
+   "n": 240,
+   "net_x": 14.2
+  },
+  "concision": {
+   "x": 83,
+   "y": 51,
+   "=": 106,
+   "n": 240,
+   "net_x": 13.3
+  },
+  "naturel": {
+   "x": 84,
+   "y": 51,
+   "=": 105,
+   "n": 240,
+   "net_x": 13.8
+  },
+  "global": {
+   "x": 86,
+   "y": 53,
+   "=": 101,
+   "n": 240,
+   "net_x": 13.8
+  }
+ },
+ "tally_fr": {
+  "x": 33,
+  "y": 29,
+  "=": 54,
+  "n": 116,
+  "net_x": 3.4
+ },
+ "tally_en": {
+  "x": 53,
+  "y": 24,
+  "=": 47,
+  "n": 124,
+  "net_x": 23.4
+ }
+}

@@ -1,0 +1,412 @@
+{
+ "r1-i1-l07": {
+  "v2": 84.5,
+  "holdout": 69.4,
+  "summary": 86.1,
+  "spoken": 87.2,
+  "per_seed": [
+   86.3,
+   83.6,
+   83.6
+  ],
+  "qa": {
+   "qa0": [
+    0,
+    0,
+    0
+   ],
+   "qa1": [
+    100,
+    100,
+    100
+   ],
+   "qa2": [
+    100,
+    100,
+    100
+   ]
+  },
+  "inv": [
+   5,
+   3,
+   4
+  ],
+  "inv_ids": [
+   "fx04",
+   "fx08",
+   "fx15",
+   "fx22",
+   "fx24",
+   "fx25"
+  ],
+  "inv_ground": [
+   4,
+   4,
+   3
+  ],
+  "speak_dev": {
+   "fr": [
+    33.9,
+    7
+   ],
+   "en": [
+    40.5,
+    5
+   ]
+  },
+  "lang": {
+   "model-steph_fr_test": 74.2,
+   "model-steph_en_test": 51.6,
+   "model_fr_test": 66.1,
+   "model_en_test": 59.7
+  },
+  "test": {
+   "steph_fr": 44.8,
+   "steph_en": 47.2,
+   "std_fr": 45.4,
+   "std_en": 49.4
+  }
+ },
+ "r1-i1-dpo": {
+  "v2": 83.1,
+  "holdout": 69.5,
+  "summary": 84.6,
+  "spoken": 85.9,
+  "per_seed": [
+   82.2,
+   83.6,
+   83.6
+  ],
+  "qa": {
+   "qa0": [
+    0,
+    0,
+    0
+   ],
+   "qa1": [
+    100,
+    100,
+    100
+   ],
+   "qa2": [
+    100,
+    100,
+    100
+   ]
+  },
+  "inv": [
+   5,
+   5,
+   7
+  ],
+  "inv_ids": [
+   "fx04",
+   "fx08",
+   "fx15",
+   "fx22",
+   "fx25",
+   "fx27",
+   "qa0"
+  ],
+  "inv_ground": [
+   3,
+   3,
+   4
+  ],
+  "speak_dev": {
+   "fr": [
+    38.5,
+    7
+   ],
+   "en": [
+    39.9,
+    5
+   ]
+  },
+  "lang": {
+   "model-steph_fr_test": 75.8,
+   "model-steph_en_test": 59.7,
+   "model_fr_test": 66.1,
+   "model_en_test": 66.1
+  },
+  "test": {
+   "steph_fr": 42.3,
+   "steph_en": 49.1,
+   "std_fr": 38.0,
+   "std_en": 55.2
+  }
+ },
+ "r1-i1-l05": {
+  "v2": 82.2,
+  "holdout": 73.9,
+  "summary": 83.6,
+  "spoken": 85.0,
+  "per_seed": [
+   82.2,
+   82.2,
+   82.2
+  ],
+  "qa": {
+   "qa0": [
+    0,
+    0,
+    0
+   ],
+   "qa1": [
+    100,
+    100,
+    100
+   ],
+   "qa2": [
+    100,
+    100,
+    100
+   ]
+  },
+  "inv": [
+   7,
+   7,
+   7
+  ],
+  "inv_ids": [
+   "fx04",
+   "fx06",
+   "fx10",
+   "fx22",
+   "fx24",
+   "fx25",
+   "fx28"
+  ],
+  "inv_ground": [
+   8,
+   8,
+   7
+  ],
+  "speak_dev": {
+   "fr": [
+    43.5,
+    3
+   ],
+   "en": [
+    38.7,
+    3
+   ]
+  },
+  "lang": {
+   "model-steph_fr_test": 71.0,
+   "model-steph_en_test": 59.7,
+   "model_fr_test": 66.1,
+   "model_en_test": 54.8
+  },
+  "test": {
+   "steph_fr": 37.6,
+   "steph_en": 44.4,
+   "std_fr": 40.1,
+   "std_en": 45.8
+  }
+ },
+ "r1-i1-sft": {
+  "v2": 82.3,
+  "holdout": 75.6,
+  "summary": 83.7,
+  "spoken": 85.1,
+  "per_seed": [
+   82.3,
+   82.3,
+   82.3
+  ],
+  "qa": {
+   "qa0": [
+    0,
+    0,
+    0
+   ],
+   "qa1": [
+    100,
+    100,
+    100
+   ],
+   "qa2": [
+    100,
+    100,
+    100
+   ]
+  },
+  "inv": [
+   6,
+   7,
+   7
+  ],
+  "inv_ids": [
+   "fx04",
+   "fx08",
+   "fx15",
+   "fx18",
+   "fx22",
+   "fx24",
+   "fx25"
+  ],
+  "inv_ground": [
+   6,
+   6,
+   6
+  ],
+  "speak_dev": {
+   "fr": [
+    19.6,
+    7
+   ],
+   "en": [
+    35.7,
+    4
+   ]
+  },
+  "lang": {
+   "model-steph_fr_test": 58.1,
+   "model-steph_en_test": 54.8,
+   "model_fr_test": 62.9,
+   "model_en_test": 71.0
+  },
+  "test": {
+   "steph_fr": 44.4,
+   "steph_en": 40.3,
+   "std_fr": 41.7,
+   "std_en": 52.3
+  }
+ },
+ "p17": {
+  "v2": 87.7,
+  "holdout": 80.6,
+  "summary": 86.6,
+  "spoken": 90.5,
+  "per_seed": [
+   86.3,
+   89.1,
+   87.7
+  ],
+  "qa": {
+   "qa0": [
+    100,
+    100,
+    100
+   ],
+   "qa1": [
+    100,
+    100,
+    100
+   ],
+   "qa2": [
+    100,
+    100,
+    100
+   ]
+  },
+  "inv": [
+   5,
+   5,
+   6
+  ],
+  "inv_ids": [
+   "fx04",
+   "fx08",
+   "fx19",
+   "fx22",
+   "fx24",
+   "fx25"
+  ],
+  "inv_ground": [
+   4,
+   4,
+   5
+  ],
+  "speak_dev": {
+   "fr": [
+    21.4,
+    6
+   ],
+   "en": [
+    41.8,
+    1
+   ]
+  },
+  "lang": {
+   "model-steph_fr_test": 66.1,
+   "model-steph_en_test": 56.5,
+   "model_fr_test": 64.5,
+   "model_en_test": 54.8
+  },
+  "test": {
+   "steph_fr": 38.5,
+   "steph_en": 39.6,
+   "std_fr": 37.5,
+   "std_en": 44.3
+  }
+ },
+ "k3-a-dpo": {
+  "v2": 84.3,
+  "holdout": 75.6,
+  "summary": 84.9,
+  "spoken": 87.0,
+  "per_seed": [
+   84.3,
+   84.3,
+   84.3
+  ],
+  "qa": {
+   "qa0": [
+    0,
+    100,
+    0
+   ],
+   "qa1": [
+    100,
+    100,
+    100
+   ],
+   "qa2": [
+    100,
+    100,
+    100
+   ]
+  },
+  "inv": [
+   4,
+   4,
+   3
+  ],
+  "inv_ids": [
+   "fx04",
+   "fx19",
+   "fx22",
+   "fx28",
+   "qa0"
+  ],
+  "inv_ground": [
+   2,
+   3,
+   3
+  ],
+  "speak_dev": {
+   "fr": [
+    26.8,
+    7
+   ],
+   "en": [
+    26.2,
+    4
+   ]
+  },
+  "lang": {
+   "model-steph_fr_test": 80.6,
+   "model-steph_en_test": 54.8,
+   "model_fr_test": 69.4,
+   "model_en_test": 61.3
+  },
+  "test": {
+   "steph_fr": 37.6,
+   "steph_en": 45.0,
+   "std_fr": 38.2,
+   "std_en": 48.2
+  }
+ }
+}

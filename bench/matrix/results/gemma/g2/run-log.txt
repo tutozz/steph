@@ -1,0 +1,233 @@
+03:21:32 load 0.21 g2 36
+gemma-36: ttft 4.309 p90 17.974 repos_avant 4562 repos_apres 4972 pic 4972 
+03:27:25 load 3.94 ALLDONE 36
+03:30:13 load 0.26 g2 36 cram0-c32768
+gemma-36-cram0-c32768: ttft 4.231 p90 18.079 repos_avant 4572 repos_apres 4670 pic 4670 
+03:38:46 load 0.29 g2 36 cram0-c8192
+gemma-36-cram0-c8192: ttft 4.283 p90 18.513 repos_avant 4424 repos_apres 4520 pic 4520 
+03:47:54 load 0.29 g2 36 tdefault
+gemma-36-tdefault: ttft 4.391 p90 18.545 repos_avant 4572 repos_apres 5003 pic 5003 
+03:53:58 load 4.22 ALLDONE var
+03:56:38 load 0.29 g2 sum dev
+04:03:50 load 0.27 g2 sum dev
+gemma-sum-dev: ttft 14.31 p90 27.289 total 16.483 ram 4774 vram 0 
+04:48:39 load 4.25 ALLDONE sum
+04:51:39 load 0.26 g2 qa cold
+04:58:48 load 0.11 g2 qa cold
+v3-history-qa-0004@fr 33.197 0.003 3087
+v3-history-qa-0004@en 32.097 0.003 3038
+v3-history-qa-0005@fr 34.199 0.005 3087
+v3-history-qa-0005@en 32.253 0.003 3038
+v3-history-qa-0010@fr 13.826 0.004 946
+v3-history-qa-0010@en 11.385 0.004 897
+v3-history-qa-0016@fr 21.979 0.002 1679
+v3-history-qa-0016@en 20.264 0.002 1630
+v3-history-qa-0017@fr 22.066 0.001 1679
+v3-history-qa-0017@en 20.254 0.006 1630
+v3-history-qa-0019@fr 17.923 0.001 1304
+v3-history-qa-0019@en 16.179 0.006 1255
+v3-history-qa-0020@fr 14.521 0.001 1123
+v3-history-qa-0020@en 12.997 0.001 1074
+v3-history-qa-0023@fr 13.692 0.002 1145
+v3-history-qa-0023@en 11.933 0.001 1096
+v3-history-qa-0024@fr 13.964 0.001 1031
+v3-history-qa-0024@en 12.23 0.001 982
+v3-history-qa-0028@fr 12.284 0.003 942
+v3-history-qa-0028@en 10.345 0.001 893
+v3-history-qa-0029@fr 23.417 0.003 1528
+v3-history-qa-0029@en 21.761 0.002 1479
+v3-history-qa-0030@fr 12.38 0.001 910
+v3-history-qa-0030@en 10.34 0.002 861
+v3-history-qa-0031@fr 15.648 0.004 1140
+v3-history-qa-0031@en 13.691 0.006 1091
+v3-history-qa-0034@fr 15.189 0.001 985
+v3-history-qa-0034@en 12.927 0.001 936
+v3-history-qa-0041@fr 21.875 0.001 1113
+v3-history-qa-0041@en 20.216 0.003 1064
+v3-history-qa-0042@fr 20.626 0.002 1524
+v3-history-qa-0042@en 19.003 0.004 1475
+v3-history-qa-0044@fr 26.696 0.003 1509
+v3-history-qa-0044@en 24.932 0.001 1460
+v3-history-qa-0049@fr 15.85 0.006 1045
+v3-history-qa-0049@en 13.734 0.001 996
+v3-history-qa-0052@fr 216.365 0.006 9579
+v3-history-qa-0052@en 213.576 0.005 9530
+v3-history-qa-0053@fr 214.665 0.006 9579
+v3-history-qa-0053@en 213.221 0.006 9530
+v3-history-qa-0054@fr 88.668 0.005 5206
+v3-history-qa-0054@en 85.787 0.004 5157
+v3-history-qa-0055@fr 59.086 0.005 4515
+v3-history-qa-0055@en 58.462 0.004 4466
+v3-history-qa-0056@fr 59.544 0.004 4515
+v3-history-qa-0056@en 57.23 0.004 4466
+v3-history-qa-0058@fr 16.285 0.001 1276
+v3-history-qa-0058@en 14.802 0.001 1227
+v3-history-qa-0059@fr 16.916 0.001 1276
+v3-history-qa-0059@en 15.028 0.004 1227
+v3-history-qa-0062@fr 17.78 0.001 1333
+v3-history-qa-0062@en 16.213 0.001 1284
+v3-history-qa-0067@fr 24.188 0.002 1775
+v3-history-qa-0067@en 22.622 0.002 1726
+v3-history-qa-0069@fr 31.059 0.006 2390
+v3-history-qa-0069@en 29.71 0.002 2341
+v3-history-qa-0079@fr 16.4 0.001 1309
+v3-history-qa-0079@en 14.879 0.001 1260
+v3-history-qa-0080@fr 14.436 0.001 933
+v3-history-qa-0080@en 12.715 0.003 884
+v3-history-qa-0082@fr 14.9 0.001 1117
+v3-history-qa-0082@en 13.484 0.001 1068
+v3-history-qa-0083@fr 13.103 0.001 1040
+v3-history-qa-0083@en 11.996 0.002 991
+v3-history-qa-0084@fr 14.299 0.004 985
+v3-history-qa-0084@en 13.419 0.001 936
+v3-history-qa-0086@fr 25.274 0.002 1795
+v3-history-qa-0086@en 23.604 0.002 1746
+v3-history-qa-0087@fr 25.453 0.005 1795
+v3-history-qa-0087@en 23.739 0.002 1746
+v3-history-qa-0088@fr 13.687 0.001 934
+v3-history-qa-0088@en 11.892 0.001 885
+v3-history-qa-0089@fr 16.385 0.001 1301
+v3-history-qa-0089@en 14.833 0.004 1252
+v3-history-qa-0093@fr 13.699 0.005 982
+v3-history-qa-0093@en 12.218 0.004 933
+v3-history-qa-0095@fr 15.001 0.003 983
+v3-history-qa-0095@en 13.228 0.001 934
+v3-history-qa-0096@fr 15.88 0.005 1185
+v3-history-qa-0096@en 14.633 0.001 1136
+v3-history-qa-0100@fr 15.358 0.001 1100
+v3-history-qa-0100@en 13.563 0.001 1051
+v3-history-qa-0101@fr 19.658 0.001 1411
+v3-history-qa-0101@en 17.476 0.001 1362
+v3-history-qa-0103@fr 13.567 0.001 993
+v3-history-qa-0103@en 12.159 0.003 944
+v3-history-qa-0105@fr 15.049 0.005 1205
+v3-history-qa-0105@en 13.963 0.001 1156
+v3-history-qa-0110@fr 17.236 0.003 1221
+v3-history-qa-0110@en 15.994 0.001 1172
+05:54:05 load 0.28 g2 qa warm
+v3-history-qa-0004@fr 21.323 21.325 3087
+v3-history-qa-0004@en 22.909 22.909 3038
+v3-history-qa-0005@fr 30.373 30.379 3087
+v3-history-qa-0005@en 14.144 14.146 3038
+v3-history-qa-0010@fr 55.171 55.178 946
+v3-history-qa-0010@en 38.733 38.734 897
+v3-history-qa-0016@fr 19.94 19.94 1679
+06:04:54 g2 qa warm ARRÊTÉ : contention avec x1judge2 granite_ram r1 (port 8899) lancé 2 s après
+06:05:14 g2 en attente de la fin de x1judge2/i5_run.sh (pid 91698)
+06:11:54 load 0.27 g2 qa warm
+v3-history-qa-0004@fr 1.69 1.693 3087
+v3-history-qa-0004@en 1.596 1.596 3038
+v3-history-qa-0005@fr 1.615 1.617 3087
+v3-history-qa-0005@en 1.313 1.313 3038
+v3-history-qa-0010@fr 3.061 3.061 946
+v3-history-qa-0010@en 2.054 2.054 897
+v3-history-qa-0016@fr 1.514 1.514 1679
+v3-history-qa-0016@en 1.427 1.427 1630
+v3-history-qa-0017@fr 1.545 1.545 1679
+v3-history-qa-0017@en 1.263 1.263 1630
+v3-history-qa-0019@fr 1.898 1.898 1304
+v3-history-qa-0019@en 1.5 1.5 1255
+v3-history-qa-0020@fr 2.693 2.693 1123
+v3-history-qa-0020@en 1.886 1.886 1074
+v3-history-qa-0023@fr 1.475 1.479 1145
+v3-history-qa-0023@en 1.294 1.294 1096
+v3-history-qa-0024@fr 2.248 2.252 1031
+v3-history-qa-0024@en 2.085 2.087 982
+v3-history-qa-0028@fr 1.507 1.507 942
+v3-history-qa-0028@en 1.141 1.141 893
+v3-history-qa-0029@fr 1.925 1.925 1528
+v3-history-qa-0029@en 1.667 1.669 1479
+v3-history-qa-0030@fr 1.886 1.886 910
+v3-history-qa-0030@en 1.264 1.264 861
+v3-history-qa-0031@fr 1.757 1.76 1140
+v3-history-qa-0031@en 1.539 1.539 1091
+v3-history-qa-0034@fr 2.498 2.498 985
+v3-history-qa-0034@en 1.932 1.932 936
+v3-history-qa-0041@fr 6.464 6.467 1113
+v3-history-qa-0041@en 6.258 6.26 1064
+v3-history-qa-0042@fr 1.919 1.919 1524
+v3-history-qa-0042@en 2.149 2.149 1475
+v3-history-qa-0044@fr 2.125 2.125 1509
+v3-history-qa-0044@en 1.976 1.976 1460
+v3-history-qa-0049@fr 2.684 2.687 1045
+v3-history-qa-0049@en 2.101 2.101 996
+v3-history-qa-0052@fr 2.01 2.01 9579
+v3-history-qa-0052@en 2.381 2.381 9530
+v3-history-qa-0053@fr 1.917 1.917 9579
+v3-history-qa-0053@en 2.066 2.069 9530
+v3-history-qa-0054@fr 2.332 2.332 5206
+v3-history-qa-0054@en 1.657 1.657 5157
+v3-history-qa-0055@fr 1.679 1.682 4515
+v3-history-qa-0055@en 2.396 2.398 4466
+v3-history-qa-0056@fr 1.963 1.963 4515
+v3-history-qa-0056@en 1.602 1.604 4466
+v3-history-qa-0058@fr 1.447 1.447 1276
+v3-history-qa-0058@en 1.47 1.47 1227
+v3-history-qa-0059@fr 1.988 1.988 1276
+v3-history-qa-0059@en 1.739 1.742 1227
+v3-history-qa-0062@fr 1.609 1.609 1333
+v3-history-qa-0062@en 1.564 1.567 1284
+v3-history-qa-0067@fr 1.523 1.526 1775
+v3-history-qa-0067@en 1.626 1.626 1726
+v3-history-qa-0069@fr 2.068 2.071 2390
+v3-history-qa-0069@en 1.712 1.715 2341
+v3-history-qa-0079@fr 1.59 1.593 1309
+v3-history-qa-0079@en 1.489 1.49 1260
+v3-history-qa-0080@fr 3.148 3.148 933
+v3-history-qa-0080@en 2.285 2.285 884
+v3-history-qa-0082@fr 1.864 1.864 1117
+v3-history-qa-0082@en 1.567 1.567 1068
+v3-history-qa-0083@fr 1.195 1.199 1040
+v3-history-qa-0083@en 1.448 1.449 991
+v3-history-qa-0084@fr 1.659 1.659 985
+v3-history-qa-0084@en 2.504 2.506 936
+v3-history-qa-0086@fr 1.483 1.483 1795
+v3-history-qa-0086@en 1.4 1.4 1746
+v3-history-qa-0087@fr 1.83 1.83 1795
+v3-history-qa-0087@en 1.573 1.573 1746
+v3-history-qa-0088@fr 2.043 2.043 934
+v3-history-qa-0088@en 1.721 1.721 885
+v3-history-qa-0089@fr 1.54 1.54 1301
+v3-history-qa-0089@en 1.412 1.416 1252
+v3-history-qa-0093@fr 1.795 1.795 982
+v3-history-qa-0093@en 1.835 1.835 933
+v3-history-qa-0095@fr 3.237 3.237 983
+v3-history-qa-0095@en 3.022 3.023 934
+v3-history-qa-0096@fr 1.807 1.808 1185
+v3-history-qa-0096@en 1.915 1.915 1136
+v3-history-qa-0100@fr 2.119 2.119 1100
+v3-history-qa-0100@en 1.762 1.762 1051
+v3-history-qa-0101@fr 2.396 2.396 1411
+v3-history-qa-0101@en 1.885 1.885 1362
+v3-history-qa-0103@fr 1.449 1.452 993
+v3-history-qa-0103@en 1.43 1.432 944
+v3-history-qa-0105@fr 1.905 1.905 1205
+v3-history-qa-0105@en 2.641 2.641 1156
+v3-history-qa-0110@fr 1.716 1.718 1221
+v3-history-qa-0110@en 2.101 2.101 1172
+06:56:43 load 4.17 ALLDONE qa-warm
+06:59:33 load 0.28 g2 36 norepack
+usage: granite_ram.py [-h] --server SERVER --model MODEL --label LABEL
+                      --out OUT --cases CASES [--maxc MAXC] [--port PORT]
+                      [--threads THREADS] [--ctx CTX] [--batch BATCH]
+                      [--ubatch UBATCH] [--parallel PARALLEL]
+                      [--cache-type CACHE_TYPE] [--extra EXTRA]
+                      [--timeout TIMEOUT] [--settle-s SETTLE_S]
+granite_ram.py: error: argument --extra: expected one argument
+06:59:33 load 0.28 g2 36 nommap
+usage: granite_ram.py [-h] --server SERVER --model MODEL --label LABEL
+                      --out OUT --cases CASES [--maxc MAXC] [--port PORT]
+                      [--threads THREADS] [--ctx CTX] [--batch BATCH]
+                      [--ubatch UBATCH] [--parallel PARALLEL]
+                      [--cache-type CACHE_TYPE] [--extra EXTRA]
+                      [--timeout TIMEOUT] [--settle-s SETTLE_S]
+granite_ram.py: error: argument --extra: expected one argument
+06:59:33 load 0.28 ALLDONE ram
+07:00:14 load 0.14 g2 36 norepack
+gemma-36-norepack: ttft 6.13 p90 25.818 repos_avant 3577 repos_apres 3994 pic 3994 
+07:11:51 load 0.27 g2 36 nommap
+gemma-36-nommap: ttft None p90 None repos_avant None repos_apres None pic 13 llama-server arrêté au chargement (voir .server.log)
+07:11:51 load 0.27 ALLDONE ram
+07:12:43 load 0.18 g2 36 lmnone
+gemma-36-lmnone: ttft 4.41 p90 18.551 repos_avant 3862 repos_apres 4316 pic 4316 
+07:18:48 load 4.00 ALLDONE ram

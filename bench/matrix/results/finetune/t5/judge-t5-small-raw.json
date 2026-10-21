@@ -1,0 +1,643 @@
+[
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx00@1500",
+    "kind": "summary",
+    "phrase": "37 éléments : abrt, adjtime, aliases",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx02@1500",
+    "kind": "summary",
+    "phrase": "branche master Aucun commit Fichiers non suivis : .python-version README.md bench/ pyproject.toml uv.lock vendor/aucune modification ajoutée à validation.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx01@1500",
+    "kind": "summary",
+    "phrase": "Racine 685G libres sur 953G, 29 %. Boot 284M libres sur 974M, 69 %.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx03@1500",
+    "kind": "summary",
+    "phrase": "Échec. Fichier /nonexistant/file.txt : Aucun fichier ou dossier de ce nom.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "Fichier /nonexistant/file.txt"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "Fichier /nonexistant/file.txt"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx04@1500",
+    "kind": "summary",
+    "phrase": "Échec. string> ligne 1 : KeyError clés.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "string>",
+        "ligne 1"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "string>"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx05@1500",
+    "kind": "summary",
+    "phrase": "Ping 127.0.0.1 : 3 paquets reçus, 0 perte, temps moyen 0.024 ms.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx06@1500",
+    "kind": "summary",
+    "phrase": "Échec. main() : expected expression before ; token.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx07@1500",
+    "kind": "summary",
+    "phrase": "Mémoire 31G total, 865M disponibles. Swap 8,0G total, 8,0G disponibles.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "865M disponibles"
+      ]
+    },
+    "final": "douteux"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx10@1500",
+    "kind": "summary",
+    "phrase": "Échec. Curl : hôte inexistant.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx11@1500",
+    "kind": "summary",
+    "phrase": "wlp0s20f3 192.168.1.20, tailscale0 100.64.0.10, tun0 10.9.0.2, 8 réseaux virtuels.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx08@1500",
+    "kind": "summary",
+    "phrase": "18 éléments : pipewire.service, disa, CPU 1.548s.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "18 éléments : pipewire.service, disa, CPU 1.548s."
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "disa"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx12@1500",
+    "kind": "summary",
+    "phrase": "6 éléments : bench, pyproject.toml, README.md, src uv.lock vendor.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx13@1500",
+    "kind": "summary",
+    "phrase": "Linux devbox 7.0.9-202.fc44.x86_64 #1 SMP PREEMPT_DYNAMIC Mon May 18 22:33 UTC 2026 x86_64 GNU/Linux",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "Mon May 18 22:33 UTC 2026"
+      ]
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "douteux"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx09@1500",
+    "kind": "summary",
+    "phrase": "8 éléments : def _init__(self, cfg, Config, def _init__(self, cfg, Config, def _pid_alive, def stream, def _payload, max_tokens, temps moyen 111 octets",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "8 éléments : def _init__(self, cfg, Config",
+        "def _init__(self, cfg, Config",
+        "def _pid_alive",
+        "def stream",
+        "def _payload",
+        "max_tokens",
+        "temps moyen 111 octets"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "8 éléments : def _init__(self, cfg, Config, def _init__(self, cfg, Config, def _pid_alive, def stream, def _payload, max_tokens, temps moyen 111 octets"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx16@1500",
+    "kind": "summary",
+    "phrase": "Host key verification failed.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx17@1500",
+    "kind": "summary",
+    "phrase": "Échec. /etc/hostname : Permission non accordée.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx18@1500",
+    "kind": "summary",
+    "phrase": "30 éléments : abrt, adm, akmods, apache.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx20@1500",
+    "kind": "summary",
+    "phrase": "29 éléments : xen-licenses.x86_64, xorg-x11-drv-nvidia.x86_64, xorg-x11-drv-nvidia.x86_64, xorg-x11-drv-nvidia.x86_64, xubi",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "xubi"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "xubi"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx21@1500",
+    "kind": "summary",
+    "phrase": "Échec. /nonexistant : statut impossible.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "/nonexistant"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "/nonexistant"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx14@1500",
+    "kind": "summary",
+    "phrase": "pip 26.0.1 disponible sur /usr/lib/python3.14/site-package/pip 3.14.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "Le chemin d'accès est incorrect : le contexte indique '/usr/lib/python3.14/site-packages/pip' alors que la phrase dit '/usr/lib/python3.14/site-package/pip'",
+        "La version de Python est incorrecte : le contexte indique 'python 3.14' alors que la phrase dit '3.14' (manquant le préfixe 'python' ou l'interprétation est ambiguë, mais surtout le format de sortie original est 'python 3.14' et la phrase semble mélanger la version du paquet et du python de manière inexacte par rapport à la structure 'pip X.Y.Z from ... (python Z.Z.Z)'"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "site-package/pip au lieu de site-packages/pip",
+        "3.14 au lieu de python 3.14"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx22@1500",
+    "kind": "summary",
+    "phrase": "9 conteneurs : shopapp_api, shopapp_nginx_admin, shopapp_vault.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "shopapp_api",
+        "shopapp_nginx_admin",
+        "shopapp_vault"
+      ]
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "douteux"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx23@1500",
+    "kind": "summary",
+    "phrase": "alice",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx25@1500",
+    "kind": "summary",
+    "phrase": "Échec. nginx : vérrouillage inexistant.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "nginx : vérrouillage inexistant"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "nginx : vérrouillage inexistant"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx26@1500",
+    "kind": "summary",
+    "phrase": "Requests 2.32.3, charset-normalizer 3.4.0, idna 3.10, urllib3 3.10, certifi 2024.8.30 installés.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "urllib3 3.10"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "urllib3 3.10"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx19@1500",
+    "kind": "summary",
+    "phrase": "10 éléments : OLD_SHOPAPP 12, install-iso 7,9G, shopapp 2,4G 225M, notes-backup 261M, score-board 673M, ops-tools 2G, installer-iso 12G.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "OLD_SHOPAPP 12 (manque l'unité G)",
+        "install-iso 7,9G (nom incorrect : installer-iso)",
+        "shopapp 2,4G 225M (format incorrect, mélange de noms et tailles)",
+        "notes-backup 261M (format incorrect, manque l'unité M)",
+        "score-board 673M (format incorrect, manque l'unité M)",
+        "ops-tools 2G (valeur incorrecte : 1,4G)",
+        "installer-iso 12G (valeur incorrecte : 7,9G)"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "OLD_SHOPAPP 12 (manque l'unité G)",
+        "install-iso (nom incorrect, devrait être installer-iso)",
+        "ops-tools 2G (valeur incorrecte, devrait être 1,4G)",
+        "installer-iso 12G (nom et valeur incorrects, devrait être OLD_SHOPAPP 12G)"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx27@1500",
+    "kind": "summary",
+    "phrase": "Échec. src/components : Title inexistant sur Props.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "src/components : Title inexistant sur Props"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "Title inexistant sur Props"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx28@1500",
+    "kind": "summary",
+    "phrase": "Échec. git push : pas de rejected version.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "pas de rejected version"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "pas de rejected version"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx30@1500",
+    "kind": "summary",
+    "phrase": "en0 192.168.1.62 utun4 100.64.0.11",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx29@1500",
+    "kind": "summary",
+    "phrase": "Réseau HD Audio Controller, Réseau HD téléchargée.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "Réseau HD Audio Controller",
+        "Réseau HD téléchargée"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "Réseau HD Audio Controller",
+        "Réseau HD téléchargée"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "df_proxmox@1500",
+    "kind": "summary",
+    "phrase": "Racine 8.9G libres sur 94G, 91 %, backup-hdd 134G libres sur 442G, 70 %.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx15@1500",
+    "kind": "summary",
+    "phrase": "20 éléments : python-systemd, python3-argcomplete, python3-argcomplete.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "python3-attrs a été remplacé par python3-argcomplete dans la liste des 20 éléments"
+      ]
+    },
+    "pass_B": {
+      "verdict": "erreur",
+      "inventions": []
+    },
+    "final": "douteux"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "ip_a_proxmox@1500",
+    "kind": "summary",
+    "phrase": "Tailscale0 100.64.0.12, vmbr0 192.168.1.200, pan0 10.8.9.1, 3 réseaux virtuels.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "qa1",
+    "kind": "qa",
+    "phrase": "Échec. Racine 8.9G libres sur 94G, 91 %. Backup-hdd 134G libres sur 442G, 70 %.",
+    "pass_A": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "pass_B": {
+      "verdict": "ok",
+      "inventions": []
+    },
+    "final": "ok"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "qa0",
+    "kind": "qa",
+    "phrase": "Échec. Props : entrée égale destination.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "Échec. Props : entrée égale destination."
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "Échec",
+        "Props : entrée égale destination"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "qa2",
+    "kind": "qa",
+    "phrase": "Échec. Props : fichier inexistant.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "Échec. Props : fichier inexistant."
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "Échec",
+        "Props : fichier inexistant"
+      ]
+    },
+    "final": "invention"
+  },
+  {
+    "model_file": "t5-small-s42-Q8_0-b42.json",
+    "id": "fx24@1500",
+    "kind": "summary",
+    "phrase": "Échec. curl libcurl4 openssl libssl3 linux-libc-dev tzdata, 243 ko disque.",
+    "pass_A": {
+      "verdict": "invention",
+      "inventions": [
+        "Statut : Échec (le contexte indique 'succès' avec le code 0)",
+        "Nombre de paquets mis à jour : 6 (la liste contient 8 paquets : curl, libcurl4, openssl, libssl3, linux-libc-dev, tzdata, vim, vim-common, vim-runtime, xxd, python3.11, libpython3.11 - l'assistant en a listé 6 mais le contexte dit '12 mis à jour' et la liste est plus longue)",
+        "Taille disque : 243 ko (le contexte indique '24,3 Mo' pour la réception et '112 ko' pour l'espace disque supplémentaire, aucune mention de 243 ko)",
+        "Paquets inventés ou exclus : vim, vim-common, vim-runtime, xxd, python3.11, libpython3.11 (présents dans la sortie du contexte mais absents de la phrase de l'assistant)"
+      ]
+    },
+    "pass_B": {
+      "verdict": "invention",
+      "inventions": [
+        "Statut : Échec (le contexte indique succès avec code 0)",
+        "Quantité disque : 243 ko (le contexte indique 24,3 Mo)",
+        "Liste des paquets : curl libcurl4 openssl libssl3 linux-libc-dev tzdata (la liste est incomplète, elle manque vim, vim-common, vim-runtime, xxd, python3.11, libpython3.11)"
+      ]
+    },
+    "final": "invention"
+  }
+]

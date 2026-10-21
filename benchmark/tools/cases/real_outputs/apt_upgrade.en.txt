@@ -1,0 +1,19 @@
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+The following packages will be upgraded:
+  curl libcurl4 openssl libssl3 linux-libc-dev tzdata vim vim-common vim-runtime xxd python3.11 libpython3.11
+12 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 24.3 MB of archives.
+After this operation, 112 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian bookworm/main amd64 curl amd64 7.88.1-10+deb12u8 [315 kB]
+Get:2 http://deb.debian.org/debian bookworm/main amd64 libcurl4 amd64 7.88.1-10+deb12u8 [390 kB]
+Fetched 24.3 MB in 6s (4012 kB/s)
+(Reading database ... 187432 files and directories currently installed.)
+Preparing to unpack .../curl_7.88.1-10+deb12u8_amd64.deb ...
+Unpacking curl (7.88.1-10+deb12u8) over (7.88.1-10+deb12u7) ...
+Setting up curl (7.88.1-10+deb12u8) ...
+Setting up openssl (3.0.15-1~deb12u1) ...
+Processing triggers for man-db (2.11.2-2) ...
+Processing triggers for libc-bin (2.36-9+deb12u9) ...

@@ -1,0 +1,94 @@
+[
+ {
+  "name": "r1-v1.0",
+  "label": "R1 steph-speak v1.0 (rebanqué G6, CPU xeon)",
+  "kind": "affiné",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "45414bd2",
+  "i5_p90": 2.26,
+  "i5_src": "R2, 36 cas",
+  "split": "test",
+  "quality": 50.1,
+  "fr": 49.8,
+  "en": 50.4,
+  "summary": 50.5,
+  "qa": 47.2,
+  "reaches_model": 46.7,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   49.9,
+   50.3,
+   50.1
+  ],
+  "right_lang": {
+   "fr": 81.8,
+   "en": 53.9
+  },
+  "inventions": null
+ },
+ {
+  "name": "euromoe-2.6b-a0.6b",
+  "label": "EuroMoE 2.6B-A0.6B Instruct 2512 Q4_K_M",
+  "kind": "brut MoE",
+  "profile": "gen",
+  "size_mb": 1616.1,
+  "sha256": "cbb3bf2d",
+  "i5_p90": 8.2,
+  "i5_src": "G6, 151 résumés dev generic",
+  "split": "test",
+  "quality": 19.2,
+  "fr": 21.1,
+  "en": 17.2,
+  "summary": 18.2,
+  "qa": 27.5,
+  "reaches_model": 19.9,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   18.3,
+   19.8,
+   19.4
+  ],
+  "right_lang": {
+   "fr": 78.0,
+   "en": 72.3
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 654,
+    "a": 19.16,
+    "b": 50.12,
+    "diff": -30.96,
+    "ci95": [
+     -33.79,
+     -28.13
+    ],
+    "sd_case_diff": 36.8,
+    "discordant_cases": 592,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 4.03
+    }
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 19.93,
+    "b": 46.71,
+    "diff": -26.78,
+    "ci95": [
+     -30.38,
+     -23.22
+    ],
+    "sd_case_diff": 37.54,
+    "discordant_cases": 369,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 4.11
+    }
+   }
+  }
+ }
+]

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;600&display=block">
+<link rel="stylesheet" href="../readme-brand.css">
+<style>body { background: rgb(255, 0, 254); }</style><style>
+.chev { display: inline-grid; }
+.chev i { display: block; }
+.who .sq { width: 14px; height: 14px; background: var(--black); flex: none; }
+.arrow { color: var(--neutral); }
+</style>
+</head><body><div class="card">
+<span class="tag">Privacy</span>
+<h1>Nothing leaves<br><em>your machine.</em></h1>
+<div class="lc">
+  <div class="box">
+    <div class="label bl">Your computer</div>
+    <div class="tiles"><div class="tile"><b>Your shell</b><span>zsh, bash</span></div><div class="tile"><b>Model</b><span>steph-speak</span></div><div class="tile"><b>Voice</b><span>Piper</span></div><div class="tile"><b>History</b><span>the session</span></div></div>
+    <div class="lo">model served on <code>127.0.0.1</code></div>
+  </div>
+  <div class="side">
+    <p class="sub">The model and the voice run on your computer. No cloud, no data sent anywhere.</p>
+    <div class="cloud">No cloud</div>
+  </div>
+</div>
+<style>
+.lc { display: grid; grid-template-columns: 1fr 250px; gap: 28px; align-items: center; margin-top: 26px; }
+.box { padding: 22px; background: var(--surface); border: 2px solid var(--lemon); }
+.bl { color: var(--lemon); margin-bottom: 14px; }
+.tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.tile { padding: 12px 14px; background: var(--block); }
+.tile b { display: block; font-size: 20px; font-weight: 700; line-height: 1.2; }
+.tile span { display: block; margin-top: 4px; font-family: var(--mono); font-size: 19px; color: var(--muted); }
+.lo { margin-top: 14px; font-size: 19px; color: var(--soft); }
+.lo code { font-weight: 600; color: var(--offwhite); }
+.side .sub { margin: 0; }
+.cloud { display: inline-block; margin-top: 20px; padding: 10px 14px; border: 2px dashed var(--stroke); font-family: var(--mono);
+  font-size: 19px; font-weight: 500; color: var(--muted); }
+</style></div></body></html>

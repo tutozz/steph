@@ -1,0 +1,12 @@
+gemma-raw test.generic 7
+sft-s42 test.generic 7
+v10 test 7
+gemma-raw test.generic 42
+sft-s42 test.generic 42
+v10 test 42
+gemma-raw test.generic 123
+sft-s42 test.generic 123
+v10 test 123
+g3b test.generic 7
+g3b test.generic 42
+g3b test.generic 123

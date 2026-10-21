@@ -1,0 +1,170 @@
+{
+ "regime": "warm",
+ "delay": 5.0,
+ "budget": 0,
+ "profile": "generic",
+ "qa_tools": false,
+ "seed": 7,
+ "rows": [
+  {
+   "out": "Deux tests échoués.",
+   "ttft": 1.665,
+   "first_speech": 1.665,
+   "said": "Deux tests échoués.",
+   "prompt_chars": 3087,
+   "id": "v3-history-qa-0004@fr"
+  },
+  {
+   "out": "Erreur jq parse. Ligne 4.",
+   "ttft": 1.919,
+   "first_speech": 1.922,
+   "said": "Erreur jq parse. Ligne 4.",
+   "prompt_chars": 946,
+   "id": "v3-history-qa-0010@fr"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 1.569,
+   "first_speech": 1.569,
+   "said": "Pas dans l'historique.",
+   "prompt_chars": 1679,
+   "id": "v3-history-qa-0017@fr"
+  },
+  {
+   "out": "select name from products where stock = 0.",
+   "ttft": 2.004,
+   "first_speech": 2.004,
+   "said": "select name from products where stock = 0.",
+   "prompt_chars": 1123,
+   "id": "v3-history-qa-0020@fr"
+  },
+  {
+   "out": "SyntaxError ligne 4 def mul(a, b) expected ':'.",
+   "ttft": 2.193,
+   "first_speech": 2.196,
+   "said": "SyntaxError ligne 4 def mul(a, b) expected ':'.",
+   "prompt_chars": 1031,
+   "id": "v3-history-qa-0024@fr"
+  },
+  {
+   "out": "Huit fichiers objets construits.",
+   "ttft": 1.882,
+   "first_speech": 1.882,
+   "said": "Huit fichiers objets construits.",
+   "prompt_chars": 1528,
+   "id": "v3-history-qa-0029@fr"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 1.72,
+   "first_speech": 1.72,
+   "said": "Pas dans l'historique.",
+   "prompt_chars": 1140,
+   "id": "v3-history-qa-0031@fr"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 6.361,
+   "first_speech": 6.361,
+   "said": "Pas dans l'historique.",
+   "prompt_chars": 1113,
+   "id": "v3-history-qa-0041@fr"
+  },
+  {
+   "out": "Taille libg.a : 9.1K.",
+   "ttft": 2.113,
+   "first_speech": 2.113,
+   "said": "Taille libg.a : 9.1K.",
+   "prompt_chars": 1509,
+   "id": "v3-history-qa-0044@fr"
+  },
+  {
+   "out": "420 lignes.",
+   "ttft": 1.921,
+   "first_speech": 1.924,
+   "said": "420 lignes.",
+   "prompt_chars": 9579,
+   "id": "v3-history-qa-0052@fr"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 2.101,
+   "first_speech": 2.101,
+   "said": "Pas dans l'historique.",
+   "prompt_chars": 5206,
+   "id": "v3-history-qa-0054@fr"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 1.945,
+   "first_speech": 1.945,
+   "said": "Pas dans l'historique.",
+   "prompt_chars": 4515,
+   "id": "v3-history-qa-0056@fr"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 2.049,
+   "first_speech": 2.049,
+   "said": "Pas dans l'historique.",
+   "prompt_chars": 1276,
+   "id": "v3-history-qa-0059@fr"
+  },
+  {
+   "out": "Erreur ENOENT config.json. Fichier manquant.",
+   "ttft": 1.751,
+   "first_speech": 1.753,
+   "said": "Erreur ENOENT config.json. Fichier manquant.",
+   "prompt_chars": 1775,
+   "id": "v3-history-qa-0067@fr"
+  },
+  {
+   "out": "Dune Hyperion.",
+   "ttft": 1.541,
+   "first_speech": 1.541,
+   "said": "Dune Hyperion.",
+   "prompt_chars": 1309,
+   "id": "v3-history-qa-0079@fr"
+  },
+  {
+   "out": "354 formules installées.",
+   "ttft": 1.794,
+   "first_speech": 1.795,
+   "said": "354 formules installées.",
+   "prompt_chars": 1117,
+   "id": "v3-history-qa-0082@fr"
+  },
+  {
+   "out": "B-220, C-310, E-512.",
+   "ttft": 1.623,
+   "first_speech": 1.626,
+   "said": "B-220, C-310, E-512.",
+   "prompt_chars": 985,
+   "id": "v3-history-qa-0084@fr"
+  },
+  {
+   "out": "Pas dans l'historique.",
+   "ttft": 1.83,
+   "first_speech": 1.831,
+   "said": "Pas dans l'historique.",
+   "prompt_chars": 1795,
+   "id": "v3-history-qa-0087@fr"
+  },
+  {
+   "out": "Deux erreurs. Ligne 12: conversion pointeur entier. Ligne 13: fonction queue_pop non déclarée.",
+   "ttft": 1.513,
+   "first_speech": 1.513,
+   "said": "Deux erreurs. Ligne 12: conversion pointeur entier. Ligne 13: fonction queue_pop non déclarée.",
+   "prompt_chars": 1301,
+   "id": "v3-history-qa-0089@fr"
+  },
+  {
+   "out": "port 5432 vs 5433. timeout 30 vs 60..",
+   "ttft": 3.201,
+   "first_speech": 3.201,
+   "said": "port 5432 vs 5433. timeout 30 vs 60..",
+   "prompt_chars": 983,
+   "id": "v3-history-qa-0095@fr"
+  }
+ ]
+}

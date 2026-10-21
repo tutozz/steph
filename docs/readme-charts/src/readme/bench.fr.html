@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;600&display=block">
+<link rel="stylesheet" href="../readme-brand.css">
+<style>body { background: rgb(255, 0, 254); }</style><style>
+.chev { display: inline-grid; }
+.chev i { display: block; }
+.who .sq { width: 14px; height: 14px; background: var(--black); flex: none; }
+.arrow { color: var(--neutral); }
+</style>
+</head><body><div class="card">
+<span class="tag">Choix du modèle</span>
+<h1 class="bh">Six modèles, chronométrés.<br><em>Le plus juste l'emporte.</em></h1>
+<p class="sub">Latence moyenne du résumé, en secondes. Plus court, c'est mieux ; la justesse décide.</p>
+<div class="plot"><div class="brs"><div class="br"><div class="nm"><b>Qwen3.5 0.8B</b><span class="ql"> · invente trop</span></div><div class="tr"><i class="bar" style="width:15.00%"></i><span class="sv">0,6 s</span></div></div><div class="br"><div class="nm"><b>LFM2.5 1.2B</b><span class="ql"> · style télégraphique, peu utile</span></div><div class="tr"><i class="bar" style="width:27.50%"></i><span class="sv">1,1 s</span></div></div><div class="br"><div class="nm"><b>Qwen3.5 2B</b><span class="ql"> · correct, quelques erreurs</span></div><div class="tr"><i class="bar" style="width:27.50%"></i><span class="sv">1,1 s</span></div></div><div class="br hot"><div class="nm"><b>Gemma 4 E2B</b><span class="ql"> · factuel, meilleur en Q&amp;R</span></div><div class="tr"><i class="bar" style="width:37.50%"></i><span class="sv">1,5 s</span></div></div><div class="br"><div class="nm"><b>granite 4.2 3B</b><span class="ql"> · précis, laisse fuiter &lt;/think&gt;</span></div><div class="tr"><i class="bar" style="width:70.00%"></i><span class="sv">2,8 s</span></div></div><div class="br"><div class="nm"><b>Qwen3.5 4B</b><span class="ql"> · le meilleur, trop lent</span></div><div class="tr"><i class="bar" style="width:80.00%"></i><span class="sv">3,2 s</span></div></div></div><div class="ticks"><span style="left:0.0%">0</span><span style="left:50.0%">2</span><span style="left:100.0%">4 s</span></div></div>
+<p class="foot">NVIDIA T600, 4 Go. Banc reproductible : bench/bench.py, fixtures réelles.</p>
+<style>
+.plot { margin-top: 22px; padding: 20px 24px 14px; background: var(--surface); border: 2px solid var(--deco); }
+.brs { display: grid; gap: 12px; margin-right: 80px; border-left: 2px solid var(--neutral); }
+.nm { padding-left: 10px; font-size: 19px; line-height: 1.3; white-space: nowrap; }
+.nm b { font-weight: 500; }
+.ql { color: var(--muted); }
+.tr { position: relative; display: flex; align-items: center; gap: 10px; margin-top: 4px; height: 28px; }
+.bar { display: block; height: 28px; background: var(--neutral); flex: none; }
+.sv { font-family: var(--mono); font-size: 19px; font-weight: 600; white-space: nowrap; }
+.br.hot .nm b, .br.hot .def { font-family: var(--mono); font-weight: 700; color: var(--lemon); }
+.br.hot .bar { background: var(--lemon); }
+.br.hot .sv { color: var(--lemon); }
+.ticks { position: relative; height: 30px; margin: 6px 80px 0 0; font-family: var(--mono); font-size: 19px; color: var(--muted); }
+.ticks span { position: absolute; top: 0; transform: translateX(-50%); white-space: nowrap; }
+.ticks span:first-child { transform: none; }
+.bh { font-size: 44px; }
+</style></div></body></html>

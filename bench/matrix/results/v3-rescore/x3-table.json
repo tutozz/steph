@@ -1,0 +1,3710 @@
+[
+ {
+  "name": "r1-v1.0",
+  "label": "R1 steph-speak v1.0",
+  "kind": "affiné",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "45414bd2",
+  "i5_p90": 2.26,
+  "i5_src": "mesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)",
+  "split": "dev",
+  "quality": 50.4,
+  "fr": 49.2,
+  "en": 51.6,
+  "summary": 50.4,
+  "qa": 50.2,
+  "reaches_model": 45.6,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   50.7,
+   50.4,
+   50.0
+  ],
+  "right_lang": {
+   "fr": 80.5,
+   "en": 56.3
+  },
+  "inventions": null
+ },
+ {
+  "name": "p17",
+  "label": "P17 DPO",
+  "kind": "affiné",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "d548f3fc",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)",
+  "split": "dev",
+  "quality": 48.2,
+  "fr": 48.8,
+  "en": 47.6,
+  "summary": 48.2,
+  "qa": 48.4,
+  "reaches_model": 44.5,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   48.3,
+   47.6,
+   48.7
+  ],
+  "right_lang": {
+   "fr": 78.1,
+   "en": 56.1
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 429,
+    "a": 48.22,
+    "b": 50.38,
+    "diff": -2.16,
+    "ci95": [
+     -4.3,
+     -0.04
+    ],
+    "sd_case_diff": 22.94,
+    "discordant_cases": 242,
+    "sign_test_p": 0.1078,
+    "mde": {
+     "n": 3.1
+    }
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 44.45,
+    "b": 45.62,
+    "diff": -1.17,
+    "ci95": [
+     -4.18,
+     1.85
+    ],
+    "sd_case_diff": 25.04,
+    "discordant_cases": 164,
+    "sign_test_p": 0.9378,
+    "mde": {
+     "n": 3.39
+    }
+   }
+  }
+ },
+ {
+  "name": "k3-a-dpo",
+  "label": "K3-a DPO",
+  "kind": "affiné",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "c0fd7afd",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)",
+  "split": "dev",
+  "quality": 48.1,
+  "fr": 45.1,
+  "en": 51.0,
+  "summary": 48.0,
+  "qa": 48.4,
+  "reaches_model": 44.0,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   48.7,
+   47.8,
+   47.7
+  ],
+  "right_lang": {
+   "fr": 78.4,
+   "en": 54.7
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 429,
+    "a": 48.08,
+    "b": 50.38,
+    "diff": -2.3,
+    "ci95": [
+     -4.45,
+     -0.14
+    ],
+    "sd_case_diff": 22.5,
+    "discordant_cases": 258,
+    "sign_test_p": 0.0211,
+    "mde": {
+     "n": 3.04
+    }
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 44.02,
+    "b": 45.62,
+    "diff": -1.61,
+    "ci95": [
+     -4.53,
+     1.37
+    ],
+    "sd_case_diff": 24.81,
+    "discordant_cases": 179,
+    "sign_test_p": 0.1783,
+    "mde": {
+     "n": 3.36
+    }
+   }
+  }
+ },
+ {
+  "name": "k3-a-sft",
+  "label": "K3-a SFT",
+  "kind": "affiné",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "b0f5b7b1",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)",
+  "split": "dev",
+  "quality": 45.2,
+  "fr": 42.4,
+  "en": 47.9,
+  "summary": 45.1,
+  "qa": 45.9,
+  "reaches_model": 41.0,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   45.5,
+   44.8,
+   45.2
+  ],
+  "right_lang": {
+   "fr": 78.4,
+   "en": 52.9
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 429,
+    "a": 45.18,
+    "b": 50.38,
+    "diff": -5.2,
+    "ci95": [
+     -7.74,
+     -2.79
+    ],
+    "sd_case_diff": 26.32,
+    "discordant_cases": 264,
+    "sign_test_p": 0.0004,
+    "mde": {
+     "n": 3.56
+    }
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 41.04,
+    "b": 45.62,
+    "diff": -4.59,
+    "ci95": [
+     -8.04,
+     -1.16
+    ],
+    "sd_case_diff": 28.98,
+    "discordant_cases": 171,
+    "sign_test_p": 0.0465,
+    "mde": {
+     "n": 3.92
+    }
+   }
+  }
+ },
+ {
+  "name": "k3-b-dpo",
+  "label": "K3-b DPO",
+  "kind": "affiné",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "151f356a",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)",
+  "split": "dev",
+  "quality": 46.1,
+  "fr": 43.6,
+  "en": 48.6,
+  "summary": 46.4,
+  "qa": 43.3,
+  "reaches_model": 41.5,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   45.1,
+   46.3,
+   46.9
+  ],
+  "right_lang": {
+   "fr": 79.9,
+   "en": 58.0
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 429,
+    "a": 46.1,
+    "b": 50.38,
+    "diff": -4.29,
+    "ci95": [
+     -6.4,
+     -2.17
+    ],
+    "sd_case_diff": 22.29,
+    "discordant_cases": 258,
+    "sign_test_p": 0.0001,
+    "mde": {
+     "n": 3.02
+    }
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 41.5,
+    "b": 45.62,
+    "diff": -4.12,
+    "ci95": [
+     -6.99,
+     -1.25
+    ],
+    "sd_case_diff": 24.25,
+    "discordant_cases": 168,
+    "sign_test_p": 0.0165,
+    "mde": {
+     "n": 3.28
+    }
+   }
+  }
+ },
+ {
+  "name": "k3-b-sft",
+  "label": "K3-b SFT",
+  "kind": "affiné",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "25e6b97d",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)",
+  "split": "dev",
+  "quality": 46.7,
+  "fr": 45.8,
+  "en": 47.6,
+  "summary": 46.5,
+  "qa": 48.3,
+  "reaches_model": 42.0,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   47.0,
+   46.6,
+   46.4
+  ],
+  "right_lang": {
+   "fr": 82.1,
+   "en": 55.4
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 429,
+    "a": 46.66,
+    "b": 50.38,
+    "diff": -3.72,
+    "ci95": [
+     -6.09,
+     -1.33
+    ],
+    "sd_case_diff": 25.21,
+    "discordant_cases": 272,
+    "sign_test_p": 0.0029,
+    "mde": {
+     "n": 3.41
+    }
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 42.0,
+    "b": 45.62,
+    "diff": -3.63,
+    "ci95": [
+     -6.78,
+     -0.47
+    ],
+    "sd_case_diff": 26.9,
+    "discordant_cases": 174,
+    "sign_test_p": 0.0404,
+    "mde": {
+     "n": 3.64
+    }
+   }
+  }
+ },
+ {
+  "name": "a1000",
+  "label": "P16 DPO",
+  "kind": "affiné",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "200aeda8",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)",
+  "split": "dev",
+  "quality": 43.2,
+  "fr": 46.0,
+  "en": 40.4,
+  "summary": 43.6,
+  "qa": 39.4,
+  "reaches_model": 38.3,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   42.7,
+   43.8,
+   43.1
+  ],
+  "right_lang": {
+   "fr": 90.1,
+   "en": 62.4
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 429,
+    "a": 43.19,
+    "b": 50.38,
+    "diff": -7.19,
+    "ci95": [
+     -10.07,
+     -4.3
+    ],
+    "sd_case_diff": 30.59,
+    "discordant_cases": 294,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 4.14
+    }
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 38.28,
+    "b": 45.62,
+    "diff": -7.34,
+    "ci95": [
+     -11.29,
+     -3.39
+    ],
+    "sd_case_diff": 32.59,
+    "discordant_cases": 188,
+    "sign_test_p": 0.0006,
+    "mde": {
+     "n": 4.41
+    }
+   }
+  }
+ },
+ {
+  "name": "p15",
+  "label": "P15 soupe",
+  "kind": "affiné",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "7bafc32a",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)",
+  "split": "dev",
+  "quality": 46.2,
+  "fr": 46.5,
+  "en": 45.9,
+  "summary": 45.9,
+  "qa": 49.4,
+  "reaches_model": 42.5,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   46.4,
+   45.8,
+   46.5
+  ],
+  "right_lang": {
+   "fr": 77.6,
+   "en": 54.1
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 429,
+    "a": 46.22,
+    "b": 50.38,
+    "diff": -4.16,
+    "ci95": [
+     -6.61,
+     -1.73
+    ],
+    "sd_case_diff": 25.88,
+    "discordant_cases": 256,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 3.5
+    }
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 42.47,
+    "b": 45.62,
+    "diff": -3.15,
+    "ci95": [
+     -6.44,
+     0.25
+    ],
+    "sd_case_diff": 28.48,
+    "discordant_cases": 171,
+    "sign_test_p": 0.0215,
+    "mde": {
+     "n": 3.85
+    }
+   }
+  }
+ },
+ {
+  "name": "a12",
+  "label": "A12 soupe uniforme",
+  "kind": "affiné",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "bd552f46",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)",
+  "split": "dev",
+  "quality": 43.0,
+  "fr": 44.5,
+  "en": 41.6,
+  "summary": 43.6,
+  "qa": 38.3,
+  "reaches_model": 38.4,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   43.8,
+   42.6,
+   42.6
+  ],
+  "right_lang": {
+   "fr": 92.0,
+   "en": 64.1
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 429,
+    "a": 43.02,
+    "b": 50.38,
+    "diff": -7.37,
+    "ci95": [
+     -9.92,
+     -4.81
+    ],
+    "sd_case_diff": 26.98,
+    "discordant_cases": 283,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 3.65
+    }
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 38.37,
+    "b": 45.62,
+    "diff": -7.26,
+    "ci95": [
+     -10.73,
+     -3.65
+    ],
+    "sd_case_diff": 29.54,
+    "discordant_cases": 180,
+    "sign_test_p": 0.0001,
+    "mde": {
+     "n": 4.0
+    }
+   }
+  }
+ },
+ {
+  "name": "a05",
+  "label": "R2-T2 soupe R1×P17 α 0,5",
+  "kind": "X1 tour 2",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "66329cf8",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)",
+  "split": "dev",
+  "quality": 50.3,
+  "fr": 48.9,
+  "en": 51.6,
+  "summary": 50.4,
+  "qa": 49.7,
+  "reaches_model": 45.0,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   50.1,
+   50.8,
+   50.0
+  ],
+  "right_lang": {
+   "fr": 78.5,
+   "en": 55.4
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 429,
+    "a": 50.28,
+    "b": 50.38,
+    "diff": -0.1,
+    "ci95": [
+     -2.25,
+     2.12
+    ],
+    "sd_case_diff": 23.02,
+    "discordant_cases": 243,
+    "sign_test_p": 0.5213,
+    "mde": {
+     "n": 3.11
+    }
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 44.98,
+    "b": 45.62,
+    "diff": -0.65,
+    "ci95": [
+     -3.61,
+     2.37
+    ],
+    "sd_case_diff": 25.4,
+    "discordant_cases": 168,
+    "sign_test_p": 0.817,
+    "mde": {
+     "n": 3.44
+    }
+   }
+  }
+ },
+ {
+  "name": "c2-t7-dpo",
+  "label": "R2-C2 c2-t7-dpo",
+  "kind": "X1 tour 2",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "18673f0d",
+  "i5_p90": 2.33,
+  "i5_src": "mesuré à -ub 64 : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)",
+  "split": "dev",
+  "quality": 49.1,
+  "fr": 47.9,
+  "en": 50.3,
+  "summary": 49.2,
+  "qa": 48.8,
+  "reaches_model": 44.5,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   48.9,
+   48.9,
+   49.6
+  ],
+  "right_lang": {
+   "fr": 79.9,
+   "en": 66.7
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 429,
+    "a": 49.12,
+    "b": 50.38,
+    "diff": -1.26,
+    "ci95": [
+     -3.32,
+     0.8
+    ],
+    "sd_case_diff": 21.84,
+    "discordant_cases": 255,
+    "sign_test_p": 0.4524,
+    "mde": {
+     "n": 2.95
+    }
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 44.55,
+    "b": 45.62,
+    "diff": -1.08,
+    "ci95": [
+     -3.87,
+     1.7
+    ],
+    "sd_case_diff": 23.61,
+    "discordant_cases": 164,
+    "sign_test_p": 0.9378,
+    "mde": {
+     "n": 3.19
+    }
+   }
+  }
+ },
+ {
+  "name": "r2c1-e1",
+  "label": "R2-C1 DPO inventions injectées",
+  "kind": "X1 tour 2",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "a31920ee",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)",
+  "split": "dev",
+  "quality": 46.5,
+  "fr": 45.1,
+  "en": 47.8,
+  "summary": 46.5,
+  "qa": 46.5,
+  "reaches_model": 42.2,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   46.5,
+   46.5,
+   46.4
+  ],
+  "right_lang": {
+   "fr": 79.3,
+   "en": 54.3
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 429,
+    "a": 46.48,
+    "b": 50.38,
+    "diff": -3.91,
+    "ci95": [
+     -5.56,
+     -2.26
+    ],
+    "sd_case_diff": 17.62,
+    "discordant_cases": 197,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 2.38
+    }
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 42.21,
+    "b": 45.62,
+    "diff": -3.42,
+    "ci95": [
+     -5.68,
+     -1.17
+    ],
+    "sd_case_diff": 19.25,
+    "discordant_cases": 131,
+    "sign_test_p": 0.005,
+    "mde": {
+     "n": 2.6
+    }
+   }
+  }
+ },
+ {
+  "name": "dense-cpu",
+  "label": "R2-T1 Granite 4.0 350M dense (CPU)",
+  "kind": "X1 tour 2",
+  "profile": "ft",
+  "size_mb": 237.0,
+  "sha256": "e83560fd",
+  "i5_p90": 2.1,
+  "i5_src": "mesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)",
+  "split": "dev",
+  "quality": 50.2,
+  "fr": 49.0,
+  "en": 51.4,
+  "summary": 49.3,
+  "qa": 57.2,
+  "reaches_model": 46.8,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   50.6,
+   50.0,
+   50.0
+  ],
+  "right_lang": {
+   "fr": 81.3,
+   "en": 59.0
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 429,
+    "a": 50.19,
+    "b": 50.38,
+    "diff": -0.19,
+    "ci95": [
+     -2.97,
+     2.62
+    ],
+    "sd_case_diff": 29.44,
+    "discordant_cases": 290,
+    "sign_test_p": 0.1767,
+    "mde": {
+     "n": 3.98
+    }
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 46.78,
+    "b": 45.62,
+    "diff": 1.16,
+    "ci95": [
+     -2.52,
+     4.96
+    ],
+    "sd_case_diff": 31.81,
+    "discordant_cases": 195,
+    "sign_test_p": 0.5668,
+    "mde": {
+     "n": 4.3
+    }
+   }
+  }
+ },
+ {
+  "name": "dense-fold2",
+  "label": "R3-T1 Granite 350M dense replié (fold2)",
+  "kind": "X1 tour 3",
+  "profile": "ft",
+  "size_mb": 237.0,
+  "sha256": "424e6eef",
+  "i5_p90": 2.1,
+  "i5_src": "même poids que R2-T1 dense (repli exact), non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)",
+  "split": "dev",
+  "quality": 50.1,
+  "fr": 48.1,
+  "en": 52.1,
+  "summary": 49.4,
+  "qa": 56.0,
+  "reaches_model": 45.6,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   50.3,
+   50.1,
+   49.8
+  ],
+  "right_lang": {
+   "fr": 82.9,
+   "en": 60.8
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 429,
+    "a": 50.06,
+    "b": 50.38,
+    "diff": -0.33,
+    "ci95": [
+     -3.19,
+     2.58
+    ],
+    "sd_case_diff": 30.12,
+    "discordant_cases": 283,
+    "sign_test_p": 0.5523,
+    "mde": {
+     "n": 4.07
+    }
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 45.54,
+    "b": 45.62,
+    "diff": -0.08,
+    "ci95": [
+     -3.9,
+     3.74
+    ],
+    "sd_case_diff": 32.5,
+    "discordant_cases": 187,
+    "sign_test_p": 0.5587,
+    "mde": {
+     "n": 4.4
+    }
+   }
+  }
+ },
+ {
+  "name": "t2-cut4",
+  "label": "T2 élagué -4 couches",
+  "kind": "X1 tour 1",
+  "profile": "ft",
+  "size_mb": 202.5,
+  "sha256": "431d6871",
+  "i5_p90": 1.97,
+  "i5_src": "prédiction : p90 i5 de R1 (2,26 s) x rapport du proxy CPU T4 (0.87), non mesuré",
+  "split": "dev",
+  "quality": 37.6,
+  "fr": 37.0,
+  "en": 38.1,
+  "summary": 40.3,
+  "qa": 14.1,
+  "reaches_model": 30.2,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   37.8,
+   37.5,
+   37.4
+  ],
+  "right_lang": {
+   "fr": 77.0,
+   "en": 51.0
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 429,
+    "a": 37.57,
+    "b": 50.38,
+    "diff": -12.81,
+    "ci95": [
+     -15.66,
+     -9.94
+    ],
+    "sd_case_diff": 30.38,
+    "discordant_cases": 294,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 4.11
+    }
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 30.2,
+    "b": 45.62,
+    "diff": -15.42,
+    "ci95": [
+     -19.32,
+     -11.65
+    ],
+    "sd_case_diff": 32.04,
+    "discordant_cases": 193,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 4.33
+    }
+   }
+  }
+ },
+ {
+  "name": "t2-cut7",
+  "label": "T2 élagué -7 couches",
+  "kind": "X1 tour 1",
+  "profile": "ft",
+  "size_mb": 187.7,
+  "sha256": "4197947f",
+  "i5_p90": 1.75,
+  "i5_src": "prédiction : p90 i5 de R1 (2,26 s) x rapport du proxy CPU T4 (0.78), non mesuré",
+  "split": "dev",
+  "quality": 37.1,
+  "fr": 35.9,
+  "en": 38.4,
+  "summary": 40.0,
+  "qa": 12.6,
+  "reaches_model": 30.1,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   37.3,
+   36.8,
+   37.3
+  ],
+  "right_lang": {
+   "fr": 78.4,
+   "en": 46.7
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 429,
+    "a": 37.14,
+    "b": 50.38,
+    "diff": -13.24,
+    "ci95": [
+     -16.23,
+     -10.22
+    ],
+    "sd_case_diff": 31.25,
+    "discordant_cases": 296,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 4.23
+    }
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 30.1,
+    "b": 45.62,
+    "diff": -15.53,
+    "ci95": [
+     -19.45,
+     -11.67
+    ],
+    "sd_case_diff": 32.84,
+    "discordant_cases": 194,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 4.44
+    }
+   }
+  }
+ },
+ {
+  "name": "t2-cut9",
+  "label": "T2 élagué -9 couches",
+  "kind": "X1 tour 1",
+  "profile": "ft",
+  "size_mb": 177.2,
+  "sha256": "ec961f2c",
+  "i5_p90": 1.61,
+  "i5_src": "prédiction : p90 i5 de R1 (2,26 s) x rapport du proxy CPU T4 (0.71), non mesuré",
+  "split": "dev",
+  "quality": 35.6,
+  "fr": 35.1,
+  "en": 36.2,
+  "summary": 38.0,
+  "qa": 15.4,
+  "reaches_model": 28.9,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   35.3,
+   35.6,
+   36.0
+  ],
+  "right_lang": {
+   "fr": 76.4,
+   "en": 52.5
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 429,
+    "a": 35.63,
+    "b": 50.38,
+    "diff": -14.75,
+    "ci95": [
+     -17.7,
+     -11.8
+    ],
+    "sd_case_diff": 30.79,
+    "discordant_cases": 302,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 4.17
+    }
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 28.9,
+    "b": 45.62,
+    "diff": -16.72,
+    "ci95": [
+     -20.56,
+     -12.88
+    ],
+    "sd_case_diff": 32.23,
+    "discordant_cases": 198,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 4.36
+    }
+   }
+  }
+ },
+ {
+  "name": "t3-p17-iq4xs",
+  "label": "T3 P17 IQ4_XS imatrix",
+  "kind": "X1 tour 1",
+  "profile": "ft",
+  "size_mb": 207.9,
+  "sha256": "f5e62521",
+  "i5_p90": 2.51,
+  "i5_src": "prédiction : p90 i5 de R1 (2,26 s) x rapport du proxy CPU T4 (1.11), non mesuré",
+  "split": "dev",
+  "quality": 46.9,
+  "fr": 47.6,
+  "en": 46.1,
+  "summary": 47.4,
+  "qa": 42.6,
+  "reaches_model": 41.2,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   47.0,
+   46.5,
+   47.1
+  ],
+  "right_lang": {
+   "fr": 77.9,
+   "en": 60.8
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 429,
+    "a": 46.87,
+    "b": 50.38,
+    "diff": -3.52,
+    "ci95": [
+     -5.95,
+     -1.15
+    ],
+    "sd_case_diff": 25.47,
+    "discordant_cases": 261,
+    "sign_test_p": 0.0012,
+    "mde": {
+     "n": 3.44
+    }
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 41.17,
+    "b": 45.62,
+    "diff": -4.45,
+    "ci95": [
+     -7.85,
+     -1.07
+    ],
+    "sd_case_diff": 27.91,
+    "discordant_cases": 166,
+    "sign_test_p": 0.0024,
+    "mde": {
+     "n": 3.78
+    }
+   }
+  }
+ },
+ {
+  "name": "t1-smollm2-135m",
+  "label": "T1 SmolLM2 135M affiné",
+  "kind": "X1 tour 1",
+  "profile": "ft",
+  "size_mb": 105.5,
+  "sha256": "84f10407",
+  "i5_p90": null,
+  "i5_src": "non mesuré sur l'i5 (T1 : filtre qualité non passé)",
+  "split": "dev",
+  "quality": 37.3,
+  "fr": 34.9,
+  "en": 39.6,
+  "summary": 39.0,
+  "qa": 22.4,
+  "reaches_model": 32.3,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   36.7,
+   37.8,
+   37.4
+  ],
+  "right_lang": {
+   "fr": 75.1,
+   "en": 52.4
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 429,
+    "a": 37.27,
+    "b": 50.38,
+    "diff": -13.11,
+    "ci95": [
+     -16.07,
+     -10.18
+    ],
+    "sd_case_diff": 31.0,
+    "discordant_cases": 329,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 4.19
+    }
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 32.28,
+    "b": 45.62,
+    "diff": -13.35,
+    "ci95": [
+     -17.25,
+     -9.49
+    ],
+    "sd_case_diff": 33.04,
+    "discordant_cases": 213,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 4.47
+    }
+   }
+  }
+ },
+ {
+  "name": "granite-350m",
+  "label": "Granite 4.0 H 350M",
+  "kind": "brut",
+  "profile": "gen",
+  "size_mb": 222.7,
+  "sha256": "0a8d6a73",
+  "i5_p90": 2.56,
+  "i5_src": "bench/matrix/results/i5-7200u-cpu-granite4h-350m-t4-crible.json (prompt générique)",
+  "split": "dev",
+  "quality": 9.3,
+  "fr": 9.0,
+  "en": 9.6,
+  "summary": 7.4,
+  "qa": 25.8,
+  "reaches_model": 9.3,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   9.6,
+   9.4,
+   8.8
+  ],
+  "right_lang": {
+   "fr": 78.7,
+   "en": 58.6
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 429,
+    "a": 9.3,
+    "b": 50.38,
+    "diff": -41.09,
+    "ci95": [
+     -44.09,
+     -38.03
+    ],
+    "sd_case_diff": 32.47,
+    "discordant_cases": 370,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 4.39
+    }
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 9.26,
+    "b": 45.62,
+    "diff": -36.36,
+    "ci95": [
+     -40.19,
+     -32.44
+    ],
+    "sd_case_diff": 32.57,
+    "discordant_cases": 224,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 4.41
+    }
+   }
+  }
+ },
+ {
+  "name": "granite-1b",
+  "label": "Granite 4.0 H 1B",
+  "kind": "brut",
+  "profile": "gen",
+  "size_mb": 901.2,
+  "sha256": "da3d7371",
+  "i5_p90": null,
+  "i5_src": "non mesuré",
+  "split": "dev",
+  "quality": 12.5,
+  "fr": 7.9,
+  "en": 17.1,
+  "summary": 7.8,
+  "qa": 52.6,
+  "reaches_model": 15.0,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   13.0,
+   12.3,
+   12.2
+  ],
+  "right_lang": {
+   "fr": 84.9,
+   "en": 56.4
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 429,
+    "a": 12.5,
+    "b": 50.38,
+    "diff": -37.89,
+    "ci95": [
+     -41.33,
+     -34.4
+    ],
+    "sd_case_diff": 36.93,
+    "discordant_cases": 358,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 5.0
+    }
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 15.05,
+    "b": 45.62,
+    "diff": -30.57,
+    "ci95": [
+     -34.9,
+     -26.28
+    ],
+    "sd_case_diff": 36.48,
+    "discordant_cases": 217,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 4.93
+    }
+   }
+  }
+ },
+ {
+  "name": "lfm2-350m",
+  "label": "LFM2 350M",
+  "kind": "brut",
+  "profile": "gen",
+  "size_mb": 229.3,
+  "sha256": "a4d000c7",
+  "i5_p90": null,
+  "i5_src": "non mesuré (LFM2.5 350M : 2,69 s)",
+  "split": "dev",
+  "quality": 31.9,
+  "fr": 28.9,
+  "en": 34.9,
+  "summary": 32.2,
+  "qa": 29.6,
+  "reaches_model": 27.4,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   30.0,
+   33.5,
+   32.2
+  ],
+  "right_lang": {
+   "fr": 83.8,
+   "en": 88.3
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 429,
+    "a": 31.9,
+    "b": 50.38,
+    "diff": -18.49,
+    "ci95": [
+     -21.55,
+     -15.46
+    ],
+    "sd_case_diff": 32.29,
+    "discordant_cases": 403,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 4.37
+    }
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 27.37,
+    "b": 45.62,
+    "diff": -18.26,
+    "ci95": [
+     -22.28,
+     -14.24
+    ],
+    "sd_case_diff": 33.9,
+    "discordant_cases": 250,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 4.59
+    }
+   }
+  }
+ },
+ {
+  "name": "smollm2-360m",
+  "label": "SmolLM2 360M Q8_0",
+  "kind": "brut",
+  "profile": "gen",
+  "size_mb": 386.4,
+  "sha256": "48ab3034",
+  "i5_p90": null,
+  "i5_src": "non mesuré",
+  "split": "dev",
+  "quality": 17.7,
+  "fr": 15.0,
+  "en": 20.5,
+  "summary": 17.2,
+  "qa": 22.6,
+  "reaches_model": 16.5,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   18.5,
+   17.3,
+   17.4
+  ],
+  "right_lang": {
+   "fr": 94.6,
+   "en": 82.2
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 429,
+    "a": 17.75,
+    "b": 50.38,
+    "diff": -32.64,
+    "ci95": [
+     -35.78,
+     -29.54
+    ],
+    "sd_case_diff": 33.08,
+    "discordant_cases": 392,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 4.47
+    }
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 16.49,
+    "b": 45.62,
+    "diff": -29.13,
+    "ci95": [
+     -33.12,
+     -25.16
+    ],
+    "sd_case_diff": 33.6,
+    "discordant_cases": 241,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 4.54
+    }
+   }
+  }
+ },
+ {
+  "name": "qwen3.5-0.8b",
+  "label": "Qwen3.5 0.8B",
+  "kind": "brut",
+  "profile": "gen",
+  "size_mb": 532.5,
+  "sha256": "bd258782",
+  "i5_p90": 5.68,
+  "i5_src": "bench/matrix/results/i5-7200u-cpu-qwen3.5-0.8b.json",
+  "split": "dev",
+  "quality": 22.1,
+  "fr": 20.8,
+  "en": 23.5,
+  "summary": 19.2,
+  "qa": 47.4,
+  "reaches_model": 21.4,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   22.1,
+   21.8,
+   22.5
+  ],
+  "right_lang": {
+   "fr": 90.7,
+   "en": 64.3
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 429,
+    "a": 22.17,
+    "b": 50.38,
+    "diff": -28.22,
+    "ci95": [
+     -31.68,
+     -24.74
+    ],
+    "sd_case_diff": 36.55,
+    "discordant_cases": 369,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 4.94
+    }
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 21.44,
+    "b": 45.62,
+    "diff": -24.18,
+    "ci95": [
+     -28.57,
+     -19.69
+    ],
+    "sd_case_diff": 37.23,
+    "discordant_cases": 231,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 5.04
+    }
+   }
+  }
+ },
+ {
+  "name": "qwen3.5-2b",
+  "label": "Qwen3.5 2B",
+  "kind": "brut",
+  "profile": "gen",
+  "size_mb": 1280.8,
+  "sha256": "aaf42c8b",
+  "i5_p90": 13.3,
+  "i5_src": "bench/matrix/results/i5-7200u-cpu-qwen3.5-2b.json",
+  "split": "dev",
+  "quality": 54.5,
+  "fr": 52.6,
+  "en": 56.3,
+  "summary": 52.4,
+  "qa": 72.3,
+  "reaches_model": 53.1,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   55.8,
+   53.5,
+   54.1
+  ],
+  "right_lang": {
+   "fr": 82.8,
+   "en": 82.1
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 429,
+    "a": 54.47,
+    "b": 50.38,
+    "diff": 4.09,
+    "ci95": [
+     0.76,
+     7.48
+    ],
+    "sd_case_diff": 35.54,
+    "discordant_cases": 355,
+    "sign_test_p": 0.3394,
+    "mde": {
+     "n": 4.81
+    }
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 53.1,
+    "b": 45.62,
+    "diff": 7.47,
+    "ci95": [
+     3.0,
+     11.87
+    ],
+    "sd_case_diff": 37.53,
+    "discordant_cases": 231,
+    "sign_test_p": 0.0122,
+    "mde": {
+     "n": 5.08
+    }
+   }
+  }
+ },
+ {
+  "name": "gemma4-e2b",
+  "label": "Gemma 4 E2B QAT q4_0",
+  "kind": "brut",
+  "profile": "gen",
+  "size_mb": 3349.5,
+  "sha256": "fa401b55",
+  "i5_p90": 27.3,
+  "i5_src": "mesuré par G2 : résumés dev v3 au prompt générique, bench/matrix/results/gemma/g2/",
+  "split": "dev",
+  "quality": 60.5,
+  "fr": 61.4,
+  "en": 59.8,
+  "summary": 57.8,
+  "qa": 83.7,
+  "reaches_model": 59.2,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   59.6,
+   61.1,
+   60.9
+  ],
+  "right_lang": {
+   "fr": 90.5,
+   "en": 81.9
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 429,
+    "a": 60.55,
+    "b": 50.38,
+    "diff": 10.17,
+    "ci95": [
+     6.78,
+     13.45
+    ],
+    "sd_case_diff": 35.2,
+    "discordant_cases": 323,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 4.76
+    }
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 59.26,
+    "b": 45.62,
+    "diff": 13.63,
+    "ci95": [
+     9.33,
+     18.03
+    ],
+    "sd_case_diff": 37.19,
+    "discordant_cases": 205,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 5.03
+    }
+   }
+  }
+ },
+ {
+  "name": "qwen3.5-4b",
+  "label": "Qwen3.5 4B",
+  "kind": "brut",
+  "profile": "gen",
+  "size_mb": 2740.9,
+  "sha256": "00fe7986",
+  "i5_p90": null,
+  "i5_src": "non mesuré",
+  "split": "dev",
+  "quality": 59.2,
+  "fr": 59.6,
+  "en": 58.8,
+  "summary": 57.7,
+  "qa": 71.3,
+  "reaches_model": 57.2,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   59.4,
+   59.2,
+   59.0
+  ],
+  "right_lang": {
+   "fr": 94.9,
+   "en": 82.5
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 429,
+    "a": 59.17,
+    "b": 50.38,
+    "diff": 8.79,
+    "ci95": [
+     5.48,
+     12.12
+    ],
+    "sd_case_diff": 35.35,
+    "discordant_cases": 317,
+    "sign_test_p": 0.0016,
+    "mde": {
+     "n": 4.78
+    }
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 57.24,
+    "b": 45.62,
+    "diff": 11.62,
+    "ci95": [
+     6.93,
+     16.22
+    ],
+    "sd_case_diff": 38.88,
+    "discordant_cases": 207,
+    "sign_test_p": 0.0003,
+    "mde": {
+     "n": 5.26
+    }
+   }
+  }
+ },
+ {
+  "name": "qwen3.5-9b",
+  "label": "Qwen3.5 9B (enseignant)",
+  "kind": "brut",
+  "profile": "gen",
+  "size_mb": 5680.5,
+  "sha256": "03b74727",
+  "i5_p90": null,
+  "i5_src": "non mesuré",
+  "split": "dev",
+  "quality": 64.7,
+  "fr": 64.8,
+  "en": 64.6,
+  "summary": 62.5,
+  "qa": 83.7,
+  "reaches_model": 63.1,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   65.7,
+   64.5,
+   63.9
+  ],
+  "right_lang": {
+   "fr": 93.3,
+   "en": 83.1
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 429,
+    "a": 64.72,
+    "b": 50.38,
+    "diff": 14.33,
+    "ci95": [
+     11.17,
+     17.62
+    ],
+    "sd_case_diff": 33.81,
+    "discordant_cases": 295,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 4.57
+    }
+   },
+   "reaches_model": {
+    "n_cases": 271,
+    "a": 63.04,
+    "b": 45.62,
+    "diff": 17.41,
+    "ci95": [
+     13.07,
+     21.79
+    ],
+    "sd_case_diff": 37.3,
+    "discordant_cases": 202,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 5.05
+    }
+   }
+  }
+ },
+ {
+  "name": "r1-v1.0",
+  "label": "R1 steph-speak v1.0",
+  "kind": "affiné",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "45414bd2",
+  "i5_p90": 2.26,
+  "i5_src": "mesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)",
+  "split": "test",
+  "quality": 49.6,
+  "fr": 48.3,
+  "en": 50.8,
+  "summary": 49.8,
+  "qa": 47.2,
+  "reaches_model": 46.2,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   49.7,
+   49.9,
+   49.2
+  ],
+  "right_lang": {
+   "fr": 83.5,
+   "en": 53.4
+  },
+  "inventions": {
+   "n": 2475,
+   "seeds": 3,
+   "pct": 29.7,
+   "douteux_pct": 9.8,
+   "fr_pct": 35.3,
+   "en_pct": 24.0,
+   "erreur": 3
+  }
+ },
+ {
+  "name": "p17",
+  "label": "P17 DPO",
+  "kind": "affiné",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "d548f3fc",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)",
+  "split": "test",
+  "quality": 48.6,
+  "fr": 49.5,
+  "en": 47.8,
+  "summary": 49.1,
+  "qa": 44.5,
+  "reaches_model": 45.4,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   48.5,
+   48.7,
+   48.7
+  ],
+  "right_lang": {
+   "fr": 77.8,
+   "en": 56.5
+  },
+  "inventions": {
+   "n": 2475,
+   "seeds": 3,
+   "pct": 26.6,
+   "douteux_pct": 9.0,
+   "fr_pct": 30.9,
+   "en_pct": 22.3,
+   "erreur": 3
+  },
+  "vs_r1": {
+   "quality": {
+    "n_cases": 654,
+    "a": 48.65,
+    "b": 49.58,
+    "diff": -0.93,
+    "ci95": [
+     -2.59,
+     0.78
+    ],
+    "sd_case_diff": 22.18,
+    "discordant_cases": 407,
+    "sign_test_p": 0.1974,
+    "mde": {
+     "n": 2.43
+    }
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 45.42,
+    "b": 46.22,
+    "diff": -0.8,
+    "ci95": [
+     -3.02,
+     1.37
+    ],
+    "sd_case_diff": 23.06,
+    "discordant_cases": 259,
+    "sign_test_p": 0.9011,
+    "mde": {
+     "n": 2.53
+    }
+   },
+   "inventions": {
+    "n_cases": 413,
+    "a": 26.59,
+    "b": 29.7,
+    "diff": -3.11,
+    "ci95": [
+     -6.46,
+     0.2
+    ],
+    "sd_case_diff": 34.61,
+    "discordant_cases": 253,
+    "sign_test_p": 0.2577,
+    "mde": {
+     "n": 3.79
+    }
+   }
+  }
+ },
+ {
+  "name": "k3-a-dpo",
+  "label": "K3-a DPO",
+  "kind": "affiné",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "c0fd7afd",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)",
+  "split": "test",
+  "quality": 46.9,
+  "fr": 45.3,
+  "en": 48.6,
+  "summary": 47.7,
+  "qa": 40.3,
+  "reaches_model": 42.6,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   47.0,
+   47.1,
+   46.6
+  ],
+  "right_lang": {
+   "fr": 82.4,
+   "en": 53.1
+  },
+  "inventions": {
+   "n": 2477,
+   "seeds": 3,
+   "pct": 28.1,
+   "douteux_pct": 10.7,
+   "fr_pct": 34.6,
+   "en_pct": 21.5,
+   "erreur": 1
+  },
+  "vs_r1": {
+   "quality": {
+    "n_cases": 654,
+    "a": 46.93,
+    "b": 49.58,
+    "diff": -2.65,
+    "ci95": [
+     -4.39,
+     -0.91
+    ],
+    "sd_case_diff": 22.77,
+    "discordant_cases": 390,
+    "sign_test_p": 0.0226,
+    "mde": {
+     "n": 2.49
+    }
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 42.57,
+    "b": 46.22,
+    "diff": -3.65,
+    "ci95": [
+     -6.04,
+     -1.26
+    ],
+    "sd_case_diff": 25.1,
+    "discordant_cases": 261,
+    "sign_test_p": 0.0131,
+    "mde": {
+     "n": 2.75
+    }
+   },
+   "inventions": {
+    "n_cases": 413,
+    "a": 28.09,
+    "b": 29.7,
+    "diff": -1.61,
+    "ci95": [
+     -4.88,
+     1.69
+    ],
+    "sd_case_diff": 34.25,
+    "discordant_cases": 244,
+    "sign_test_p": 0.5646,
+    "mde": {
+     "n": 3.75
+    }
+   }
+  }
+ },
+ {
+  "name": "k3-a-sft",
+  "label": "K3-a SFT",
+  "kind": "affiné",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "b0f5b7b1",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)",
+  "split": "test",
+  "quality": 45.2,
+  "fr": 43.7,
+  "en": 46.8,
+  "summary": 45.9,
+  "qa": 39.5,
+  "reaches_model": 40.8,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   45.5,
+   45.3,
+   44.8
+  ],
+  "right_lang": {
+   "fr": 81.3,
+   "en": 51.8
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 654,
+    "a": 45.22,
+    "b": 49.58,
+    "diff": -4.36,
+    "ci95": [
+     -6.23,
+     -2.46
+    ],
+    "sd_case_diff": 24.72,
+    "discordant_cases": 403,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 2.71
+    }
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 40.82,
+    "b": 46.22,
+    "diff": -5.4,
+    "ci95": [
+     -7.98,
+     -2.87
+    ],
+    "sd_case_diff": 26.93,
+    "discordant_cases": 272,
+    "sign_test_p": 0.0019,
+    "mde": {
+     "n": 2.95
+    }
+   }
+  }
+ },
+ {
+  "name": "k3-b-dpo",
+  "label": "K3-b DPO",
+  "kind": "affiné",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "151f356a",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)",
+  "split": "test",
+  "quality": 46.6,
+  "fr": 45.5,
+  "en": 47.7,
+  "summary": 47.2,
+  "qa": 42.3,
+  "reaches_model": 41.5,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   46.6,
+   46.6,
+   46.7
+  ],
+  "right_lang": {
+   "fr": 83.2,
+   "en": 55.8
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 654,
+    "a": 46.65,
+    "b": 49.58,
+    "diff": -2.94,
+    "ci95": [
+     -4.75,
+     -1.15
+    ],
+    "sd_case_diff": 23.69,
+    "discordant_cases": 400,
+    "sign_test_p": 0.0008,
+    "mde": {
+     "n": 2.6
+    }
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 41.51,
+    "b": 46.22,
+    "diff": -4.72,
+    "ci95": [
+     -7.15,
+     -2.31
+    ],
+    "sd_case_diff": 25.08,
+    "discordant_cases": 261,
+    "sign_test_p": 0.0002,
+    "mde": {
+     "n": 2.75
+    }
+   }
+  }
+ },
+ {
+  "name": "k3-b-sft",
+  "label": "K3-b SFT",
+  "kind": "affiné",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "25e6b97d",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)",
+  "split": "test",
+  "quality": 46.8,
+  "fr": 45.4,
+  "en": 48.2,
+  "summary": 47.7,
+  "qa": 39.3,
+  "reaches_model": 42.4,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   46.8,
+   46.7,
+   46.8
+  ],
+  "right_lang": {
+   "fr": 80.8,
+   "en": 53.1
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 654,
+    "a": 46.79,
+    "b": 49.58,
+    "diff": -2.79,
+    "ci95": [
+     -4.72,
+     -0.92
+    ],
+    "sd_case_diff": 24.93,
+    "discordant_cases": 438,
+    "sign_test_p": 0.0191,
+    "mde": {
+     "n": 2.73
+    }
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 42.4,
+    "b": 46.22,
+    "diff": -3.82,
+    "ci95": [
+     -6.38,
+     -1.31
+    ],
+    "sd_case_diff": 26.55,
+    "discordant_cases": 277,
+    "sign_test_p": 0.0543,
+    "mde": {
+     "n": 2.91
+    }
+   }
+  }
+ },
+ {
+  "name": "a1000",
+  "label": "P16 DPO",
+  "kind": "affiné",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "200aeda8",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)",
+  "split": "test",
+  "quality": 40.4,
+  "fr": 43.5,
+  "en": 37.4,
+  "summary": 41.7,
+  "qa": 29.6,
+  "reaches_model": 37.4,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   40.9,
+   40.1,
+   40.3
+  ],
+  "right_lang": {
+   "fr": 90.1,
+   "en": 65.3
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 654,
+    "a": 40.43,
+    "b": 49.58,
+    "diff": -9.15,
+    "ci95": [
+     -11.46,
+     -6.86
+    ],
+    "sd_case_diff": 29.74,
+    "discordant_cases": 461,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 3.26
+    }
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 37.35,
+    "b": 46.22,
+    "diff": -8.87,
+    "ci95": [
+     -11.97,
+     -5.72
+    ],
+    "sd_case_diff": 32.13,
+    "discordant_cases": 279,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 3.52
+    }
+   }
+  }
+ },
+ {
+  "name": "p15",
+  "label": "P15 soupe",
+  "kind": "affiné",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "7bafc32a",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)",
+  "split": "test",
+  "quality": 45.8,
+  "fr": 47.5,
+  "en": 44.3,
+  "summary": 46.7,
+  "qa": 39.1,
+  "reaches_model": 42.6,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   45.8,
+   46.2,
+   45.5
+  ],
+  "right_lang": {
+   "fr": 80.7,
+   "en": 57.1
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 654,
+    "a": 45.86,
+    "b": 49.58,
+    "diff": -3.73,
+    "ci95": [
+     -5.62,
+     -1.79
+    ],
+    "sd_case_diff": 25.05,
+    "discordant_cases": 417,
+    "sign_test_p": 0.0006,
+    "mde": {
+     "n": 2.74
+    }
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 42.55,
+    "b": 46.22,
+    "diff": -3.67,
+    "ci95": [
+     -6.21,
+     -1.05
+    ],
+    "sd_case_diff": 26.79,
+    "discordant_cases": 266,
+    "sign_test_p": 0.0428,
+    "mde": {
+     "n": 2.93
+    }
+   }
+  }
+ },
+ {
+  "name": "a12",
+  "label": "A12 soupe uniforme",
+  "kind": "affiné",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "bd552f46",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)",
+  "split": "test",
+  "quality": 42.6,
+  "fr": 46.0,
+  "en": 39.2,
+  "summary": 44.1,
+  "qa": 30.1,
+  "reaches_model": 38.8,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   42.7,
+   42.3,
+   42.9
+  ],
+  "right_lang": {
+   "fr": 92.1,
+   "en": 61.1
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 654,
+    "a": 42.6,
+    "b": 49.58,
+    "diff": -6.98,
+    "ci95": [
+     -9.17,
+     -4.85
+    ],
+    "sd_case_diff": 28.01,
+    "discordant_cases": 442,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 3.07
+    }
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 38.78,
+    "b": 46.22,
+    "diff": -7.44,
+    "ci95": [
+     -10.43,
+     -4.5
+    ],
+    "sd_case_diff": 30.87,
+    "discordant_cases": 280,
+    "sign_test_p": 0.0001,
+    "mde": {
+     "n": 3.38
+    }
+   }
+  }
+ },
+ {
+  "name": "a05",
+  "label": "R2-T2 soupe R1×P17 α 0,5",
+  "kind": "X1 tour 2",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "66329cf8",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)",
+  "split": "test",
+  "quality": 47.6,
+  "fr": 47.0,
+  "en": 48.2,
+  "summary": 48.4,
+  "qa": 41.1,
+  "reaches_model": 44.1,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   47.0,
+   47.9,
+   47.9
+  ],
+  "right_lang": {
+   "fr": 80.8,
+   "en": 52.5
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 654,
+    "a": 47.6,
+    "b": 49.58,
+    "diff": -1.98,
+    "ci95": [
+     -3.62,
+     -0.37
+    ],
+    "sd_case_diff": 21.26,
+    "discordant_cases": 373,
+    "sign_test_p": 0.0622,
+    "mde": {
+     "n": 2.33
+    }
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 44.08,
+    "b": 46.22,
+    "diff": -2.15,
+    "ci95": [
+     -4.26,
+     -0.04
+    ],
+    "sd_case_diff": 21.73,
+    "discordant_cases": 245,
+    "sign_test_p": 0.1597,
+    "mde": {
+     "n": 2.38
+    }
+   }
+  }
+ },
+ {
+  "name": "c2-t7-dpo",
+  "label": "R2-C2 c2-t7-dpo",
+  "kind": "X1 tour 2",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "18673f0d",
+  "i5_p90": 2.33,
+  "i5_src": "mesuré à -ub 64 : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)",
+  "split": "test",
+  "quality": 49.2,
+  "fr": 49.3,
+  "en": 49.1,
+  "summary": 49.4,
+  "qa": 47.4,
+  "reaches_model": 45.6,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   49.7,
+   48.4,
+   49.4
+  ],
+  "right_lang": {
+   "fr": 83.0,
+   "en": 67.2
+  },
+  "inventions": {
+   "n": 2477,
+   "seeds": 3,
+   "pct": 29.1,
+   "douteux_pct": 9.4,
+   "fr_pct": 30.7,
+   "en_pct": 27.6,
+   "erreur": 1
+  },
+  "vs_r1": {
+   "quality": {
+    "n_cases": 654,
+    "a": 49.15,
+    "b": 49.58,
+    "diff": -0.43,
+    "ci95": [
+     -2.09,
+     1.23
+    ],
+    "sd_case_diff": 21.69,
+    "discordant_cases": 366,
+    "sign_test_p": 0.5654,
+    "mde": {
+     "n": 2.38
+    }
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 45.54,
+    "b": 46.22,
+    "diff": -0.68,
+    "ci95": [
+     -2.87,
+     1.53
+    ],
+    "sd_case_diff": 22.82,
+    "discordant_cases": 235,
+    "sign_test_p": 0.5143,
+    "mde": {
+     "n": 2.5
+    }
+   },
+   "inventions": {
+    "n_cases": 413,
+    "a": 29.14,
+    "b": 29.7,
+    "diff": -0.56,
+    "ci95": [
+     -3.59,
+     2.46
+    ],
+    "sd_case_diff": 31.26,
+    "discordant_cases": 236,
+    "sign_test_p": 0.5581,
+    "mde": {
+     "n": 3.42
+    }
+   }
+  }
+ },
+ {
+  "name": "r2c1-e1",
+  "label": "R2-C1 DPO inventions injectées",
+  "kind": "X1 tour 2",
+  "profile": "ft",
+  "size_mb": 222.7,
+  "sha256": "a31920ee",
+  "i5_p90": 2.26,
+  "i5_src": "même architecture et même taille que R1, non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)",
+  "split": "test",
+  "quality": 46.8,
+  "fr": 47.2,
+  "en": 46.4,
+  "summary": 46.9,
+  "qa": 45.6,
+  "reaches_model": 42.3,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   46.7,
+   46.8,
+   46.8
+  ],
+  "right_lang": {
+   "fr": 81.7,
+   "en": 54.0
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 654,
+    "a": 46.77,
+    "b": 49.58,
+    "diff": -2.81,
+    "ci95": [
+     -4.11,
+     -1.52
+    ],
+    "sd_case_diff": 16.83,
+    "discordant_cases": 289,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 1.84
+    }
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 42.33,
+    "b": 46.22,
+    "diff": -3.89,
+    "ci95": [
+     -5.61,
+     -2.22
+    ],
+    "sd_case_diff": 17.53,
+    "discordant_cases": 199,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 1.92
+    }
+   }
+  }
+ },
+ {
+  "name": "dense-cpu",
+  "label": "R2-T1 Granite 4.0 350M dense (CPU)",
+  "kind": "X1 tour 2",
+  "profile": "ft",
+  "size_mb": 237.0,
+  "sha256": "e83560fd",
+  "i5_p90": 2.1,
+  "i5_src": "mesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)",
+  "split": "test",
+  "quality": 48.8,
+  "fr": 47.5,
+  "en": 50.0,
+  "summary": 48.5,
+  "qa": 51.3,
+  "reaches_model": 44.0,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   48.8,
+   48.4,
+   49.2
+  ],
+  "right_lang": {
+   "fr": 77.8,
+   "en": 62.4
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 654,
+    "a": 48.78,
+    "b": 49.58,
+    "diff": -0.8,
+    "ci95": [
+     -3.17,
+     1.55
+    ],
+    "sd_case_diff": 30.85,
+    "discordant_cases": 493,
+    "sign_test_p": 0.6525,
+    "mde": {
+     "n": 3.38
+    }
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 44.0,
+    "b": 46.22,
+    "diff": -2.22,
+    "ci95": [
+     -5.39,
+     0.99
+    ],
+    "sd_case_diff": 33.01,
+    "discordant_cases": 320,
+    "sign_test_p": 0.0829,
+    "mde": {
+     "n": 3.62
+    }
+   }
+  }
+ },
+ {
+  "name": "dense-fold2",
+  "label": "R3-T1 Granite 350M dense replié (fold2)",
+  "kind": "X1 tour 3",
+  "profile": "ft",
+  "size_mb": 237.0,
+  "sha256": "424e6eef",
+  "i5_p90": 2.1,
+  "i5_src": "même poids que R2-T1 dense (repli exact), non remesuré : bench/matrix/results/finetune/loop/round-2/judge/i5-summary.json (réglage de production -ub 512, 36 cas)",
+  "split": "test",
+  "quality": 48.3,
+  "fr": 47.5,
+  "en": 49.1,
+  "summary": 48.1,
+  "qa": 50.5,
+  "reaches_model": 43.4,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   48.2,
+   48.4,
+   48.3
+  ],
+  "right_lang": {
+   "fr": 80.4,
+   "en": 62.2
+  },
+  "inventions": {
+   "n": 2478,
+   "seeds": 3,
+   "pct": 28.7,
+   "douteux_pct": 10.1,
+   "fr_pct": 31.3,
+   "en_pct": 26.2,
+   "erreur": 0
+  },
+  "vs_r1": {
+   "quality": {
+    "n_cases": 654,
+    "a": 48.31,
+    "b": 49.58,
+    "diff": -1.27,
+    "ci95": [
+     -3.6,
+     1.04
+    ],
+    "sd_case_diff": 30.66,
+    "discordant_cases": 477,
+    "sign_test_p": 0.4638,
+    "mde": {
+     "n": 3.36
+    }
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 43.45,
+    "b": 46.22,
+    "diff": -2.77,
+    "ci95": [
+     -5.96,
+     0.39
+    ],
+    "sd_case_diff": 33.3,
+    "discordant_cases": 316,
+    "sign_test_p": 0.081,
+    "mde": {
+     "n": 3.65
+    }
+   },
+   "inventions": {
+    "n_cases": 413,
+    "a": 28.73,
+    "b": 29.7,
+    "diff": -0.97,
+    "ci95": [
+     -5.04,
+     3.15
+    ],
+    "sd_case_diff": 42.59,
+    "discordant_cases": 293,
+    "sign_test_p": 0.4135,
+    "mde": {
+     "n": 4.67
+    }
+   }
+  }
+ },
+ {
+  "name": "t2-cut4",
+  "label": "T2 élagué -4 couches",
+  "kind": "X1 tour 1",
+  "profile": "ft",
+  "size_mb": 202.5,
+  "sha256": "431d6871",
+  "i5_p90": 1.97,
+  "i5_src": "prédiction : p90 i5 de R1 (2,26 s) x rapport du proxy CPU T4 (0.87), non mesuré",
+  "split": "test",
+  "quality": 38.2,
+  "fr": 38.1,
+  "en": 38.3,
+  "summary": 40.6,
+  "qa": 18.2,
+  "reaches_model": 32.8,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   38.2,
+   38.0,
+   38.3
+  ],
+  "right_lang": {
+   "fr": 79.6,
+   "en": 48.9
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 654,
+    "a": 38.17,
+    "b": 49.58,
+    "diff": -11.41,
+    "ci95": [
+     -13.74,
+     -9.1
+    ],
+    "sd_case_diff": 30.57,
+    "discordant_cases": 447,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 3.35
+    }
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 32.79,
+    "b": 46.22,
+    "diff": -13.43,
+    "ci95": [
+     -16.56,
+     -10.25
+    ],
+    "sd_case_diff": 33.14,
+    "discordant_cases": 287,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 3.63
+    }
+   }
+  }
+ },
+ {
+  "name": "t2-cut7",
+  "label": "T2 élagué -7 couches",
+  "kind": "X1 tour 1",
+  "profile": "ft",
+  "size_mb": 187.7,
+  "sha256": "4197947f",
+  "i5_p90": 1.75,
+  "i5_src": "prédiction : p90 i5 de R1 (2,26 s) x rapport du proxy CPU T4 (0.78), non mesuré",
+  "split": "test",
+  "quality": 35.4,
+  "fr": 35.6,
+  "en": 35.1,
+  "summary": 37.8,
+  "qa": 15.5,
+  "reaches_model": 29.3,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   35.7,
+   35.2,
+   35.3
+  ],
+  "right_lang": {
+   "fr": 81.9,
+   "en": 49.7
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 654,
+    "a": 35.36,
+    "b": 49.58,
+    "diff": -14.22,
+    "ci95": [
+     -16.63,
+     -11.79
+    ],
+    "sd_case_diff": 31.18,
+    "discordant_cases": 466,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 3.42
+    }
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 29.29,
+    "b": 46.22,
+    "diff": -16.94,
+    "ci95": [
+     -20.17,
+     -13.69
+    ],
+    "sd_case_diff": 33.2,
+    "discordant_cases": 297,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 3.64
+    }
+   }
+  }
+ },
+ {
+  "name": "t2-cut9",
+  "label": "T2 élagué -9 couches",
+  "kind": "X1 tour 1",
+  "profile": "ft",
+  "size_mb": 177.2,
+  "sha256": "ec961f2c",
+  "i5_p90": 1.61,
+  "i5_src": "prédiction : p90 i5 de R1 (2,26 s) x rapport du proxy CPU T4 (0.71), non mesuré",
+  "split": "test",
+  "quality": 34.7,
+  "fr": 33.5,
+  "en": 35.9,
+  "summary": 36.6,
+  "qa": 18.2,
+  "reaches_model": 29.9,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   34.5,
+   34.6,
+   34.9
+  ],
+  "right_lang": {
+   "fr": 79.5,
+   "en": 53.6
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 654,
+    "a": 34.66,
+    "b": 49.58,
+    "diff": -14.93,
+    "ci95": [
+     -17.29,
+     -12.57
+    ],
+    "sd_case_diff": 30.6,
+    "discordant_cases": 474,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 3.35
+    }
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 29.89,
+    "b": 46.22,
+    "diff": -16.34,
+    "ci95": [
+     -19.65,
+     -13.2
+    ],
+    "sd_case_diff": 33.42,
+    "discordant_cases": 300,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 3.66
+    }
+   }
+  }
+ },
+ {
+  "name": "t3-p17-iq4xs",
+  "label": "T3 P17 IQ4_XS imatrix",
+  "kind": "X1 tour 1",
+  "profile": "ft",
+  "size_mb": 207.9,
+  "sha256": "f5e62521",
+  "i5_p90": 2.51,
+  "i5_src": "prédiction : p90 i5 de R1 (2,26 s) x rapport du proxy CPU T4 (1.11), non mesuré",
+  "split": "test",
+  "quality": 46.5,
+  "fr": 47.5,
+  "en": 45.5,
+  "summary": 47.2,
+  "qa": 40.9,
+  "reaches_model": 42.7,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   46.4,
+   46.5,
+   46.6
+  ],
+  "right_lang": {
+   "fr": 76.4,
+   "en": 57.4
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 654,
+    "a": 46.52,
+    "b": 49.58,
+    "diff": -3.07,
+    "ci95": [
+     -5.08,
+     -1.06
+    ],
+    "sd_case_diff": 26.38,
+    "discordant_cases": 442,
+    "sign_test_p": 0.0088,
+    "mde": {
+     "n": 2.89
+    }
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 42.75,
+    "b": 46.22,
+    "diff": -3.48,
+    "ci95": [
+     -6.17,
+     -0.72
+    ],
+    "sd_case_diff": 28.35,
+    "discordant_cases": 281,
+    "sign_test_p": 0.0086,
+    "mde": {
+     "n": 3.11
+    }
+   }
+  }
+ },
+ {
+  "name": "t1-smollm2-135m",
+  "label": "T1 SmolLM2 135M affiné",
+  "kind": "X1 tour 1",
+  "profile": "ft",
+  "size_mb": 105.5,
+  "sha256": "84f10407",
+  "i5_p90": null,
+  "i5_src": "non mesuré sur l'i5 (T1 : filtre qualité non passé)",
+  "split": "test",
+  "quality": 36.5,
+  "fr": 33.3,
+  "en": 39.6,
+  "summary": 38.0,
+  "qa": 23.9,
+  "reaches_model": 31.0,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   36.0,
+   36.7,
+   36.7
+  ],
+  "right_lang": {
+   "fr": 74.1,
+   "en": 51.0
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 654,
+    "a": 36.46,
+    "b": 49.58,
+    "diff": -13.12,
+    "ci95": [
+     -15.53,
+     -10.77
+    ],
+    "sd_case_diff": 31.15,
+    "discordant_cases": 497,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 3.41
+    }
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 31.04,
+    "b": 46.22,
+    "diff": -15.18,
+    "ci95": [
+     -18.37,
+     -12.08
+    ],
+    "sd_case_diff": 32.56,
+    "discordant_cases": 321,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 3.57
+    }
+   }
+  }
+ },
+ {
+  "name": "granite-350m",
+  "label": "Granite 4.0 H 350M",
+  "kind": "brut",
+  "profile": "gen",
+  "size_mb": 222.7,
+  "sha256": "0a8d6a73",
+  "i5_p90": 2.56,
+  "i5_src": "bench/matrix/results/i5-7200u-cpu-granite4h-350m-t4-crible.json (prompt générique)",
+  "split": "test",
+  "quality": 9.0,
+  "fr": 9.3,
+  "en": 8.7,
+  "summary": 7.4,
+  "qa": 22.7,
+  "reaches_model": 8.5,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   9.8,
+   8.5,
+   8.8
+  ],
+  "right_lang": {
+   "fr": 76.0,
+   "en": 63.3
+  },
+  "inventions": {
+   "n": 826,
+   "seeds": 1,
+   "pct": 24.5,
+   "douteux_pct": 4.5,
+   "fr_pct": 38.0,
+   "en_pct": 10.9,
+   "erreur": 0
+  },
+  "vs_r1": {
+   "quality": {
+    "n_cases": 654,
+    "a": 9.02,
+    "b": 49.58,
+    "diff": -40.57,
+    "ci95": [
+     -43.17,
+     -37.95
+    ],
+    "sd_case_diff": 34.0,
+    "discordant_cases": 561,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 3.72
+    }
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 8.49,
+    "b": 46.22,
+    "diff": -37.73,
+    "ci95": [
+     -41.1,
+     -34.21
+    ],
+    "sd_case_diff": 35.79,
+    "discordant_cases": 338,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 3.92
+    }
+   },
+   "inventions": {
+    "n_cases": 413,
+    "a": 24.46,
+    "b": 29.7,
+    "diff": -5.25,
+    "ci95": [
+     -9.4,
+     -1.13
+    ],
+    "sd_case_diff": 42.78,
+    "discordant_cases": 259,
+    "sign_test_p": 0.0018,
+    "mde": {
+     "n": 4.69
+    }
+   }
+  }
+ },
+ {
+  "name": "granite-1b",
+  "label": "Granite 4.0 H 1B",
+  "kind": "brut",
+  "profile": "gen",
+  "size_mb": 901.2,
+  "sha256": "da3d7371",
+  "i5_p90": null,
+  "i5_src": "non mesuré",
+  "split": "test",
+  "quality": 10.8,
+  "fr": 6.8,
+  "en": 14.9,
+  "summary": 6.4,
+  "qa": 47.9,
+  "reaches_model": 13.2,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   10.7,
+   11.0,
+   10.8
+  ],
+  "right_lang": {
+   "fr": 87.1,
+   "en": 50.5
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 654,
+    "a": 10.86,
+    "b": 49.58,
+    "diff": -38.73,
+    "ci95": [
+     -41.68,
+     -35.8
+    ],
+    "sd_case_diff": 37.78,
+    "discordant_cases": 561,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 4.14
+    }
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 13.2,
+    "b": 46.22,
+    "diff": -33.02,
+    "ci95": [
+     -36.82,
+     -29.19
+    ],
+    "sd_case_diff": 39.58,
+    "discordant_cases": 341,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 4.34
+    }
+   }
+  }
+ },
+ {
+  "name": "lfm2-350m",
+  "label": "LFM2 350M",
+  "kind": "brut",
+  "profile": "gen",
+  "size_mb": 229.3,
+  "sha256": "a4d000c7",
+  "i5_p90": null,
+  "i5_src": "non mesuré (LFM2.5 350M : 2,69 s)",
+  "split": "test",
+  "quality": 30.8,
+  "fr": 28.3,
+  "en": 33.2,
+  "summary": 31.0,
+  "qa": 28.6,
+  "reaches_model": 27.6,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   31.5,
+   30.3,
+   30.6
+  ],
+  "right_lang": {
+   "fr": 81.1,
+   "en": 86.4
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 654,
+    "a": 30.79,
+    "b": 49.58,
+    "diff": -18.79,
+    "ci95": [
+     -21.34,
+     -16.26
+    ],
+    "sd_case_diff": 32.86,
+    "discordant_cases": 607,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 3.6
+    }
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 27.64,
+    "b": 46.22,
+    "diff": -18.59,
+    "ci95": [
+     -22.05,
+     -15.27
+    ],
+    "sd_case_diff": 34.69,
+    "discordant_cases": 373,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 3.8
+    }
+   }
+  }
+ },
+ {
+  "name": "smollm2-360m",
+  "label": "SmolLM2 360M Q8_0",
+  "kind": "brut",
+  "profile": "gen",
+  "size_mb": 386.4,
+  "sha256": "48ab3034",
+  "i5_p90": null,
+  "i5_src": "non mesuré",
+  "split": "test",
+  "quality": 18.6,
+  "fr": 15.8,
+  "en": 21.4,
+  "summary": 18.2,
+  "qa": 22.1,
+  "reaches_model": 17.2,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   19.1,
+   18.8,
+   17.9
+  ],
+  "right_lang": {
+   "fr": 96.1,
+   "en": 82.8
+  },
+  "inventions": null,
+  "vs_r1": {
+   "quality": {
+    "n_cases": 654,
+    "a": 18.59,
+    "b": 49.58,
+    "diff": -31.0,
+    "ci95": [
+     -33.56,
+     -28.5
+    ],
+    "sd_case_diff": 32.9,
+    "discordant_cases": 587,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 3.6
+    }
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 17.2,
+    "b": 46.22,
+    "diff": -29.03,
+    "ci95": [
+     -32.41,
+     -25.52
+    ],
+    "sd_case_diff": 35.85,
+    "discordant_cases": 355,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 3.93
+    }
+   }
+  }
+ },
+ {
+  "name": "qwen3.5-0.8b",
+  "label": "Qwen3.5 0.8B",
+  "kind": "brut",
+  "profile": "gen",
+  "size_mb": 532.5,
+  "sha256": "bd258782",
+  "i5_p90": 5.68,
+  "i5_src": "bench/matrix/results/i5-7200u-cpu-qwen3.5-0.8b.json",
+  "split": "test",
+  "quality": 20.0,
+  "fr": 18.5,
+  "en": 21.6,
+  "summary": 18.0,
+  "qa": 36.6,
+  "reaches_model": 19.8,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   20.2,
+   19.9,
+   19.9
+  ],
+  "right_lang": {
+   "fr": 94.3,
+   "en": 70.7
+  },
+  "inventions": {
+   "n": 825,
+   "seeds": 1,
+   "pct": 34.3,
+   "douteux_pct": 5.5,
+   "fr_pct": 47.0,
+   "en_pct": 21.6,
+   "erreur": 1
+  },
+  "vs_r1": {
+   "quality": {
+    "n_cases": 654,
+    "a": 20.02,
+    "b": 49.58,
+    "diff": -29.56,
+    "ci95": [
+     -32.36,
+     -26.71
+    ],
+    "sd_case_diff": 36.6,
+    "discordant_cases": 573,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 4.01
+    }
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 19.83,
+    "b": 46.22,
+    "diff": -26.39,
+    "ci95": [
+     -30.01,
+     -22.58
+    ],
+    "sd_case_diff": 38.66,
+    "discordant_cases": 347,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 4.24
+    }
+   },
+   "inventions": {
+    "n_cases": 413,
+    "a": 34.26,
+    "b": 29.7,
+    "diff": 4.56,
+    "ci95": [
+     -0.2,
+     9.44
+    ],
+    "sd_case_diff": 50.03,
+    "discordant_cases": 294,
+    "sign_test_p": 0.2678,
+    "mde": {
+     "n": 5.48
+    }
+   }
+  }
+ },
+ {
+  "name": "qwen3.5-2b",
+  "label": "Qwen3.5 2B",
+  "kind": "brut",
+  "profile": "gen",
+  "size_mb": 1280.8,
+  "sha256": "aaf42c8b",
+  "i5_p90": 13.3,
+  "i5_src": "bench/matrix/results/i5-7200u-cpu-qwen3.5-2b.json",
+  "split": "test",
+  "quality": 53.0,
+  "fr": 49.6,
+  "en": 56.5,
+  "summary": 50.8,
+  "qa": 71.5,
+  "reaches_model": 50.9,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   52.9,
+   53.5,
+   52.6
+  ],
+  "right_lang": {
+   "fr": 82.3,
+   "en": 87.1
+  },
+  "inventions": {
+   "n": 821,
+   "seeds": 1,
+   "pct": 42.8,
+   "douteux_pct": 14.4,
+   "fr_pct": 44.5,
+   "en_pct": 41.0,
+   "erreur": 5
+  },
+  "vs_r1": {
+   "quality": {
+    "n_cases": 654,
+    "a": 53.01,
+    "b": 49.58,
+    "diff": 3.42,
+    "ci95": [
+     0.74,
+     6.06
+    ],
+    "sd_case_diff": 34.58,
+    "discordant_cases": 554,
+    "sign_test_p": 0.2513,
+    "mde": {
+     "n": 3.79
+    }
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 50.92,
+    "b": 46.22,
+    "diff": 4.69,
+    "ci95": [
+     1.13,
+     8.39
+    ],
+    "sd_case_diff": 37.55,
+    "discordant_cases": 351,
+    "sign_test_p": 0.0875,
+    "mde": {
+     "n": 4.11
+    }
+   },
+   "inventions": {
+    "n_cases": 412,
+    "a": 42.96,
+    "b": 29.77,
+    "diff": 13.19,
+    "ci95": [
+     8.98,
+     17.44
+    ],
+    "sd_case_diff": 44.36,
+    "discordant_cases": 272,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 4.86
+    }
+   }
+  }
+ },
+ {
+  "name": "gemma4-e2b",
+  "label": "Gemma 4 E2B QAT q4_0",
+  "kind": "brut",
+  "profile": "gen",
+  "size_mb": 3349.5,
+  "sha256": "fa401b55",
+  "i5_p90": 27.3,
+  "i5_src": "mesuré par G2 : résumés dev v3 au prompt générique, bench/matrix/results/gemma/g2/",
+  "split": "test",
+  "quality": 60.7,
+  "fr": 60.7,
+  "en": 60.7,
+  "summary": 57.6,
+  "qa": 87.0,
+  "reaches_model": 58.8,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   60.4,
+   60.8,
+   61.0
+  ],
+  "right_lang": {
+   "fr": 92.5,
+   "en": 82.9
+  },
+  "inventions": {
+   "n": 2477,
+   "seeds": 3,
+   "pct": 20.0,
+   "douteux_pct": 8.4,
+   "fr_pct": 18.4,
+   "en_pct": 21.6,
+   "erreur": 1
+  },
+  "vs_r1": {
+   "quality": {
+    "n_cases": 654,
+    "a": 60.73,
+    "b": 49.58,
+    "diff": 11.15,
+    "ci95": [
+     8.32,
+     13.94
+    ],
+    "sd_case_diff": 35.93,
+    "discordant_cases": 501,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 3.94
+    }
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 58.83,
+    "b": 46.22,
+    "diff": 12.61,
+    "ci95": [
+     8.82,
+     16.41
+    ],
+    "sd_case_diff": 39.78,
+    "discordant_cases": 325,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 4.36
+    }
+   },
+   "inventions": {
+    "n_cases": 413,
+    "a": 20.02,
+    "b": 29.7,
+    "diff": -9.69,
+    "ci95": [
+     -13.56,
+     -5.61
+    ],
+    "sd_case_diff": 40.91,
+    "discordant_cases": 267,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 4.48
+    }
+   }
+  }
+ },
+ {
+  "name": "qwen3.5-4b",
+  "label": "Qwen3.5 4B",
+  "kind": "brut",
+  "profile": "gen",
+  "size_mb": 2740.9,
+  "sha256": "00fe7986",
+  "i5_p90": null,
+  "i5_src": "non mesuré",
+  "split": "test",
+  "quality": 56.7,
+  "fr": 56.0,
+  "en": 57.4,
+  "summary": 54.3,
+  "qa": 76.6,
+  "reaches_model": 54.9,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   55.9,
+   57.8,
+   56.3
+  ],
+  "right_lang": {
+   "fr": 96.8,
+   "en": 84.4
+  },
+  "inventions": {
+   "n": 826,
+   "seeds": 1,
+   "pct": 24.5,
+   "douteux_pct": 9.3,
+   "fr_pct": 21.3,
+   "en_pct": 27.6,
+   "erreur": 0
+  },
+  "vs_r1": {
+   "quality": {
+    "n_cases": 654,
+    "a": 56.68,
+    "b": 49.58,
+    "diff": 7.09,
+    "ci95": [
+     4.23,
+     10.01
+    ],
+    "sd_case_diff": 37.42,
+    "discordant_cases": 506,
+    "sign_test_p": 0.0002,
+    "mde": {
+     "n": 4.1
+    }
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 54.94,
+    "b": 46.22,
+    "diff": 8.72,
+    "ci95": [
+     4.76,
+     12.69
+    ],
+    "sd_case_diff": 40.86,
+    "discordant_cases": 327,
+    "sign_test_p": 0.0002,
+    "mde": {
+     "n": 4.48
+    }
+   },
+   "inventions": {
+    "n_cases": 413,
+    "a": 24.46,
+    "b": 29.7,
+    "diff": -5.25,
+    "ci95": [
+     -9.48,
+     -1.01
+    ],
+    "sd_case_diff": 43.44,
+    "discordant_cases": 248,
+    "sign_test_p": 0.0007,
+    "mde": {
+     "n": 4.76
+    }
+   }
+  }
+ },
+ {
+  "name": "qwen3.5-9b",
+  "label": "Qwen3.5 9B (enseignant)",
+  "kind": "brut",
+  "profile": "gen",
+  "size_mb": 5680.5,
+  "sha256": "03b74727",
+  "i5_p90": null,
+  "i5_src": "non mesuré",
+  "split": "test",
+  "quality": 65.6,
+  "fr": 65.1,
+  "en": 66.1,
+  "summary": 62.7,
+  "qa": 90.0,
+  "reaches_model": 65.3,
+  "seeds": 3,
+  "missing": 0,
+  "quality_by_seed": [
+   65.5,
+   65.6,
+   65.8
+  ],
+  "right_lang": {
+   "fr": 94.1,
+   "en": 85.8
+  },
+  "inventions": {
+   "n": 823,
+   "seeds": 1,
+   "pct": 23.7,
+   "douteux_pct": 11.2,
+   "fr_pct": 22.9,
+   "en_pct": 24.5,
+   "erreur": 3
+  },
+  "vs_r1": {
+   "quality": {
+    "n_cases": 654,
+    "a": 65.61,
+    "b": 49.58,
+    "diff": 16.02,
+    "ci95": [
+     13.27,
+     18.76
+    ],
+    "sd_case_diff": 36.05,
+    "discordant_cases": 493,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 3.95
+    }
+   },
+   "reaches_model": {
+    "n_cases": 413,
+    "a": 65.26,
+    "b": 46.22,
+    "diff": 19.04,
+    "ci95": [
+     15.15,
+     22.83
+    ],
+    "sd_case_diff": 39.36,
+    "discordant_cases": 323,
+    "sign_test_p": 0.0,
+    "mde": {
+     "n": 4.31
+    }
+   },
+   "inventions": {
+    "n_cases": 413,
+    "a": 23.61,
+    "b": 29.7,
+    "diff": -6.09,
+    "ci95": [
+     -10.57,
+     -1.45
+    ],
+    "sd_case_diff": 47.15,
+    "discordant_cases": 262,
+    "sign_test_p": 0.0003,
+    "mde": {
+     "n": 5.17
+    }
+   }
+  }
+ }
+]

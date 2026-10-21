@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/tutozz/steph/security/advisories/new
+    about: Do not file a public issue for a security report — see SECURITY.md.
