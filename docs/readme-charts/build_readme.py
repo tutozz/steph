@@ -182,7 +182,7 @@ def banner(img: Img) -> str:
 
 
 def problem(img: Img) -> str:
-    n = shown_lines("fx29")
+    n = shown_lines("fx24")
     bars = "".join(f'<i style="width:{w}%"></i>' for w in
                    [(37 * k * k + 11 * k) % 45 + 50 for k in range(n)])
     return f"""
@@ -191,12 +191,12 @@ def problem(img: Img) -> str:
 <div class="pb">
   <div>
     <div class="label">{img.t(f"Lecteur d'écran · {n} lignes", f"Screen reader · {n} lines")}</div>
-    <div class="term wall"><div class="cmd">lspci</div><div class="rows35">{bars}</div></div>
+    <div class="term wall"><div class="cmd">sudo apt upgrade -y</div><div class="rows35">{bars}</div></div>
   </div>
   {ARROW}
   <div>
     <div class="label">{img.t("steph · une phrase", "steph · one sentence")}</div>
-    <div class="say one">{who(img)}{img.said("fx29", 23 if img.lang == "fr" else 21)}</div>
+    <div class="say one">{who(img)}{img.said("fx24", 40)}</div>
   </div>
 </div>
 <style>

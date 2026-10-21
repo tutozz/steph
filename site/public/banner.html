@@ -64,10 +64,10 @@
 </div>
 <script>
 const T = {
-  fr: { tag: "Terminal qui parle", screen: "À l'écran", lines: "lspci · 35 lignes", ear: "À l'oreille",
-        said: "« Le système affiche 35 lignes d'informations PCI, incluant un contrôleur Ethernet Realtek, un contrôleur graphique NVIDIA et plusieurs contrôleurs AMD. »" },
-  en: { tag: "Speaking terminal", screen: "On screen", lines: "lspci · 35 lines", ear: "In your ear",
-        said: "“The system shows 35 lines of PCI information, including a Realtek Ethernet controller, an NVIDIA graphics controller and several AMD controllers.”" },
+  fr: { tag: "Terminal qui parle", screen: "À l'écran", lines: "sudo apt upgrade -y · 19 lignes", ear: "À l'oreille",
+        said: "« 12 paquets mis à jour. »" },
+  en: { tag: "Speaking terminal", screen: "On screen", lines: "sudo apt upgrade -y · 19 lines", ear: "In your ear",
+        said: "“12 packages upgraded.”" },
 };
 const lang = new URLSearchParams(location.search).get("lang") === "en" ? "en" : "fr";
 document.documentElement.lang = lang;

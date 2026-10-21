@@ -477,7 +477,7 @@ def test_file_errors_never_invent_a_line(cmd, expected):
     ("ls -la /etc | head -40", "37 éléments affichés : abrt, adjtime, aliases."),
     ("docker ps", "9 conteneurs, 8 actifs ; shopapp_vault redémarre en boucle."),
     ("dnf check-update --cacheonly 2>&1 | tail -30",
-     "29 éléments affichés : xen-licenses, xfsprogs, xorg-x11-drv-nvidia."),
+     "19 éléments affichés : xen-licenses, xfsprogs, xorg-x11-drv-nvidia."),
 ])
 def test_system_state_from_fixtures(cmd, expected):
     assert resolve(*fixture_case(cmd)) == expected
@@ -1147,3 +1147,37 @@ def test_make_print_directory_flag_accepted():
 def test_configure_failure_cut_inside_parentheses_drops_the_open_parenthesis():
     out = "configure: error: libfoo is required (e.g. from the libfoo-dev package)\nSee 'config.log' for more details"
     assert resolve("./configure", 1, out, "en") == "Failed. configure: libfoo is required."
+
+
+# ---------------------------------------------------------------- Z15 : un compte juste par listing
+DNF_CMD = "dnf check-update --cacheonly 2>&1 | tail -30"
+
+
+@pytest.mark.parametrize("lang, expected", [
+    ("fr", "19 éléments affichés : xen-licenses, xfsprogs, xorg-x11-drv-nvidia."),
+    ("en", "19 items shown: xen-licenses, xfsprogs, xorg-x11-drv-nvidia."),
+])
+def test_dnf_count_skips_headers_obsoleted_rows_and_repeated_packages(lang, expected):
+    """Faux si « Obsoleting packages » ou une ligne indentée compte comme paquet, ou si un paquet de deux dépôts compte deux fois."""
+    cmd, code, out = fixture_case(DNF_CMD)
+    assert resolve(cmd, code, out, lang) == expected
+
+
+def test_ls_total_line_and_dot_entries_are_not_counted():
+    """Faux si « total N » ou « . » et « .. » comptent comme éléments."""
+    out = "total 12\ndrwxr-xr-x 2 u u 4096 Jan 1 10:00 .\ndrwxr-xr-x 9 u u 4096 Jan 1 10:00 ..\n" + "".join(
+        f"-rw-r--r-- 1 u u 10 Jan 1 10:00 f{i}\n" for i in range(5))
+    assert resolve("ls -la | head -20", 0, out, "fr") == "5 éléments affichés : f0, f1, f2."
+    assert resolve("ls -la | head -20", 0, out, "en") == "5 items shown: f0, f1, f2."
+
+
+@pytest.mark.parametrize("cmd, expected", [
+    ("ls -la /etc | head -40", "37 éléments affichés : abrt, adjtime, aliases."),
+    ("find /usr/share/doc -maxdepth 1 -name 'py*' | head -20",
+     "20 éléments affichés : python-systemd, python3-argcomplete, python3-attrs."),
+    ("sort /etc/passwd | cut -d: -f1 | head -30", "30 éléments affichés : abrt, adm, akmods."),
+])
+def test_truncated_listing_phrase_is_single_and_not_doubled(cmd, expected):
+    """Faux si la phrase répète un second compte, un nom de la liste ou un en-tête."""
+    said = resolve(*fixture_case(cmd))
+    assert said == expected and said.count("éléments") == 1

@@ -22,7 +22,7 @@ Images : python3 docs/readme-charts/build_readme.py (sections) et build.py (grap
 <p align="center"><a href="README.md">English</a> · <strong>Français</strong></p>
 
 <p align="center">
-  <img src="assets/demo-fr.gif" alt="Démo : dans un terminal, lspci affiche 35 lignes. steph dit en une phrase : GPU : NVIDIA Corporation GA106 [GeForce RTX 3060 Lite Hash Rate], réseau : Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, chipset : Advanced Micro Devices, Inc. [AMD] Starship/Matisse Root Complex, USB : 2, autres périphériques : 14. Puis la question q Quelle version de requests a été installée ? reçoit la réponse requests-2.32.3." width="800"><br>
+  <img src="assets/demo-fr.gif" alt="Démo : dans un terminal, sudo apt upgrade -y affiche 19 lignes. steph dit en une phrase : 12 paquets mis à jour. Puis npm run build échoue : steph dit Échec. Header.tsx ligne 42 : Property titel does not exist on type Props. Did you mean title ? Puis la question q Quelle version de requests a été installée ? reçoit la réponse requests-2.32.3." width="800"><br>
   <sub>Phrases réelles du petit modèle livré. <a href="assets/demo-fr.mp4">Version avec le son (mp4)</a>, voix Piper fr_FR-siwis-medium.</sub>
 </p>
 
@@ -30,8 +30,8 @@ Images : python3 docs/readme-charts/build_readme.py (sections) et build.py (grap
 
 **S**hell **T**raduit **E**n **P**arole **H**umaine.
 
-> Ton build échoue. Un lecteur d'écran te lit 40 lignes de trace, une par une.
-> steph dit : *« Échec. Header.tsx ligne 42 : Property titel does not exist on type Props. Did you mean title? »*
+> Tu lances `sudo apt upgrade -y`. Un lecteur d'écran te lit 19 lignes, une par une : environ 100 secondes.
+> steph dit : *« 12 paquets mis à jour. »* En 1,5 seconde.
 
 `steph` relance ton shell (zsh ou bash, avec ta config habituelle) et écoute
 tout ce qui passe. Au lieu de lire tout le texte à voix haute, il dit
@@ -43,10 +43,10 @@ tout ce qui passe. Au lieu de lire tout le texte à voix haute, il dit
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/readme/problem.fr.dark.png">
-  <img src="assets/readme/problem.fr.light.png" alt="Un lecteur d'écran lit les 35 lignes de lspci une par une. steph dit une phrase : GPU : NVIDIA Corporation GA106 [GeForce RTX 3060 Lite Hash Rate], réseau : Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, chipset : Advanced Micro Devices, Inc. [AMD] Starship/Matisse Root Complex, USB : 2, autres périphériques : 14." width="100%">
+  <img src="assets/readme/problem.fr.light.png" alt="Un lecteur d'écran lit les 19 lignes de sudo apt upgrade -y une par une. steph dit une phrase : 12 paquets mis à jour." width="100%">
 </picture>
 
-Un lecteur d'écran lit tout, ligne après ligne : les 35 lignes de `lspci`, la
+Un lecteur d'écran lit tout, ligne après ligne : les 19 lignes de `sudo apt upgrade -y`, la
 trace complète d'un build raté, chaque ligne d'une mise à jour. steph garde ce
 qui compte et le dit en une phrase. La phrase de l'image est celle que steph dit
 pour cette sortie : une règle écrite en code la construit, sans appel au modèle

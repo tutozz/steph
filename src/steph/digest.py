@@ -206,6 +206,7 @@ _LIST_PROGRAMS = {"ls", "find", "sort", "cut", "head", "tail", "uniq", "du", "gr
 _LONG_LISTING = re.compile(r"^[-dlbcps][-rwxsStT]{9}[.+@]?\s")
 _SIZE = re.compile(r"^([\d.,]+)([KMGTP]?)i?B?$")
 _ARCH = re.compile(r"\.(x86_64|noarch|i686|aarch64|armv7hl)$")
+_DNF_ROW = re.compile(r"\S+\.\w+\s+\S+\s+\S+\s*$")
 _TRUNCATING_PIPE = re.compile(r"\|\s*(?:sudo\s+)?(?:head|tail)\b")
 _DOCKER_STATUS = re.compile(r"\s(Up|Restarting|Exited|Created|Paused|Dead)\b")
 _DOCKER_STATUS_VERB = {"Restarting": "digest.docker.restarting", "Exited": "digest.docker.exited",
@@ -265,7 +266,12 @@ def _list(cmd: str, output: str, max_chars: int, language: str = "fr") -> str | 
         if l.startswith("total ") and not items:
             continue
         if first in ("dnf", "yum"):
+            # seules les lignes « nom.arch version dépôt » sont des paquets : ni en-tête, ni ancienne version indentée
+            if not _DNF_ROW.match(l):
+                continue
             name = _ARCH.sub("", l.split()[0])
+            if name in items:
+                continue
         else:
             name = l.split()[-1] if _LONG_LISTING.match(l) else l.strip()
         if name in (".", ".."):

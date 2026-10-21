@@ -22,7 +22,7 @@ Images: python3 docs/readme-charts/build_readme.py (section images) and build.py
 <p align="center"><strong>English</strong> · <a href="README.fr.md">Français</a></p>
 
 <p align="center">
-  <img src="assets/demo-en.gif" alt="Demo: in a terminal, lspci prints 35 lines. steph says in one sentence: GPU: NVIDIA Corporation GA106 [GeForce RTX 3060 Lite Hash Rate], network: Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, chipset: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Root Complex, USB: 2, other devices: 14. Then the question q Which version of requests was installed? gets the answer requests-2.32.3." width="800"><br>
+  <img src="assets/demo-en.gif" alt="Demo: in a terminal, sudo apt upgrade -y prints 19 lines. steph says in one sentence: 12 packages upgraded. Then npm run build fails: steph says Failed. Header.tsx line 42: Property titel does not exist on type Props. Did you mean title? Then the question q Which version of requests was installed? gets the answer requests-2.32.3." width="800"><br>
   <sub>Real phrases from the delivered small model. <a href="assets/demo-en.mp4">Version with sound (mp4)</a>, English voice Piper en_US-lessac-medium.</sub>
 </p>
 
@@ -30,8 +30,8 @@ Images: python3 docs/readme-charts/build_readme.py (section images) and build.py
 
 **S**peaking **T**erminal, **E**verything **P**rivately **H**osted.
 
-> Your build fails. A screen reader reads you 40 lines of stack trace, one by one.
-> steph says: *"Failed. Header.tsx line 42: Property titel does not exist on type Props. Did you mean title?"*
+> You run `sudo apt upgrade -y`. A screen reader reads you 19 lines, one by one: about 100 seconds.
+> steph says: *"12 packages upgraded."* In 1.5 seconds.
 
 `steph` starts your shell (zsh or bash, with your usual configuration) and
 listens to everything that goes through it. Instead of reading every line
@@ -48,10 +48,10 @@ Hear the voice: [steph.lsmdx.com](https://steph.lsmdx.com/en/).
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/readme/problem.en.dark.png">
-  <img src="assets/readme/problem.en.light.png" alt="A screen reader reads the 35 lines of lspci one by one. steph says one sentence: GPU: NVIDIA Corporation GA106 [GeForce RTX 3060 Lite Hash Rate], network: Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, chipset: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Root Complex, USB: 2, other devices: 14." width="100%">
+  <img src="assets/readme/problem.en.light.png" alt="A screen reader reads the 19 lines of sudo apt upgrade -y one by one. steph says one sentence: 12 packages upgraded." width="100%">
 </picture>
 
-A screen reader reads everything, line by line: the 35 lines of `lspci`, the
+A screen reader reads everything, line by line: the 19 lines of `sudo apt upgrade -y`, the
 whole stack trace of a failed build, every line of an update. steph keeps what
 matters and says it in one sentence. The sentence in the image is what steph says
 for this output: a rule written in code builds it, without calling the model

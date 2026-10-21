@@ -58,7 +58,7 @@ document.querySelectorAll("[data-copy]").forEach((button) => {
   });
 });
 
-// ---------- sortie lspci dépliable ----------
+// ---------- sortie dépliable ----------
 
 document.querySelectorAll("[data-expand]").forEach((button) => {
   const target = document.getElementById(button.dataset.expand);

@@ -9,7 +9,7 @@
 <link rel="alternate" hreflang="fr" href="https://steph.lsmdx.com/">
 <link rel="alternate" hreflang="en" href="https://steph.lsmdx.com/en/">
 <meta property="og:title" content="steph, the speaking terminal">
-<meta property="og:description" content="35 lines on screen, one sentence in your ear. The model and the voice run on your machine.">
+<meta property="og:description" content="19 lines on screen, one sentence in your ear. The model and the voice run on your machine.">
 <meta property="og:image" content="https://steph.lsmdx.com/og-en.png">
 <meta property="og:image:alt" content="steph. Your terminal, out loud. steph listens to your shell and says what matters in each command, in one sentence. Linux and macOS, 100% local.">
 <meta property="og:url" content="https://steph.lsmdx.com/en/">
@@ -67,55 +67,56 @@
     <div class="duel-col">
       <div class="fringe" data-fringe="20,11" aria-hidden="true"></div>
       <div class="duel-box screen-box">
-        <div class="duel-head"><span class="duel-title">On screen</span><span class="duel-meta"><span aria-hidden="true">$ </span>lspci · 35 lines</span></div>
-        <pre class="output" id="lspci-output" tabindex="0" role="region" aria-label="lspci output, 35 lines">00:00.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Root Complex
-00:00.2 IOMMU: Advanced Micro Devices, Inc. [AMD] Starship/Matisse IOMMU
-00:01.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
-00:01.2 PCI bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse GPP Bridge
-00:02.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
-00:03.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
-00:03.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse GPP Bridge
-00:04.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
-00:05.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
-00:07.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
-00:07.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Internal PCIe GPP Bridge 0 to bus[E:B]
-00:08.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
-00:08.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Internal PCIe GPP Bridge 0 to bus[E:B]
-00:14.0 SMBus: Advanced Micro Devices, Inc. [AMD] FCH SMBus Controller (rev 61)
-00:14.3 ISA bridge: Advanced Micro Devices, Inc. [AMD] FCH LPC Bridge (rev 51)
-00:18.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 0
-00:18.1 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 1
-00:18.2 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 2
-00:18.3 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 3
-00:18.4 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 4
-00:18.5 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 5
-00:18.6 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 6
-00:18.7 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 7
-02:00.0 USB controller: Advanced Micro Devices, Inc. [AMD] 500 Series Chipset USB 3.1 XHCI Controller
-02:00.1 SATA controller: Advanced Micro Devices, Inc. [AMD] 500 Series Chipset SATA Controller
-02:00.2 PCI bridge: Advanced Micro Devices, Inc. [AMD] 500 Series Chipset Switch Upstream Port
-03:09.0 PCI bridge: Advanced Micro Devices, Inc. [AMD] Device 43ea
-2a:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller (rev 15)
-2b:00.0 VGA compatible controller: NVIDIA Corporation GA106 [GeForce RTX 3060 Lite Hash Rate] (rev a1)
-2b:00.1 Audio device: NVIDIA Corporation GA106 High Definition Audio Controller (rev a1)
-2c:00.0 Non-Essential Instrumentation [1300]: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Function
-2d:00.0 Non-Essential Instrumentation [1300]: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Reserved SPP
-2d:00.1 Encryption controller: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Cryptographic Coprocessor PSPCPP
-2d:00.3 USB controller: Advanced Micro Devices, Inc. [AMD] Matisse USB 3.0 Host Controller
-2d:00.4 Audio device: Advanced Micro Devices, Inc. [AMD] Starship/Matisse HD Audio Controller</pre>
-        <button class="btn-outline" type="button" data-expand="lspci-output" aria-expanded="false">Show all 35 lines</button>
+        <div class="duel-head"><span class="duel-title">On screen</span><span class="duel-meta"><span aria-hidden="true">$ </span>sudo apt upgrade -y · 19 lines</span></div>
+        <pre class="output" id="apt-output" tabindex="0" role="region" aria-label="Output of sudo apt upgrade -y, 19 lines">Lecture des listes de paquets... Fait
+Construction de l'arbre des dépendances... Fait
+Lecture des informations d'état... Fait
+Calcul de la mise à jour... Fait
+Les paquets suivants seront mis à jour :
+  curl libcurl4 openssl libssl3 linux-libc-dev tzdata vim vim-common vim-runtime xxd python3.11 libpython3.11
+12 mis à jour, 0 nouvellement installés, 0 à enlever et 0 non mis à jour.
+Il est nécessaire de prendre 24,3 Mo dans les archives.
+Après cette opération, 112 ko d'espace disque supplémentaires seront utilisés.
+Réception de :1 http://deb.debian.org/debian bookworm/main amd64 curl amd64 7.88.1-10+deb12u8 [315 kB]
+Réception de :2 http://deb.debian.org/debian bookworm/main amd64 libcurl4 amd64 7.88.1-10+deb12u8 [390 kB]
+24,3 Mo réceptionnés en 6s (4 012 ko/s)
+(Lecture de la base de données... 187432 fichiers et répertoires déjà installés.)
+Préparation du dépaquetage de .../curl_7.88.1-10+deb12u8_amd64.deb ...
+Dépaquetage de curl (7.88.1-10+deb12u8) sur (7.88.1-10+deb12u7) ...
+Paramétrage de curl (7.88.1-10+deb12u8) ...
+Paramétrage de openssl (3.0.15-1~deb12u1) ...
+Traitement des actions différées (« triggers ») pour man-db (2.11.2-2) ...
+Traitement des actions différées (« triggers ») pour libc-bin (2.36-9+deb12u9) ...</pre>
+        <button class="btn-outline" type="button" data-expand="apt-output" aria-expanded="false">Show all 19 lines</button>
+        <div class="duel-head step-head"><span class="duel-sub">Then, a failing build</span><span class="duel-meta"><span aria-hidden="true">$ </span>npm run build · 9 lines</span></div>
+        <pre class="output short" id="npm-output" tabindex="0" role="region" aria-label="Output of npm run build, 9 lines">&gt; app@1.0.0 build
+&gt; tsc &amp;&amp; vite build
+
+src/components/Header.tsx:42:17 - error TS2339: Property 'titel' does not exist on type 'Props'. Did you mean 'title'?
+
+42     &lt;h1&gt;{props.titel}&lt;/h1&gt;
+                   ~~~~~
+
+Found 1 error in src/components/Header.tsx:42
+</pre>
       </div>
       <div class="fringe" data-fringe="20,29" aria-hidden="true"></div>
     </div>
     <div class="duel-col ear">
       <div class="fringe fringe-lemon" data-fringe="20,5" aria-hidden="true"></div>
       <div class="duel-box ear-box">
-        <div class="duel-head"><span class="duel-title">In your ear</span><span class="duel-meta">24.8 s</span></div>
-        <blockquote class="said-quote">“GPU: NVIDIA Corporation GA106 [GeForce RTX 3060 Lite Hash Rate], network: Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, chipset: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Root Complex, USB: 2, other devices: 14.” (translated from French)</blockquote>
+        <div class="duel-head"><span class="duel-title">In your ear</span><span class="duel-meta">1.5 s</span></div>
+        <blockquote class="said-quote">“12 packages upgraded.” (translated from French)</blockquote>
+        <p class="shock"><strong>99.4 s</strong> reading the 19 lines one by one. <strong>1.5 s</strong> with steph.</p>
+        <div class="ear-follow">
+          <p class="step-label">Then a failing build: steph finds the error.</p>
+          <blockquote class="said-quote small">“Failed. Header.tsx line 42: Property titel does not exist on type Props. Did you mean title?” (translated from French)</blockquote>
+          <span class="duel-meta">7.0 s, against 20.4 s line by line</span>
+        </div>
       </div>
       <div class="fringe fringe-lemon" data-fringe="20,44" aria-hidden="true"></div>
     </div>
-    <figcaption id="duel-caption" class="duel-caption">35 lines on screen. <span class="accent">One sentence in your ear.</span></figcaption>
+    <figcaption id="duel-caption" class="duel-caption">19 lines on screen. <span class="accent">One sentence in your ear.</span></figcaption>
   </figure>
 </section>
 
@@ -188,28 +189,28 @@
       </div>
       <div class="chart-body" aria-hidden="true">
         <div class="chart-group">
-          <div class="chart-cat"><code>lspci</code><span>35 lines</span></div>
-          <div class="chart-rows"><span>Line by line</span><span class="bar-val"><span class="bar-fill" style="width:71.4%"></span><span class="bar-num">139.2 s</span></span><span>steph's sentence</span><span class="bar-val win"><span class="bar-fill" style="width:12.7%"></span><span class="bar-num">24.8 s</span></span></div>
+          <div class="chart-cat"><code>apt upgrade</code><span>19 lines</span></div>
+          <div class="chart-rows"><span>Line by line</span><span class="bar-val"><span class="bar-fill" style="width:29.2%"></span><span class="bar-num">99.4 s</span></span><span>steph's sentence</span><span class="bar-val win"><span class="bar-fill" style="width:0.8%"></span><span class="bar-num">1.5 s</span></span></div>
         </div>
         <div class="chart-group">
           <div class="chart-cat"><code>npm run build, failing</code><span>9 lines</span></div>
-          <div class="chart-rows"><span>Line by line</span><span class="bar-val"><span class="bar-fill" style="width:10.8%"></span><span class="bar-num">21.0 s</span></span><span>steph's sentence</span><span class="bar-val win"><span class="bar-fill" style="width:3.4%"></span><span class="bar-num">6.6 s</span></span></div>
+          <div class="chart-rows"><span>Line by line</span><span class="bar-val"><span class="bar-fill" style="width:6.0%"></span><span class="bar-num">20.4 s</span></span><span>steph's sentence</span><span class="bar-val win"><span class="bar-fill" style="width:2.1%"></span><span class="bar-num">7.0 s</span></span></div>
         </div>
         <div class="chart-group">
-          <div class="chart-cat"><code>apt upgrade</code><span>19 lines</span></div>
-          <div class="chart-rows"><span>Line by line</span><span class="bar-val"><span class="bar-fill" style="width:51.1%"></span><span class="bar-num">99.6 s</span></span><span>steph's sentence</span><span class="bar-val win"><span class="bar-fill" style="width:0.8%"></span><span class="bar-num">1.6 s</span></span></div>
+          <div class="chart-cat"><code>lspci</code><span>35 lines</span></div>
+          <div class="chart-rows"><span>Line by line</span><span class="bar-val"><span class="bar-fill" style="width:95.2%"></span><span class="bar-num">323.6 s</span></span><span>steph's sentence</span><span class="bar-val win"><span class="bar-fill" style="width:7.4%"></span><span class="bar-num">25.0 s</span></span></div>
         </div>
       </div>
-      <p class="chart-note">Same voice, same rate. Duration of the audio generated by the Piper French voice, median of 3 syntheses. Line by line: every line of the output given to the model (1,500 characters at most), so a full reading lasts at least that long. steph's sentence: what steph says in production, on the French output; rules written in code summarize these three outputs, without the model.</p>
+      <p class="chart-note">Same voice, same rate. Duration of the audio generated by the Piper French voice, median of 3 syntheses. Line by line: every line of the complete output synthesized separately, durations added (empty lines excluded). steph's sentence: what steph says in production, on the French output; rules written in code summarize these three outputs, without the model.</p>
       <details class="values">
         <summary>Show the values</summary>
         <div class="table-wrap" tabindex="0" role="region" aria-label="Chart values, listening times">
           <table class="data">
             <thead><tr><th scope="col">Command</th><th scope="col">Line by line (s)</th><th scope="col">steph's sentence (s)</th></tr></thead>
             <tbody>
-              <tr><th scope="row"><code>lspci</code></th><td class="num">139.2</td><td class="num">24.8</td></tr>
-              <tr><th scope="row"><code>npm run build, failing</code></th><td class="num">21.0</td><td class="num">6.6</td></tr>
-              <tr><th scope="row"><code>apt upgrade</code></th><td class="num">99.6</td><td class="num">1.6</td></tr>
+              <tr><th scope="row"><code>apt upgrade</code></th><td class="num">99.4</td><td class="num">1.5</td></tr>
+              <tr><th scope="row"><code>npm run build, failing</code></th><td class="num">20.4</td><td class="num">7.0</td></tr>
+              <tr><th scope="row"><code>lspci</code></th><td class="num">323.6</td><td class="num">25.0</td></tr>
             </tbody>
           </table>
         </div>
@@ -419,7 +420,7 @@ window.STEPH_L10N = {
   copy: "Copy", copied: "Copied",
   copiedMsg: "Command copied.",
   copyFail: "Copy failed, select the text instead.",
-  expand: "Show all 35 lines", expanded: "Collapse the output"
+  expand: "Show all 19 lines", expanded: "Collapse the output"
 };
 </script>
 <script src="/main.js" defer></script>

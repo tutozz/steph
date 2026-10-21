@@ -3,7 +3,7 @@
     uv run --with playwright python docs/readme-charts/render_demo.py [fr] [en]
 
 Texts come from docs/readme-charts/answers.small.json (field `said`, production phrases) and the
-lspci fixture of bench/extra_fixtures.json. Voice: Piper at steph's default speech rate (1.25,
+apt upgrade (fx24) and failed npm build (fx27) raw fixtures of bench/fixtures.json (indexes 24 and 27). Voice: Piper at steph's default speech rate (1.25,
 length_scale 0.8), no post-processing of the audio. FR uses the installed fr_FR-siwis-medium;
 EN has no steph voice, so en_US-lessac-medium is downloaded to a scratch folder.
 Frames: Chrome driven by Playwright (system Chrome, no browser download), page in the steph charter.
@@ -36,19 +36,28 @@ VOICES = {
 }
 FONTS_URL = json.loads((ROOT / "docs/design/tokens.json").read_text())["font"]["google_fonts_url"]
 ANSWERS = {r["fixture"]: r for r in json.loads((ROOT / "docs/readme-charts/answers.small.json").read_text())["rows"]}
-LSPCI = json.loads((ROOT / "bench/extra_fixtures.json").read_text())[5]
-assert LSPCI["cmd"] == "lspci"
+RAW = json.loads((ROOT / "bench/fixtures.json").read_text()) + json.loads((ROOT / "bench/extra_fixtures.json").read_text())
+INDEX = {"fx24": 24, "fx27": 27}
+
+
+def fixture(fx: str) -> tuple[str, list[str]]:
+    case = RAW[INDEX[fx]]
+    return case["cmd"], case["output"].splitlines()
+
+
+STEPS = ("fx24", "fx27")
 
 COPY = {
     "fr": {
-        "summary": "fx29_fr_current", "qa": "qa_pip", "question": "Quelle version de requests a été installée ?",
+        "said": {"fx24": ANSWERS["fx24"]["said"], "fx27": ANSWERS["fx27"]["said"]}, "qa": "qa_pip", "question": "Quelle version de requests a été installée ?",
         "more": "… {n} lignes de plus", "session": "session :", "lang_attr": "fr",
-        "alt": "Démo : steph lit lspci à voix haute, puis répond à une question sur la session.",
+        "alt": "Démo : steph dit une phrase pour apt upgrade, puis pour un build en échec, puis répond à une question sur la session.",
     },
     "en": {
-        "summary": "fx29_en", "qa": "qa_pip_en", "question": "Which version of requests was installed?",
+        "said": {"fx24": "12 packages upgraded.",
+                 "fx27": "Failed. Header.tsx line 42: Property titel does not exist on type Props. Did you mean title?"}, "qa": "qa_pip_en", "question": "Which version of requests was installed?",
         "more": "… {n} more lines", "session": "session:", "lang_attr": "en",
-        "alt": "Demo: steph reads lspci aloud, then answers a question about the session.",
+        "alt": "Demo: steph says one sentence for apt upgrade, then for a failed build, then answers a question about the session.",
     },
 }
 
@@ -162,17 +171,18 @@ def build_scenes(lang: str, voice) -> tuple[list[tuple[str, float]], bytes, int]
             frames.append((term + steph_html(shown, i), len(audio) / 2 / rate))
             pcm.extend(audio)
 
-    lines = LSPCI["output"].splitlines()
-    shown, extra = lines[:3], len(lines) - 3
-    add(term_html(lang, "", [], 0, True), steph_html("", None), 0.9)
-    cmd = "lspci"
-    for n in range(1, len(cmd) + 1):
-        add(term_html(lang, cmd[:n], [], 0, True), steph_html("", None), 0.14)
-    add(term_html(lang, cmd, [], 0, False), steph_html("", None), 0.4)
-    t1 = term_html(lang, cmd, shown, extra, False)
-    add(t1, steph_html("", None), 0.7)
-    speak(t1, ANSWERS[c["summary"]]["said"])
-    add(t1, steph_html(ANSWERS[c["summary"]]["said"], -1), 1.6)
+    for fx in STEPS:
+        cmd, lines = fixture(fx)
+        shown, extra = lines[:4], len(lines) - 4  # raw output, blank lines included
+        said = c["said"][fx]
+        add(term_html(lang, "", [], 0, True), steph_html("", None), 0.9 if fx == STEPS[0] else 0.5)
+        for n in range(1, len(cmd) + 1, 2):
+            add(term_html(lang, cmd[:n], [], 0, True), steph_html("", None), 0.1)
+        add(term_html(lang, cmd, [], 0, False), steph_html("", None), 0.4)
+        t1 = term_html(lang, cmd, shown, extra, False)
+        add(t1, steph_html("", None), 0.7)
+        speak(t1, said)
+        add(t1, steph_html(said, -1), 1.6)
 
     session = ", ".join(ANSWERS[c["qa"]]["session"])
     q = "q " + c["question"]
