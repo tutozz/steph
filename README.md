@@ -84,7 +84,7 @@ Everything runs **locally**: the steph-speak model (small, or base on faster mac
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/readme/install.en.dark.png">
-  <img src="assets/readme/install.en.light.png" alt="One line, no admin rights: curl -fsSL https://steph.lsmdx.com/install | sh, then steph. The small model is 223 MB, the base model 2.4 GB. Linux and macOS. With the small model: about 300 MB to download with no GPU, 1.05 GB with NVIDIA, a calculation, not a measurement." width="100%">
+  <img src="assets/readme/install.en.light.png" alt="One line, no admin rights: curl -fsSL https://steph.lsmdx.com/install | sh, then steph. The small model is 223 MB, the base model 2.4 GB. Linux and macOS. Measured on macOS, fresh account: 55 s and about 1 GB on disk with the small model, download cache included." width="100%">
 </picture>
 
 ```sh

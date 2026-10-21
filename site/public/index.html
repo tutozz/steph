@@ -164,8 +164,8 @@
       </div>
       <div class="tile">
         <h3 class="h3-mono">Installation</h3>
-        <p class="tile-figure" style="font-size:clamp(60px,6vw,88px)">≈ 300 Mo</p>
-        <p>Calcul, sans carte graphique : petit modèle, voix et llama.cpp. steph parle avant la fin.</p>
+        <p class="tile-figure" style="font-size:clamp(60px,6vw,88px)">≈ 1 Go</p>
+        <p>Mesuré sur macOS, compte vierge : 55 secondes, cache compris. steph parle avant la fin.</p>
       </div>
       <div class="tile lemon">
         <h3 class="h3-mono">Local</h3>
@@ -177,7 +177,7 @@
       <summary>Comment ces chiffres sont mesurés</summary>
       <ul class="detail-list">
         <li><strong>Premier son :</strong> neuf fois sur dix, steph commence à parler moins de 0,19 seconde après la fin d'une commande. Portable Intel Core i5-7200U, sans carte graphique, 33 sorties réelles rejouées. Mesuré avec une version antérieure de steph-speak et non remesuré : 32 de ces 33 phrases viennent des règles écrites en code, sans le modèle.</li>
-        <li><strong>Installation :</strong> le petit modèle pèse 223 Mo, le modèle base 2,43 Go, auxquels s'ajoutent la voix (63 Mo) et llama.cpp. Avec le petit modèle et sans carte graphique, comptez environ 300 Mo (calcul, pas une mesure).</li>
+        <li><strong>Installation :</strong> mesurée sur macOS dans un compte vierge : 55 secondes et environ 1 Go sur le disque avec le petit modèle (modèle 212 Mo, voix 60 Mo, Python, code et dépendances 450 Mo, cache de téléchargement 260 Mo, supprimable) ; llama.cpp de Homebrew non compté. Le modèle base ajoute 2,43 Go.</li>
       </ul>
     </details>
 
@@ -376,7 +376,7 @@
       <button class="copy" type="button" data-copy="install"><span class="lbl">Copier</span><span class="sr-only"> les commandes d'installation</span></button>
     </div>
     <ul class="inline-list">
-      <li>Sans droits administrateur. Le petit modèle pèse 223 Mo ; environ 300 Mo en tout sans carte graphique.</li>
+      <li>Sans droits administrateur. Environ 1 Go sur le disque avec le petit modèle (mesuré sur macOS).</li>
       <li>Prérequis : <code>curl</code>, <code>git</code>, <code>tar</code>.</li>
       <li>Désinstaller : <code class="accent">steph uninstall</code></li>
     </ul>

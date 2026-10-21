@@ -273,8 +273,8 @@ def install(img: Img) -> str:
 <h1>{img.t("Une ligne.<br><em>Sans droits administrateur.</em>", "One line.<br><em>No admin rights.</em>")}</h1>
 <div class="inst"><div class="c1">curl -fsSL https://steph.lsmdx.com/install | sh</div><div class="c1">steph</div></div>
 <div class="stats">{cells}</div>
-<p class="foot">{img.t("Avec le petit modèle : environ 300 Mo à télécharger sans GPU, 1,05 Go avec NVIDIA (modèle 223 Mo + voix 63 Mo + llama.cpp) - calcul, pas une mesure.",
-                       "With the small model: about 300 MB to download with no GPU, 1.05 GB with NVIDIA (model 223 MB + voice 63 MB + llama.cpp) - a calculation, not a measurement.")}</p>
+<p class="foot">{img.t("Mesuré sur macOS, compte vierge : 55 s et environ 1 Go sur le disque avec le petit modèle, cache de téléchargement compris.",
+                       "Measured on macOS, fresh account: 55 s and about 1 GB on disk with the small model, download cache included.")}</p>
 <style>
 .inst {{ margin-top: 28px; padding: 20px 26px; background: var(--lemon); color: var(--black); clip-path: var(--notch-card);
   font-family: var(--mono); font-feature-settings: "calt" 0, "liga" 0; font-size: 21px; font-weight: 500; line-height: 1.55; }}

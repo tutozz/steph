@@ -68,7 +68,11 @@ def run(name):
                 try: out.extend(os.read(fd, 65536))
                 except OSError: return
     t0 = time.time()
-    pump(8)  # démarrage shell + modèle
+    # démarrage shell + modèle : attendre l'annonce de steph, pas un délai fixe (runner lent : plus de 8 s)
+    deadline = time.time() + 60
+    while time.time() < deadline and "F6" not in open(LOG).read():
+        pump(0.5)
+    pump(2)
     import glob, subprocess
     for cmd, wait in SCENARIOS[name]:
         if cmd.startswith("KEY:"):

@@ -79,7 +79,7 @@ Tout tourne **en local** : le modèle steph-speak (petit, ou base sur les machin
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/readme/install.fr.dark.png">
-  <img src="assets/readme/install.fr.light.png" alt="Une ligne, sans droits administrateur : curl -fsSL https://steph.lsmdx.com/install | sh, puis steph. Le petit modèle pèse 223 Mo, le modèle base 2,4 Go. Linux et macOS. Avec le petit modèle : environ 300 Mo à télécharger sans GPU, 1,05 Go avec NVIDIA, un calcul, pas une mesure." width="100%">
+  <img src="assets/readme/install.fr.light.png" alt="Une ligne, sans droits administrateur : curl -fsSL https://steph.lsmdx.com/install | sh, puis steph. Le petit modèle pèse 223 Mo, le modèle base 2,4 Go. Linux et macOS. Mesuré sur macOS, compte vierge : 55 s et environ 1 Go sur le disque avec le petit modèle, cache de téléchargement compris." width="100%">
 </picture>
 
 ```sh

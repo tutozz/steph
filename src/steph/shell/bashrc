@@ -22,7 +22,6 @@ __steph_precmd() {
 }
 __steph_ready() {
   trap '__steph_preexec' DEBUG
-  __steph_lock=0
   # Indicateur de prompt (segment citron de la charte, voir style.sh) : posé
   # une seule fois (drapeau : bash 3.2 n'a pas \u pour relire PS1), en tête de
   # la DERNIÈRE ligne de PS1 (pas en tête, si PS1 est déjà multiligne).
@@ -35,6 +34,8 @@ __steph_ready() {
     fi
     __steph_prompt_tagged=1
   fi
+  # Déverrouillage en dernier : chaque instruction ci-dessus déclencherait DEBUG.
+  __steph_lock=0
 }
 if [[ "$(declare -p PROMPT_COMMAND 2>/dev/null)" == "declare -a"* ]]; then
   PROMPT_COMMAND=(__steph_precmd "${PROMPT_COMMAND[@]}" __steph_ready)

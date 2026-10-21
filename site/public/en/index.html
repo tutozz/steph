@@ -164,8 +164,8 @@
       </div>
       <div class="tile">
         <h3 class="h3-mono">Install</h3>
-        <p class="tile-figure" style="font-size:clamp(60px,6vw,88px)">≈ 300 MB</p>
-        <p>A calculation, with no graphics card: small model, voice and llama.cpp. steph speaks before it ends.</p>
+        <p class="tile-figure" style="font-size:clamp(60px,6vw,88px)">≈ 1 GB</p>
+        <p>Measured on macOS, fresh account: 55 seconds, cache included. steph speaks before it ends.</p>
       </div>
       <div class="tile lemon">
         <h3 class="h3-mono">Local</h3>
@@ -177,7 +177,7 @@
       <summary>How these numbers are measured</summary>
       <ul class="detail-list">
         <li><strong>First sound:</strong> nine times out of ten, steph starts speaking less than 0.19 seconds after a command ends. Intel Core i5-7200U laptop, no graphics card, 33 real command outputs replayed. Measured with an earlier version of steph-speak and not re-measured: 32 of these 33 sentences come from rules written in code, without the model.</li>
-        <li><strong>Install:</strong> the small model is 223 MB, the base model 2.43 GB, plus the voice (63 MB) and llama.cpp. With the small model and no graphics card, expect about 300 MB (a calculation, not a measurement).</li>
+        <li><strong>Install:</strong> measured on macOS in a fresh account: 55 seconds and about 1 GB on disk with the small model (model 212 MB, voice 60 MB, Python, code and dependencies 450 MB, download cache 260 MB, removable); llama.cpp from Homebrew not counted. The base model adds 2.43 GB.</li>
       </ul>
     </details>
 
@@ -376,7 +376,7 @@
       <button class="copy" type="button" data-copy="install"><span class="lbl">Copy</span><span class="sr-only"> the install commands</span></button>
     </div>
     <ul class="inline-list">
-      <li>No admin rights. The small model is 223 MB; about 300 MB in total with no graphics card.</li>
+      <li>No admin rights. About 1 GB on disk with the small model (measured on macOS).</li>
       <li>Requirements: <code>curl</code>, <code>git</code>, <code>tar</code>.</li>
       <li>Uninstall: <code class="accent">steph uninstall</code></li>
     </ul>
