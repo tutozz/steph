@@ -11,7 +11,7 @@ authors = [
 maintainers = [
     { name = "Luis Parra", email = "luis@lsmdx.com" }
 ]
-requires-python = ">=3.13"
+requires-python = ">=3.13,<3.15"
 keywords = ["accessibility", "screen-reader", "terminal", "tts", "llm", "blind", "visually-impaired", "llama.cpp", "piper"]
 # pas de classifier « License :: » : PEP 639, la licence est portée par `license`
 classifiers = [

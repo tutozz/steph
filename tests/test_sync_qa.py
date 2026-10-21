@@ -21,8 +21,8 @@ cat > "$CALLS/$n.tar"
 """
 
 SSHPASS_STUB = """#!/bin/bash
-# sshpass -p root ssh -o PubkeyAuthentication=no host cmd
-shift 2; shift; shift 2
+# sshpass -e ssh -o PubkeyAuthentication=no host cmd (mot de passe dans SSHPASS, jamais dans le dépôt)
+shift; shift; shift 2
 exec ssh "$@"
 """
 
@@ -80,3 +80,10 @@ def test_missing_private_name_list_blocks_every_push(tmp_path):
     assert result.returncode != 0
     assert "liste de noms introuvable" in result.stderr
     assert not list(calls.glob("*.cmd"))
+
+
+def test_lab_password_never_written_in_scripts():
+    from pathlib import Path
+    root = Path(__file__).resolve().parents[1] / "bench" / "matrix" / "finetune"
+    for script in ("sync.sh", "train_control.sh"):
+        assert "sshpass -p" not in (root / script).read_text()

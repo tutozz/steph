@@ -14,7 +14,7 @@ HOSTS_FILE=${STEPH_LAB_HOSTS:-$HOME/.config/steph/lab_hosts.sh}
 . "$HOSTS_FILE"
 
 ssh_cmd=(ssh -o ConnectTimeout=10)
-[[ " ${PASSWORD_HOSTS[*]:-} " == *" $HOST "* ]] && ssh_cmd=(sshpass -p root ssh -o ConnectTimeout=10 -o PubkeyAuthentication=no)
+[[ " ${PASSWORD_HOSTS[*]:-} " == *" $HOST "* ]] && ssh_cmd=(sshpass -e ssh -o ConnectTimeout=10 -o PubkeyAuthentication=no)
 
 write_control() {  # payload JSON
   "${ssh_cmd[@]}" "$HOST" "mkdir -p '$DIR' && cat > '$DIR/control.json'" <<< "$1"

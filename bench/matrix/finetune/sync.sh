@@ -10,7 +10,8 @@ set -euo pipefail
 cd "$(dirname "$0")"
 HERE=$PWD
 
-# Real host names stay out of the repo: LABELERS, TRAINERS and PASSWORD_HOSTS come from this file.
+# Real host names stay out of the repo: LABELERS, TRAINERS and PASSWORD_HOSTS come from this file,
+# which also exports SSHPASS (password of the PASSWORD_HOSTS, read by sshpass -e).
 HOSTS_FILE=${STEPH_LAB_HOSTS:-$HOME/.config/steph/lab_hosts.sh}
 [ -f "$HOSTS_FILE" ] || { echo "Fichier d'hôtes introuvable : $HOSTS_FILE" >&2; exit 2; }
 # shellcheck source=/dev/null
@@ -23,9 +24,11 @@ audit() {
 push() {  # destination, files...
   local host=${1%%:*} dir=${1#*:}; shift
   local ssh_cmd=(ssh)
-  [[ " ${PASSWORD_HOSTS[*]:-} " == *" $host "* ]] && ssh_cmd=(sshpass -p root ssh -o PubkeyAuthentication=no)
+  [[ " ${PASSWORD_HOSTS[*]:-} " == *" $host "* ]] && ssh_cmd=(sshpass -e ssh -o PubkeyAuthentication=no)
   # tar over ssh: some lab machines have no rsync
-  COPYFILE_DISABLE=1 tar --no-xattrs --no-mac-metadata -cf - "$@" | "${ssh_cmd[@]}" "$host" "mkdir -p $dir && tar xf - -C $dir"
+  local tar_flags=(--no-xattrs)
+  [ "$(uname)" = Darwin ] && tar_flags+=(--no-mac-metadata)  # option du tar BSD de macOS seulement
+  COPYFILE_DISABLE=1 tar "${tar_flags[@]}" -cf - "$@" | "${ssh_cmd[@]}" "$host" "mkdir -p $dir && tar xf - -C $dir"
   echo "copié vers $host:$dir"
 }
 

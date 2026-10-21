@@ -20,3 +20,11 @@ def test_llama_server_lookup_without_project_dir(monkeypatch, tmp_path):
     monkeypatch.setattr(config, "DATA_DIR", tmp_path)
     monkeypatch.delenv("STEPH_LLAMA_SERVER", raising=False)
     assert config._find_llama_server()  # ne plante pas, retombe sur le PATH
+
+
+def test_python_is_capped_below_versions_without_onnxruntime_wheels():
+    """uv choisit le Python le plus récent : sans plafond, il prend 3.15 et piper-tts ne s'installe pas."""
+    import tomllib
+    from pathlib import Path
+    spec = tomllib.loads((Path(__file__).resolve().parents[1] / "pyproject.toml").read_text())
+    assert "<3.15" in spec["project"]["requires-python"].replace(" ", "")
