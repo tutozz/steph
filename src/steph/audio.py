@@ -23,7 +23,8 @@ def stream_player_cmd(rate: int) -> list[str] | None:
         return ["paplay", "--raw", "--format=s16le", f"--rate={rate}", "--channels=1",
                 "--client-name=steph", "--stream-name=voix"]
     if shutil.which("pw-play") and not IS_MAC:
-        return ["pw-play", "--format=s16", f"--rate={rate}", "--channels=1", "-"]
+        return ["pw-play", "--raw", "--format=s16", f"--rate={rate}", "--channels=1",
+                "--media-name=steph", "-"]
     if shutil.which("play"):  # sox (brew install sox)
         return ["play", "-q", "-t", "raw", "-r", str(rate), "-e", "signed", "-b", "16", "-c", "1", "-"]
     if shutil.which("aplay") and not IS_MAC:

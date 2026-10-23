@@ -209,6 +209,34 @@ def test_public_script_clones_then_runs_the_installer(tmp_path):
     assert not (home / ".bashrc").exists() and not (home / ".profile").exists()
 
 
+def _repo(path, marker):
+    (path / "scripts").mkdir(parents=True)
+    (path / "scripts" / "install.sh").write_text(f"#!/bin/sh\necho {marker}\n")
+    (path / "scripts" / "install.sh").chmod(0o755)
+    git = ["git", "-C", str(path), "-c", "user.name=t", "-c", "user.email=t@example.org"]
+    subprocess.run(["git", "init", "-q", str(path)], check=True)
+    subprocess.run(git + ["add", "."], check=True)
+    subprocess.run(git + ["commit", "-qm", marker], check=True)
+    return path
+
+
+def test_public_script_replaces_a_v1_clone_with_unrelated_history(tmp_path):
+    # v1 : clone de l'ancien tutozz/steph (devenu steph-dev), historique sans lien avec l'export public
+    new = _repo(tmp_path / "public", "INSTALL-V2")
+    old = _repo(tmp_path / "old", "INSTALL-V1")
+    clone = tmp_path / "home" / ".local" / "share" / "steph" / "src"
+    subprocess.run(["git", "clone", "-q", str(old), str(clone)], check=True)
+    (clone / "vendor" / "llama").mkdir(parents=True)
+    (clone / "vendor" / "llama" / "TAG").write_text("b1\n")
+    (clone / "scripts" / "install.sh").write_text("#!/bin/sh\necho LOCAL-EDIT\n")
+    r, _ = run_public(tmp_path, _tools(tmp_path), extra={"STEPH_REPO": str(new)})
+    assert r.returncode == 0, r.stderr
+    assert "INSTALL-V2" in r.stdout
+    head = subprocess.run(["git", "-C", str(clone), "rev-parse", "HEAD"], capture_output=True, text=True).stdout
+    assert head == subprocess.run(["git", "-C", str(new), "rev-parse", "HEAD"], capture_output=True, text=True).stdout
+    assert (clone / "vendor" / "llama" / "TAG").read_text() == "b1\n"  # llama.cpp déjà téléchargé conservé
+
+
 # ------------------------------------------------------------ M5 : charte dans les installeurs
 
 TRUECOLOR = {"TERM": "xterm-256color", "COLORTERM": "truecolor", "LANG": "fr_FR.UTF-8"}

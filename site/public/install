@@ -91,9 +91,18 @@ if ! command -v uv >/dev/null 2>&1; then
 fi
 
 if [ -d "$DIR/.git" ]; then
-  GIT_TERMINAL_PROMPT=0 git -C "$DIR" pull --ff-only -q ||
-    fail "mise à jour du dépôt impossible dans $DIR (modifications locales ?)." \
-         "could not update the repository in $DIR (local changes?)."
+  # Ce clone appartient à l'installeur. Une v1 vient de l'ancien tutozz/steph (devenu steph-dev),
+  # sans historique commun avec l'export public : on l'aligne sur $REPO au lieu d'un pull.
+  # vendor/ et .venv, ignorés par git, restent en place.
+  git -C "$DIR" remote set-url origin "$REPO" 2>/dev/null || git -C "$DIR" remote add origin "$REPO"
+  GIT_TERMINAL_PROMPT=0 git -C "$DIR" fetch -q origin HEAD 2>/dev/null ||
+    fail "dépôt inaccessible : $REPO. Le réseau est peut-être coupé." \
+         "repository unreachable: $REPO. The network may be down."
+  if ! git -C "$DIR" merge-base --is-ancestor HEAD FETCH_HEAD 2>/dev/null; then
+    msg "steph : ancienne version détectée dans $DIR, remplacée par la version actuelle." \
+        "steph: old version found in $DIR, replaced with the current one."
+  fi
+  git -C "$DIR" reset -q --hard FETCH_HEAD
 else
   mkdir -p "$(dirname "$DIR")"
   GIT_TERMINAL_PROMPT=0 git clone -q "$REPO" "$DIR" 2>/dev/null ||
